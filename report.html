@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Registry — Active Items (Jul 17, 2026)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #FFFFFF;
+    color: #1A1A2E;
+    line-height: 1.7;
+    padding: 3rem;
+    font-size: 17px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #E5E5EA;
+  }
+  header h1 { font-size: 2.25rem; font-weight: 700; color: #0A0A0A; }
+  header .meta { color: #636366; font-size: 1rem; margin-top: 0.4rem; }
+  header .counts {
+    display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;
+  }
+  header .counts span {
+    font-size: 0.9375rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 99px;
+    background: #F5F5F7;
+    border: 1px solid #E5E5EA;
+    color: #1A1A2E;
+  }
+  .badge-p0 { color: #D93A3A; border-color: #F4CCCC !important; background: #FFF0F0 !important; }
+  .badge-p1 { color: #E8760A; border-color: #FDE4CE !important; background: #FFF8F0 !important; }
+  .badge-p2 { color: #C79100; border-color: #FEF3C7 !important; background: #FFFDF5 !important; }
+  .badge-p3 { color: #278A3D; border-color: #D4F0D4 !important; background: #F2FFF2 !important; }
+
+  .cluster { margin-bottom: 2.5rem; }
+  .cluster-header {
+    display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.25rem;
+    padding-bottom: 0.6rem; border-bottom: 2px solid #E5E5EA;
+  }
+  .cluster-header h2 {
+    font-size: 1.35rem; font-weight: 700; color: #0A0A0A;
+  }
+  .cluster-header .emoji { font-size: 1.4rem; }
+  .cluster-header .tag {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    background: #F5F5F7;
+    color: #636366;
+    border: 1px solid #E5E5EA;
+  }
+
+  .item {
+    display: flex;
+    gap: 0.85rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    transition: background 0.15s;
+    align-items: flex-start;
+    border: 1px solid transparent;
+  }
+  .item:hover { background: #F5F5F7; border-color: #E5E5EA; }
+
+  .item input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    accent-color: #278A3D;
+    flex-shrink: 0;
+  }
+  .item:has(input:checked) {
+    opacity: 0.45;
+  }
+  .item:has(input:checked) .title {
+    text-decoration: line-through;
+  }
+
+  .item .priority-p0 { color: #D93A3A; font-weight: 700; min-width: 2.3rem; font-size: 1rem; }
+  .item .priority-p1 { color: #E8760A; font-weight: 600; min-width: 2.3rem; font-size: 1rem; }
+  .item .priority-p2 { color: #C79100; min-width: 2.3rem; font-size: 1rem; }
+  .item .priority-p3 { color: #278A3D; min-width: 2.3rem; font-size: 1rem; }
+
+  .item .body { flex: 1; min-width: 0; }
+  .item .title {
+    font-size: 1rem; font-weight: 600; color: #1A1A2E;
+    margin-bottom: 0.2rem;
+  }
+  .item .summary {
+    font-size: 0.9375rem; color: #636366; margin-top: 0.15rem;
+    line-height: 1.6;
+  }
+  .item .meta-row {
+    display: flex; gap: 0.6rem; margin-top: 0.35rem; flex-wrap: wrap;
+  }
+  .item .meta-row .type-tag {
+    font-size: 0.8125rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    background: #F0F0F5;
+    color: #636366;
+    border: 1px solid #E5E5EA;
+  }
+  .item .id-ref {
+    font-size: 0.8125rem;
+    color: #AEAEB2;
+    font-family: 'SF Mono', monospace;
+  }
+
+  .bridge { margin-left: 2.5rem; font-size: 0.85rem; color: #5856D6; }
+
+  .section-gap { height: 0.5rem; }
+  .total-footer {
+    margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #E5E5EA;
+    font-size: 1rem; color: #636366;
+  }
+  @media (max-width: 640px) {
+    body { padding: 1.5rem; font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📋 Task Registry — Active Items</h1>
+  <div class="meta">July 17, 2026 · Organised by similarity cluster</div>
+  <div class="counts">
+    <span class="badge-p0">P0 · 7 items</span>
+    <span class="badge-p1">P1 · 19 items</span>
+    <span class="badge-p2">P2 · 25 items</span>
+    <span class="badge-p3">P3 · 5 items</span>
+    <span>Total · 55 active</span>
+  </div>
+</header>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">🔄</span>
+    <h2>Agent Orchestration & Loops</h2>
+    <span class="tag">10 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">agency-agents-deep-dive — Install, route, integrate 232 specialist personas</div>
+      <div class="summary">msitarzewski/agency-agents (128K⭐, MIT). Hermes plugin with 4 tools: search, inspect, load, delegate. 16 divisions across engineering, design, product, marketing. Complements our 26 profiles with task-level specialists.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">agency-agents-deep-dive</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">vibe-coding-vs-vibe-engineering — Karpathy's two paradigms</div>
+      <div class="summary">Study the gap between Vibe Coding (AI writes, you accept) and Agentic Engineering (AI writes, you review, own architecture). When is vibe coding appropriate vs dangerous? Maps to loop-engineering / reflexion.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">vibe-coding-vs-vibe-engineering</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">karpathy-vibe-to-agentic — Absorb Sequoia Ascent 2026 framework</div>
+      <div class="summary">Full absorb: Software 3.0 (context window as program), verifiability thesis, jagged intelligence, agent-native infra, "you can outsource thinking, not understanding." Validates our entire loop+wiki+skills architecture.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">karpathy-vibe-to-agentic</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">claude-code-loops-google-meta-ads — Ryze AI loop architecture patterns</div>
+      <div class="summary">8 specific loop patterns (anomaly watch, budget reallocation, CPA drift guard) with verification gates that can FAIL. Key insight: "objective gate that can fail" maps to our reflexion-loop maker-checker.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">claude-code-loops-google-meta-ads</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agency-agent-pm-integration — Product Manager patterns into profile-creation skill</div>
+      <div class="summary">Extract SOUL.md template patterns: Critical Rules, Identity & Memory, Communication Style with voice examples, Templates-as-code format.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">agency-agent-pm-integration</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agency-agent-fa-integration — Financial Analyst patterns for crypto quant profiles</div>
+      <div class="summary">Adapt scenario analysis, assumption-first communication, variance analysis templates, cross-session carry-forward for market-intel profiles.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">agency-agent-fa-integration</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agency-agent-nexus-integration — Quality gates & handoff templates into creative-agency</div>
+      <div class="summary">Steal per-phase quality gates with explicit criteria, gate keeper, evidence requirements, structured handoff templates, max-3-retry Dev↔QA loop.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">agency-agent-nexus-integration</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agency-agent-highlights-review — Review top 3 personas for ecosystem integration</div>
+      <div class="summary">Clone PM (22KB), Financial Analyst (13KB), NEXUS Strategy (48KB) into curated repo. Assess for Hermes profile templates + pipeline patterns.</div>
+      <div class="meta-row"><span class="type-tag">review</span><span class="id-ref">agency-agent-highlights-review</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">claude-command-cheatsheet — 90 commands evaluated against Hermes gaps</div>
+      <div class="summary">~40 native, 15+ gaps worth discussing. Key: voice input, named analysis commands (/analyze, /compare), ergonomic aliases. Not worth porting whole sheet.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">claude-command-cheatsheet</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">auto-goal-orchestration-plugin — Review proposed goal-spotter flow</div>
+      <div class="summary">Proposed: goal-spotter subagent identifies intent → evaluate response against goal before replying → self-activate /goal if insufficient. Source-verified in hermes_cli/goals.py.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">auto-goal-orchestration-plugin</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">tool-decision-framework — Claude Chat vs Code vs Hermes vs Zo routing</div>
+      <div class="summary">Initial analysis: Claude Chat = creative/strategy ($20 flat), Claude Code = surgical refactoring ($3-15/M), Hermes = 90%+ daily ops, Zo = always-on infra. Needs sign-off.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">tool-decision-framework</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">📈</span>
+    <h2>Crypto & Quant Trading</h2>
+    <span class="tag">4 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">agentic-trader — Multi-agent trading with TradingAgents + Hermes</div>
+      <div class="summary">7+ specialized agents (fundamental, sentiment, technical, risk, portfolio manager). TradingAgents framework (44K⭐, peer-reviewed). Supports DeepSeek, Polymarket, persistent decision log.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">agentic-trader</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">tradingview-mcp-integration — AI chart analysis for crypto quant</div>
+      <div class="summary">78 MCP tools for chart analysis, Pine Script, backtesting. Requires paid TradingView + Desktop. Does NOT execute trades — chart only. Unofficial, may break on update.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">tradingview-mcp-integration</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">quant-repos-review — Top quant finance GitHub repos</div>
+      <div class="summary">Curated: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster (RL), awesome-quant. Covers platforms, strategy dev, portfolio optimization.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">quant-repos-review</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">deepseek-v4-open-source — Tech report + weights analysis</div>
+      <div class="summary">V4-Pro: 1.6T/49B active, V4-Flash: 284B/13B active (our default). 1M context. Open-source commitment. Useful for understanding our base architecture.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">deepseek-v4-open-source</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">🎨</span>
+    <h2>Creative Agency & Content</h2>
+    <span class="tag">9 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">ig-carousel-frameworks — 5 proven carousel frameworks for Creative Agency</div>
+      <div class="summary">VALUE-STACK, PROBLEM-PROOF, HACK LIST, RANT CALLOUT, DEMO WALKTHROUGH. Each with exact slide counts, templates, example language. Map to carousels-mcp slide types.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">ig-carousel-frameworks</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">openmontage-video-pipeline — Open-source agentic video production</div>
+      <div class="summary">12 pipelines, 52 tools, 500+ agent skills. FFmpeg + Python orchestration + NodeJS rendering. Free alternative to arcads ($110-220/mo). Maps to Creative Agency videography goals.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">openmontage-video-pipeline</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">toto-generator-refine — Redesign Toto generator (UX + explainability + gamification)</div>
+      <div class="summary">Explain why it picks each number, profile-based generation (lucky numbers, birthdates, strategy styles). Find weird illusory correlations post-draw. Consider packaging as standalone app.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">toto-generator-refine</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agent-ad-network-skill — AdSense for LLM conversations</div>
+      <div class="summary">Skill/plugin serving contextual ads inside AI responses. Advertisers pay per impression, host earns profit share. Needs research on ad networks, context injection, attribution.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">agent-ad-network-skill</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">arcads-stop-motion-pipeline — Stop-motion video for Creative Agency</div>
+      <div class="summary">Research building stop-motion pipeline: Arcads API (external-api.arcads.ai), Seedance 2.0 (fal.ai), Nano Banana 2. Compare vs openmontage (open-source alternative).</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">arcads-stop-motion-pipeline</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">learn-animated-websites — Framer Motion, GSAP, Aceternity UI, Magic UI</div>
+      <div class="summary">Research animated web libraries: Aceternity UI (200+ React components), Magic UI (150+ open-source), Scrollify. Apply to personal site and future builds.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">learn-animated-websites</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">showreel — Claude Code visual documentation plugin</div>
+      <div class="summary">URL + CSS selectors → annotated screenshots, flow GIFs, smooth-motion recordings. Self-validating, batch mode (8 captures/6s). For READMEs, demos, carousels.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">showreel</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">improve-graphic-design — Instagram carousel content inaccessible</div>
+      <div class="summary">Flagged for manual review. Content behind Instagram login wall. Check and share takeaways when accessible.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">improve-graphic-design</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p3">P3</span>
+    <div class="body">
+      <div class="title">cinematic-camera-angles — @explainingnews reference carousel</div>
+      <div class="summary">Shot types, psychological effects of camera angles, industry notation. Reference for Creative Agency videography and content creation.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">cinematic-camera-angles</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p3">P3</span>
+    <div class="body">
+      <div class="title">up-dog-ai-chatbot — Pun-based AI product concept</div>
+      <div class="summary">"What's Up Dog?" → curated news summary. Pun is the hook, news digest is the value. Categorized brief delivered conversationally with persistent preferences.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">up-dog-ai-chatbot</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">🛠️</span>
+    <h2>Dev Tools & Infrastructure</h2>
+    <span class="tag">13 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p0">P0</span>
+    <div class="body">
+      <div class="title">hermes-session-pruning-update — Adopt session DB management features</div>
+      <div class="summary">Hermes shipped prune/archive with filters (timeframes, models, users, working directory). Evaluate pruning strategy for ~40 crons, 12 topics, growing DB.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">hermes-session-pruning-update</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">github-spec-kit-eval — Structured spec-first coding workflow</div>
+      <div class="summary">120K⭐: /constitution → /specify → /clarify → /plan → /tasks → /implement. Works with Claude Code, Codex, Gemini CLI. Evaluate vs current plan-mode/writing-plans.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">github-spec-kit-eval</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">codebase-memory-mcp — Tree-sitter knowledge graph for coding agents</div>
+      <div class="summary">Indexes codebases into SQLite using tree-sitter AST. 158 languages, Linux kernel in 3 min. Single static binary. Competing approach to Graphify (deferred). Update: 26K⭐.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">codebase-memory-mcp</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">context-dev-evaluate — Firecrawl replacement for web scraping</div>
+      <div class="summary">YC-backed. 1 credit = 1 page scrape with JS rendering + anti-bot bypass. Free (500 credits), $25/mo (10K). Python/TS/Ruby/Go/PHP SDKs. Strong candidate.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">context-dev-evaluate</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">agent-reach — Multi-platform web & social access for agents</div>
+      <div class="summary">16+ platforms (Twitter, Reddit, YouTube, GitHub, Instagram, LinkedIn). MIT, pip install. Zero-config for 8 channels. Open-source Firecrawl alternative with social scraping.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">agent-reach</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">claude-code-v2-1-203 — Update our install</div>
+      <div class="summary">Major fix: macOS background stall (15-20s regression fixed), ~37% CPU reduction, ~7MB memory reduction, session token auto-recovery, subagent delegation fix.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">claude-code-v2-1-203</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">vps-shared-memory — Zo Basic vs Hostinger vs sync strategy</div>
+      <div class="summary">Three-layer problem: Honcho solves agent memory, SQLite needs sync, files need Syncthing/git. Move entirely to Zo Basic ($18/mo) or add Hostinger SG ($6/mo)?</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">vps-shared-memory</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">kimi-code-evaluate — Coding agent alternative to evaluate</div>
+      <div class="summary">Moonshot AI (MIT, 3K⭐). K2.7 Code model, Agent Swarm (100 parallel sub-agents), ACP protocol. $19/mo + $0.60/$2.50 per MTok. 4-17x cheaper than GPT-5.4.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">kimi-code-evaluate</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">safari-mcp-server — Evaluate for web dev/QA pipeline</div>
+      <div class="summary">Apple's official Safari MCP (17 tools). DOM inspection, network monitoring, accessibility checking, performance analysis. Local only, no network calls.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">safari-mcp-server</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">omniroute-local-gateway — Local AI routing gateway (231+ providers)</div>
+      <div class="summary">OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent classifier + task-aware router. Free provider access could reduce costs. Overlaps but doesn't replace Hermes config.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">omniroute-local-gateway</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">hyperbrowser-eval — Cloud browser infra with CAPTCHA bypass</div>
+      <div class="summary">Residential proxies, auto CAPTCHA solving, stealth mode. MCP server with 8 tools. Free tier: 5K credits (no CAPTCHA). CAPTCHA solving at $30/mo. Test free tier first.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">hyperbrowser-eval</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">openwa-eval — Self-hosted WhatsApp API gateway</div>
+      <div class="summary">OpenWA (10.8K⭐, MIT). WhatsApp HTTP API gateway — free Twilio alternative. Full REST, multi-session, webhooks, dashboard. Docker-deployable. For Hermes delivery + concierge bot.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">openwa-eval</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p3">P3</span>
+    <div class="body">
+      <div class="title">gittrendio-discovery-feed — Daily curated open-source project discoveries</div>
+      <div class="summary">@gittrend.io (16K followers). Daily reels spotlighting trending GitHub repos. Already sourced OpenWA. Check feed weekly for new tool discoveries.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">gittrendio-discovery-feed</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">🧠</span>
+    <h2>AI Models & Provider Landscape</h2>
+    <span class="tag">5 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">glm-5-eval — Evaluate Z.ai as Hermes custom_provider fallback</div>
+      <div class="summary">GLM-5.2 (744B MoE, 1M ctx). MCP Atlas #1 at 71.8%. $1.40/$4.40 per MTok. Enterprise validation: DoorDash, Siemens, Airbnb in production.</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">glm-5-eval</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">kyutai-pocket-tts-evaluate — Local CPU TTS with voice cloning</div>
+      <div class="summary">100M params, 6x real-time on CPU, ~200ms first chunk, voice cloning from 5-10s audio. MIT, pip install. Could replace Edge TTS with local offline TTS + cloning.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">kyutai-pocket-tts-evaluate</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">orca-ade — Agent Development Environment (parallel agents)</div>
+      <div class="summary">Desktop + mobile for parallel coding agents. Parallel worktrees (fan prompt across 5 agents), mobile monitoring. Overlaps delegate_task but mobile companion is novel.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">orca-ade</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">anthropic-ust-claude — Enterprise case study for Partner Marketing context</div>
+      <div class="summary">UST training 20K engineers on Claude. iDEC platform cuts validation cycles 50-70%. Physical AI (chip design), healthcare, telecom, banking deployments.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">anthropic-ust-claude</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">chinese-ai-enterprise-adoption-ft — Market signal for AI vendor landscape</div>
+      <div class="summary">FT: DoorDash, Siemens, Airbnb adopting DeepSeek/Z.ai. >30% weekly token share since early 2026. Validates glm-5-eval. Relevant for career + macro context.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">chinese-ai-enterprise-adoption-ft</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">💼</span>
+    <h2>Career & Content Publishing</h2>
+    <span class="tag">4 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">ai-adoption-specialist — Explore career path (salaried vs independent)</div>
+      <div class="summary">82% of SG AI postings are for user/adoption roles. Two paths: salaried PM/CS at AI company, or independent fractional consultant. Assets: Hermes stack, Agentic Hotpot, Paradex experience. Gap: packaged case studies.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">ai-adoption-specialist</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">career-advice-age-of-ai — Phil Chen framework (absorb)</div>
+      <div class="summary">Core thesis: AI commoditises execution. Valuable skill shifts to problem identification and token/time allocation. Validates loop engineering + product thinking. Useful for OpenAI career positioning.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">career-advice-age-of-ai</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">profile-review-phil-chen-framework — Reframe career narrative</div>
+      <div class="summary">Shift positioning from "what I've built" to "what problems I find and how I allocate time/tokens/reputation." Test against Elena Verna's "Cool. Show me." bar.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">profile-review-phil-chen-framework</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">start-substack — Publish AI learnings and frameworks</div>
+      <div class="summary">Content thesis: "Here's what it looks like when AI actually changes how you work." Real systems, no ChatGPT screenshots, evidence-backed. 1-2x weekly. Every post includes something the reader can try.</div>
+      <div class="meta-row"><span class="type-tag">create</span><span class="id-ref">start-substack</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">💡</span>
+    <h2>Business Ideas & Products</h2>
+    <span class="tag">4 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">money-making-ideas-review — Scan @cash_.kitty Instagram for monetizable ideas</div>
+      <div class="summary">Process videos, extract 10+ monetizable ideas. Save to .md for review. Deadline overdue — revisit.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">money-making-ideas-review</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">potential-biz-ideas-master — 10 agent-run, low-cost business models</div>
+      <div class="summary">Top picks: digital downloads shop (32/40), print-on-demand (31/40), local lead-gen agency (28/40, best Hermes-fit), micro-SaaS AI wrapper (27/40, highest ceiling).</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">potential-biz-ideas-master</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">jonathan-lok-workshop — Agentic AI workshop for kids</div>
+      <div class="summary">Scope: age range, curriculum level, format (in-person vs online), duration. Potential product opportunity if it works.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">jonathan-lok-workshop</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">qol-second-brain-apps — Brainstorm QoL applications around second brain</div>
+      <div class="summary">Consumer-facing tools, personal productivity apps, novel use cases leveraging the compounding-knowledge pattern beyond GTM.</div>
+      <div class="meta-row"><span class="type-tag">discuss</span><span class="id-ref">qol-second-brain-apps</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">🔀</span>
+    <h2>New / Uncategorised (added Jul 16-17)</h2>
+    <span class="tag">4 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">telegram-games-exploration — Landscape, tech stack, build options</div>
+      <div class="summary">HTML5/JS web apps in Telegram. Two API paths (Game Bot API vs Mini Apps). Phaser.js, TON integration optional. Huge wave: Notcoin, Hamster Kombat. Build landscape brief.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">telegram-games-exploration</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">openwa-eval — Self-hosted WhatsApp API gateway</div>
+      <div class="summary">(listed in Dev Tools cluster above)</div>
+      <div class="meta-row"><span class="type-tag">build</span><span class="id-ref">openwa-eval</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p3">P3</span>
+    <div class="body">
+      <div class="title">gittrendio-discovery-feed — Daily curated open-source project discoveries</div>
+      <div class="summary">(listed in Dev Tools cluster above)</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">gittrendio-discovery-feed</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">toto-automated-betting — Automated TOTO bet placement</div>
+      <div class="summary">Research SG Pools API/web portal automation for 100 quick picks. Legal/ToS constraints, batch limits, cost analysis. Cross-ref toto-strategy skill and toto-generator-refine.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">toto-automated-betting</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================== -->
+<div class="cluster">
+  <div class="cluster-header">
+    <span class="emoji">📋</span>
+    <h2>Other Active (Delegated / Backlog)</h2>
+    <span class="tag">3 items</span>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p1">P1</span>
+    <div class="body">
+      <div class="title">gtm-second-brain — /raw capture + canonical agent index</div>
+      <div class="summary">Delegated to The General (#1). Two gaps vs Oxygen's 5-layer architecture: immutable raw capture layer, canonical index file. Handoff at ~/wiki/_system/pending/gtm-second-brain.md.</div>
+      <div class="meta-row"><span class="type-tag">build · delegated</span><span class="id-ref">gtm-second-brain</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p2">P2</span>
+    <div class="body">
+      <div class="title">explore-smart-internet-sites — AevyTV carousel (5 sites)</div>
+      <div class="summary">Wikenigma, Learn Anything, Seeing Theory, Etymonline, Indian Culture. Pending exploration.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">explore-smart-internet-sites</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" title="Mark as done">\
+    <span class="priority-p3">P3</span>
+    <div class="body">
+      <div class="title">rokos-basilisk-deep-dive — Late-night research topic</div>
+      <div class="summary">Roko's Basilisk thought experiment: origin, controversy (LessWrong ban), philosophical implications, technical plausibility, cultural impact on AI safety communities.</div>
+      <div class="meta-row"><span class="type-tag">research</span><span class="id-ref">rokos-basilisk-deep-dive</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="total-footer">
+  <strong>56 active items</strong> · 7 P0 · 19 P1 · 25 P2 · 5 P3<br>
+  8 clusters by similarity: Orchestration & Loops → Crypto & Quant → Creative Agency → Dev Tools → AI Models → Career & Publishing → Business Ideas → Other
+</div>
+
+</div>
+</body>
+</html>
