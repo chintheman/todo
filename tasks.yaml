@@ -34,7 +34,7 @@ clusters:
       \ prove by hand, then automate - \"Track cost per accepted change, not tokens\
       \ spent\""
     cluster: Agent Orchestration & Loops
-    progress: 25
+    progress: 16
     updated_at: '2026-07-18'
   - id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 232 specialist
@@ -1127,4 +1127,3 @@ clusters:
       "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
   count: 6
-
