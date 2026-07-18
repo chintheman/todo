@@ -1,3 +1,20 @@
+cluster_order:
+- emoji: 🔄
+  name: Agent Orchestration & Loops
+- emoji: 📈
+  name: Crypto & Quant Trading
+- emoji: 🎨
+  name: Creative Agency & Content
+- emoji: 🛠️
+  name: Dev Tools & Infrastructure
+- emoji: 🧠
+  name: AI Models & Provider Landscape
+- emoji: 💼
+  name: Career & Content Publishing
+- emoji: 💡
+  name: Business Ideas & Products
+- emoji: 📋
+  name: Other Active (Delegated / Backlog)
 clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
@@ -247,6 +264,9 @@ clusters:
     captured: 2026-07-15
     cluster: Agent Orchestration & Loops
   count: 12
+  active_count: 12
+  delegated_count: 0
+  done_count: 0
 - emoji: 📈
   name: Crypto & Quant Trading
   items:
@@ -319,6 +339,9 @@ clusters:
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
     cluster: Crypto & Quant Trading
   count: 4
+  active_count: 4
+  delegated_count: 0
+  done_count: 0
 - emoji: 🎨
   name: Creative Agency & Content
   items:
@@ -522,6 +545,9 @@ clusters:
       with category preferences that persist per user.'
     cluster: Creative Agency & Content
   count: 10
+  active_count: 10
+  delegated_count: 0
+  done_count: 0
 - emoji: 🛠️
   name: Dev Tools & Infrastructure
   items:
@@ -786,6 +812,9 @@ clusters:
       weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
   count: 13
+  active_count: 13
+  delegated_count: 0
+  done_count: 0
 - emoji: 🧠
   name: AI Models & Provider Landscape
   items:
@@ -881,6 +910,9 @@ clusters:
       our existing delegate_task pattern.'
     cluster: AI Models & Provider Landscape
   count: 5
+  active_count: 5
+  delegated_count: 0
+  done_count: 0
 - emoji: 💼
   name: Career & Content Publishing
   items:
@@ -955,6 +987,9 @@ clusters:
       deployment over models), Elena Verna "Cool. Show me." bar
     cluster: Career & Content Publishing
   count: 4
+  active_count: 4
+  delegated_count: 0
+  done_count: 0
 - emoji: 💡
   name: Business Ideas & Products
   items:
@@ -1012,6 +1047,9 @@ clusters:
     notes: ~/wiki/_system/pending/jonathan-lok-workshop.md
     cluster: Business Ideas & Products
   count: 4
+  active_count: 4
+  delegated_count: 0
+  done_count: 0
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
   items:
@@ -1127,3 +1165,9 @@ clusters:
       "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
   count: 6
+  active_count: 5
+  delegated_count: 1
+  done_count: 0
+updated_at: 2026-07-18 13:48:12 SGT
+total_active: 58
+total_done: 0

@@ -145,7 +145,16 @@ def load_ids_with_status():
 
 def build_clustered(registry):
     """Build clustered export with all item fields Zo needs."""
-    result = {"clusters": []}
+    from datetime import datetime, timezone, timedelta
+    SGT = timezone(timedelta(hours=8))
+    
+    result = {
+        "cluster_order": [],
+        "clusters": [],
+        "updated_at": datetime.now(SGT).strftime("%Y-%m-%d %H:%M:%S SGT"),
+        "total_active": 0,
+        "total_done": 0,
+    }
 
     all_active_ids = set()
 
@@ -185,6 +194,23 @@ def build_clustered(registry):
 
         cluster["count"] = len(cluster["items"])
         cluster["items"].sort(key=lambda x: (0 if x.get("priority") == "p0" else 1 if x.get("priority") == "p1" else 2 if x.get("priority") == "p2" else 3, x.get("title", "")))
+
+        # Track counts
+        active = sum(1 for i in cluster["items"] if i.get("status") == "active")
+        delegated = sum(1 for i in cluster["items"] if i.get("status") == "delegated")
+        done = sum(1 for i in cluster["items"] if i.get("status") == "done")
+        cluster["active_count"] = active
+        cluster["delegated_count"] = delegated
+        cluster["done_count"] = done
+        
+        result["total_active"] += active + delegated
+        result["total_done"] += done
+
+        # Add cluster order entry
+        result["cluster_order"].append({
+            "emoji": cdef["emoji"],
+            "name": cdef["name"],
+        })
         result["clusters"].append(cluster)
 
     # Check for unassigned active items
