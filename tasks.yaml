@@ -713,6 +713,24 @@ clusters:
       pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
       Hermes provider config.'
     cluster: Dev Tools & Infrastructure
+  - id: repowise-eval
+    title: Repowise — codebase intelligence MCP tool for agents
+    type: build
+    domain: devops
+    priority: p2
+    status: active
+    summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs,
+      Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health
+      scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on
+      same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS.
+      Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
+    captured: 2026-07-19
+    source: Instagram — @gittrend.io (via gittrendio-discovery-feed)
+    notes: 'High relevance — would give Hermes agents context without burning tokens. MCP server integration means agents
+      query indexed knowledge instead of grepping. Compare to codebase-memory-mcp (already in registry). Token savings claim
+      is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. Source profile @gittrend.io
+      already tracked as gittrendio-discovery-feed.'
+    cluster: Dev Tools & Infrastructure
   - id: safari-mcp-server
     title: Safari MCP Server — evaluate for web dev/QA pipeline
     type: research
@@ -747,8 +765,8 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
-  count: 13
-  active_count: 13
+  count: 14
+  active_count: 14
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1074,6 +1092,6 @@ clusters:
   active_count: 5
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-19 13:01:35 SGT
-total_active: 63
+updated_at: 2026-07-19 15:27:02 SGT
+total_active: 64
 total_done: 0
