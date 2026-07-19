@@ -935,6 +935,24 @@ clusters:
     source: Instagram — @cash_.kitty
     notes: https://www.instagram.com/cash_.kitty
     cluster: Business Ideas & Products
+  - id: ai-influencer-monetization
+    title: AI Influencer Empire — monetization strategy (profit from lust)
+    type: research
+    domain: business
+    priority: p2
+    status: active
+    summary: 'Money-making strategy: create AI-generated influencer personas using tools like Eromify (9K+ members, 4.9 rating,
+      $5-$99/mo), Claude, and Flux/SDXL models. Generate photorealistic AI model content → monetize via PPV sales ($50+/sale),
+      affiliate marketing, or UGC ads (3x higher conversion). "Faceless content" trend — earn without showing your own identity.
+      Comment-to-DM lead gen funnel ("Comment CLAUDE").'
+    captured: 2026-07-19
+    source: 'Instagram — @kim.in.space (reel: profit from lust)'
+    notes: Profile @kim.in.space is a Claude/AI side-hustle creator — comment-to-DM lead gen. Eromify is the dominant platform
+      in this space (eromify.com). Platforms also include MakeInfluencer.ai, Higgsfield AI. 70+ pre-trained models available.
+      Skin upscale, Kling/Wan video gen. Related to existing money-making-ideas-review (cash_.kitty) — different source, same
+      domain. Worth monitoring as a trend — AI-generated influencer content is growing rapidly. Has ethical/ToS implications
+      (AI-generated personas on platforms).
+    cluster: Business Ideas & Products
   - id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -988,8 +1006,8 @@ clusters:
     source: 0xsteamboat request (Jul 11, 2026)
     notes: ~/wiki/_system/pending/jonathan-lok-workshop.md
     cluster: Business Ideas & Products
-  count: 5
-  active_count: 5
+  count: 6
+  active_count: 6
   delegated_count: 0
   done_count: 0
 - emoji: 📋
@@ -1092,6 +1110,6 @@ clusters:
   active_count: 5
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-19 15:27:02 SGT
-total_active: 64
+updated_at: 2026-07-19 19:47:02 SGT
+total_active: 65
 total_done: 0
