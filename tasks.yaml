@@ -301,8 +301,24 @@ clusters:
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
     cluster: Crypto & Quant Trading
-  count: 4
-  active_count: 4
+  - id: nicholascrown-macro-letter
+    title: Nicholas Crown — macro trading profile + The Crown Macro Letter
+    type: research
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
+      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
+      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
+      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
+    captured: 2026-07-19
+    source: Instagram — @nicholascrown reel
+    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
+      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
+      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
+    cluster: Crypto & Quant Trading
+  count: 5
+  active_count: 5
   delegated_count: 0
   done_count: 0
 - emoji: 🎨
@@ -1110,6 +1126,6 @@ clusters:
   active_count: 5
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-19 19:47:02 SGT
-total_active: 65
+updated_at: 2026-07-19 21:57:35 SGT
+total_active: 66
 total_done: 0
