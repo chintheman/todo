@@ -396,6 +396,24 @@ clusters:
       shared templates). Arcads pricing: $110/mo (10 videos) to $220/mo (20 videos), Pro tier with API access. Seedance 2.0
       on fal.ai — compatible with our existing FAL config. Reference pattern is model-agnostic. Post URL for reference: linkedin.com/posts/romain-torres-arcads_i-built-a-claude-skill-that-turns-any-design-ugcPost-7478777423308763136-wTaW'
     cluster: Creative Agency & Content
+  - id: blender-mcp-hermes
+    title: Blender MCP for Hermes Agent — official + community stack
+    type: build
+    domain: creative/3d
+    priority: p2
+    status: active
+    summary: 'Two-tier Blender MCP ecosystem: (1) Hermes official optional skill at `hermes skills install official/creative/blender-mcp`
+      — companion skill for the Hermes catalog blender MCP with bpy recipes. (2) Community ahujasid/blender-mcp (24.2K ⭐,
+      MIT) — most popular open-source Blender MCP, works with any LLM via MCP. Features: object creation/modification, materials,
+      scene inspection, Python code execution, viewport screenshots, Sketchfab/Poly Haven asset search, Hyper3D Rodin/Hunyuan3D
+      generation. Key tool for interior design agent pipeline — room layouts, furniture placement, material changes, lighting
+      from prompts.'
+    captured: 2026-07-19
+    source: LinkedIn — Ultan O'Rourke / PA research
+    notes: HIGH priority — this is the core 3D tool for the interior design agent the user is helping a friend build. ahujasid
+      version is battle-tested (24K stars, 2.4K forks). Hermes official skill wraps it with curated bpy patterns. Install
+      with uv + Blender addon. See also GenRecon (3D scanning real rooms → digital models) which complements this.
+    cluster: Creative Agency & Content
   - id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -473,6 +491,23 @@ clusters:
     notes: 'Paper: arxiv.org/abs/2605.23888. Project: kasothaphie.github.io/GenRecon. Code repo at github.com/kasothaphie/GenRecon
       (coming soon — not yet released). Monitor for code release. Slots into creative pipeline for 3D asset generation.'
     cluster: Creative Agency & Content
+  - id: unreal-engine-mcp-hermes
+    title: Unreal Engine MCP for Hermes Agent — official companion skill
+    type: build
+    domain: creative/3d
+    priority: p3
+    status: active
+    summary: 'Official Hermes Agent optional companion skill (v1.0.0) for Epic Games'' Unreal MCP plugin (UE5.8+). Installs
+      via `hermes skills install official/creative/unreal-mcp`. Lets Hermes drive UE5 editor from plain-English prompts: build/light
+      scenes, place actors, author Blueprints, animate with Sequencer, create materials, frame cameras, render, run PIE tests.
+      Uses tool-search discovery (3 meta-tools: list_toolsets / describe_toolset / call_tool). 126K views on announcement
+      post.'
+    captured: 2026-07-19
+    source: X — NousResearch / @macbethAI (Jul 17, 2026)
+    notes: 'UE is overkill for interior design (heavy 3D engine, steep curve). Best for game dev, cinematic walkthroughs,
+      VR presentations. Companion skill has 5 reference files (tool-surface.md, advanced-workflows.md, scene-craft.md, recipes.md,
+      pitfalls.md). Related skill: blender-mcp (listed in Hermes docs).'
+    cluster: Creative Agency & Content
   - id: up-dog-ai-chatbot
     title: Up Dog AI chatbot — pun-based product idea
     type: discuss
@@ -489,8 +524,8 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Creative Agency & Content
-  count: 11
-  active_count: 11
+  count: 13
+  active_count: 13
   delegated_count: 0
   done_count: 0
 - emoji: 🛠️
@@ -894,6 +929,22 @@ clusters:
     captured: '2026-07-04'
     source: 0xsteamboat brainstorm request
     cluster: Business Ideas & Products
+  - id: interior-design-agent-tools
+    title: Interior Design Agent — AI tool stack for friend's project
+    type: discuss
+    domain: creative
+    priority: p2
+    status: active
+    summary: 'Research on AI tools stack for an interior design agent. Key candidates: Blender MCP (3D modeling), MeltFlex
+      AI API (photo→photorealistic room redesign REST API, <30s, full pipeline), Figma MCP (mood boards / floor plans / client
+      presentations — now has canvas write access), Rayon.design (interior-design-specific CAD + AI mood boards), GenRecon
+      (scan real rooms → 3D digital models from 8 photos). Friend sharing more context in ~2 weeks.'
+    captured: 2026-07-19
+    source: PA session — user helping friend build interior design agent
+    notes: MeltFlex AI is the strongest candidate for "upload a room photo → redesign" use case. REST API means it can be
+      agent-callable without running Blender. Blender MCP handles custom 3D modeling. Figma MCP handles client-facing presentations
+      and mood boards. Full scope to be defined when friend shares context (~2 weeks).
+    cluster: Business Ideas & Products
   - id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -919,8 +970,8 @@ clusters:
     source: 0xsteamboat request (Jul 11, 2026)
     notes: ~/wiki/_system/pending/jonathan-lok-workshop.md
     cluster: Business Ideas & Products
-  count: 4
-  active_count: 4
+  count: 5
+  active_count: 5
   delegated_count: 0
   done_count: 0
 - emoji: 📋
@@ -1023,6 +1074,6 @@ clusters:
   active_count: 5
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-19 12:53:01 SGT
-total_active: 60
+updated_at: 2026-07-19 13:01:35 SGT
+total_active: 63
 total_done: 0
