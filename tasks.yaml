@@ -779,6 +779,27 @@ clusters:
       create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
       page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
     cluster: Dev Tools & Infrastructure
+  - id: i-have-adhd-claude-skill
+    title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
+    type: research
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: Evaluate the ayghri/i-have-adhd Claude Code skill (152⭐) — 10 rules for action-first, no-preamble, tangent-suppressing
+      output. Also review the broader CLAUDE.md ADHD workflow pattern (status board, parking lot, context snapshots, autokickoff).
+      The 10 rules directly mirror user's established formatting preferences.
+    captured: 2026-07-20
+    source: X — @jjacky (jacky/OpenRouter) post (1.4M views, Jul 19 2026)
+    notes: 'Repo: github.com/ayghri/i-have-adhd (May 13, 2026, 152⭐).
+
+      10 rules: 1. Lead with next action 2. Number multi-step tasks 3. End with one concrete next step 4. Suppress tangents
+      5. Restate state every turn 6. Specific time estimates (minutes) 7. Make wins visible 8. Matter-of-fact errors 9. Cap
+      lists at 5 items 10. No preamble. No recap. No closers.
+
+      Also: Ed Leeman blog post (edleeman.co.uk) on CLAUDE.md-based workflow with status board, parking lot, context snapshots,
+      automatic session kickoff. Applicable to Hermes too — the 10 rules overlap with user''s formatting corrections. Worth
+      discussing whether to adopt for Hermes agent style.'
+    cluster: Dev Tools & Infrastructure
   - id: gittrendio-discovery-feed
     title: Gittrend.io — daily curated open-source project discoveries
     type: research
@@ -794,8 +815,8 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
-  count: 14
-  active_count: 14
+  count: 15
+  active_count: 15
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1152,6 +1173,6 @@ clusters:
   active_count: 6
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-20 10:26:13 SGT
-total_active: 68
+updated_at: 2026-07-20 14:14:39 SGT
+total_active: 69
 total_done: 0
