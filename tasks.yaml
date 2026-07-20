@@ -218,6 +218,19 @@ clusters:
       Zo = always-on infrastructure (post-migration). Needs user review/sign-off before finalizing.'
     captured: 2026-07-15
     cluster: Agent Orchestration & Loops
+  - id: multi-agent-orchestration-guide
+    title: How to Make Agents Work Together — Multi-Agent Orchestration
+    type: research
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Research and document patterns for getting AI agents to collaborate effectively: task decomposition, handoff
+      protocols, shared context/memory, conflict resolution, and orchestration frameworks (CrewAI, AutoGen, AG2, Hermes subagents).'
+    captured: 2026-07-20
+    source: Personal request — PA intake
+    notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for
+      Hermes multi-agent workflows.
+    cluster: Agent Orchestration & Loops
   - id: anthropic-finance-agents
     title: Anthropic 10 Finance Agents — repo + workflow reference
     type: discuss
@@ -234,8 +247,8 @@ clusters:
       finance agent templates. The @adityaa.daily Instagram profile shared this but is a weak ongoing discovery channel (login
       wall, stale content cycle).
     cluster: Agent Orchestration & Loops
-  count: 13
-  active_count: 13
+  count: 14
+  active_count: 14
   delegated_count: 0
   done_count: 0
 - emoji: 📈
@@ -1106,6 +1119,19 @@ clusters:
     source: Aymane Mrini LinkedIn post — 7-layer AI stack breakdown
     notes: 'Source: ~/wiki/_system/pending/ai-stack-platforms-review.md'
     cluster: Other Active (Delegated / Backlog)
+  - id: learn-obsidian
+    title: How to Use Obsidian — Personal Knowledge Management
+    type: research
+    domain: productivity
+    priority: p3
+    status: active
+    summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management.
+      Build a workflow that complements the existing Second Brain wiki.'
+    captured: 2026-07-20
+    source: Personal request — PA intake
+    notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
+      plugins. Should integrate with ~/wiki/ workflow where possible.
+    cluster: Other Active (Delegated / Backlog)
   - id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -1122,10 +1148,10 @@ clusters:
       Superintelligence — related expected utility arguments - Acausal trade / decision theory (Muehlhauser, Bostrom) - Paul
       Almond''s "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
-  count: 6
-  active_count: 5
+  count: 7
+  active_count: 6
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-19 21:57:35 SGT
-total_active: 66
+updated_at: 2026-07-20 10:26:13 SGT
+total_active: 68
 total_done: 0
