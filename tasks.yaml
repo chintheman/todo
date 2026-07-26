@@ -19,29 +19,6 @@ clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
   items:
-  - id: claude-code-loops-google-meta-ads
-    title: Absorb Claude Code loop patterns from Ryze AI — ad management loops with verification gates
-    type: research
-    domain: ai/ml
-    priority: p0
-    status: active
-    summary: 'Deep article on using Claude Code /loop pattern for Google & Meta ads management. 8 specific loops: daily anomaly
-      watch, search-term miner, budget reallocation by ROAS, creative-fatigue watch, CPA drift guard, disapproval monitor,
-      audience exclusions, cross-channel digest. Key architecture: /loop command + SKILL.md + MCP connectors + state file
-      + objective verification gate. State file (markdown outside conversation) records what changed and what was learned
-      — survives between runs. Verification gate must be objective and able to FAIL the work (not just verify). Cost: 50K-200K
-      tokens per pass. DIRECT RELEVANCE: Verification gate pattern maps to our reflexion-loop maker-checker. State file pattern
-      = our cron + state architecture. The "objective gate that can fail" is a key insight for our loop engineering work.
-      Even though we don''t manage Google/Meta ads, the loop architecture patterns are directly applicable.'
-    captured: '2026-07-11'
-    source: Ryze AI blog — get-ryze.ai (2026)
-    notes: "URL: get-ryze.ai/blog/claude-code-loops-google-meta-ads Full page saved: ~/.hermes/cache/web/www.get-ryze.ai-883e0ed418.md\
-      \ KEY TAKEAWAYS: - Loop = goal + stop condition on a schedule. Not a prompt you retype. - 5 building blocks: /loop,\
-      \ SKILL.md, MCP, state file, gate - \"The model that proposed the change is too generous grading its own\n  homework\"\
-      \ — exactly why reflexion-loop uses a separate critic\n- \"Without a real check on each pass, you do not have a loop\
-      \ — you\n  have the agent agreeing with itself on repeat\"\n- Cost compounds: 50K-200K tokens/pass, maker-checker doubles\
-      \ it - Start read-only, prove by hand, then automate - \"Track cost per accepted change, not tokens spent\""
-    cluster: Agent Orchestration & Loops
   - id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 232 specialist personas
     type: discuss
@@ -161,21 +138,6 @@ clusters:
       \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
       \ router and our 26 profile roster."
     cluster: Agent Orchestration & Loops
-  - id: claude-command-cheatsheet
-    title: Evaluate Claude command cheat sheet for Hermes gaps
-    type: discuss
-    domain: ai/ml
-    priority: p1
-    status: active
-    summary: '90 Claude commands evaluated against Hermes stack. ~40 native, 15+ identified as gaps worth discussing. Key
-      gaps: voice input, named analysis commands (/analyze, /compare, /pros-cons), data tools (/forecast, /stats, /clean),
-      ergonomic aliases.'
-    captured: '2026-07-04'
-    source: Instagram infographic — "THE COMPLETE CLAUDE COMMAND CHEAT SHEET | 90 COMMANDS"
-    notes: 'Full eval: ~/wiki/_system/pending/claude-command-cheatsheet-eval.md VERDICT: Not worth porting the whole sheet.
-      Hermes already exceeds it in automation. Worth discussing: voice input, ergonomic aliases, and a few data-focused command
-      shortcuts.'
-    cluster: Agent Orchestration & Loops
   - id: agency-agent-highlights-review
     title: Review agency-agent profile templates for ecosystem integration
     type: review
@@ -207,17 +169,6 @@ clusters:
     captured: '2026-07-05'
     source: 2026-07-04/05 orchestration investigation — source-code-verified
     cluster: Agent Orchestration & Loops
-  - id: tool-decision-framework
-    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
-    type: discuss
-    domain: meta
-    priority: p2
-    status: active
-    summary: 'Decision framework for routing work across 4 tools. Initial analysis done: Claude Chat = creative/strategy discussion
-      ($20 flat), Claude Code = surgical code refactoring ($3-15/M per session), Hermes = 90%+ daily ops (tool-rich, free-ish),
-      Zo = always-on infrastructure (post-migration). Needs user review/sign-off before finalizing.'
-    captured: 2026-07-15
-    cluster: Agent Orchestration & Loops
   - id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -231,24 +182,8 @@ clusters:
     notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for
       Hermes multi-agent workflows.
     cluster: Agent Orchestration & Loops
-  - id: anthropic-finance-agents
-    title: Anthropic 10 Finance Agents — repo + workflow reference
-    type: discuss
-    domain: ai/ml
-    priority: p3
-    status: active
-    summary: 'Anthropic released 10 ready-to-use AI agent templates for finance (May 5, 2026): Earnings Reviewer, Model Builder,
-      KYC Screener, Market Researcher, and others. Integrated with Moody''s, FactSet, Morningstar, S&P Global via Claude Cowork/Claude
-      Code. Repo at github.com/anthropics/financial-services. JP Morgan collab — Jamie Dimon built Treasury analysis dashboard
-      from blank in 20 min.'
-    captured: 2026-07-19
-    source: Instagram — @adityaa.daily
-    notes: The repo is markdown+YAML config templates, not executable code. Still relevant as a reference architecture for
-      finance agent templates. The @adityaa.daily Instagram profile shared this but is a weak ongoing discovery channel (login
-      wall, stale content cycle).
-    cluster: Agent Orchestration & Loops
-  count: 14
-  active_count: 14
+  count: 10
+  active_count: 10
   delegated_count: 0
   done_count: 0
 - emoji: 📈
@@ -362,7 +297,7 @@ clusters:
   - id: agent-ad-network-skill
     title: Build agent ad network skill — display ads in Claude/any agent, profit share on impressions
     type: build
-    domain: creative
+    domain: business/build
     priority: p1
     status: active
     summary: A skill/plugin that serves contextual ads inside AI agent responses. Advertisers pay per impression, agent host
@@ -389,23 +324,6 @@ clusters:
     source: '@syntaix.ai Instagram carousel — calesthio/OpenMontage'
     notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
       Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
-    cluster: Creative Agency & Content
-  - id: toto-generator-refine
-    title: Refine Toto generator — easier, explainable, profile-based, fun, productize as app
-    type: build
-    domain: creative
-    priority: p1
-    status: active
-    summary: 'Redesign the Toto number generator to be more usable: explain why it picks each number, generate based on player
-      profiles (e.g. lucky numbers, birthdates, strategy styles), make the UX fun and engaging. Consider packaging it as a
-      standalone app.'
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    notes: 'Existing skill: toto-strategy (analytics, 1,193 draws analysed). Needs UX overhaul + gamification + explainability
-      layer. After each draw, find number trends and weird illusory correlations for fun (e.g. "last Friday had 3 numbers
-      from the same decade", "pink numbers are on a hot streak"). Roadmap: create formula → let people try it → paper bet
-      to validate.'
     cluster: Creative Agency & Content
   - id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
@@ -476,21 +394,6 @@ clusters:
       Also explore: Framer Motion, GSAP, CSS/JS animation patterns, and how these apply to personal site (0xsteamboat.zo.space)
       and future builds.'
     cluster: Creative Agency & Content
-  - id: showreel
-    title: Showreel — Claude Code visual documentation plugin
-    type: build
-    domain: creative
-    priority: p2
-    status: active
-    summary: Claude Code plugin for visual documentation. URL + CSS selectors → annotated screenshots, flow GIFs, smooth-motion
-      recordings, terminal captures. Self-validating (vcheck gate), deterministic, batch mode (8 captures / 6s). 56 step keys
-      for flow recording. MIT licensed. Bundle-owned Chromium, no credentials. Evaluate for README screenshots, product demos,
-      tutorial guides, and carousel content.
-    captured: '2026-07-13'
-    source: github.com/HeyRenan/showreel
-    notes: 'Install: claude plugin marketplace add HeyRenan/showreel CLI use: /showreel or node scripts/prove.mjs Docs: README.md
-      on GitHub — comprehensive with example GIFs per feature'
-    cluster: Creative Agency & Content
   - id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -540,7 +443,7 @@ clusters:
   - id: up-dog-ai-chatbot
     title: Up Dog AI chatbot — pun-based product idea
     type: discuss
-    domain: creative
+    domain: business/build
     priority: p3
     status: active
     summary: AI chatbot called "Up Dog" — the joke writes itself. When someone asks "What's Up Dog?" the AI responds conversationally.
@@ -553,8 +456,8 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Creative Agency & Content
-  count: 13
-  active_count: 13
+  count: 11
+  active_count: 11
   delegated_count: 0
   done_count: 0
 - emoji: 🛠️
@@ -591,24 +494,6 @@ clusters:
     notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
       + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
       scraping. Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
-    cluster: Dev Tools & Infrastructure
-  - id: claude-code-v2-1-203
-    title: Claude Code v2.1.203 — review and update our install
-    type: build
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Major bug fix release (v2.1.203): macOS background session stalls fixed (15-20s regression in 2.1.196), memory/per-turn
-      CPU regression fixed, ~37% CPU reduction during streaming, ~7MB memory reduction, session token auto-recovery, subagent
-      delegation fix (agents less likely to re-delegate entire task), login-expiry warnings, manual mode badge, Dynamic workflow
-      size setting, /review restored to fast single-pass. Affects our Claude Code CLI Handoff Protocol.'
-    captured: '2026-07-09'
-    source: Releasebot — Claude Code CHANGELOG (Jul 7, 2026)
-    notes: 'Source: releasebot.io/updates/anthropic/claude-code Full CHANGELOG: raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md
-      Key fixes for us: - macOS background session stall (was waiting 15-20s) - Background sessions auto-recover from stale
-      tokens - Subagents carry over work on session restart - Memory/per-turn CPU regression fixed - ~37% streaming CPU reduction
-      Action: Update Claude Code CLI (auto-updates via daemon, or re-install from claude.ai) Cross-ref: We have Claude Code
-      at ~/Library/Application Support/Claude/claude-code/'
     cluster: Dev Tools & Infrastructure
   - id: context-dev-evaluate
     title: Context.dev — evaluate as Firecrawl replacement for web scraping
@@ -760,46 +645,6 @@ clusters:
       is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. Source profile @gittrend.io
       already tracked as gittrendio-discovery-feed.'
     cluster: Dev Tools & Infrastructure
-  - id: safari-mcp-server
-    title: Safari MCP Server — evaluate for web dev/QA pipeline
-    type: research
-    domain: devops
-    priority: p2
-    status: active
-    summary: 'Apple''s official Safari MCP server (Safari Technology Preview 247). 17 tools: browser control (tabs/navigation),
-      DOM inspection, network monitoring, screenshots, console logs, accessibility checking, performance analysis, viewport
-      emulation. Connects to any MCP client (Claude Code, Codex). Runs entirely locally — no network calls. Makes agents capable
-      of debugging/QA''ing Safari-rendered pages autonomously. Low priority — no active Safari dev work yet, but useful for
-      Creative Agency QA and personal site compatibility testing.'
-    captured: '2026-07-09'
-    source: WebKit blog — Saron Yitbarek (Jul 1, 2026)
-    notes: 'URL: webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ Setup: Safari Technology Preview
-      → enable remote automation → `claude mcp add safari-mcp-stp` Requires: Safari Technology Preview (free), macOS Local
-      only — no network calls. Does NOT access AutoFill/personal data. Tools: browser_console_messages, browser_dialogs, close_tab,
-      create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
-      page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
-    cluster: Dev Tools & Infrastructure
-  - id: i-have-adhd-claude-skill
-    title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
-    type: research
-    domain: ai/ml
-    priority: p2
-    status: active
-    summary: Evaluate the ayghri/i-have-adhd Claude Code skill (152⭐) — 10 rules for action-first, no-preamble, tangent-suppressing
-      output. Also review the broader CLAUDE.md ADHD workflow pattern (status board, parking lot, context snapshots, autokickoff).
-      The 10 rules directly mirror user's established formatting preferences.
-    captured: 2026-07-20
-    source: X — @jjacky (jacky/OpenRouter) post (1.4M views, Jul 19 2026)
-    notes: 'Repo: github.com/ayghri/i-have-adhd (May 13, 2026, 152⭐).
-
-      10 rules: 1. Lead with next action 2. Number multi-step tasks 3. End with one concrete next step 4. Suppress tangents
-      5. Restate state every turn 6. Specific time estimates (minutes) 7. Make wins visible 8. Matter-of-fact errors 9. Cap
-      lists at 5 items 10. No preamble. No recap. No closers.
-
-      Also: Ed Leeman blog post (edleeman.co.uk) on CLAUDE.md-based workflow with status board, parking lot, context snapshots,
-      automatic session kickoff. Applicable to Hermes too — the 10 rules overlap with user''s formatting corrections. Worth
-      discussing whether to adopt for Hermes agent style.'
-    cluster: Dev Tools & Infrastructure
   - id: gittrendio-discovery-feed
     title: Gittrend.io — daily curated open-source project discoveries
     type: research
@@ -815,28 +660,13 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
-  count: 15
-  active_count: 15
+  count: 12
+  active_count: 12
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
   name: AI Models & Provider Landscape
   items:
-  - id: anthropic-ust-claude
-    title: Anthropic × UST — Claude for Physical AI
-    type: discuss
-    domain: ai/ml
-    priority: p2
-    status: active
-    summary: UST training 20,000 engineers on Claude. Claude Code reads chip schematics and runs validation tests (iDEC platform
-      cuts cycles 50-70%). Also deployed in healthcare (CarePath), telecom (IntelliOps), banking (FinX). UST becomes Global
-      Premier Partner. Relevant as case study reference for enterprise AI adoption patterns — useful for Anthropic Partner
-      Marketing context.
-    captured: '2026-07-13'
-    source: anthropic.com/news/ust-claude
-    notes: 'Key numbers: 20k trained, 50-70% validation cycle reduction, physical AI (chip design/manufacturing), regulated
-      industry deployment with human-in-the-loop approval steps'
-    cluster: AI Models & Provider Landscape
   - id: kyutai-pocket-tts-evaluate
     title: Evaluate Kyutai Pocket TTS — local CPU TTS with voice cloning
     type: research
@@ -901,8 +731,8 @@ clusters:
     notes: 'GitHub: github.com/stablyai/orca Platforms: macOS, Windows, Linux, iOS companion app Relevance: Novel mobile monitoring
       capability, but overlaps with our existing delegate_task pattern.'
     cluster: AI Models & Provider Landscape
-  count: 5
-  active_count: 5
+  count: 4
+  active_count: 4
   delegated_count: 0
   done_count: 0
 - emoji: 💼
@@ -1140,6 +970,35 @@ clusters:
     source: Aymane Mrini LinkedIn post — 7-layer AI stack breakdown
     notes: 'Source: ~/wiki/_system/pending/ai-stack-platforms-review.md'
     cluster: Other Active (Delegated / Backlog)
+  - id: lint-confidence-downgrade
+    title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
+      self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are
+      added.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R9
+    notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited
+      academic claims). These can be handled in the same audit pass.'
+    cluster: Other Active (Delegated / Backlog)
+  - id: lint-rejected-cleanup
+    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
+      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
+      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
+      or archive.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R14
+    notes: Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
+      needed to delete.
+    cluster: Other Active (Delegated / Backlog)
   - id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -1169,10 +1028,10 @@ clusters:
       Superintelligence — related expected utility arguments - Acausal trade / decision theory (Muehlhauser, Bostrom) - Paul
       Almond''s "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
-  count: 7
-  active_count: 6
+  count: 9
+  active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-07-20 14:14:39 SGT
-total_active: 69
+updated_at: 2026-07-27 01:04:45 SGT
+total_active: 61
 total_done: 0
