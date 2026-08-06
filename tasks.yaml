@@ -19,22 +19,6 @@ clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
   items:
-  - id: agentic-stack-review
-    title: Agentic Stack — portable .agent/ folder (memory + skills + protocols)
-    type: research
-    domain: ai/ml
-    priority: p0
-    status: active
-    summary: Portable .agent/ folder that plugs into Claude Code, Cursor, Windsurf, OpenCode, OpenClaw, Copilot CLI, Gemini
-      CLI, Hermes, Codex etc. — keeps knowledge when switching tools. Bounded agentic loops (maker → verifier → checker),
-      local data layer + dashboards, data flywheel (JSONL).
-    captured: 2026-08-01
-    source: X — @Av1dlive — codejunkie99/agentic-stack
-    notes: 'Repo: 2,210 stars, Apache 2.0, Python, created Apr 2026. HYPE CHECK: tweet claims 42,600 stars — ACTUAL 2,210
-      (~20x off). The 9-step loop (intent → issue → agent → runtime → execute → observe → verify → compound into skill → rerun
-      on cron) is real (v0.19.0 bounded loops). Matches our reflexion-loop + spine memory philosophy. Borrow the loop-budget
-      pattern; no need to install wholesale. Review: ~/wiki/_system/pending/agentic-stack-review.md'
-    cluster: Agent Orchestration & Loops
   - id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 232 specialist personas
     type: discuss
@@ -185,6 +169,26 @@ clusters:
     captured: '2026-07-05'
     source: 2026-07-04/05 orchestration investigation — source-code-verified
     cluster: Agent Orchestration & Loops
+  - id: graph-engineering-patterns
+    title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
+    type: research
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Long-form X article (4M views, 6.8K bookmarks) on graph-based agent orchestration. Core vocabulary: nodes (bounded
+      jobs with input/output contracts) + edges (real data dependencies). Key tests/patterns: the fake-edge test (drop sequential
+      waits that carry no data — parallelize), the diamond pattern (fan out → reduce in plain code → synthesize with a strong
+      model), fresh-context checkers (a worker and its verifier must NEVER share context — otherwise it''s one loop grading
+      its own homework), and anchors (nodes that cannot be argued with — tests that ran, revenue that landed). Failure modes:
+      context collapse (layer your fan-in), false independence (shared files/rate-limited APIs = hidden edges), silent node
+      failure (merge steps must count inputs). Includes ready-to-paste Claude Code "workflow" prompts and the Bun rewrite
+      case study ($165K, 64 agents, 11 days).'
+    captured: 2026-08-06
+    source: X article by Anatoli Kopadze — https://x.com/anatolikopadze/status/2080668775796314331
+    notes: 'Directly validates the reflexion-loop maker-checker design (fresh-context critic) and the crewai-orchestrator
+      diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth,
+      not judgment — skip for small/sequential/exploratory tasks.'
+    cluster: Agent Orchestration & Loops
   - id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -198,8 +202,22 @@ clusters:
     notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for
       Hermes multi-agent workflows.
     cluster: Agent Orchestration & Loops
-  count: 11
-  active_count: 11
+  - id: altman-self-prompting-systems
+    title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
+    type: research
+    domain: ai/ml
+    priority: p3
+    status: active
+    summary: 38-minute Sam Altman talk on using LLMs better than 99% of people — "You don't need to write prompts anymore."
+      The post frames the shift from prompt-writing to building systems that prompt themselves. Includes a linked guide on
+      how to build a self-prompting system.
+    captured: 2026-08-06
+    source: X post by Anatoli Kopadze — https://x.com/anatolikopadze/status/2084982016328482926
+    notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting
+      systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
+    cluster: Agent Orchestration & Loops
+  count: 12
+  active_count: 12
   delegated_count: 0
   done_count: 0
 - emoji: 📈
@@ -323,6 +341,23 @@ clusters:
     source: 0xsteamboat idea
     notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
       split mechanics.'
+    cluster: Creative Agency & Content
+  - id: openmontage-video-pipeline
+    title: OpenMontage — open-source agentic video production system
+    type: research
+    domain: creative
+    priority: p1
+    status: active
+    summary: 'World''s first open-source agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turns
+      Claude Code / Cursor / Copilot / Codex into a full video production studio. YAML pipeline manifests, FFmpeg integration,
+      Python orchestration + NodeJS rendering stack. Supports free/open-source workflows (stock footage, motion clips from
+      archives) and cloud API workflows. Cost governance system built in. DIRECTLY RELEVANT: Maps to our arcads stop-motion
+      pipeline (P2) and Creative Agency videography goals. Could replace or complement our planned arcads integration with
+      a fully open-source stack.'
+    captured: '2026-07-11'
+    source: '@syntaix.ai Instagram carousel — calesthio/OpenMontage'
+    notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
+      Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
     cluster: Creative Agency & Content
   - id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
@@ -455,49 +490,13 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Creative Agency & Content
-  count: 10
-  active_count: 10
+  count: 11
+  active_count: 11
   delegated_count: 0
   done_count: 0
 - emoji: 🛠️
   name: Dev Tools & Infrastructure
   items:
-  - id: agent-reach
-    title: Agent-Reach — multi-platform web & social access for AI agents
-    type: research
-    domain: devops
-    priority: p0
-    status: active
-    summary: 'Local-first CLI that gives AI agents web + social media access across 16+ platforms (Twitter/X, Reddit, YouTube,
-      GitHub, Bilibili, XiaoHongShu, Douyin, Weibo, LinkedIn, Instagram, RSS). MIT licensed. Zero-config for 8 channels, cookie-based
-      auth for others. DIRECTLY RELEVANT: Open-source alternative to Firecrawl (exhausted), Apify, and Tavily. Covers social
-      media scraping we currently can''t do (Instagram, Twitter/X). Complements our DDGS fallback with actual platform-native
-      access.'
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — Panniantong/agent-reach'
-    notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
-      + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
-      scraping. Updated 2026-08-01: verified 63,466 stars (Trendshift #1), pushed to P0 for explore-today. Review: ~/wiki/_system/pending/agent-reach-review.md
-      Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
-    cluster: Dev Tools & Infrastructure
-  - id: buzz-block-review
-    title: Buzz — Block's self-hostable workspace for humans + agents
-    type: research
-    domain: devops
-    priority: p0
-    status: active
-    summary: Open-source self-hostable workspace from Block (Jack Dorsey's company) where humans and AI agents share the same
-      rooms. Every message, reaction, workflow step, review approval and git event is a signed Nostr event on your own relay;
-      every participant (human or agent) is a keypair. Agents are members, not bots — own keys, own channel memberships, own
-      audit trail, scoped by identity not permission flags.
-    captured: 2026-08-01
-    source: X thread reply — block/buzz (Nostr workspace)
-    notes: 'Repo: github.com/block/buzz — 19,611 stars, Rust, Apache 2.0, created Mar 2026, pushed daily (very active), 1,345
-      open issues. Capabilities: answer questions with receipts, agent bug triage, feature-branch-as-room, unified search
-      across chat+patch+workflow+ approval, channels/canvases/workflows/voice huddles, frame-anchored media comments. Integrates
-      with Hermes three ways (thread context). Relevance: the "agents as teammates" model vs current Telegram+Hermes loop.
-      Concept high value, deploy low urgency. Review: ~/wiki/_system/pending/buzz-block-review.md'
-    cluster: Dev Tools & Infrastructure
   - id: hermes-session-pruning-update
     title: Evaluate & adopt Hermes session DB pruning/archiving
     type: build
@@ -512,21 +511,6 @@ clusters:
     notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
       users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
       pruning strategy for our setup. Command: hermes update'
-    cluster: Dev Tools & Infrastructure
-  - id: oh-my-hermes-review
-    title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
-    type: research
-    domain: devops
-    priority: p0
-    status: active
-    summary: '"Install once. Keep Hermes. Add a stronger operating layer." OMH is a workflow/skill layer on top of Hermes
-      Agent: deep interviews for goal engineering, goal-setting, harnesses across models (Fable, Opus, GPT, Kimi, GLM, Qwen),
-      sub-agent command splitting, memory retention with evidence boundaries. Runs on Hermes Desktop, CLI, and messenger.'
-    captured: 2026-08-01
-    source: X — @rlaope (HOPE | Engineer.) — github.com/rlaope/oh-my-hermes
-    notes: 'Repo: 409 stars, MIT, Python 3.11+, v1.0.4 stable, created Jun 2026, pushed Aug 1 (active). Author: HOPE / Sionic
-      AI (Paris). Key angle: explicit evidence boundaries + "dreaming" memory — overlaps with spine memory v2. Differentiators
-      are workflow layer + evidence gates, not model routing. Worth comparing their evidence model to ours. Review: ~/wiki/_system/pending/oh-my-hermes-review.md'
     cluster: Dev Tools & Infrastructure
   - id: context-dev-evaluate
     title: Context.dev — evaluate as Firecrawl replacement for web scraping
@@ -693,8 +677,8 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
-  count: 14
-  active_count: 14
+  count: 11
+  active_count: 11
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1065,6 +1049,6 @@ clusters:
   active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-01 11:45:10 SGT
-total_active: 63
+updated_at: 2026-08-06 13:54:35 SGT
+total_active: 62
 total_done: 0
