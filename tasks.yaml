@@ -256,6 +256,21 @@ clusters:
       with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
       Validated via direct GH read + repo info + README review.'
     cluster: Crypto & Quant Trading
+  - id: claude-code-ai-hedge-fund
+    title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
+    type: discuss
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
+      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
+      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
+    captured: 2026-08-07
+    source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
+    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
+      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
+      decomposition is the pattern worth extracting for the quant stack.
+    cluster: Crypto & Quant Trading
   - id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -299,8 +314,8 @@ clusters:
       positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
       page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
     cluster: Crypto & Quant Trading
-  count: 5
-  active_count: 5
+  count: 6
+  active_count: 6
   delegated_count: 0
   done_count: 0
 - emoji: 🎨
@@ -394,6 +409,22 @@ clusters:
     notes: HIGH priority — this is the core 3D tool for the interior design agent the user is helping a friend build. ahujasid
       version is battle-tested (24K stars, 2.4K forks). Hermes official skill wraps it with curated bpy patterns. Install
       with uv + Blender addon. See also GenRecon (3D scanning real rooms → digital models) which complements this.
+    cluster: Creative Agency & Content
+  - id: claude-code-ai-content-team
+    title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
+    type: discuss
+    domain: creative
+    priority: p2
+    status: active
+    summary: '7 AI "employees" built in Claude Code for one creator: Researcher (trends/ competitors/viral), Hook Writer (scroll-stopping
+      openings), Script Writer (reels/carousels/captions), Designer (thumbnails/visuals), Analyst (views/ retention/shares),
+      Manager (calendar/workflow), Publisher (schedule/post). Loop: Research → Write → Script → Design → Post → Analyze →
+      Repeat.'
+    captured: 2026-08-07
+    source: Instagram — @seb.ai — https://www.instagram.com/p/Dboe2qqEnPM/
+    notes: Directly maps to Creative Agency pipeline (carousel production, content engine). 2K likes / 4.2K comments. Setup
+      gated behind commenting "TEAM" on the post. Worth studying the agent decomposition vs the creative-agency skill's own
+      stage pipeline — could inform a content-team layer for the agency.
     cluster: Creative Agency & Content
   - id: improve-graphic-design
     title: Improve graphic design capabilities
@@ -490,8 +521,8 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Creative Agency & Content
-  count: 11
-  active_count: 11
+  count: 12
+  active_count: 12
   delegated_count: 0
   done_count: 0
 - emoji: 🛠️
@@ -569,6 +600,23 @@ clusters:
     notes: 'Key unknowns: Google Workspace actual amounts (PDF invoices), Anthropic billing model ($21.80 repeated charges),
       Google Play $2.79/mo subscription identity, second Apple invoice Jul 6 itemisation. Disney+ "1 day left" as of Jul 7
       — may have already lapsed.'
+    cluster: Dev Tools & Infrastructure
+  - id: mcp-host-60-minutes
+    title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
+    type: research
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: '20-slide technical guide on building an MCP host, not just installing servers. Covers 5 stdio subprocesses,
+      namespaced tools (two servers both expose "search"), sync UI bridged to async event loop, git tool allowlist (12→4).
+      Key insight: every tool schema is resent every turn — exposing all 21 tools burns context on tools the model never calls.
+      Stack: mcp 2.0.0, mcp-types 2.0.0, groq 1.6.0, streamlit 1.60.0, Python 3.12, free Groq key.'
+    captured: 2026-08-07
+    source: Instagram — @datasciencebrain — https://www.instagram.com/p/Dbhdx66GL3O/
+    notes: '"Do you know MCP?" is the 2026 interview version of "do you know REST?" — host vs server distinction + context-window
+      cost argument is a strong interview/content talking point (CCA-F prep + LinkedIn). Full PDF gated behind Rs.45/mo IG
+      subscription. Chin already runs a 20+ server MCP host (Hermes) — the guide validates existing architecture rather than
+      introducing new ground.'
     cluster: Dev Tools & Infrastructure
   - id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
@@ -677,8 +725,8 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
-  count: 11
-  active_count: 11
+  count: 12
+  active_count: 12
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1049,6 +1097,6 @@ clusters:
   active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-06 13:54:35 SGT
-total_active: 62
+updated_at: 2026-08-07 10:10:26 SGT
+total_active: 65
 total_done: 0
