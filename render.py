@@ -3,12 +3,22 @@
 
 Cluster assignments are hardcoded — this IS the categorization layer.
 Run after any registry update. Outputs to ~/.hermes/data/gh-tasks.yaml
+
+Cluster-assignment drift checking (unassigned + stale) is delegated to
+personal-assistant-bot's pa_engine.check_cluster_assignment() — see
+github.com/chintheman/personal-assistant-bot, skill/scripts/pa_engine.py.
 """
 
 import sys, os, re
 
 REGISTRY = os.path.expanduser("~/wiki/_system/task-registry.yaml")
 OUTPUT = os.path.expanduser("~/.hermes/data/gh-tasks.yaml")
+
+# personal-assistant-bot's skill directory is symlinked here once deployed
+# (see that repo's setup/INSTALL.md) — import its engine's tested
+# cluster-assignment-drift check instead of duplicating the logic inline.
+sys.path.insert(0, os.path.expanduser("~/.hermes/skills/productivity/personal-assistant-bot/scripts"))
+from pa_engine import check_cluster_assignment
 
 # ── Cluster definitions ──
 # Every active item ID must appear in exactly one cluster.
@@ -29,6 +39,11 @@ CLUSTERS_ORDERED = [
             "auto-goal-orchestration-plugin",
             "tool-decision-framework",
             "profile-isolation-deep-dive",
+            "anthropic-finance-agents",
+            "multi-agent-orchestration-guide",
+            "agentic-stack-review",
+            "graph-engineering-patterns",
+            "altman-self-prompting-systems",
         ],
     },
     {
@@ -39,6 +54,8 @@ CLUSTERS_ORDERED = [
             "tradingview-mcp-integration",
             "quant-repos-review",
             "deepseek-v4-open-source",
+            "nicholascrown-macro-letter",
+            "claude-code-ai-hedge-fund",
         ],
     },
     {
@@ -55,6 +72,10 @@ CLUSTERS_ORDERED = [
             "improve-graphic-design",
             "up-dog-ai-chatbot",
             "cinematic-camera-angles",
+            "genrecon-3d-reconstruction",
+            "unreal-engine-mcp-hermes",
+            "blender-mcp-hermes",
+            "claude-code-ai-content-team",
         ],
     },
     {
@@ -62,6 +83,8 @@ CLUSTERS_ORDERED = [
         "name": "Dev Tools & Infrastructure",
         "ids": [
             "hermes-session-pruning-update",
+            "oh-my-hermes-review",
+            "buzz-block-review",
             "github-spec-kit-eval",
             "codebase-memory-mcp",
             "context-dev-evaluate",
@@ -74,6 +97,9 @@ CLUSTERS_ORDERED = [
             "hyperbrowser-eval",
             "openwa-eval",
             "gittrendio-discovery-feed",
+            "repowise-eval",
+            "i-have-adhd-claude-skill",
+            "mcp-host-60-minutes",
         ],
     },
     {
@@ -105,6 +131,8 @@ CLUSTERS_ORDERED = [
             "potential-biz-ideas-master",
             "jonathan-lok-workshop",
             "qol-second-brain-apps",
+            "interior-design-agent-tools",
+            "ai-influencer-monetization",
         ],
     },
     {
@@ -117,6 +145,9 @@ CLUSTERS_ORDERED = [
             "telegram-games-exploration",
             "toto-automated-betting",
             "ai-stack-platforms-review",
+            "learn-obsidian",
+            "lint-rejected-cleanup",
+            "lint-confidence-downgrade",
         ],
     },
 ]
@@ -143,20 +174,51 @@ def load_ids_with_status():
     return out
 
 
+def compute_quadrant(t, today):
+    """Eisenhower quadrant from importance (priority) + urgency (flag or deadline ≤7d).
+
+    Q1 DO-NOW     = important (p0/p1) + urgent
+    Q2 SCHEDULE   = important + not urgent
+    Q3 DELEGATE   = not important (p2/p3) + urgent
+    Q4 BACKLOG    = not important + not urgent
+    """
+    from datetime import datetime
+
+    important = t.get("priority") in ("p0", "p1")
+    urgent = bool(t.get("urgent"))
+    dl = t.get("deadline")
+    if dl and not urgent:
+        try:
+            dl_date = datetime.strptime(str(dl)[:10], "%Y-%m-%d").date()
+            days_left = (dl_date - today).days
+            # Only deadlines today or within the next 7 days are urgent;
+            # past deadlines (negative days) don't auto-flag.
+            urgent = 0 <= days_left <= 7
+        except (ValueError, TypeError):
+            pass
+    if urgent and important:
+        return "Q1"
+    if not urgent and important:
+        return "Q2"
+    if urgent and not important:
+        return "Q3"
+    return "Q4"
+
+
 def build_clustered(registry):
     """Build clustered export with all item fields Zo needs."""
-    from datetime import datetime, timezone, timedelta
+    from datetime import datetime, timezone, timedelta, date
     SGT = timezone(timedelta(hours=8))
-    
+    today = datetime.now(SGT).date()
+
     result = {
         "cluster_order": [],
         "clusters": [],
         "updated_at": datetime.now(SGT).strftime("%Y-%m-%d %H:%M:%S SGT"),
         "total_active": 0,
         "total_done": 0,
+        "matrix_summary": {"Q1": 0, "Q2": 0, "Q3": 0, "Q4": 0},
     }
-
-    all_active_ids = set()
 
     for cdef in CLUSTERS_ORDERED:
         cluster = {
@@ -173,22 +235,22 @@ def build_clustered(registry):
                 print(f"  ⚠️  '{tid}' is '{t.get('status')}' not active — skipping", file=sys.stderr)
                 continue
 
-            all_active_ids.add(tid)
-
             # Build clean export item
             item = {}
             for field in [
                 "id", "title", "type", "domain", "priority", "status",
                 "summary", "deadline", "captured", "source",
                 "delegated_to", "completed", "outcome", "resolution",
-                "notes",
+                "notes", "urgent",
             ]:
                 val = t.get(field)
                 if val:
                     item[field] = val
 
-            # Add cluster label
+            # Add cluster label + Eisenhower quadrant
             item["cluster"] = cdef["name"]
+            item["quadrant"] = compute_quadrant(t, today)
+            result["matrix_summary"][item["quadrant"]] += 1
 
             cluster["items"].append(item)
 
@@ -213,10 +275,17 @@ def build_clustered(registry):
         })
         result["clusters"].append(cluster)
 
-    # Check for unassigned active items
-    for tid, t in registry.items():
-        if t.get("status") in ("active", "delegated") and tid not in all_active_ids:
-            print(f"  ❌ '{tid}' is active but NOT ASSIGNED to any cluster!", file=sys.stderr)
+    # Cluster-assignment drift check — delegates to pa_engine's tested
+    # function instead of the inline, one-directional check this used to
+    # do. Also surfaces the "stale" direction (ids sitting in a cluster's
+    # ids list that are no longer active/delegated, or missing from the
+    # registry entirely) that this script never checked before.
+    cluster_defs = [{"name": cdef["name"], "ids": cdef["ids"]} for cdef in CLUSTERS_ORDERED]
+    drift = check_cluster_assignment(registry, cluster_defs)
+    for tid in drift["unassigned"]:
+        print(f"  ❌ '{tid}' is active but NOT ASSIGNED to any cluster!", file=sys.stderr)
+    for tid in drift["stale"]:
+        print(f"  ⚠️  '{tid}' is listed in a cluster but is not active/delegated (or missing from registry) — stale cluster entry", file=sys.stderr)
 
     return result
 
@@ -258,6 +327,9 @@ def main():
         if p2: parts.append(f"{p2}×P2")
         if p3: parts.append(f"{p3}×P3")
         print(f"  {c['emoji']} {c['name']}: {c['count']} ({', '.join(parts)})")
+
+    ms = data["matrix_summary"]
+    print(f"Eisenhower matrix: Q1-do {ms['Q1']} · Q2-schedule {ms['Q2']} · Q3-delegate {ms['Q3']} · Q4-backlog {ms['Q4']}")
 
 
 if __name__ == "__main__":
