@@ -42,6 +42,7 @@ clusters:
       \ security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
       \ KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: karpathy-vibe-to-agentic
     title: Karpathy — From Vibe Coding to Agentic Engineering (absorb)
     type: research
@@ -58,6 +59,7 @@ clusters:
       not OpenAI, not DeepMind — you." DIRECT RELEVANCE: Validates our entire loop engineering + wiki + skills architecture.
       Maps directly to P0 master looping workstream.'
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: vibe-coding-vs-vibe-engineering
     title: Study the difference between Vibe Coding vs Agentic Engineering
     type: research
@@ -77,6 +79,7 @@ clusters:
       \ Karpathy Sequoia absorb\n  - agentic-loop-engineering (done) — Boris Cherny loops\n  - auto-goal-orchestration-plugin\
       \ (P2 · discuss) — /goal automation\n  This item is the focused distinction study between the two paradigms."
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: agency-agent-fa-integration
     title: 'Deep dive: adapt Financial Analyst persona for crypto quant profiles'
     type: build
@@ -90,6 +93,7 @@ clusters:
     source: agency-agents (Financial Analyst)
     notes: 'Review checklist item 2/4 outcome. Reference: ~/agency-highlights/finance-financial-analyst.md'
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: agency-agent-nexus-integration
     title: 'Deep dive: integrate NEXUS quality gates and handoff templates into creative-agency'
     type: build
@@ -104,6 +108,7 @@ clusters:
     notes: 'Review checklist item 3/4 outcome. 3 integrations ranked: quality gates (high), handoff template (high), Dev↔QA
       loop (medium). See ~/agency-highlights/nexus-strategy.md'
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: agency-agent-pm-integration
     title: 'Deep dive: integrate Product Manager persona patterns into profile-creation skill'
     type: build
@@ -117,6 +122,7 @@ clusters:
     source: agency-agents (Product Manager)
     notes: ️ Review checklist item 1/4 outcome. See ~/agency-highlights/product-manager.md
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
     type: discuss
@@ -138,6 +144,7 @@ clusters:
       \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
       \ router and our 26 profile roster."
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: agency-agent-highlights-review
     title: Review agency-agent profile templates for ecosystem integration
     type: review
@@ -154,6 +161,7 @@ clusters:
       for crypto quant profile, (3) Read NEXUS Strategy — compare with creative-agency pipeline, (4) Decide which patterns
       to integrate.'
     cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: auto-goal-orchestration-plugin
     title: Auto-goal orchestration plugin — review proposed flow
     type: discuss
@@ -169,6 +177,7 @@ clusters:
     captured: '2026-07-05'
     source: 2026-07-04/05 orchestration investigation — source-code-verified
     cluster: Agent Orchestration & Loops
+    quadrant: Q4
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
     type: research
@@ -189,6 +198,7 @@ clusters:
       diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth,
       not judgment — skip for small/sequential/exploratory tasks.'
     cluster: Agent Orchestration & Loops
+    quadrant: Q4
   - id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -202,6 +212,7 @@ clusters:
     notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for
       Hermes multi-agent workflows.
     cluster: Agent Orchestration & Loops
+    quadrant: Q4
   - id: altman-self-prompting-systems
     title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
     type: research
@@ -216,6 +227,7 @@ clusters:
     notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
+    quadrant: Q4
   count: 12
   active_count: 12
   delegated_count: 0
@@ -240,6 +252,7 @@ clusters:
       TradingView MCP. Uses same Hermes stack. v0.3.0 ships Polymarket + FRED. Decision log persists to trading_memory.md
       with auto-reflection.'
     cluster: Crypto & Quant Trading
+    quadrant: Q2
   - id: tradingview-mcp-integration
     title: Integrate TradingView MCP — AI chart analysis for crypto quant
     type: build
@@ -256,6 +269,7 @@ clusters:
       with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
       Validated via direct GH read + repo info + README review.'
     cluster: Crypto & Quant Trading
+    quadrant: Q2
   - id: claude-code-ai-hedge-fund
     title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
     type: discuss
@@ -271,6 +285,7 @@ clusters:
       commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
       decomposition is the pattern worth extracting for the quant stack.
     cluster: Crypto & Quant Trading
+    quadrant: Q4
   - id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -286,6 +301,7 @@ clusters:
       Weights: huggingface.co/collections/deepseek-ai/deepseek-v4 Relevance: Already our default model. Interesting to note
       the open-source commitment and tech report for understanding our base architecture better.'
     cluster: Crypto & Quant Trading
+    quadrant: Q4
   - id: quant-repos-review
     title: Explore top quant finance GitHub repos
     type: research
@@ -298,6 +314,7 @@ clusters:
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
     cluster: Crypto & Quant Trading
+    quadrant: Q4
   - id: nicholascrown-macro-letter
     title: Nicholas Crown — macro trading profile + The Crown Macro Letter
     type: research
@@ -314,6 +331,7 @@ clusters:
       positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
       page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
     cluster: Crypto & Quant Trading
+    quadrant: Q4
   count: 6
   active_count: 6
   delegated_count: 0
@@ -343,6 +361,7 @@ clusters:
       slide types and integrated as brief-to-framework routing logic. Each framework is a proven structure — use to decide
       which carousel format fits the content objective rather than defaulting to one.'
     cluster: Creative Agency & Content
+    quadrant: Q2
   - id: agent-ad-network-skill
     title: Build agent ad network skill — display ads in Claude/any agent, profit share on impressions
     type: build
@@ -357,6 +376,7 @@ clusters:
     notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
       split mechanics.'
     cluster: Creative Agency & Content
+    quadrant: Q2
   - id: openmontage-video-pipeline
     title: OpenMontage — open-source agentic video production system
     type: research
@@ -374,6 +394,7 @@ clusters:
     notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
       Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
     cluster: Creative Agency & Content
+    quadrant: Q2
   - id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
     type: research
@@ -392,6 +413,7 @@ clusters:
       shared templates). Arcads pricing: $110/mo (10 videos) to $220/mo (20 videos), Pro tier with API access. Seedance 2.0
       on fal.ai — compatible with our existing FAL config. Reference pattern is model-agnostic. Post URL for reference: linkedin.com/posts/romain-torres-arcads_i-built-a-claude-skill-that-turns-any-design-ugcPost-7478777423308763136-wTaW'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: blender-mcp-hermes
     title: Blender MCP for Hermes Agent — official + community stack
     type: build
@@ -410,6 +432,7 @@ clusters:
       version is battle-tested (24K stars, 2.4K forks). Hermes official skill wraps it with curated bpy patterns. Install
       with uv + Blender addon. See also GenRecon (3D scanning real rooms → digital models) which complements this.
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: claude-code-ai-content-team
     title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
     type: discuss
@@ -426,6 +449,7 @@ clusters:
       gated behind commenting "TEAM" on the post. Worth studying the agent decomposition vs the creative-agency skill's own
       stage pipeline — could inform a content-team layer for the agency.
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -438,6 +462,7 @@ clusters:
     source: Instagram carousel (DaK0XC8ilSU) — content inaccessible, flag for review
     notes: 'Post URL: instagram.com/p/DaK0XC8ilSU Could not extract content — Instagram requires login.'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: learn-animated-websites
     title: Learn how to make animated websites
     type: research
@@ -459,6 +484,7 @@ clusters:
       Also explore: Framer Motion, GSAP, CSS/JS animation patterns, and how these apply to personal site (0xsteamboat.zo.space)
       and future builds.'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -474,6 +500,7 @@ clusters:
       #MovieTips #FilmStudies Caption talks about how different angles project power or vulnerability. Comments include practical
       notation from industry professionals (e.g. W/A, L/L, WS, FS, MS, MCU, CU, BCU, 2S, OS notations).'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: genrecon-3d-reconstruction
     title: GenRecon — 8 photos to full 3D room (open-source)
     type: build
@@ -488,6 +515,7 @@ clusters:
     notes: 'Paper: arxiv.org/abs/2605.23888. Project: kasothaphie.github.io/GenRecon. Code repo at github.com/kasothaphie/GenRecon
       (coming soon — not yet released). Monitor for code release. Slots into creative pipeline for 3D asset generation.'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: unreal-engine-mcp-hermes
     title: Unreal Engine MCP for Hermes Agent — official companion skill
     type: build
@@ -505,6 +533,7 @@ clusters:
       VR presentations. Companion skill has 5 reference files (tool-surface.md, advanced-workflows.md, scene-craft.md, recipes.md,
       pitfalls.md). Related skill: blender-mcp (listed in Hermes docs).'
     cluster: Creative Agency & Content
+    quadrant: Q4
   - id: up-dog-ai-chatbot
     title: Up Dog AI chatbot — pun-based product idea
     type: discuss
@@ -521,6 +550,7 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Creative Agency & Content
+    quadrant: Q4
   count: 12
   active_count: 12
   delegated_count: 0
@@ -543,6 +573,7 @@ clusters:
       users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
       pruning strategy for our setup. Command: hermes update'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: context-dev-evaluate
     title: Context.dev — evaluate as Firecrawl replacement for web scraping
     type: research
@@ -561,6 +592,7 @@ clusters:
       Free tier: 500 credits (no card needed) Rate limits: Free 30/min, Developer 60/min, Pro 300/min, Scale 700/min Startups
       get 30% off paid plans'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: github-spec-kit-eval
     title: Evaluate GitHub Spec Kit for developer-agent workflow
     type: build
@@ -572,6 +604,7 @@ clusters:
       skills and developer-agent profile. Evaluate against current workflow and adopt if better.'
     captured: 2026-07-15
     cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: vps-shared-memory
     title: Explore VPS + shared memory — Zo Basic vs Hostinger vs sync strategy
     type: discuss
@@ -584,6 +617,7 @@ clusters:
       to Zo Basic (already paid $18/mo) or add Hostinger $6/mo SG. Full assessment at ~/wiki/_system/pending/vps-shared-memory.md'
     captured: 2026-07-15
     cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: codebase-memory-mcp
     title: codebase-memory-mcp — tree-sitter knowledge graph for coding agents
     type: research
@@ -601,6 +635,7 @@ clusters:
       Google Play $2.79/mo subscription identity, second Apple invoice Jul 6 itemisation. Disney+ "1 day left" as of Jul 7
       — may have already lapsed.'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: mcp-host-60-minutes
     title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
     type: research
@@ -618,6 +653,7 @@ clusters:
       subscription. Chin already runs a 20+ server MCP host (Hermes) — the guide validates existing architecture rather than
       introducing new ground.'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
     type: build
@@ -636,6 +672,7 @@ clusters:
       \ or local npm Website: open-wa.org Compared to: WhatsApp Cloud API (+$30-50/mo) — OpenWA is free + self-hosted Saved\
       \ as PA DB link #8. Raw capture at wiki/raw/2026-07/"
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -653,6 +690,7 @@ clusters:
       \  search_with_bing, browser_use_agent, openai_computer_use_agent,\n  claude_computer_use_agent, create/delete/list_profile\n\
       Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -675,6 +713,7 @@ clusters:
       \ vs\n  our stack before deciding to install.\nCross-ref: Our existing autonomous-coding-agents skill references\n \
       \ OpenCode + DeepSeek as primary stack."
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: omniroute-local-gateway
     title: OmniRoute — local AI routing gateway for 231+ providers
     type: research
@@ -692,6 +731,7 @@ clusters:
       pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
       Hermes provider config.'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
     type: build
@@ -710,6 +750,7 @@ clusters:
       is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. Source profile @gittrend.io
       already tracked as gittrendio-discovery-feed.'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: gittrendio-discovery-feed
     title: Gittrend.io — daily curated open-source project discoveries
     type: research
@@ -725,6 +766,7 @@ clusters:
       quality: high — posts are curated, not automated scrapes Already pulled: OpenWA (link #8, openwa-eval) Suggestion: check
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   count: 12
   active_count: 12
   delegated_count: 0
@@ -747,6 +789,7 @@ clusters:
       Current TTS: Edge TTS (default, online, no voice cloning) potential: custom TTS provider plugin for Hermes, or direct
       terminal-based batch generation'
     cluster: AI Models & Provider Landscape
+    quadrant: Q4
   - id: chinese-ai-enterprise-adoption-ft
     title: FT — Global companies (DD, Siemens, Airbnb) adopting Chinese AI
     type: discuss
@@ -763,6 +806,7 @@ clusters:
       (enterprise AI adoption patterns), macro (Chinese GDP impact from AI productivity gains). Source: FT via Cryptobriefing
       summary.'
     cluster: AI Models & Provider Landscape
+    quadrant: Q4
   - id: glm-5-eval
     title: GLM-5.2 (Z.ai) — MCP Atlas
     type: build
@@ -781,6 +825,7 @@ clusters:
       as MCP-focused fallback candidate. FT Jul 2026: DoorDash, Siemens, Airbnb running Z.ai in production — enterprise validation
       of the vendor.'
     cluster: AI Models & Provider Landscape
+    quadrant: Q4
   - id: orca-ade
     title: Orca — Agent Development Environment for parallel agents
     type: research
@@ -796,6 +841,7 @@ clusters:
     notes: 'GitHub: github.com/stablyai/orca Platforms: macOS, Windows, Linux, iOS companion app Relevance: Novel mobile monitoring
       capability, but overlaps with our existing delegate_task pattern.'
     cluster: AI Models & Provider Landscape
+    quadrant: Q4
   count: 4
   active_count: 4
   delegated_count: 0
@@ -815,6 +861,7 @@ clusters:
       outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
     cluster: Career & Content Publishing
+    quadrant: Q2
   - id: career-advice-age-of-ai
     title: Phil Chen — Career advice in the age of AI (absorb)
     type: research
@@ -830,6 +877,7 @@ clusters:
       + product thinking direction. Directly useful for OpenAI career positioning (they need problem-finders, not problem-solvers).
       Intersects with Karpathy''s "you can outsource thinking, not understanding" thesis.'
     cluster: Career & Content Publishing
+    quadrant: Q2
   - id: profile-review-phil-chen-framework
     title: Review LinkedIn/profile positioning based on Phil Chen's framework
     type: discuss
@@ -844,6 +892,7 @@ clusters:
     captured: '2026-07-06'
     source: '@philhchen X thread (Jul 2, 2026) — 2.6M views, synthesized by PA Jul 6, 2026'
     cluster: Career & Content Publishing
+    quadrant: Q2
   - id: start-substack
     title: Start a Substack — publish AI learnings, frameworks, and "show me" test evidence
     type: create
@@ -861,6 +910,7 @@ clusters:
     source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
       Verna "Cool. Show me." bar
     cluster: Career & Content Publishing
+    quadrant: Q2
   count: 4
   active_count: 4
   delegated_count: 0
@@ -880,6 +930,7 @@ clusters:
     source: Instagram — @cash_.kitty
     notes: https://www.instagram.com/cash_.kitty
     cluster: Business Ideas & Products
+    quadrant: Q2
   - id: ai-influencer-monetization
     title: AI Influencer Empire — monetization strategy (profit from lust)
     type: research
@@ -898,6 +949,7 @@ clusters:
       domain. Worth monitoring as a trend — AI-generated influencer content is growing rapidly. Has ethical/ToS implications
       (AI-generated personas on platforms).
     cluster: Business Ideas & Products
+    quadrant: Q4
   - id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -910,6 +962,7 @@ clusters:
     captured: '2026-07-04'
     source: 0xsteamboat brainstorm request
     cluster: Business Ideas & Products
+    quadrant: Q4
   - id: interior-design-agent-tools
     title: Interior Design Agent — AI tool stack for friend's project
     type: discuss
@@ -926,6 +979,7 @@ clusters:
       agent-callable without running Blender. Blender MCP handles custom 3D modeling. Figma MCP handles client-facing presentations
       and mood boards. Full scope to be defined when friend shares context (~2 weeks).
     cluster: Business Ideas & Products
+    quadrant: Q4
   - id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -939,6 +993,7 @@ clusters:
     source: Comprehensive feasibility report delivered by user
     notes: 'Source: ~/wiki/_system/pending/agent-run-business-ideas-2026.md'
     cluster: Business Ideas & Products
+    quadrant: Q4
   - id: jonathan-lok-workshop
     title: Talk to Jonathan Lok about agentic AI workshop for his kids
     type: discuss
@@ -951,6 +1006,7 @@ clusters:
     source: 0xsteamboat request (Jul 11, 2026)
     notes: ~/wiki/_system/pending/jonathan-lok-workshop.md
     cluster: Business Ideas & Products
+    quadrant: Q4
   count: 6
   active_count: 6
   delegated_count: 0
@@ -972,6 +1028,7 @@ clusters:
     notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips,
       gap analysis table). Full context delivered to The General.'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q2
   - id: telegram-games-exploration
     title: Explore creating Telegram games — landscape, tech stack, build options
     type: research
@@ -990,6 +1047,7 @@ clusters:
       popular but optional. Huge 2024-2026 wave: Notcoin, Hamster Kombat, DOGS, Catizen. Key mechanics: daily streaks, referral
       systems, leaderboards, staking/loot boxes for retention.'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: explore-smart-internet-sites
     title: Explore fun & useful websites — AevyTV smarter internet carousel
     type: research
@@ -1002,6 +1060,7 @@ clusters:
     source: AevyTV Instagram carousel
     notes: 'Source: ~/wiki/_system/pending/smart-internet-sites.md'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: toto-automated-betting
     title: Research automated TOTO bet placement — 100 quick picks without human intervention
     type: research
@@ -1022,6 +1081,7 @@ clusters:
       \  - ToS violation risk (automated gambling)?\n  - Legal status: automated betting in Singapore?\n  - Practical: 100\
       \ quick picks at $1 = $100 per draw"
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: ai-stack-platforms-review
     title: Review all AI stack platforms for potential integration
     type: research
@@ -1035,6 +1095,7 @@ clusters:
     source: Aymane Mrini LinkedIn post — 7-layer AI stack breakdown
     notes: 'Source: ~/wiki/_system/pending/ai-stack-platforms-review.md'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: lint-confidence-downgrade
     title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
     type: maintain
@@ -1047,8 +1108,12 @@ clusters:
     captured: 2026-07-19
     source: lint-cron-2026-07-19 @ R9
     notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited
-      academic claims). These can be handled in the same audit pass.'
+      academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches
+      downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high;
+      this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
+      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: lint-rejected-cleanup
     title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
     type: maintain
@@ -1061,9 +1126,11 @@ clusters:
       or archive.'
     captured: 2026-07-19
     source: lint-cron-2026-07-19 @ R14
-    notes: Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
-      needed to delete.
+    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
+      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
+      unchanged.'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -1077,6 +1144,7 @@ clusters:
     notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
       plugins. Should integrate with ~/wiki/ workflow where possible.
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -1093,10 +1161,16 @@ clusters:
       Superintelligence — related expected utility arguments - Acausal trade / decision theory (Muehlhauser, Bostrom) - Paul
       Almond''s "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   count: 9
   active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-07 10:10:26 SGT
+updated_at: 2026-08-09 11:21:23 SGT
 total_active: 65
 total_done: 0
+matrix_summary:
+  Q1: 0
+  Q2: 24
+  Q3: 0
+  Q4: 41
