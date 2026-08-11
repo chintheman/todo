@@ -24,7 +24,7 @@ clusters:
     type: discuss
     domain: ai/ml
     priority: p0
-    status: active
+    status: done
     summary: 'msitarzewski/agency-agents — 232 AI agent personas across 16 divisions (engineering, design, product, marketing, sales, security, etc.). Ships a native Hermes plugin (agency-agents-router) with 4 tools: search, inspect, load, delegate. Lazy routing — one plugin with data/agents.json, not 232 external skills. Routes specialists on demand via delegate_task. Complements our 26 profiles (system-level) with task-level specialists. Need to: inspect plugin source, install, test routing, determine integration strategy with existing profiles, and establish when to use agency-agents vs our native skills.'
     captured: '2026-07-07'
     source: '@RoundtableSpace on X (Jul 6, 2026) — msitarzewski/agency-agents (128K⭐)'
