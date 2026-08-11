@@ -618,6 +618,26 @@ clusters:
     captured: 2026-07-15
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
+  - id: labs-blitz-pomodoro-build
+    title: Labs Blitz + Pomodoro build — awaiting Zo
+    type: build
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
+      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
+      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
+      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
+      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
+    captured: 2026-08-11
+    source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
+    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
+      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
+      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
+      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
+      use.'
+    cluster: Dev Tools & Infrastructure
+    quadrant: Q2
   - id: codebase-memory-mcp
     title: codebase-memory-mcp — tree-sitter knowledge graph for coding agents
     type: research
@@ -767,8 +787,8 @@ clusters:
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
-  count: 12
-  active_count: 12
+  count: 13
+  active_count: 13
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1166,11 +1186,11 @@ clusters:
   active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-09 11:21:23 SGT
-total_active: 65
+updated_at: 2026-08-11 14:11:29 SGT
+total_active: 66
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 24
+  Q2: 25
   Q3: 0
   Q4: 41
