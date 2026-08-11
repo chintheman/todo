@@ -144,7 +144,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p3
-    status: active
+    status: done
     summary: 38-minute Sam Altman talk on using LLMs better than 99% of people — "You don't need to write prompts anymore." The post frames the shift from prompt-writing to building systems that prompt themselves. Includes a linked guide on how to build a self-prompting system.
     captured: 2026-08-06
     source: X post by Anatoli Kopadze — https://x.com/anatolikopadze/status/2084982016328482926
