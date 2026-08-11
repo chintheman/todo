@@ -120,12 +120,13 @@ clusters:
     type: discuss
     domain: ai/ml
     priority: p2
-    status: active
+    status: delegated
     summary: 'Proposed flow: (1) user sends prompt, (2) goal-spotter subagent identifies goal/purpose, (3) agent evaluates planned response against goal before replying, (4a) if sufficient → respond normally, (4b) if not → send initial response as "processing more..." + self-activate /goal for deep completion. Uses existing GoalManager/GoalState/judge_goal in hermes_cli/goals.py. Source verified: pre_llm_call at turn_context.py:431-456, GoalManager at goals.py:1077, evaluate_after_turn at goals.py:1382. Judge model config currently unset (falls to auto). Needs discussion on: latency/cost trade-offs, gate check to skip non-task messages, and whether goal-spotter is a subagent or inline.'
     captured: '2026-07-05'
     source: 2026-07-04/05 orchestration investigation — source-code-verified
     cluster: Agent Orchestration & Loops
     quadrant: Q4
+    delegated_to: test-agent
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
     type: research
