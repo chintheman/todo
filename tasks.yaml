@@ -1050,8 +1050,56 @@ clusters:
     notes: ~/wiki/_system/pending/jonathan-lok-workshop.md
     cluster: Business Ideas & Products
     quadrant: Q4
-  count: 6
-  active_count: 6
+  - id: grief-management-voice-journal
+    title: Grief Management — private voice journal website/app
+    type: build
+    domain: business/build
+    priority: p3
+    status: active
+    summary: 'Build a grief management tool: private voice journal where users speak thoughts on-device. Inspired by Slate
+      (iOS voice journal, no server, on-device reflection + weekly recaps). Key differentiator: purpose-built for grief processing,
+      not general journaling. Voice-first, private by default, on-device AI that notices patterns in what the user repeats
+      or shifts over time.'
+    captured: 2026-07-23
+    source: User idea + Slate private journal app reference
+    notes: 'REFERENCE APP: Slate - Private Journal URL: https://apps.apple.com/us/app/slate-private-journal/id6787531627 Developer:
+      hsla0001. Price: $7.99/mo or $59.99/yr (1 month free trial). Size: 3 MB. Platform: iOS 26+ (iPhone only). Rating: 5.0.
+
+      KEY FEATURES: Voice journal, no server, on-device. Press record and speak. On-device reflection: what it was about,
+      how it sat, one observation worth keeping. "Never advice, never a chat." Weekly recap (Sundays): what repeated, what
+      shifted. No streaks, no scores. Optional encrypted iCloud backup. Privacy: "Data Not Collected." Works on airplane mode.
+      Lock Screen + Dynamic Island timer.
+
+      GRIEF DIFFERENTIATORS: guided prompts for grief stages, memory capture (photos/voice notes about the person), anniversary
+      reminders, optional trusted circle sharing, crisis resource integration.
+
+      COMPETITORS: Say It Anyway (Grief Journal), Solace (Grief and Loss Journal with memorial cards + crisis support), Good
+      Grief (Journal and Vault with shared memory vault), Heartchive (end-to-end encrypted, caregiving + grief paths).
+
+      Sibling to nicest-place-website and looking-busy-website in the business/build portfolio.'
+    cluster: Business Ideas & Products
+    quadrant: Q4
+  - id: looking-busy-website
+    title: LookingBusy — interactive "pretend to work" website
+    type: build
+    domain: business/build
+    priority: p3
+    status: active
+    summary: 'Buildable business idea: interactive fake-work dashboard. Type to escalate chaos, M for fake Zoom, 13 job modes,
+      5 boss skins, live market ticker. Freemium model — free basic, paid for custom modes/ boss skins/company branding. Proven
+      concept (LookingBusy exists and drives traffic).'
+    captured: 2026-07-23
+    source: https://www.lookingbusy.com
+    notes: "URL: https://www.lookingbusy.com Title: LookingBusy — Apex / Executive Operations Modes: Executive, Founder, Consultant,\
+      \ Crypto Founder, VC Associate,\n  Breeder, PM, Designer, Lawyer, Doctor, HOA Board, Honors Student,\n  Group Chat Admin\n\
+      Boss skins: Excel (Forecast), VS Code (Code Review), Docs (Strategy\n  Memo), PowerPoint (Board Deck), Figma (Design\
+      \ Review)\nInteractions: typing escalates chaos, M for fake meeting, Escalate\n  button, Ambient mode, Fullscreen (F11)\n\
+      Inspiration for: building interactive, scenario-based single-purpose\n  websites. Sibling to nicest-place-website in\
+      \ the website ideas set."
+    cluster: Business Ideas & Products
+    quadrant: Q4
+  count: 8
+  active_count: 8
   delegated_count: 0
   done_count: 0
 - emoji: 🔌
@@ -1243,15 +1291,36 @@ clusters:
       Almond''s "Roko''s Basilisk: A Primer" - AI safety relevance vs. memetic hazard debate'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
-  count: 9
-  active_count: 8
+  - id: systems-thinking-video-review
+    title: The Revolution of Systems Thinking — video review and study notes
+    type: research
+    domain: ai/ml
+    priority: p3
+    status: active
+    summary: 'Reviewed 20min video on systems thinking as a quiet scientific revolution. Covers: Descartes/reductionism, emergence,
+      systems theory funnel model (hard theory to life/cognition to holistic), ethical double-edge. Key connection: systems
+      thinking is the meta-framework for understanding agent loops, feedback loops, and multi-agent orchestration.'
+    captured: 2026-07-23
+    source: YouTube — Pantha Rhey / Thorsten Fuchs
+    notes: 'Video: https://youtu.be/Jhtya7E45BE Channel: Pantha Rhey (Thorsten Fuchs and Anna-Sophie Fuchs) Length: 20 min
+      33 sec. Full transcript and review saved to wiki.
+
+      KEY CONCEPTS: reductionism, emergence, cybernetics, autopoiesis, dissipative structures, self-organization, technocratic
+      risk.
+
+      RELATES TO: claude-code-loops-google-meta-ads (feedback loops), reflexion-loop (maker-checker as feedback system), agent
+      orchestration.'
+    cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
+  count: 10
+  active_count: 9
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-12 19:37:32 SGT
-total_active: 69
+updated_at: 2026-08-12 19:43:02 SGT
+total_active: 72
 total_done: 0
 matrix_summary:
   Q1: 0
   Q2: 27
   Q3: 0
-  Q4: 42
+  Q4: 45
