@@ -13,6 +13,8 @@ cluster_order:
   name: Career & Content Publishing
 - emoji: 💡
   name: Business Ideas & Products
+- emoji: 🔌
+  name: Integrations
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
 clusters:
@@ -1052,6 +1054,44 @@ clusters:
   active_count: 6
   delegated_count: 0
   done_count: 0
+- emoji: 🔌
+  name: Integrations
+  items:
+  - id: zo-heyy-integration
+    title: 'Zo integration: Heyy — unified inbox (IG/WhatsApp/Messenger/email)'
+    type: build
+    domain: integrations
+    priority: p0
+    status: active
+    summary: 'Connect Heyy in Zo (app_slug=heyy, Connect button surfaced Aug 12). Unified customer messaging inbox: Instagram,
+      WhatsApp, FB Messenger, website chat, email. Test use case: WhatsApp-heavy sales chats — review selected conversations,
+      analyse, send consolidated report (situational context + next steps) to user.'
+    captured: 2026-08-12
+    source: Zo app catalog — heyy.io
+    notes: Paid plan (~$15+/mo). Read actions (get conversations, list messages) only visible after connecting — connect trial
+      first to confirm what's pullable before building the analysis layer.
+    cluster: Integrations
+    quadrant: Q2
+  - id: zo-social-fetch-integration
+    title: 'Zo integration: social_fetch — IG/TikTok/YT/X scraper API'
+    type: build
+    domain: integrations
+    priority: p0
+    status: active
+    summary: Connect social_fetch in Zo (app_slug=social_fetch, Connect button surfaced Aug 12). 165 endpoints, 21 platforms
+      (IG, TikTok, YouTube, X, LinkedIn, Reddit, Threads, FB +11). Profiles, posts, transcripts, metrics, consistent fields.
+      $14/1k credits, 100 free, PAYG never expires. Slot into instagram-content / social-video-extraction ladder as fast-path
+      data source (API over browser automation preference).
+    captured: 2026-08-12
+    source: Zo app catalog — socialfetch.dev
+    notes: Read-only scraping — no IG posting. Needs account signup (free 100 credits, no card) then authorize in Zo. Verify
+      an IG profile pull once connected.
+    cluster: Integrations
+    quadrant: Q2
+  count: 2
+  active_count: 2
+  delegated_count: 0
+  done_count: 0
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
   items:
@@ -1207,11 +1247,11 @@ clusters:
   active_count: 8
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-12 11:44:35 SGT
-total_active: 67
+updated_at: 2026-08-12 19:37:32 SGT
+total_active: 69
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 25
+  Q2: 27
   Q3: 0
   Q4: 42
