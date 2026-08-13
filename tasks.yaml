@@ -679,6 +679,22 @@ clusters:
       \ as PA DB link #8. Raw capture at wiki/raw/2026-07/"
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
+  - id: lovable-explore
+    title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
+    type: research
+    domain: devtools
+    priority: p2
+    status: active
+    summary: 'Evaluate Lovable as an app-building surface. Scale: $500M ARR (4x in 12 months), 60M projects, 900M monthly
+      visits, ~2/3 Fortune 500. Strategy: multi-model routing (''model picker is a dead end'') + post-trained open-source
+      models. Candidate use cases: internal dashboards/tools, MVP for a business idea, client-facing agency tools, landing
+      pages, TOTO-adjacent prototypes. Free tier to start.'
+    captured: 2026-08-13
+    source: Midday AI Pulse Aug 13 — lovable.dev/blog/series-c
+    notes: 'Cluster: Dev Tools & Infrastructure (eval family: repowise/hyperbrowser/ kimi-code). Compare vs Claude Code +
+      Zo on a real 1-hour build before committing deeper.'
+    cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -810,8 +826,8 @@ clusters:
       when the compiler lands. ModCon livestream Aug 18.
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
-  count: 15
-  active_count: 15
+  count: 16
+  active_count: 16
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1316,11 +1332,11 @@ clusters:
   active_count: 9
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-12 19:55:57 SGT
-total_active: 72
+updated_at: 2026-08-13 16:20:11 SGT
+total_active: 73
 total_done: 0
 matrix_summary:
   Q1: 0
   Q2: 27
   Q3: 0
-  Q4: 45
+  Q4: 46
