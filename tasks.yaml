@@ -1241,6 +1241,21 @@ clusters:
     notes: 'Source: ~/wiki/_system/pending/ai-stack-platforms-review.md'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
+  - id: toto-app-improvements
+    title: Toto app improvements — receipt scan + in-app strategies
+    type: build
+    domain: product
+    priority: p2
+    status: active
+    summary: 'Feature backlog for the Toto iOS app (chintheman/toto): (1) receipt scanning — photograph a TOTO receipt, auto-detect
+      the numbers, check against draw results for prizes; (2) adding strategies — surface strategy features in-app (pure-spread
+      / system-bet portfolios, EV models, number generators).'
+    captured: 2026-08-13
+    source: 0xsteamboat request Aug 13 (Lovable use-case brainstorm)
+    notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine
+      (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
+    cluster: Other Active (Delegated / Backlog)
+    quadrant: Q4
   - id: lint-confidence-downgrade
     title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
     type: maintain
@@ -1328,15 +1343,15 @@ clusters:
       orchestration.'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
-  count: 10
-  active_count: 9
+  count: 11
+  active_count: 10
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-13 16:20:11 SGT
-total_active: 73
+updated_at: 2026-08-13 16:43:52 SGT
+total_active: 74
 total_done: 0
 matrix_summary:
   Q1: 0
   Q2: 27
   Q3: 0
-  Q4: 46
+  Q4: 47
