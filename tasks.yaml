@@ -624,7 +624,7 @@ clusters:
     type: maintain
     domain: meta
     priority: p2
-    status: active
+    status: archived
     summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/ has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability) passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the 4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
     captured: 2026-08-09
     source: lint-cron-2026-08-09 @ metrics
