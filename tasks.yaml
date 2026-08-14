@@ -3,6 +3,8 @@ cluster_order:
   name: Agent Orchestration & Loops
 - emoji: 🎱
   name: Toto
+- emoji: ⌚
+  name: Luxury Watches
 - emoji: 📈
   name: Crypto & Quant Trading
 - emoji: 🎨
@@ -278,6 +280,31 @@ clusters:
     quadrant: Q4
   count: 2
   active_count: 2
+  delegated_count: 0
+  done_count: 0
+- emoji: ⌚
+  name: Luxury Watches
+  items:
+  - id: lint-confidence-downgrade
+    title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
+      self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are
+      added.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R9
+    notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited
+      academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches
+      downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high;
+      this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
+      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
+    cluster: Luxury Watches
+    quadrant: Q4
+  count: 1
+  active_count: 1
   delegated_count: 0
   done_count: 0
 - emoji: 📈
@@ -911,6 +938,20 @@ clusters:
       feed weekly for new tool discoveries'
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
+  - id: learn-obsidian
+    title: How to Use Obsidian — Personal Knowledge Management
+    type: research
+    domain: productivity
+    priority: p3
+    status: active
+    summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management.
+      Build a workflow that complements the existing Second Brain wiki.'
+    captured: 2026-07-20
+    source: Personal request — PA intake
+    notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
+      plugins. Should integrate with ~/wiki/ workflow where possible.
+    cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: mojo-1-0-milestone
     title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
     type: research
@@ -929,8 +970,8 @@ clusters:
       when the compiler lands. ModCon livestream Aug 18.
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
-  count: 17
-  active_count: 17
+  count: 18
+  active_count: 18
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1354,24 +1395,6 @@ clusters:
     notes: 'Source: ~/wiki/_system/pending/ai-stack-platforms-review.md'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
-  - id: lint-confidence-downgrade
-    title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
-      self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are
-      added.'
-    captured: 2026-07-19
-    source: lint-cron-2026-07-19 @ R9
-    notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited
-      academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches
-      downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high;
-      this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
-      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
-    cluster: Other Active (Delegated / Backlog)
-    quadrant: Q4
   - id: lint-rejected-cleanup
     title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
     type: maintain
@@ -1387,20 +1410,6 @@ clusters:
     notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
       needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
       unchanged.'
-    cluster: Other Active (Delegated / Backlog)
-    quadrant: Q4
-  - id: learn-obsidian
-    title: How to Use Obsidian — Personal Knowledge Management
-    type: research
-    domain: productivity
-    priority: p3
-    status: active
-    summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management.
-      Build a workflow that complements the existing Second Brain wiki.'
-    captured: 2026-07-20
-    source: Personal request — PA intake
-    notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
-      plugins. Should integrate with ~/wiki/ workflow where possible.
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
   - id: rokos-basilisk-deep-dive
@@ -1441,11 +1450,11 @@ clusters:
       orchestration.'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q4
-  count: 9
-  active_count: 8
+  count: 7
+  active_count: 6
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 20:23:17 SGT
+updated_at: 2026-08-14 20:24:17 SGT
 total_active: 79
 total_done: 0
 matrix_summary:
