@@ -588,7 +588,7 @@ clusters:
     type: build
     domain: devops
     priority: p2
-    status: active
+    status: archived
     summary: OpenWA (rmyndharis/OpenWA, MIT, 10.8K★) is a free, self-hosted WhatsApp HTTP API gateway. Full REST API, multi-session, webhooks, web dashboard, groups/channels. Docker-deployable, NestJS/TypeScript stack. Evaluate as a potential WhatsApp integration layer for Hermes delivery (complement to Telegram) and/or concierge bot. Also useful for sharing research/wife communication.
     captured: 2026-07-17
     source: Instagram — gittrend.io reel (DZ3PUfYlK6z)
