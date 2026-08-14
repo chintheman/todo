@@ -952,7 +952,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p2
-    status: active
+    status: done
     summary: 'Evaluated 22 platforms across 7 layers against Hermes/CrewAI stack. Key finds: LlamaIndex (P1 - wiki RAG), Crawl4AI (P1 - free FireCrawl fallback), Groq (P2 - fast free inference), SBERT (P2 - local embeddings). LangChain skipped (overlaps CrewAI). Full evaluation in research file.'
     captured: '2026-07-03'
     source: Aymane Mrini LinkedIn post — 7-layer AI stack breakdown
