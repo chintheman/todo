@@ -753,6 +753,24 @@ clusters:
       Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
+  - id: lint-raw-capture-stall
+    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: active
+    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
+      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
+      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
+      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
+      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
+    captured: 2026-08-09
+    source: lint-cron-2026-08-09 @ metrics
+    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
+      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
+      2 weeks, persistent miss).
+    cluster: Dev Tools & Infrastructure
+    quadrant: Q4
   - id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -866,8 +884,8 @@ clusters:
       when the compiler lands. ModCon livestream Aug 18.
     cluster: Dev Tools & Infrastructure
     quadrant: Q4
-  count: 16
-  active_count: 16
+  count: 17
+  active_count: 17
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -1418,11 +1436,11 @@ clusters:
   active_count: 10
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 19:46:56 SGT
-total_active: 78
+updated_at: 2026-08-14 19:52:51 SGT
+total_active: 79
 total_done: 0
 matrix_summary:
   Q1: 0
   Q2: 29
   Q3: 0
-  Q4: 49
+  Q4: 50
