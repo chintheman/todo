@@ -648,7 +648,7 @@ clusters:
     type: research
     domain: devops
     priority: p2
-    status: active
+    status: archived
     summary: 'Open-source local AI gateway: single OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent classifier + task-aware router. Built-in fallback chains, usage tracking, dashboard. Connects Claude Code, Codex, Cursor, Cline, Copilot to free Claude/GPT/Gemini. Overlaps with Hermes model config + provider routing but adds a local proxy layer, free provider access, and intent-based routing.'
     captured: '2026-07-11'
     source: '@syntaix.ai Instagram carousel — diegosouzapw/OmniRoute'
