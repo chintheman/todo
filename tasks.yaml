@@ -696,7 +696,7 @@ clusters:
     type: research
     domain: productivity
     priority: p3
-    status: active
+    status: archived
     summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management. Build a workflow that complements the existing Second Brain wiki.'
     captured: 2026-07-20
     source: Personal request — PA intake
