@@ -11,6 +11,8 @@ cluster_order:
   name: Up Dog
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
+- emoji: 🏠
+  name: Personal Page
 - emoji: 🤖
   name: Zo Integration
 - emoji: 📈
@@ -405,6 +407,31 @@ clusters:
   active_count: 1
   delegated_count: 0
   done_count: 0
+- emoji: 🏠
+  name: Personal Page
+  items:
+  - id: start-substack
+    title: Start a Substack — publish AI learnings, frameworks, and "show me" test evidence
+    type: create
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Start a Substack newsletter as the publishing layer for everything being built. Content thesis: "Here''s what
+      it looks like when AI actually changes how you work" — not another ChatGPT screenshot, but real multi-agent workflows,
+      cron pipelines, loop engineering, and systems that run without hand-holding. This is the "documented track record of
+      good work" that Phil Chen identifies as the ultimate scarce resource. Intersects with: (1) the "show me" test — readers
+      can actually see production systems, (2) Karpathy''s "you''re at the forefront" thesis, (3) Boris Cherny''s loop engineering,
+      (4) MAS SAFR framework / Singapore AI governance. Publish frequency: 1-2x weekly. Tone: direct, evidence-backed, no
+      hype. Every post must include something the reader can try.'
+    captured: '2026-07-06'
+    source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
+      Verna "Cool. Show me." bar
+    cluster: Personal Page
+    quadrant: Q2
+  count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
 - emoji: 🤖
   name: Zo Integration
   items:
@@ -736,26 +763,8 @@ clusters:
     source: '@philhchen X thread (Jul 2, 2026) — 2.6M views, synthesized by PA Jul 6, 2026'
     cluster: Career & Content Publishing
     quadrant: Q2
-  - id: start-substack
-    title: Start a Substack — publish AI learnings, frameworks, and "show me" test evidence
-    type: create
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Start a Substack newsletter as the publishing layer for everything being built. Content thesis: "Here''s what
-      it looks like when AI actually changes how you work" — not another ChatGPT screenshot, but real multi-agent workflows,
-      cron pipelines, loop engineering, and systems that run without hand-holding. This is the "documented track record of
-      good work" that Phil Chen identifies as the ultimate scarce resource. Intersects with: (1) the "show me" test — readers
-      can actually see production systems, (2) Karpathy''s "you''re at the forefront" thesis, (3) Boris Cherny''s loop engineering,
-      (4) MAS SAFR framework / Singapore AI governance. Publish frequency: 1-2x weekly. Tone: direct, evidence-backed, no
-      hype. Every post must include something the reader can try.'
-    captured: '2026-07-06'
-    source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
-      Verna "Cool. Show me." bar
-    cluster: Career & Content Publishing
-    quadrant: Q2
-  count: 4
-  active_count: 4
+  count: 3
+  active_count: 3
   delegated_count: 0
   done_count: 0
 - emoji: 💡
@@ -792,7 +801,7 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 22:54:06 SGT
+updated_at: 2026-08-14 22:58:02 SGT
 total_active: 38
 total_done: 0
 matrix_summary:
