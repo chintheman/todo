@@ -210,29 +210,6 @@ clusters:
       not judgment — skip for small/sequential/exploratory tasks.'
     cluster: Agent Orchestration & Loops
     quadrant: Q4
-  - id: memory-ablation-harness
-    title: Memory ablation harness — prove the Spine tiers work
-    type: discuss
-    domain: ai/ml
-    priority: p2
-    status: active
-    summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time,
-      verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass.
-      Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval
-      cron was due Aug 14 2026).'
-    captured: 2026-08-14
-    source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
-    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped
-      + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries,
-      8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic;
-      (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 /
-      precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated).
-      Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
-    notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL,
-      semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval
-      benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
-    cluster: Agent Orchestration & Loops
-    quadrant: Q4
   - id: altman-self-prompting-systems
     title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
     type: research
@@ -248,8 +225,8 @@ clusters:
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
     quadrant: Q4
-  count: 12
-  active_count: 12
+  count: 11
+  active_count: 11
   delegated_count: 0
   done_count: 0
 - emoji: 🎱
@@ -323,6 +300,21 @@ clusters:
 - emoji: 💔
   name: Grief 'Management'
   items:
+  - id: gtm-second-brain
+    title: GTM Second Brain — /raw capture + canonical agent index
+    type: build
+    domain: gtm
+    priority: p1
+    status: delegated
+    summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts,
+      competitor snapshots, (2) canonical index file every agent reads first on startup.
+    captured: 2026-06-30
+    source: Tim Scheuer / Oxygen LinkedIn post
+    delegated_to: The General (#1)
+    notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips,
+      gap analysis table). Full context delivered to The General.'
+    cluster: Grief 'Management'
+    quadrant: Q2
   - id: grief-management-voice-journal
     title: Grief Management — private voice journal website/app
     type: build
@@ -352,9 +344,9 @@ clusters:
       Sibling to nicest-place-website and looking-busy-website in the business/build portfolio.'
     cluster: Grief 'Management'
     quadrant: Q4
-  count: 1
+  count: 2
   active_count: 1
-  delegated_count: 0
+  delegated_count: 1
   done_count: 0
 - emoji: 🐶
   name: Up Dog
@@ -785,31 +777,16 @@ clusters:
   done_count: 0
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
-  items:
-  - id: gtm-second-brain
-    title: GTM Second Brain — /raw capture + canonical agent index
-    type: build
-    domain: gtm
-    priority: p1
-    status: delegated
-    summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts,
-      competitor snapshots, (2) canonical index file every agent reads first on startup.
-    captured: 2026-06-30
-    source: Tim Scheuer / Oxygen LinkedIn post
-    delegated_to: The General (#1)
-    notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips,
-      gap analysis table). Full context delivered to The General.'
-    cluster: Other Active (Delegated / Backlog)
-    quadrant: Q2
-  count: 1
+  items: []
+  count: 0
   active_count: 0
-  delegated_count: 1
+  delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 22:49:32 SGT
-total_active: 39
+updated_at: 2026-08-14 22:53:00 SGT
+total_active: 38
 total_done: 0
 matrix_summary:
   Q1: 0
   Q2: 29
   Q3: 0
-  Q4: 10
+  Q4: 9
