@@ -751,7 +751,7 @@ clusters:
     type: build
     domain: ai/ml
     priority: p2
-    status: active
+    status: archived
     summary: 'GLM-5.2 from Z.ai (Zhipu AI). 744B MoE, MIT open weights, 1M context. MCP Atlas #1 at 71.8% — best model in the world for MCP tool calling. OpenAI-compatible API at api.z.ai. $1.40/M in, $4.40/M out. Strongest Chinese model for long-horizon software engineering and agent orchestration after DeepSeek. Evaluate as custom_provider fallback in Hermes config for MCP-heavy tasks.'
     captured: '2026-07-14'
     source: z.ai (Zhipu AI)
