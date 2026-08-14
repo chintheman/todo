@@ -330,7 +330,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p2
-    status: active
+    status: archived
     summary: 'DeepSeek-V4 Preview officially launched and open-sourced. V4-Pro: 1.6T total / 49B active params, rivaling top closed-source models. V4-Flash: 284B total / 13B active params (our default model). 1M context length. Tech report on HuggingFace, open weights.'
     captured: '2026-07-11'
     source: '@deepseek_ai on X (Apr 24, 2026) — V4 Preview launch'
