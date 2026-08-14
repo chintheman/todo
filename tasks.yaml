@@ -1042,7 +1042,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p3
-    status: active
+    status: archived
     summary: 'Reviewed 20min video on systems thinking as a quiet scientific revolution. Covers: Descartes/reductionism, emergence, systems theory funnel model (hard theory to life/cognition to holistic), ethical double-edge. Key connection: systems thinking is the meta-framework for understanding agent loops, feedback loops, and multi-agent orchestration.'
     captured: 2026-07-23
     source: YouTube — Pantha Rhey / Thorsten Fuchs
