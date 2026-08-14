@@ -634,25 +634,8 @@ clusters:
       use.'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
-  - id: codebase-memory-mcp
-    title: codebase-memory-mcp — tree-sitter knowledge graph for coding agents
-    type: research
-    domain: devops
-    priority: p1
-    status: active
-    summary: MCP server that indexes codebases into a SQLite knowledge graph using tree-sitter AST parsing. Full-indexes average
-      repos in milliseconds, Linux kernel (28M LOC, 75K files) in 3 minutes. 158 languages via tree-sitter + Hybrid LSP for
-      Python/TS/JS/PHP/C#/Go/C++/Java/Rust/Kotlin. Ships as single static binary. Competing approach to Graphify (which we
-      deferred). Directly relevant for developer-agent profile — faster codebase context = fewer tokens burned on re-orientation.
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — DeusData/codebase-memory-mcp'
-    notes: 'GitHub: github.com/DeusData/codebase-memory-mcp Paper: arXiv:2603.27277 Stars: 26K+ Relevance: Direct competitor
-      to Graphify (deferred P2), but this ships as a static binary — simpler install. Worth evaluating vs our current OpenCode
-      + DeepSeek setup.'
-    cluster: Dev Tools & Infrastructure
-    quadrant: Q2
-  count: 3
-  active_count: 3
+  count: 2
+  active_count: 2
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -703,11 +686,11 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 23:13:03 SGT
-total_active: 31
+updated_at: 2026-08-14 23:13:47 SGT
+total_active: 30
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 22
+  Q2: 21
   Q3: 0
   Q4: 9
