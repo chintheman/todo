@@ -11,6 +11,8 @@ cluster_order:
   name: Up Dog
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
+- emoji: 🪧
+  name: Agentic Ad Network
 - emoji: 🏠
   name: Personal Page
 - emoji: 🤖
@@ -407,6 +409,28 @@ clusters:
   active_count: 1
   delegated_count: 0
   done_count: 0
+- emoji: 🪧
+  name: Agentic Ad Network
+  items:
+  - id: agent-ad-network-skill
+    title: Build agent ad network skill — display ads in Claude/any agent, profit share on impressions
+    type: build
+    domain: business/build
+    priority: p1
+    status: active
+    summary: A skill/plugin that serves contextual ads inside AI agent responses. Advertisers pay per impression, agent host
+      earns profit share. Think Google AdSense but for LLM conversations — ads appear as relevant sponsored content, tool
+      suggestions, or inline placements within agent outputs.
+    captured: '2026-07-03'
+    source: 0xsteamboat idea
+    notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
+      split mechanics.'
+    cluster: Agentic Ad Network
+    quadrant: Q2
+  count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
 - emoji: 🏠
   name: Personal Page
   items:
@@ -567,21 +591,6 @@ clusters:
       which carousel format fits the content objective rather than defaulting to one.'
     cluster: Creative Agency & Content
     quadrant: Q2
-  - id: agent-ad-network-skill
-    title: Build agent ad network skill — display ads in Claude/any agent, profit share on impressions
-    type: build
-    domain: business/build
-    priority: p1
-    status: active
-    summary: A skill/plugin that serves contextual ads inside AI agent responses. Advertisers pay per impression, agent host
-      earns profit share. Think Google AdSense but for LLM conversations — ads appear as relevant sponsored content, tool
-      suggestions, or inline placements within agent outputs.
-    captured: '2026-07-03'
-    source: 0xsteamboat idea
-    notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
-      split mechanics.'
-    cluster: Creative Agency & Content
-    quadrant: Q2
   - id: openmontage-video-pipeline
     title: OpenMontage — open-source agentic video production system
     type: research
@@ -600,8 +609,8 @@ clusters:
       Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
     cluster: Creative Agency & Content
     quadrant: Q2
-  count: 3
-  active_count: 3
+  count: 2
+  active_count: 2
   delegated_count: 0
   done_count: 0
 - emoji: 🛠️
@@ -713,7 +722,7 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 23:00:34 SGT
+updated_at: 2026-08-14 23:02:44 SGT
 total_active: 32
 total_done: 0
 matrix_summary:
