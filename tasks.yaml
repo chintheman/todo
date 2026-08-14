@@ -672,7 +672,7 @@ clusters:
     type: build
     domain: devtools
     priority: p2
-    status: active
+    status: archived
     summary: 'Free open-source desktop app (macOS/Win/Linux) for running AND training models locally: LLMs, diffusion image/video (MiniMax-H3, FLUX, Z-Image, LTX, Wan), MLX, GGUF, audio. Features: model swapping into Claude Code / Codex / Hermes Agent / OpenClaw / OpenCode, sandboxed Bash+Python code execution with self-healing tool calls (50% more accurate), unlimited private web search, local fine-tuning (text/diffusion/embeddings/TTS), free Cloudflare HTTPS tunnel for remote access, OpenAI-compatible API, no telemetry, offline-capable. Day-zero model support (Qwen3.8, GLM, etc).'
     captured: 2026-08-12
     source: Unsloth docs — https://unsloth.ai/docs/desktop
