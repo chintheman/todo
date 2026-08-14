@@ -389,8 +389,33 @@ clusters:
     cluster: Personal Page
     cluster_kind: project
     quadrant: Q2
-  count: 1
-  active_count: 1
+  - id: amex-platinum-guide
+    title: Amex Platinum SG benefits guide — live product at 0xsteamboat.me/amex
+    type: build
+    domain: web
+    priority: p1
+    status: active
+    summary: 'Unofficial interactive guide to the SG Amex Platinum card, built as a product on the personal page. 121 benefit
+      entries verified against Amex''s own pages (11 sources, Playwright-rendered), scenario driven UX instead of open filters,
+      break even path (S$2,010 for S$600 outlay), personal value tracker (year log, localStorage), Leaflet venue maps. Data
+      layer redesigned to a v2 schema (JSON Schema 2020-12, taxonomy as single source so enums cannot drift) with a validator
+      gate + Playwright test suite. Source repo chintheman/Amex-perks; synced into chintheman/0xsteamboat-me at deploy time
+      via GitHub API (not raw CDN), served from a detached prod worktree with content hash stamped asset URLs (Cloudflare
+      cache lesson).'
+    captured: 2026-08-14
+    source: Claude Code build — repos chintheman/Amex-perks + chintheman/0xsteamboat-me. Session ID session_01PA3FuHpA8CMqLdEsqte79E
+    notes: 'OPEN: (1) user is mid detail-review, round 2 pending; (2) 14 day data refresh cycle — data generated 2026-08-11,
+      next refresh due 2026-08-25 (npm run sources in Amex-perks, then sync-amex.sh via deploy); (3) design reconciliation
+      with the site dark rebrand deferred by choice. SUBNOTE — birthday spinoff: private password gated picker at /bday (pw
+      jojo) built from the same perks data, wife picks dinner (Love Dining) + free hotel night (Plat Stay); confirm is
+      relayed to Telegram by a 5 min Mac cron (bday-poller.sh) over hermes send. Tear down after the birthday: remove the
+      crontab line + ~/.local/bin/bday-poller.sh + ~/.config/bday/, then public/bday/ and the /bday + /api/bday/* routes
+      in server.ts. Claude Code session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    cluster: Personal Page
+    cluster_kind: project
+    quadrant: Q2
+  count: 2
+  active_count: 2
   delegated_count: 0
   done_count: 0
 - emoji: 🤖
