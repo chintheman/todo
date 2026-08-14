@@ -470,7 +470,7 @@ clusters:
     type: build
     domain: creative
     priority: p3
-    status: active
+    status: archived
     summary: TUM+Huawei open-source model. Takes 8 RGB photos → complete indoor 3D mesh with PBR materials. Uses Trellis.2 as generative backbone, treats reconstruction as conditional 3D generation over overlapping chunks. Outperforms prior methods by 16% on indoor scene reconstruction.
     captured: 2026-07-19
     source: LinkedIn — Ultan O'Rourke
