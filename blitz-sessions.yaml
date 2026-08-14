@@ -11,3 +11,9 @@ sessions:
     started_at: "2026-08-14T12:31:26.389Z"
     pomodoros: 1
     outcome: "done"
+  - date: "2026-08-14"
+    task_id: "qol-second-brain-apps"
+    task_title: "Brainstorm QoL applications around second brain"
+    started_at: "2026-08-14T12:56:32.948Z"
+    pomodoros: 1
+    outcome: "done"
