@@ -400,7 +400,7 @@ clusters:
     type: build
     domain: creative/3d
     priority: p2
-    status: active
+    status: archived
     summary: 'Two-tier Blender MCP ecosystem: (1) Hermes official optional skill at `hermes skills install official/creative/blender-mcp` — companion skill for the Hermes catalog blender MCP with bpy recipes. (2) Community ahujasid/blender-mcp (24.2K ⭐, MIT) — most popular open-source Blender MCP, works with any LLM via MCP. Features: object creation/modification, materials, scene inspection, Python code execution, viewport screenshots, Sketchfab/Poly Haven asset search, Hyper3D Rodin/Hunyuan3D generation. Key tool for interior design agent pipeline — room layouts, furniture placement, material changes, lighting from prompts.'
     captured: 2026-07-19
     source: LinkedIn — Ultan O'Rourke / PA research
