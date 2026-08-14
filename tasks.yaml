@@ -928,7 +928,7 @@ clusters:
     type: research
     domain: general
     priority: p2
-    status: active
+    status: archived
     summary: '5 sites worth exploring: Wikenigma (unsolved mysteries), Learn Anything (learning hub), Seeing Theory (interactive stats/probability), Etymonline (word origins), Indian Culture (Govt of India digital heritage archive).'
     captured: '2026-07-03'
     source: AevyTV Instagram carousel
