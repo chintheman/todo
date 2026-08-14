@@ -256,6 +256,24 @@ clusters:
       Validated via direct GH read + repo info + README review.'
     cluster: Crypto & Quant Trading
     quadrant: Q2
+  - id: pal-delta-neutral-token
+    title: PAL — Delta-Neutral Polymarket Token (dn-token-polymarket)
+    type: build
+    domain: crypto
+    priority: p1
+    status: active
+    summary: 'Token ($PAL, Polymarket Abstraction Layer) = NAV share of a delta-neutral Polymarket market-making strategy.
+      Users mint USDC→PAL; agentic engine quotes two-sided limit orders farming Polymarket''s maker-reward budget (~$60.4M/yr);
+      CTF merge keeps book delta-neutral; profits stream to a withdrawal pool, claimable pro-rata by supply. Repo: github.com/chintheman/dn-token-polymarket
+      (PRIVATE), ~/projects/delta-neutral-token. Key findings: intra-market pair arb dead (0/349 markets); reward-budget MM
+      is the real yield (~92% APR @ $10k, 51% @ $100k, 27% @ $1M gross); SG GRA blocks Polymarket so backtest/live-sim only,
+      no real capital. Decisions: stable-yield NAV token, all 3 capital scales run simultaneously, capacity-based exposure,
+      $PAL name.'
+    captured: 2026-08-14
+    source: User ideation session Aug 14 2026
+    notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (pending Opus 5 dispatch).'
+    cluster: Crypto & Quant Trading
+    quadrant: Q2
   - id: claude-code-ai-hedge-fund
     title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
     type: discuss
@@ -318,8 +336,8 @@ clusters:
       page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
     cluster: Crypto & Quant Trading
     quadrant: Q4
-  count: 6
-  active_count: 6
+  count: 7
+  active_count: 7
   delegated_count: 0
   done_count: 0
 - emoji: 🎨
@@ -1169,8 +1187,22 @@ clusters:
       an IG profile pull once connected.
     cluster: Integrations
     quadrant: Q2
-  count: 3
-  active_count: 3
+  - id: project-idea-capture-system
+    title: Project-level idea capture system — random projects/discussions storage
+    type: discuss
+    domain: infra
+    priority: p2
+    status: active
+    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
+      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
+      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
+    captured: 2026-08-14
+    source: User request Aug 14 2026 (during PAL session)
+    notes: User said "I need your help to scope this out later."
+    cluster: Integrations
+    quadrant: Q4
+  count: 4
+  active_count: 4
   delegated_count: 0
   done_count: 0
 - emoji: 📋
@@ -1364,11 +1396,11 @@ clusters:
   active_count: 10
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 15:49:46 SGT
-total_active: 75
+updated_at: 2026-08-14 17:01:57 SGT
+total_active: 77
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 28
+  Q2: 29
   Q3: 0
-  Q4: 47
+  Q4: 48
