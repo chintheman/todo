@@ -708,7 +708,7 @@ clusters:
     type: research
     domain: devtools
     priority: p3
-    status: active
+    status: archived
     summary: 'Mojo language officially hits 1.0 (Aug 11, 2026). Stable foundation: unified var declarations, single Pointer type, unified closures, consistent renamings. New: Python-style lambda syntax, more stable LSP server, Mojo AI Skills 1.0-ready (project creation, GPU programming, porting), memory-safety diagnostics for reference invalidation, descriptive where-clause failures. MAX 26.5 adds GLM-5.2 + Nemotron-H (hybrid Mamba-2) support, Kimi 2.5 on Module V3. Compiler + toolchain open-sourcing still committed for 2026. ModCon Aug 18 SF.'
     captured: 2026-08-12
     source: Modular blog — https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here
