@@ -600,7 +600,7 @@ clusters:
     type: research
     domain: devtools
     priority: p2
-    status: active
+    status: archived
     summary: 'Evaluate Lovable as an app-building surface. Scale: $500M ARR (4x in 12 months), 60M projects, 900M monthly visits, ~2/3 Fortune 500. Strategy: multi-model routing (''model picker is a dead end'') + post-trained open-source models. Candidate use cases: internal dashboards/tools, MVP for a business idea, client-facing agency tools, landing pages, TOTO-adjacent prototypes. Free tier to start.'
     captured: 2026-08-13
     source: Midday AI Pulse Aug 13 — lovable.dev/blog/series-c
