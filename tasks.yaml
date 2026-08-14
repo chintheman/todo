@@ -1,38 +1,58 @@
 cluster_order:
 - emoji: 🔄
   name: Agent Orchestration & Loops
+  kind: theme
 - emoji: 🎱
   name: Toto
+  kind: project
 - emoji: ⌚
   name: Luxury Watches
+  kind: project
 - emoji: 💔
   name: Grief 'Management'
+  kind: project
 - emoji: 🐶
   name: Up Dog
+  kind: project
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
+  kind: project
 - emoji: 🪧
   name: Agentic Ad Network
+  kind: project
 - emoji: 🏠
   name: Personal Page
+  kind: project
 - emoji: 🤖
   name: Zo Integration
+  kind: project
+- emoji: 🛋️
+  name: Interior Design — Estee
+  kind: project
 - emoji: 📈
   name: Crypto & Quant Trading
+  kind: theme
 - emoji: 🎨
   name: Creative Agency & Content
+  kind: theme
 - emoji: 🛠️
   name: Dev Tools & Infrastructure
+  kind: theme
 - emoji: 🧠
   name: AI Models & Provider Landscape
+  kind: theme
 - emoji: 💼
   name: Career & Content Publishing
+  kind: theme
 - emoji: 💡
   name: Business Ideas & Products
+  kind: theme
 - emoji: 🔌
   name: Integrations
+  kind: theme
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
+  kind: theme
 clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
@@ -51,6 +71,7 @@ clusters:
       bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
       in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
     cluster: Agent Orchestration & Loops
+    cluster_kind: theme
     quadrant: Q2
   - id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 232 specialist personas
@@ -75,6 +96,7 @@ clusters:
       \ security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
       \ KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
     cluster: Agent Orchestration & Loops
+    cluster_kind: theme
     quadrant: Q2
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
@@ -97,6 +119,7 @@ clusters:
       \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
       \ router and our 26 profile roster."
     cluster: Agent Orchestration & Loops
+    cluster_kind: theme
     quadrant: Q2
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
@@ -118,6 +141,7 @@ clusters:
       diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth,
       not judgment — skip for small/sequential/exploratory tasks.'
     cluster: Agent Orchestration & Loops
+    cluster_kind: theme
     quadrant: Q4
   - id: altman-self-prompting-systems
     title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
@@ -133,6 +157,7 @@ clusters:
     notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
+    cluster_kind: theme
     quadrant: Q4
   count: 5
   active_count: 5
@@ -161,6 +186,7 @@ clusters:
       \  - ToS violation risk (automated gambling)?\n  - Legal status: automated betting in Singapore?\n  - Practical: 100\
       \ quick picks at $1 = $100 per draw"
     cluster: Toto
+    cluster_kind: project
     quadrant: Q4
   - id: toto-app-improvements
     title: Toto app improvements — receipt scan + in-app strategies
@@ -176,6 +202,7 @@ clusters:
     notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine
       (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
     cluster: Toto
+    cluster_kind: project
     quadrant: Q4
   count: 2
   active_count: 2
@@ -201,6 +228,7 @@ clusters:
       this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
       Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
     cluster: Luxury Watches
+    cluster_kind: project
     quadrant: Q4
   count: 1
   active_count: 1
@@ -224,6 +252,7 @@ clusters:
       gap analysis table). Full context delivered to The General. Moved to 💔 Grief Management project cluster Aug 14 2026
       (render-todo-yaml.py + GitHub push 667bfc7).'
     cluster: Grief 'Management'
+    cluster_kind: project
     quadrant: Q2
   - id: grief-management-voice-journal
     title: Grief Management — private voice journal website/app
@@ -253,6 +282,7 @@ clusters:
 
       Sibling to nicest-place-website and looking-busy-website in the business/build portfolio.'
     cluster: Grief 'Management'
+    cluster_kind: project
     quadrant: Q4
   count: 2
   active_count: 1
@@ -277,6 +307,7 @@ clusters:
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Up Dog
+    cluster_kind: project
     quadrant: Q4
   count: 1
   active_count: 1
@@ -307,6 +338,7 @@ clusters:
       20% fee split 30/30/30/10 treasury). Plan corrected 4 locked design elements (price-lock look-back option, mid-marking
       overstatement, $1-floor mis-selling, resolution-fee collects ~0).'
     cluster: PAL — Delta-Neutral Polymarket
+    cluster_kind: project
     quadrant: Q2
   count: 1
   active_count: 1
@@ -329,6 +361,7 @@ clusters:
     notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
       split mechanics.'
     cluster: Agentic Ad Network
+    cluster_kind: project
     quadrant: Q2
   count: 1
   active_count: 1
@@ -354,27 +387,10 @@ clusters:
     source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
       Verna "Cool. Show me." bar
     cluster: Personal Page
+    cluster_kind: project
     quadrant: Q2
-  - id: bday-picker-page
-    title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
-    type: build
-    domain: web
-    priority: p1
-    status: active
-    summary: 'Private, password gated page at 0xsteamboat.me/bday (pw: jojo). Guided flow: wife picks a birthday dinner
-      (10 curated restaurants at Love Dining rates, photo carousels) and a free hotel night (all 7 Plat Stay properties,
-      room details + blocked dates). Confirm stores the pick server side; a 5 min cron on the Mac (bday-poller.sh) fetches
-      it, delivers to Telegram via hermes send, then acks. White/charcoal/gold design, Cormorant serif. Shipped and verified
-      end to end 2026-08-13/14; delivery chain tested live.'
-    captured: 2026-08-14
-    source: Claude Code build (repo chintheman/0xsteamboat-me, public/bday/ + /api/bday/* in server.ts)
-    notes: 'AFTER THE BIRTHDAY, tear down: (1) remove the Mac crontab line (*/5 bday-poller.sh) plus ~/.local/bin/bday-poller.sh
-      and ~/.config/bday/, (2) remove public/bday/ and the /bday + /api/bday/* routes from server.ts, redeploy. Claude Code
-      session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
-    cluster: Personal Page
-    quadrant: Q2
-  count: 2
-  active_count: 2
+  count: 1
+  active_count: 1
   delegated_count: 0
   done_count: 0
 - emoji: 🤖
@@ -394,6 +410,7 @@ clusters:
     notes: Paid plan (~$15+/mo). Read actions (get conversations, list messages) only visible after connecting — connect trial
       first to confirm what's pullable before building the analysis layer.
     cluster: Zo Integration
+    cluster_kind: project
     quadrant: Q2
   - id: zo-social-fetch-integration
     title: 'Zo integration: social_fetch — IG/TikTok/YT/X scraper API'
@@ -410,9 +427,35 @@ clusters:
     notes: Read-only scraping — no IG posting. Needs account signup (free 100 credits, no card) then authorize in Zo. Verify
       an IG profile pull once connected.
     cluster: Zo Integration
+    cluster_kind: project
     quadrant: Q2
   count: 2
   active_count: 2
+  delegated_count: 0
+  done_count: 0
+- emoji: 🛋️
+  name: Interior Design — Estee
+  items:
+  - id: interior-design-estee
+    title: 'Interior Design — Estee: HDB + condo floor-plan measurement tool'
+    type: build
+    domain: creative
+    priority: p1
+    status: active
+    summary: 'Live floor-plan measurement tool for Estee: upload HDB PDF → measured dimensions matching HDB''s printed numbers
+      (±4 mm). Condo path derives scale from the main door (±2% typical, ±5% worst), joinery blocked until the 802 mm door
+      reference is confirmed. Deployed at floorplan-0xsteamboat.zocomputer.io (password estee-mvp-layout). Resume Claude session:
+      cd ~ && claude --resume 8c298e60-33d7-4c3d-bbd3-f2f16f1f50d7'
+    captured: 2026-08-14
+    source: RESUMEHERE.md handover doc — friend Estee's floor-plan agent
+    notes: Full details + open items (icon doc for Estee, 802 mm door question, web vs CLI decision) in ~/wiki/_system/pending/interior-design-estee.md.
+      Repo github.com/chintheman/HDB-Floor-Plan-Agent; deployed on Zo at /home/workspace/hdb-floor-plan-agent (service svc_BYbw0dR3Qj8).
+      Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.
+    cluster: Interior Design — Estee
+    cluster_kind: project
+    quadrant: Q2
+  count: 1
+  active_count: 1
   delegated_count: 0
   done_count: 0
 - emoji: 📈
@@ -434,6 +477,7 @@ clusters:
       with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
       Validated via direct GH read + repo info + README review.'
     cluster: Crypto & Quant Trading
+    cluster_kind: theme
     quadrant: Q2
   - id: claude-code-ai-hedge-fund
     title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
@@ -450,6 +494,7 @@ clusters:
       commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
       decomposition is the pattern worth extracting for the quant stack.
     cluster: Crypto & Quant Trading
+    cluster_kind: theme
     quadrant: Q4
   - id: quant-repos-review
     title: Explore top quant finance GitHub repos
@@ -463,6 +508,7 @@ clusters:
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
     cluster: Crypto & Quant Trading
+    cluster_kind: theme
     quadrant: Q4
   count: 3
   active_count: 3
@@ -493,6 +539,7 @@ clusters:
       slide types and integrated as brief-to-framework routing logic. Each framework is a proven structure — use to decide
       which carousel format fits the content objective rather than defaulting to one.'
     cluster: Creative Agency & Content
+    cluster_kind: theme
     quadrant: Q2
   - id: openmontage-video-pipeline
     title: OpenMontage — open-source agentic video production system
@@ -511,6 +558,7 @@ clusters:
     notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
       Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
     cluster: Creative Agency & Content
+    cluster_kind: theme
     quadrant: Q2
   count: 2
   active_count: 2
@@ -534,6 +582,7 @@ clusters:
       users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
       pruning strategy for our setup. Command: hermes update'
     cluster: Dev Tools & Infrastructure
+    cluster_kind: theme
     quadrant: Q2
   - id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
@@ -554,6 +603,7 @@ clusters:
       cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
       use.'
     cluster: Dev Tools & Infrastructure
+    cluster_kind: theme
     quadrant: Q2
   count: 2
   active_count: 2
@@ -581,6 +631,7 @@ clusters:
       outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
     cluster: Career & Content Publishing
+    cluster_kind: theme
     quadrant: Q2
   count: 1
   active_count: 1
@@ -607,11 +658,11 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 23:20:16 SGT
-total_active: 24
+updated_at: 2026-08-14 23:27:58 SGT
+total_active: 25
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 15
+  Q2: 16
   Q3: 0
   Q4: 9
