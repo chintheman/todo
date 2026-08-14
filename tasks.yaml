@@ -482,7 +482,7 @@ clusters:
     type: build
     domain: creative/3d
     priority: p3
-    status: active
+    status: archived
     summary: 'Official Hermes Agent optional companion skill (v1.0.0) for Epic Games'' Unreal MCP plugin (UE5.8+). Installs via `hermes skills install official/creative/unreal-mcp`. Lets Hermes drive UE5 editor from plain-English prompts: build/light scenes, place actors, author Blueprints, animate with Sequencer, create materials, frame cameras, render, run PIE tests. Uses tool-search discovery (3 meta-tools: list_toolsets / describe_toolset / call_tool). 126K views on announcement post.'
     captured: 2026-07-19
     source: X — NousResearch / @macbethAI (Jul 17, 2026)
