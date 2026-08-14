@@ -636,7 +636,7 @@ clusters:
     type: research
     domain: devops
     priority: p2
-    status: active
+    status: archived
     summary: 'Moonshot AI''s terminal-based AI coding agent (TypeScript, MIT). Direct Claude Code / OpenCode competitor. Powers Kimi K2.5-K2.7 Code models (MoE 1T params, 32B active, 100 tok/s output). Key features: Agent Swarm (100 parallel sub-agents), ACP protocol for IDE integration (Zed, JetBrains), 256K context, npm install. Pricing: $19/mo membership + $0.60/$2.50 per MTok (75% cache discount) — 4-17x cheaper than GPT-5.4. Worth evaluating as cheap secondary coding agent alongside our OpenCode + DeepSeek. GH: github.com/MoonshotAI/kimi-code'
     captured: '2026-07-09'
     source: Moonshot AI — Kimi Code CLI (MIT, 3K⭐, 699 commits)
