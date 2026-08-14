@@ -852,7 +852,7 @@ clusters:
     type: research
     domain: business
     priority: p2
-    status: active
+    status: archived
     summary: '10 business ideas scored on 8 variables. Top picks: digital downloads shop (32/40), print-on-demand (31/40), local lead-gen agency (28/40, best Hermes-fit), micro-SaaS AI wrapper (27/40, highest ceiling). Avoid: affiliate SEO sites (Google AI Overviews eating traffic) and trading bots (most unprofitable).'
     captured: '2026-07-03'
     source: Comprehensive feasibility report delivered by user
