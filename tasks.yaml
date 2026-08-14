@@ -221,10 +221,12 @@ clusters:
       cron was due Aug 14 2026).'
     captured: 2026-08-14
     source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
-    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Three fixes shipped
-      instead: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 on old bench, 4x); (2) bench rewritten (28 queries,
-      8 obs-tier, must_hit/may_hit, snapshot mode, per-term provenance, controls gate; new baseline recall 0.558); (3) bench_goldrank.py
-      shipped as standing per-channel diagnostic. Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
+    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped
+      + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries,
+      8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic;
+      (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 /
+      precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated).
+      Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
     notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL,
       semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval
       benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
@@ -936,7 +938,7 @@ clusters:
   active_count: 0
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 21:03:23 SGT
+updated_at: 2026-08-14 21:06:33 SGT
 total_active: 47
 total_done: 0
 matrix_summary:
