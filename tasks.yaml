@@ -135,23 +135,6 @@ clusters:
       \ router and our 26 profile roster."
     cluster: Agent Orchestration & Loops
     quadrant: Q2
-  - id: agency-agent-highlights-review
-    title: Review agency-agent profile templates for ecosystem integration
-    type: review
-    domain: ai/ml
-    priority: p1
-    status: active
-    summary: Clone 3 top-tier personas from agency-agents into curated repo. Evaluate Product Manager (22KB, deep persona
-      template for SOUL.md), Financial Analyst (13KB, strong quant profile template), and NEXUS Strategy (48KB, multi-agent
-      orchestration playbook). Assess for adaptation as Hermes profile templates and pipeline architecture patterns.
-    captured: '2026-07-08'
-    source: msitarzewski/agency-agents (128K⭐, MIT)
-    notes: 'Curated repo: github.com/chintheman/agency-agent-highlights Plugin installed: agency-agents-router (4 tools, lazy-loaded,
-      238 agents) Next steps: (1) Read Product Manager — extract SOUL.md template pattern, (2) Read Financial Analyst — adapt
-      for crypto quant profile, (3) Read NEXUS Strategy — compare with creative-agency pipeline, (4) Decide which patterns
-      to integrate.'
-    cluster: Agent Orchestration & Loops
-    quadrant: Q2
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
     type: research
@@ -188,8 +171,8 @@ clusters:
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
     quadrant: Q4
-  count: 8
-  active_count: 8
+  count: 7
+  active_count: 7
   delegated_count: 0
   done_count: 0
 - emoji: 🎱
@@ -643,11 +626,11 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 23:16:22 SGT
-total_active: 27
+updated_at: 2026-08-14 23:19:05 SGT
+total_active: 26
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 18
+  Q2: 17
   Q3: 0
   Q4: 9
