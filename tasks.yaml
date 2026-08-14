@@ -144,7 +144,7 @@ clusters:
     type: discuss
     domain: ai/ml
     priority: p2
-    status: archived
+    status: active
     summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time, verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass. Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval cron was due Aug 14 2026).'
     captured: 2026-08-14
     source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
