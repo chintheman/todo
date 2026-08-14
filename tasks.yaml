@@ -1012,7 +1012,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p3
-    status: active
+    status: archived
     summary: Deep research into Roko's Basilisk — the infamous LessWrong thought experiment about a future AI that retroactively punishes those who didn't help bring it into existence. Origin, controversy (Eliezer Yudkowsky banned discussion of it), philosophical implications (Pascal's Wager for AI, acausal trade, decision theory), technical plausibility, and cultural impact on rationalist/AI safety communities. Pure curiosity / late-night deep dive.
     captured: '2026-07-08'
     source: 0xsteamboat request — late-night deep dive topic
