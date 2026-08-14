@@ -576,7 +576,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p2
-    status: active
+    status: archived
     summary: '20-slide technical guide on building an MCP host, not just installing servers. Covers 5 stdio subprocesses, namespaced tools (two servers both expose "search"), sync UI bridged to async event loop, git tool allowlist (12→4). Key insight: every tool schema is resent every turn — exposing all 21 tools burns context on tools the model never calls. Stack: mcp 2.0.0, mcp-types 2.0.0, groq 1.6.0, streamlit 1.60.0, Python 3.12, free Groq key.'
     captured: 2026-08-07
     source: Instagram — @datasciencebrain — https://www.instagram.com/p/Dbhdx66GL3O/
