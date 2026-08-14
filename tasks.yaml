@@ -165,7 +165,7 @@ clusters:
     cluster_kind: theme
     quadrant: Q4
   archive:
-  - &id001
+  - &id017
     id: claude-code-loops-google-meta-ads
     title: Absorb Claude Code loop patterns from Ryze AI — ad management loops with verification gates
     type: research
@@ -200,7 +200,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id002
+  - &id008
     id: claude-command-cheatsheet
     title: Evaluate Claude command cheat sheet for Hermes gaps
     type: discuss
@@ -223,7 +223,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id003
+  - &id010
     id: auto-goal-orchestration-plugin
     title: Auto-goal orchestration plugin — review proposed flow
     type: discuss
@@ -242,7 +242,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id004
+  - &id001
     id: tool-decision-framework
     title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
     type: discuss
@@ -256,7 +256,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id005
+  - &id033
     id: anthropic-finance-agents
     title: Anthropic 10 Finance Agents — repo + workflow reference
     type: discuss
@@ -276,7 +276,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id006
+  - &id041
     id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -293,7 +293,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id007
+  - &id045
     id: agentic-stack-review
     title: Agentic Stack — portable .agent/ folder (memory + skills + protocols)
     type: research
@@ -312,7 +312,7 @@ clusters:
     cluster: Agent Orchestration & Loops
     cluster_emoji: 🔄
     cluster_kind: theme
-  - &id008
+  - &id054
     id: memory-ablation-harness
     title: Memory ablation harness — prove the Spine tiers work
     type: discuss
@@ -597,6 +597,26 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
     quadrant: Q2
+  - id: bday-picker-page
+    title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
+    type: build
+    domain: web
+    priority: p1
+    status: active
+    summary: 'Private, password gated page at 0xsteamboat.me/bday (pw: jojo). Guided flow: wife picks a birthday dinner (10
+      curated restaurants at Love Dining rates, photo carousels) and a free hotel night (all 7 Plat Stay properties, room
+      details + blocked dates). Confirm stores the pick server side; a 5 min cron on the Mac (bday-poller.sh) fetches it,
+      delivers to Telegram via hermes send, then acks. White/charcoal/gold design, Cormorant serif. Shipped and verified end
+      to end 2026-08-13/14; delivery chain tested live.'
+    captured: 2026-08-14
+    source: Claude Code build (repo chintheman/0xsteamboat-me, public/bday/ + /api/bday/* in server.ts)
+    notes: 'AFTER THE BIRTHDAY, tear down: (1) remove the Mac crontab line (*/5 bday-poller.sh) plus ~/.local/bin/bday-poller.sh
+      and ~/.config/bday/, (2) remove public/bday/ and the /bday + /api/bday/* routes from server.ts, redeploy. Claude Code
+      session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    cluster: Personal Page
+    cluster_emoji: 🏠
+    cluster_kind: project
+    quadrant: Q2
   - id: start-substack
     title: Start a Substack — publish AI learnings, frameworks, and "show me" test evidence
     type: create
@@ -643,9 +663,9 @@ clusters:
     cluster_kind: project
     quadrant: Q4
   archive: []
-  count: 3
-  total_count: 3
-  active_count: 3
+  count: 4
+  total_count: 4
+  active_count: 4
   delegated_count: 0
   done_count: 0
 - emoji: 🤖
@@ -776,7 +796,7 @@ clusters:
     cluster_kind: theme
     quadrant: Q4
   archive:
-  - &id009
+  - &id020
     id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -795,7 +815,7 @@ clusters:
     cluster: Crypto & Quant Trading
     cluster_emoji: 📈
     cluster_kind: theme
-  - &id010
+  - &id038
     id: nicholascrown-macro-letter
     title: Nicholas Crown — macro trading profile + The Crown Macro Letter
     type: research
@@ -869,7 +889,7 @@ clusters:
     cluster_kind: theme
     quadrant: Q2
   archive:
-  - &id011
+  - &id005
     id: toto-generator-refine
     title: Refine Toto generator — easier, explainable, profile-based, fun, productize as app
     type: build
@@ -911,7 +931,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id013
+  - &id011
     id: learn-animated-websites
     title: Learn how to make animated websites
     type: research
@@ -936,7 +956,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id014
+  - &id027
     id: showreel
     title: Showreel — Claude Code visual documentation plugin
     type: build
@@ -962,7 +982,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id015
+  - &id009
     id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -978,7 +998,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id016
+  - &id019
     id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -997,7 +1017,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id017
+  - &id036
     id: genrecon-3d-reconstruction
     title: GenRecon — 8 photos to full 3D room (open-source)
     type: build
@@ -1015,7 +1035,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id018
+  - &id040
     id: unreal-engine-mcp-hermes
     title: Unreal Engine MCP for Hermes Agent — official companion skill
     type: build
@@ -1036,7 +1056,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id019
+  - &id034
     id: blender-mcp-hermes
     title: Blender MCP for Hermes Agent — official + community stack
     type: build
@@ -1058,7 +1078,7 @@ clusters:
     cluster: Creative Agency & Content
     cluster_emoji: 🎨
     cluster_kind: theme
-  - &id020
+  - &id049
     id: claude-code-ai-content-team
     title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
     type: discuss
@@ -1127,7 +1147,7 @@ clusters:
     cluster_kind: theme
     quadrant: Q2
   archive:
-  - &id021
+  - &id047
     id: oh-my-hermes-review
     title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
     type: research
@@ -1145,7 +1165,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id022
+  - &id046
     id: buzz-block-review
     title: Buzz — Block's self-hostable workspace for humans + agents
     type: research
@@ -1166,7 +1186,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id023
+  - &id018
     id: agent-reach
     title: Agent-Reach — multi-platform web & social access for AI agents
     type: research
@@ -1187,7 +1207,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id024
+  - &id014
     id: claude-code-v2-1-203
     title: Claude Code v2.1.203 — review and update our install
     type: build
@@ -1211,7 +1231,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id025
+  - &id015
     id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -1237,7 +1257,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id026
+  - &id016
     id: safari-mcp-server
     title: Safari MCP Server — evaluate for web dev/QA pipeline
     type: research
@@ -1259,7 +1279,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id027
+  - &id021
     id: omniroute-local-gateway
     title: OmniRoute — local AI routing gateway for 231+ providers
     type: research
@@ -1280,7 +1300,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id028
+  - &id026
     id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -1301,7 +1321,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id029
+  - &id031
     id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
     type: build
@@ -1323,7 +1343,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id030
+  - &id039
     id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
     type: build
@@ -1349,7 +1369,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id031
+  - &id002
     id: i-have-adhd-claude-skill
     title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
     type: research
@@ -1375,7 +1395,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id032
+  - &id048
     id: mcp-host-60-minutes
     title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
     type: research
@@ -1396,7 +1416,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id033
+  - &id051
     id: mojo-1-0-milestone
     title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
     type: research
@@ -1417,7 +1437,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id034
+  - &id052
     id: unsloth-desktop-eval
     title: Unsloth Desktop — local LLM run/train app (Beta)
     type: build
@@ -1439,7 +1459,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id035
+  - &id053
     id: lovable-explore
     title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
     type: research
@@ -1458,7 +1478,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id036
+  - &id050
     id: lint-raw-capture-stall
     title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
     type: maintain
@@ -1479,7 +1499,7 @@ clusters:
     cluster: Dev Tools & Infrastructure
     cluster_emoji: 🛠️
     cluster_kind: theme
-  - &id037
+  - &id042
     id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -1505,7 +1525,7 @@ clusters:
   name: AI Models & Provider Landscape
   items: []
   archive:
-  - &id038
+  - &id029
     id: glm-5-eval
     title: GLM-5.2 (Z.ai) — MCP Atlas
     type: build
@@ -1527,7 +1547,7 @@ clusters:
     cluster: AI Models & Provider Landscape
     cluster_emoji: 🧠
     cluster_kind: theme
-  - &id039
+  - &id024
     id: kyutai-pocket-tts-evaluate
     title: Evaluate Kyutai Pocket TTS — local CPU TTS with voice cloning
     type: research
@@ -1546,7 +1566,7 @@ clusters:
     cluster: AI Models & Provider Landscape
     cluster_emoji: 🧠
     cluster_kind: theme
-  - &id040
+  - &id022
     id: orca-ade
     title: Orca — Agent Development Environment for parallel agents
     type: research
@@ -1565,7 +1585,7 @@ clusters:
     cluster: AI Models & Provider Landscape
     cluster_emoji: 🧠
     cluster_kind: theme
-  - &id041
+  - &id025
     id: anthropic-ust-claude
     title: Anthropic × UST — Claude for Physical AI
     type: discuss
@@ -1584,7 +1604,7 @@ clusters:
     cluster: AI Models & Provider Landscape
     cluster_emoji: 🧠
     cluster_kind: theme
-  - &id042
+  - &id028
     id: chinese-ai-enterprise-adoption-ft
     title: FT — Global companies (DD, Siemens, Airbnb) adopting Chinese AI
     type: discuss
@@ -1637,7 +1657,7 @@ clusters:
   name: Business Ideas & Products
   items: []
   archive:
-  - &id043
+  - &id004
     id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -1654,7 +1674,7 @@ clusters:
     cluster: Business Ideas & Products
     cluster_emoji: 💡
     cluster_kind: theme
-  - &id044
+  - &id023
     id: jonathan-lok-workshop
     title: Talk to Jonathan Lok about agentic AI workshop for his kids
     type: discuss
@@ -1670,7 +1690,7 @@ clusters:
     cluster: Business Ideas & Products
     cluster_emoji: 💡
     cluster_kind: theme
-  - &id045
+  - &id007
     id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -1686,7 +1706,7 @@ clusters:
     cluster: Business Ideas & Products
     cluster_emoji: 💡
     cluster_kind: theme
-  - &id046
+  - &id037
     id: interior-design-agent-tools
     title: Interior Design Agent — AI tool stack for friend's project
     type: discuss
@@ -1706,7 +1726,7 @@ clusters:
     cluster: Business Ideas & Products
     cluster_emoji: 💡
     cluster_kind: theme
-  - &id047
+  - &id032
     id: ai-influencer-monetization
     title: AI Influencer Empire — monetization strategy (profit from lust)
     type: research
@@ -1728,7 +1748,7 @@ clusters:
     cluster: Business Ideas & Products
     cluster_emoji: 💡
     cluster_kind: theme
-  - &id048
+  - &id043
     id: looking-busy-website
     title: LookingBusy — interactive "pretend to work" website
     type: build
@@ -1759,7 +1779,7 @@ clusters:
   name: Integrations
   items: []
   archive:
-  - &id049
+  - &id056
     id: zo-attio-crm-integration
     title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
     type: build
@@ -1778,7 +1798,7 @@ clusters:
     cluster: Integrations
     cluster_emoji: 🔌
     cluster_kind: theme
-  - &id050
+  - &id055
     id: project-idea-capture-system
     title: Project-level idea capture system — random projects/discussions storage
     type: discuss
@@ -1806,7 +1826,7 @@ clusters:
   name: Other Active (Delegated / Backlog)
   items: []
   archive:
-  - &id051
+  - &id003
     id: explore-smart-internet-sites
     title: Explore fun & useful websites — AevyTV smarter internet carousel
     type: research
@@ -1822,7 +1842,7 @@ clusters:
     cluster: Other Active (Delegated / Backlog)
     cluster_emoji: 📋
     cluster_kind: theme
-  - &id052
+  - &id013
     id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -1842,7 +1862,7 @@ clusters:
     cluster: Other Active (Delegated / Backlog)
     cluster_emoji: 📋
     cluster_kind: theme
-  - &id053
+  - &id030
     id: telegram-games-exploration
     title: Explore creating Telegram games — landscape, tech stack, build options
     type: research
@@ -1864,7 +1884,7 @@ clusters:
     cluster: Other Active (Delegated / Backlog)
     cluster_emoji: 📋
     cluster_kind: theme
-  - &id054
+  - &id006
     id: ai-stack-platforms-review
     title: Review all AI stack platforms for potential integration
     type: research
@@ -1882,7 +1902,7 @@ clusters:
     cluster: Other Active (Delegated / Backlog)
     cluster_emoji: 📋
     cluster_kind: theme
-  - &id055
+  - &id035
     id: lint-rejected-cleanup
     title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
     type: maintain
@@ -1901,7 +1921,7 @@ clusters:
     cluster: Other Active (Delegated / Backlog)
     cluster_emoji: 📋
     cluster_kind: theme
-  - &id056
+  - &id044
     id: systems-thinking-video-review
     title: The Revolution of Systems Thinking — video review and study notes
     type: research
@@ -1933,19 +1953,437 @@ clusters:
 archive:
 - *id001
 - *id002
+- id: self-correcting-agent
+  title: Self-Correcting Agent — Reflexion Pattern
+  type: discuss
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Generator-Critic-Loop-Adjudicator pattern with diminishing returns curve. Maps to existing creative-review pipeline
+    + DO→GRADE→REWRITE interest.
+  captured: 2026-06-30
+  source: Instagram — @datasciencebrain
+  notes: ~/wiki/_system/pending/self-correcting-agent.md
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: ddgs-search-fallback
+  title: DDGS — DuckDuckGo web search fallback
+  type: build
+  domain: devops
+  priority: p2
+  status: done
+  summary: Installed ddgs (pip, Hermes venv), set web.search_backend=ddgs in config.yaml. No API key, no Docker, no rate limits.
+    Free fallback when Firecrawl is exhausted.
+  captured: 2026-07-01
+  source: Firecrawl credit exhaustion / Hermes Agent docs
+  notes: config.yaml web.search_backend = ddgs
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: tools-skills-consistency
+  title: Investigate why tools and skills are not consistently used — and fix it
+  type: research
+  domain: ai/ml
+  priority: p0
+  status: done
+  summary: Completed — root cause analysis done by another agent. Skills loaded as text (not enforced behavior), LLM attention
+    drifts in long sessions. Systemic issue across all profiles, not individual skills.
+  deadline: '2026-07-03'
+  captured: '2026-07-02'
+  source: 0xsteamboat request
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: context-engine-explore
+  title: Memory Audit — Explore context engine plugin
+  type: discuss
+  domain: ai/ml
+  priority: p2
+  status: done
+  summary: Dormant plugin slot exists at plugins/context_engine/. No existing plugin found for cross-channel session context
+    injection. Deferred pending Honcho evaluation.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: memory-audit-review
+  title: Memory Audit — Honcho GO/NO-GO decision
+  type: discuss
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Sign up at honcho.dev, get API key, evaluate on default profile for 1 week. RESOLVED Jul 15, 2026 — Honcho decommissioned,
+    migrated to builtin. Decision today - proceed or skip.
+  deadline: 2026-07-13
+  captured: 2026-07-02
+  source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
+  completed: 2026-07-13
+  outcome: 'GO 🟢 — Jul 13. Reliability solid (11 days, 0 failures), $0.20 spent of $10 credits (~18mo runway). Keep on cloud,
+    no self-hosting (prove-value-first principle met). wiki-aware-start patched with Honcho dialectic read-in (v1.4.0, Jul
+    8). WIRED: default (main config.yaml, memory_provider + provider) and health-wellness profile. NOT wired: market-intel
+    (originally listed as a target but never wired). Remaining follow-up: wire 2-3 more high-activity profiles (market-intel
+    is the top candidate) for broader coverage.'
+  notes: ~/wiki/_system/memory-audit-2026-07-02.md
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: hw-to-wiki-migration
+  title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
+  type: discuss
+  domain: infra
+  priority: p2
+  status: done
+  summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
+    store now.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: supermemory-dedup-cron
+  title: Memory Audit — Periodic Supermemory dedup + TTL cron
+  type: discuss
+  domain: devops
+  priority: p2
+  status: done
+  summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
+    entries.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: subagent-model-verify
+  title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
+  type: build
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Config set to deepseek/deepseek-v4-pro, confirmed working after session restart. Subagent test ran successfully
+    on deepseek-v4-pro.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: topic-role-audit
+  title: P0 — Audit all topic's mapped roles, skills, crons, profiles
+  type: discuss
+  domain: infra
+  priority: p0
+  status: done
+  summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
+    pass. No discrepancies found.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: Forum migration — HermesBoat69 12 topics
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: hard-step-budgets
+  title: Step Budgets — Turn limits + forced handoffs for multi-phase work
+  type: discuss
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Classification table (simple 1-5 turns, medium max 10, complex max 20 per phase). Orchestrator-enforced not model-decided.
+    Decided NOT to implement.
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: Telegram Agentic Workflow Recommendation
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: stress-test-creative-agency
+  title: Stress Test Agentic Creative Agency
+  type: build
+  domain: creative
+  priority: p1
+  status: done
+  summary: Push the Creative Agency pipeline through a stress test — multi-stage brief, edge cases, verify pipeline integrity.
+  deadline: '2026-07-03'
+  captured: '2026-07-02'
+  source: 0xsteamboat request
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: sync-barriers
+  title: Sync Barriers — Wait-for-all → synthesize → deliver once
+  type: discuss
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: 'Pattern adopted as behavioral rule in MEMORY.md: "Sync barrier pattern for parallel subagent work… synthesize
+    into ONE message, deliver once." Rule enforces the pattern without requiring tool-level enforcement.'
+  deadline: 2026-07-02
+  captured: 2026-07-02
+  source: Telegram Agentic Workflow Recommendation
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: openai-application-prep
+  title: Continue OpenAI application prep
+  type: create
+  domain: career
+  priority: p0
+  status: done
+  summary: Removed from active list per user request 2026-07-04.
+  deadline: '2026-07-03'
+  captured: '2026-07-03'
+  source: 0xsteamboat request
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: developer-agent-codex-claude
+  title: Create a developer agent profile enabling both Codex and Claude Code
+  type: build
+  domain: devops
+  priority: p0
+  status: done
+  summary: Build a dedicated developer profile in Hermes that can orchestrate both Codex CLI and Claude Code as subagents/tools
+    for multi-model coding workflows.
+  captured: '2026-07-03'
+  source: 0xsteamboat request
+  delegated_to: The General (#1)
+  completed: 2026-07-04
+  notes: 'Handoff file: ~/wiki/_system/pending/developer-agent-codex-claude.md Existing assets: autonomous-coding-agents skill
+    (references/codex.md, references/claude-code.md, references/opencode.md, references/acp-agent-integration.md), codex-hermes-integration-report.md
+    at ~/research/. Need: dev profile (config.yaml + SOUL.md), routing decision logic, topic registration. Research question:
+    can Codex create creative content? Answered in integration report §3.'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: openai-profiles-engage
+  title: Engage with OpenAI profiles on LinkedIn
+  type: create
+  domain: career
+  priority: p0
+  status: done
+  summary: Removed from active list per user request 2026-07-04.
+  deadline: '2026-07-03'
+  captured: '2026-07-03'
+  source: 0xsteamboat request
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: crewai-hermes-integration
+  title: Explore CrewAI integration with Hermes for agent role optimisation
+  type: research
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: 'Research completed. CrewAI v1.15.1 installed in Hermes .venv, bridge skill (crewai-orchestrator) built with agent
+    map (12 profiles), self-improvement evaluator (scripts/crewai-self-improve.py), and weekly consolidation cron (Sundays
+    6am SGT). Verified multi-model crew execution: DeepSeek V4 Pro (research) → Claude Sonnet 4-6 (writing). CrewAI is complementary
+    to Hermes — framework vs runtime. Not redundant.'
+  captured: '2026-07-03'
+  source: 0xsteamboat request
+  notes: '~/.hermes/skills/agent-orchestration/crewai-orchestrator/ Skill structure: SKILL.md + crewai-agent-map.yaml (12
+    agents) + crewai-bridge-template.py + crewai-self-improve.py (eval hook) + references/architecture.md + references/self-improvement-loop.md
+    Cron: b7d899cbdfb6 (Sundays 6am, no-agent, silent-when-healthy) Key: CrewAI agents NEVER have Telegram access (structural
+    boundary) Review: 2 iterations max, DeepSeek V4 Pro as critic'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: explore-fluid-voice
+  title: Explore FluidVoice as alternative to agentic TTS/STT solutions
+  type: research
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Research FluidVoice — open-source macOS dictation app by ALTIC_DEV. Local Whisper STT models, custom Fluid-1 AI
+    post-processing model. Compare against Hermes current TTS/STT capabilities (ElevenLabs TTS, text_to_speech tool).
+  captured: '2026-07-03'
+  source: sdhilip X post + altic.dev/fluid
+  notes: 'Source: ~/wiki/_system/pending/fluid-voice-review.md'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: carousel-mcp-integration
+  title: Explore carousels-mcp + Paper MCP for Creative Agency pipeline
+  type: build
+  domain: creative
+  priority: p1
+  status: done
+  summary: 'Three Instagram content pipelines for Creative Agency: carousels-mcp (free, automated SVG carousel, 11 slide types),
+    Paper MCP (editable design canvas, 7-agent parallel, human polish loop), NotebookLM Short Video Overviews (source→60s
+    vertical video via Nano Banana 2 Lite).'
+  captured: '2026-07-03'
+  source: Paper Design + houtini-ai/carousels-mcp
+  completed: 2026-07-04
+  notes: '~/wiki/_system/pending/instagram-content-pipelines.md — combined: carousels-mcp (free, automated) + Paper MCP (editable
+    canvas, $20/mo) + NotebookLM Short Videos (60s Reels)'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: explore-free-agentic-tools
+  title: Explore free agentic tools — review carousel + fresh research
+  type: research
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Review @ohneis652's "10 Free AI Tools That Outperform ChatGPT" carousel (DeepSeek, Kimi, Qwen, Mistral, You.com,
+    Komo, Krea AI, Glasp, HuggingChat, Together AI). Add fresh research on current free agentic tool landscape. Evaluate which
+    complement Hermes/CrewAI stack.
+  deadline: '2026-07-04'
+  captured: '2026-07-03'
+  source: 0xsteamboat request + @ohneis652 IG carousel
+  notes: 'Source: ~/wiki/concepts/cq-na-consolidation.md'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id003
+- id: index-md-folder-optimization
+  title: Implement INDEX.md folder optimization for Hermes wiki
+  type: build
+  domain: infra
+  priority: p0
+  status: done
+  summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
+  deadline: '2026-07-03'
+  captured: '2026-07-03'
+  source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
+  notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id004
 - *id005
 - *id006
+- id: review-memory-recommendations
+  title: Review memory recommendations against Hermes memory solution
+  type: research
+  domain: ai/ml
+  priority: p1
+  status: done
+  summary: Review complete. Memory stack reference doc built, INDEX.md updated, 2 skills patched. Actionable items executed
+    via subagent. Main gap (packaging) documented for future.
+  captured: '2026-07-03'
+  source: brodyautomates IG carousel - Hermes + Obsidian memory setup
+  delegated_to: The General (#1)
+  completed: 2026-07-04
+  notes: 'Source: ~/wiki/_system/pending/memory-optimization-review.md'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: sg-minister-thinking-process
+  title: Study Singapore Minister Thinking Process
+  type: research
+  domain: strategy
+  priority: p1
+  status: done
+  summary: Break down and study the learnings, thought processes, and analytical frameworks used by Singaporean ministers
+    (LKY, LHL, Lawrence Wong, Tharman, Shanmugam). LKY's 3 first principles, LHL's 4 governance principles, Lawrence Wong's
+    Forward SG open-assumption approach, CSF scenario planning, pragmatic governance model. Extract as reusable mental frameworks.
+  captured: '2026-07-03'
+  source: 0xsteamboat request
+  notes: 'Source: ~/wiki/_system/pending/sg-minister-thinking-process.md'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: exercises-dataset-integration
+  title: Wire exercises-dataset into Health & Wellness profile
+  type: build
+  domain: health
+  priority: p3
+  status: done
+  summary: Fully integrated into H&W profile — CrewAI-compatible exercise_tools.py (search, alternatives, random, list), CLI
+    via exercise-query, skill updated with dedicated Exercise Reference Library section + CrewAI @tool examples.
+  captured: '2026-07-03'
+  source: hasaneyldrm/exercises-dataset GitHub
+  completed: 2026-07-04
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id007
 - *id008
 - *id009
+- id: graphify-integration
+  title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
+  type: build
+  domain: devops
+  priority: p2
+  status: done
+  summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
+    files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
+    until we have active coding projects with measurable token burn from re-orientation.
+  captured: '2026-07-04'
+  source: kayvon.ai IG reel — Graphify
+  completed: 2026-07-04
+  notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
+    OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re optimizing
+    a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn from codebase
+    re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat: 70x is marketing
+    upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: agentic-loop-engineering
+  title: Master Looping — implement Boris Cherny / Pravda loop engineering
+  type: build
+  domain: ai/ml
+  priority: p0
+  status: done
+  summary: 'Master implementation of loop engineering across 5 workstreams: (A) Wiki SQLite FTS5 compression (marfinxx -70%
+    token waste), (B) agent-loop skill (borrowed from cocodedk/loop-engineering GH, Boris Cherny''s observe-plan-act-reflect
+    cycle), (C) Maker-checker loop skill (formalize DO→GRADE→REWRITE), (D) Context compaction protocol (compact at 50%, auto-summarize),
+    (E) Model routing harness (80/15/5 tiers, auto-fallback).'
+  captured: '2026-07-04'
+  source: Boris Cherny (Anthropic), Danylo Pravda (pravda.systems), Miles Deutscher, AI Edge, cocodedk/loop-engineering GH
+    repo
+  completed: 2026-07-06
+  resolution: 'Closed 2026-07-06. Workstreams A (FTS5), C (reflexion-loop v2 maker-checker), D (context compaction) built.
+    E (model routing harness) discarded. B (agent-loop skill) resolved as NO-BUILD: /goal already provides "loop until" natively
+    (verified in hermes-agent codebase — hermes_cli/goals.py + gateway/slash_commands.py), and reflexion-loop covers the text-quality
+    gate. Decision: use /goal + reflexion as the loop toolkit rather than building a wrapper skill. Loop system is complete.'
+  notes: "SOURCES: - Boris Cherny (Head of Claude Code): loops > prompts. 8x productivity,\n  80%+ merged code by AI at Anthropic.\
+    \ GH: cocodedk/loop-engineering\n- Danylo Pravda: pravda.systems/blog/cost-optimization-model-routing - @marfinxx: SQLite\
+    \ FTS5 compression -70% token waste (Hermes Agent + wiki) - Miles Deutscher / AI Edge: loop engineering beginner guides,\
+    \ Fable 5 VALIDATED: All claims trace to primary sources (Cherny's talks, GH repos, Anthropic docs). 8x figure is Anthropic-reported.\
+    \ Loop patterns map to our existing DO→GRADE→REWRITE interest. agent-loop skill ships as code. Key GH: github.com/cocodedk/loop-engineering\
+    \ (Apache-2.0, 11 docs, skill)"
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: sg-governance-practice-system
+  title: SG Governance Thinking Practice System
+  type: build
+  domain: productivity
+  priority: p1
+  status: done
+  summary: 'Spiral practice system — Phase 1 guided daily practice in Telegram (4 modules), Phase 2 rotating morning journal
+    integration (7 framework questions added), Phase 3 system gates (Chief of Staff + monthly Assumption Audit). Skill: productivity/sg-governance-practice'
+  captured: '2026-07-04'
+  source: Curated from LKY, LHL, Lawrence Wong, Tharman, CSF frameworks — research done Jul 3, practice system built Jul 4
+  completed: 2026-07-04
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id010
 - *id011
 - *id012
 - *id013
 - *id014
 - *id015
+- id: review-billings
+  title: P0 — Review all recurring bills and subscriptions
+  type: discuss
+  domain: finance
+  priority: p0
+  status: done
+  summary: Reviewed and cleared by user. All recurring bills identified and summarised. Full report at ~/wiki/_system/pending/billing-review-jul-2026.md.
+  captured: '2026-07-09'
+  source: 0xsteamboat request (Jul 9, 2026) — reviewed and cleared
+  completed: 2026-07-09
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id016
 - *id017
 - *id018
@@ -1957,6 +2395,21 @@ archive:
 - *id024
 - *id025
 - *id026
+- id: market-intel-refinement-review
+  title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
+  type: discuss
+  domain: crypto
+  priority: p1
+  status: done
+  summary: Review date (2026-07-20) has passed with the review not yet done. 4 deferred items pending assessment against ~1
+    week of live brief performance (prediction hit-rate, Brier trend, data-source reliability).
+  captured: 2026-07-13
+  source: Manually appended to review-items.md on 2026-07-13, found during the Chief of Staff cluster audit
+  completed: 2026-08-12
+  notes: 'Full context: ~/wiki/_system/pending/market-intel-refinement-review.md'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id027
 - *id028
 - *id029
@@ -1978,6 +2431,44 @@ archive:
 - *id045
 - *id046
 - *id047
+- id: lint-injection-resolution
+  title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
+  type: maintain
+  domain: meta
+  priority: p2
+  status: done
+  summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
+    12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
+    verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the flag
+    is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either archive
+    it or formally resolve the flag so future lints stop surfacing it.'
+  captured: 2026-08-02
+  source: lint-cron-2026-08-02 @ R15
+  completed: 2026-08-12
+  notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
+    that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle 5):
+    flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
+- id: lint-contradiction-resolution
+  title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
+  type: maintain
+  domain: meta
+  priority: p3
+  status: done
+  summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
+    flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
+    or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the ambiguous
+    mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
+  captured: 2026-08-02
+  source: lint-cron-2026-08-02 @ R1
+  completed: 2026-08-12
+  notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
+    (lint cycle 5): flag now 33 days old, still unresolved.'
+  cluster: Uncategorised
+  cluster_emoji: 🗃️
+  cluster_kind: theme
 - *id048
 - *id049
 - *id050
@@ -1987,11 +2478,11 @@ archive:
 - *id054
 - *id055
 - *id056
-updated_at: 2026-08-14 23:35:20 SGT
-total_active: 27
-total_done: 56
+updated_at: 2026-08-14 23:38:55 SGT
+total_active: 28
+total_done: 86
 matrix_summary:
   Q1: 0
-  Q2: 17
+  Q2: 18
   Q3: 0
   Q4: 10
