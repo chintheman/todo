@@ -144,7 +144,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p2
-    status: active
+    status: archived
     summary: 'Research and document patterns for getting AI agents to collaborate effectively: task decomposition, handoff protocols, shared context/memory, conflict resolution, and orchestration frameworks (CrewAI, AutoGen, AG2, Hermes subagents).'
     captured: 2026-07-20
     source: Personal request — PA intake
