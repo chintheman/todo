@@ -660,7 +660,7 @@ clusters:
     type: build
     domain: devops
     priority: p2
-    status: active
+    status: done
     summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs, Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS. Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
     captured: 2026-07-19
     source: Instagram — @gittrend.io (via gittrendio-discovery-feed)
