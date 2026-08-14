@@ -31,6 +31,21 @@ clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
   items:
+  - id: context-engineering-research
+    title: Context engineering research and optimisation
+    type: research
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'Research stream on context engineering for agent systems: how context is assembled, truncated, prioritized,
+      and optimized (context windows, retrieval quality, memory tiers, prompt construction) to improve Hermes agent performance.'
+    captured: 2026-08-14
+    source: User request — Hermes context/memory stack
+    notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
+      bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
+      in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
+    cluster: Agent Orchestration & Loops
+    quadrant: Q2
   - id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 232 specialist personas
     type: discuss
@@ -174,21 +189,6 @@ clusters:
       to integrate.'
     cluster: Agent Orchestration & Loops
     quadrant: Q2
-  - id: context-engineering-research
-    title: Context engineering research and optimisation
-    type: research
-    domain: ai/ml
-    priority: p2
-    status: active
-    summary: 'Research stream on context engineering for agent systems: how context is assembled, truncated, prioritized,
-      and optimized (context windows, retrieval quality, memory tiers, prompt construction) to improve Hermes agent performance.'
-    captured: 2026-08-14
-    source: User request — Hermes context/memory stack
-    notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
-      bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
-      in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
-    cluster: Agent Orchestration & Loops
-    quadrant: Q4
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
     type: research
@@ -805,11 +805,11 @@ clusters:
   active_count: 0
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 22:47:10 SGT
+updated_at: 2026-08-14 22:49:32 SGT
 total_active: 39
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 28
+  Q2: 29
   Q3: 0
-  Q4: 11
+  Q4: 10
