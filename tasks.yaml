@@ -388,7 +388,7 @@ clusters:
     type: research
     domain: creative
     priority: p2
-    status: active
+    status: archived
     summary: 'Research building a stop-motion video pipeline for the Creative Agency, inspired by Romain Torres'' Arcads Claude skill: reference image → style spec → still frames → stop-motion animation. Key components: (1) Arcads External API at external-api.arcads.ai/docs — may provide direct access without needing Claude Code, (2) Seedance 2.0 (ByteDance, via fal.ai) as the animation layer, (3) Nano Banana 2 as fast frame gen (Google Gemini 3.1 Flash Image — we have Nous→Gemini routing). Determine whether to integrate Arcads API directly, build equivalent pipeline with our stack (FLUX → Seedance 2.0), or both.'
     captured: '2026-07-07'
     source: Romain Torres LinkedIn post — Arcads Claude skill (Jul 7, 2026)
