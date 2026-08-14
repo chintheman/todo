@@ -271,7 +271,12 @@ clusters:
       $PAL name.'
     captured: 2026-08-14
     source: User ideation session Aug 14 2026
-    notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (pending Opus 5 dispatch).'
+    notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (Opus 5, 1,050 lines, pushed Aug 14). Key plan moves: toxicity curve
+      computed from OTHER makers on-chain fills (lawful from SG, zero capital — escapes the SG blocker); phase 1 = 3 weeks,
+      $40/mo VPS, no capital, checkpoint C1 (+8% annualized distance region, R²≥0.80 reward regression); 5 open design items
+      resolved (3-tier exit waterfall DEX→0.25% instant→10% weekly queue; par NAV marking; mint floor = revert not sell-below-par;
+      20% fee split 30/30/30/10 treasury). Plan corrected 4 locked design elements (price-lock look-back option, mid-marking
+      overstatement, $1-floor mis-selling, resolution-fee collects ~0).'
     cluster: Crypto & Quant Trading
     quadrant: Q2
   - id: claude-code-ai-hedge-fund
@@ -1396,7 +1401,7 @@ clusters:
   active_count: 10
   delegated_count: 1
   done_count: 0
-updated_at: 2026-08-14 17:01:57 SGT
+updated_at: 2026-08-14 17:08:12 SGT
 total_active: 77
 total_done: 0
 matrix_summary:
