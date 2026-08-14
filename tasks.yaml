@@ -763,7 +763,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p2
-    status: active
+    status: archived
     summary: Desktop + mobile app for managing parallel coding agents. Run any CLI agent, parallel worktrees (fan one prompt across 5 agents), annotate AI diffs, mobile companion for monitoring. Works with any terminal-based agent. 12.5K stars, MIT license. Interesting for parallel agent orchestration but we already have delegate_task for parallelism. The mobile monitoring is novel.
     captured: '2026-07-11'
     source: '@syntaix.ai Instagram carousel — stablyai/orca'
