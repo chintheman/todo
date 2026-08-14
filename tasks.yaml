@@ -829,7 +829,7 @@ clusters:
     type: discuss
     domain: creative
     priority: p2
-    status: active
+    status: archived
     summary: Brainstorm quality-of-life applications and product ideas built around the second brain concept (shared knowledge base that agents read/write to). Think consumer-facing tools, personal productivity apps, or novel use cases that leverage the compounding-knowledge pattern beyond GTM.
     captured: '2026-07-04'
     source: 0xsteamboat brainstorm request
