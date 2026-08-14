@@ -940,7 +940,7 @@ clusters:
     type: research
     domain: crypto
     priority: p2
-    status: active
+    status: done
     summary: 'Research how to automatically place 100 Singapore Pools TOTO bets (quick picks or system entries) with zero human intervention. Investigate: (1) SG Pools digital API / web portal automation feasibility, (2) legal/ToS constraints on automated betting, (3) whether an agent can navigate the online betting flow (login → select game → place bets → confirm), (4) batch bet submission limits, (5) cost of 100 bets at $1/$2 each, (6) account funding automation. Cross-ref existing toto-strategy skill (1,193 draws analysed) and toto-generator-refine (P1) for the number generation side.'
     captured: '2026-07-07'
     source: 0xsteamboat request — automate TOTO execution pipeline
