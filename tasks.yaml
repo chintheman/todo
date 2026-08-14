@@ -1018,7 +1018,7 @@ clusters:
     type: maintain
     domain: meta
     priority: p3
-    status: active
+    status: done
     summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold): 1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion or archive.'
     captured: 2026-07-19
     source: lint-cron-2026-07-19 @ R14
