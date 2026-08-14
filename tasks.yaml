@@ -355,8 +355,26 @@ clusters:
       Verna "Cool. Show me." bar
     cluster: Personal Page
     quadrant: Q2
-  count: 1
-  active_count: 1
+  - id: bday-picker-page
+    title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
+    type: build
+    domain: web
+    priority: p1
+    status: active
+    summary: 'Private, password gated page at 0xsteamboat.me/bday (pw: jojo). Guided flow: wife picks a birthday dinner
+      (10 curated restaurants at Love Dining rates, photo carousels) and a free hotel night (all 7 Plat Stay properties,
+      room details + blocked dates). Confirm stores the pick server side; a 5 min cron on the Mac (bday-poller.sh) fetches
+      it, delivers to Telegram via hermes send, then acks. White/charcoal/gold design, Cormorant serif. Shipped and verified
+      end to end 2026-08-13/14; delivery chain tested live.'
+    captured: 2026-08-14
+    source: Claude Code build (repo chintheman/0xsteamboat-me, public/bday/ + /api/bday/* in server.ts)
+    notes: 'AFTER THE BIRTHDAY, tear down: (1) remove the Mac crontab line (*/5 bday-poller.sh) plus ~/.local/bin/bday-poller.sh
+      and ~/.config/bday/, (2) remove public/bday/ and the /bday + /api/bday/* routes from server.ts, redeploy. Claude Code
+      session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    cluster: Personal Page
+    quadrant: Q2
+  count: 2
+  active_count: 2
   delegated_count: 0
   done_count: 0
 - emoji: 🤖
