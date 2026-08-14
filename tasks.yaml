@@ -840,7 +840,7 @@ clusters:
     type: discuss
     domain: creative
     priority: p2
-    status: active
+    status: archived
     summary: 'Research on AI tools stack for an interior design agent. Key candidates: Blender MCP (3D modeling), MeltFlex AI API (photo→photorealistic room redesign REST API, <30s, full pipeline), Figma MCP (mood boards / floor plans / client presentations — now has canvas write access), Rayon.design (interior-design-specific CAD + AI mood boards), GenRecon (scan real rooms → 3D digital models from 8 photos). Friend sharing more context in ~2 weeks.'
     captured: 2026-07-19
     source: PA session — user helping friend build interior design agent
