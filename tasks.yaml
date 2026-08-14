@@ -896,7 +896,7 @@ clusters:
     type: build
     domain: business/build
     priority: p3
-    status: active
+    status: archived
     summary: 'Buildable business idea: interactive fake-work dashboard. Type to escalate chaos, M for fake Zoom, 13 job modes, 5 boss skins, live market ticker. Freemium model — free basic, paid for custom modes/ boss skins/company branding. Proven concept (LookingBusy exists and drives traffic).'
     captured: 2026-07-23
     source: https://www.lookingbusy.com
