@@ -623,50 +623,6 @@ clusters:
       pruning strategy for our setup. Command: hermes update'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
-  - id: context-dev-evaluate
-    title: Context.dev — evaluate as Firecrawl replacement for web scraping
-    type: research
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'YC-backed web scraping/crawl API — direct Firecrawl competitor. 1 credit = 1 page scrape with JS rendering +
-      anti-bot bypass included (no 5-25x multipliers like competitors). Pricing: Free (500 credits), $25/mo (10K), $149/mo
-      (200K), $499/mo (1M). SiteGPT migrated FROM Firecrawl TO Context.dev "in under a day." Python/TS/Ruby/Go/PHP SDKs. Features:
-      scrape/crawl, structured data extraction (JSON schema), brand data (logos/colors/fonts/styleguides), image pull, classification.
-      Strong candidate to replace our exhausted Firecrawl credits.'
-    captured: '2026-07-09'
-    source: context.dev — Y Combinator backed (2026)
-    notes: 'URL: context.dev Pricing: context.dev/pricing Competitors: Firecrawl (exhausted), DDGS (free but limited) YC-backed,
-      customers include Mintlify, SiteGPT, Similarweb, Klarna Python SDK available — easy integration with Hermes toolset
-      Free tier: 500 credits (no card needed) Rate limits: Free 30/min, Developer 60/min, Pro 300/min, Scale 700/min Startups
-      get 30% off paid plans'
-    cluster: Dev Tools & Infrastructure
-    quadrant: Q2
-  - id: github-spec-kit-eval
-    title: Evaluate GitHub Spec Kit for developer-agent workflow
-    type: build
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'GitHub Spec Kit (120K⭐, open source) forces structured spec-first coding: /constitution → /specify → /clarify
-      → /plan → /tasks → /implement. Works with Claude Code, Codex, Gemini CLI, 25+ agents. Directly relevant to plan-mode/writing-plans
-      skills and developer-agent profile. Evaluate against current workflow and adopt if better.'
-    captured: 2026-07-15
-    cluster: Dev Tools & Infrastructure
-    quadrant: Q2
-  - id: vps-shared-memory
-    title: Explore VPS + shared memory — Zo Basic vs Hostinger vs sync strategy
-    type: discuss
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Three-layer problem: (1) Agent memory — Honcho already solves this (API-based, works cross-device). (2) SQLite
-      databases (pa.db, sessions) — needs sqlite-sync or migration to single-Hermes setup. (3) Files/config (~/wiki/, ~/.hermes/)
-      — needs Syncthing or git. Key insight: Honcho already shares agent memory. The question is whether to move Hermes entirely
-      to Zo Basic (already paid $18/mo) or add Hostinger $6/mo SG. Full assessment at ~/wiki/_system/pending/vps-shared-memory.md'
-    captured: 2026-07-15
-    cluster: Dev Tools & Infrastructure
-    quadrant: Q2
   - id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
     type: build
@@ -705,8 +661,8 @@ clusters:
       — may have already lapsed.'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
-  count: 6
-  active_count: 6
+  count: 3
+  active_count: 3
   delegated_count: 0
   done_count: 0
 - emoji: 🧠
@@ -757,11 +713,11 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 22:59:25 SGT
-total_active: 35
+updated_at: 2026-08-14 23:00:34 SGT
+total_active: 32
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 26
+  Q2: 23
   Q3: 0
   Q4: 9
