@@ -864,7 +864,7 @@ clusters:
     type: discuss
     domain: business
     priority: p2
-    status: active
+    status: archived
     summary: Discuss creating a workshop for Jonathan Lok's kids to learn agentic AI. Needs scoping — age range, curriculum level, format (in-person vs online), duration. Potential product opportunity if it works.
     captured: '2026-07-11'
     source: 0xsteamboat request (Jul 11, 2026)
