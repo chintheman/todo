@@ -37,22 +37,10 @@ clusters:
     domain: ai/ml
     priority: p0
     status: active
-    summary: 'msitarzewski/agency-agents — 232 AI agent personas across 16 divisions (engineering, design, product, marketing,
-      sales, security, etc.). Ships a native Hermes plugin (agency-agents-router) with 4 tools: search, inspect, load, delegate.
-      Lazy routing — one plugin with data/agents.json, not 232 external skills. Routes specialists on demand via delegate_task.
-      Complements our 26 profiles (system-level) with task-level specialists. Need to: inspect plugin source, install, test
-      routing, determine integration strategy with existing profiles, and establish when to use agency-agents vs our native
-      skills.'
+    summary: 'msitarzewski/agency-agents — 232 AI agent personas across 16 divisions (engineering, design, product, marketing, sales, security, etc.). Ships a native Hermes plugin (agency-agents-router) with 4 tools: search, inspect, load, delegate. Lazy routing — one plugin with data/agents.json, not 232 external skills. Routes specialists on demand via delegate_task. Complements our 26 profiles (system-level) with task-level specialists. Need to: inspect plugin source, install, test routing, determine integration strategy with existing profiles, and establish when to use agency-agents vs our native skills.'
     captured: '2026-07-07'
     source: '@RoundtableSpace on X (Jul 6, 2026) — msitarzewski/agency-agents (128K⭐)'
-    notes: "REPO: github.com/msitarzewski/agency-agents (128K⭐, MIT, 367 commits) APP: agencyagents.app — Tauri 2 desktop\
-      \ app for browse/install/track HERMES PLUGIN (4 tools):\n  - agency_agents_search: find specialists by query/division\n\
-      \  - agency_agents_inspect: inspect metadata or full body\n  - agency_agents_load: compose specialist prompt for current\
-      \ task\n  - agency_agents_delegate: delegate via delegate_task\nINSTALL: git clone → ./scripts/convert.sh --tool hermes\
-      \ → ./scripts/install.sh --tool hermes PLUGIN PATH: ~/.hermes/plugins/agency-agents-router/ DIVISIONS (16): academic,\
-      \ design, engineering, finance, game-development,\n  gis, marketing, paid-media, product, project-management, sales,\
-      \ security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
-      \ KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
+    notes: "REPO: github.com/msitarzewski/agency-agents (128K⭐, MIT, 367 commits) APP: agencyagents.app — Tauri 2 desktop app for browse/install/track HERMES PLUGIN (4 tools):\n  - agency_agents_search: find specialists by query/division\n  - agency_agents_inspect: inspect metadata or full body\n  - agency_agents_load: compose specialist prompt for current task\n  - agency_agents_delegate: delegate via delegate_task\nINSTALL: git clone → ./scripts/convert.sh --tool hermes → ./scripts/install.sh --tool hermes PLUGIN PATH: ~/.hermes/plugins/agency-agents-router/ DIVISIONS (16): academic, design, engineering, finance, game-development,\n  gis, marketing, paid-media, product, project-management, sales, security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: karpathy-vibe-to-agentic
@@ -61,15 +49,10 @@ clusters:
     domain: ai/ml
     priority: p0
     status: active
-    summary: 'Absorb Karpathy''s full Sequoia Ascent framework: December 2025 inflection point, Software 3.0 (context window
-      as program), vibe coding vs agentic engineering, verifiability thesis, jagged intelligence, agent-native infrastructure
-      (MCP/CLI/structured logs), ghosts-not-animals framework, "you can outsource thinking, not understanding."'
+    summary: 'Absorb Karpathy''s full Sequoia Ascent framework: December 2025 inflection point, Software 3.0 (context window as program), vibe coding vs agentic engineering, verifiability thesis, jagged intelligence, agent-native infrastructure (MCP/CLI/structured logs), ghosts-not-animals framework, "you can outsource thinking, not understanding."'
     captured: '2026-07-04'
     source: Andrej Karpathy at Sequoia AI Ascent 2026 (Apr 30, 2026)
-    notes: 'YouTube: youtube.com/watch?v=96jN2OCOfLs Karpathy''s summary: karpathy.bearblog.dev/sequoia-ascent-2026/ Key quotes:
-      "AGI will take form factor of an agent", "the agent is not the product, the foundation is", "you''re at the forefront,
-      not OpenAI, not DeepMind — you." DIRECT RELEVANCE: Validates our entire loop engineering + wiki + skills architecture.
-      Maps directly to P0 master looping workstream.'
+    notes: 'YouTube: youtube.com/watch?v=96jN2OCOfLs Karpathy''s summary: karpathy.bearblog.dev/sequoia-ascent-2026/ Key quotes: "AGI will take form factor of an agent", "the agent is not the product, the foundation is", "you''re at the forefront, not OpenAI, not DeepMind — you." DIRECT RELEVANCE: Validates our entire loop engineering + wiki + skills architecture. Maps directly to P0 master looping workstream.'
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: vibe-coding-vs-vibe-engineering
@@ -78,18 +61,10 @@ clusters:
     domain: ai/ml
     priority: p0
     status: active
-    summary: 'Study the gap between Vibe Coding (AI writes code, you accept, iterate verbally) and Vibe Engineering (AI writes
-      code, you review, verify, own the architecture). Understand the progression from co-pilot to supervised delegation.
-      Key questions: when is vibe coding appropriate vs dangerous? What verification gates separate them? How does this map
-      to our loop-engineering / reflexion / /goal orchestration work? Cross-ref with existing Karpathy Sequoia research (`karpathy-vibe-to-agentic`).'
+    summary: 'Study the gap between Vibe Coding (AI writes code, you accept, iterate verbally) and Vibe Engineering (AI writes code, you review, verify, own the architecture). Understand the progression from co-pilot to supervised delegation. Key questions: when is vibe coding appropriate vs dangerous? What verification gates separate them? How does this map to our loop-engineering / reflexion / /goal orchestration work? Cross-ref with existing Karpathy Sequoia research (`karpathy-vibe-to-agentic`).'
     captured: '2026-07-07'
     source: Words of the year — Karpathy coined "Vibe Coding" (2025) and "Vibe Engineering" (2026)
-    notes: "Karpathy coined both terms: - Vibe Coding (Feb 2025): \"just keep typing at the computer and accept\n  whatever\
-      \ the AI gives you... it's a new kind of programming where you\n  just keep vibing\"\n- Vibe Engineering / Agentic Engineering\
-      \ (Apr 2026 — Sequoia AI Ascent):\n  \"you can outsource thinking, not understanding\" — verifiability thesis,\n  agent-native\
-      \ infra, structured logs, test-first\nRELATED ITEMS IN REGISTRY:\n  - karpathy-vibe-to-agentic (P0 · research) — full\
-      \ Karpathy Sequoia absorb\n  - agentic-loop-engineering (done) — Boris Cherny loops\n  - auto-goal-orchestration-plugin\
-      \ (P2 · discuss) — /goal automation\n  This item is the focused distinction study between the two paradigms."
+    notes: "Karpathy coined both terms: - Vibe Coding (Feb 2025): \"just keep typing at the computer and accept\n  whatever the AI gives you... it's a new kind of programming where you\n  just keep vibing\"\n- Vibe Engineering / Agentic Engineering (Apr 2026 — Sequoia AI Ascent):\n  \"you can outsource thinking, not understanding\" — verifiability thesis,\n  agent-native infra, structured logs, test-first\nRELATED ITEMS IN REGISTRY:\n  - karpathy-vibe-to-agentic (P0 · research) — full Karpathy Sequoia absorb\n  - agentic-loop-engineering (done) — Boris Cherny loops\n  - auto-goal-orchestration-plugin (P2 · discuss) — /goal automation\n  This item is the focused distinction study between the two paradigms."
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: agency-agent-fa-integration
@@ -98,9 +73,7 @@ clusters:
     domain: crypto
     priority: p1
     status: active
-    summary: 'Adapt Financial Analyst persona patterns for market-intel / quant profiles: scenario analysis (base/upside/downcase),
-      assumption-first communication, variance analysis templates for prediction post-mortems, and Learning & Memory cross-session
-      carry-forward.'
+    summary: 'Adapt Financial Analyst persona patterns for market-intel / quant profiles: scenario analysis (base/upside/downcase), assumption-first communication, variance analysis templates for prediction post-mortems, and Learning & Memory cross-session carry-forward.'
     captured: '2026-07-08'
     source: agency-agents (Financial Analyst)
     notes: 'Review checklist item 2/4 outcome. Reference: ~/agency-highlights/finance-financial-analyst.md'
@@ -112,13 +85,10 @@ clusters:
     domain: creative
     priority: p1
     status: active
-    summary: 'Steal from NEXUS Strategy: (1) per-phase quality gates with explicit criteria, gate keeper, and evidence requirements,
-      (2) structured handoff template for agent-to-agent transitions, (3) max-3-retry Dev↔QA loop pattern. Integrate into
-      creative-agency skill.'
+    summary: 'Steal from NEXUS Strategy: (1) per-phase quality gates with explicit criteria, gate keeper, and evidence requirements, (2) structured handoff template for agent-to-agent transitions, (3) max-3-retry Dev↔QA loop pattern. Integrate into creative-agency skill.'
     captured: '2026-07-08'
     source: agency-agents (NEXUS Strategy)
-    notes: 'Review checklist item 3/4 outcome. 3 integrations ranked: quality gates (high), handoff template (high), Dev↔QA
-      loop (medium). See ~/agency-highlights/nexus-strategy.md'
+    notes: 'Review checklist item 3/4 outcome. 3 integrations ranked: quality gates (high), handoff template (high), Dev↔QA loop (medium). See ~/agency-highlights/nexus-strategy.md'
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: agency-agent-pm-integration
@@ -127,9 +97,7 @@ clusters:
     domain: ai/ml
     priority: p1
     status: active
-    summary: 'Extract SOUL.md template patterns from Product Manager persona: Critical Rules (numbered imperatives), Identity
-      & Memory ("remember and carry forward"), Communication Style with voice examples, and Templates-as-code format. Integrate
-      into profile-creation skill v2.4.0.'
+    summary: 'Extract SOUL.md template patterns from Product Manager persona: Critical Rules (numbered imperatives), Identity & Memory ("remember and carry forward"), Communication Style with voice examples, and Templates-as-code format. Integrate into profile-creation skill v2.4.0.'
     captured: '2026-07-08'
     source: agency-agents (Product Manager)
     notes: ️ Review checklist item 1/4 outcome. See ~/agency-highlights/product-manager.md
@@ -141,20 +109,10 @@ clusters:
     domain: ai/ml
     priority: p1
     status: active
-    summary: 'Hermes profiles are config-level (same process, same bot token, swapped config/SOUL.md/skills/memories), NOT
-      separate agents. The profile: field in group_topics is silently ignored on Telegram — topics always run under whatever
-      profile owns the bot token (normally default). True isolation requires a dedicated bot token per profile. Key implications:
-      - Memory walls work (per-profile MEMORY.md/USER.md) - Different models/toolsets per profile work - But profiles share
-      process, context tax, and gateway endpoint - No process isolation = one profile''s crash takes all Worth discussing:
-      is this acceptable, or do we want true agent isolation?'
+    summary: 'Hermes profiles are config-level (same process, same bot token, swapped config/SOUL.md/skills/memories), NOT separate agents. The profile: field in group_topics is silently ignored on Telegram — topics always run under whatever profile owns the bot token (normally default). True isolation requires a dedicated bot token per profile. Key implications: - Memory walls work (per-profile MEMORY.md/USER.md) - Different models/toolsets per profile work - But profiles share process, context tax, and gateway endpoint - No process isolation = one profile''s crash takes all Worth discussing: is this acceptable, or do we want true agent isolation?'
     captured: 2026-07-18
     source: PA session — user research into profile architecture
-    notes: "Profile isolation tiers: Config-level (current): memory/sessions/skills isolated. Process/model/tools\n  shared.\
-      \ One bot token. Default across all 12+ topics.\nCredential-level (ideal): dedicated bot token per profile. Separate\
-      \ gateway,\n  separate model runtime. True process isolation.\nThe profile-creation skill (v2.x) confirms: profile:\
-      \ field in group_topics\n  is silently ignored on Telegram in v0.18.0.\nOpen questions: Is the current config-level\
-      \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
-      \ router and our 26 profile roster."
+    notes: "Profile isolation tiers: Config-level (current): memory/sessions/skills isolated. Process/model/tools\n  shared. One bot token. Default across all 12+ topics.\nCredential-level (ideal): dedicated bot token per profile. Separate gateway,\n  separate model runtime. True process isolation.\nThe profile-creation skill (v2.x) confirms: profile: field in group_topics\n  is silently ignored on Telegram in v0.18.0.\nOpen questions: Is the current config-level isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents router and our 26 profile roster."
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: agency-agent-highlights-review
@@ -163,15 +121,10 @@ clusters:
     domain: ai/ml
     priority: p1
     status: active
-    summary: Clone 3 top-tier personas from agency-agents into curated repo. Evaluate Product Manager (22KB, deep persona
-      template for SOUL.md), Financial Analyst (13KB, strong quant profile template), and NEXUS Strategy (48KB, multi-agent
-      orchestration playbook). Assess for adaptation as Hermes profile templates and pipeline architecture patterns.
+    summary: Clone 3 top-tier personas from agency-agents into curated repo. Evaluate Product Manager (22KB, deep persona template for SOUL.md), Financial Analyst (13KB, strong quant profile template), and NEXUS Strategy (48KB, multi-agent orchestration playbook). Assess for adaptation as Hermes profile templates and pipeline architecture patterns.
     captured: '2026-07-08'
     source: msitarzewski/agency-agents (128K⭐, MIT)
-    notes: 'Curated repo: github.com/chintheman/agency-agent-highlights Plugin installed: agency-agents-router (4 tools, lazy-loaded,
-      238 agents) Next steps: (1) Read Product Manager — extract SOUL.md template pattern, (2) Read Financial Analyst — adapt
-      for crypto quant profile, (3) Read NEXUS Strategy — compare with creative-agency pipeline, (4) Decide which patterns
-      to integrate.'
+    notes: 'Curated repo: github.com/chintheman/agency-agent-highlights Plugin installed: agency-agents-router (4 tools, lazy-loaded, 238 agents) Next steps: (1) Read Product Manager — extract SOUL.md template pattern, (2) Read Financial Analyst — adapt for crypto quant profile, (3) Read NEXUS Strategy — compare with creative-agency pipeline, (4) Decide which patterns to integrate.'
     cluster: Agent Orchestration & Loops
     quadrant: Q2
   - id: graph-engineering-patterns
@@ -180,19 +133,10 @@ clusters:
     domain: ai/ml
     priority: p2
     status: active
-    summary: 'Long-form X article (4M views, 6.8K bookmarks) on graph-based agent orchestration. Core vocabulary: nodes (bounded
-      jobs with input/output contracts) + edges (real data dependencies). Key tests/patterns: the fake-edge test (drop sequential
-      waits that carry no data — parallelize), the diamond pattern (fan out → reduce in plain code → synthesize with a strong
-      model), fresh-context checkers (a worker and its verifier must NEVER share context — otherwise it''s one loop grading
-      its own homework), and anchors (nodes that cannot be argued with — tests that ran, revenue that landed). Failure modes:
-      context collapse (layer your fan-in), false independence (shared files/rate-limited APIs = hidden edges), silent node
-      failure (merge steps must count inputs). Includes ready-to-paste Claude Code "workflow" prompts and the Bun rewrite
-      case study ($165K, 64 agents, 11 days).'
+    summary: 'Long-form X article (4M views, 6.8K bookmarks) on graph-based agent orchestration. Core vocabulary: nodes (bounded jobs with input/output contracts) + edges (real data dependencies). Key tests/patterns: the fake-edge test (drop sequential waits that carry no data — parallelize), the diamond pattern (fan out → reduce in plain code → synthesize with a strong model), fresh-context checkers (a worker and its verifier must NEVER share context — otherwise it''s one loop grading its own homework), and anchors (nodes that cannot be argued with — tests that ran, revenue that landed). Failure modes: context collapse (layer your fan-in), false independence (shared files/rate-limited APIs = hidden edges), silent node failure (merge steps must count inputs). Includes ready-to-paste Claude Code "workflow" prompts and the Bun rewrite case study ($165K, 64 agents, 11 days).'
     captured: 2026-08-06
     source: X article by Anatoli Kopadze — https://x.com/anatolikopadze/status/2080668775796314331
-    notes: 'Directly validates the reflexion-loop maker-checker design (fresh-context critic) and the crewai-orchestrator
-      diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth,
-      not judgment — skip for small/sequential/exploratory tasks.'
+    notes: 'Directly validates the reflexion-loop maker-checker design (fresh-context critic) and the crewai-orchestrator diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth, not judgment — skip for small/sequential/exploratory tasks.'
     cluster: Agent Orchestration & Loops
     quadrant: Q4
   - id: multi-agent-orchestration-guide
@@ -201,12 +145,10 @@ clusters:
     domain: ai/ml
     priority: p2
     status: active
-    summary: 'Research and document patterns for getting AI agents to collaborate effectively: task decomposition, handoff
-      protocols, shared context/memory, conflict resolution, and orchestration frameworks (CrewAI, AutoGen, AG2, Hermes subagents).'
+    summary: 'Research and document patterns for getting AI agents to collaborate effectively: task decomposition, handoff protocols, shared context/memory, conflict resolution, and orchestration frameworks (CrewAI, AutoGen, AG2, Hermes subagents).'
     captured: 2026-07-20
     source: Personal request — PA intake
-    notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for
-      Hermes multi-agent workflows.
+    notes: Builds on existing crewai-orchestrator skill and agency-agents-deep-dive. Should produce actionable patterns for Hermes multi-agent workflows.
     cluster: Agent Orchestration & Loops
     quadrant: Q4
   - id: memory-ablation-harness
@@ -215,21 +157,11 @@ clusters:
     domain: ai/ml
     priority: p2
     status: active
-    summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time,
-      verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass.
-      Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval
-      cron was due Aug 14 2026).'
+    summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time, verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass. Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval cron was due Aug 14 2026).'
     captured: 2026-08-14
     source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
-    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped
-      + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries,
-      8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic;
-      (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 /
-      precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated).
-      Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
-    notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL,
-      semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval
-      benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
+    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries, 8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic; (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 / precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated). Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
+    notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL, semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
     cluster: Agent Orchestration & Loops
     quadrant: Q4
   - id: altman-self-prompting-systems
@@ -238,13 +170,10 @@ clusters:
     domain: ai/ml
     priority: p3
     status: active
-    summary: 38-minute Sam Altman talk on using LLMs better than 99% of people — "You don't need to write prompts anymore."
-      The post frames the shift from prompt-writing to building systems that prompt themselves. Includes a linked guide on
-      how to build a self-prompting system.
+    summary: 38-minute Sam Altman talk on using LLMs better than 99% of people — "You don't need to write prompts anymore." The post frames the shift from prompt-writing to building systems that prompt themselves. Includes a linked guide on how to build a self-prompting system.
     captured: 2026-08-06
     source: X post by Anatoli Kopadze — https://x.com/anatolikopadze/status/2084982016328482926
-    notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting
-      systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
+    notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
     quadrant: Q4
   count: 12
@@ -260,19 +189,10 @@ clusters:
     domain: crypto
     priority: p2
     status: active
-    summary: 'Research how to automatically place 100 Singapore Pools TOTO bets (quick picks or system entries) with zero
-      human intervention. Investigate: (1) SG Pools digital API / web portal automation feasibility, (2) legal/ToS constraints
-      on automated betting, (3) whether an agent can navigate the online betting flow (login → select game → place bets →
-      confirm), (4) batch bet submission limits, (5) cost of 100 bets at $1/$2 each, (6) account funding automation. Cross-ref
-      existing toto-strategy skill (1,193 draws analysed) and toto-generator-refine (P1) for the number generation side.'
+    summary: 'Research how to automatically place 100 Singapore Pools TOTO bets (quick picks or system entries) with zero human intervention. Investigate: (1) SG Pools digital API / web portal automation feasibility, (2) legal/ToS constraints on automated betting, (3) whether an agent can navigate the online betting flow (login → select game → place bets → confirm), (4) batch bet submission limits, (5) cost of 100 bets at $1/$2 each, (6) account funding automation. Cross-ref existing toto-strategy skill (1,193 draws analysed) and toto-generator-refine (P1) for the number generation side.'
     captured: '2026-07-07'
     source: 0xsteamboat request — automate TOTO execution pipeline
-    notes: "RELATED:\n  - toto-strategy skill (analytics, 1,193 draws vs 13,983,816 combos)\n  - toto-generator-refine (P1\
-      \ · build) — UX/productization of the picker\n  - This item is the EXECUTION/AUTOMATION layer, not the selection layer\n\
-      \nKEY QUESTIONS FOR DEEP DIVE:\n  - Does SG Pools have an API or only a web portal?\n  - Can automated bets be placed\
-      \ via headless browser?\n  - What's the per-bet minimum and max?\n  - Account funding — recurring top-up from bank?\n\
-      \  - ToS violation risk (automated gambling)?\n  - Legal status: automated betting in Singapore?\n  - Practical: 100\
-      \ quick picks at $1 = $100 per draw"
+    notes: "RELATED:\n  - toto-strategy skill (analytics, 1,193 draws vs 13,983,816 combos)\n  - toto-generator-refine (P1 · build) — UX/productization of the picker\n  - This item is the EXECUTION/AUTOMATION layer, not the selection layer\n\nKEY QUESTIONS FOR DEEP DIVE:\n  - Does SG Pools have an API or only a web portal?\n  - Can automated bets be placed via headless browser?\n  - What's the per-bet minimum and max?\n  - Account funding — recurring top-up from bank?\n  - ToS violation risk (automated gambling)?\n  - Legal status: automated betting in Singapore?\n  - Practical: 100 quick picks at $1 = $100 per draw"
     cluster: Toto
     quadrant: Q4
   - id: toto-app-improvements
@@ -281,13 +201,10 @@ clusters:
     domain: product
     priority: p2
     status: active
-    summary: 'Feature backlog for the Toto iOS app (chintheman/toto): (1) receipt scanning — photograph a TOTO receipt, auto-detect
-      the numbers, check against draw results for prizes; (2) adding strategies — surface strategy features in-app (pure-spread
-      / system-bet portfolios, EV models, number generators).'
+    summary: 'Feature backlog for the Toto iOS app (chintheman/toto): (1) receipt scanning — photograph a TOTO receipt, auto-detect the numbers, check against draw results for prizes; (2) adding strategies — surface strategy features in-app (pure-spread / system-bet portfolios, EV models, number generators).'
     captured: 2026-08-13
     source: 0xsteamboat request Aug 13 (Lovable use-case brainstorm)
-    notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine
-      (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
+    notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
     cluster: Toto
     quadrant: Q4
   count: 2
@@ -303,16 +220,10 @@ clusters:
     domain: meta
     priority: p3
     status: active
-    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
-      self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are
-      added.'
+    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are added.'
     captured: 2026-07-19
     source: lint-cron-2026-07-19 @ R9
-    notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited
-      academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches
-      downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high;
-      this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
-      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
+    notes: 'Also flagged: crypto-quant-system (no sources: field) and market-microstructure-theory (sources: [] with uncited academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high; this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set. Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
     cluster: Luxury Watches
     quadrant: Q4
   count: 1
@@ -328,25 +239,16 @@ clusters:
     domain: business/build
     priority: p3
     status: active
-    summary: 'Build a grief management tool: private voice journal where users speak thoughts on-device. Inspired by Slate
-      (iOS voice journal, no server, on-device reflection + weekly recaps). Key differentiator: purpose-built for grief processing,
-      not general journaling. Voice-first, private by default, on-device AI that notices patterns in what the user repeats
-      or shifts over time.'
+    summary: 'Build a grief management tool: private voice journal where users speak thoughts on-device. Inspired by Slate (iOS voice journal, no server, on-device reflection + weekly recaps). Key differentiator: purpose-built for grief processing, not general journaling. Voice-first, private by default, on-device AI that notices patterns in what the user repeats or shifts over time.'
     captured: 2026-07-23
     source: User idea + Slate private journal app reference
-    notes: 'REFERENCE APP: Slate - Private Journal URL: https://apps.apple.com/us/app/slate-private-journal/id6787531627 Developer:
-      hsla0001. Price: $7.99/mo or $59.99/yr (1 month free trial). Size: 3 MB. Platform: iOS 26+ (iPhone only). Rating: 5.0.
+    notes: 'REFERENCE APP: Slate - Private Journal URL: https://apps.apple.com/us/app/slate-private-journal/id6787531627 Developer: hsla0001. Price: $7.99/mo or $59.99/yr (1 month free trial). Size: 3 MB. Platform: iOS 26+ (iPhone only). Rating: 5.0.
 
-      KEY FEATURES: Voice journal, no server, on-device. Press record and speak. On-device reflection: what it was about,
-      how it sat, one observation worth keeping. "Never advice, never a chat." Weekly recap (Sundays): what repeated, what
-      shifted. No streaks, no scores. Optional encrypted iCloud backup. Privacy: "Data Not Collected." Works on airplane mode.
-      Lock Screen + Dynamic Island timer.
+      KEY FEATURES: Voice journal, no server, on-device. Press record and speak. On-device reflection: what it was about, how it sat, one observation worth keeping. "Never advice, never a chat." Weekly recap (Sundays): what repeated, what shifted. No streaks, no scores. Optional encrypted iCloud backup. Privacy: "Data Not Collected." Works on airplane mode. Lock Screen + Dynamic Island timer.
 
-      GRIEF DIFFERENTIATORS: guided prompts for grief stages, memory capture (photos/voice notes about the person), anniversary
-      reminders, optional trusted circle sharing, crisis resource integration.
+      GRIEF DIFFERENTIATORS: guided prompts for grief stages, memory capture (photos/voice notes about the person), anniversary reminders, optional trusted circle sharing, crisis resource integration.
 
-      COMPETITORS: Say It Anyway (Grief Journal), Solace (Grief and Loss Journal with memorial cards + crisis support), Good
-      Grief (Journal and Vault with shared memory vault), Heartchive (end-to-end encrypted, caregiving + grief paths).
+      COMPETITORS: Say It Anyway (Grief Journal), Solace (Grief and Loss Journal with memorial cards + crisis support), Good Grief (Journal and Vault with shared memory vault), Heartchive (end-to-end encrypted, caregiving + grief paths).
 
       Sibling to nicest-place-website and looking-busy-website in the business/build portfolio.'
     cluster: Grief 'Management'
@@ -364,15 +266,10 @@ clusters:
     domain: business/build
     priority: p3
     status: active
-    summary: AI chatbot called "Up Dog" — the joke writes itself. When someone asks "What's Up Dog?" the AI responds conversationally.
-      A playful product concept built around the classic pun, potentially as a Telegram bot or web app. Branding, humor, and
-      engagement-first design.
+    summary: AI chatbot called "Up Dog" — the joke writes itself. When someone asks "What's Up Dog?" the AI responds conversationally. A playful product concept built around the classic pun, potentially as a Telegram bot or web app. Branding, humor, and engagement-first design.
     captured: '2026-07-04'
     source: 0xsteamboat idea — pun-based AI product concept
-    notes: 'User''s vision (Jul 6, 2026): Type "What''s Up Dog?" and get a curated summary of interesting news. Users can
-      change news categories on the fly — simple, playful, actually useful. The pun is the hook ("What''s Up Dog?" = "What''s
-      up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
-      news brief delivered conversationally, with category preferences that persist per user.'
+    notes: 'User''s vision (Jul 6, 2026): Type "What''s Up Dog?" and get a curated summary of interesting news. Users can change news categories on the fly — simple, playful, actually useful. The pun is the hook ("What''s Up Dog?" = "What''s up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised news brief delivered conversationally, with category preferences that persist per user.'
     cluster: Up Dog
     quadrant: Q4
   count: 1
@@ -388,21 +285,10 @@ clusters:
     domain: crypto
     priority: p1
     status: active
-    summary: 'Token ($PAL, Polymarket Abstraction Layer) = NAV share of a delta-neutral Polymarket market-making strategy.
-      Users mint USDC→PAL; agentic engine quotes two-sided limit orders farming Polymarket''s maker-reward budget (~$60.4M/yr);
-      CTF merge keeps book delta-neutral; profits stream to a withdrawal pool, claimable pro-rata by supply. Repo: github.com/chintheman/dn-token-polymarket
-      (PRIVATE), ~/projects/delta-neutral-token. Key findings: intra-market pair arb dead (0/349 markets); reward-budget MM
-      is the real yield (~92% APR @ $10k, 51% @ $100k, 27% @ $1M gross); SG GRA blocks Polymarket so backtest/live-sim only,
-      no real capital. Decisions: stable-yield NAV token, all 3 capital scales run simultaneously, capacity-based exposure,
-      $PAL name.'
+    summary: 'Token ($PAL, Polymarket Abstraction Layer) = NAV share of a delta-neutral Polymarket market-making strategy. Users mint USDC→PAL; agentic engine quotes two-sided limit orders farming Polymarket''s maker-reward budget (~$60.4M/yr); CTF merge keeps book delta-neutral; profits stream to a withdrawal pool, claimable pro-rata by supply. Repo: github.com/chintheman/dn-token-polymarket (PRIVATE), ~/projects/delta-neutral-token. Key findings: intra-market pair arb dead (0/349 markets); reward-budget MM is the real yield (~92% APR @ $10k, 51% @ $100k, 27% @ $1M gross); SG GRA blocks Polymarket so backtest/live-sim only, no real capital. Decisions: stable-yield NAV token, all 3 capital scales run simultaneously, capacity-based exposure, $PAL name.'
     captured: 2026-08-14
     source: User ideation session Aug 14 2026
-    notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (Opus 5, 1,050 lines, pushed Aug 14). Key plan moves: toxicity curve
-      computed from OTHER makers on-chain fills (lawful from SG, zero capital — escapes the SG blocker); phase 1 = 3 weeks,
-      $40/mo VPS, no capital, checkpoint C1 (+8% annualized distance region, R²≥0.80 reward regression); 5 open design items
-      resolved (3-tier exit waterfall DEX→0.25% instant→10% weekly queue; par NAV marking; mint floor = revert not sell-below-par;
-      20% fee split 30/30/30/10 treasury). Plan corrected 4 locked design elements (price-lock look-back option, mid-marking
-      overstatement, $1-floor mis-selling, resolution-fee collects ~0).'
+    notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (Opus 5, 1,050 lines, pushed Aug 14). Key plan moves: toxicity curve computed from OTHER makers on-chain fills (lawful from SG, zero capital — escapes the SG blocker); phase 1 = 3 weeks, $40/mo VPS, no capital, checkpoint C1 (+8% annualized distance region, R²≥0.80 reward regression); 5 open design items resolved (3-tier exit waterfall DEX→0.25% instant→10% weekly queue; par NAV marking; mint floor = revert not sell-below-par; 20% fee split 30/30/30/10 treasury). Plan corrected 4 locked design elements (price-lock look-back option, mid-marking overstatement, $1-floor mis-selling, resolution-fee collects ~0).'
     cluster: PAL — Delta-Neutral Polymarket
     quadrant: Q2
   count: 1
@@ -418,16 +304,10 @@ clusters:
     domain: crypto
     priority: p0
     status: active
-    summary: Build a multi-agent trading system using TradingAgents framework (44K⭐, peer-reviewed, v0.3.0) layered on Hermes
-      for context persistence. 7+ specialized agents (fundamental, sentiment, technical, news analysts; bullish/bearish researchers;
-      trader; risk manager; portfolio manager). Supports DeepSeek, Polymarket data, crypto markets, persistent decision log
-      with reflection.
+    summary: Build a multi-agent trading system using TradingAgents framework (44K⭐, peer-reviewed, v0.3.0) layered on Hermes for context persistence. 7+ specialized agents (fundamental, sentiment, technical, news analysts; bullish/bearish researchers; trader; risk manager; portfolio manager). Supports DeepSeek, Polymarket data, crypto markets, persistent decision log with reflection.
     captured: '2026-07-04'
     source: gobi_automates Instagram carousel — Claude Fable + Hermes + TradingAgents
-    notes: 'GH: github.com/TauricResearch/TradingAgents (44K⭐, MIT) Paper: arxiv.org/abs/2412.20138 Instagram: @gobi_automates
-      — "Claude Fable + Hermes + TradingAgents" RELEVANCE: Intersects existing crypto quant pipeline, Polymarket interest,
-      TradingView MCP. Uses same Hermes stack. v0.3.0 ships Polymarket + FRED. Decision log persists to trading_memory.md
-      with auto-reflection.'
+    notes: 'GH: github.com/TauricResearch/TradingAgents (44K⭐, MIT) Paper: arxiv.org/abs/2412.20138 Instagram: @gobi_automates — "Claude Fable + Hermes + TradingAgents" RELEVANCE: Intersects existing crypto quant pipeline, Polymarket interest, TradingView MCP. Uses same Hermes stack. v0.3.0 ships Polymarket + FRED. Decision log persists to trading_memory.md with auto-reflection.'
     cluster: Crypto & Quant Trading
     quadrant: Q2
   - id: tradingview-mcp-integration
@@ -436,15 +316,10 @@ clusters:
     domain: crypto
     priority: p1
     status: active
-    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated
-      chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription
-      + Desktop app with --remote-debugging-port=9222.
+    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription + Desktop app with --remote-debugging-port=9222.
     captured: '2026-07-04'
     source: aipagedaily IG post — tradingview-mcp
-    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay,
-      drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
-      with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
-      Validated via direct GH read + repo info + README review.'
+    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay, drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally. Validated via direct GH read + repo info + README review.'
     cluster: Crypto & Quant Trading
     quadrant: Q2
   - id: claude-code-ai-hedge-fund
@@ -453,14 +328,10 @@ clusters:
     domain: crypto
     priority: p2
     status: active
-    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
-      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
-      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
+    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance, performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
     captured: 2026-08-07
     source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
-    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
-      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
-      decomposition is the pattern worth extracting for the quant stack.
+    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management decomposition is the pattern worth extracting for the quant stack.
     cluster: Crypto & Quant Trading
     quadrant: Q4
   - id: deepseek-v4-open-source
@@ -469,14 +340,10 @@ clusters:
     domain: ai/ml
     priority: p2
     status: active
-    summary: 'DeepSeek-V4 Preview officially launched and open-sourced. V4-Pro: 1.6T total / 49B active params, rivaling top
-      closed-source models. V4-Flash: 284B total / 13B active params (our default model). 1M context length. Tech report on
-      HuggingFace, open weights.'
+    summary: 'DeepSeek-V4 Preview officially launched and open-sourced. V4-Pro: 1.6T total / 49B active params, rivaling top closed-source models. V4-Flash: 284B total / 13B active params (our default model). 1M context length. Tech report on HuggingFace, open weights.'
     captured: '2026-07-11'
     source: '@deepseek_ai on X (Apr 24, 2026) — V4 Preview launch'
-    notes: 'X: x.com/deepseek_ai/status/2047516922263285776 Tech report: huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf
-      Weights: huggingface.co/collections/deepseek-ai/deepseek-v4 Relevance: Already our default model. Interesting to note
-      the open-source commitment and tech report for understanding our base architecture better.'
+    notes: 'X: x.com/deepseek_ai/status/2047516922263285776 Tech report: huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf Weights: huggingface.co/collections/deepseek-ai/deepseek-v4 Relevance: Already our default model. Interesting to note the open-source commitment and tech report for understanding our base architecture better.'
     cluster: Crypto & Quant Trading
     quadrant: Q4
   - id: quant-repos-review
@@ -485,8 +352,7 @@ clusters:
     domain: crypto
     priority: p2
     status: active
-    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster
-      (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
+    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
     captured: '2026-07-03'
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
@@ -497,16 +363,11 @@ clusters:
     type: research
     domain: crypto
     priority: p2
-    status: active
-    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
-      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
-      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
-      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
+    status: archived
+    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager. Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude, FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4% (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
     captured: 2026-07-19
     source: Instagram — @nicholascrown reel
-    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
-      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
-      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
+    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
     cluster: Crypto & Quant Trading
     quadrant: Q4
   count: 6
@@ -522,21 +383,10 @@ clusters:
     domain: creative
     priority: p1
     status: active
-    summary: "5 slide-by-slide carousel frameworks for Instagram: (A) VALUE-STACK (4-14 slides) — exact count + deliverable\
-      \ upfront,\n    one category per slide, close with CTA.\n(B) PROBLEM-PROOF (6-10 slides) — personal hook → reframe problem\
-      \ →\n    named mechanism/tools → literal prompt detail → proof/output screenshot.\n(C) HACK LIST (6-10 slides) — contrarian\
-      \ hook implying failure →\n    numbered hacks with bad-vs-good per slide → synthesis CTA.\n(D) RANT CALLOUT (4-8 slides)\
-      \ — provocative claim → escalate →\n    fairness pivot → personality sign-off.\n(E) DEMO WALKTHROUGH (3-11 slides) —\
-      \ product + finished output →\n    problem it solves → numbered process overview → step-by-step UI\n    screenshots\
-      \ → result + positioning.\nEach framework includes exact slide count ranges, slide-by-slide templates, and example language.\
-      \ Directly applicable to Creative Agency carousel pipeline — can framework-match each brief to the best structure for\
-      \ the content type."
+    summary: "5 slide-by-slide carousel frameworks for Instagram: (A) VALUE-STACK (4-14 slides) — exact count + deliverable upfront,\n    one category per slide, close with CTA.\n(B) PROBLEM-PROOF (6-10 slides) — personal hook → reframe problem →\n    named mechanism/tools → literal prompt detail → proof/output screenshot.\n(C) HACK LIST (6-10 slides) — contrarian hook implying failure →\n    numbered hacks with bad-vs-good per slide → synthesis CTA.\n(D) RANT CALLOUT (4-8 slides) — provocative claim → escalate →\n    fairness pivot → personality sign-off.\n(E) DEMO WALKTHROUGH (3-11 slides) — product + finished output →\n    problem it solves → numbered process overview → step-by-step UI\n    screenshots → result + positioning.\nEach framework includes exact slide count ranges, slide-by-slide templates, and example language. Directly applicable to Creative Agency carousel pipeline — can framework-match each brief to the best structure for the content type."
     captured: '2026-07-10'
     source: '@vibemarketersHQ on X (Jul 9, 2026) — 5 frameworks reverse-engineered from 500+ carousels'
-    notes: 'Source: x.com/vibemarketershq/status/2075278813437800450 Image: ~/.hermes/image_cache/img_851cd6508a16.jpg RELEVANCE:
-      We have carousels-mcp (11 slide types) and creative-agency pipeline. These 5 frameworks can be mapped to carousels-mcp
-      slide types and integrated as brief-to-framework routing logic. Each framework is a proven structure — use to decide
-      which carousel format fits the content objective rather than defaulting to one.'
+    notes: 'Source: x.com/vibemarketershq/status/2075278813437800450 Image: ~/.hermes/image_cache/img_851cd6508a16.jpg RELEVANCE: We have carousels-mcp (11 slide types) and creative-agency pipeline. These 5 frameworks can be mapped to carousels-mcp slide types and integrated as brief-to-framework routing logic. Each framework is a proven structure — use to decide which carousel format fits the content objective rather than defaulting to one.'
     cluster: Creative Agency & Content
     quadrant: Q2
   - id: agent-ad-network-skill
@@ -545,13 +395,10 @@ clusters:
     domain: business/build
     priority: p1
     status: active
-    summary: A skill/plugin that serves contextual ads inside AI agent responses. Advertisers pay per impression, agent host
-      earns profit share. Think Google AdSense but for LLM conversations — ads appear as relevant sponsored content, tool
-      suggestions, or inline placements within agent outputs.
+    summary: A skill/plugin that serves contextual ads inside AI agent responses. Advertisers pay per impression, agent host earns profit share. Think Google AdSense but for LLM conversations — ads appear as relevant sponsored content, tool suggestions, or inline placements within agent outputs.
     captured: '2026-07-03'
     source: 0xsteamboat idea
-    notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
-      split mechanics.'
+    notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue split mechanics.'
     cluster: Creative Agency & Content
     quadrant: Q2
   - id: openmontage-video-pipeline
@@ -560,16 +407,10 @@ clusters:
     domain: creative
     priority: p1
     status: active
-    summary: 'World''s first open-source agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turns
-      Claude Code / Cursor / Copilot / Codex into a full video production studio. YAML pipeline manifests, FFmpeg integration,
-      Python orchestration + NodeJS rendering stack. Supports free/open-source workflows (stock footage, motion clips from
-      archives) and cloud API workflows. Cost governance system built in. DIRECTLY RELEVANT: Maps to our arcads stop-motion
-      pipeline (P2) and Creative Agency videography goals. Could replace or complement our planned arcads integration with
-      a fully open-source stack.'
+    summary: 'World''s first open-source agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turns Claude Code / Cursor / Copilot / Codex into a full video production studio. YAML pipeline manifests, FFmpeg integration, Python orchestration + NodeJS rendering stack. Supports free/open-source workflows (stock footage, motion clips from archives) and cloud API workflows. Cost governance system built in. DIRECTLY RELEVANT: Maps to our arcads stop-motion pipeline (P2) and Creative Agency videography goals. Could replace or complement our planned arcads integration with a fully open-source stack.'
     captured: '2026-07-11'
     source: '@syntaix.ai Instagram carousel — calesthio/OpenMontage'
-    notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
-      Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
+    notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
     cluster: Creative Agency & Content
     quadrant: Q2
   - id: claude-code-ai-content-team
@@ -578,15 +419,10 @@ clusters:
     domain: creative
     priority: p2
     status: active
-    summary: '7 AI "employees" built in Claude Code for one creator: Researcher (trends/ competitors/viral), Hook Writer (scroll-stopping
-      openings), Script Writer (reels/carousels/captions), Designer (thumbnails/visuals), Analyst (views/ retention/shares),
-      Manager (calendar/workflow), Publisher (schedule/post). Loop: Research → Write → Script → Design → Post → Analyze →
-      Repeat.'
+    summary: '7 AI "employees" built in Claude Code for one creator: Researcher (trends/ competitors/viral), Hook Writer (scroll-stopping openings), Script Writer (reels/carousels/captions), Designer (thumbnails/visuals), Analyst (views/ retention/shares), Manager (calendar/workflow), Publisher (schedule/post). Loop: Research → Write → Script → Design → Post → Analyze → Repeat.'
     captured: 2026-08-07
     source: Instagram — @seb.ai — https://www.instagram.com/p/Dboe2qqEnPM/
-    notes: Directly maps to Creative Agency pipeline (carousel production, content engine). 2K likes / 4.2K comments. Setup
-      gated behind commenting "TEAM" on the post. Worth studying the agent decomposition vs the creative-agency skill's own
-      stage pipeline — could inform a content-team layer for the agency.
+    notes: Directly maps to Creative Agency pipeline (carousel production, content engine). 2K likes / 4.2K comments. Setup gated behind commenting "TEAM" on the post. Worth studying the agent decomposition vs the creative-agency skill's own stage pipeline — could inform a content-team layer for the agency.
     cluster: Creative Agency & Content
     quadrant: Q4
   - id: improve-graphic-design
@@ -595,8 +431,7 @@ clusters:
     domain: creative
     priority: p2
     status: active
-    summary: User shared Instagram carousel about graphic design tips. Content inaccessible from agent (Instagram blocks unauthenticated
-      access). Flagged for manual review — check and share takeaways.
+    summary: User shared Instagram carousel about graphic design tips. Content inaccessible from agent (Instagram blocks unauthenticated access). Flagged for manual review — check and share takeaways.
     captured: '2026-07-04'
     source: Instagram carousel (DaK0XC8ilSU) — content inaccessible, flag for review
     notes: 'Post URL: instagram.com/p/DaK0XC8ilSU Could not extract content — Instagram requires login.'
@@ -608,20 +443,14 @@ clusters:
     domain: creative
     priority: p2
     status: active
-    summary: Research and learn how to build animated, interactive websites. Triggered by two Instagram reels on animated
-      web UIs.
+    summary: Research and learn how to build animated, interactive websites. Triggered by two Instagram reels on animated web UIs.
     captured: '2026-07-06'
-    source: Instagram Reel — @thejunglebadger (Zachary Charles) featuring emergent.sh, Jul 2, 2026 + @kevin.snippet "Top 3
-      UI Libraries", Jul 6, 2026
-    notes: 'SOURCES: (1) @thejunglebadger — "Vibe coding but actually good..." emergent.sh — AI agentic platform for animated
-      full-stack sites from natural language. https://emergent.sh
+    source: Instagram Reel — @thejunglebadger (Zachary Charles) featuring emergent.sh, Jul 2, 2026 + @kevin.snippet "Top 3 UI Libraries", Jul 6, 2026
+    notes: 'SOURCES: (1) @thejunglebadger — "Vibe coding but actually good..." emergent.sh — AI agentic platform for animated full-stack sites from natural language. https://emergent.sh
 
-      (2) @kevin.snippet — "Top 3 UI Libraries to Create Premium Animated Websites" • Aceternity UI — 200+ free animated React
-      components (Tailwind CSS + Framer Motion). https://ui.aceternity.com • Magic UI — 150+ free open-source animated components.
-      https://magicui.design · GH: github.com/magicuidesign/magicui • Scrollify — jQuery scroll snapping library. npm: jquery-scrollify
+      (2) @kevin.snippet — "Top 3 UI Libraries to Create Premium Animated Websites" • Aceternity UI — 200+ free animated React components (Tailwind CSS + Framer Motion). https://ui.aceternity.com • Magic UI — 150+ free open-source animated components. https://magicui.design · GH: github.com/magicuidesign/magicui • Scrollify — jQuery scroll snapping library. npm: jquery-scrollify
 
-      Also explore: Framer Motion, GSAP, CSS/JS animation patterns, and how these apply to personal site (0xsteamboat.zo.space)
-      and future builds.'
+      Also explore: Framer Motion, GSAP, CSS/JS animation patterns, and how these apply to personal site (0xsteamboat.zo.space) and future builds.'
     cluster: Creative Agency & Content
     quadrant: Q4
   - id: cinematic-camera-angles
@@ -630,14 +459,10 @@ clusters:
     domain: creative
     priority: p3
     status: active
-    summary: 'Instagram carousel about cinematic camera angles and shot types: low/high/bird''s-eye/worm''s-eye angles, shot
-      sizes (WS/FS/MS/MCU/ CU/BCU), psychological effects. Educational content for visual storytelling and filmmaking. May
-      be useful reference for Creative Agency videography work and content creation.'
+    summary: 'Instagram carousel about cinematic camera angles and shot types: low/high/bird''s-eye/worm''s-eye angles, shot sizes (WS/FS/MS/MCU/ CU/BCU), psychological effects. Educational content for visual storytelling and filmmaking. May be useful reference for Creative Agency videography work and content creation.'
     captured: '2026-07-11'
     source: Instagram — @explainingnews (Jul 10, 2026)
-    notes: 'Instagram: instagram.com/p/DanZ_HmATLo Account: @explainingnews Hashtags: #Cinematography #Filmmaking #Director
-      #MovieTips #FilmStudies Caption talks about how different angles project power or vulnerability. Comments include practical
-      notation from industry professionals (e.g. W/A, L/L, WS, FS, MS, MCU, CU, BCU, 2S, OS notations).'
+    notes: 'Instagram: instagram.com/p/DanZ_HmATLo Account: @explainingnews Hashtags: #Cinematography #Filmmaking #Director #MovieTips #FilmStudies Caption talks about how different angles project power or vulnerability. Comments include practical notation from industry professionals (e.g. W/A, L/L, WS, FS, MS, MCU, CU, BCU, 2S, OS notations).'
     cluster: Creative Agency & Content
     quadrant: Q4
   - id: genrecon-3d-reconstruction
@@ -646,13 +471,10 @@ clusters:
     domain: creative
     priority: p3
     status: active
-    summary: TUM+Huawei open-source model. Takes 8 RGB photos → complete indoor 3D mesh with PBR materials. Uses Trellis.2
-      as generative backbone, treats reconstruction as conditional 3D generation over overlapping chunks. Outperforms prior
-      methods by 16% on indoor scene reconstruction.
+    summary: TUM+Huawei open-source model. Takes 8 RGB photos → complete indoor 3D mesh with PBR materials. Uses Trellis.2 as generative backbone, treats reconstruction as conditional 3D generation over overlapping chunks. Outperforms prior methods by 16% on indoor scene reconstruction.
     captured: 2026-07-19
     source: LinkedIn — Ultan O'Rourke
-    notes: 'Paper: arxiv.org/abs/2605.23888. Project: kasothaphie.github.io/GenRecon. Code repo at github.com/kasothaphie/GenRecon
-      (coming soon — not yet released). Monitor for code release. Slots into creative pipeline for 3D asset generation.'
+    notes: 'Paper: arxiv.org/abs/2605.23888. Project: kasothaphie.github.io/GenRecon. Code repo at github.com/kasothaphie/GenRecon (coming soon — not yet released). Monitor for code release. Slots into creative pipeline for 3D asset generation.'
     cluster: Creative Agency & Content
     quadrant: Q4
   - id: unreal-engine-mcp-hermes
@@ -661,16 +483,10 @@ clusters:
     domain: creative/3d
     priority: p3
     status: active
-    summary: 'Official Hermes Agent optional companion skill (v1.0.0) for Epic Games'' Unreal MCP plugin (UE5.8+). Installs
-      via `hermes skills install official/creative/unreal-mcp`. Lets Hermes drive UE5 editor from plain-English prompts: build/light
-      scenes, place actors, author Blueprints, animate with Sequencer, create materials, frame cameras, render, run PIE tests.
-      Uses tool-search discovery (3 meta-tools: list_toolsets / describe_toolset / call_tool). 126K views on announcement
-      post.'
+    summary: 'Official Hermes Agent optional companion skill (v1.0.0) for Epic Games'' Unreal MCP plugin (UE5.8+). Installs via `hermes skills install official/creative/unreal-mcp`. Lets Hermes drive UE5 editor from plain-English prompts: build/light scenes, place actors, author Blueprints, animate with Sequencer, create materials, frame cameras, render, run PIE tests. Uses tool-search discovery (3 meta-tools: list_toolsets / describe_toolset / call_tool). 126K views on announcement post.'
     captured: 2026-07-19
     source: X — NousResearch / @macbethAI (Jul 17, 2026)
-    notes: 'UE is overkill for interior design (heavy 3D engine, steep curve). Best for game dev, cinematic walkthroughs,
-      VR presentations. Companion skill has 5 reference files (tool-surface.md, advanced-workflows.md, scene-craft.md, recipes.md,
-      pitfalls.md). Related skill: blender-mcp (listed in Hermes docs).'
+    notes: 'UE is overkill for interior design (heavy 3D engine, steep curve). Best for game dev, cinematic walkthroughs, VR presentations. Companion skill has 5 reference files (tool-surface.md, advanced-workflows.md, scene-craft.md, recipes.md, pitfalls.md). Related skill: blender-mcp (listed in Hermes docs).'
     cluster: Creative Agency & Content
     quadrant: Q4
   count: 9
@@ -686,14 +502,10 @@ clusters:
     domain: devops
     priority: p0
     status: active
-    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
-      models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
-      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
+    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes, models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
     captured: '2026-07-07'
     source: '@teknium on X (Jul 6, 2026) — session management update'
-    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
-      users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
-      pruning strategy for our setup. Command: hermes update'
+    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models, users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right pruning strategy for our setup. Command: hermes update'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
   - id: context-dev-evaluate
@@ -702,17 +514,10 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: 'YC-backed web scraping/crawl API — direct Firecrawl competitor. 1 credit = 1 page scrape with JS rendering +
-      anti-bot bypass included (no 5-25x multipliers like competitors). Pricing: Free (500 credits), $25/mo (10K), $149/mo
-      (200K), $499/mo (1M). SiteGPT migrated FROM Firecrawl TO Context.dev "in under a day." Python/TS/Ruby/Go/PHP SDKs. Features:
-      scrape/crawl, structured data extraction (JSON schema), brand data (logos/colors/fonts/styleguides), image pull, classification.
-      Strong candidate to replace our exhausted Firecrawl credits.'
+    summary: 'YC-backed web scraping/crawl API — direct Firecrawl competitor. 1 credit = 1 page scrape with JS rendering + anti-bot bypass included (no 5-25x multipliers like competitors). Pricing: Free (500 credits), $25/mo (10K), $149/mo (200K), $499/mo (1M). SiteGPT migrated FROM Firecrawl TO Context.dev "in under a day." Python/TS/Ruby/Go/PHP SDKs. Features: scrape/crawl, structured data extraction (JSON schema), brand data (logos/colors/fonts/styleguides), image pull, classification. Strong candidate to replace our exhausted Firecrawl credits.'
     captured: '2026-07-09'
     source: context.dev — Y Combinator backed (2026)
-    notes: 'URL: context.dev Pricing: context.dev/pricing Competitors: Firecrawl (exhausted), DDGS (free but limited) YC-backed,
-      customers include Mintlify, SiteGPT, Similarweb, Klarna Python SDK available — easy integration with Hermes toolset
-      Free tier: 500 credits (no card needed) Rate limits: Free 30/min, Developer 60/min, Pro 300/min, Scale 700/min Startups
-      get 30% off paid plans'
+    notes: 'URL: context.dev Pricing: context.dev/pricing Competitors: Firecrawl (exhausted), DDGS (free but limited) YC-backed, customers include Mintlify, SiteGPT, Similarweb, Klarna Python SDK available — easy integration with Hermes toolset Free tier: 500 credits (no card needed) Rate limits: Free 30/min, Developer 60/min, Pro 300/min, Scale 700/min Startups get 30% off paid plans'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
   - id: github-spec-kit-eval
@@ -721,9 +526,7 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: 'GitHub Spec Kit (120K⭐, open source) forces structured spec-first coding: /constitution → /specify → /clarify
-      → /plan → /tasks → /implement. Works with Claude Code, Codex, Gemini CLI, 25+ agents. Directly relevant to plan-mode/writing-plans
-      skills and developer-agent profile. Evaluate against current workflow and adopt if better.'
+    summary: 'GitHub Spec Kit (120K⭐, open source) forces structured spec-first coding: /constitution → /specify → /clarify → /plan → /tasks → /implement. Works with Claude Code, Codex, Gemini CLI, 25+ agents. Directly relevant to plan-mode/writing-plans skills and developer-agent profile. Evaluate against current workflow and adopt if better.'
     captured: 2026-07-15
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
@@ -733,10 +536,7 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: 'Three-layer problem: (1) Agent memory — Honcho already solves this (API-based, works cross-device). (2) SQLite
-      databases (pa.db, sessions) — needs sqlite-sync or migration to single-Hermes setup. (3) Files/config (~/wiki/, ~/.hermes/)
-      — needs Syncthing or git. Key insight: Honcho already shares agent memory. The question is whether to move Hermes entirely
-      to Zo Basic (already paid $18/mo) or add Hostinger $6/mo SG. Full assessment at ~/wiki/_system/pending/vps-shared-memory.md'
+    summary: 'Three-layer problem: (1) Agent memory — Honcho already solves this (API-based, works cross-device). (2) SQLite databases (pa.db, sessions) — needs sqlite-sync or migration to single-Hermes setup. (3) Files/config (~/wiki/, ~/.hermes/) — needs Syncthing or git. Key insight: Honcho already shares agent memory. The question is whether to move Hermes entirely to Zo Basic (already paid $18/mo) or add Hostinger $6/mo SG. Full assessment at ~/wiki/_system/pending/vps-shared-memory.md'
     captured: 2026-07-15
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
@@ -746,18 +546,10 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
-      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
-      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
-      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
-      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
+    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx) in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status, (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary, Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
     captured: 2026-08-11
     source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
-    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
-      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
-      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
-      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
-      use.'
+    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md, rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never use.'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
   - id: codebase-memory-mcp
@@ -766,16 +558,11 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: MCP server that indexes codebases into a SQLite knowledge graph using tree-sitter AST parsing. Full-indexes average
-      repos in milliseconds, Linux kernel (28M LOC, 75K files) in 3 minutes. 158 languages via tree-sitter + Hybrid LSP for
-      Python/TS/JS/PHP/C#/Go/C++/Java/Rust/Kotlin. Ships as single static binary. Competing approach to Graphify (which we
-      deferred). Directly relevant for developer-agent profile — faster codebase context = fewer tokens burned on re-orientation.
+    summary: MCP server that indexes codebases into a SQLite knowledge graph using tree-sitter AST parsing. Full-indexes average repos in milliseconds, Linux kernel (28M LOC, 75K files) in 3 minutes. 158 languages via tree-sitter + Hybrid LSP for Python/TS/JS/PHP/C#/Go/C++/Java/Rust/Kotlin. Ships as single static binary. Competing approach to Graphify (which we deferred). Directly relevant for developer-agent profile — faster codebase context = fewer tokens burned on re-orientation.
     captured: '2026-07-11'
     source: '@syntaix.ai Instagram carousel — DeusData/codebase-memory-mcp'
     resolution: Reviewed and cleared by user Jul 9, 2026.
-    notes: 'Key unknowns: Google Workspace actual amounts (PDF invoices), Anthropic billing model ($21.80 repeated charges),
-      Google Play $2.79/mo subscription identity, second Apple invoice Jul 6 itemisation. Disney+ "1 day left" as of Jul 7
-      — may have already lapsed.'
+    notes: 'Key unknowns: Google Workspace actual amounts (PDF invoices), Anthropic billing model ($21.80 repeated charges), Google Play $2.79/mo subscription identity, second Apple invoice Jul 6 itemisation. Disney+ "1 day left" as of Jul 7 — may have already lapsed.'
     cluster: Dev Tools & Infrastructure
     quadrant: Q2
   count: 6
@@ -798,10 +585,7 @@ clusters:
     domain: career
     priority: p1
     status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio, Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
     cluster: Career & Content Publishing
     quadrant: Q2
@@ -811,14 +595,10 @@ clusters:
     domain: career
     priority: p1
     status: active
-    summary: 'Core thesis: AI gets better at anything you can write a loss function for. School trains for loss functions
-      (graded problem sets), so agents commoditise execution. The valuable skill shifts to problem identification and token/time
-      allocation. Students discouraged by agents solving homework are optimising for the wrong metric.'
+    summary: 'Core thesis: AI gets better at anything you can write a loss function for. School trains for loss functions (graded problem sets), so agents commoditise execution. The valuable skill shifts to problem identification and token/time allocation. Students discouraged by agents solving homework are optimising for the wrong metric.'
     captured: '2026-07-04'
     source: '@philhchen on X (Jul 2, 2026) — 2.2M views'
-    notes: 'Full notes: ~/wiki/_system/pending/career-advice-age-of-ai-philchen.md RELEVANCE: Validates our loop engineering
-      + product thinking direction. Directly useful for OpenAI career positioning (they need problem-finders, not problem-solvers).
-      Intersects with Karpathy''s "you can outsource thinking, not understanding" thesis.'
+    notes: 'Full notes: ~/wiki/_system/pending/career-advice-age-of-ai-philchen.md RELEVANCE: Validates our loop engineering + product thinking direction. Directly useful for OpenAI career positioning (they need problem-finders, not problem-solvers). Intersects with Karpathy''s "you can outsource thinking, not understanding" thesis.'
     cluster: Career & Content Publishing
     quadrant: Q2
   - id: profile-review-phil-chen-framework
@@ -827,11 +607,7 @@ clusters:
     domain: career
     priority: p1
     status: active
-    summary: 'Reframe career narrative around Phil Chen''s core thesis: the most valuable skill in the agent era is problem
-      selection and resource allocation, not execution. Shift positioning from "what I''ve built" to "what problems I find
-      and how I allocate time/tokens/reputation." Test every angle against Elena Verna''s "Cool. Show me." bar — deployer
-      credibility over hype. Intersects with Karpathy''s "you can outsource thinking, not understanding." and the broader
-      theme that deployment > models.'
+    summary: 'Reframe career narrative around Phil Chen''s core thesis: the most valuable skill in the agent era is problem selection and resource allocation, not execution. Shift positioning from "what I''ve built" to "what problems I find and how I allocate time/tokens/reputation." Test every angle against Elena Verna''s "Cool. Show me." bar — deployer credibility over hype. Intersects with Karpathy''s "you can outsource thinking, not understanding." and the broader theme that deployment > models.'
     captured: '2026-07-06'
     source: '@philhchen X thread (Jul 2, 2026) — 2.6M views, synthesized by PA Jul 6, 2026'
     cluster: Career & Content Publishing
@@ -842,16 +618,9 @@ clusters:
     domain: career
     priority: p1
     status: active
-    summary: 'Start a Substack newsletter as the publishing layer for everything being built. Content thesis: "Here''s what
-      it looks like when AI actually changes how you work" — not another ChatGPT screenshot, but real multi-agent workflows,
-      cron pipelines, loop engineering, and systems that run without hand-holding. This is the "documented track record of
-      good work" that Phil Chen identifies as the ultimate scarce resource. Intersects with: (1) the "show me" test — readers
-      can actually see production systems, (2) Karpathy''s "you''re at the forefront" thesis, (3) Boris Cherny''s loop engineering,
-      (4) MAS SAFR framework / Singapore AI governance. Publish frequency: 1-2x weekly. Tone: direct, evidence-backed, no
-      hype. Every post must include something the reader can try.'
+    summary: 'Start a Substack newsletter as the publishing layer for everything being built. Content thesis: "Here''s what it looks like when AI actually changes how you work" — not another ChatGPT screenshot, but real multi-agent workflows, cron pipelines, loop engineering, and systems that run without hand-holding. This is the "documented track record of good work" that Phil Chen identifies as the ultimate scarce resource. Intersects with: (1) the "show me" test — readers can actually see production systems, (2) Karpathy''s "you''re at the forefront" thesis, (3) Boris Cherny''s loop engineering, (4) MAS SAFR framework / Singapore AI governance. Publish frequency: 1-2x weekly. Tone: direct, evidence-backed, no hype. Every post must include something the reader can try.'
     captured: '2026-07-06'
-    source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
-      Verna "Cool. Show me." bar
+    source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena Verna "Cool. Show me." bar
     cluster: Career & Content Publishing
     quadrant: Q2
   count: 4
@@ -887,13 +656,10 @@ clusters:
     domain: integrations
     priority: p0
     status: active
-    summary: 'Connect Heyy in Zo (app_slug=heyy, Connect button surfaced Aug 12). Unified customer messaging inbox: Instagram,
-      WhatsApp, FB Messenger, website chat, email. Test use case: WhatsApp-heavy sales chats — review selected conversations,
-      analyse, send consolidated report (situational context + next steps) to user.'
+    summary: 'Connect Heyy in Zo (app_slug=heyy, Connect button surfaced Aug 12). Unified customer messaging inbox: Instagram, WhatsApp, FB Messenger, website chat, email. Test use case: WhatsApp-heavy sales chats — review selected conversations, analyse, send consolidated report (situational context + next steps) to user.'
     captured: 2026-08-12
     source: Zo app catalog — heyy.io
-    notes: Paid plan (~$15+/mo). Read actions (get conversations, list messages) only visible after connecting — connect trial
-      first to confirm what's pullable before building the analysis layer.
+    notes: Paid plan (~$15+/mo). Read actions (get conversations, list messages) only visible after connecting — connect trial first to confirm what's pullable before building the analysis layer.
     cluster: Integrations
     quadrant: Q2
   - id: zo-social-fetch-integration
@@ -902,14 +668,10 @@ clusters:
     domain: integrations
     priority: p0
     status: active
-    summary: Connect social_fetch in Zo (app_slug=social_fetch, Connect button surfaced Aug 12). 165 endpoints, 21 platforms
-      (IG, TikTok, YouTube, X, LinkedIn, Reddit, Threads, FB +11). Profiles, posts, transcripts, metrics, consistent fields.
-      $14/1k credits, 100 free, PAYG never expires. Slot into instagram-content / social-video-extraction ladder as fast-path
-      data source (API over browser automation preference).
+    summary: Connect social_fetch in Zo (app_slug=social_fetch, Connect button surfaced Aug 12). 165 endpoints, 21 platforms (IG, TikTok, YouTube, X, LinkedIn, Reddit, Threads, FB +11). Profiles, posts, transcripts, metrics, consistent fields. $14/1k credits, 100 free, PAYG never expires. Slot into instagram-content / social-video-extraction ladder as fast-path data source (API over browser automation preference).
     captured: 2026-08-12
     source: Zo app catalog — socialfetch.dev
-    notes: Read-only scraping — no IG posting. Needs account signup (free 100 credits, no card) then authorize in Zo. Verify
-      an IG profile pull once connected.
+    notes: Read-only scraping — no IG posting. Needs account signup (free 100 credits, no card) then authorize in Zo. Verify an IG profile pull once connected.
     cluster: Integrations
     quadrant: Q2
   count: 2
@@ -925,13 +687,11 @@ clusters:
     domain: gtm
     priority: p1
     status: delegated
-    summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts,
-      competitor snapshots, (2) canonical index file every agent reads first on startup.
+    summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts, competitor snapshots, (2) canonical index file every agent reads first on startup.
     captured: 2026-06-30
     source: Tim Scheuer / Oxygen LinkedIn post
     delegated_to: The General (#1)
-    notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips,
-      gap analysis table). Full context delivered to The General.'
+    notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips, gap analysis table). Full context delivered to The General.'
     cluster: Other Active (Delegated / Backlog)
     quadrant: Q2
   count: 1
