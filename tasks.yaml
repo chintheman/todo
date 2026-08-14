@@ -56,6 +56,7 @@ cluster_order:
 clusters:
 - emoji: 🔄
   name: Agent Orchestration & Loops
+  kind: theme
   items:
   - id: context-engineering-research
     title: Context engineering research and optimisation
@@ -346,6 +347,7 @@ clusters:
   done_count: 8
 - emoji: 🎱
   name: Toto
+  kind: project
   items:
   - id: toto-automated-betting
     title: Research automated TOTO bet placement — 100 quick picks without human intervention
@@ -395,6 +397,7 @@ clusters:
   done_count: 0
 - emoji: ⌚
   name: Luxury Watches
+  kind: project
   items:
   - id: lint-confidence-downgrade
     title: 'Audit: confidence downgrade diy-luxury-watches (lint R9)'
@@ -424,6 +427,7 @@ clusters:
   done_count: 0
 - emoji: 💔
   name: Grief 'Management'
+  kind: project
   items:
   - id: gtm-second-brain
     title: GTM Second Brain — /raw capture + canonical agent index
@@ -482,6 +486,7 @@ clusters:
   done_count: 0
 - emoji: 🐶
   name: Up Dog
+  kind: project
   items:
   - id: up-dog-ai-chatbot
     title: Up Dog AI chatbot — pun-based product idea
@@ -510,6 +515,7 @@ clusters:
   done_count: 0
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
+  kind: project
   items:
   - id: pal-delta-neutral-token
     title: PAL — Delta-Neutral Polymarket Token (dn-token-polymarket)
@@ -544,6 +550,7 @@ clusters:
   done_count: 0
 - emoji: 🪧
   name: Agentic Ad Network
+  kind: project
   items:
   - id: agent-ad-network-skill
     title: Build agent ad network skill — display ads in Claude/any agent, profit share on impressions
@@ -570,6 +577,7 @@ clusters:
   done_count: 0
 - emoji: 🏠
   name: Personal Page
+  kind: project
   items:
   - id: amex-platinum-guide
     title: Amex Platinum SG benefits guide — live product at 0xsteamboat.me/amex
@@ -670,6 +678,7 @@ clusters:
   done_count: 0
 - emoji: 🤖
   name: Zo Integration
+  kind: project
   items:
   - id: zo-heyy-integration
     title: 'Zo integration: Heyy — unified inbox (IG/WhatsApp/Messenger/email)'
@@ -714,6 +723,7 @@ clusters:
   done_count: 0
 - emoji: 🛋️
   name: Interior Design — Estee
+  kind: project
   items:
   - id: interior-design-estee
     title: 'Interior Design — Estee: HDB + condo floor-plan measurement tool'
@@ -727,9 +737,10 @@ clusters:
       cd ~ && claude --resume 8c298e60-33d7-4c3d-bbd3-f2f16f1f50d7'
     captured: 2026-08-14
     source: RESUMEHERE.md handover doc — friend Estee's floor-plan agent
-    notes: Full details + open items (icon doc for Estee, 802 mm door question, web vs CLI decision) in ~/wiki/_system/pending/interior-design-estee.md.
+    notes: 'Resume session: cd ~ && claude --resume 8c298e60-33d7-4c3d-bbd3-f2f16f1f50d7 (session filed under home dir — cd
+      ~ matters). Full details + open items (icon doc for Estee, 802 mm door question, web vs CLI decision) in ~/wiki/_system/pending/interior-design-estee.md.
       Repo github.com/chintheman/HDB-Floor-Plan-Agent; deployed on Zo at /home/workspace/hdb-floor-plan-agent (service svc_BYbw0dR3Qj8).
-      Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.
+      Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.'
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
@@ -742,6 +753,7 @@ clusters:
   done_count: 0
 - emoji: 📈
   name: Crypto & Quant Trading
+  kind: theme
   items:
   - id: tradingview-mcp-integration
     title: Integrate TradingView MCP — AI chart analysis for crypto quant
@@ -842,6 +854,7 @@ clusters:
   done_count: 2
 - emoji: 🎨
   name: Creative Agency & Content
+  kind: theme
   items:
   - id: ig-carousel-frameworks
     title: Absorb 5 IG carousel frameworks into Creative Agency pipeline
@@ -1105,6 +1118,7 @@ clusters:
   done_count: 10
 - emoji: 🛠️
   name: Dev Tools & Infrastructure
+  kind: theme
   items:
   - id: hermes-session-pruning-update
     title: Evaluate & adopt Hermes session DB pruning/archiving
@@ -1523,6 +1537,7 @@ clusters:
   done_count: 17
 - emoji: 🧠
   name: AI Models & Provider Landscape
+  kind: theme
   items: []
   archive:
   - &id029
@@ -1631,6 +1646,7 @@ clusters:
   done_count: 5
 - emoji: 💼
   name: Career & Content Publishing
+  kind: theme
   items:
   - id: ai-adoption-specialist
     title: Explore AI Adoption Specialist as career path (salaried vs independent)
@@ -1655,6 +1671,7 @@ clusters:
   done_count: 0
 - emoji: 💡
   name: Business Ideas & Products
+  kind: theme
   items: []
   archive:
   - &id004
@@ -1777,6 +1794,7 @@ clusters:
   done_count: 6
 - emoji: 🔌
   name: Integrations
+  kind: theme
   items: []
   archive:
   - &id056
@@ -1824,6 +1842,7 @@ clusters:
   done_count: 2
 - emoji: 📋
   name: Other Active (Delegated / Backlog)
+  kind: theme
   items: []
   archive:
   - &id003
@@ -2478,7 +2497,7 @@ archive:
 - *id054
 - *id055
 - *id056
-updated_at: 2026-08-14 23:38:55 SGT
+updated_at: 2026-08-14 23:42:44 SGT
 total_active: 28
 total_done: 86
 matrix_summary:
