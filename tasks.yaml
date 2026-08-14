@@ -113,49 +113,6 @@ clusters:
       \ (P2 · discuss) — /goal automation\n  This item is the focused distinction study between the two paradigms."
     cluster: Agent Orchestration & Loops
     quadrant: Q2
-  - id: agency-agent-fa-integration
-    title: 'Deep dive: adapt Financial Analyst persona for crypto quant profiles'
-    type: build
-    domain: crypto
-    priority: p1
-    status: active
-    summary: 'Adapt Financial Analyst persona patterns for market-intel / quant profiles: scenario analysis (base/upside/downcase),
-      assumption-first communication, variance analysis templates for prediction post-mortems, and Learning & Memory cross-session
-      carry-forward.'
-    captured: '2026-07-08'
-    source: agency-agents (Financial Analyst)
-    notes: 'Review checklist item 2/4 outcome. Reference: ~/agency-highlights/finance-financial-analyst.md'
-    cluster: Agent Orchestration & Loops
-    quadrant: Q2
-  - id: agency-agent-nexus-integration
-    title: 'Deep dive: integrate NEXUS quality gates and handoff templates into creative-agency'
-    type: build
-    domain: creative
-    priority: p1
-    status: active
-    summary: 'Steal from NEXUS Strategy: (1) per-phase quality gates with explicit criteria, gate keeper, and evidence requirements,
-      (2) structured handoff template for agent-to-agent transitions, (3) max-3-retry Dev↔QA loop pattern. Integrate into
-      creative-agency skill.'
-    captured: '2026-07-08'
-    source: agency-agents (NEXUS Strategy)
-    notes: 'Review checklist item 3/4 outcome. 3 integrations ranked: quality gates (high), handoff template (high), Dev↔QA
-      loop (medium). See ~/agency-highlights/nexus-strategy.md'
-    cluster: Agent Orchestration & Loops
-    quadrant: Q2
-  - id: agency-agent-pm-integration
-    title: 'Deep dive: integrate Product Manager persona patterns into profile-creation skill'
-    type: build
-    domain: ai/ml
-    priority: p1
-    status: active
-    summary: 'Extract SOUL.md template patterns from Product Manager persona: Critical Rules (numbered imperatives), Identity
-      & Memory ("remember and carry forward"), Communication Style with voice examples, and Templates-as-code format. Integrate
-      into profile-creation skill v2.4.0.'
-    captured: '2026-07-08'
-    source: agency-agents (Product Manager)
-    notes: ️ Review checklist item 1/4 outcome. See ~/agency-highlights/product-manager.md
-    cluster: Agent Orchestration & Loops
-    quadrant: Q2
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
     type: discuss
@@ -231,8 +188,8 @@ clusters:
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
     cluster: Agent Orchestration & Loops
     quadrant: Q4
-  count: 11
-  active_count: 11
+  count: 8
+  active_count: 8
   delegated_count: 0
   done_count: 0
 - emoji: 🎱
@@ -686,11 +643,11 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 0
-updated_at: 2026-08-14 23:13:47 SGT
-total_active: 30
+updated_at: 2026-08-14 23:16:22 SGT
+total_active: 27
 total_done: 0
 matrix_summary:
   Q1: 0
-  Q2: 21
+  Q2: 18
   Q3: 0
   Q4: 9
