@@ -1038,7 +1038,7 @@ clusters:
     type: research
     domain: crypto
     priority: p2
-    status: active
+    status: done
     summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
     captured: '2026-07-03'
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
