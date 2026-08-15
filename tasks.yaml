@@ -45,6 +45,9 @@ cluster_order:
   name: career
   kind: domain
 - emoji: ''
+  name: devtools
+  kind: domain
+- emoji: ''
   name: product
   kind: domain
 - emoji: ''
@@ -55,9 +58,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: creative/3d
-  kind: domain
-- emoji: ''
-  name: devtools
   kind: domain
 - emoji: ''
   name: finance
@@ -2104,6 +2104,100 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: devtools
+  kind: domain
+  items:
+  - id: labs-project-flow-refinement
+    title: Labs page refinement — standard project lifecycle flow + per-project PM
+    type: build
+    domain: devtools
+    priority: p0
+    status: active
+    summary: Refine the labs page / todo system so every project follows a standard lifecycle flow (research → build → publish
+      → marketing, extendable) that keeps tasks structured. Creating a product bucket prompts a setup checklist (create Telegram
+      topic, basic management set-ups, more TBD). Each project gets its own project manager / product manager to coordinate,
+      keep things on track, and propose what to build next. Task itself must include research + refinement so full context
+      is available when worked on.
+    captured: 2026-08-15
+    source: PA group Aug 15 2026 — P0 refinement, interview in progress
+    notes: 'Full concept + open interview questions + research leads: _system/pending/labs-project-flow-refinement.md. Interview
+      in progress (Q1 scope pending). Research is PART of this task per user — refine and expand the points before execution.'
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id009
+    id: mojo-1-0-milestone
+    title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
+    type: research
+    domain: devtools
+    priority: p3
+    status: done
+    summary: 'Mojo language officially hits 1.0 (Aug 11, 2026). Stable foundation: unified var declarations, single Pointer
+      type, unified closures, consistent renamings. New: Python-style lambda syntax, more stable LSP server, Mojo AI Skills
+      1.0-ready (project creation, GPU programming, porting), memory-safety diagnostics for reference invalidation, descriptive
+      where-clause failures. MAX 26.5 adds GLM-5.2 + Nemotron-H (hybrid Mamba-2) support, Kimi 2.5 on Module V3. Compiler
+      + toolchain open-sourcing still committed for 2026. ModCon Aug 18 SF.'
+    captured: 2026-08-12
+    source: Modular blog — https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here
+    resolution: blitz-archived via labs 2026-08-14
+    notes: Ecosystem milestone worth tracking for the AI infra landscape — Mojo as systems language for AI (CPUs/GPUs/accelerators)
+      + Modular MAX inference stack. Open-source compiler commitment in 2026 is the key signal. Not a build today; revisit
+      when the compiler lands. ModCon livestream Aug 18.
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id006
+    id: unsloth-desktop-eval
+    title: Unsloth Desktop — local LLM run/train app (Beta)
+    type: build
+    domain: devtools
+    priority: p2
+    status: done
+    summary: 'Free open-source desktop app (macOS/Win/Linux) for running AND training models locally: LLMs, diffusion image/video
+      (MiniMax-H3, FLUX, Z-Image, LTX, Wan), MLX, GGUF, audio. Features: model swapping into Claude Code / Codex / Hermes
+      Agent / OpenClaw / OpenCode, sandboxed Bash+Python code execution with self-healing tool calls (50% more accurate),
+      unlimited private web search, local fine-tuning (text/diffusion/embeddings/TTS), free Cloudflare HTTPS tunnel for remote
+      access, OpenAI-compatible API, no telemetry, offline-capable. Day-zero model support (Qwen3.8, GLM, etc).'
+    captured: 2026-08-12
+    source: Unsloth docs — https://unsloth.ai/docs/desktop
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'Directly relevant to the stack: lists Hermes Agent as supported integration, local-model swap for Claude Code,
+      and local diffusion image/video generation feeds the creative pipeline. Evaluate on M1 (8GB, resource-constrained —
+      CPU/Apple Silicon support confirmed but older hardware may be poorly supported). Also relevant to Voltron/local agent
+      memory ambitions. Worth a real eval + comparison vs existing local inference options.'
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id005
+    id: lovable-explore
+    title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
+    type: research
+    domain: devtools
+    priority: p2
+    status: done
+    summary: 'Evaluate Lovable as an app-building surface. Scale: $500M ARR (4x in 12 months), 60M projects, 900M monthly
+      visits, ~2/3 Fortune 500. Strategy: multi-model routing (''model picker is a dead end'') + post-trained open-source
+      models. Candidate use cases: internal dashboards/tools, MVP for a business idea, client-facing agency tools, landing
+      pages, TOTO-adjacent prototypes. Free tier to start.'
+    captured: 2026-08-13
+    source: Midday AI Pulse Aug 13 — lovable.dev/blog/series-c
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'Cluster: Dev Tools & Infrastructure (eval family: repowise/hyperbrowser/ kimi-code). Compare vs Claude Code +
+      Zo on a real 1-hour build before committing deeper.'
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 4
+  active_count: 1
+  delegated_count: 0
+  done_count: 3
+  p0_count: 1
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: product
   kind: domain
   items:
@@ -2294,82 +2388,6 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 2
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: devtools
-  kind: domain
-  items: []
-  archive:
-  - &id009
-    id: mojo-1-0-milestone
-    title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
-    type: research
-    domain: devtools
-    priority: p3
-    status: done
-    summary: 'Mojo language officially hits 1.0 (Aug 11, 2026). Stable foundation: unified var declarations, single Pointer
-      type, unified closures, consistent renamings. New: Python-style lambda syntax, more stable LSP server, Mojo AI Skills
-      1.0-ready (project creation, GPU programming, porting), memory-safety diagnostics for reference invalidation, descriptive
-      where-clause failures. MAX 26.5 adds GLM-5.2 + Nemotron-H (hybrid Mamba-2) support, Kimi 2.5 on Module V3. Compiler
-      + toolchain open-sourcing still committed for 2026. ModCon Aug 18 SF.'
-    captured: 2026-08-12
-    source: Modular blog — https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here
-    resolution: blitz-archived via labs 2026-08-14
-    notes: Ecosystem milestone worth tracking for the AI infra landscape — Mojo as systems language for AI (CPUs/GPUs/accelerators)
-      + Modular MAX inference stack. Open-source compiler commitment in 2026 is the key signal. Not a build today; revisit
-      when the compiler lands. ModCon livestream Aug 18.
-    cluster: devtools
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id006
-    id: unsloth-desktop-eval
-    title: Unsloth Desktop — local LLM run/train app (Beta)
-    type: build
-    domain: devtools
-    priority: p2
-    status: done
-    summary: 'Free open-source desktop app (macOS/Win/Linux) for running AND training models locally: LLMs, diffusion image/video
-      (MiniMax-H3, FLUX, Z-Image, LTX, Wan), MLX, GGUF, audio. Features: model swapping into Claude Code / Codex / Hermes
-      Agent / OpenClaw / OpenCode, sandboxed Bash+Python code execution with self-healing tool calls (50% more accurate),
-      unlimited private web search, local fine-tuning (text/diffusion/embeddings/TTS), free Cloudflare HTTPS tunnel for remote
-      access, OpenAI-compatible API, no telemetry, offline-capable. Day-zero model support (Qwen3.8, GLM, etc).'
-    captured: 2026-08-12
-    source: Unsloth docs — https://unsloth.ai/docs/desktop
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'Directly relevant to the stack: lists Hermes Agent as supported integration, local-model swap for Claude Code,
-      and local diffusion image/video generation feeds the creative pipeline. Evaluate on M1 (8GB, resource-constrained —
-      CPU/Apple Silicon support confirmed but older hardware may be poorly supported). Also relevant to Voltron/local agent
-      memory ambitions. Worth a real eval + comparison vs existing local inference options.'
-    cluster: devtools
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id005
-    id: lovable-explore
-    title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
-    type: research
-    domain: devtools
-    priority: p2
-    status: done
-    summary: 'Evaluate Lovable as an app-building surface. Scale: $500M ARR (4x in 12 months), 60M projects, 900M monthly
-      visits, ~2/3 Fortune 500. Strategy: multi-model routing (''model picker is a dead end'') + post-trained open-source
-      models. Candidate use cases: internal dashboards/tools, MVP for a business idea, client-facing agency tools, landing
-      pages, TOTO-adjacent prototypes. Free tier to start.'
-    captured: 2026-08-13
-    source: Midday AI Pulse Aug 13 — lovable.dev/blog/series-c
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'Cluster: Dev Tools & Infrastructure (eval family: repowise/hyperbrowser/ kimi-code). Compare vs Claude Code +
-      Zo on a real 1-hour build before committing deeper.'
-    cluster: devtools
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 3
-  active_count: 0
-  delegated_count: 0
-  done_count: 3
   p0_count: 0
   p1_count: 0
   p2_count: 0
@@ -2845,6 +2863,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 15:58:39 SGT
-total_active: 32
+updated_at: 2026-08-15 16:06:50 SGT
+total_active: 33
 total_done: 86
