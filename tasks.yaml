@@ -85,6 +85,21 @@ clusters:
   name: Toto
   kind: project
   items:
+  - id: toto-app-post-launch-pm
+    title: 'Toto Buddy post-launch — PM-led growth: marketing, retention, ASO, roadmap'
+    type: build
+    domain: product
+    priority: p1
+    status: active
+    summary: 'Hermes acts as product/project manager for Toto Buddy post-launch. Lead, review, refine and expand initiatives:
+      marketing plan, retention (D1/D7/D30), ASO, review management, localization, monetization decision. Plan saved at ~/wiki/_system/pending/toto-app-post-launch-pm-plan.md.'
+    captured: 2026-08-15
+    source: 0xsteamboat request Aug 15 (PM role assignment)
+    notes: 'App state verified Aug 15: v1.1.0 live Aug 12 2026, Education category, 5.0★ (1 rating), free, EN only, iOS 17+.
+      User interview in progress (one question at a time) to lock success definition and context.'
+    cluster: Toto
+    cluster_emoji: 🎱
+    cluster_kind: project
   - id: toto-automated-betting
     title: Research automated TOTO bet placement — 100 quick picks without human intervention
     type: research
@@ -124,13 +139,13 @@ clusters:
     cluster_emoji: 🎱
     cluster_kind: project
   archive: []
-  count: 2
-  total_count: 2
-  active_count: 2
+  count: 3
+  total_count: 3
+  active_count: 3
   delegated_count: 0
   done_count: 0
   p0_count: 0
-  p1_count: 0
+  p1_count: 1
   p2_count: 2
   p3_count: 0
 - emoji: ⌚
@@ -2773,6 +2788,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 12:55:06 SGT
-total_active: 29
+updated_at: 2026-08-15 13:42:20 SGT
+total_active: 30
 total_done: 86
