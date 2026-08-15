@@ -1037,7 +1037,7 @@ clusters:
     title: Explore top quant finance GitHub repos
     type: research
     domain: crypto
-    priority: p3
+    priority: p2
     status: active
     summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
     captured: '2026-07-03'
