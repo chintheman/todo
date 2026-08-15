@@ -172,7 +172,7 @@ clusters:
     title: GTM Second Brain — /raw capture + canonical agent index
     type: build
     domain: gtm
-    priority: p1
+    priority: p3
     status: delegated
     summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts, competitor snapshots, (2) canonical index file every agent reads first on startup.
     captured: 2026-06-30
