@@ -29,6 +29,9 @@ cluster_order:
 - emoji: 🛋️
   name: Interior Design — Estee
   kind: project
+- emoji: 🎭
+  name: Performance Coach — Rhoades Protocol
+  kind: project
 - emoji: 📈
   name: Crypto & Quant Trading
   kind: theme
@@ -743,6 +746,33 @@ clusters:
       Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.'
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
+    cluster_kind: project
+    quadrant: Q2
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+- emoji: 🎭
+  name: Performance Coach — Rhoades Protocol
+  kind: project
+  items:
+  - id: performance-coach-refinement
+    title: Refine Performance Coach — Rhoades Protocol
+    type: build
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: 'Refine the Rhoades Protocol performance coach persona skill (coaching/rhoades-protocol v3.0.0, canonical repo
+      github.com/chintheman/wendy-rhoades-performance-coach). Scope: sharpen persona voice and mode selection (Reset / Deep
+      Work / Long Sit / Energy Audit), tighten the 13-technique execution standards, calibrate the edge dial, stress-test
+      the 11 guardrails against live sessions in the Wendy Rhoades Telegram topic (thread 7496), and extend test-suite coverage.'
+    captured: 2026-08-15
+    source: User request in Wendy Rhoades topic Aug 15 2026
+    notes: 'Skill: ~/.hermes/skills/coaching/rhoades-protocol (v3.0.0).'
+    cluster: Performance Coach — Rhoades Protocol
+    cluster_emoji: 🎭
     cluster_kind: project
     quadrant: Q2
   archive: []
@@ -2497,11 +2527,11 @@ archive:
 - *id054
 - *id055
 - *id056
-updated_at: 2026-08-14 23:42:44 SGT
-total_active: 28
+updated_at: 2026-08-15 12:41:24 SGT
+total_active: 29
 total_done: 86
 matrix_summary:
   Q1: 0
-  Q2: 18
+  Q2: 19
   Q3: 0
   Q4: 10
