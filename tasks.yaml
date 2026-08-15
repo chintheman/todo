@@ -364,13 +364,16 @@ clusters:
       cache lesson).
     captured: 2026-08-14
     source: Claude Code build — repos chintheman/Amex-perks + chintheman/0xsteamboat-me. Session ID session_01PA3FuHpA8CMqLdEsqte79E
-    notes: 'OPEN: (1) user is mid detail-review, round 2 pending; (2) 14 day data refresh cycle — data generated 2026-08-11,
-      next refresh due 2026-08-25 (npm run sources in Amex-perks, then sync-amex.sh via deploy); (3) design reconciliation
-      with the site dark rebrand deferred by choice. SUBNOTE — birthday spinoff: private password gated picker at /bday (pw
-      jojo) built from the same perks data, wife picks dinner (Love Dining) + free hotel night (Plat Stay); confirm is relayed
-      to Telegram by a 5 min Mac cron (bday-poller.sh) over hermes send. Tear down after the birthday: remove the crontab
-      line + ~/.local/bin/bday-poller.sh + ~/.config/bday/, then public/bday/ and the /bday + /api/bday/* routes in server.ts.
-      Claude Code session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    notes: 'SHIPPED 15 Aug 2026: the Claude Design editorial redesign (handoff AMEXSG-EDIT-20260815, frames 6a to 7b)
+      is live. Cream paper and engraved rules, break even merged into Your year, urgent two, card since, authored
+      value_phrase on the 29 unpriced rows. OPEN: (1) round 2 review of the redesign; (2) 14 day data refresh, generated
+      2026-08-11, next due 2026-08-25 (npm run sources, then deploy); (3) INFRA DRIFT FOUND: supervisord-user.conf points
+      0xsteamboat-me at the dev checkout /home/workspace/0xsteamboat-me, not the prod worktree -prod, so scripts/deploy.sh
+      builds a directory nothing serves and the live site runs whatever is uncommitted in dev. Worked around by syncing
+      and restarting in the served checkout; the config still needs repointing. SUBNOTE, birthday spinoff: password gated
+      picker at /bday (pw jojo), confirm relayed to Telegram by a 5 min Mac cron (bday-poller.sh). Tear down after the
+      birthday: crontab line + ~/.local/bin/bday-poller.sh + ~/.config/bday/, then public/bday/ and the /bday and
+      /api/bday/* routes in server.ts. Claude Code session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
