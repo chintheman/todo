@@ -45,6 +45,9 @@ cluster_order:
   name: career
   kind: domain
 - emoji: ''
+  name: product
+  kind: domain
+- emoji: ''
   name: business
   kind: domain
 - emoji: ''
@@ -2080,6 +2083,39 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: product
+  kind: domain
+  items:
+  - id: little-b-browser-extension
+    title: Little Bitch browser extension — X profile badging product
+    type: build
+    domain: product
+    priority: p2
+    status: active
+    summary: 'Chrome extension (MV3) that badges Twitter/X profiles as Little Bitch (escalating shame tiers) or Not a Bitch
+      (sarcastic praise tiers). Weighted algorithm scores profiles 0-100 from public data (follower ratio, bio keyword density,
+      account age, post frequency, verified status, engagement). Viral loop: nominate +2 / immunity -2, badge-as-marketing.
+      MVP v1.0.0 built by Hermes Jun 19 2026, Zo pushed to github.com/chintheman/little-b (public) Jul 4 2026 with LOGIC-INTENT-RATIONALE.md.
+      Full context in _system/pending/little-b-browser-extension.md.'
+    captured: 2026-08-15
+    source: PA group Aug 15 2026 — historical project re-opened as product idea
+    notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
+      Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
+      Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
+    cluster: product
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: business
   kind: domain
   items: []
@@ -2788,6 +2824,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 13:42:20 SGT
-total_active: 30
+updated_at: 2026-08-15 13:42:59 SGT
+total_active: 31
 total_done: 86
