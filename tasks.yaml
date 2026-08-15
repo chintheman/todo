@@ -2120,8 +2120,9 @@ clusters:
       is available when worked on.
     captured: 2026-08-15
     source: PA group Aug 15 2026 — P0 refinement, interview in progress
-    notes: 'Full concept + open interview questions + research leads: _system/pending/labs-project-flow-refinement.md. Interview
-      in progress (Q1 scope pending). Research is PART of this task per user — refine and expand the points before execution.'
+    notes: 'Interview COMPLETE (6 Qs, Aug 15) + research PASS 1 done. Full refined spec — architecture, flow templates by
+      objective, setup checklist, registry schema additions, build plan + first research: _system/pending/labs-project-flow-refinement.md.
+      Registry is the SSOT for all project state (flow stage, checklist items, tasks).'
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -2863,6 +2864,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 16:06:50 SGT
+updated_at: 2026-08-15 16:17:18 SGT
 total_active: 33
 total_done: 86
