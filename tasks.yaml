@@ -601,6 +601,27 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: deepseek-harness-test
+    title: DeepSeek Harness v0.1 — test the agent runtime
+    type: build
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'DeepSeek open-sourced Harness v0.1 (MIT, developer preview) — "everything is a plugin" agent runtime built on
+      the Cordis meta-framework: model adapter, tool registry, session log, and the agent loop itself are all swappable plugins.
+      Node.js, provider-agnostic (Anthropic/OpenAI/AWS/GCP/ DeepSeek), built-in MCP client. Test path: npx @deepseek-ai/dsh
+      web, 4 presets (Standard/PTC/Minimal/Creation). Repo github.com/deepseek-ai/ deepseek-harness. Lead: Cui Tianyi (ex-Jane
+      Street 9 yrs).'
+    captured: 2026-08-15
+    source: PA group Aug 15 2026 — P0 to test; details from AI Intel topic
+    notes: 'Escalated by user from the Aug 14 "watch, don''t adopt" verdict to P0 test. v0.1.0-rc.5 with "compatibility-breaking
+      changes" warning. History: Aug 1 internal testing reported (targeting Claude Code), Aug 4 beta recruiting OSS devs (SCMP)
+      + user DM drafted to Tianyi Cui, Aug 13/14 public OSS launch. Strategic read: models commoditize — the harness layer
+      is where agent infra differentiates; direct signal from DeepSeek''s roadmap. Sources: AI Intel briefs (Pulse 4d3416344dab
+      2026-08-14, X Multi-Scanner 81b086688939, SCMP 92d91537883f).'
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
     type: discuss
@@ -1260,12 +1281,12 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 5
-  total_count: 35
-  active_count: 5
+  count: 6
+  total_count: 36
+  active_count: 6
   delegated_count: 0
   done_count: 30
-  p0_count: 2
+  p0_count: 3
   p1_count: 1
   p2_count: 1
   p3_count: 1
@@ -2824,6 +2845,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 13:42:59 SGT
-total_active: 31
+updated_at: 2026-08-15 15:58:39 SGT
+total_active: 32
 total_done: 86
