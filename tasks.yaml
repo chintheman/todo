@@ -1874,7 +1874,6 @@ clusters:
       was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
       API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
       Recommended exam date Sat Sep 12 2026, online proctored.'
-    deadline: 2026-08-16
     captured: 2026-08-16
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
@@ -2270,7 +2269,6 @@ clusters:
       worker via the HTTP adapter? It''s the "back office" layer in the BennettOS stack (Claude Code headless + Paperclip
       + GLM-5.2/Codex + Hermes + MCP + Mac mini/Tailscale). Core concepts: Company, Agent, Issue, Heartbeat, Adapter, Budget,
       Approval.'
-    deadline: 2026-08-16
     captured: 2026-08-16
     source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
@@ -3084,6 +3082,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 21:18:04 SGT
+updated_at: 2026-08-16 21:20:18 SGT
 total_active: 40
 total_done: 86
