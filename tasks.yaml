@@ -1871,13 +1871,15 @@ clusters:
       Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
       completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
       guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
-      was Jul 30 2026. Review where the pipeline stands now and lay out the path to sitting the exam.'
+      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
+      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
+      Recommended exam date Sat Sep 12 2026, online proctored.'
     deadline: 2026-08-16
     captured: 2026-08-16
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
     gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: Write the CCA-F study plan and set the new exam date with Chin.
+    next_step: Confirm the exam date with Chin (recommended Sep 12) and start Week 1 courses.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -3082,6 +3084,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 16:49:33 SGT
+updated_at: 2026-08-16 21:10:30 SGT
 total_active: 40
 total_done: 86
