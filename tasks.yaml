@@ -385,6 +385,7 @@ clusters:
       line + ~/.local/bin/bday-poller.sh + ~/.config/bday/, then public/bday/ and the /bday + /api/bday/* routes in server.ts.
       Claude Code session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
     next_step: Await Chin's round two review comments, then apply them to the guide.
+    session: 9702f454-0b20-48df-94ae-60252f9e238a
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -451,6 +452,7 @@ clusters:
       glyphs.js, build_data.py and the other three handover docs before ingest is meaningful. Claude Code session ID: session_01QDtxNxRaHZuwJ8pTwcsWc1
       (https://claude.ai/code/session_01QDtxNxRaHZuwJ8pTwcsWc1).'
     next_step: Verify livebandtonight.com is still maintained before building the adapter.
+    session: 3702c0e0-30e8-40d0-b5db-f8bbaea537b9
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -534,6 +536,7 @@ clusters:
       Repo github.com/chintheman/HDB-Floor-Plan-Agent; deployed on Zo at /home/workspace/hdb-floor-plan-agent (service svc_BYbw0dR3Qj8).
       Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.'
     next_step: Resume the Claude session and resolve the 802 mm door reference question.
+    session: 8c298e60-33d7-4c3d-bbd3-f2f16f1f50d7
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
@@ -3039,6 +3042,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 15:27:54 SGT
+updated_at: 2026-08-16 16:09:42 SGT
 total_active: 40
 total_done: 86
