@@ -2543,19 +2543,23 @@ clusters:
     domain: integrations
     priority: p1
     status: active
-    summary: 'Research how an agent can take over a whole Telegram account and a whole WhatsApp Business account. TELEGRAM:
-      three paths — (1) Bot API (limited, can''t initiate chats), (2) Telegram Business API (official, $5/mo Premium, webhook-driven,
-      compliant, but only authorized conversations), (3) MTProto userbot via Telethon/Pyrogram (FULL account control — all
-      chats, groups, channels, media; API ID+hash from my.telegram.org, session strings for deploy; but violates ToS — real
-      ban risk, documented permanent bans). WHATSAPP: (1) Cloud API (official, compliant, webhooks, 24h window, templates
-      required outside window; but Meta BANNED general-purpose AI chatbots on the Business API effective Jan 15 2026 — only
-      business-support use cases allowed, and AI Providers get charged per non-template message), (2) On-Prem API (being phased
-      out), (3) unofficial Baileys (~50MB/session WebSocket) or whatsapp-web.js (Puppeteer, 400-500MB) — full read/write but
-      ToS violation, permanent bans without warning. KEY CONSTRAINT: general- purpose AI assistant over official WhatsApp
-      is now effectively prohibited — the agent would need to be framed as a specific business function.'
+    summary: 'Research complete (Aug 17, Brave/Exa; Tavily down). Telegram: full takeover only via MTProto userbot (Telethon/Pyrogram)
+      — documented permanent bans (n8n case: private bot, appeals rejected, number blocked). Compliant Business bot path improved
+      since capture: Premium gate REMOVED (2025 changelog), webhook-driven (business_connection/business_message), scope =
+      authorized conversations only, 1 bot per account. WhatsApp: Cloud API closed to general-purpose AI since Jan 15 2026
+      (AI Providers prohibited; Meta AI only general bot; business-function bots fine); On-Prem API already DEAD (sunset Oct
+      23 2025, not ''phasing out''); unofficial Baileys/whatsapp-web.js = only full-takeover path, bans when-not-if (2-8wk
+      typical detection, 68% SMBs banned within 12mo, permanent number bans). New cost signal: service messages billable Oct
+      1 2026; AI Provider pricing policy effective Feb 16 2026. Full findings in pending file.'
     captured: 2026-08-17
     source: PA request Aug 17 2026 — research full-account agent takeover, add P1
     notes: _system/pending/agent-account-takeover-research.md
+    gist: 'Compliant = scoped: Telegram Business bot (free now, no ban risk) + WhatsApp Cloud API as a named business function.
+      Full takeover = MTProto/Baileys on burners — bans are a when-not-if. Never run full-takeover on primary numbers.'
+    next_step: 'Decide per platform: (a) Telegram Business bot on M1 via existing Cloudflare tunnel as the compliant default,
+      vs MTProto on burner accounts for full-takeover; (b) WhatsApp Cloud API framed as a specific business function (support/orders),
+      vs Baileys on a disposable number. Threads worth deep dive: Business-bot webhook integration on M1, Cloud API WABA/template
+      onboarding, burner-account MTProto+Baileys deployment.'
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
@@ -3172,6 +3176,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 01:36:01 SGT
+updated_at: 2026-08-17 02:00:59 SGT
 total_active: 41
 total_done: 88
