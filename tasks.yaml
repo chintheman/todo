@@ -1875,8 +1875,7 @@ clusters:
     source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
     notes: _system/pending/claude-certification-review.md
     gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
-    next_step: Read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7, then run Gauntlet Gate 1 D1
-      questions.
+    next_step: Run Gauntlet Gate 1 baseline, then read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -3107,6 +3106,6 @@ archive:
 - *id085
 - *id086
 - *id087
-updated_at: 2026-08-16 22:32:06 SGT
+updated_at: 2026-08-16 22:36:56 SGT
 total_active: 40
 total_done: 87
