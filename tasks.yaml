@@ -1761,6 +1761,25 @@ clusters:
   name: career
   kind: domain
   items:
+  - id: claude-certification-review
+    title: Review Claude certification pipeline and plan it out
+    type: discuss
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
+      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
+      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
+      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
+      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
+      was Jul 30 2026. Review where the pipeline stands now and lay out the path to sitting the exam.'
+    deadline: 2026-08-16
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
+    notes: _system/pending/claude-certification-review.md
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: ai-adoption-specialist
     title: Explore AI Adoption Specialist as career path (salaried vs independent)
     type: discuss
@@ -1772,24 +1791,6 @@ clusters:
       Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
       outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: claude-certification-review
-    title: Review Claude certification pipeline and plan it out
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
-      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
-      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
-      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
-      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
-      was Jul 30 2026. Review where the pipeline stands now and lay out the path to sitting the exam.'
-    captured: 2026-08-16
-    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
-    notes: _system/pending/claude-certification-review.md
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -1827,8 +1828,8 @@ clusters:
   active_count: 2
   delegated_count: 0
   done_count: 2
-  p0_count: 0
-  p1_count: 2
+  p0_count: 1
+  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -2964,6 +2965,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 09:16:44 SGT
+updated_at: 2026-08-16 09:17:10 SGT
 total_active: 38
 total_done: 86
