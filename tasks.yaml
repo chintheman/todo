@@ -645,15 +645,22 @@ clusters:
     domain: ai/ml
     priority: p0
     status: active
-    summary: 'Research stream on context engineering for agent systems: how context is assembled, truncated, prioritized,
-      and optimized (context windows, retrieval quality, memory tiers, prompt construction) to improve Hermes agent performance.'
+    summary: 'Kickoff research PASS 1 done 2026-08-17 (Brave + Exa, Tavily down). Context engineering = smallest set of high-signal
+      tokens per inference (Anthropic). Four levers: write/select/compress/isolate (LangChain). Key evidence: contextual retrieval
+      cuts retrieval failures 49-67%; reranking 50->top-5 beats dumping 50; observation masking >50% cost cut on SWE-bench;
+      lost-in-the-middle + context rot are the core failure modes. Hermes already does progressive disclosure well (skills,
+      deferred tools, wiki, subagents). Full report: _system/pending/context-engineering-research.md.'
     captured: 2026-08-14
     source: User request — Hermes context/memory stack
     notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
       bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
       in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
-    gist: Research into how agent context is assembled and prioritised to optimise Hermes performance.
-    next_step: Write up the context assembly findings and rank candidate optimisations.
+    gist: Context engineering = curate the smallest set of high-signal tokens per step; the spine retrieval gap is the highest-leverage
+      Hermes fix and BM25-hybrid + reranking ship before the time-gated Voyage embedder swap.
+    next_step: 'Deep dive 1: spine retrieval A/B — BM25 hybrid + reranker + contextual chunk enrichment vs current embedder,
+      recall@20 over wiki + memory observations (ships before the Voyage gate). Deep dive 2: compaction prompt audit — what
+      survives Hermes consolidation vs Claude''s preserve-decisions/discard-tool-output guidance. Deep dive 3: context-utilization
+      instrumentation across cron sessions.'
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -2315,15 +2322,23 @@ clusters:
     domain: devtools
     priority: p0
     status: active
-    summary: 'TEST write-back: hands-on explore of Paperclip (paperclip.ing, 78k-star OSS, v2026.722.0). It''s the org layer
-      ABOVE agent runtimes — you hire AI agents as employees with managers, budgets, approval gates. Hermes can plug in as
-      a worker via the hermes_gateway adapter (stable built-in) or the generic HTTP adapter. Key finding: budget enforcement
-      is real but only binds API-metered spend; subscription workers run uncapped.'
+    summary: 'Research PASS 1 done (Aug 17). Paperclip (paperclip.ing, MIT, 78.4k stars, Node+Postgres) is a real org layer
+      above agent runtimes: org chart, issues, heartbeats, budgets, approvals, immutable audit. Hermes plugs in as a first-class
+      worker via the BUILT-IN hermes_local adapter (''persistent memory, 30+ tools, 80+ skills, Python 3.10+'') — also an
+      http webhook adapter for remote/custom services (not yet in UI dropdown; API/company-export config only). Budget/approval
+      loop is genuine, not demo: CEO cannot hire or start work without board approval; per-agent monthly budget soft-warns
+      at 80%, auto-pauses at 100%, atomic with task checkout; append-only audit + costs page per agent/task/month. Install:
+      npx paperclipai onboard --yes with embedded Postgres (Apple Silicon needs libzstd/liblz4 symlink fix). Caveats: 5,095
+      open issues on a 5.5-month-old repo; not for 1-2 agents; heartbeats burn tokens (budgets pause, don''t cut per-call
+      price); paperclip.ai (Zeus SaaS) is a different product.'
     captured: 2026-08-16
     source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
-    gist: 'TEST: A hands-on look at Paperclip, an org layer where AI agents are hired like employees.'
-    next_step: 'TEST: spin up Paperclip locally via Docker and test the hermes_gateway adapter with Hermes as a worker.'
+    gist: 'Paperclip is the missing back-office layer for BennettOS: Hermes is a supported worker (hermes_local built-in),
+      budgets/approvals/audit are real and enforced — worth a Mac mini pilot under a small budget.'
+    next_step: 'Pilot on Mac mini (not M1 Air): npx paperclipai onboard --yes, one ''Hermes Ops'' company, hire claude_local
+      + hermes_local agents, run one real workstream (e.g. newsletter brief) under a $5 monthly budget; then decide SSOT boundary
+      (Paperclip issues vs registry/labs) per workstream.'
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -3134,6 +3149,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 00:30:19 SGT
+updated_at: 2026-08-17 01:00:42 SGT
 total_active: 40
 total_done: 88
