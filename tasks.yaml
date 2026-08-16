@@ -1445,8 +1445,9 @@ clusters:
     summary: 'Review the full automated check stack: 1 style audit (ADHD Output Rules), ~8 system-health audits (skills quality,
       memory health, spine benchmark, wiki lint, maintenance sweeper, curator, calibration), ~20 watchdogs (battery, wifi,
       gateway, dashboard, cron health, config guardian, email/ credits watchers). Decide per-check: keep / expand / remove.
-      NOTE: automate a security audit — fold agent-hardening into a scheduled recurring check. wiki-fts5-reindex cron currently
-      in ERROR state.'
+      NOTE: automate a security audit — fold agent-hardening into a scheduled recurring check. Also: design routing so surfaced
+      issues get a defined path to remediation (auto-create registry task / fix pipeline) instead of being reported and parked.
+      wiki-fts5-reindex cron currently in ERROR state.'
     captured: 2026-08-16
     source: Telegram Aug 16 2026 (ADHD audit discussion)
     notes: ~/wiki/_system/pending/compliance-audit-stack-review.md
@@ -2926,6 +2927,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 08:58:27 SGT
+updated_at: 2026-08-16 09:00:27 SGT
 total_active: 36
 total_done: 86
