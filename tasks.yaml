@@ -2322,23 +2322,24 @@ clusters:
     domain: devtools
     priority: p0
     status: active
-    summary: 'Research PASS 1 done (Aug 17). Paperclip (paperclip.ing, MIT, 78.4k stars, Node+Postgres) is a real org layer
-      above agent runtimes: org chart, issues, heartbeats, budgets, approvals, immutable audit. Hermes plugs in as a first-class
-      worker via the BUILT-IN hermes_local adapter (''persistent memory, 30+ tools, 80+ skills, Python 3.10+'') — also an
-      http webhook adapter for remote/custom services (not yet in UI dropdown; API/company-export config only). Budget/approval
-      loop is genuine, not demo: CEO cannot hire or start work without board approval; per-agent monthly budget soft-warns
-      at 80%, auto-pauses at 100%, atomic with task checkout; append-only audit + costs page per agent/task/month. Install:
-      npx paperclipai onboard --yes with embedded Postgres (Apple Silicon needs libzstd/liblz4 symlink fix). Caveats: 5,095
-      open issues on a 5.5-month-old repo; not for 1-2 agents; heartbeats burn tokens (budgets pause, don''t cut per-call
-      price); paperclip.ai (Zeus SaaS) is a different product.'
+    summary: 'PASS 1 done (Aug 17): Paperclip = MIT OSS org layer above agent runtimes (~78k stars, v2026.722.0). KEY FINDING:
+      Hermes has an OFFICIAL native adapter (NousResearch/hermes-paperclip-adapter) — hermes_local spawns hermes chat -q on
+      the Paperclip host, hermes_gateway calls a running Hermes API server; generic http adapter also works (POST {runId,agentId,companyId,context}
+      + PAPERCLIP_API_URL callback). Budget/approval loop is real: 80% warn / 100% hard-stop auto-pause, board approves CEO
+      strategy + hires + budget overrides, immutable audit log with per-agent/per-task cost. Fits M1 locally (embedded Postgres,
+      npx paperclipai onboard --yes); Mac mini+Tailscale is the BennettOS home. CAVEATS: 3 critical vulns disclosed Aug 4
+      (CVE-2026-41679 CVSS 10.0 RCE) — fixed in 2026.416.0, current 2026.722.0 is past fix line but keep loopback/Tailscale-only
+      + no open signup; Hermes adapter wiring gaps on AGENTS.md injection (#3833), skill sync (#2316), env injection (#2915).
+      Full report: ~/wiki/_system/pending/paperclip-explore.md.'
     captured: 2026-08-16
     source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
-    gist: 'Paperclip is the missing back-office layer for BennettOS: Hermes is a supported worker (hermes_local built-in),
-      budgets/approvals/audit are real and enforced — worth a Mac mini pilot under a small budget.'
-    next_step: 'Pilot on Mac mini (not M1 Air): npx paperclipai onboard --yes, one ''Hermes Ops'' company, hire claude_local
-      + hermes_local agents, run one real workstream (e.g. newsletter brief) under a $5 monthly budget; then decide SSOT boundary
-      (Paperclip issues vs registry/labs) per workstream.'
+    gist: 'Paperclip is a legit org layer with an official Hermes adapter — Hermes plugs in natively (hermes_local/hermes_gateway),
+      not just via HTTP. Real budgets+approvals+audit. Security: keep it non-public (CVE-2026-41679 fixed, but config=executable
+      by design). M1 can host a small company.'
+    next_step: 'Decision needed: run the local spike — npx paperclipai onboard --yes on the M1 (loopback-only), 2-agent company
+      (CEO + worker via hermes_local), one real issue end-to-end to validate heartbeat→budget→approval loop before any BennettOS
+      placement. Verify #3833/#2316/#2915 fix status first.'
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -3171,6 +3172,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 01:07:02 SGT
+updated_at: 2026-08-17 01:36:01 SGT
 total_active: 41
 total_done: 88
