@@ -520,15 +520,48 @@ clusters:
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
+  - id: id-tool-design-mcp-caveats
+    title: 'ID Tool — design MCP caveats: in-tool reminders for design-centric features'
+    type: build
+    domain: creative
+    priority: p2
+    status: active
+    summary: 'In-tool reminders for design-centric features: surface the design MCP''s limits in the tool UI when mood boards/concepts
+      run — boards must be briefed as collages, not hero art; opus escalation is the lever when taste falls short. So Estee
+      (and her clients) get the right expectation, not a promise of art.'
+    captured: 2026-08-16
+    source: Aug 15 2026 eval report (~/wiki/scopes/id-tool-design-mcp-complement.md) + user go Aug 16 — PARALLEL build, separate
+      from the Estee-tested build
+    notes: 'Scope: ~/wiki/scopes/id-tool-design-mcp-complement.md. Build lane: HDB-Floor-Plan-Agent branch design-mcp-complement
+      — main stays as the Estee-tested build (deployed floorplan-0xsteamboat.zocomputer.io).'
+    cluster: Interior Design — Estee
+    cluster_emoji: 🛋️
+    cluster_kind: project
+  - id: id-tool-design-notes-gate
+    title: 'ID Tool — design-notes gate: collect client design notes before design features run'
+    type: build
+    domain: creative
+    priority: p2
+    status: active
+    summary: Tool must identify missing client design notes — style/colour/budget/ references — and prompt Estee to collect
+      them before design-centric features (mood boards, material/colour concepts) run.
+    captured: 2026-08-16
+    source: Aug 15 2026 eval report (~/wiki/scopes/id-tool-design-mcp-complement.md) + user go Aug 16 — PARALLEL build, separate
+      from the Estee-tested build
+    notes: 'Scope: ~/wiki/scopes/id-tool-design-mcp-complement.md. Build lane: HDB-Floor-Plan-Agent branch design-mcp-complement
+      — main stays as the Estee-tested build (deployed floorplan-0xsteamboat.zocomputer.io).'
+    cluster: Interior Design — Estee
+    cluster_emoji: 🛋️
+    cluster_kind: project
   archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
+  count: 3
+  total_count: 3
+  active_count: 3
   delegated_count: 0
   done_count: 0
   p0_count: 0
   p1_count: 1
-  p2_count: 0
+  p2_count: 2
   p3_count: 0
 - emoji: 🎭
   name: Performance Coach — Rhoades Protocol
@@ -2965,6 +2998,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 09:17:10 SGT
-total_active: 38
+updated_at: 2026-08-16 13:39:58 SGT
+total_active: 40
 total_done: 86
