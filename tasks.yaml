@@ -2361,7 +2361,7 @@ clusters:
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
     gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: Submit CPN application today and run the SG diagnostic heatmap, then start Track B study.
+    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -3087,6 +3087,6 @@ archive:
 - *id085
 - *id086
 - *id087
-updated_at: 2026-08-16 22:00:51 SGT
+updated_at: 2026-08-16 22:02:26 SGT
 total_active: 39
 total_done: 87
