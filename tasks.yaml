@@ -1873,7 +1873,10 @@ clusters:
       guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
       was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
       API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
-      Recommended exam date Sat Sep 12 2026, online proctored.'
+      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
+      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
+      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
+      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
     captured: 2026-08-16
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
@@ -3082,6 +3085,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 21:20:18 SGT
+updated_at: 2026-08-16 21:23:40 SGT
 total_active: 40
 total_done: 86
