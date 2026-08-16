@@ -42,10 +42,10 @@ cluster_order:
   name: creative
   kind: domain
 - emoji: ''
-  name: career
+  name: devtools
   kind: domain
 - emoji: ''
-  name: devtools
+  name: career
   kind: domain
 - emoji: ''
   name: infra
@@ -2071,65 +2071,28 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: career
-  kind: domain
-  items:
-  - id: ai-adoption-specialist
-    title: Explore AI Adoption Specialist as career path (salaried vs independent)
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
-    captured: 2026-07-15
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id074
-    id: openai-profiles-engage
-    title: Engage with OpenAI profiles on LinkedIn
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id075
-    id: openai-application-prep
-    title: Continue OpenAI application prep
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 1
-  total_count: 3
-  active_count: 1
-  delegated_count: 0
-  done_count: 2
-  p0_count: 0
-  p1_count: 1
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: devtools
   kind: domain
   items:
+  - id: paperclip-explore
+    title: Explore Paperclip — agent org layer
+    type: research
+    domain: devtools
+    priority: p0
+    status: active
+    summary: 'P0 today: hands-on explore of Paperclip (paperclip.ing, 78k-star OSS, v2026.722.0). It''s the org layer ABOVE
+      agent runtimes — you hire AI agents as employees with managers, budgets, and approval gates (board seat model). Adapter-based,
+      model-agnostic: Claude, Codex, Gemini, or your own HTTP service. Key question for our stack: can Hermes plug in as a
+      worker via the HTTP adapter? It''s the "back office" layer in the BennettOS stack (Claude Code headless + Paperclip
+      + GLM-5.2/Codex + Hermes + MCP + Mac mini/Tailscale). Core concepts: Company, Agent, Issue, Heartbeat, Adapter, Budget,
+      Approval.'
+    deadline: 2026-08-16
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — add P0 explore task
+    notes: _system/pending/paperclip-explore.md
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: labs-project-flow-refinement
     title: Labs page refinement — standard project lifecycle flow + per-project PM
     type: build
@@ -2212,13 +2175,69 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  count: 1
-  total_count: 4
-  active_count: 1
+  count: 2
+  total_count: 5
+  active_count: 2
   delegated_count: 0
   done_count: 3
-  p0_count: 1
+  p0_count: 2
   p1_count: 0
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: career
+  kind: domain
+  items:
+  - id: ai-adoption-specialist
+    title: Explore AI Adoption Specialist as career path (salaried vs independent)
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
+      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
+      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
+      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    captured: 2026-07-15
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id074
+    id: openai-profiles-engage
+    title: Engage with OpenAI profiles on LinkedIn
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id075
+    id: openai-application-prep
+    title: Continue OpenAI application prep
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 3
+  active_count: 1
+  delegated_count: 0
+  done_count: 2
+  p0_count: 0
+  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -2927,6 +2946,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 09:00:27 SGT
-total_active: 36
+updated_at: 2026-08-16 09:13:45 SGT
+total_active: 37
 total_done: 86
