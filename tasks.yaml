@@ -2315,17 +2315,15 @@ clusters:
     domain: devtools
     priority: p0
     status: active
-    summary: 'P0 today: hands-on explore of Paperclip (paperclip.ing, 78k-star OSS, v2026.722.0). It''s the org layer ABOVE
-      agent runtimes — you hire AI agents as employees with managers, budgets, and approval gates (board seat model). Adapter-based,
-      model-agnostic: Claude, Codex, Gemini, or your own HTTP service. Key question for our stack: can Hermes plug in as a
-      worker via the HTTP adapter? It''s the "back office" layer in the BennettOS stack (Claude Code headless + Paperclip
-      + GLM-5.2/Codex + Hermes + MCP + Mac mini/Tailscale). Core concepts: Company, Agent, Issue, Heartbeat, Adapter, Budget,
-      Approval.'
+    summary: 'TEST write-back: hands-on explore of Paperclip (paperclip.ing, 78k-star OSS, v2026.722.0). It''s the org layer
+      ABOVE agent runtimes — you hire AI agents as employees with managers, budgets, approval gates. Hermes can plug in as
+      a worker via the hermes_gateway adapter (stable built-in) or the generic HTTP adapter. Key finding: budget enforcement
+      is real but only binds API-metered spend; subscription workers run uncapped.'
     captured: 2026-08-16
     source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
-    gist: A hands-on look at Paperclip, an org layer where AI agents are hired like employees.
-    next_step: Spin up Paperclip locally and test the HTTP adapter with Hermes as a worker.
+    gist: 'TEST: A hands-on look at Paperclip, an org layer where AI agents are hired like employees.'
+    next_step: 'TEST: spin up Paperclip locally via Docker and test the hermes_gateway adapter with Hermes as a worker.'
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -3136,6 +3134,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 00:24:24 SGT
+updated_at: 2026-08-17 00:30:19 SGT
 total_active: 40
 total_done: 88
