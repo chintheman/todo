@@ -1881,7 +1881,7 @@ clusters:
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
     gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: 'Start fast-track prep tonight: read exam guide PDF, then Gauntlet Gate 1 baseline.'
+    next_step: Submit CPN application today and run the SG diagnostic heatmap, then start Track B study.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -3085,6 +3085,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 21:23:40 SGT
+updated_at: 2026-08-16 21:29:50 SGT
 total_active: 40
 total_done: 86
