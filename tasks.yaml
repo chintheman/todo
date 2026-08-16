@@ -39,13 +39,13 @@ cluster_order:
   name: devops
   kind: domain
 - emoji: ''
+  name: career
+  kind: domain
+- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
   name: devtools
-  kind: domain
-- emoji: ''
-  name: career
   kind: domain
 - emoji: ''
   name: infra
@@ -1758,6 +1758,80 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: career
+  kind: domain
+  items:
+  - id: ai-adoption-specialist
+    title: Explore AI Adoption Specialist as career path (salaried vs independent)
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
+      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
+      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
+      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    captured: 2026-07-15
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: claude-certification-review
+    title: Review Claude certification pipeline and plan it out
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
+      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
+      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
+      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
+      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
+      was Jul 30 2026. Review where the pipeline stands now and lay out the path to sitting the exam.'
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
+    notes: _system/pending/claude-certification-review.md
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id074
+    id: openai-profiles-engage
+    title: Engage with OpenAI profiles on LinkedIn
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id075
+    id: openai-application-prep
+    title: Continue OpenAI application prep
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 2
+  total_count: 4
+  active_count: 2
+  delegated_count: 0
+  done_count: 2
+  p0_count: 0
+  p1_count: 2
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: creative
   kind: domain
   items:
@@ -2182,62 +2256,6 @@ clusters:
   done_count: 3
   p0_count: 2
   p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: career
-  kind: domain
-  items:
-  - id: ai-adoption-specialist
-    title: Explore AI Adoption Specialist as career path (salaried vs independent)
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
-    captured: 2026-07-15
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id074
-    id: openai-profiles-engage
-    title: Engage with OpenAI profiles on LinkedIn
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id075
-    id: openai-application-prep
-    title: Continue OpenAI application prep
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 1
-  total_count: 3
-  active_count: 1
-  delegated_count: 0
-  done_count: 2
-  p0_count: 0
-  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -2946,6 +2964,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 09:13:45 SGT
-total_active: 37
+updated_at: 2026-08-16 09:16:44 SGT
+total_active: 38
 total_done: 86
