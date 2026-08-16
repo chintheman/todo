@@ -1440,7 +1440,7 @@ clusters:
     title: Review compliance/audit/watchdog stack — expand or remove
     type: discuss
     domain: devops
-    priority: p2
+    priority: p1
     status: active
     summary: 'Review the full automated check stack: 1 style audit (ADHD Output Rules), ~8 system-health audits (skills quality,
       memory health, spine benchmark, wiki lint, maintenance sweeper, curator, calibration), ~20 watchdogs (battery, wifi,
@@ -1753,8 +1753,8 @@ clusters:
   delegated_count: 0
   done_count: 14
   p0_count: 1
-  p1_count: 1
-  p2_count: 1
+  p1_count: 2
+  p2_count: 0
   p3_count: 0
 - emoji: ''
   name: creative
@@ -2926,6 +2926,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 08:57:47 SGT
+updated_at: 2026-08-16 08:58:27 SGT
 total_active: 36
 total_done: 86
