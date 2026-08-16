@@ -33,13 +33,13 @@ cluster_order:
   name: ai/ml
   kind: domain
 - emoji: ''
+  name: career
+  kind: domain
+- emoji: ''
   name: crypto
   kind: domain
 - emoji: ''
   name: devops
-  kind: domain
-- emoji: ''
-  name: career
   kind: domain
 - emoji: ''
   name: creative
@@ -658,12 +658,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: agency-agents-deep-dive
-    title: Deep dive on Agency Agents — install, route, and integrate 232 specialist personas
+    title: Deep dive on Agency Agents — install, route, and integrate 238 specialist personas
     type: discuss
     domain: ai/ml
     priority: p0
     status: active
-    summary: 'msitarzewski/agency-agents — 232 AI agent personas across 16 divisions (engineering, design, product, marketing,
+    summary: 'VERIFIED Aug 16 2026: plugin installed + enabled, 238 agents/17 divisions, search/inspect/load work; agency_agents_delegate
+      BROKEN (dispatch_tool lacks parent context) — workaround: load prompt then delegate_task manually. No conflict with
+      skill-gate. msitarzewski/agency-agents — 238 AI agent personas across 17 divisions (engineering, design, product, marketing,
       sales, security, etc.). Ships a native Hermes plugin (agency-agents-router) with 4 tools: search, inspect, load, delegate.
       Lazy routing — one plugin with data/agents.json, not 232 external skills. Routes specialists on demand via delegate_task.
       Complements our 26 profiles (system-level) with task-level specialists. Need to: inspect plugin source, install, test
@@ -671,16 +673,21 @@ clusters:
       skills.'
     captured: '2026-07-07'
     source: '@RoundtableSpace on X (Jul 6, 2026) — msitarzewski/agency-agents (128K⭐)'
-    notes: "REPO: github.com/msitarzewski/agency-agents (128K⭐, MIT, 367 commits) APP: agencyagents.app — Tauri 2 desktop\
-      \ app for browse/install/track HERMES PLUGIN (4 tools):\n  - agency_agents_search: find specialists by query/division\n\
-      \  - agency_agents_inspect: inspect metadata or full body\n  - agency_agents_load: compose specialist prompt for current\
-      \ task\n  - agency_agents_delegate: delegate via delegate_task\nINSTALL: git clone → ./scripts/convert.sh --tool hermes\
-      \ → ./scripts/install.sh --tool hermes PLUGIN PATH: ~/.hermes/plugins/agency-agents-router/ DIVISIONS (16): academic,\
-      \ design, engineering, finance, game-development,\n  gis, marketing, paid-media, product, project-management, sales,\
-      \ security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
-      \ KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
-    gist: An evaluation of the Agency Agents plugin that routes 232 specialist AI personas on demand.
-    next_step: Test the agency-agents-router plugin with a real delegation.
+    notes: "PRIOR WORK (Jul 7-Aug 14 2026): repo cloned to ~/agency-agents/; plugin installed since Jul 8; ~/agency-highlights/\
+      \ holds 3 curated personas (PM, FA, NEXUS) as SOUL.md templates; 4 companion integration tasks created Jul 8 then REMOVED\
+      \ Aug 14 (commits 1eb5757, b42d041) in a mass registry cleanup — conclusion: personas are reference templates, not live\
+      \ profiles; some patterns absorbed into creative-agency quality gates + profile-creation. REPO: github.com/msitarzewski/agency-agents\
+      \ (128K⭐, MIT, 367 commits) APP: agencyagents.app — Tauri 2 desktop app for browse/install/track HERMES PLUGIN (4 tools):\n\
+      \  - agency_agents_search: find specialists by query/division\n  - agency_agents_inspect: inspect metadata or full body\n\
+      \  - agency_agents_load: compose specialist prompt for current task\n  - agency_agents_delegate: delegate via delegate_task\n\
+      INSTALL: git clone → ./scripts/convert.sh --tool hermes → ./scripts/install.sh --tool hermes PLUGIN PATH: ~/.hermes/plugins/agency-agents-router/\
+      \ DIVISIONS (16): academic, design, engineering, finance, game-development,\n  gis, marketing, paid-media, product,\
+      \ project-management, sales, security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
+      \ ROUTING REVIEW (Aug 17): ~/wiki/_system/pending/agency-agents-routing-review.md — 43 KEEP / 195 EXCLUDE SKILL: autonomous-ai-agents/agency-agents-router\
+      \ (allowlist embedded) KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
+    gist: An evaluation of the Agency Agents plugin that routes 238 specialist AI personas on demand.
+    next_step: Decide integration strategy — which divisions to route through agency-agents in daily work (engineering/testing
+      strongest; finance too thin to use).
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1383,6 +1390,129 @@ clusters:
   p2_count: 1
   p3_count: 1
 - emoji: ''
+  name: career
+  kind: domain
+  items:
+  - id: cca-f-study-d1
+    title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot
+      (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from
+      diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) +
+      exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking).
+      Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
+    captured: 2026-08-16
+    source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
+    notes: _system/pending/claude-certification-review.md
+    gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
+    next_step: Run Gauntlet Gate 1 baseline, then read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: cca-f-sign-agreement
+    title: 'CCA-F: Sign Freelance Developer Agreement'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Critical-path logistics task. Claude SG sent the Freelance Developer Agreement (ClaudeLabs-DeveloperAgreement_1.pdf)
+      - sign it and upload to obtain the @claudecode.sg email needed for Anthropic Partner Academy registration (Anthropic
+      does not accept personal emails). Upload link: ccaf-onboarding.claudecode.sg/agreement-upload.html?candidate_id=c4181ed2-
+      62e0-4cee-81a5-341983312076. After approval: a Cloudflare "Verify Email Routing Address" email arrives - MUST click
+      Verify or forwarding never works. Check spam folder for it.'
+    captured: 2026-08-17
+    source: 'Email from noreply@claudecode.sg Aug 16 2026 - subject: Your CCA-F Freelance Developer Agreement'
+    notes: _system/pending/claude-certification-review.md
+    gist: Sign and upload the Freelance Developer Agreement to get your claudecode.sg email.
+    next_step: Sign the ClaudeLabs Developer Agreement PDF and upload it at the agreement-upload link, then watch for the
+      Cloudflare verify email.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: ai-adoption-specialist
+    title: Explore AI Adoption Specialist as career path (salaried vs independent)
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
+      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
+      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
+      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    captured: 2026-07-15
+    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
+    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id075
+    id: openai-profiles-engage
+    title: Engage with OpenAI profiles on LinkedIn
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id076
+    id: openai-application-prep
+    title: Continue OpenAI application prep
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id001
+    id: claude-certification-review
+    title: Review Claude certification pipeline and plan it out
+    type: discuss
+    domain: career
+    priority: p0
+    status: done
+    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
+      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
+      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
+      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
+      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
+      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
+      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
+      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
+      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
+      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
+      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
+    notes: _system/pending/claude-certification-review.md
+    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
+    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 3
+  total_count: 6
+  active_count: 3
+  delegated_count: 0
+  done_count: 3
+  p0_count: 2
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: crypto
   kind: domain
   items:
@@ -1854,109 +1984,6 @@ clusters:
   done_count: 14
   p0_count: 1
   p1_count: 2
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: career
-  kind: domain
-  items:
-  - id: cca-f-study-d1
-    title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
-    type: read
-    domain: career
-    priority: p0
-    status: active
-    summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot
-      (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from
-      diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) +
-      exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking).
-      Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
-    captured: 2026-08-16
-    source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
-    notes: _system/pending/claude-certification-review.md
-    gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
-    next_step: Run Gauntlet Gate 1 baseline, then read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: ai-adoption-specialist
-    title: Explore AI Adoption Specialist as career path (salaried vs independent)
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
-    captured: 2026-07-15
-    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
-    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id075
-    id: openai-profiles-engage
-    title: Engage with OpenAI profiles on LinkedIn
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id076
-    id: openai-application-prep
-    title: Continue OpenAI application prep
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id001
-    id: claude-certification-review
-    title: Review Claude certification pipeline and plan it out
-    type: discuss
-    domain: career
-    priority: p0
-    status: done
-    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
-      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
-      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
-      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
-      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
-      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
-      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
-      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
-      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
-      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
-      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
-    captured: 2026-08-16
-    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
-    notes: _system/pending/claude-certification-review.md
-    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 2
-  total_count: 5
-  active_count: 2
-  delegated_count: 0
-  done_count: 3
-  p0_count: 1
-  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -3106,6 +3133,6 @@ archive:
 - *id085
 - *id086
 - *id087
-updated_at: 2026-08-16 22:36:56 SGT
-total_active: 40
+updated_at: 2026-08-17 00:13:41 SGT
+total_active: 41
 total_done: 87
