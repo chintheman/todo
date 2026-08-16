@@ -51,6 +51,9 @@ cluster_order:
   name: infra
   kind: domain
 - emoji: ''
+  name: integrations
+  kind: domain
+- emoji: ''
   name: meta
   kind: domain
 - emoji: ''
@@ -73,9 +76,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: health
-  kind: domain
-- emoji: ''
-  name: integrations
   kind: domain
 - emoji: ''
   name: productivity
@@ -2533,6 +2533,61 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: integrations
+  kind: domain
+  items:
+  - id: agent-account-takeover-research
+    title: Research agent takeover — Telegram account + WhatsApp Business account
+    type: research
+    domain: integrations
+    priority: p1
+    status: active
+    summary: 'Research how an agent can take over a whole Telegram account and a whole WhatsApp Business account. TELEGRAM:
+      three paths — (1) Bot API (limited, can''t initiate chats), (2) Telegram Business API (official, $5/mo Premium, webhook-driven,
+      compliant, but only authorized conversations), (3) MTProto userbot via Telethon/Pyrogram (FULL account control — all
+      chats, groups, channels, media; API ID+hash from my.telegram.org, session strings for deploy; but violates ToS — real
+      ban risk, documented permanent bans). WHATSAPP: (1) Cloud API (official, compliant, webhooks, 24h window, templates
+      required outside window; but Meta BANNED general-purpose AI chatbots on the Business API effective Jan 15 2026 — only
+      business-support use cases allowed, and AI Providers get charged per non-template message), (2) On-Prem API (being phased
+      out), (3) unofficial Baileys (~50MB/session WebSocket) or whatsapp-web.js (Puppeteer, 400-500MB) — full read/write but
+      ToS violation, permanent bans without warning. KEY CONSTRAINT: general- purpose AI assistant over official WhatsApp
+      is now effectively prohibited — the agent would need to be framed as a specific business function.'
+    captured: 2026-08-17
+    source: PA request Aug 17 2026 — research full-account agent takeover, add P1
+    notes: _system/pending/agent-account-takeover-research.md
+    cluster: integrations
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id002
+    id: zo-attio-crm-integration
+    title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
+    type: build
+    domain: integrations
+    priority: p0
+    status: done
+    summary: Connect Attio to Zo (winner of the 26-tool CRM audit). Free tier (3 seats) and the only CRM in the catalog with
+      serious webhook triggers (10 instant) — for inbound capture, triggers ARE the product. Wire the 4 inbound workflows
+      (capture → enrichment → outreach → tracking).
+    captured: 2026-08-14
+    source: Zo CRM audit Aug 13 — ~/projects/zo-crm-audit/zo-crm-audit.html
+    notes: 'Audit verdict: Attio wins; Pipedrive best paid fallback (~$14/mo, 41 actions); Copper Google-native (3 triggers,
+      no free tier). OSS reality check: NocoDB v0.301+ no longer OSI (Sustainable Use License), EspoCRM Zo surface cripplingly
+      thin. Best pairs: lemlist/Instantly outreach, Dropcontact/Enrow enrichment, Notion as concierge-bot data layer. Pending:
+      user connects Attio in Zo app catalog, then verify trigger pulls.'
+    cluster: integrations
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 2
+  active_count: 1
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: meta
   kind: domain
   items:
@@ -2950,39 +3005,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: integrations
-  kind: domain
-  items: []
-  archive:
-  - &id002
-    id: zo-attio-crm-integration
-    title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
-    type: build
-    domain: integrations
-    priority: p0
-    status: done
-    summary: Connect Attio to Zo (winner of the 26-tool CRM audit). Free tier (3 seats) and the only CRM in the catalog with
-      serious webhook triggers (10 instant) — for inbound capture, triggers ARE the product. Wire the 4 inbound workflows
-      (capture → enrichment → outreach → tracking).
-    captured: 2026-08-14
-    source: Zo CRM audit Aug 13 — ~/projects/zo-crm-audit/zo-crm-audit.html
-    notes: 'Audit verdict: Attio wins; Pipedrive best paid fallback (~$14/mo, 41 actions); Copper Google-native (3 triggers,
-      no free tier). OSS reality check: NocoDB v0.301+ no longer OSI (Sustainable Use License), EspoCRM Zo surface cripplingly
-      thin. Best pairs: lemlist/Instantly outreach, Dropcontact/Enrow enrichment, Notion as concierge-bot data layer. Pending:
-      user connects Attio in Zo app catalog, then verify trigger pulls.'
-    cluster: integrations
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 1
-  active_count: 0
-  delegated_count: 0
-  done_count: 1
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: productivity
   kind: domain
   items: []
@@ -3149,6 +3171,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 01:00:42 SGT
-total_active: 40
+updated_at: 2026-08-17 01:07:02 SGT
+total_active: 41
 total_done: 88
