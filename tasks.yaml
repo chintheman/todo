@@ -36,16 +36,22 @@ cluster_order:
   name: crypto
   kind: domain
 - emoji: ''
-  name: creative
+  name: devops
   kind: domain
 - emoji: ''
-  name: devops
+  name: creative
   kind: domain
 - emoji: ''
   name: career
   kind: domain
 - emoji: ''
   name: devtools
+  kind: domain
+- emoji: ''
+  name: infra
+  kind: domain
+- emoji: ''
+  name: meta
   kind: domain
 - emoji: ''
   name: product
@@ -69,13 +75,7 @@ cluster_order:
   name: health
   kind: domain
 - emoji: ''
-  name: infra
-  kind: domain
-- emoji: ''
   name: integrations
-  kind: domain
-- emoji: ''
-  name: meta
   kind: domain
 - emoji: ''
   name: productivity
@@ -170,7 +170,11 @@ clusters:
       academic claims). These can be handled in the same audit pass. UPDATE 2026-08-09 (lint cycle 5): diy-luxury-watches
       downgrade landed (confidence now medium — verified). crypto-quant-system and market-microstructure-theory still high;
       this cycle''s R9 audit added wash-trading-detection, health-wellness-system, hermes-agent-system to the downgrade set.
-      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed.'
+      Intent file 20260809T033000-brain-lint-confidence-wikilinks.yaml filed. UPDATE 2026-08-16 (lint cycle 6): all 5 prior
+      downgrades confirmed landed (crypto-quant-system, market-microstructure-theory, wash-trading-detection, health-wellness-system,
+      hermes-agent-system all medium — verified). This cycle''s R9 sample found 4 new traceability fails (agentic-ai-curriculum,
+      agent-adoption-for-elderly, toto-strategy-system, content-stylist-profile) + 2 R8 re-audits. Intent file 20260816T032000-brain-lint-r9-r8.yaml
+      filed.'
     cluster: Luxury Watches
     cluster_emoji: ⌚
     cluster_kind: project
@@ -641,7 +645,8 @@ clusters:
       \ gateway,\n  separate model runtime. True process isolation.\nThe profile-creation skill (v2.x) confirms: profile:\
       \ field in group_topics\n  is silently ignored on Telegram in v0.18.0.\nOpen questions: Is the current config-level\
       \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
-      \ router and our 26 profile roster."
+      \ router and our 26 profile roster. UPDATE Aug 16 2026: execution started — see task profile-bot-fleet. market-intel\
+      \ gateway live (cron-only until bot token wired)."
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1390,6 +1395,368 @@ clusters:
   p2_count: 2
   p3_count: 0
 - emoji: ''
+  name: devops
+  kind: domain
+  items:
+  - id: hermes-session-pruning-update
+    title: Evaluate & adopt Hermes session DB pruning/archiving
+    type: build
+    domain: devops
+    priority: p0
+    status: active
+    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
+      models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
+      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
+    captured: '2026-07-07'
+    source: '@teknium on X (Jul 6, 2026) — session management update'
+    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
+      users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
+      pruning strategy for our setup. Command: hermes update'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: labs-blitz-pomodoro-build
+    title: Labs Blitz + Pomodoro build — awaiting Zo
+    type: build
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
+      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
+      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
+      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
+      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
+    captured: 2026-08-11
+    source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
+    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
+      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
+      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
+      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
+      use.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: compliance-audit-stack-review
+    title: Review compliance/audit/watchdog stack — expand or remove
+    type: discuss
+    domain: devops
+    priority: p2
+    status: active
+    summary: 'Review the full automated check stack: 1 style audit (ADHD Output Rules), ~8 system-health audits (skills quality,
+      memory health, spine benchmark, wiki lint, maintenance sweeper, curator, calibration), ~20 watchdogs (battery, wifi,
+      gateway, dashboard, cron health, config guardian, email/ credits watchers). Decide per-check: keep / expand / remove.
+      NOTE: automate a security audit — fold agent-hardening into a scheduled recurring check. wiki-fts5-reindex cron currently
+      in ERROR state.'
+    captured: 2026-08-16
+    source: Telegram Aug 16 2026 (ADHD audit discussion)
+    notes: ~/wiki/_system/pending/compliance-audit-stack-review.md
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id085
+    id: ddgs-search-fallback
+    title: DDGS — DuckDuckGo web search fallback
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: Installed ddgs (pip, Hermes venv), set web.search_backend=ddgs in config.yaml. No API key, no Docker, no rate
+      limits. Free fallback when Firecrawl is exhausted.
+    captured: 2026-07-01
+    source: Firecrawl credit exhaustion / Hermes Agent docs
+    notes: config.yaml web.search_backend = ddgs
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id081
+    id: supermemory-dedup-cron
+    title: Memory Audit — Periodic Supermemory dedup + TTL cron
+    type: discuss
+    domain: devops
+    priority: p2
+    status: done
+    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
+      entries.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id062
+    id: graphify-integration
+    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
+      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
+      until we have active coding projects with measurable token burn from re-orientation.
+    captured: '2026-07-04'
+    source: kayvon.ai IG reel — Graphify
+    completed: 2026-07-04
+    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
+      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
+      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
+      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
+      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id065
+    id: developer-agent-codex-claude
+    title: Create a developer agent profile enabling both Codex and Claude Code
+    type: build
+    domain: devops
+    priority: p0
+    status: done
+    summary: Build a dedicated developer profile in Hermes that can orchestrate both Codex CLI and Claude Code as subagents/tools
+      for multi-model coding workflows.
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    delegated_to: The General (#1)
+    completed: 2026-07-04
+    notes: 'Handoff file: ~/wiki/_system/pending/developer-agent-codex-claude.md Existing assets: autonomous-coding-agents
+      skill (references/codex.md, references/claude-code.md, references/opencode.md, references/acp-agent-integration.md),
+      codex-hermes-integration-report.md at ~/research/. Need: dev profile (config.yaml + SOUL.md), routing decision logic,
+      topic registration. Research question: can Codex create creative content? Answered in integration report §3.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id053
+    id: kimi-code-evaluate
+    title: Kimi Code — evaluate as coding agent alternative
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Moonshot AI''s terminal-based AI coding agent (TypeScript, MIT). Direct Claude Code / OpenCode competitor. Powers
+      Kimi K2.5-K2.7 Code models (MoE 1T params, 32B active, 100 tok/s output). Key features: Agent Swarm (100 parallel sub-agents),
+      ACP protocol for IDE integration (Zed, JetBrains), 256K context, npm install. Pricing: $19/mo membership + $0.60/$2.50
+      per MTok (75% cache discount) — 4-17x cheaper than GPT-5.4. Worth evaluating as cheap secondary coding agent alongside
+      our OpenCode + DeepSeek. GH: github.com/MoonshotAI/kimi-code'
+    captured: '2026-07-09'
+    source: Moonshot AI — Kimi Code CLI (MIT, 3K⭐, 699 commits)
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "URL: kimi.com/code — GH: github.com/MoonshotAI/kimi-code (3K⭐, MIT) Model: K2.7 Code (latest), K2.6, K2.5. Released\
+      \ Jun 2026. Install: `npm install -g @moonshot-ai/kimi-code` (Node ≥24.15) ACP protocol means it can drive Zed/JetBrains\
+      \ sessions. Agent Swarm: decomposes tasks into 100 parallel sub-agents (4.5x speedup) Pricing breakdown:\n  - $19/mo\
+      \ membership (300-1200 API calls/5h window, 30 concurrent)\n  - API: $0.60/M input, $2.50/M output (+75% cache discount)\n\
+      \  - 1hr session ~$1.40 vs Claude Code ~$13.50\nRelevance: We have OpenCode with DeepSeek Flash ($0.15-0.30/M).\n  Kimi\
+      \ is more expensive than our current DeepSeek setup, but K2.7\n  may offer different capability tradeoffs. Worth benchmarking\
+      \ vs\n  our stack before deciding to install.\nCross-ref: Our existing autonomous-coding-agents skill references\n \
+      \ OpenCode + DeepSeek as primary stack."
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id026
+    id: safari-mcp-server
+    title: Safari MCP Server — evaluate for web dev/QA pipeline
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Apple''s official Safari MCP server (Safari Technology Preview 247). 17 tools: browser control (tabs/navigation),
+      DOM inspection, network monitoring, screenshots, console logs, accessibility checking, performance analysis, viewport
+      emulation. Connects to any MCP client (Claude Code, Codex). Runs entirely locally — no network calls. Makes agents capable
+      of debugging/QA''ing Safari-rendered pages autonomously. Removed from active per user request 2026-07-23.'
+    captured: '2026-07-09'
+    source: WebKit blog — Saron Yitbarek (Jul 1, 2026)
+    completed: 2026-07-23
+    notes: 'URL: webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ Setup: Safari Technology Preview
+      → enable remote automation → `claude mcp add safari-mcp-stp` Requires: Safari Technology Preview (free), macOS Local
+      only — no network calls. Does NOT access AutoFill/personal data. Tools: browser_console_messages, browser_dialogs, close_tab,
+      create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
+      page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id021
+    id: claude-code-v2-1-203
+    title: Claude Code v2.1.203 — review and update our install
+    type: build
+    domain: devops
+    priority: p1
+    status: done
+    summary: 'Major bug fix release (v2.1.203): macOS background session stalls fixed (15-20s regression in 2.1.196), memory/per-turn
+      CPU regression fixed, ~37% CPU reduction during streaming, ~7MB memory reduction, session token auto-recovery, subagent
+      delegation fix (agents less likely to re-delegate entire task), login-expiry warnings, manual mode badge, Dynamic workflow
+      size setting, /review restored to fast single-pass. Affects our Claude Code CLI Handoff Protocol.'
+    captured: '2026-07-09'
+    completed: 2026-07-27
+    resolution: Updated Jul 12, 2026 — from v2.1.187 to v2.1.207 via `claude install latest --force`. Old app bundle at ~/Library/Application
+      Support/Claude/claude-code/2.1.187/ still exists. New install at ~/.local/bin/claude (symlink to versions/2.1.207).
+      Registry status updated Jul 27 — was left as 'active' after the Jul 12 update.
+    notes: 'Source: releasebot.io/updates/anthropic/claude-code Full CHANGELOG: raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md
+      Key fixes for us: - macOS background session stall (was waiting 15-20s) - Background sessions auto-recover from stale
+      tokens - Subagents carry over work on session restart - Memory/per-turn CPU regression fixed - ~37% streaming CPU reduction
+      Action: Update Claude Code CLI (auto-updates via daemon, or re-install from claude.ai) Cross-ref: We have Claude Code
+      at ~/Library/Application Support/Claude/claude-code/'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id051
+    id: agent-reach
+    title: Agent-Reach — multi-platform web & social access for AI agents
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: 'Local-first CLI that gives AI agents web + social media access across 16+ platforms (Twitter/X, Reddit, YouTube,
+      GitHub, Bilibili, XiaoHongShu, Douyin, Weibo, LinkedIn, Instagram, RSS). MIT licensed. Zero-config for 8 channels, cookie-based
+      auth for others. DIRECTLY RELEVANT: Open-source alternative to Firecrawl (exhausted), Apify, and Tavily. Covers social
+      media scraping we currently can''t do (Instagram, Twitter/X). Complements our DDGS fallback with actual platform-native
+      access.'
+    captured: '2026-07-11'
+    source: '@syntaix.ai Instagram carousel — Panniantong/agent-reach'
+    notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
+      + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
+      scraping. Updated 2026-08-01: verified 63,466 stars (Trendshift #1), pushed to P0 for explore-today. Review: ~/wiki/_system/pending/agent-reach-review.md
+      Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id048
+    id: omniroute-local-gateway
+    title: OmniRoute — local AI routing gateway for 231+ providers
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Open-source local AI gateway: single OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent
+      classifier + task-aware router. Built-in fallback chains, usage tracking, dashboard. Connects Claude Code, Codex, Cursor,
+      Cline, Copilot to free Claude/GPT/Gemini. Overlaps with Hermes model config + provider routing but adds a local proxy
+      layer, free provider access, and intent-based routing.'
+    captured: '2026-07-11'
+    source: '@syntaix.ai Instagram carousel — diegosouzapw/OmniRoute'
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'GitHub: github.com/diegosouzapw/OmniRoute Stack: Next.js app with SSE/routing core Features: 16 OAuth modules,
+      model combo fallback, quota-aware routing, prompt compression, live monitoring dashboard Relevance: Interesting architecture
+      pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
+      Hermes provider config.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id044
+    id: hyperbrowser-eval
+    title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Cloud browser infrastructure for AI agents. Runs Playwright/Puppeteer with residential proxies (12 regions incl.
+      SG), auto CAPTCHA solving, stealth mode, and 1s cold starts. Has official MCP server (npx -y hyperbrowser-mcp, MIT,
+      769★) with 8 tools — scrape, crawl, structured extraction, Browser Use agent, OpenAI CUA, Claude Computer Use. Evaluate
+      as Hermes MCP server add-on for CAPTCHA-bypass on sites the current browser stack can''t handle. Free tier: 5K credits
+      (no CAPTCHA solving). CAPTCHA solving at $30/mo Startup tier.'
+    captured: '2026-07-13'
+    source: hyperbrowser.ai
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "Install: npx -y hyperbrowser-mcp with HYPERBROWSER_API_KEY MCP tools: scrape_webpage, crawl_webpages, extract_structured_data,\n\
+      \  search_with_bing, browser_use_agent, openai_computer_use_agent,\n  claude_computer_use_agent, create/delete/list_profile\n\
+      Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id039
+    id: openwa-eval
+    title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: OpenWA (rmyndharis/OpenWA, MIT, 10.8K★) is a free, self-hosted WhatsApp HTTP API gateway. Full REST API, multi-session,
+      webhooks, web dashboard, groups/channels. Docker-deployable, NestJS/TypeScript stack. Evaluate as a potential WhatsApp
+      integration layer for Hermes delivery (complement to Telegram) and/or concierge bot. Also useful for sharing research/wife
+      communication.
+    captured: 2026-07-17
+    source: Instagram — OpenWA reel
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "GitHub: github.com/rmyndharis/OpenWA (10.8K★, MIT, 621 commits, 65 releases) Latest: v0.8.10 (Jul 7, 2026) — actively\
+      \ maintained Stack: TypeScript 84%, NestJS 11, Node 20, PostgreSQL/SQLite, Redis Features: REST API, multi-session,\
+      \ webhooks, dashboard, bulk messaging,\n  groups API, channels/newsletter, rate limiting, audit logging\nDeploy: docker-compose\
+      \ or local npm Website: open-wa.org Compared to: WhatsApp Cloud API (+$30-50/mo) — OpenWA is free + self-hosted Saved\
+      \ as PA DB link #8."
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id032
+    id: repowise-eval
+    title: Repowise — codebase intelligence MCP tool for agents
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs,
+      Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health
+      scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on
+      same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS.
+      Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
+    captured: 2026-07-19
+    source: Instagram — OpenSource tool discovery
+    notes: 'High relevance — would give Hermes agents context without burning tokens. MCP server integration means agents
+      query indexed knowledge instead of grepping. Compare to codebase-memory-mcp (already in registry). Token savings claim
+      is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. EVALUATED Aug 14
+      2026 (Claude Code, Voltron session) — VERDICT: eval on hermes-agent only (only repo with real source: 7,073 files; concierge-bot
+      4, brain-engine 2, wiki is prose), --no-prose, AFTER Phase 1. Not memory work — it''s a tool Claude Code uses, like
+      ripgrep (spine remembers decisions; repowise indexes code). THIRD codebase-indexer in registry (codebase-memory-mcp
+      P1 active + Graphify P2 deferred) — bottleneck is deciding, not evaluating; pick one or close all three. M1 risk real:
+      swap 1.84GB/3GB, 7,073 files = 2.4x benchmark, 366.8s index time. AGPL-3.0 matters (user publishes OSS). ARCHIVED per
+      user Aug 14 2026.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id015
+    id: buzz-block-review
+    title: Buzz — Block's self-hostable workspace for humans + agents
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: Open-source self-hostable workspace from Block (Jack Dorsey's company) where humans and AI agents share the same
+      rooms. Every message, reaction, workflow step, review approval and git event is a signed Nostr event on your own relay;
+      every participant (human or agent) is a keypair. Agents are members, not bots — own keys, own channel memberships, own
+      audit trail, scoped by identity not permission flags.
+    captured: 2026-08-01
+    source: X thread reply — block/buzz (Nostr workspace)
+    notes: 'Repo: github.com/block/buzz — 19,611 stars, Rust, Apache 2.0, created Mar 2026, pushed daily (very active), 1,345
+      open issues. Capabilities: answer questions with receipts, agent bug triage, feature-branch-as-room, unified search
+      across chat+patch+workflow+ approval, channels/canvases/workflows/voice huddles, frame-anchored media comments. Integrates
+      with Hermes three ways (thread context). Relevance: the "agents as teammates" model vs current Telegram+Hermes loop.
+      Concept high value, deploy low urgency. Review: ~/wiki/_system/pending/buzz-block-review.md'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id014
+    id: oh-my-hermes-review
+    title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: '"Install once. Keep Hermes. Add a stronger operating layer." OMH is a workflow/skill layer on top of Hermes
+      Agent: deep interviews for goal engineering, goal-setting, harnesses across models (Fable, Opus, GPT, Kimi, GLM, Qwen),
+      sub-agent command splitting, memory retention with evidence boundaries. Runs on Hermes Desktop, CLI, and messenger.'
+    captured: 2026-08-01
+    source: X — @rlaope (HOPE | Engineer.) — github.com/rlaope/oh-my-hermes
+    notes: 'Repo: 409 stars, MIT, Python 3.11+, v1.0.4 stable, created Jun 2026, pushed Aug 1 (active). Author: HOPE / Sionic
+      AI (Paris). Key angle: explicit evidence boundaries + "dreaming" memory — overlaps with spine memory v2. Differentiators
+      are workflow layer + evidence gates, not model routing. Worth comparing their evidence model to ours. Review: ~/wiki/_system/pending/oh-my-hermes-review.md'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 3
+  total_count: 17
+  active_count: 3
+  delegated_count: 0
+  done_count: 14
+  p0_count: 1
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: creative
   kind: domain
   items:
@@ -1703,351 +2070,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: devops
-  kind: domain
-  items:
-  - id: hermes-session-pruning-update
-    title: Evaluate & adopt Hermes session DB pruning/archiving
-    type: build
-    domain: devops
-    priority: p0
-    status: active
-    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
-      models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
-      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
-    captured: '2026-07-07'
-    source: '@teknium on X (Jul 6, 2026) — session management update'
-    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
-      users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
-      pruning strategy for our setup. Command: hermes update'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: labs-blitz-pomodoro-build
-    title: Labs Blitz + Pomodoro build — awaiting Zo
-    type: build
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
-      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
-      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
-      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
-      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
-    captured: 2026-08-11
-    source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
-    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
-      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
-      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
-      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
-      use.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id085
-    id: ddgs-search-fallback
-    title: DDGS — DuckDuckGo web search fallback
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: Installed ddgs (pip, Hermes venv), set web.search_backend=ddgs in config.yaml. No API key, no Docker, no rate
-      limits. Free fallback when Firecrawl is exhausted.
-    captured: 2026-07-01
-    source: Firecrawl credit exhaustion / Hermes Agent docs
-    notes: config.yaml web.search_backend = ddgs
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id081
-    id: supermemory-dedup-cron
-    title: Memory Audit — Periodic Supermemory dedup + TTL cron
-    type: discuss
-    domain: devops
-    priority: p2
-    status: done
-    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
-      entries.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id062
-    id: graphify-integration
-    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
-      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
-      until we have active coding projects with measurable token burn from re-orientation.
-    captured: '2026-07-04'
-    source: kayvon.ai IG reel — Graphify
-    completed: 2026-07-04
-    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
-      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
-      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
-      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
-      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id065
-    id: developer-agent-codex-claude
-    title: Create a developer agent profile enabling both Codex and Claude Code
-    type: build
-    domain: devops
-    priority: p0
-    status: done
-    summary: Build a dedicated developer profile in Hermes that can orchestrate both Codex CLI and Claude Code as subagents/tools
-      for multi-model coding workflows.
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    delegated_to: The General (#1)
-    completed: 2026-07-04
-    notes: 'Handoff file: ~/wiki/_system/pending/developer-agent-codex-claude.md Existing assets: autonomous-coding-agents
-      skill (references/codex.md, references/claude-code.md, references/opencode.md, references/acp-agent-integration.md),
-      codex-hermes-integration-report.md at ~/research/. Need: dev profile (config.yaml + SOUL.md), routing decision logic,
-      topic registration. Research question: can Codex create creative content? Answered in integration report §3.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id053
-    id: kimi-code-evaluate
-    title: Kimi Code — evaluate as coding agent alternative
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Moonshot AI''s terminal-based AI coding agent (TypeScript, MIT). Direct Claude Code / OpenCode competitor. Powers
-      Kimi K2.5-K2.7 Code models (MoE 1T params, 32B active, 100 tok/s output). Key features: Agent Swarm (100 parallel sub-agents),
-      ACP protocol for IDE integration (Zed, JetBrains), 256K context, npm install. Pricing: $19/mo membership + $0.60/$2.50
-      per MTok (75% cache discount) — 4-17x cheaper than GPT-5.4. Worth evaluating as cheap secondary coding agent alongside
-      our OpenCode + DeepSeek. GH: github.com/MoonshotAI/kimi-code'
-    captured: '2026-07-09'
-    source: Moonshot AI — Kimi Code CLI (MIT, 3K⭐, 699 commits)
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "URL: kimi.com/code — GH: github.com/MoonshotAI/kimi-code (3K⭐, MIT) Model: K2.7 Code (latest), K2.6, K2.5. Released\
-      \ Jun 2026. Install: `npm install -g @moonshot-ai/kimi-code` (Node ≥24.15) ACP protocol means it can drive Zed/JetBrains\
-      \ sessions. Agent Swarm: decomposes tasks into 100 parallel sub-agents (4.5x speedup) Pricing breakdown:\n  - $19/mo\
-      \ membership (300-1200 API calls/5h window, 30 concurrent)\n  - API: $0.60/M input, $2.50/M output (+75% cache discount)\n\
-      \  - 1hr session ~$1.40 vs Claude Code ~$13.50\nRelevance: We have OpenCode with DeepSeek Flash ($0.15-0.30/M).\n  Kimi\
-      \ is more expensive than our current DeepSeek setup, but K2.7\n  may offer different capability tradeoffs. Worth benchmarking\
-      \ vs\n  our stack before deciding to install.\nCross-ref: Our existing autonomous-coding-agents skill references\n \
-      \ OpenCode + DeepSeek as primary stack."
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id026
-    id: safari-mcp-server
-    title: Safari MCP Server — evaluate for web dev/QA pipeline
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Apple''s official Safari MCP server (Safari Technology Preview 247). 17 tools: browser control (tabs/navigation),
-      DOM inspection, network monitoring, screenshots, console logs, accessibility checking, performance analysis, viewport
-      emulation. Connects to any MCP client (Claude Code, Codex). Runs entirely locally — no network calls. Makes agents capable
-      of debugging/QA''ing Safari-rendered pages autonomously. Removed from active per user request 2026-07-23.'
-    captured: '2026-07-09'
-    source: WebKit blog — Saron Yitbarek (Jul 1, 2026)
-    completed: 2026-07-23
-    notes: 'URL: webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ Setup: Safari Technology Preview
-      → enable remote automation → `claude mcp add safari-mcp-stp` Requires: Safari Technology Preview (free), macOS Local
-      only — no network calls. Does NOT access AutoFill/personal data. Tools: browser_console_messages, browser_dialogs, close_tab,
-      create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
-      page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id021
-    id: claude-code-v2-1-203
-    title: Claude Code v2.1.203 — review and update our install
-    type: build
-    domain: devops
-    priority: p1
-    status: done
-    summary: 'Major bug fix release (v2.1.203): macOS background session stalls fixed (15-20s regression in 2.1.196), memory/per-turn
-      CPU regression fixed, ~37% CPU reduction during streaming, ~7MB memory reduction, session token auto-recovery, subagent
-      delegation fix (agents less likely to re-delegate entire task), login-expiry warnings, manual mode badge, Dynamic workflow
-      size setting, /review restored to fast single-pass. Affects our Claude Code CLI Handoff Protocol.'
-    captured: '2026-07-09'
-    completed: 2026-07-27
-    resolution: Updated Jul 12, 2026 — from v2.1.187 to v2.1.207 via `claude install latest --force`. Old app bundle at ~/Library/Application
-      Support/Claude/claude-code/2.1.187/ still exists. New install at ~/.local/bin/claude (symlink to versions/2.1.207).
-      Registry status updated Jul 27 — was left as 'active' after the Jul 12 update.
-    notes: 'Source: releasebot.io/updates/anthropic/claude-code Full CHANGELOG: raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md
-      Key fixes for us: - macOS background session stall (was waiting 15-20s) - Background sessions auto-recover from stale
-      tokens - Subagents carry over work on session restart - Memory/per-turn CPU regression fixed - ~37% streaming CPU reduction
-      Action: Update Claude Code CLI (auto-updates via daemon, or re-install from claude.ai) Cross-ref: We have Claude Code
-      at ~/Library/Application Support/Claude/claude-code/'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id051
-    id: agent-reach
-    title: Agent-Reach — multi-platform web & social access for AI agents
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: 'Local-first CLI that gives AI agents web + social media access across 16+ platforms (Twitter/X, Reddit, YouTube,
-      GitHub, Bilibili, XiaoHongShu, Douyin, Weibo, LinkedIn, Instagram, RSS). MIT licensed. Zero-config for 8 channels, cookie-based
-      auth for others. DIRECTLY RELEVANT: Open-source alternative to Firecrawl (exhausted), Apify, and Tavily. Covers social
-      media scraping we currently can''t do (Instagram, Twitter/X). Complements our DDGS fallback with actual platform-native
-      access.'
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — Panniantong/agent-reach'
-    notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
-      + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
-      scraping. Updated 2026-08-01: verified 63,466 stars (Trendshift #1), pushed to P0 for explore-today. Review: ~/wiki/_system/pending/agent-reach-review.md
-      Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id048
-    id: omniroute-local-gateway
-    title: OmniRoute — local AI routing gateway for 231+ providers
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Open-source local AI gateway: single OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent
-      classifier + task-aware router. Built-in fallback chains, usage tracking, dashboard. Connects Claude Code, Codex, Cursor,
-      Cline, Copilot to free Claude/GPT/Gemini. Overlaps with Hermes model config + provider routing but adds a local proxy
-      layer, free provider access, and intent-based routing.'
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — diegosouzapw/OmniRoute'
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'GitHub: github.com/diegosouzapw/OmniRoute Stack: Next.js app with SSE/routing core Features: 16 OAuth modules,
-      model combo fallback, quota-aware routing, prompt compression, live monitoring dashboard Relevance: Interesting architecture
-      pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
-      Hermes provider config.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id044
-    id: hyperbrowser-eval
-    title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Cloud browser infrastructure for AI agents. Runs Playwright/Puppeteer with residential proxies (12 regions incl.
-      SG), auto CAPTCHA solving, stealth mode, and 1s cold starts. Has official MCP server (npx -y hyperbrowser-mcp, MIT,
-      769★) with 8 tools — scrape, crawl, structured extraction, Browser Use agent, OpenAI CUA, Claude Computer Use. Evaluate
-      as Hermes MCP server add-on for CAPTCHA-bypass on sites the current browser stack can''t handle. Free tier: 5K credits
-      (no CAPTCHA solving). CAPTCHA solving at $30/mo Startup tier.'
-    captured: '2026-07-13'
-    source: hyperbrowser.ai
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "Install: npx -y hyperbrowser-mcp with HYPERBROWSER_API_KEY MCP tools: scrape_webpage, crawl_webpages, extract_structured_data,\n\
-      \  search_with_bing, browser_use_agent, openai_computer_use_agent,\n  claude_computer_use_agent, create/delete/list_profile\n\
-      Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id039
-    id: openwa-eval
-    title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: OpenWA (rmyndharis/OpenWA, MIT, 10.8K★) is a free, self-hosted WhatsApp HTTP API gateway. Full REST API, multi-session,
-      webhooks, web dashboard, groups/channels. Docker-deployable, NestJS/TypeScript stack. Evaluate as a potential WhatsApp
-      integration layer for Hermes delivery (complement to Telegram) and/or concierge bot. Also useful for sharing research/wife
-      communication.
-    captured: 2026-07-17
-    source: Instagram — OpenWA reel
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "GitHub: github.com/rmyndharis/OpenWA (10.8K★, MIT, 621 commits, 65 releases) Latest: v0.8.10 (Jul 7, 2026) — actively\
-      \ maintained Stack: TypeScript 84%, NestJS 11, Node 20, PostgreSQL/SQLite, Redis Features: REST API, multi-session,\
-      \ webhooks, dashboard, bulk messaging,\n  groups API, channels/newsletter, rate limiting, audit logging\nDeploy: docker-compose\
-      \ or local npm Website: open-wa.org Compared to: WhatsApp Cloud API (+$30-50/mo) — OpenWA is free + self-hosted Saved\
-      \ as PA DB link #8."
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id032
-    id: repowise-eval
-    title: Repowise — codebase intelligence MCP tool for agents
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs,
-      Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health
-      scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on
-      same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS.
-      Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
-    captured: 2026-07-19
-    source: Instagram — OpenSource tool discovery
-    notes: 'High relevance — would give Hermes agents context without burning tokens. MCP server integration means agents
-      query indexed knowledge instead of grepping. Compare to codebase-memory-mcp (already in registry). Token savings claim
-      is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. EVALUATED Aug 14
-      2026 (Claude Code, Voltron session) — VERDICT: eval on hermes-agent only (only repo with real source: 7,073 files; concierge-bot
-      4, brain-engine 2, wiki is prose), --no-prose, AFTER Phase 1. Not memory work — it''s a tool Claude Code uses, like
-      ripgrep (spine remembers decisions; repowise indexes code). THIRD codebase-indexer in registry (codebase-memory-mcp
-      P1 active + Graphify P2 deferred) — bottleneck is deciding, not evaluating; pick one or close all three. M1 risk real:
-      swap 1.84GB/3GB, 7,073 files = 2.4x benchmark, 366.8s index time. AGPL-3.0 matters (user publishes OSS). ARCHIVED per
-      user Aug 14 2026.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id015
-    id: buzz-block-review
-    title: Buzz — Block's self-hostable workspace for humans + agents
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: Open-source self-hostable workspace from Block (Jack Dorsey's company) where humans and AI agents share the same
-      rooms. Every message, reaction, workflow step, review approval and git event is a signed Nostr event on your own relay;
-      every participant (human or agent) is a keypair. Agents are members, not bots — own keys, own channel memberships, own
-      audit trail, scoped by identity not permission flags.
-    captured: 2026-08-01
-    source: X thread reply — block/buzz (Nostr workspace)
-    notes: 'Repo: github.com/block/buzz — 19,611 stars, Rust, Apache 2.0, created Mar 2026, pushed daily (very active), 1,345
-      open issues. Capabilities: answer questions with receipts, agent bug triage, feature-branch-as-room, unified search
-      across chat+patch+workflow+ approval, channels/canvases/workflows/voice huddles, frame-anchored media comments. Integrates
-      with Hermes three ways (thread context). Relevance: the "agents as teammates" model vs current Telegram+Hermes loop.
-      Concept high value, deploy low urgency. Review: ~/wiki/_system/pending/buzz-block-review.md'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id014
-    id: oh-my-hermes-review
-    title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: '"Install once. Keep Hermes. Add a stronger operating layer." OMH is a workflow/skill layer on top of Hermes
-      Agent: deep interviews for goal engineering, goal-setting, harnesses across models (Fable, Opus, GPT, Kimi, GLM, Qwen),
-      sub-agent command splitting, memory retention with evidence boundaries. Runs on Hermes Desktop, CLI, and messenger.'
-    captured: 2026-08-01
-    source: X — @rlaope (HOPE | Engineer.) — github.com/rlaope/oh-my-hermes
-    notes: 'Repo: 409 stars, MIT, Python 3.11+, v1.0.4 stable, created Jun 2026, pushed Aug 1 (active). Author: HOPE / Sionic
-      AI (Paris). Key angle: explicit evidence boundaries + "dreaming" memory — overlaps with spine memory v2. Differentiators
-      are workflow layer + evidence gates, not model routing. Worth comparing their evidence model to ours. Review: ~/wiki/_system/pending/oh-my-hermes-review.md'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 2
-  total_count: 16
-  active_count: 2
-  delegated_count: 0
-  done_count: 14
-  p0_count: 1
-  p1_count: 1
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: career
   kind: domain
   items:
@@ -2196,6 +2218,232 @@ clusters:
   done_count: 3
   p0_count: 1
   p1_count: 0
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: infra
+  kind: domain
+  items:
+  - id: profile-bot-fleet
+    title: Turn profile fleet into specialist bots — Bot Mode rollout
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
+      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
+      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
+      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
+      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
+    captured: 2026-08-16
+    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
+    notes: _system/pending/profile-bot-fleet.md
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id003
+    id: project-idea-capture-system
+    title: Project-level idea capture system — random projects/discussions storage
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
+      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
+      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
+    captured: 2026-08-14
+    source: User request Aug 14 2026 (during PAL session)
+    completed: 2026-08-14
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
+      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id082
+    id: hw-to-wiki-migration
+    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
+      store now.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id079
+    id: topic-role-audit
+    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
+    type: discuss
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
+      pass. No discrepancies found.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: Forum migration — HermesBoat69 12 topics
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id069
+    id: index-md-folder-optimization
+    title: Implement INDEX.md folder optimization for Hermes wiki
+    type: build
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
+    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 5
+  active_count: 1
+  delegated_count: 0
+  done_count: 4
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: meta
+  kind: domain
+  items:
+  - id: lint-raw-immutability-violation-2026-08-16
+    title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
+    type: maintain
+    domain: meta
+    priority: p1
+    status: active
+    summary: 'Rule 3 (raw immutability) violation: git log --diff-filter=MD -- raw/ since 2026-08-09 shows 1 deletion — raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md
+      deleted in commit b09d604 (Aug 15 digest, "dead-code sweeper" work). The blob still exists in the parent commit (b09d604^)
+      so it is fully restorable. raw/ is append-only per BRAIN.md §0.3; deletions are only acceptable as an explicit, documented,
+      human-approved exception.'
+    captured: 2026-08-16
+    source: lint-cron-2026-08-16 @ R3
+    notes: 'ACTION: either (a) restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md`
+      then commit `restore(raw): 2026-07-17-pa-link-openwa-whatsapp-api`, or (b) if the deletion was intentional (dead-code
+      sweep of a stale capture), record an explicit exception in _system/log.md with the human''s approval so future lints
+      stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
+      PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
+      the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id020
+    id: tool-decision-framework
+    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
+    type: discuss
+    domain: meta
+    priority: p2
+    status: done
+    completed: 2026-07-27
+    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
+      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
+      for open-ended creative work. Routing rules documented in this entry.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id036
+    id: lint-rejected-cleanup
+    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
+      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
+      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
+      or archive.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R14
+    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
+      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
+      unchanged. UPDATE 2026-08-16 (lint cycle 6): status marked done — consistent with the 2026-08-12 sweep that resolved
+      the sibling Phase 3 test artifacts (injection source + contradiction flag) as "keep as permanent test". Rejected/ files
+      retained as permanent test fixtures, matching that resolution; no further lint escalation expected.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id008
+    id: lint-injection-resolution
+    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
+      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
+      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
+      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
+      archive it or formally resolve the flag so future lints stop surfacing it.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R15
+    completed: 2026-08-12
+    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
+      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
+      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id007
+    id: lint-contradiction-resolution
+    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
+      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
+      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
+      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R1
+    completed: 2026-08-12
+    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
+      (lint cycle 5): flag now 33 days old, still unresolved.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id011
+    id: lint-raw-capture-stall
+    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
+      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
+      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
+      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
+      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
+    captured: 2026-08-09
+    source: lint-cron-2026-08-09 @ metrics
+    resolution: blitz-archived via labs 2026-08-14
+    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
+      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
+      2 weeks, persistent miss).
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 6
+  active_count: 1
+  delegated_count: 0
+  done_count: 5
+  p0_count: 0
+  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -2481,84 +2729,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: infra
-  kind: domain
-  items: []
-  archive:
-  - &id003
-    id: project-idea-capture-system
-    title: Project-level idea capture system — random projects/discussions storage
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
-      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
-      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
-    captured: 2026-08-14
-    source: User request Aug 14 2026 (during PAL session)
-    completed: 2026-08-14
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
-      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id082
-    id: hw-to-wiki-migration
-    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
-      store now.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id079
-    id: topic-role-audit
-    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
-    type: discuss
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
-      pass. No discrepancies found.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: Forum migration — HermesBoat69 12 topics
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id069
-    id: index-md-folder-optimization
-    title: Implement INDEX.md folder optimization for Hermes wiki
-    type: build
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
-    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 4
-  active_count: 0
-  delegated_count: 0
-  done_count: 4
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: integrations
   kind: domain
   items: []
@@ -2587,114 +2757,6 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 1
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: meta
-  kind: domain
-  items: []
-  archive:
-  - &id020
-    id: tool-decision-framework
-    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
-    type: discuss
-    domain: meta
-    priority: p2
-    status: done
-    completed: 2026-07-27
-    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
-      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
-      for open-ended creative work. Routing rules documented in this entry.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id036
-    id: lint-rejected-cleanup
-    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
-      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
-      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
-      or archive.'
-    captured: 2026-07-19
-    source: lint-cron-2026-07-19 @ R14
-    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
-      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
-      unchanged.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id008
-    id: lint-injection-resolution
-    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
-      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
-      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
-      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
-      archive it or formally resolve the flag so future lints stop surfacing it.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R15
-    completed: 2026-08-12
-    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
-      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
-      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id007
-    id: lint-contradiction-resolution
-    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
-      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
-      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
-      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R1
-    completed: 2026-08-12
-    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
-      (lint cycle 5): flag now 33 days old, still unresolved.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id011
-    id: lint-raw-capture-stall
-    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
-      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
-      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
-      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
-      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
-    captured: 2026-08-09
-    source: lint-cron-2026-08-09 @ metrics
-    resolution: blitz-archived via labs 2026-08-14
-    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
-      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
-      2 weeks, persistent miss).
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 5
-  active_count: 0
-  delegated_count: 0
-  done_count: 5
   p0_count: 0
   p1_count: 0
   p2_count: 0
@@ -2864,6 +2926,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-15 22:38:19 SGT
-total_active: 33
+updated_at: 2026-08-16 08:57:47 SGT
+total_active: 36
 total_done: 86
