@@ -100,6 +100,7 @@ clusters:
     source: 0xsteamboat request Aug 15 (PM role assignment)
     notes: 'App state verified Aug 15: v1.1.0 live Aug 12 2026, Education category, 5.0★ (1 rating), free, EN only, iOS 17+.
       User interview in progress (one question at a time) to lock success definition and context.'
+    next_step: Finish the user interview and lock the success definition.
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -122,6 +123,7 @@ clusters:
       \ via headless browser?\n  - What's the per-bet minimum and max?\n  - Account funding — recurring top-up from bank?\n\
       \  - ToS violation risk (automated gambling)?\n  - Legal status: automated betting in Singapore?\n  - Practical: 100\
       \ quick picks at $1 = $100 per draw"
+    next_step: Research SG Pools digital API and ToS constraints on automated betting.
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -138,6 +140,7 @@ clusters:
     source: 0xsteamboat request Aug 13 (Lovable use-case brainstorm)
     notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine
       (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
+    next_step: Prototype the receipt scan flow on Lovable as a UX test.
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -175,6 +178,7 @@ clusters:
       hermes-agent-system all medium — verified). This cycle''s R9 sample found 4 new traceability fails (agentic-ai-curriculum,
       agent-adoption-for-elderly, toto-strategy-system, content-stylist-profile) + 2 R8 re-audits. Intent file 20260816T032000-brain-lint-r9-r8.yaml
       filed.'
+    next_step: Downgrade confidence on the remaining uncited pages to medium.
     cluster: Luxury Watches
     cluster_emoji: ⌚
     cluster_kind: project
@@ -201,11 +205,12 @@ clusters:
     summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts,
       competitor snapshots, (2) canonical index file every agent reads first on startup.
     captured: 2026-06-30
-    source: Tim Scheuer / Oxygen LinkedIn post
+    source: Tim Scheuer / Oxygen LinkedIn post - https://www.linkedin.com/posts/tim-scheuer-91b005237_we-built-a-company-wide-second-brain-for-share-7474587239059568384-VvsF/
     delegated_to: The General (#1)
     notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips,
       gap analysis table). Full context delivered to The General. Moved to 💔 Grief Management project cluster Aug 14 2026
       (render-todo-yaml.py + GitHub push 667bfc7).'
+    next_step: Ask Chin for the go-ahead to build the /raw capture layer and agent index.
     cluster: Grief 'Management'
     cluster_emoji: 💔
     cluster_kind: project
@@ -220,7 +225,7 @@ clusters:
       not general journaling. Voice-first, private by default, on-device AI that notices patterns in what the user repeats
       or shifts over time.'
     captured: 2026-07-23
-    source: User idea + Slate private journal app reference
+    source: User idea + Slate private journal app reference - https://apps.apple.com/us/app/slate-private-journal/id6787531627
     notes: 'REFERENCE APP: Slate - Private Journal URL: https://apps.apple.com/us/app/slate-private-journal/id6787531627 Developer:
       hsla0001. Price: $7.99/mo or $59.99/yr (1 month free trial). Size: 3 MB. Platform: iOS 26+ (iPhone only). Rating: 5.0.
 
@@ -236,6 +241,7 @@ clusters:
       Grief (Journal and Vault with shared memory vault), Heartchive (end-to-end encrypted, caregiving + grief paths).
 
       Sibling to nicest-place-website and looking-busy-website in the business/build portfolio.'
+    next_step: 'Scope the MVP: on-device voice recording plus weekly pattern recap.'
     cluster: Grief 'Management'
     cluster_emoji: 💔
     cluster_kind: project
@@ -268,6 +274,7 @@ clusters:
       change news categories on the fly — simple, playful, actually useful. The pun is the hook ("What''s Up Dog?" = "What''s
       up, dog?"), the news digest is the value prop. Think of it as "your dog has been reading the papers for you." Categorised
       news brief delivered conversationally, with category preferences that persist per user.'
+    next_step: Decide with Chin whether Up Dog ships as a Telegram bot or a web app.
     cluster: Up Dog
     cluster_emoji: 🐶
     cluster_kind: project
@@ -306,6 +313,7 @@ clusters:
       resolved (3-tier exit waterfall DEX→0.25% instant→10% weekly queue; par NAV marking; mint floor = revert not sell-below-par;
       20% fee split 30/30/30/10 treasury). Plan corrected 4 locked design elements (price-lock look-back option, mid-marking
       overstatement, $1-floor mis-selling, resolution-fee collects ~0).'
+    next_step: Get Chin's counsel sign-off on SG lawfulness of the paper research.
     cluster: PAL — Delta-Neutral Polymarket
     cluster_emoji: 🎯
     cluster_kind: project
@@ -336,6 +344,7 @@ clusters:
     source: 0xsteamboat idea
     notes: 'Product idea. Needs research: ad networks for AI, context injection patterns, tracking/attribution models, revenue
       split mechanics.'
+    next_step: Research the AI ad network landscape and revenue split mechanics.
     cluster: Agentic Ad Network
     cluster_emoji: 🪧
     cluster_kind: project
@@ -375,6 +384,7 @@ clusters:
       to Telegram by a 5 min Mac cron (bday-poller.sh) over hermes send. Tear down after the birthday: remove the crontab
       line + ~/.local/bin/bday-poller.sh + ~/.config/bday/, then public/bday/ and the /bday + /api/bday/* routes in server.ts.
       Claude Code session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    next_step: Await Chin's round two review comments, then apply them to the guide.
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -394,6 +404,7 @@ clusters:
     notes: 'AFTER THE BIRTHDAY, tear down: (1) remove the Mac crontab line (*/5 bday-poller.sh) plus ~/.local/bin/bday-poller.sh
       and ~/.config/bday/, (2) remove public/bday/ and the /bday + /api/bday/* routes from server.ts, redeploy. Claude Code
       session ID: session_01PA3FuHpA8CMqLdEsqte79E.'
+    next_step: Run the teardown checklist in the notes after the birthday passes.
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -411,8 +422,10 @@ clusters:
       (4) MAS SAFR framework / Singapore AI governance. Publish frequency: 1-2x weekly. Tone: direct, evidence-backed, no
       hype. Every post must include something the reader can try.'
     captured: '2026-07-06'
-    source: Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment over models), Elena
-      Verna "Cool. Show me." bar
+    source: Weekly digest synthesis (Jul 6, 2026) - Phil Chen framework (problem selection, deployment over models) - https://x.com/philhchen/status/2072793818945167475,
+      Elena Verna "Cool. Show me." bar Weekly digest synthesis (Jul 6, 2026) — Phil Chen framework (problem selection, deployment
+      over models), Elena Verna "Cool. Show me." bar
+    next_step: Write and publish the first show-me post on the Agentic Hotpot Substack.
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -437,6 +450,7 @@ clusters:
     notes: 'Phase 2 work (source adapters). Blocked behind the Phase 1 seed — the repo still needs gigmap/data/gigs.json,
       glyphs.js, build_data.py and the other three handover docs before ingest is meaningful. Claude Code session ID: session_01QDtxNxRaHZuwJ8pTwcsWc1
       (https://claude.ai/code/session_01QDtxNxRaHZuwJ8pTwcsWc1).'
+    next_step: Verify livebandtonight.com is still maintained before building the adapter.
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
@@ -464,9 +478,10 @@ clusters:
       WhatsApp, FB Messenger, website chat, email. Test use case: WhatsApp-heavy sales chats — review selected conversations,
       analyse, send consolidated report (situational context + next steps) to user.'
     captured: 2026-08-12
-    source: Zo app catalog — heyy.io
+    source: Zo app catalog - heyy.io - https://heyy.io
     notes: Paid plan (~$15+/mo). Read actions (get conversations, list messages) only visible after connecting — connect trial
       first to confirm what's pullable before building the analysis layer.
+    next_step: Connect the Heyy trial in Zo and confirm which read actions are visible.
     cluster: Zo Integration
     cluster_emoji: 🤖
     cluster_kind: project
@@ -481,9 +496,10 @@ clusters:
       $14/1k credits, 100 free, PAYG never expires. Slot into instagram-content / social-video-extraction ladder as fast-path
       data source (API over browser automation preference).
     captured: 2026-08-12
-    source: Zo app catalog — socialfetch.dev
+    source: Zo app catalog - socialfetch.dev - https://socialfetch.dev
     notes: Read-only scraping — no IG posting. Needs account signup (free 100 credits, no card) then authorize in Zo. Verify
       an IG profile pull once connected.
+    next_step: Sign up for social_fetch, connect it in Zo, and verify an IG profile pull.
     cluster: Zo Integration
     cluster_emoji: 🤖
     cluster_kind: project
@@ -517,6 +533,7 @@ clusters:
       ~ matters). Full details + open items (icon doc for Estee, 802 mm door question, web vs CLI decision) in ~/wiki/_system/pending/interior-design-estee.md.
       Repo github.com/chintheman/HDB-Floor-Plan-Agent; deployed on Zo at /home/workspace/hdb-floor-plan-agent (service svc_BYbw0dR3Qj8).
       Anthropic key in M1 Keychain (service hdb-floor-plan-agent-anthropic). 55 tests passing.'
+    next_step: Resume the Claude session and resolve the 802 mm door reference question.
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
@@ -534,6 +551,7 @@ clusters:
       from the Estee-tested build
     notes: 'Scope: ~/wiki/scopes/id-tool-design-mcp-complement.md. Build lane: HDB-Floor-Plan-Agent branch design-mcp-complement
       — main stays as the Estee-tested build (deployed floorplan-0xsteamboat.zocomputer.io).'
+    next_step: Build the design MCP caveat reminders on the design-mcp-complement branch.
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
@@ -550,6 +568,7 @@ clusters:
       from the Estee-tested build
     notes: 'Scope: ~/wiki/scopes/id-tool-design-mcp-complement.md. Build lane: HDB-Floor-Plan-Agent branch design-mcp-complement
       — main stays as the Estee-tested build (deployed floorplan-0xsteamboat.zocomputer.io).'
+    next_step: Implement the design-notes gate on the design-mcp-complement branch.
     cluster: Interior Design — Estee
     cluster_emoji: 🛋️
     cluster_kind: project
@@ -580,6 +599,7 @@ clusters:
     captured: 2026-08-15
     source: User request in Wendy Rhoades topic Aug 15 2026
     notes: 'Skill: ~/.hermes/skills/coaching/rhoades-protocol (v3.0.0).'
+    next_step: Stress-test the 11 guardrails against live sessions in the Wendy Rhoades topic.
     cluster: Performance Coach — Rhoades Protocol
     cluster_emoji: 🎭
     cluster_kind: project
@@ -610,6 +630,7 @@ clusters:
     notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
       bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
       in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
+    next_step: Write up the context assembly findings and rank candidate optimisations.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -635,6 +656,7 @@ clusters:
       \ design, engineering, finance, game-development,\n  gis, marketing, paid-media, product, project-management, sales,\
       \ security,\n  spatial-computing, specialized, support, testing\nRESEARCH FILE: ~/wiki/_system/pending/agency-agents-deep-dive.md\
       \ KEY QUESTION: complements or conflicts with our existing skill-gate plugin?"
+    next_step: Test the agency-agents-router plugin with a real delegation.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -656,6 +678,7 @@ clusters:
       + user DM drafted to Tianyi Cui, Aug 13/14 public OSS launch. Strategic read: models commoditize — the harness layer
       is where agent infra differentiates; direct signal from DeepSeek''s roadmap. Sources: AI Intel briefs (Pulse 4d3416344dab
       2026-08-14, X Multi-Scanner 81b086688939, SCMP 92d91537883f).'
+    next_step: Run npx @deepseek-ai/dsh web and test the standard preset on a real task.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -680,6 +703,7 @@ clusters:
       \ isolation sufficient? When\n  would we need true isolation? Cost/overhead of multiple bot tokens?\nCross-ref: agency-agents\
       \ router and our 26 profile roster. UPDATE Aug 16 2026: execution started — see task profile-bot-fleet. market-intel\
       \ gateway live (cron-only until bot token wired)."
+    next_step: Discuss with Chin whether dedicated bot tokens per profile are worth the isolation.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -702,6 +726,7 @@ clusters:
     notes: 'Directly validates the reflexion-loop maker-checker design (fresh-context critic) and the crewai-orchestrator
       diamond shape. The fake-edge test is a good audit lens for existing multi-agent workflows. Caveat: graphs buy breadth,
       not judgment — skip for small/sequential/exploratory tasks.'
+    next_step: Run the fake-edge test across existing multi-agent workflows and fix sequential waits.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -718,6 +743,7 @@ clusters:
     source: X post by Anatoli Kopadze — https://x.com/anatolikopadze/status/2084982016328482926
     notes: Video resource (38 min, 1.3K bookmarks, 203K views). Relevant to the agent-orchestration cluster — self-prompting
       systems are the end-state of the loops/graphs work. High-level framing post; the guide is the actionable part.
+    next_step: Watch the 38-minute Altman talk and read the linked self-prompting guide.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1347,6 +1373,7 @@ clusters:
       drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
       with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
       Validated via direct GH read + repo info + README review.'
+    next_step: Ask Chin whether he has the paid TradingView subscription before installing.
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
@@ -1364,6 +1391,7 @@ clusters:
     notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
       commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
       decomposition is the pattern worth extracting for the quant stack.
+    next_step: Extract the research-queue and ranking pattern into the quant stack design.
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
@@ -1378,6 +1406,7 @@ clusters:
     captured: '2026-07-03'
     source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
     notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
+    next_step: Review the pending file and pick the top three repos to trial.
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
@@ -1441,10 +1470,11 @@ clusters:
       models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
       strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
     captured: '2026-07-07'
-    source: '@teknium on X (Jul 6, 2026) — session management update'
+    source: '@teknium on X (Jul 6, 2026) - session management update - https://x.com/Teknium/status/2073997246220349615'
     notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
       users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
       pruning strategy for our setup. Command: hermes update'
+    next_step: Run hermes update and pick the session DB pruning strategy.
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -1466,6 +1496,7 @@ clusters:
       in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
       cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
       use.'
+    next_step: Check Zo's progress on the labs blitz build and verify the phase one filter fix.
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -1484,6 +1515,7 @@ clusters:
     captured: 2026-08-16
     source: Telegram Aug 16 2026 (ADHD audit discussion)
     notes: ~/wiki/_system/pending/compliance-audit-stack-review.md
+    next_step: Draft the keep/expand/remove decision table for every check in the stack.
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -1810,6 +1842,7 @@ clusters:
     captured: 2026-08-16
     source: PA request Aug 16 2026 — review CCA-F pipeline and plan
     notes: _system/pending/claude-certification-review.md
+    next_step: Write the CCA-F study plan and set the new exam date with Chin.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -1824,6 +1857,7 @@ clusters:
       Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
       outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
+    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -1885,11 +1919,12 @@ clusters:
       \ Directly applicable to Creative Agency carousel pipeline — can framework-match each brief to the best structure for\
       \ the content type."
     captured: '2026-07-10'
-    source: '@vibemarketersHQ on X (Jul 9, 2026) — 5 frameworks reverse-engineered from 500+ carousels'
+    source: '@vibemarketersHQ on X (Jul 9, 2026) - 5 frameworks reverse-engineered from 500+ carousels - https://x.com/vibemarketershq/status/2075278813437800450'
     notes: 'Source: x.com/vibemarketershq/status/2075278813437800450 Image: ~/.hermes/image_cache/img_851cd6508a16.jpg RELEVANCE:
       We have carousels-mcp (11 slide types) and creative-agency pipeline. These 5 frameworks can be mapped to carousels-mcp
       slide types and integrated as brief-to-framework routing logic. Each framework is a proven structure — use to decide
       which carousel format fits the content objective rather than defaulting to one.'
+    next_step: Map the five frameworks to carousels-mcp slide types.
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
@@ -1909,6 +1944,7 @@ clusters:
     source: '@syntaix.ai Instagram carousel — calesthio/OpenMontage'
     notes: 'GitHub: github.com/calesthio/OpenMontage YouTube: @OpenMontage — full prompts + pipelines + costs shared per video
       Relevance: Open-source alternative to arcads ($110-220/mo). Could integrate with our existing FAL (FLUX/Seedance) stack.'
+    next_step: Evaluate OpenMontage against the planned arcads integration.
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
@@ -2196,8 +2232,9 @@ clusters:
       Approval.'
     deadline: 2026-08-16
     captured: 2026-08-16
-    source: PA request Aug 16 2026 — add P0 explore task
+    source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
+    next_step: Spin up Paperclip locally and test the HTTP adapter with Hermes as a worker.
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -2217,6 +2254,7 @@ clusters:
     notes: 'Interview COMPLETE (6 Qs, Aug 15) + research PASS 1 done. Full refined spec — architecture, flow templates by
       objective, setup checklist, registry schema additions, build plan + first research: _system/pending/labs-project-flow-refinement.md.
       Registry is the SSOT for all project state (flow stage, checklist items, tasks).'
+    next_step: Build Phase 2 of the project flow engine per the refined spec.
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -2310,6 +2348,7 @@ clusters:
     captured: 2026-08-16
     source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
     notes: _system/pending/profile-bot-fleet.md
+    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
@@ -2409,6 +2448,7 @@ clusters:
       stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
       PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
       the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more.'
+    next_step: Ask Chin whether the raw file deletion was intentional, then restore or document it.
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2538,6 +2578,7 @@ clusters:
     notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
       Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
       Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
+    next_step: Fix the MutationObserver CPU throttle, the known open bug.
     cluster: product
     cluster_emoji: ''
     cluster_kind: domain
@@ -2998,6 +3039,6 @@ archive:
 - *id084
 - *id085
 - *id086
-updated_at: 2026-08-16 13:39:58 SGT
+updated_at: 2026-08-16 15:27:54 SGT
 total_active: 40
 total_done: 86
