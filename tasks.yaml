@@ -39,13 +39,13 @@ cluster_order:
   name: devops
   kind: domain
 - emoji: ''
+  name: career
+  kind: domain
+- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
   name: devtools
-  kind: domain
-- emoji: ''
-  name: career
   kind: domain
 - emoji: ''
   name: infra
@@ -1857,6 +1857,110 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: career
+  kind: domain
+  items:
+  - id: cca-f-study-d1
+    title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot
+      (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from
+      diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) +
+      exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking).
+      Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
+    captured: 2026-08-16
+    source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
+    notes: _system/pending/claude-certification-review.md
+    gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
+    next_step: Read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7, then run Gauntlet Gate 1 D1
+      questions.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: ai-adoption-specialist
+    title: Explore AI Adoption Specialist as career path (salaried vs independent)
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
+      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
+      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
+      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    captured: 2026-07-15
+    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
+    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id075
+    id: openai-profiles-engage
+    title: Engage with OpenAI profiles on LinkedIn
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id076
+    id: openai-application-prep
+    title: Continue OpenAI application prep
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id001
+    id: claude-certification-review
+    title: Review Claude certification pipeline and plan it out
+    type: discuss
+    domain: career
+    priority: p0
+    status: done
+    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
+      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
+      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
+      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
+      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
+      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
+      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
+      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
+      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
+      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
+      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
+    notes: _system/pending/claude-certification-review.md
+    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
+    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 2
+  total_count: 5
+  active_count: 2
+  delegated_count: 0
+  done_count: 3
+  p0_count: 1
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: creative
   kind: domain
   items:
@@ -2288,90 +2392,6 @@ clusters:
   done_count: 3
   p0_count: 2
   p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: career
-  kind: domain
-  items:
-  - id: ai-adoption-specialist
-    title: Explore AI Adoption Specialist as career path (salaried vs independent)
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
-    captured: 2026-07-15
-    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
-    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id075
-    id: openai-profiles-engage
-    title: Engage with OpenAI profiles on LinkedIn
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id076
-    id: openai-application-prep
-    title: Continue OpenAI application prep
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id001
-    id: claude-certification-review
-    title: Review Claude certification pipeline and plan it out
-    type: discuss
-    domain: career
-    priority: p0
-    status: done
-    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
-      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
-      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
-      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
-      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
-      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
-      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
-      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
-      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
-      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
-      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
-    captured: 2026-08-16
-    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
-    notes: _system/pending/claude-certification-review.md
-    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 1
-  total_count: 4
-  active_count: 1
-  delegated_count: 0
-  done_count: 3
-  p0_count: 0
-  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -3087,6 +3107,6 @@ archive:
 - *id085
 - *id086
 - *id087
-updated_at: 2026-08-16 22:02:26 SGT
-total_active: 39
+updated_at: 2026-08-16 22:32:06 SGT
+total_active: 40
 total_done: 87
