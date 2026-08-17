@@ -1634,11 +1634,13 @@ clusters:
     title: Evaluate & adopt Hermes session DB pruning/archiving
     type: build
     domain: devops
-    priority: p0
+    priority: p1
     status: active
     summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
       models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
-      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.'
+      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.
+      PRIORITY CORRECTED Aug 17 2026: was P0 since Jul 7 capture with no action in 6 weeks — downgraded to P1 maintenance.
+      Real user priorities (CCA-F, career) hold the P0 slots.'
     captured: '2026-07-07'
     source: '@teknium on X (Jul 6, 2026) - session management update - https://x.com/Teknium/status/2073997246220349615'
     notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
@@ -1991,8 +1993,8 @@ clusters:
   active_count: 3
   delegated_count: 0
   done_count: 14
-  p0_count: 1
-  p1_count: 2
+  p0_count: 0
+  p1_count: 3
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -3176,6 +3178,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 02:00:59 SGT
+updated_at: 2026-08-17 08:18:14 SGT
 total_active: 41
 total_done: 88
