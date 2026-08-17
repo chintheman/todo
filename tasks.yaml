@@ -30,10 +30,10 @@ cluster_order:
   name: Performance Coach — Rhoades Protocol
   kind: project
 - emoji: ''
-  name: ai/ml
+  name: career
   kind: domain
 - emoji: ''
-  name: career
+  name: ai/ml
   kind: domain
 - emoji: ''
   name: crypto
@@ -633,6 +633,232 @@ clusters:
   done_count: 0
   p0_count: 0
   p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: career
+  kind: domain
+  items:
+  - id: cca-f-study-d1
+    title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot
+      (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from
+      diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) +
+      exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking).
+      Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
+    captured: 2026-08-16
+    source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
+    notes: _system/pending/claude-certification-review.md
+    gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
+    next_step: 'CLOSED Aug 17 2026 — Gate 1 55% (9 misses, 4 D1) → 5 chunks taught → mini-mock 10/10. D1 domain closed. Next
+      in chain: cca-f-study-d3 (Claude Code Config, 20%).'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: cca-f-study-d3
+    title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Second pomodoro-sized session in the CCA-F chain. Study order from diagnostic (Aug 16): D1, D3, D4, D2, D5.
+      D1 closed Aug 17 (Gate 1 55%, 4 D1 misses -> 5 chunks -> mini-mock 10/10). D3 = Claude Code Configuration & Workflows,
+      20% of exam (~12 questions). Diagnostic showed D3 at 100% but Gate 1 Set 1 had 3 D3-preview misses (Explore subagent,
+      .claude/rules/ globs, -p flag) — the diagnostic and Gauntlet disagree, so a D3 heatmap baseline settles it. Session
+      scope: exam guide Domain 3 task statements 3.1-3.5 + community guide Claude Code sections. Vendor-canonical framing
+      still applies: the exam scores Anthropic''s answer, not personal practice.'
+    captured: 2026-08-17
+    source: Handoff from cca-f-study-d1 (closed Aug 17 2026, mini-mock 10/10)
+    notes: _system/pending/claude-certification-review.md
+    gist: Second study session in the chain — Claude Code config domain, 20% of the exam.
+    next_step: 'CLOSED Aug 17 2026 — 3 chunks taught, 9/9 chunk quizzes, mini-mock 8/10 (80%, threshold met). Soft spots logged
+      for exam-week sweep: (1) slash commands in .claude/commands/ not CLAUDE.md (Sample Q4), (2) --resume continues named
+      session but does NOT restore stale tool results, (3) /memory = memory-loading diagnostic. Next in chain: cca-f-study-d4
+      (Prompt Engineering & Structured Output, 20%).'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: cca-f-study-d4
+    title: 'CCA-F study: D4 Prompt Engineering & Structured Output'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Third pomodoro-sized session in the CCA-F chain. Study order from diagnostic (Aug 16): D1, D3, D4, D2, D5. D1
+      closed Aug 17 (mock 10/10), D3 closed Aug 17 (mock 8/10). D4 = Prompt Engineering & Structured Output, 20% of exam (~12
+      questions), and the diagnostic''s weakest domain at 33% (2 honest gaps — wrong & knew it, so careful study fixes it).
+      This is the classic power-user trap: consumes structured output through Hermes/Claude Code but never authors forced-schema/tool-use
+      mechanics. Session scope: exam guide Domain 4 + community guide §4/§6. Known target: tool_choice options (auto vs "any"
+      vs forced).'
+    captured: 2026-08-17
+    source: Handoff from cca-f-study-d3 (closed Aug 17 2026, mini-mock 8/10)
+    notes: _system/pending/claude-certification-review.md
+    gist: Third study session in the chain — your weakest domain from the diagnostic (33%), 20% of the exam.
+    next_step: 'Diagnostic showed D4 at 33% with 2 honest gaps — the weakest domain. Session scope: exam guide Domain 4 task
+      statements 4.1-4.5 (structured output via tool_use, JSON schemas, tool_choice, few-shot, validation-retry loops, batch)
+      + community guide sections 4 and 6. Known misses from Gate 1 to fix: tool_choice ("any" guarantees a tool call; forced
+      = must call THAT tool; auto = may return text). Vendor-canonical framing critical: user consumes structured output daily
+      but has never authored forced-schema mechanics — the classic framework-user trap.'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: cca-f-register-book
+    title: 'CCA-F: Register + book exam seat (Pearson VUE)'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Exam registration pipeline. Paid $125 directly to Anthropic via Partner Academy Aug 17 2026 (the @claudecode.sg
+      email is chuang.tuan@claudecode.sg, forwarded to personal inbox; Cloudflare verify clicked). Remaining gates: (1) send
+      proof of registration receipt to @Katobishi on Telegram within 48h of email issuance (deadline ~Aug 19 12:05 SGT) —
+      per onboarding form acknowledgement; (2) Pearson VUE username + temporary password arrive by email from PearsonVUEConfirmation@e.pearson.com
+      — watched by cron 1086c94f0be6 every 3 min; (3) book exam at pearsonvue.com/us/en/anthropic — recommend TEST CENTRE
+      over online proctored (M1 runs agent frameworks + scheduled jobs, likely to fail proctor system checks). No promo codes
+      exist (verified); CPN partner-tier discount applies automatically at checkout if Claude Labs is Select+ — price shown
+      was full $125, so Registered tier.'
+    captured: 2026-08-17
+    source: User confirmed Partner Academy payment Aug 17 2026
+    notes: _system/pending/claude-certification-review.md
+    gist: Registration paid — send receipt proof to @Katobishi within 48h, then book the exam at a test centre.
+    next_step: DM @Katobishi on Telegram with $125 registration receipt screenshot (deadline Aug 19 ~12:05 SGT). Await Pearson
+      VUE username/password emails (watcher 1086c94f0be6). Then sign in at pearsonvue.com/us/en/anthropic, set new password,
+      book TEST CENTRE date. Report the booked date to align study plan.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: ai-adoption-specialist
+    title: Explore AI Adoption Specialist as career path (salaried vs independent)
+    type: discuss
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
+      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
+      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
+      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
+    captured: 2026-07-15
+    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
+    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: productise-hermes-enterprise
+    title: Productise Hermes setup for enterprises — 5 paths, audit-led consulting recommended
+    type: research
+    domain: career
+    priority: p1
+    status: active
+    summary: 'Core insight: nobody buys "your Hermes setup" — enterprises buy de-risking and outcomes. Three proven capabilities
+      to sell: (1) institutional memory that works (hermes-second-brain + spine-memory: governed writes, provenance, injection
+      defense — enterprise KM that doesn''t rot), (2) AI ops that don''t break weekly (cron quality gates, watchdog patterns,
+      100+ battle-tested skills), (3) the trust/audit layer (agent-security-audit CLI — security is how consultants get in
+      the door). Five ranked paths: (1) Agent-Ops Consulting $15-40K/engagement ~2wks, (2) Productised Open Source "Agentic
+      Second Brain Enterprise Pack" $5-15K license ~1mo, (3) Vertical agent products $500-2K/mo per client ~1-2mo, (4) Team
+      enablement workshops $3-8K ~1wk, (5) Anthropic partner track deal-based 3-6mo. Funnel: free/cheap audit → implementation
+      retainer → playbook licensing. Career tie-in: every deployment is a case study = interview ammo for OpenAI/ElevenLabs
+      PM/CS — productise to prove, not replace the career. Recommendation on record: audit-led consulting (#1). Deep dive
+      deferred until after the CCA-F exam (Chin, Aug 17 2026).'
+    captured: 2026-08-17
+    source: Session Aug 16 2026 — "How can I productise my hermes setup and knowledge to help enterprises?"
+    notes: 'Source: _system/pending/productise-hermes-enterprise.md · Session: @session:default/20260816_092344_fd4d41ff ·
+      Related: ai-adoption-specialist'
+    gist: A ranked analysis of five ways to sell the proven Hermes stack to enterprises.
+    next_step: Deep dive the 5 productisation paths and pick the wedge after the CCA-F exam.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id077
+    id: openai-profiles-engage
+    title: Engage with OpenAI profiles on LinkedIn
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id078
+    id: openai-application-prep
+    title: Continue OpenAI application prep
+    type: create
+    domain: career
+    priority: p0
+    status: done
+    summary: Removed from active list per user request 2026-07-04.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id002
+    id: claude-certification-review
+    title: Review Claude certification pipeline and plan it out
+    type: discuss
+    domain: career
+    priority: p0
+    status: done
+    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
+      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
+      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
+      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
+      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
+      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
+      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
+      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
+      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
+      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
+      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
+    captured: 2026-08-16
+    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
+    notes: _system/pending/claude-certification-review.md
+    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
+    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id001
+    id: cca-f-sign-agreement
+    title: 'CCA-F: Sign Freelance Developer Agreement'
+    type: read
+    domain: career
+    priority: p0
+    status: done
+    summary: 'Critical-path logistics task. Claude SG sent the Freelance Developer Agreement (ClaudeLabs-DeveloperAgreement_1.pdf)
+      - sign it and upload to obtain the @claudecode.sg email needed for Anthropic Partner Academy registration (Anthropic
+      does not accept personal emails). Upload link: ccaf-onboarding.claudecode.sg/agreement-upload.html?candidate_id=c4181ed2-
+      62e0-4cee-81a5-341983312076. After approval: a Cloudflare "Verify Email Routing Address" email arrives - MUST click
+      Verify or forwarding never works. Check spam folder for it. VERIFIED Aug 17 2026: email download link works (token was
+      full JWT, display-truncated in tool output). Agreement downloaded to /tmp/ClaudeLabs-DeveloperAgreement_1.pdf - 2-page
+      doc between Hungry Human Pte Ltd (UEN 202237899N) and Developer; upload page live and pre-bound to "Chuang Chin Tuan".
+      Fields needed: full legal name, NRIC/FIN/passport, DOB, nationality, mobile, personal email. Key clause 3.1: while agreement
+      active, cannot use CCA-F cert for outside AI implementation work (employment/CV use allowed per 3.2). PDPA consent to
+      fred@claudecode.sg. Valid 365 days, no auto-renewal.'
+    captured: 2026-08-17
+    source: 'Email from noreply@claudecode.sg Aug 16 2026 - subject: Your CCA-F Freelance Developer Agreement'
+    notes: _system/pending/claude-certification-review.md
+    gist: Sign and upload the Freelance Developer Agreement to get your claudecode.sg email.
+    next_step: Wait for review approval + Cloudflare verify email; click Verify (check spam), then register at Skilljar with
+      @claudecode.sg email.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 6
+  total_count: 10
+  active_count: 6
+  delegated_count: 0
+  done_count: 4
+  p0_count: 4
+  p1_count: 2
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -1399,209 +1625,6 @@ clusters:
   p1_count: 1
   p2_count: 1
   p3_count: 1
-- emoji: ''
-  name: career
-  kind: domain
-  items:
-  - id: cca-f-study-d1
-    title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
-    type: read
-    domain: career
-    priority: p0
-    status: active
-    summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot
-      (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from
-      diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) +
-      exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking).
-      Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
-    captured: 2026-08-16
-    source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
-    notes: _system/pending/claude-certification-review.md
-    gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
-    next_step: 'CLOSED Aug 17 2026 — Gate 1 55% (9 misses, 4 D1) → 5 chunks taught → mini-mock 10/10. D1 domain closed. Next
-      in chain: cca-f-study-d3 (Claude Code Config, 20%).'
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: cca-f-study-d3
-    title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
-    type: read
-    domain: career
-    priority: p0
-    status: active
-    summary: 'Second pomodoro-sized session in the CCA-F chain. Study order from diagnostic (Aug 16): D1, D3, D4, D2, D5.
-      D1 closed Aug 17 (Gate 1 55%, 4 D1 misses -> 5 chunks -> mini-mock 10/10). D3 = Claude Code Configuration & Workflows,
-      20% of exam (~12 questions). Diagnostic showed D3 at 100% but Gate 1 Set 1 had 3 D3-preview misses (Explore subagent,
-      .claude/rules/ globs, -p flag) — the diagnostic and Gauntlet disagree, so a D3 heatmap baseline settles it. Session
-      scope: exam guide Domain 3 task statements 3.1-3.5 + community guide Claude Code sections. Vendor-canonical framing
-      still applies: the exam scores Anthropic''s answer, not personal practice.'
-    captured: 2026-08-17
-    source: Handoff from cca-f-study-d1 (closed Aug 17 2026, mini-mock 10/10)
-    notes: _system/pending/claude-certification-review.md
-    gist: Second study session in the chain — Claude Code config domain, 20% of the exam.
-    next_step: 'Run Gauntlet Gate 1 Set 2/3 for a D3 heatmap baseline (from D1 session: Gate 1 is 3 sets of 20). Then study
-      community guide sections on Claude Code + exam guide Domain 3 task statements 3.1-3.5 (CLAUDE.md hierarchy, slash commands/skills
-      frontmatter, .claude/rules/ paths globs, plan mode vs direct execution, iterative refinement). Known Gate 1 misses to
-      fix: Explore subagent purpose (context-window isolation), .claude/rules/ glob beats directory CLAUDE.md for scattered
-      files, -p/--print for CI/CD headless (CLAUDE_HEADLESS + --batch are non-existent features).'
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: cca-f-register-book
-    title: 'CCA-F: Register + book exam seat (Pearson VUE)'
-    type: read
-    domain: career
-    priority: p0
-    status: active
-    summary: 'Exam registration pipeline. Paid $125 directly to Anthropic via Partner Academy Aug 17 2026 (the @claudecode.sg
-      email is chuang.tuan@claudecode.sg, forwarded to personal inbox; Cloudflare verify clicked). Remaining gates: (1) send
-      proof of registration receipt to @Katobishi on Telegram within 48h of email issuance (deadline ~Aug 19 12:05 SGT) —
-      per onboarding form acknowledgement; (2) Pearson VUE username + temporary password arrive by email from PearsonVUEConfirmation@e.pearson.com
-      — watched by cron 1086c94f0be6 every 3 min; (3) book exam at pearsonvue.com/us/en/anthropic — recommend TEST CENTRE
-      over online proctored (M1 runs agent frameworks + scheduled jobs, likely to fail proctor system checks). No promo codes
-      exist (verified); CPN partner-tier discount applies automatically at checkout if Claude Labs is Select+ — price shown
-      was full $125, so Registered tier.'
-    captured: 2026-08-17
-    source: User confirmed Partner Academy payment Aug 17 2026
-    notes: _system/pending/claude-certification-review.md
-    gist: Registration paid — send receipt proof to @Katobishi within 48h, then book the exam at a test centre.
-    next_step: DM @Katobishi on Telegram with $125 registration receipt screenshot (deadline Aug 19 ~12:05 SGT). Await Pearson
-      VUE username/password emails (watcher 1086c94f0be6). Then sign in at pearsonvue.com/us/en/anthropic, set new password,
-      book TEST CENTRE date. Report the booked date to align study plan.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: ai-adoption-specialist
-    title: Explore AI Adoption Specialist as career path (salaried vs independent)
-    type: discuss
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried
-      PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio,
-      Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable
-      outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
-    captured: 2026-07-15
-    gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
-    next_step: Decide with Chin between the salaried PM path and the fractional consultant path.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: productise-hermes-enterprise
-    title: Productise Hermes setup for enterprises — 5 paths, audit-led consulting recommended
-    type: research
-    domain: career
-    priority: p1
-    status: active
-    summary: 'Core insight: nobody buys "your Hermes setup" — enterprises buy de-risking and outcomes. Three proven capabilities
-      to sell: (1) institutional memory that works (hermes-second-brain + spine-memory: governed writes, provenance, injection
-      defense — enterprise KM that doesn''t rot), (2) AI ops that don''t break weekly (cron quality gates, watchdog patterns,
-      100+ battle-tested skills), (3) the trust/audit layer (agent-security-audit CLI — security is how consultants get in
-      the door). Five ranked paths: (1) Agent-Ops Consulting $15-40K/engagement ~2wks, (2) Productised Open Source "Agentic
-      Second Brain Enterprise Pack" $5-15K license ~1mo, (3) Vertical agent products $500-2K/mo per client ~1-2mo, (4) Team
-      enablement workshops $3-8K ~1wk, (5) Anthropic partner track deal-based 3-6mo. Funnel: free/cheap audit → implementation
-      retainer → playbook licensing. Career tie-in: every deployment is a case study = interview ammo for OpenAI/ElevenLabs
-      PM/CS — productise to prove, not replace the career. Recommendation on record: audit-led consulting (#1). Deep dive
-      deferred until after the CCA-F exam (Chin, Aug 17 2026).'
-    captured: 2026-08-17
-    source: Session Aug 16 2026 — "How can I productise my hermes setup and knowledge to help enterprises?"
-    notes: 'Source: _system/pending/productise-hermes-enterprise.md · Session: @session:default/20260816_092344_fd4d41ff ·
-      Related: ai-adoption-specialist'
-    gist: A ranked analysis of five ways to sell the proven Hermes stack to enterprises.
-    next_step: Deep dive the 5 productisation paths and pick the wedge after the CCA-F exam.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id077
-    id: openai-profiles-engage
-    title: Engage with OpenAI profiles on LinkedIn
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id078
-    id: openai-application-prep
-    title: Continue OpenAI application prep
-    type: create
-    domain: career
-    priority: p0
-    status: done
-    summary: Removed from active list per user request 2026-07-04.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id002
-    id: claude-certification-review
-    title: Review Claude certification pipeline and plan it out
-    type: discuss
-    domain: career
-    priority: p0
-    status: done
-    summary: 'Review the Claude Certified Architect – Foundations (CCA-F) certification pipeline and produce a plan. Context
-      from Jul 16-17 sessions: exam is Anthropic''s official cert (60 MCQ, 120min, $125, pass 720/1000; 5 domains — Agentic
-      Architecture 27%, Claude Code Config 20%, Prompt Engineering 20%, Tool Design/MCP 18%, Context Management 15%). User
-      completed 5 Skilljar courses (Agent Skills, MCP, Subagents, AI Capabilities, +1), has exam guide PDF, community study
-      guide (daronyondem/claude-architect-exam-guide), and The Gauntlet mocks (cca-f.codeandcraft.ai). Original exam target
-      was Jul 30 2026. Plan delivered Aug 16: all resources verified live, 4-week schedule proposed (W1 Platform 101 + Claude
-      API, W2 Code in Action + MCP Advanced, W3 community guide + Gauntlet Gates 1-2, W4 The Boss mock gate >=720 before booking).
-      Recommended exam date Sat Sep 12 2026, online proctored. CASE STUDY VERIFIED Aug 16: Claude SG passers'' talk (Bharti
-      Palaya, 855/1000 first attempt, 6 weeks structured prep) — method is "train Claude to train you" AI coach + deterministic-beats-probabilistic
-      meta-rule + two-pass exam timing. Registration is gated behind Claude Partner Network membership; exam delivered by
-      Pearson VUE. Free diagnostic: cca-f-diagnostic.web.app/?c=sg.'
-    captured: 2026-08-16
-    source: PA request Aug 16 2026 — review CCA-F pipeline and plan
-    notes: _system/pending/claude-certification-review.md
-    gist: A plan for sitting the Claude Certified Architect exam, from study materials to test date.
-    next_step: 'Track Claude SG screening: await @claudecode.sg email, then register + pay $125 at Partner Academy.'
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id001
-    id: cca-f-sign-agreement
-    title: 'CCA-F: Sign Freelance Developer Agreement'
-    type: read
-    domain: career
-    priority: p0
-    status: done
-    summary: 'Critical-path logistics task. Claude SG sent the Freelance Developer Agreement (ClaudeLabs-DeveloperAgreement_1.pdf)
-      - sign it and upload to obtain the @claudecode.sg email needed for Anthropic Partner Academy registration (Anthropic
-      does not accept personal emails). Upload link: ccaf-onboarding.claudecode.sg/agreement-upload.html?candidate_id=c4181ed2-
-      62e0-4cee-81a5-341983312076. After approval: a Cloudflare "Verify Email Routing Address" email arrives - MUST click
-      Verify or forwarding never works. Check spam folder for it. VERIFIED Aug 17 2026: email download link works (token was
-      full JWT, display-truncated in tool output). Agreement downloaded to /tmp/ClaudeLabs-DeveloperAgreement_1.pdf - 2-page
-      doc between Hungry Human Pte Ltd (UEN 202237899N) and Developer; upload page live and pre-bound to "Chuang Chin Tuan".
-      Fields needed: full legal name, NRIC/FIN/passport, DOB, nationality, mobile, personal email. Key clause 3.1: while agreement
-      active, cannot use CCA-F cert for outside AI implementation work (employment/CV use allowed per 3.2). PDPA consent to
-      fred@claudecode.sg. Valid 365 days, no auto-renewal.'
-    captured: 2026-08-17
-    source: 'Email from noreply@claudecode.sg Aug 16 2026 - subject: Your CCA-F Freelance Developer Agreement'
-    notes: _system/pending/claude-certification-review.md
-    gist: Sign and upload the Freelance Developer Agreement to get your claudecode.sg email.
-    next_step: Wait for review approval + Cloudflare verify email; click Verify (check spam), then register at Skilljar with
-      @claudecode.sg email.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 5
-  total_count: 9
-  active_count: 5
-  delegated_count: 0
-  done_count: 4
-  p0_count: 3
-  p1_count: 2
-  p2_count: 0
-  p3_count: 0
 - emoji: ''
   name: crypto
   kind: domain
@@ -3262,6 +3285,6 @@ archive:
 - *id087
 - *id088
 - *id089
-updated_at: 2026-08-17 20:30:24 SGT
-total_active: 43
+updated_at: 2026-08-17 22:01:01 SGT
+total_active: 44
 total_done: 89
