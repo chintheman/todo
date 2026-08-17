@@ -1431,13 +1431,18 @@ clusters:
       - sign it and upload to obtain the @claudecode.sg email needed for Anthropic Partner Academy registration (Anthropic
       does not accept personal emails). Upload link: ccaf-onboarding.claudecode.sg/agreement-upload.html?candidate_id=c4181ed2-
       62e0-4cee-81a5-341983312076. After approval: a Cloudflare "Verify Email Routing Address" email arrives - MUST click
-      Verify or forwarding never works. Check spam folder for it.'
+      Verify or forwarding never works. Check spam folder for it. VERIFIED Aug 17 2026: email download link works (token was
+      full JWT, display-truncated in tool output). Agreement downloaded to /tmp/ClaudeLabs-DeveloperAgreement_1.pdf - 2-page
+      doc between Hungry Human Pte Ltd (UEN 202237899N) and Developer; upload page live and pre-bound to "Chuang Chin Tuan".
+      Fields needed: full legal name, NRIC/FIN/passport, DOB, nationality, mobile, personal email. Key clause 3.1: while agreement
+      active, cannot use CCA-F cert for outside AI implementation work (employment/CV use allowed per 3.2). PDPA consent to
+      fred@claudecode.sg. Valid 365 days, no auto-renewal.'
     captured: 2026-08-17
     source: 'Email from noreply@claudecode.sg Aug 16 2026 - subject: Your CCA-F Freelance Developer Agreement'
     notes: _system/pending/claude-certification-review.md
     gist: Sign and upload the Freelance Developer Agreement to get your claudecode.sg email.
-    next_step: Sign the ClaudeLabs Developer Agreement PDF and upload it at the agreement-upload link, then watch for the
-      Cloudflare verify email.
+    next_step: Wait for review approval + Cloudflare verify email; click Verify (check spam), then register at Skilljar with
+      @claudecode.sg email.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -3178,6 +3183,6 @@ archive:
 - *id086
 - *id087
 - *id088
-updated_at: 2026-08-17 10:30:27 SGT
+updated_at: 2026-08-17 11:00:35 SGT
 total_active: 41
 total_done: 88
