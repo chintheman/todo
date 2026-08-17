@@ -314,7 +314,6 @@ clusters:
       $PAL name.'
     captured: 2026-08-14
     source: User ideation session Aug 14 2026
-    delegated_to: Hermes
     notes: 'Research: RESEARCH.md (Opus 5). Plan: PLAN.md (Opus 5, 1,050 lines, pushed Aug 14). Key plan moves: toxicity curve
       computed from OTHER makers on-chain fills (lawful from SG, zero capital — escapes the SG blocker); phase 1 = 3 weeks,
       $40/mo VPS, no capital, checkpoint C1 (+8% annualized distance region, R²≥0.80 reward regression); 5 open design items
