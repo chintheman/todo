@@ -1418,7 +1418,32 @@ clusters:
     source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
     notes: _system/pending/claude-certification-review.md
     gist: Study session for the Agentic Architecture domain, your confirmed blind spot.
-    next_step: Run Gauntlet Gate 1 baseline, then read community guide section 8 and exam guide Domain 1 task statements 1.1-1.7.
+    next_step: 'CLOSED Aug 17 2026 — Gate 1 55% (9 misses, 4 D1) → 5 chunks taught → mini-mock 10/10. D1 domain closed. Next
+      in chain: cca-f-study-d3 (Claude Code Config, 20%).'
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: cca-f-study-d3
+    title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
+    type: read
+    domain: career
+    priority: p0
+    status: active
+    summary: 'Second pomodoro-sized session in the CCA-F chain. Study order from diagnostic (Aug 16): D1, D3, D4, D2, D5.
+      D1 closed Aug 17 (Gate 1 55%, 4 D1 misses -> 5 chunks -> mini-mock 10/10). D3 = Claude Code Configuration & Workflows,
+      20% of exam (~12 questions). Diagnostic showed D3 at 100% but Gate 1 Set 1 had 3 D3-preview misses (Explore subagent,
+      .claude/rules/ globs, -p flag) — the diagnostic and Gauntlet disagree, so a D3 heatmap baseline settles it. Session
+      scope: exam guide Domain 3 task statements 3.1-3.5 + community guide Claude Code sections. Vendor-canonical framing
+      still applies: the exam scores Anthropic''s answer, not personal practice.'
+    captured: 2026-08-17
+    source: Handoff from cca-f-study-d1 (closed Aug 17 2026, mini-mock 10/10)
+    notes: _system/pending/claude-certification-review.md
+    gist: Second study session in the chain — Claude Code config domain, 20% of the exam.
+    next_step: 'Run Gauntlet Gate 1 Set 2/3 for a D3 heatmap baseline (from D1 session: Gate 1 is 3 sets of 20). Then study
+      community guide sections on Claude Code + exam guide Domain 3 task statements 3.1-3.5 (CLAUDE.md hierarchy, slash commands/skills
+      frontmatter, .claude/rules/ paths globs, plan mode vs direct execution, iterative refinement). Known Gate 1 misses to
+      fix: Explore subagent purpose (context-window isolation), .claude/rules/ glob beats directory CLAUDE.md for scattered
+      files, -p/--print for CI/CD headless (CLAUDE_HEADLESS + --batch are non-existent features).'
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -1568,12 +1593,12 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  count: 4
-  total_count: 8
-  active_count: 4
+  count: 5
+  total_count: 9
+  active_count: 5
   delegated_count: 0
   done_count: 4
-  p0_count: 2
+  p0_count: 3
   p1_count: 2
   p2_count: 0
   p3_count: 0
@@ -3237,6 +3262,6 @@ archive:
 - *id087
 - *id088
 - *id089
-updated_at: 2026-08-17 15:16:30 SGT
-total_active: 42
+updated_at: 2026-08-17 20:30:24 SGT
+total_active: 43
 total_done: 89
