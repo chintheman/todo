@@ -410,7 +410,7 @@ clusters:
     title: 'Zo integration: social_fetch — IG/TikTok/YT/X scraper API'
     type: build
     domain: integrations
-    priority: p0
+    priority: p2
     status: active
     summary: Connect social_fetch in Zo (app_slug=social_fetch, Connect button surfaced Aug 12). 165 endpoints, 21 platforms (IG, TikTok, YouTube, X, LinkedIn, Reddit, Threads, FB +11). Profiles, posts, transcripts, metrics, consistent fields. $14/1k credits, 100 free, PAYG never expires. Slot into instagram-content / social-video-extraction ladder as fast-path data source (API over browser automation preference).
     captured: 2026-08-12
