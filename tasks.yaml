@@ -529,7 +529,7 @@ clusters:
     type: read
     domain: career
     priority: p0
-    status: active
+    status: done
     summary: 'First pomodoro-sized study session in the CCA-F chain. Diagnostic (Aug 16): D1 75% with 1 confidence blind spot (answered wrong while sure) - the highest-value fix because D1 is 27% of the exam (~16 questions). Study order from diagnostic: D1, D3, D4, D2, D5. Session scope: community guide section 8 (Agentic Patterns and Task Decomposition) + exam guide Domain 1 task statements 1.1-1.7 (agentic loops, stop_reason, coordinator-subagent, hooks, session forking). Vendor-canonical framing beats personal practice: the exam scores Anthropic''s answer, not what he would build.'
     captured: 2026-08-16
     source: Claude SG diagnostic Aug 16 2026 - D1 at 75% with 1 blind spot (wrong & sure)
