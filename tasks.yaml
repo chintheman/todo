@@ -817,7 +817,8 @@ clusters:
     notes: 'Docs: hermes-agent.nousresearch.com/docs/user-guide/bot-mode. Relates to: agent-roster (18 profiles on disk; roster
       doc stale at 23).'
     gist: An experiment creating a small team of Hermes Bot Mode profiles that collaborate.
-    next_step: Scope the experiment with Chief of Staff (#16) and pick the team roster.
+    next_step: 'Content squad chosen (researcher → copywriter → reviewer → social-media-manager). Build flow drafted Aug 18
+      — next: create copywriter Bot, seat the group, run first test post.'
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -867,6 +868,27 @@ clusters:
       2026-08-14, X Multi-Scanner 81b086688939, SCMP 92d91537883f).'
     gist: A hands-on test of DeepSeek's open-source agent runtime where everything is a plugin.
     next_step: Run npx @deepseek-ai/dsh web and test the standard preset on a real task.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: bot-mode-squad-options-review
+    title: Bot Mode squad options — review remaining candidates and decide what else to build
+    type: discuss
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: 'Brainstorm output: 5 squad candidates for Bot Mode teams, scored on usefulness x manageability under the 2-6
+      bot / 3-round group-chat cap. Content squad (researcher → copywriter → reviewer → social-media-manager) selected as
+      the first build — exercises the full Bot Mode surface (1 fresh Bot + 3 existing profiles) with zero downside. Remaining:
+      market intel (high value but must stay off live crons — round 2), career (hirability + CCA-F plan, timely but softer
+      success bar), ops/triage (easiest, lowest wow — PA overlap), dev (highest ceiling/risk — code conflicts between bots).'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — bot-mode squad brainstorm (Chief of Staff
+    notes: 'Relates to: bot-mode-team-experiment. Loop-engineering principle applied: pipeline topology + determinism beats
+      agent count.'
+    gist: Review the 4 remaining Bot Mode squad candidates after the content squad experiment and pick the next build.
+    next_step: After the content squad experiment (bot-mode-team-experiment) proves out, review the remaining candidates —
+      market intel, career, ops/triage, dev — and pick the next squad to build.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1572,13 +1594,13 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 6
-  total_count: 37
-  active_count: 6
+  count: 7
+  total_count: 38
+  active_count: 7
   delegated_count: 0
   done_count: 31
   p0_count: 3
-  p1_count: 1
+  p1_count: 2
   p2_count: 1
   p3_count: 1
 - emoji: ''
@@ -3483,6 +3505,6 @@ archive:
 - *id091
 - *id092
 - *id093
-updated_at: 2026-08-18 19:51:57 SGT
-total_active: 48
+updated_at: 2026-08-18 20:55:22 SGT
+total_active: 49
 total_done: 93
