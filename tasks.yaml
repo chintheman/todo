@@ -222,6 +222,32 @@ clusters:
   name: Toto
   kind: project
   items:
+  - id: toto-buddy-marketing-plan
+    title: Toto Buddy marketing & social plan — build, publish, optimise
+    type: build
+    domain: product
+    priority: p1
+    status: active
+    summary: 'Build and run the Toto Buddy marketing/social plan as a living asset, not a section inside the PM plan. Inputs
+      locked by the completed PM interview (Aug 15-18): 10h/wk founder time (automation-heavy, user = editor/face), ~$0 budget
+      (sweat + organic only), first users = existing audience (LinkedIn/Substack/Telegram) with forums (r/singapore, HWZ,
+      SG Telegram lottery groups) as unexplored upside. Content engine = the myth-busting honest-math angle (unique in the
+      SG lottery app market); every post ends with an app link. Compliance: education positioning only, no "winning system"
+      claims, no gambling promotion.'
+    captured: 2026-08-18
+    source: '0xsteamboat request Aug 18 (project workflow: marketing/social plan must exist as a tracked task)'
+    notes: 'Feeds: interview log at ~/wiki/_system/pending/toto-app-pm-interview.md (Q1-Q7 answered Aug 18), PM plan at ~/wiki/_system/pending/toto-app-post-launch-pm-plan.md
+      (§4 Month 2 content engine, §6 marketing channels, §9 compliance guardrails). Deliverables: content pillars + cadence
+      calendar (draw days Mon/Thu 6:30pm SGT as the natural spike), per-channel playbooks (ASO, own content, Product Hunt,
+      communities), KPI readout (installs → D1/D7/D30, impressions → page-view → conversion), review-response cadence. Optimise
+      loop: measure weekly, double down on what converts, kill what doesn''t. Parent umbrella: toto-app-post-launch-pm.'
+    gist: A dedicated marketing/social plan for Toto Buddy, built from the PM interview answers and optimised as a living
+      document.
+    next_step: Draft the 30/60/90 marketing calendar from interview answers (10h/wk, ~$0 budget, existing-audience-first)
+      and lock the content pillars.
+    cluster: Toto
+    cluster_emoji: 🎱
+    cluster_kind: project
   - id: toto-app-post-launch-pm
     title: 'Toto Buddy post-launch — PM-led growth: marketing, retention, ASO, roadmap'
     type: build
@@ -282,13 +308,13 @@ clusters:
     cluster_emoji: 🎱
     cluster_kind: project
   archive: []
-  count: 3
-  total_count: 3
-  active_count: 3
+  count: 4
+  total_count: 4
+  active_count: 4
   delegated_count: 0
   done_count: 0
   p0_count: 0
-  p1_count: 1
+  p1_count: 2
   p2_count: 2
   p3_count: 0
 - emoji: ⌚
@@ -3435,6 +3461,6 @@ archive:
 - *id091
 - *id092
 - *id093
-updated_at: 2026-08-18 14:33:31 SGT
-total_active: 46
+updated_at: 2026-08-18 14:34:19 SGT
+total_active: 47
 total_done: 93
