@@ -1,4 +1,7 @@
 cluster_order:
+- emoji: 🛎️
+  name: Agentic Marketing Concierge
+  kind: project
 - emoji: 🎱
   name: Toto
   kind: project
@@ -84,6 +87,137 @@ cluster_order:
   name: strategy
   kind: domain
 clusters:
+- emoji: 🛎️
+  name: Agentic Marketing Concierge
+  kind: project
+  items:
+  - id: agentic-concierge-architecture
+    title: 'Agentic Marketing Concierge — architecture decision: Hermes ops ring vs Hermes-profile rebuild'
+    type: discuss
+    domain: gtm
+    priority: p0
+    status: active
+    summary: 'The Marketing Concierge bot (@testingsteambot) is a standalone python-telegram-bot polling process on the M1.
+      Hermes integration today is a single every-3m watchdog cron (635e409d4024) that restarts it. Discussion mapped how Hermes
+      bot mode (gateway) could apply. Route A (recommended): keep standalone, bolt a Hermes ops ring around it — campaign
+      end-date alerts, weekly portfolio digest, local data backup. Zero risk to a live tool Glenn depends on. Route B: rebuild
+      the concierge as a Hermes profile (second gateway bot token + skills encoding the 12 formatting rules, KB, data layer)
+      — gains native memory, cron, voice, delegation, multi-platform, but rewrites a live tool. Verdict on record: Route A
+      delivers ~80% of the value at ~zero risk. Gaps the concierge lacks that bot mode provides: scheduler (no cron), cross-session
+      memory (flat JSON per chat), multi-platform (Telegram-only), research depth (URL scraping only).'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
+    notes: 'Repos: github.com/chintheman/concierge-bot-app (app), github.com/chintheman/concierge-bot (skill). Skill: concierge-bot.
+      Watchdog cron 635e409d4024.'
+    gist: Decide whether the concierge stays standalone with a Hermes ops ring around it or rebuilds as a Hermes profile.
+    next_step: Review Route A and Route B in the summary and pick the architecture direction for the concierge.
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  - id: agentic-concierge-campaign-alerts
+    title: Concierge ops ring — campaign end-date alert cron
+    type: discuss
+    domain: gtm
+    priority: p0
+    status: active
+    summary: 'The concierge data layer already stores campaigns per client with end_date and status (data/clients/{slug}/campaigns/{id}.json).
+      The concierge itself has no scheduler, so nothing fires on campaign deadlines today. Proposal: a no_agent Hermes cron
+      that reads the data layer and nudges when a campaign is within T-14/T-7 of its end date or overdue. Delivered to the
+      concierge working chat. Cost ~zero, no changes to bot.py. Part of Route A ops ring.'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
+    notes: 'Data layer: data_layer.py list_campaigns()/get_campaign(). Repo: github.com/chintheman/concierge-bot-app.'
+    gist: A cron that nudges when a tracked campaign approaches its end date.
+    next_step: Approve alert timing (T-14 and T-7) and delivery target for campaign end-date nudges.
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  - id: agentic-concierge-backup
+    title: Concierge ops ring — local data backup (client data is gitignored)
+    type: discuss
+    domain: gtm
+    priority: p0
+    status: active
+    summary: 'Client data (data/ directory) is gitignored in concierge-bot-app for privacy — correct, since briefs, histories,
+      strategies, and campaigns are private — but that means zero redundancy for a live tool. Proposal: a local backup cron
+      archiving data/ + Knowledge Base/ to a timestamped archive and retaining the last N copies. Never push client data to
+      GitHub. Part of Route A ops ring.'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
+    notes: '.gitignore excludes data/clients/, data/archive/, data/users.json. Repo: github.com/chintheman/concierge-bot-app.'
+    gist: A scheduled local backup for concierge client data.
+    next_step: Approve the backup target and retention window for concierge client data.
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  - id: agentic-concierge-portfolio-digest
+    title: Concierge ops ring — weekly client portfolio digest
+    type: discuss
+    domain: gtm
+    priority: p0
+    status: active
+    summary: 'Weekly portfolio digest cron: reads the concierge data layer across all clients — brief presence, strategy counts,
+      campaign statuses (active/completed/planned) — and delivers a scannable summary to the working chat. The concierge has
+      no scheduler of its own; Hermes cron supplies the cadence. Part of Route A ops ring.'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
+    notes: 'Data: data/users.json + data/clients/*. Repo: github.com/chintheman/concierge-bot-app.'
+    gist: A weekly summary of all clients, strategies, and campaign statuses.
+    next_step: Approve digest contents and delivery cadence for the weekly concierge portfolio report.
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  - id: agentic-concierge-multiplatform
+    title: Concierge reach — WhatsApp or multi-platform for Glenn
+    type: discuss
+    domain: gtm
+    priority: p0
+    status: active
+    summary: 'The concierge is Telegram-only (@testingsteambot). Glenn is a Singapore business owner; WhatsApp is his likely
+      lane. openwa-eval (done Jul 17 2026) evaluated OpenWA — a free self-hosted WhatsApp API gateway (REST, webhooks, multi-session)
+      — explicitly flagged "and/or concierge bot". Decision: whether multi-platform reach is worth it, and via which path
+      (OpenWA self-host vs WhatsApp Cloud API, which closed to general-purpose AI Jan 15 2026 and charges service-message
+      fees from Oct 1 2026).'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
+    notes: 'Related: openwa-eval (parked in this product). Findings: pending file in openwa-eval entry.'
+    gist: Decide whether the concierge should reach Glenn on WhatsApp or stay Telegram-only.
+    next_step: Review OpenWA findings and decide if WhatsApp is the right next channel for Glenn.
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  archive:
+  - &id045
+    id: openwa-eval
+    title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: OpenWA (rmyndharis/OpenWA, MIT, 10.8K★) is a free, self-hosted WhatsApp HTTP API gateway. Full REST API, multi-session,
+      webhooks, web dashboard, groups/channels. Docker-deployable, NestJS/TypeScript stack. Evaluate as a potential WhatsApp
+      integration layer for Hermes delivery (complement to Telegram) and/or concierge bot. Also useful for sharing research/wife
+      communication.
+    captured: 2026-07-17
+    source: Instagram — OpenWA reel
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "GitHub: github.com/rmyndharis/OpenWA (10.8K★, MIT, 621 commits, 65 releases) Latest: v0.8.10 (Jul 7, 2026) — actively\
+      \ maintained Stack: TypeScript 84%, NestJS 11, Node 20, PostgreSQL/SQLite, Redis Features: REST API, multi-session,\
+      \ webhooks, dashboard, bulk messaging,\n  groups API, channels/newsletter, rate limiting, audit logging\nDeploy: docker-compose\
+      \ or local npm Website: open-wa.org Compared to: WhatsApp Cloud API (+$30-50/mo) — OpenWA is free + self-hosted Saved\
+      \ as PA DB link #8."
+    cluster: Agentic Marketing Concierge
+    cluster_emoji: 🛎️
+    cluster_kind: project
+  count: 5
+  total_count: 6
+  active_count: 5
+  delegated_count: 0
+  done_count: 1
+  p0_count: 5
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
 - emoji: 🎱
   name: Toto
   kind: project
@@ -2039,28 +2173,6 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id045
-    id: openwa-eval
-    title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: OpenWA (rmyndharis/OpenWA, MIT, 10.8K★) is a free, self-hosted WhatsApp HTTP API gateway. Full REST API, multi-session,
-      webhooks, web dashboard, groups/channels. Docker-deployable, NestJS/TypeScript stack. Evaluate as a potential WhatsApp
-      integration layer for Hermes delivery (complement to Telegram) and/or concierge bot. Also useful for sharing research/wife
-      communication.
-    captured: 2026-07-17
-    source: Instagram — OpenWA reel
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "GitHub: github.com/rmyndharis/OpenWA (10.8K★, MIT, 621 commits, 65 releases) Latest: v0.8.10 (Jul 7, 2026) — actively\
-      \ maintained Stack: TypeScript 84%, NestJS 11, Node 20, PostgreSQL/SQLite, Redis Features: REST API, multi-session,\
-      \ webhooks, dashboard, bulk messaging,\n  groups API, channels/newsletter, rate limiting, audit logging\nDeploy: docker-compose\
-      \ or local npm Website: open-wa.org Compared to: WhatsApp Cloud API (+$30-50/mo) — OpenWA is free + self-hosted Saved\
-      \ as PA DB link #8."
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
   - &id038
     id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
@@ -2127,10 +2239,10 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   count: 3
-  total_count: 17
+  total_count: 16
   active_count: 3
   delegated_count: 0
-  done_count: 14
+  done_count: 13
   p0_count: 0
   p1_count: 3
   p2_count: 0
@@ -3323,6 +3435,6 @@ archive:
 - *id091
 - *id092
 - *id093
-updated_at: 2026-08-18 14:29:14 SGT
-total_active: 41
+updated_at: 2026-08-18 14:33:31 SGT
+total_active: 46
 total_done: 93
