@@ -36,10 +36,10 @@ cluster_order:
   name: ai/ml
   kind: domain
 - emoji: ''
-  name: career
+  name: crypto
   kind: domain
 - emoji: ''
-  name: crypto
+  name: career
   kind: domain
 - emoji: ''
   name: devops
@@ -1604,6 +1604,134 @@ clusters:
   p2_count: 1
   p3_count: 1
 - emoji: ''
+  name: crypto
+  kind: domain
+  items:
+  - id: ionic-investor-day-must-read
+    title: 'Must-read: Ionic Digital Investor Day summary (shareholder briefing)'
+    type: read
+    domain: crypto
+    priority: p0
+    status: active
+    summary: 'Full 78.5-min webcast transcribed + summarized. Ionic Digital (IOND, Nasdaq direct listing) pivoted from BTC
+      mining to an AI data-center landlord. Key facts: 822 MW West Texas power (~5c/kWh), 10-yr $2.6B triple-net lease with
+      Nscale (NVIDIA-guaranteed first 5 yrs ~$860M, Microsoft ROFR), $183M to $251M annual contracted NOI, 98-99% margins,
+      debt-free with ~$630M liquidity, $400M raise at $53/share ($2.4B post-money), ~2,800 BTC to sell for buildout. Cash
+      rent starts Aug 2026. ERCOT batch-zero decision (Aug 7) is the 466 MW confirmation hinge. Direct listing = no dilution;
+      shares salable on the first trading day after S-1 effectiveness.'
+    captured: 2026-08-19
+    source: Telegram Aug 18 2026 — user asked to add as must-read after PDF delivery
+    notes: 'PDF: ~/Downloads/ionic-investor-day-summary.pdf (4 pages). Transcript: ~/Downloads/ionic-investor-day-transcript.txt.
+      Webcast replay: https://edge.media-server.com/mmc/p/rgu725dx/'
+    gist: Read the 4-page PDF summary of the Jul 14 2026 Investor Day webcast — the full company pitch ahead of the IOND direct
+      listing.
+    next_step: 'Read the PDF (~/Downloads/ionic-investor-day-summary.pdf). Key action inside: register shares with Odyssey
+      NOW + open a brokerage account so you can sell on the first trading day after the S-1 is effective.'
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: tradingview-mcp-integration
+    title: Integrate TradingView MCP — AI chart analysis for crypto quant
+    type: build
+    domain: crypto
+    priority: p1
+    status: active
+    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated
+      chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription
+      + Desktop app with --remote-debugging-port=9222.
+    captured: '2026-07-04'
+    source: aipagedaily IG post — tradingview-mcp
+    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay,
+      drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
+      with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
+      Validated via direct GH read + repo info + README review.'
+    gist: A connector that lets Claude Code analyse charts and run backtests through TradingView Desktop.
+    next_step: Ask Chin whether he has the paid TradingView subscription before installing.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: claude-code-ai-hedge-fund
+    title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
+    type: discuss
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
+      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
+      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
+    captured: 2026-08-07
+    source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
+    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
+      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
+      decomposition is the pattern worth extracting for the quant stack.
+    gist: A research and risk system for investing, built in Claude Code, to mine for quant patterns.
+    next_step: Extract the research-queue and ranking pattern into the quant stack design.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: quant-repos-review
+    title: Explore top quant finance GitHub repos
+    type: research
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster
+      (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
+    captured: '2026-07-03'
+    source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
+    notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
+    gist: A curated list of top quantitative finance repos to trial for the quant stack.
+    next_step: Review the pending file and pick the top three repos to trial.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id040
+    id: nicholascrown-macro-letter
+    title: Nicholas Crown — macro trading profile + The Crown Macro Letter
+    type: research
+    domain: crypto
+    priority: p2
+    status: done
+    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
+      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
+      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
+      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
+    captured: 2026-07-19
+    source: Instagram — @nicholascrown reel
+    resolution: blitz-archived via labs 2026-08-14
+    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
+      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
+      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id017
+    id: market-intel-refinement-review
+    title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
+    type: discuss
+    domain: crypto
+    priority: p1
+    status: done
+    summary: Review date (2026-07-20) has passed with the review not yet done. 4 deferred items pending assessment against
+      ~1 week of live brief performance (prediction hit-rate, Brier trend, data-source reliability).
+    captured: 2026-07-13
+    source: Manually appended to review-items.md on 2026-07-13, found during the Chief of Staff cluster audit
+    completed: 2026-08-12
+    notes: 'Full context: ~/wiki/_system/pending/market-intel-refinement-review.md'
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 4
+  total_count: 6
+  active_count: 4
+  delegated_count: 0
+  done_count: 2
+  p0_count: 1
+  p1_count: 1
+  p2_count: 2
+  p3_count: 0
+- emoji: ''
   name: career
   kind: domain
   items:
@@ -1887,111 +2015,6 @@ clusters:
   p0_count: 1
   p1_count: 2
   p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: crypto
-  kind: domain
-  items:
-  - id: tradingview-mcp-integration
-    title: Integrate TradingView MCP — AI chart analysis for crypto quant
-    type: build
-    domain: crypto
-    priority: p1
-    status: active
-    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated
-      chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription
-      + Desktop app with --remote-debugging-port=9222.
-    captured: '2026-07-04'
-    source: aipagedaily IG post — tradingview-mcp
-    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay,
-      drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
-      with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
-      Validated via direct GH read + repo info + README review.'
-    gist: A connector that lets Claude Code analyse charts and run backtests through TradingView Desktop.
-    next_step: Ask Chin whether he has the paid TradingView subscription before installing.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: claude-code-ai-hedge-fund
-    title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
-    type: discuss
-    domain: crypto
-    priority: p2
-    status: active
-    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
-      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
-      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
-    captured: 2026-08-07
-    source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
-    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
-      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
-      decomposition is the pattern worth extracting for the quant stack.
-    gist: A research and risk system for investing, built in Claude Code, to mine for quant patterns.
-    next_step: Extract the research-queue and ranking pattern into the quant stack design.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: quant-repos-review
-    title: Explore top quant finance GitHub repos
-    type: research
-    domain: crypto
-    priority: p2
-    status: active
-    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster
-      (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
-    captured: '2026-07-03'
-    source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
-    notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
-    gist: A curated list of top quantitative finance repos to trial for the quant stack.
-    next_step: Review the pending file and pick the top three repos to trial.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id040
-    id: nicholascrown-macro-letter
-    title: Nicholas Crown — macro trading profile + The Crown Macro Letter
-    type: research
-    domain: crypto
-    priority: p2
-    status: done
-    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
-      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
-      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
-      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
-    captured: 2026-07-19
-    source: Instagram — @nicholascrown reel
-    resolution: blitz-archived via labs 2026-08-14
-    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
-      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
-      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id017
-    id: market-intel-refinement-review
-    title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
-    type: discuss
-    domain: crypto
-    priority: p1
-    status: done
-    summary: Review date (2026-07-20) has passed with the review not yet done. 4 deferred items pending assessment against
-      ~1 week of live brief performance (prediction hit-rate, Brier trend, data-source reliability).
-    captured: 2026-07-13
-    source: Manually appended to review-items.md on 2026-07-13, found during the Chief of Staff cluster audit
-    completed: 2026-08-12
-    notes: 'Full context: ~/wiki/_system/pending/market-intel-refinement-review.md'
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 3
-  total_count: 5
-  active_count: 3
-  delegated_count: 0
-  done_count: 2
-  p0_count: 0
-  p1_count: 1
-  p2_count: 2
   p3_count: 0
 - emoji: ''
   name: devops
@@ -3531,6 +3554,6 @@ archive:
 - *id092
 - *id093
 - *id094
-updated_at: 2026-08-18 23:40:00 SGT
-total_active: 49
+updated_at: 2026-08-19 00:18:38 SGT
+total_active: 50
 total_done: 94
