@@ -800,6 +800,27 @@ clusters:
   name: ai/ml
   kind: domain
   items:
+  - id: bot-mode-team-experiment
+    title: Bot Mode experiment — small team of profiles working together
+    type: discuss
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'Experiment after the v0.20.4 update (Bot Mode shipped): create a small team of named profiles (Bots) that work
+      together — group chats with up to 3 rounds of member turns, bot-to-bot @mentions, routines, and cross-profile handoffs.
+      Purpose is to validate the fleet workflow before committing to a bigger multi-agent setup. Pending: scoping with Chief
+      of Staff (#16) — team size, roster (which existing profiles or fresh Bots), model assignments, the test task the team
+      will run, and success criteria. Bot Mode is a desktop UI over existing profiles; no new Telegram tokens needed for bots
+      to talk to each other.'
+    captured: 2026-08-18
+    source: Telegram Aug 18 2026 — post-v0.20.4 Bot Mode discussion
+    notes: 'Docs: hermes-agent.nousresearch.com/docs/user-guide/bot-mode. Relates to: agent-roster (18 profiles on disk; roster
+      doc stale at 23).'
+    gist: An experiment creating a small team of Hermes Bot Mode profiles that collaborate.
+    next_step: Scope the experiment with Chief of Staff (#16) and pick the team roster.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: context-engineering-research
     title: Context engineering research and optimisation
     type: research
@@ -1551,12 +1572,12 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 5
-  total_count: 36
-  active_count: 5
+  count: 6
+  total_count: 37
+  active_count: 6
   delegated_count: 0
   done_count: 31
-  p0_count: 2
+  p0_count: 3
   p1_count: 1
   p2_count: 1
   p3_count: 1
@@ -3462,6 +3483,6 @@ archive:
 - *id091
 - *id092
 - *id093
-updated_at: 2026-08-18 14:39:43 SGT
-total_active: 47
+updated_at: 2026-08-18 19:51:57 SGT
+total_active: 48
 total_done: 93
