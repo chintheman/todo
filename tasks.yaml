@@ -261,7 +261,8 @@ clusters:
     notes: 'App state verified Aug 15: v1.1.0 live Aug 12 2026, Education category, 5.0★ (1 rating), free, EN only, iOS 17+.
       User interview in progress (one question at a time) to lock success definition and context.'
     gist: Product management for Toto Buddy after launch, covering growth, retention, and app store optimisation.
-    next_step: Finish the user interview and lock the success definition.
+    next_step: Lock the success definition from the completed interview and drive the marketing plan (toto-buddy-marketing-plan)
+      to first publish.
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -3461,6 +3462,6 @@ archive:
 - *id091
 - *id092
 - *id093
-updated_at: 2026-08-18 14:34:19 SGT
+updated_at: 2026-08-18 14:34:40 SGT
 total_active: 47
 total_done: 93
