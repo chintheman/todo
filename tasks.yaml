@@ -301,8 +301,9 @@ clusters:
       / system-bet portfolios, EV models, number generators).'
     captured: 2026-08-13
     source: 0xsteamboat request Aug 13 (Lovable use-case brainstorm)
-    notes: 'Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine
-      (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test.'
+    notes: "Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine\
+      \ (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test. - have a math checker that takes\
+      \ people through the math to verify and\n  validate the strategies logically"
     gist: A feature backlog for the Toto app covering receipt scanning and in-app strategies.
     next_step: Prototype the receipt scan flow on Lovable as a UX test.
     cluster: Toto
@@ -3577,6 +3578,6 @@ archive:
 - *id092
 - *id093
 - *id094
-updated_at: 2026-08-19 07:59:58 SGT
+updated_at: 2026-08-19 13:56:16 SGT
 total_active: 51
 total_done: 94
