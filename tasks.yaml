@@ -942,6 +942,29 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: loop-to-graph-engineering
+    title: Loop Engineering → Graph Engineering — the 2026 agent-architecture paradigm shift
+    type: discuss
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Influencer-framed but high-reach (2.5M views) synthesis of the 2026 agent-architecture shift: single-agent loops
+      break and go "goal blind"; the fix is graph engineering — nodes, edges, state, policy. Three topologies run everything:
+      diamond, supervisor, pipeline, anchored to Anthropic''s 5 official workflow patterns. Punchline: wins come from determinism
+      (verifiers, code fallbacks, reality anchors), not agent count.'
+    captured: 2026-08-19
+    source: Telegram Aug 19 2026 — PA link intake (kirillk_web3 tweet, 2.5M views)
+    notes: 'Tweet: https://x.com/kirillk_web3/status/2088682533278077382 · Chinese explainer video (100k views): https://www.youtube.com/watch?v=8RedSkw1UjE
+      · Kimi K3 A–Z guide: https://x.com/kirillk_web3/status/2087619214915826155. Cross-refs graph-engineering-patterns (Anatoli
+      Kopadze, Aug 6): same thesis, plus the fake-edge test + fresh-context checkers. Caveat: influencer synthesis, not primary
+      research — a lens on our stack, not doctrine.'
+    gist: 'Discuss the loop→graph shift: why single-agent loops go goal-blind, and what graph topologies (diamond, supervisor,
+      pipeline) buy in determinism.'
+    next_step: Watch the Chinese explainer video + skim the Kimi K3 A–Z guide, then map the orchestration stack (kanban, crewai
+      bridge, reflexion-loop) against the 3 topologies — where does goal-blindness bite today?
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: altman-self-prompting-systems
     title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
     type: research
@@ -1594,14 +1617,14 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 7
-  total_count: 38
-  active_count: 7
+  count: 8
+  total_count: 39
+  active_count: 8
   delegated_count: 0
   done_count: 31
   p0_count: 3
   p1_count: 2
-  p2_count: 1
+  p2_count: 2
   p3_count: 1
 - emoji: ''
   name: crypto
@@ -3554,6 +3577,6 @@ archive:
 - *id092
 - *id093
 - *id094
-updated_at: 2026-08-19 00:18:38 SGT
-total_active: 50
+updated_at: 2026-08-19 07:59:58 SGT
+total_active: 51
 total_done: 94
