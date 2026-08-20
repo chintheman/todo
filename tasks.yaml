@@ -262,10 +262,19 @@ clusters:
     captured: 2026-08-15
     source: 0xsteamboat request Aug 15 (PM role assignment)
     notes: 'App state verified Aug 15: v1.1.0 live Aug 12 2026, Education category, 5.0★ (1 rating), free, EN only, iOS 17+.
-      User interview in progress (one question at a time) to lock success definition and context.'
+      User interview in progress (one question at a time) to lock success definition and context.
+
+      CLAUDE CODE REVIEW (Aug 20 2026) — /tmp/toto-buddy-pm-claude-review.md: viable as credibility-led SG niche, but P0s
+      must close first — (1) monetization UNDEFINED: review recommends Pro tier (crowd-avoidance engine + snowball EV alerts
+      >0.46), drops ads (policy-restricted on gambling content) and SG Pools sale (zero roadmap time); (2) Jul 28 pure-spread-beats-Sys7
+      finding (unmerged branch) may undercut the paid engine''s value prop — resolve before Pro ships. P1: 10h/wk is judgment-only
+      budget (Hermes ships the automation); community backlash risk on honesty-vs-entertainment drift. P2: SG Gambling Control
+      Act promotion rules unresearched. Growth: forums (r/singapore, HWZ, SG lottery TG) > existing AI audience for acquisition.
+      Hard-gate: every gambling-adjacent public copy (ASO, forum posts) needs user sign-off (App Store 5.3). Open: baseline
+      installs/DAU, Pro price point, legal read.'
     gist: Product management for Toto Buddy after launch, covering growth, retention, and app store optimisation.
-    next_step: Lock the success definition from the completed interview and drive the marketing plan (toto-buddy-marketing-plan)
-      to first publish.
+    next_step: Lock success definition + monetization model (Pro tier recommended per Aug 20 review); resolve pure-spread-vs-engine
+      P0 before Pro ships; drive marketing plan (toto-buddy-marketing-plan) to first publish.
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -3721,6 +3730,6 @@ archive:
 - *id093
 - *id094
 - *id095
-updated_at: 2026-08-20 17:01:01 SGT
+updated_at: 2026-08-20 18:06:08 SGT
 total_active: 56
 total_done: 95
