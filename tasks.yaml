@@ -42,10 +42,10 @@ cluster_order:
   name: crypto
   kind: domain
 - emoji: ''
-  name: career
+  name: devops
   kind: domain
 - emoji: ''
-  name: devops
+  name: career
   kind: domain
 - emoji: ''
   name: creative
@@ -803,26 +803,7 @@ clusters:
 - emoji: 🖥️
   name: M1 Status
   kind: project
-  items:
-  - id: m1-status-review
-    title: Review the M1 Status system and provide feedback
-    type: discuss
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'M1 Status shipped and verified Aug 19 2026. Next action is Chin''s review: open the public showcase (https://chintheman.github.io/m1-status-site/)
-      and the private admin (https://status-admin.0xsteamboat.me/ with token from ~/.hermes/status/admin_token), then send
-      feedback — what to change, add, or expand (more metrics, alerts, retention, design). Feedback drives the follow-up tasks
-      for this project.'
-    captured: 2026-08-19
-    source: Telegram Aug 19 2026 — M1 Status delivery
-    notes: 'Project cluster: M1 Status (m1-status-system). Showcase: https://chintheman.github.io/m1-status-site/ · Admin:
-      https://status-admin.0xsteamboat.me/ · Token: ~/.hermes/status/admin_token.'
-    gist: A review of the live M1 Status monitoring system to decide what to change or expand.
-    next_step: Open both live URLs and send feedback on the M1 Status system.
-    cluster: M1 Status
-    cluster_emoji: 🖥️
-    cluster_kind: project
+  items: []
   archive:
   - &id001
     id: m1-status-system
@@ -843,13 +824,13 @@ clusters:
     cluster: M1 Status
     cluster_emoji: 🖥️
     cluster_kind: project
-  count: 1
-  total_count: 2
-  active_count: 1
+  count: 0
+  total_count: 1
+  active_count: 0
   delegated_count: 0
   done_count: 1
   p0_count: 0
-  p1_count: 1
+  p1_count: 0
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -948,6 +929,26 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: compaction-prompt-tuning
+    title: Compaction prompt audit and tuning
+    type: build
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: 'Context engineering research (PASS 1, 2026-08-17) identified compaction prompt quality as the unmeasured gap:
+      Hermes consolidation prunes by age/decay, not by a tuned preserve-decisions-discard-tool-outputs prompt. This is the
+      CAUSE of the session-degradation Chin noticed when reopening big sessions repeatedly; the task-memory log (FB-05) treats
+      the symptom. Claude''s guidance: preserve user intent, completed work, errors, active work, key references; discard
+      filler. Low effort, medium impact — quality of what survives every long session. Deliverable: audit the current consolidation
+      prompt against Claude''s compaction guidance, tune it, and verify on the last 2 weeks of observations.'
+    captured: 2026-08-20
+    source: context-engineering-research (2026-08-17), gap 3 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
+    gist: Tune Hermes consolidation to preserve decisions and errors instead of pruning by age.
+    next_step: Audit the current consolidation prompt against Claude compaction guidance.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
     type: discuss
@@ -1018,6 +1019,25 @@ clusters:
       pipeline) buy in determinism.'
     next_step: Watch the Chinese explainer video + skim the Kimi K3 A–Z guide, then map the orchestration stack (kanban, crewai
       bridge, reflexion-loop) against the 3 topologies — where does goal-blindness bite today?
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: spine-retrieval-bm25-hybrid
+    title: 'Spine retrieval: BM25 hybrid + reranker + contextual chunks'
+    type: build
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Context engineering research (PASS 1, 2026-08-17) found the spine retrieval gap is the highest-leverage Hermes
+      fix. The embedder semantic bridge (Voyage upgrade) is time-gated; two additive legs ship BEFORE it: BM25/hybrid search
+      alongside vector (free, local) and a reranking step (cross-encoder or cheap model) — combined they are the -67% retrieval
+      failure lever (Anthropic). Contextual chunk enrichment (prepend chunk context before embedding) is the cheapest -35%
+      reduction and survives the embedder swap. Capture only for now; not dispatched.'
+    captured: 2026-08-20
+    source: context-engineering-research (2026-08-17), gaps 1+2 — https://www.anthropic.com/engineering/contextual-retrieval
+    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
+    gist: Add BM25 hybrid search, reranking and contextual chunk enrichment to spine retrieval.
+    next_step: Design the recall@20 A/B test over wiki pages and memory observations.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1673,14 +1693,14 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 8
-  total_count: 39
-  active_count: 8
+  count: 10
+  total_count: 41
+  active_count: 10
   delegated_count: 0
   done_count: 31
   p0_count: 3
-  p1_count: 2
-  p2_count: 2
+  p1_count: 3
+  p2_count: 3
   p3_count: 1
 - emoji: ''
   name: crypto
@@ -1826,6 +1846,374 @@ clusters:
   p0_count: 1
   p1_count: 2
   p2_count: 2
+  p3_count: 0
+- emoji: ''
+  name: devops
+  kind: domain
+  items:
+  - id: hermes-session-pruning-update
+    title: Evaluate & adopt Hermes session DB pruning/archiving
+    type: build
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
+      models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
+      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.
+      PRIORITY CORRECTED Aug 17 2026: was P0 since Jul 7 capture with no action in 6 weeks — downgraded to P1 maintenance.
+      Real user priorities (CCA-F, career) hold the P0 slots.'
+    captured: '2026-07-07'
+    source: '@teknium on X (Jul 6, 2026) - session management update - https://x.com/Teknium/status/2073997246220349615'
+    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
+      users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
+      pruning strategy for our setup. Command: hermes update'
+    gist: Evaluation and rollout of Hermes session pruning to archive old conversations.
+    next_step: Run hermes update and pick the session DB pruning strategy.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: labs-blitz-pomodoro-build
+    title: Labs Blitz + Pomodoro build — awaiting Zo
+    type: build
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
+      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
+      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
+      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
+      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
+    captured: 2026-08-11
+    source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
+    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
+      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
+      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
+      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
+      use.'
+    gist: The labs page rebuild adding quadrant badges, status buttons, and a pomodoro timer.
+    next_step: Check Zo's progress on the labs blitz build and verify the phase one filter fix.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: compliance-audit-stack-review
+    title: Review compliance/audit/watchdog stack — expand or remove
+    type: discuss
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'Review the full automated check stack: 1 style audit (ADHD Output Rules), ~8 system-health audits (skills quality,
+      memory health, spine benchmark, wiki lint, maintenance sweeper, curator, calibration), ~20 watchdogs (battery, wifi,
+      gateway, dashboard, cron health, config guardian, email/ credits watchers). Decide per-check: keep / expand / remove.
+      NOTE: automate a security audit — fold agent-hardening into a scheduled recurring check. Also: design routing so surfaced
+      issues get a defined path to remediation (auto-create registry task / fix pipeline) instead of being reported and parked.
+      wiki-fts5-reindex cron currently in ERROR state.'
+    captured: 2026-08-16
+    source: Telegram Aug 16 2026 (ADHD audit discussion)
+    notes: ~/wiki/_system/pending/compliance-audit-stack-review.md
+    gist: A review of the automated audit and watchdog stack to decide what to keep, expand, or remove.
+    next_step: Draft the keep/expand/remove decision table for every check in the stack.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: observation-masking-long-loops
+    title: Review the M1 Status system and provide feedback
+    type: discuss
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'M1 Status shipped and verified Aug 19 2026. Next action is Chin''s review: open the public showcase (https://chintheman.github.io/m1-status-site/)
+      and the private admin (https://status-admin.0xsteamboat.me/ with token from ~/.hermes/status/admin_token), then send
+      feedback — what to change, add, or expand (more metrics, alerts, retention, design). Feedback drives the follow-up tasks
+      for this project.'
+    captured: 2026-08-19
+    source: Telegram Aug 19 2026 — M1 Status delivery
+    notes: 'Project cluster: M1 Status (m1-status-system). Showcase: https://chintheman.github.io/m1-status-site/ · Admin:
+      https://status-admin.0xsteamboat.me/ · Token: ~/.hermes/status/admin_token.'
+    gist: A review of the live M1 Status monitoring system to decide what to change or expand.
+    next_step: Open both live URLs and send feedback on the M1 Status system.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id094
+    id: ddgs-search-fallback
+    title: DDGS — DuckDuckGo web search fallback
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: Installed ddgs (pip, Hermes venv), set web.search_backend=ddgs in config.yaml. No API key, no Docker, no rate
+      limits. Free fallback when Firecrawl is exhausted.
+    captured: 2026-07-01
+    source: Firecrawl credit exhaustion / Hermes Agent docs
+    notes: config.yaml web.search_backend = ddgs
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id090
+    id: supermemory-dedup-cron
+    title: Memory Audit — Periodic Supermemory dedup + TTL cron
+    type: discuss
+    domain: devops
+    priority: p2
+    status: done
+    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
+      entries.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id071
+    id: graphify-integration
+    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
+      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
+      until we have active coding projects with measurable token burn from re-orientation.
+    captured: '2026-07-04'
+    source: kayvon.ai IG reel — Graphify
+    completed: 2026-07-04
+    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
+      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
+      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
+      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
+      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id074
+    id: developer-agent-codex-claude
+    title: Create a developer agent profile enabling both Codex and Claude Code
+    type: build
+    domain: devops
+    priority: p0
+    status: done
+    summary: Build a dedicated developer profile in Hermes that can orchestrate both Codex CLI and Claude Code as subagents/tools
+      for multi-model coding workflows.
+    captured: '2026-07-03'
+    source: 0xsteamboat request
+    delegated_to: The General (#1)
+    completed: 2026-07-04
+    notes: 'Handoff file: ~/wiki/_system/pending/developer-agent-codex-claude.md Existing assets: autonomous-coding-agents
+      skill (references/codex.md, references/claude-code.md, references/opencode.md, references/acp-agent-integration.md),
+      codex-hermes-integration-report.md at ~/research/. Need: dev profile (config.yaml + SOUL.md), routing decision logic,
+      topic registration. Research question: can Codex create creative content? Answered in integration report §3.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id061
+    id: kimi-code-evaluate
+    title: Kimi Code — evaluate as coding agent alternative
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Moonshot AI''s terminal-based AI coding agent (TypeScript, MIT). Direct Claude Code / OpenCode competitor. Powers
+      Kimi K2.5-K2.7 Code models (MoE 1T params, 32B active, 100 tok/s output). Key features: Agent Swarm (100 parallel sub-agents),
+      ACP protocol for IDE integration (Zed, JetBrains), 256K context, npm install. Pricing: $19/mo membership + $0.60/$2.50
+      per MTok (75% cache discount) — 4-17x cheaper than GPT-5.4. Worth evaluating as cheap secondary coding agent alongside
+      our OpenCode + DeepSeek. GH: github.com/MoonshotAI/kimi-code'
+    captured: '2026-07-09'
+    source: Moonshot AI — Kimi Code CLI (MIT, 3K⭐, 699 commits)
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "URL: kimi.com/code — GH: github.com/MoonshotAI/kimi-code (3K⭐, MIT) Model: K2.7 Code (latest), K2.6, K2.5. Released\
+      \ Jun 2026. Install: `npm install -g @moonshot-ai/kimi-code` (Node ≥24.15) ACP protocol means it can drive Zed/JetBrains\
+      \ sessions. Agent Swarm: decomposes tasks into 100 parallel sub-agents (4.5x speedup) Pricing breakdown:\n  - $19/mo\
+      \ membership (300-1200 API calls/5h window, 30 concurrent)\n  - API: $0.60/M input, $2.50/M output (+75% cache discount)\n\
+      \  - 1hr session ~$1.40 vs Claude Code ~$13.50\nRelevance: We have OpenCode with DeepSeek Flash ($0.15-0.30/M).\n  Kimi\
+      \ is more expensive than our current DeepSeek setup, but K2.7\n  may offer different capability tradeoffs. Worth benchmarking\
+      \ vs\n  our stack before deciding to install.\nCross-ref: Our existing autonomous-coding-agents skill references\n \
+      \ OpenCode + DeepSeek as primary stack."
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id034
+    id: safari-mcp-server
+    title: Safari MCP Server — evaluate for web dev/QA pipeline
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Apple''s official Safari MCP server (Safari Technology Preview 247). 17 tools: browser control (tabs/navigation),
+      DOM inspection, network monitoring, screenshots, console logs, accessibility checking, performance analysis, viewport
+      emulation. Connects to any MCP client (Claude Code, Codex). Runs entirely locally — no network calls. Makes agents capable
+      of debugging/QA''ing Safari-rendered pages autonomously. Removed from active per user request 2026-07-23.'
+    captured: '2026-07-09'
+    source: WebKit blog — Saron Yitbarek (Jul 1, 2026)
+    completed: 2026-07-23
+    notes: 'URL: webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ Setup: Safari Technology Preview
+      → enable remote automation → `claude mcp add safari-mcp-stp` Requires: Safari Technology Preview (free), macOS Local
+      only — no network calls. Does NOT access AutoFill/personal data. Tools: browser_console_messages, browser_dialogs, close_tab,
+      create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
+      page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id029
+    id: claude-code-v2-1-203
+    title: Claude Code v2.1.203 — review and update our install
+    type: build
+    domain: devops
+    priority: p1
+    status: done
+    summary: 'Major bug fix release (v2.1.203): macOS background session stalls fixed (15-20s regression in 2.1.196), memory/per-turn
+      CPU regression fixed, ~37% CPU reduction during streaming, ~7MB memory reduction, session token auto-recovery, subagent
+      delegation fix (agents less likely to re-delegate entire task), login-expiry warnings, manual mode badge, Dynamic workflow
+      size setting, /review restored to fast single-pass. Affects our Claude Code CLI Handoff Protocol.'
+    captured: '2026-07-09'
+    completed: 2026-07-27
+    resolution: Updated Jul 12, 2026 — from v2.1.187 to v2.1.207 via `claude install latest --force`. Old app bundle at ~/Library/Application
+      Support/Claude/claude-code/2.1.187/ still exists. New install at ~/.local/bin/claude (symlink to versions/2.1.207).
+      Registry status updated Jul 27 — was left as 'active' after the Jul 12 update.
+    notes: 'Source: releasebot.io/updates/anthropic/claude-code Full CHANGELOG: raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md
+      Key fixes for us: - macOS background session stall (was waiting 15-20s) - Background sessions auto-recover from stale
+      tokens - Subagents carry over work on session restart - Memory/per-turn CPU regression fixed - ~37% streaming CPU reduction
+      Action: Update Claude Code CLI (auto-updates via daemon, or re-install from claude.ai) Cross-ref: We have Claude Code
+      at ~/Library/Application Support/Claude/claude-code/'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id059
+    id: agent-reach
+    title: Agent-Reach — multi-platform web & social access for AI agents
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: 'Local-first CLI that gives AI agents web + social media access across 16+ platforms (Twitter/X, Reddit, YouTube,
+      GitHub, Bilibili, XiaoHongShu, Douyin, Weibo, LinkedIn, Instagram, RSS). MIT licensed. Zero-config for 8 channels, cookie-based
+      auth for others. DIRECTLY RELEVANT: Open-source alternative to Firecrawl (exhausted), Apify, and Tavily. Covers social
+      media scraping we currently can''t do (Instagram, Twitter/X). Complements our DDGS fallback with actual platform-native
+      access.'
+    captured: '2026-07-11'
+    source: '@syntaix.ai Instagram carousel — Panniantong/agent-reach'
+    notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
+      + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
+      scraping. Updated 2026-08-01: verified 63,466 stars (Trendshift #1), pushed to P0 for explore-today. Review: ~/wiki/_system/pending/agent-reach-review.md
+      Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id056
+    id: omniroute-local-gateway
+    title: OmniRoute — local AI routing gateway for 231+ providers
+    type: research
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Open-source local AI gateway: single OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent
+      classifier + task-aware router. Built-in fallback chains, usage tracking, dashboard. Connects Claude Code, Codex, Cursor,
+      Cline, Copilot to free Claude/GPT/Gemini. Overlaps with Hermes model config + provider routing but adds a local proxy
+      layer, free provider access, and intent-based routing.'
+    captured: '2026-07-11'
+    source: '@syntaix.ai Instagram carousel — diegosouzapw/OmniRoute'
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'GitHub: github.com/diegosouzapw/OmniRoute Stack: Next.js app with SSE/routing core Features: 16 OAuth modules,
+      model combo fallback, quota-aware routing, prompt compression, live monitoring dashboard Relevance: Interesting architecture
+      pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
+      Hermes provider config.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id052
+    id: hyperbrowser-eval
+    title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Cloud browser infrastructure for AI agents. Runs Playwright/Puppeteer with residential proxies (12 regions incl.
+      SG), auto CAPTCHA solving, stealth mode, and 1s cold starts. Has official MCP server (npx -y hyperbrowser-mcp, MIT,
+      769★) with 8 tools — scrape, crawl, structured extraction, Browser Use agent, OpenAI CUA, Claude Computer Use. Evaluate
+      as Hermes MCP server add-on for CAPTCHA-bypass on sites the current browser stack can''t handle. Free tier: 5K credits
+      (no CAPTCHA solving). CAPTCHA solving at $30/mo Startup tier.'
+    captured: '2026-07-13'
+    source: hyperbrowser.ai
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "Install: npx -y hyperbrowser-mcp with HYPERBROWSER_API_KEY MCP tools: scrape_webpage, crawl_webpages, extract_structured_data,\n\
+      \  search_with_bing, browser_use_agent, openai_computer_use_agent,\n  claude_computer_use_agent, create/delete/list_profile\n\
+      Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id040
+    id: repowise-eval
+    title: Repowise — codebase intelligence MCP tool for agents
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs,
+      Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health
+      scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on
+      same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS.
+      Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
+    captured: 2026-07-19
+    source: Instagram — OpenSource tool discovery
+    notes: 'High relevance — would give Hermes agents context without burning tokens. MCP server integration means agents
+      query indexed knowledge instead of grepping. Compare to codebase-memory-mcp (already in registry). Token savings claim
+      is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. EVALUATED Aug 14
+      2026 (Claude Code, Voltron session) — VERDICT: eval on hermes-agent only (only repo with real source: 7,073 files; concierge-bot
+      4, brain-engine 2, wiki is prose), --no-prose, AFTER Phase 1. Not memory work — it''s a tool Claude Code uses, like
+      ripgrep (spine remembers decisions; repowise indexes code). THIRD codebase-indexer in registry (codebase-memory-mcp
+      P1 active + Graphify P2 deferred) — bottleneck is deciding, not evaluating; pick one or close all three. M1 risk real:
+      swap 1.84GB/3GB, 7,073 files = 2.4x benchmark, 366.8s index time. AGPL-3.0 matters (user publishes OSS). ARCHIVED per
+      user Aug 14 2026.'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id023
+    id: buzz-block-review
+    title: Buzz — Block's self-hostable workspace for humans + agents
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: Open-source self-hostable workspace from Block (Jack Dorsey's company) where humans and AI agents share the same
+      rooms. Every message, reaction, workflow step, review approval and git event is a signed Nostr event on your own relay;
+      every participant (human or agent) is a keypair. Agents are members, not bots — own keys, own channel memberships, own
+      audit trail, scoped by identity not permission flags.
+    captured: 2026-08-01
+    source: X thread reply — block/buzz (Nostr workspace)
+    notes: 'Repo: github.com/block/buzz — 19,611 stars, Rust, Apache 2.0, created Mar 2026, pushed daily (very active), 1,345
+      open issues. Capabilities: answer questions with receipts, agent bug triage, feature-branch-as-room, unified search
+      across chat+patch+workflow+ approval, channels/canvases/workflows/voice huddles, frame-anchored media comments. Integrates
+      with Hermes three ways (thread context). Relevance: the "agents as teammates" model vs current Telegram+Hermes loop.
+      Concept high value, deploy low urgency. Review: ~/wiki/_system/pending/buzz-block-review.md'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id022
+    id: oh-my-hermes-review
+    title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
+    type: research
+    domain: devops
+    priority: p0
+    status: done
+    summary: '"Install once. Keep Hermes. Add a stronger operating layer." OMH is a workflow/skill layer on top of Hermes
+      Agent: deep interviews for goal engineering, goal-setting, harnesses across models (Fable, Opus, GPT, Kimi, GLM, Qwen),
+      sub-agent command splitting, memory retention with evidence boundaries. Runs on Hermes Desktop, CLI, and messenger.'
+    captured: 2026-08-01
+    source: X — @rlaope (HOPE | Engineer.) — github.com/rlaope/oh-my-hermes
+    notes: 'Repo: 409 stars, MIT, Python 3.11+, v1.0.4 stable, created Jun 2026, pushed Aug 1 (active). Author: HOPE / Sionic
+      AI (Paris). Key angle: explicit evidence boundaries + "dreaming" memory — overlaps with spine memory v2. Differentiators
+      are workflow layer + evidence gates, not model routing. Worth comparing their evidence model to ours. Review: ~/wiki/_system/pending/oh-my-hermes-review.md'
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 4
+  total_count: 17
+  active_count: 4
+  delegated_count: 0
+  done_count: 13
+  p0_count: 0
+  p1_count: 4
+  p2_count: 0
   p3_count: 0
 - emoji: ''
   name: career
@@ -2110,355 +2498,6 @@ clusters:
   done_count: 9
   p0_count: 1
   p1_count: 2
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: devops
-  kind: domain
-  items:
-  - id: hermes-session-pruning-update
-    title: Evaluate & adopt Hermes session DB pruning/archiving
-    type: build
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Hermes Agent just shipped major session DB management: prune or archive past sessions with filters (timeframes,
-      models used, users, working directory, and more). Run `hermes update` to get the latest, then evaluate which pruning
-      strategy fits our workflow. Particularly relevant given our ~40 active crons, 12 forum topics, and growing session DB.
-      PRIORITY CORRECTED Aug 17 2026: was P0 since Jul 7 capture with no action in 6 weeks — downgraded to P1 maintenance.
-      Real user priorities (CCA-F, career) hold the P0 slots.'
-    captured: '2026-07-07'
-    source: '@teknium on X (Jul 6, 2026) - session management update - https://x.com/Teknium/status/2073997246220349615'
-    notes: 'Post: x.com/Teknium/status/2073997246220349615 75.5K views, Jul 6, 2026 Potential filters: timeframes, models,
-      users, working directory Impact: Clean up growing session DB without losing wanted context. Evaluate and apply the right
-      pruning strategy for our setup. Command: hermes update'
-    gist: Evaluation and rollout of Hermes session pruning to archive old conversations.
-    next_step: Run hermes update and pick the session DB pruning strategy.
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: labs-blitz-pomodoro-build
-    title: Labs Blitz + Pomodoro build — awaiting Zo
-    type: build
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Rebuild the labs page (0xsteamboat.me/labs, chintheman/0xsteamboat-me repo, server.ts + src/pages/labs.tsx)
-      in 6 phases: (1) fix server-side mapPriority/mapStatus remapping (root cause of P0-P3 filter bug + duplicate Active
-      status), (2) quadrant badges + matrix-summary header, (3) Blitz Q4 view with Keep/Archive/Delegate buttons + POST /api/labs/status,
-      (4) universal Done button + session-scoped undo, (5) pomodoro timer with alarm (in-page chime + Notification API primary,
-      Hermes cron Telegram backup) + blitz-sessions.yaml, (6) 25/5 + 50/10 config.'
-    captured: 2026-08-11
-    source: Chin approved plan (Aug 11 2026) — Claude Code plan at ~/wiki/_system/pending/labs-blitz-plan.md
-    notes: 'Zo builds all page work (ZO-HANDOFF.md written Aug 11 to /home/workspace/0xsteamboat-me-docs/design/labs-blitz/ZO-HANDOFF.md,
-      rule 14630024 updated). Zo must branch /watches in-flight work separately (wip/watches) before starting. Hermes builds
-      in parallel: progress-sync.py extension (ingest blitz-sessions.yaml, direct done status) + new blitz-timer-watchdog.py
-      cron. Headless Claude Code review gate after Zo finishes, before Chin signs off. /api/hermes is DEAD by design — never
-      use.'
-    gist: The labs page rebuild adding quadrant badges, status buttons, and a pomodoro timer.
-    next_step: Check Zo's progress on the labs blitz build and verify the phase one filter fix.
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: compliance-audit-stack-review
-    title: Review compliance/audit/watchdog stack — expand or remove
-    type: discuss
-    domain: devops
-    priority: p1
-    status: active
-    summary: 'Review the full automated check stack: 1 style audit (ADHD Output Rules), ~8 system-health audits (skills quality,
-      memory health, spine benchmark, wiki lint, maintenance sweeper, curator, calibration), ~20 watchdogs (battery, wifi,
-      gateway, dashboard, cron health, config guardian, email/ credits watchers). Decide per-check: keep / expand / remove.
-      NOTE: automate a security audit — fold agent-hardening into a scheduled recurring check. Also: design routing so surfaced
-      issues get a defined path to remediation (auto-create registry task / fix pipeline) instead of being reported and parked.
-      wiki-fts5-reindex cron currently in ERROR state.'
-    captured: 2026-08-16
-    source: Telegram Aug 16 2026 (ADHD audit discussion)
-    notes: ~/wiki/_system/pending/compliance-audit-stack-review.md
-    gist: A review of the automated audit and watchdog stack to decide what to keep, expand, or remove.
-    next_step: Draft the keep/expand/remove decision table for every check in the stack.
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id094
-    id: ddgs-search-fallback
-    title: DDGS — DuckDuckGo web search fallback
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: Installed ddgs (pip, Hermes venv), set web.search_backend=ddgs in config.yaml. No API key, no Docker, no rate
-      limits. Free fallback when Firecrawl is exhausted.
-    captured: 2026-07-01
-    source: Firecrawl credit exhaustion / Hermes Agent docs
-    notes: config.yaml web.search_backend = ddgs
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id090
-    id: supermemory-dedup-cron
-    title: Memory Audit — Periodic Supermemory dedup + TTL cron
-    type: discuss
-    domain: devops
-    priority: p2
-    status: done
-    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
-      entries.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id071
-    id: graphify-integration
-    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
-      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
-      until we have active coding projects with measurable token burn from re-orientation.
-    captured: '2026-07-04'
-    source: kayvon.ai IG reel — Graphify
-    completed: 2026-07-04
-    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
-      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
-      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
-      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
-      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id074
-    id: developer-agent-codex-claude
-    title: Create a developer agent profile enabling both Codex and Claude Code
-    type: build
-    domain: devops
-    priority: p0
-    status: done
-    summary: Build a dedicated developer profile in Hermes that can orchestrate both Codex CLI and Claude Code as subagents/tools
-      for multi-model coding workflows.
-    captured: '2026-07-03'
-    source: 0xsteamboat request
-    delegated_to: The General (#1)
-    completed: 2026-07-04
-    notes: 'Handoff file: ~/wiki/_system/pending/developer-agent-codex-claude.md Existing assets: autonomous-coding-agents
-      skill (references/codex.md, references/claude-code.md, references/opencode.md, references/acp-agent-integration.md),
-      codex-hermes-integration-report.md at ~/research/. Need: dev profile (config.yaml + SOUL.md), routing decision logic,
-      topic registration. Research question: can Codex create creative content? Answered in integration report §3.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id061
-    id: kimi-code-evaluate
-    title: Kimi Code — evaluate as coding agent alternative
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Moonshot AI''s terminal-based AI coding agent (TypeScript, MIT). Direct Claude Code / OpenCode competitor. Powers
-      Kimi K2.5-K2.7 Code models (MoE 1T params, 32B active, 100 tok/s output). Key features: Agent Swarm (100 parallel sub-agents),
-      ACP protocol for IDE integration (Zed, JetBrains), 256K context, npm install. Pricing: $19/mo membership + $0.60/$2.50
-      per MTok (75% cache discount) — 4-17x cheaper than GPT-5.4. Worth evaluating as cheap secondary coding agent alongside
-      our OpenCode + DeepSeek. GH: github.com/MoonshotAI/kimi-code'
-    captured: '2026-07-09'
-    source: Moonshot AI — Kimi Code CLI (MIT, 3K⭐, 699 commits)
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "URL: kimi.com/code — GH: github.com/MoonshotAI/kimi-code (3K⭐, MIT) Model: K2.7 Code (latest), K2.6, K2.5. Released\
-      \ Jun 2026. Install: `npm install -g @moonshot-ai/kimi-code` (Node ≥24.15) ACP protocol means it can drive Zed/JetBrains\
-      \ sessions. Agent Swarm: decomposes tasks into 100 parallel sub-agents (4.5x speedup) Pricing breakdown:\n  - $19/mo\
-      \ membership (300-1200 API calls/5h window, 30 concurrent)\n  - API: $0.60/M input, $2.50/M output (+75% cache discount)\n\
-      \  - 1hr session ~$1.40 vs Claude Code ~$13.50\nRelevance: We have OpenCode with DeepSeek Flash ($0.15-0.30/M).\n  Kimi\
-      \ is more expensive than our current DeepSeek setup, but K2.7\n  may offer different capability tradeoffs. Worth benchmarking\
-      \ vs\n  our stack before deciding to install.\nCross-ref: Our existing autonomous-coding-agents skill references\n \
-      \ OpenCode + DeepSeek as primary stack."
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id034
-    id: safari-mcp-server
-    title: Safari MCP Server — evaluate for web dev/QA pipeline
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Apple''s official Safari MCP server (Safari Technology Preview 247). 17 tools: browser control (tabs/navigation),
-      DOM inspection, network monitoring, screenshots, console logs, accessibility checking, performance analysis, viewport
-      emulation. Connects to any MCP client (Claude Code, Codex). Runs entirely locally — no network calls. Makes agents capable
-      of debugging/QA''ing Safari-rendered pages autonomously. Removed from active per user request 2026-07-23.'
-    captured: '2026-07-09'
-    source: WebKit blog — Saron Yitbarek (Jul 1, 2026)
-    completed: 2026-07-23
-    notes: 'URL: webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ Setup: Safari Technology Preview
-      → enable remote automation → `claude mcp add safari-mcp-stp` Requires: Safari Technology Preview (free), macOS Local
-      only — no network calls. Does NOT access AutoFill/personal data. Tools: browser_console_messages, browser_dialogs, close_tab,
-      create_tab, evaluate_javascript, get_network_request, get_page_content, list_network_requests, list_tabs, navigate_to_url,
-      page_info, page_interactions, screenshot, set_emulated_media, set_viewport_size, switch_tab, wait_for_navigation'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id029
-    id: claude-code-v2-1-203
-    title: Claude Code v2.1.203 — review and update our install
-    type: build
-    domain: devops
-    priority: p1
-    status: done
-    summary: 'Major bug fix release (v2.1.203): macOS background session stalls fixed (15-20s regression in 2.1.196), memory/per-turn
-      CPU regression fixed, ~37% CPU reduction during streaming, ~7MB memory reduction, session token auto-recovery, subagent
-      delegation fix (agents less likely to re-delegate entire task), login-expiry warnings, manual mode badge, Dynamic workflow
-      size setting, /review restored to fast single-pass. Affects our Claude Code CLI Handoff Protocol.'
-    captured: '2026-07-09'
-    completed: 2026-07-27
-    resolution: Updated Jul 12, 2026 — from v2.1.187 to v2.1.207 via `claude install latest --force`. Old app bundle at ~/Library/Application
-      Support/Claude/claude-code/2.1.187/ still exists. New install at ~/.local/bin/claude (symlink to versions/2.1.207).
-      Registry status updated Jul 27 — was left as 'active' after the Jul 12 update.
-    notes: 'Source: releasebot.io/updates/anthropic/claude-code Full CHANGELOG: raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md
-      Key fixes for us: - macOS background session stall (was waiting 15-20s) - Background sessions auto-recover from stale
-      tokens - Subagents carry over work on session restart - Memory/per-turn CPU regression fixed - ~37% streaming CPU reduction
-      Action: Update Claude Code CLI (auto-updates via daemon, or re-install from claude.ai) Cross-ref: We have Claude Code
-      at ~/Library/Application Support/Claude/claude-code/'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id059
-    id: agent-reach
-    title: Agent-Reach — multi-platform web & social access for AI agents
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: 'Local-first CLI that gives AI agents web + social media access across 16+ platforms (Twitter/X, Reddit, YouTube,
-      GitHub, Bilibili, XiaoHongShu, Douyin, Weibo, LinkedIn, Instagram, RSS). MIT licensed. Zero-config for 8 channels, cookie-based
-      auth for others. DIRECTLY RELEVANT: Open-source alternative to Firecrawl (exhausted), Apify, and Tavily. Covers social
-      media scraping we currently can''t do (Instagram, Twitter/X). Complements our DDGS fallback with actual platform-native
-      access.'
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — Panniantong/agent-reach'
-    notes: 'GitHub: github.com/Panniantong/agent-reach Stars: trending #1 on GitHub Install: pip install agent-reach (yt-dlp
-      + feedparser bundled) Channels: 6/9 zero-config, rest need cookies Relevance: Firecrawl replacement for web + social
-      scraping. Updated 2026-08-01: verified 63,466 stars (Trendshift #1), pushed to P0 for explore-today. Review: ~/wiki/_system/pending/agent-reach-review.md
-      Currently we use DDGS (free, limited) and browser_navigate (Chromium, no social login).'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id056
-    id: omniroute-local-gateway
-    title: OmniRoute — local AI routing gateway for 231+ providers
-    type: research
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Open-source local AI gateway: single OpenAI-compatible endpoint routing across 231+ providers (50+ free). Intent
-      classifier + task-aware router. Built-in fallback chains, usage tracking, dashboard. Connects Claude Code, Codex, Cursor,
-      Cline, Copilot to free Claude/GPT/Gemini. Overlaps with Hermes model config + provider routing but adds a local proxy
-      layer, free provider access, and intent-based routing.'
-    captured: '2026-07-11'
-    source: '@syntaix.ai Instagram carousel — diegosouzapw/OmniRoute'
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'GitHub: github.com/diegosouzapw/OmniRoute Stack: Next.js app with SSE/routing core Features: 16 OAuth modules,
-      model combo fallback, quota-aware routing, prompt compression, live monitoring dashboard Relevance: Interesting architecture
-      pattern for our model routing. Free provider access (50+ free) could reduce API costs. Overlaps but doesn''t replace
-      Hermes provider config.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id052
-    id: hyperbrowser-eval
-    title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Cloud browser infrastructure for AI agents. Runs Playwright/Puppeteer with residential proxies (12 regions incl.
-      SG), auto CAPTCHA solving, stealth mode, and 1s cold starts. Has official MCP server (npx -y hyperbrowser-mcp, MIT,
-      769★) with 8 tools — scrape, crawl, structured extraction, Browser Use agent, OpenAI CUA, Claude Computer Use. Evaluate
-      as Hermes MCP server add-on for CAPTCHA-bypass on sites the current browser stack can''t handle. Free tier: 5K credits
-      (no CAPTCHA solving). CAPTCHA solving at $30/mo Startup tier.'
-    captured: '2026-07-13'
-    source: hyperbrowser.ai
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "Install: npx -y hyperbrowser-mcp with HYPERBROWSER_API_KEY MCP tools: scrape_webpage, crawl_webpages, extract_structured_data,\n\
-      \  search_with_bing, browser_use_agent, openai_computer_use_agent,\n  claude_computer_use_agent, create/delete/list_profile\n\
-      Free tier test first — prove CAPTCHA gap exists before paying $30/mo GitHub: github.com/hyperbrowserai/mcp"
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id040
-    id: repowise-eval
-    title: Repowise — codebase intelligence MCP tool for agents
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: 'Open-source codebase intelligence tool (AGPL-3.0, 3.6K ⭐). Indexes your repo into 5 layers (Graph, Git, Docs,
-      Decisions, Code Health) and serves them via MCP — 9 tools agents call directly. Key features: deterministic code health
-      scoring (25 biomarkers, zero-LLM, validated 0.74-0.81 AUC), token distillation (96% fewer — 2,391 vs 64,039 tokens on
-      same task), auto-generated CLAUDE.md, dead code detection, git analytics. Self-host via `pip install repowise` or SaaS.
-      Works with Claude Code, Cursor, 30+ tools. Validated against Hugo — worst-scoring files 5x more likely to carry bugs.'
-    captured: 2026-07-19
-    source: Instagram — OpenSource tool discovery
-    notes: 'High relevance — would give Hermes agents context without burning tokens. MCP server integration means agents
-      query indexed knowledge instead of grepping. Compare to codebase-memory-mcp (already in registry). Token savings claim
-      is dramatic — worth an eval session. Repo: github.com/repowise-dev/repowise. Landing: repowise.dev. EVALUATED Aug 14
-      2026 (Claude Code, Voltron session) — VERDICT: eval on hermes-agent only (only repo with real source: 7,073 files; concierge-bot
-      4, brain-engine 2, wiki is prose), --no-prose, AFTER Phase 1. Not memory work — it''s a tool Claude Code uses, like
-      ripgrep (spine remembers decisions; repowise indexes code). THIRD codebase-indexer in registry (codebase-memory-mcp
-      P1 active + Graphify P2 deferred) — bottleneck is deciding, not evaluating; pick one or close all three. M1 risk real:
-      swap 1.84GB/3GB, 7,073 files = 2.4x benchmark, 366.8s index time. AGPL-3.0 matters (user publishes OSS). ARCHIVED per
-      user Aug 14 2026.'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id023
-    id: buzz-block-review
-    title: Buzz — Block's self-hostable workspace for humans + agents
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: Open-source self-hostable workspace from Block (Jack Dorsey's company) where humans and AI agents share the same
-      rooms. Every message, reaction, workflow step, review approval and git event is a signed Nostr event on your own relay;
-      every participant (human or agent) is a keypair. Agents are members, not bots — own keys, own channel memberships, own
-      audit trail, scoped by identity not permission flags.
-    captured: 2026-08-01
-    source: X thread reply — block/buzz (Nostr workspace)
-    notes: 'Repo: github.com/block/buzz — 19,611 stars, Rust, Apache 2.0, created Mar 2026, pushed daily (very active), 1,345
-      open issues. Capabilities: answer questions with receipts, agent bug triage, feature-branch-as-room, unified search
-      across chat+patch+workflow+ approval, channels/canvases/workflows/voice huddles, frame-anchored media comments. Integrates
-      with Hermes three ways (thread context). Relevance: the "agents as teammates" model vs current Telegram+Hermes loop.
-      Concept high value, deploy low urgency. Review: ~/wiki/_system/pending/buzz-block-review.md'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id022
-    id: oh-my-hermes-review
-    title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
-    type: research
-    domain: devops
-    priority: p0
-    status: done
-    summary: '"Install once. Keep Hermes. Add a stronger operating layer." OMH is a workflow/skill layer on top of Hermes
-      Agent: deep interviews for goal engineering, goal-setting, harnesses across models (Fable, Opus, GPT, Kimi, GLM, Qwen),
-      sub-agent command splitting, memory retention with evidence boundaries. Runs on Hermes Desktop, CLI, and messenger.'
-    captured: 2026-08-01
-    source: X — @rlaope (HOPE | Engineer.) — github.com/rlaope/oh-my-hermes
-    notes: 'Repo: 409 stars, MIT, Python 3.11+, v1.0.4 stable, created Jun 2026, pushed Aug 1 (active). Author: HOPE / Sionic
-      AI (Paris). Key angle: explicit evidence boundaries + "dreaming" memory — overlaps with spine memory v2. Differentiators
-      are workflow layer + evidence gates, not model routing. Worth comparing their evidence model to ours. Review: ~/wiki/_system/pending/oh-my-hermes-review.md'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 3
-  total_count: 16
-  active_count: 3
-  delegated_count: 0
-  done_count: 13
-  p0_count: 0
-  p1_count: 3
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -2798,14 +2837,12 @@ clusters:
       + no open signup; Hermes adapter wiring gaps on AGENTS.md injection (#3833), skill sync (#2316), env injection (#2915).
       Full report: ~/wiki/_system/pending/paperclip-explore.md.'
     captured: 2026-08-16
-    source: PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     notes: _system/pending/paperclip-explore.md
     gist: 'Paperclip is a legit org layer with an official Hermes adapter — Hermes plugs in natively (hermes_local/hermes_gateway),
       not just via HTTP. Real budgets+approvals+audit. Security: keep it non-public (CVE-2026-41679 fixed, but config=executable
       by design). M1 can host a small company.'
-    next_step: 'Decision needed: run the local spike — npx paperclipai onboard --yes on the M1 (loopback-only), 2-agent company
-      (CEO + worker via hermes_local), one real issue end-to-end to validate heartbeat→budget→approval loop before any BennettOS
-      placement. Verify #3833/#2316/#2915 fix status first.'
+    next_step: Research complete and spike deferred by Chin's decision on 2026-08-20; revisit only if the org-layer question
+      resurfaces. PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
     researched: 2026-08-17
     cluster: devtools
     cluster_emoji: ''
@@ -3651,6 +3688,6 @@ archive:
 - *id093
 - *id094
 - *id095
-updated_at: 2026-08-19 20:49:03 SGT
-total_active: 53
+updated_at: 2026-08-20 16:24:20 SGT
+total_active: 55
 total_done: 95
