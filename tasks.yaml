@@ -264,6 +264,12 @@ clusters:
     notes: 'App state verified Aug 15: v1.1.0 live Aug 12 2026, Education category, 5.0★ (1 rating), free, EN only, iOS 17+.
       User interview in progress (one question at a time) to lock success definition and context.
 
+      SCREENSHOT FIX (Aug 20 2026): search card showed no screenshots on newer iPhones because only the 6.5" set existed.
+      Generated + uploaded 21 screenshots to v1.2.0 (PREPARE_FOR_SUBMISSION): APP_IPHONE_67 (1290×2796, from iPhone 17 Pro
+      Max sim) + APP_IPHONE_61 (1179×2556, from iPhone 16 sim), 7 shots each, all COMPLETE. Live 1.1.0 metadata is locked
+      — new sizes go live when 1.2.0 ships. XCUITest capture target committed (TotoAppUITests, xcodegen). No App Preview video
+      yet (optional next).
+
       CLAUDE CODE REVIEW (Aug 20 2026) — /tmp/toto-buddy-pm-claude-review.md: viable as credibility-led SG niche, but P0s
       must close first — (1) monetization UNDEFINED: review recommends Pro tier (crowd-avoidance engine + snowball EV alerts
       >0.46), drops ads (policy-restricted on gambling content) and SG Pools sale (zero roadmap time); (2) Jul 28 pure-spread-beats-Sys7
@@ -3730,6 +3736,6 @@ archive:
 - *id093
 - *id094
 - *id095
-updated_at: 2026-08-20 18:06:08 SGT
+updated_at: 2026-08-20 18:36:02 SGT
 total_active: 56
 total_done: 95
