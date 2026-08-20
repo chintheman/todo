@@ -266,9 +266,11 @@ clusters:
 
       SCREENSHOT FIX (Aug 20 2026): search card showed no screenshots on newer iPhones because only the 6.5" set existed.
       Generated + uploaded 21 screenshots to v1.2.0 (PREPARE_FOR_SUBMISSION): APP_IPHONE_67 (1290×2796, from iPhone 17 Pro
-      Max sim) + APP_IPHONE_61 (1179×2556, from iPhone 16 sim), 7 shots each, all COMPLETE. Live 1.1.0 metadata is locked
-      — new sizes go live when 1.2.0 ships. XCUITest capture target committed (TotoAppUITests, xcodegen). No App Preview video
-      yet (optional next).
+      Max sim) + APP_IPHONE_61 (1179×2556, from iPhone 16 sim) + APP_IPHONE_65 (1242×2688, old-UI set replaced with new-UI
+      shots), 7 shots each, all COMPLETE. Sequence matches the live card logic: onboarding → home → calculator → history →
+      myths → numbers → picks (display order = creation order; sets were rebuilt after comparing against the live page carousel).
+      Live 1.1.0 metadata is locked — new sizes go live when 1.2.0 ships. XCUITest capture target committed (TotoAppUITests,
+      xcodegen). No App Preview video yet (optional next).
 
       CLAUDE CODE REVIEW (Aug 20 2026) — /tmp/toto-buddy-pm-claude-review.md: viable as credibility-led SG niche, but P0s
       must close first — (1) monetization UNDEFINED: review recommends Pro tier (crowd-avoidance engine + snowball EV alerts
@@ -3736,6 +3738,6 @@ archive:
 - *id093
 - *id094
 - *id095
-updated_at: 2026-08-20 18:36:02 SGT
+updated_at: 2026-08-20 19:12:09 SGT
 total_active: 56
 total_done: 95
