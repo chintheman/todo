@@ -955,17 +955,27 @@ clusters:
     domain: ai/ml
     priority: p1
     status: active
-    summary: 'Context engineering research (PASS 1, 2026-08-17) identified compaction prompt quality as the unmeasured gap:
-      Hermes consolidation prunes by age/decay, not by a tuned preserve-decisions-discard-tool-outputs prompt. This is the
-      CAUSE of the session-degradation Chin noticed when reopening big sessions repeatedly; the task-memory log (FB-05) treats
-      the symptom. Claude''s guidance: preserve user intent, completed work, errors, active work, key references; discard
-      filler. Low effort, medium impact — quality of what survives every long session. Deliverable: audit the current consolidation
-      prompt against Claude''s compaction guidance, tune it, and verify on the last 2 weeks of observations.'
+    summary: Built + verified. Audited the compaction/consolidation path — the prompts were already tuned (Aug 15 field-proven
+      upgrades) but the winning lean policy was shipped opt-in and the running gateway was on the weak legacy default. Flipped
+      compression.tail_mode to lean (68.3% vs 45.8% recall at 0.30x tokens per scorecard), added an explicit discard-tool-noise
+      rule to the batch + micro summarizer prompts (A/B-verified, no regression, 0 noise carried; digest prompt left untouched
+      — the rule measurably cost digest recall there), and exempted user-corrections from idle decay in spine consolidation.
+      Verification on a real 2-week session slice — anchor index preserves 96.3% of exact identifiers vs 24.4% for bare-LLM
+      summaries; 141 compressor tests + 545 agent tests pass.
     captured: 2026-08-20
     source: context-engineering-research (2026-08-17), gap 3 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
     notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
-    gist: Tune Hermes consolidation to preserve decisions and errors instead of pruning by age.
-    next_step: Audit the current consolidation prompt against Claude compaction guidance.
+    gist: Cause of resume-degradation was deployment, not prompt content — lean compaction (anchor index + digests + recovery
+      pointers) was shipped opt-in and off. Enabled it, added discard-tool-noise rules where A/B showed they help, exempted
+      corrections from decay. Verified on real data — identifier survival 24.4% to 96.3%.
+    next_step: Restart the gateway (hermes gateway restart) at a convenient moment to activate tail_mode lean — the config
+      flip is in but the running process predates it. Then watch the next few compactions for digest latency (~2min first
+      pass vs ~15s legacy) and resumed-session quality. Optional follow-up from the scorecard — iterate prmerge-class recall
+      (dense multi-PR campaigns, 43.3% ceiling) behind the lean flag.
+    researched: 2026-08-20
+    log:
+    - 2026-08-20 · hermes · Compaction tuning — enabled lean tail mode (was legacy default), added discard-tool-noise rules
+      to batch+micro prompts (A/B-verified), exempted corrections from decay. Anchor-index survival 96.3% vs 24.4% bare-LLM.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -3711,6 +3721,6 @@ archive:
 - *id093
 - *id094
 - *id095
-updated_at: 2026-08-20 16:30:08 SGT
+updated_at: 2026-08-20 17:01:01 SGT
 total_active: 56
 total_done: 95
