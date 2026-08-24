@@ -39,10 +39,10 @@ cluster_order:
   name: ai/ml
   kind: domain
 - emoji: ''
-  name: crypto
+  name: career
   kind: domain
 - emoji: ''
-  name: career
+  name: crypto
   kind: domain
 - emoji: ''
   name: devops
@@ -1776,151 +1776,6 @@ clusters:
   p2_count: 4
   p3_count: 1
 - emoji: ''
-  name: crypto
-  kind: domain
-  items:
-  - id: ionic-investor-day-must-read
-    title: 'Must-read: Ionic Digital Investor Day summary (shareholder briefing)'
-    type: read
-    domain: crypto
-    priority: p0
-    status: active
-    summary: 'Full 78.5-min webcast transcribed + summarized. Ionic Digital (IOND, Nasdaq direct listing) pivoted from BTC
-      mining to an AI data-center landlord. Key facts: 822 MW West Texas power (~5c/kWh), 10-yr $2.6B triple-net lease with
-      Nscale (NVIDIA-guaranteed first 5 yrs ~$860M, Microsoft ROFR), $183M to $251M annual contracted NOI, 98-99% margins,
-      debt-free with ~$630M liquidity, $400M raise at $53/share ($2.4B post-money), ~2,800 BTC to sell for buildout. Cash
-      rent starts Aug 2026. ERCOT batch-zero decision (Aug 7) is the 466 MW confirmation hinge. Direct listing = no dilution;
-      shares salable on the first trading day after S-1 effectiveness.'
-    captured: 2026-08-19
-    source: Telegram Aug 18 2026 — user asked to add as must-read after PDF delivery
-    notes: 'PDF: ~/Downloads/ionic-investor-day-summary.pdf (4 pages). Transcript: ~/Downloads/ionic-investor-day-transcript.txt.
-      Webcast replay: https://edge.media-server.com/mmc/p/rgu725dx/'
-    gist: Read the 4-page PDF summary of the Jul 14 2026 Investor Day webcast — the full company pitch ahead of the IOND direct
-      listing.
-    next_step: 'Read the PDF (~/Downloads/ionic-investor-day-summary.pdf). Key action inside: register shares with Odyssey
-      NOW + open a brokerage account so you can sell on the first trading day after the S-1 is effective.'
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: miner-dc-tracker-change-pct-fix
-    title: Fix miner_dc_tracker.py change_pct bug — stale chartPreviousClose
-    type: build
-    domain: crypto
-    priority: p1
-    status: active
-    summary: 'Yahoo range=2d daily chartPreviousClose goes stale when a session bar is missing (Aug 18 run: HUT showed -2.4%,
-      true was -5.7% vs Mon close). Fix: pull range=1d/5m chartPreviousClose (intraday endpoint) instead, or verify last bar
-      date before computing. Preserved from an orphaned note appended to review-items.md that the board render guard refused
-      to overwrite.'
-    captured: 2026-08-19
-    notes: 'File: ~/.hermes/scripts/market_intel/miner_dc_tracker.py'
-    gist: A fix for the miner data collector's change_pct bug when a session bar is missing.
-    next_step: Patch miner_dc_tracker.py to pull range=1d/5m chartPreviousClose or verify the last bar date.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: tradingview-mcp-integration
-    title: Integrate TradingView MCP — AI chart analysis for crypto quant
-    type: build
-    domain: crypto
-    priority: p1
-    status: active
-    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated
-      chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription
-      + Desktop app with --remote-debugging-port=9222.
-    captured: '2026-07-04'
-    source: aipagedaily IG post — tradingview-mcp
-    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay,
-      drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
-      with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
-      Validated via direct GH read + repo info + README review.'
-    gist: A connector that lets Claude Code analyse charts and run backtests through TradingView Desktop.
-    next_step: Ask Chin whether he has the paid TradingView subscription before installing.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: claude-code-ai-hedge-fund
-    title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
-    type: discuss
-    domain: crypto
-    priority: p2
-    status: active
-    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
-      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
-      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
-    captured: 2026-08-07
-    source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
-    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
-      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
-      decomposition is the pattern worth extracting for the quant stack.
-    gist: A research and risk system for investing, built in Claude Code, to mine for quant patterns.
-    next_step: Extract the research-queue and ranking pattern into the quant stack design.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: quant-repos-review
-    title: Explore top quant finance GitHub repos
-    type: research
-    domain: crypto
-    priority: p2
-    status: active
-    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster
-      (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
-    captured: '2026-07-03'
-    source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
-    notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
-    gist: A curated list of top quantitative finance repos to trial for the quant stack.
-    next_step: Review the pending file and pick the top three repos to trial.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id042
-    id: nicholascrown-macro-letter
-    title: Nicholas Crown — macro trading profile + The Crown Macro Letter
-    type: research
-    domain: crypto
-    priority: p2
-    status: done
-    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
-      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
-      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
-      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
-    captured: 2026-07-19
-    source: Instagram — @nicholascrown reel
-    resolution: blitz-archived via labs 2026-08-14
-    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
-      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
-      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id019
-    id: market-intel-refinement-review
-    title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
-    type: discuss
-    domain: crypto
-    priority: p1
-    status: done
-    summary: Review date (2026-07-20) has passed with the review not yet done. 4 deferred items pending assessment against
-      ~1 week of live brief performance (prediction hit-rate, Brier trend, data-source reliability).
-    captured: 2026-07-13
-    source: Manually appended to review-items.md on 2026-07-13, found during the Chief of Staff cluster audit
-    completed: 2026-08-12
-    notes: 'Full context: ~/wiki/_system/pending/market-intel-refinement-review.md'
-    cluster: crypto
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 5
-  total_count: 7
-  active_count: 5
-  delegated_count: 0
-  done_count: 2
-  p0_count: 1
-  p1_count: 2
-  p2_count: 2
-  p3_count: 0
-- emoji: ''
   name: career
   kind: domain
   items:
@@ -1981,6 +1836,117 @@ clusters:
       Related: ai-adoption-specialist'
     gist: A ranked analysis of five ways to sell the proven Hermes stack to enterprises.
     next_step: Deep dive the 5 productisation paths and pick the wedge after the CCA-F exam.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-8-hours-work-4
+    title: 'Read: 8 Hours of Work in 4 (time-blocking system)'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Colby Kultgen''s system for fitting a full workday into half the time (slide 1 of the @entrepreneur.dose carousel).
+      Three levers: (1) time-blocking — one task per dedicated block, group similar tasks, zero context switching; (2) artificial
+      deadlines — break work into small steps with a tight deadline each (Parkinson''s Law: effort peaks at the optimal time);
+      (3) work-style matching — Planner / Prioritizer / Arranger / Visualizer, each gets a daily routine. Caveat: all of it
+      dies if you stay distracted — notifications off, clean workspace, boundaries. Full extraction: _system/pending/read-8-hours-work-4.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-1-8-hours.jpg'
+    gist: A time-blocking productivity system for compressing 8 hours of work into 4.
+    next_step: Read the slide and note, then pick one time-blocking pattern to try this week.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-dan-koe-anti-vision
+    title: 'Read: Get Ahead of 99% of People (Dan Koe)'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Dan Koe''s four-step plan to get ahead of 99% of people (slide 6 of the @entrepreneur.dose carousel, the caption''s
+      actual content): (1) create your anti-vision — 30 min notebook, write everything you refuse to become, build in the
+      opposite direction; (2) disappear for 6 months — cut social media, toxic relationships, distractions, no explaining
+      yourself; (3) master the fundamentals — boring daily reps (writing, training) that compound; (4) embrace trial and error
+      — scientist mindset, adjust the approach never abandon the goal. The 30-min anti-vision writing session is the one standalone
+      actionable exercise. Full extraction: _system/pending/read-dan-koe-anti-vision.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-6-dan-koe.jpg'
+    gist: 'Dan Koe''s four-step anti-vision plan for getting ahead: vision, disappearance, fundamentals, trial.'
+    next_step: Read the plan and write your own 30-minute anti-vision list.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-flow-state
+    title: 'Read: How to Get Into Flow State'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Venn-diagram framework for flow state (slide 4 of the @entrepreneur.dose carousel): the overlap of care about
+      it + long-term + challenging + good at it equals FLOW. Outcomes: fulfilment, happiness, persistence, clarity. Diagnostic
+      use: a task you keep procrastinating is usually missing challenge (too easy) or care (meaningless busywork). Full extraction:
+      _system/pending/read-flow-state.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-4-flow.jpg'
+    gist: A four-condition framework for reaching flow state through care, challenge, and skill.
+    next_step: Read the framework and identify which flow condition you are currently missing.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-para-method
+    title: 'Read: P.A.R.A. Method (Tiago Forte)'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Tiago Forte''s P.A.R.A. method for organizing ideas (slide 3 of the @entrepreneur.dose carousel): Projects (goal
+      + deadline) -> Areas (ongoing maintenance) -> Resources (reference material) -> Archives (inactive), driven by the loop
+      Capture -> Organize -> Distill -> Express. Suggested tools: Notion/Obsidian/Evernote for notes, Trello/Asana/Todoist
+      for tasks, Drive/Dropbox for files. Maps directly onto the Second Brain vault structure. Full extraction: _system/pending/read-para-method.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-3-para.jpg'
+    gist: The P.A.R.A. method for organizing ideas into projects, areas, resources, and archives.
+    next_step: Read the method and sort your current active work into P.A.R.A. categories.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-productivity-cheatsheet
+    title: 'Read: Productivity Cheat Sheet (6 methods)'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Six quick productivity methods on one slide (slide 5 of the @entrepreneur.dose carousel): Pomodoro (25/5 x4
+      + long break), 3/3/3 (3h deep project + 3 urgent + 3 maintenance), Eisenhower (do / schedule / delegate / eliminate),
+      Eat the Frog (hardest task first), Seinfeld Strategy (daily calendar streak, never miss 2 days), Time Blocking (group
+      tasks into assigned slots). The labs Blitz pomodoro timer already implements method 1. Full extraction: _system/pending/read-productivity-cheatsheet.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-5-cheatsheet.jpg'
+    gist: 'Six quick productivity methods: Pomodoro, 3/3/3, Eisenhower, Eat the Frog, Seinfeld, time blocking.'
+    next_step: Read the six methods and pick one to test for the next week.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-steve-jobs-sales
+    title: 'Read: Steve Jobs'' 8 Rules for Sales Excellence'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Steve Jobs'' eight rules for sales excellence (slide 2 of the @entrepreneur.dose carousel): (1) unique value
+      proposition, (2) sell benefits not features, (3) keep it simple, (4) tell a compelling story, (5) know your audience,
+      (6) create an experience not a product, (7) don''t fear polarizing, (8) persist through rejection. Relevant to pitch
+      decks, Substack posts, and Marketing Concierge bot copy. Full extraction: _system/pending/read-steve-jobs-sales.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-2-jobs-sales.jpg'
+    gist: Steve Jobs' eight sales rules as a reference for persuasive product storytelling.
+    next_step: Read the eight rules and map each one to a current pitch or product story.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -2214,14 +2180,159 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  count: 3
-  total_count: 13
-  active_count: 3
+  count: 9
+  total_count: 19
+  active_count: 9
   delegated_count: 0
   done_count: 10
   p0_count: 1
   p1_count: 2
-  p2_count: 0
+  p2_count: 6
+  p3_count: 0
+- emoji: ''
+  name: crypto
+  kind: domain
+  items:
+  - id: ionic-investor-day-must-read
+    title: 'Must-read: Ionic Digital Investor Day summary (shareholder briefing)'
+    type: read
+    domain: crypto
+    priority: p0
+    status: active
+    summary: 'Full 78.5-min webcast transcribed + summarized. Ionic Digital (IOND, Nasdaq direct listing) pivoted from BTC
+      mining to an AI data-center landlord. Key facts: 822 MW West Texas power (~5c/kWh), 10-yr $2.6B triple-net lease with
+      Nscale (NVIDIA-guaranteed first 5 yrs ~$860M, Microsoft ROFR), $183M to $251M annual contracted NOI, 98-99% margins,
+      debt-free with ~$630M liquidity, $400M raise at $53/share ($2.4B post-money), ~2,800 BTC to sell for buildout. Cash
+      rent starts Aug 2026. ERCOT batch-zero decision (Aug 7) is the 466 MW confirmation hinge. Direct listing = no dilution;
+      shares salable on the first trading day after S-1 effectiveness.'
+    captured: 2026-08-19
+    source: Telegram Aug 18 2026 — user asked to add as must-read after PDF delivery
+    notes: 'PDF: ~/Downloads/ionic-investor-day-summary.pdf (4 pages). Transcript: ~/Downloads/ionic-investor-day-transcript.txt.
+      Webcast replay: https://edge.media-server.com/mmc/p/rgu725dx/'
+    gist: Read the 4-page PDF summary of the Jul 14 2026 Investor Day webcast — the full company pitch ahead of the IOND direct
+      listing.
+    next_step: 'Read the PDF (~/Downloads/ionic-investor-day-summary.pdf). Key action inside: register shares with Odyssey
+      NOW + open a brokerage account so you can sell on the first trading day after the S-1 is effective.'
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: miner-dc-tracker-change-pct-fix
+    title: Fix miner_dc_tracker.py change_pct bug — stale chartPreviousClose
+    type: build
+    domain: crypto
+    priority: p1
+    status: active
+    summary: 'Yahoo range=2d daily chartPreviousClose goes stale when a session bar is missing (Aug 18 run: HUT showed -2.4%,
+      true was -5.7% vs Mon close). Fix: pull range=1d/5m chartPreviousClose (intraday endpoint) instead, or verify last bar
+      date before computing. Preserved from an orphaned note appended to review-items.md that the board render guard refused
+      to overwrite.'
+    captured: 2026-08-19
+    notes: 'File: ~/.hermes/scripts/market_intel/miner_dc_tracker.py'
+    gist: A fix for the miner data collector's change_pct bug when a session bar is missing.
+    next_step: Patch miner_dc_tracker.py to pull range=1d/5m chartPreviousClose or verify the last bar date.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: tradingview-mcp-integration
+    title: Integrate TradingView MCP — AI chart analysis for crypto quant
+    type: build
+    domain: crypto
+    priority: p1
+    status: active
+    summary: Install and wire tradingview-mcp (MIT, 4.1K⭐) — connects Claude Code to TradingView Desktop via CDP for automated
+      chart analysis, Pine Script development, backtesting, and replay practice. 78 MCP tools. Requires paid TradingView subscription
+      + Desktop app with --remote-debugging-port=9222.
+    captured: '2026-07-04'
+    source: aipagedaily IG post — tradingview-mcp
+    notes: 'GitHub: github.com/tradesdontlie/tradingview-mcp (4.1K stars, MIT) 78 MCP tools: chart reading, Pine Script, replay,
+      drawings, alerts, screenshots. Caveats: unofficial, uses undocumented internal APIs (may break on update), may conflict
+      with TradingView ToS. Does NOT execute trades — chart only. Requires paid TradingView sub + Desktop app running locally.
+      Validated via direct GH read + repo info + README review.'
+    gist: A connector that lets Claude Code analyse charts and run backtests through TradingView Desktop.
+    next_step: Ask Chin whether he has the paid TradingView subscription before installing.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: claude-code-ai-hedge-fund
+    title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
+    type: discuss
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
+      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
+      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
+    captured: 2026-08-07
+    source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
+    notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
+      commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
+      decomposition is the pattern worth extracting for the quant stack.
+    gist: A research and risk system for investing, built in Claude Code, to mine for quant patterns.
+    next_step: Extract the research-queue and ranking pattern into the quant stack design.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: quant-repos-review
+    title: Explore top quant finance GitHub repos
+    type: research
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'Curated list of top quant repos: OpenBB (free Bloomberg), StockSharp, Goldman Sachs OSS, Riskfolio-Lib, TradeMaster
+      (RL trading), awesome-quant. Covers platforms, strategy dev, portfolio optimization, and learning resources.'
+    captured: '2026-07-03'
+    source: chrispathway Instagram carousel (age-restricted) + KDnuggets/Medium lists
+    notes: 'Source: ~/wiki/_system/pending/quant-repos-review.md'
+    gist: A curated list of top quantitative finance repos to trial for the quant stack.
+    next_step: Review the pending file and pick the top three repos to trial.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id042
+    id: nicholascrown-macro-letter
+    title: Nicholas Crown — macro trading profile + The Crown Macro Letter
+    type: research
+    domain: crypto
+    priority: p2
+    status: done
+    summary: 'Nicholas Crown (@nicholascrown, 558K followers) is an ex-Wall Street bond trader turned macro portfolio manager.
+      Runs The Crown Macro Letter (55K+ subscribers, paid) — weekly macro analysis with trade setups across equities, crude,
+      FX, gold, options. Verified performance (Dec 2025-Jun 2026): non-options +37.7% (68% win rate, 20 trades), options +47.4%
+      (67% win rate, 15 trades). Avg hold 12 days. Promotional reel: "This is the layer that took me years to learn."'
+    captured: 2026-07-19
+    source: Instagram — @nicholascrown reel
+    resolution: blitz-archived via labs 2026-08-14
+    notes: High signal profile for crypto-macro analysis — user's stack aligns (funding rates, liquidations, Deribit, cross-asset
+      positioning). Profile at nicholascrown.com. Newsletter at letter.nicholascrown.com. Crown has a public, audited performance
+      page with trade-by-trade methodology. Comment "LETTER" lead-gen funnel for the newsletter.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id019
+    id: market-intel-refinement-review
+    title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
+    type: discuss
+    domain: crypto
+    priority: p1
+    status: done
+    summary: Review date (2026-07-20) has passed with the review not yet done. 4 deferred items pending assessment against
+      ~1 week of live brief performance (prediction hit-rate, Brier trend, data-source reliability).
+    captured: 2026-07-13
+    source: Manually appended to review-items.md on 2026-07-13, found during the Chief of Staff cluster audit
+    completed: 2026-08-12
+    notes: 'Full context: ~/wiki/_system/pending/market-intel-refinement-review.md'
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 5
+  total_count: 7
+  active_count: 5
+  delegated_count: 0
+  done_count: 2
+  p0_count: 1
+  p1_count: 2
+  p2_count: 2
   p3_count: 0
 - emoji: ''
   name: devops
@@ -3791,6 +3902,6 @@ archive:
 - *id094
 - *id095
 - *id096
-updated_at: 2026-08-23 03:30:37 SGT
-total_active: 57
+updated_at: 2026-08-24 16:14:35 SGT
+total_active: 63
 total_done: 96
