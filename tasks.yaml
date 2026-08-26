@@ -2359,6 +2359,29 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: asc-cli-evaluation
+    title: Evaluate ASC CLI (rorkai/App-Store-Connect-CLI) vs our asc_api.py engine
+    type: research
+    domain: devops
+    priority: p1
+    status: active
+    summary: 'rorkai/App-Store-Connect-CLI (6.2k stars, MIT, actively maintained, commits Aug 23 2026) is a Go binary covering
+      the WHOLE App Store Connect API: builds upload (ipa/pkg), TestFlight feedback/crashes/groups, release stage/publish/submit,
+      review status/doctor, metadata init/apply/keywords audit, screenshots plan/apply/upload, video previews, certificates,
+      profiles, bundle-ids, Xcode Cloud triggers, Apple Ads (separate OAuth), StoreKit retention messaging, system-status.
+      TTY-aware output (table/json/markdown), stability labels, telemetry (disable-able), --bypass-keychain for CI, and a
+      23-skill agent pack via `asc install-skills`. Our asc_api.py (Aug 12 2026) covers only ~6 narrow read/compliance operations
+      for Toto Buddy with solved gotchas (display types, upload operations, keychain quirk). Decision pending: adopt asc for
+      the release/TestFlight/metadata surface we don''t have, keep asc_api.py for the exact status/compliance checks already
+      proven, or migrate fully. Full review: _system/pending/asc-cli-evaluation.md.'
+    captured: 2026-08-26
+    source: https://github.com/rorkai/App-Store-Connect-CLI
+    notes: 'Review: _system/pending/asc-cli-evaluation.md | Skill: devops/app-store-connect-api | Keychain: toto-asc-*'
+    gist: A community Go CLI covering the full App Store Connect API surface, compared against our narrow Python engine.
+    next_step: Install asc via brew, log in with the toto-asc keychain creds, and smoke-test apps list and builds list.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
     type: build
@@ -2674,13 +2697,13 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 3
-  total_count: 16
-  active_count: 3
+  count: 4
+  total_count: 17
+  active_count: 4
   delegated_count: 0
   done_count: 13
   p0_count: 0
-  p1_count: 3
+  p1_count: 4
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -3902,6 +3925,6 @@ archive:
 - *id094
 - *id095
 - *id096
-updated_at: 2026-08-24 16:14:55 SGT
-total_active: 63
+updated_at: 2026-08-26 11:13:08 SGT
+total_active: 64
 total_done: 96
