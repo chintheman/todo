@@ -2379,13 +2379,8 @@ clusters:
     notes: 'Review: _system/pending/asc-cli-evaluation.md | Plan: _system/pending/asc-cli-deep-dive-plan.md | Cron: e41b89445a12
       (12:05 2026-08-26) | Skill: devops/app-store-connect-api | Keychain: toto-asc-*'
     gist: A community Go CLI covering the full App Store Connect API surface, compared against our narrow Python engine.
-    next_step: 'Deep-dive done (12:05 cron, 5 phases): verdict adopt-partial. FUNDAMENTAL CLI value = TestFlight beta distribution
-      (publish testflight, builds add-groups, next-build-number, xcode inject/archive/export) — we have zero TestFlight today
-      and the plain API needs heavy upload+wait+group+submit orchestration. CONVENIENT = metadata/keywords/review-doctor/validate
-      (API parity, just wrapped). Verified against 1,263-path OpenAPI snapshot: API CANNOT do system-status, web compatibility
-      opt-in, public storefront rank (web-only); text tester feedback not in API. Keep asc_api.py for proven status/compliance/screenshot
-      checks; skill gotchas transfer either way. Next: brew install asc, asc auth login with toto-asc keychain, smoke test
-      asc apps list.'
+    next_step: 'Security-weighted verdict (Aug 26 PM): KEEP-ENGINE — no third-party binary. Extend asc_api.py with next-build-number
+      (~10 lines) + TestFlight betaGroups calls only if a real beta need lands. Awaiting Chin confirm.'
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -3932,6 +3927,6 @@ archive:
 - *id094
 - *id095
 - *id096
-updated_at: 2026-08-26 12:10:40 SGT
+updated_at: 2026-08-26 21:38:05 SGT
 total_active: 64
 total_done: 96
