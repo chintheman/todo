@@ -2376,9 +2376,10 @@ clusters:
       proven, or migrate fully. Full review: _system/pending/asc-cli-evaluation.md.'
     captured: 2026-08-26
     source: https://github.com/rorkai/App-Store-Connect-CLI
-    notes: 'Review: _system/pending/asc-cli-evaluation.md | Skill: devops/app-store-connect-api | Keychain: toto-asc-*'
+    notes: 'Review: _system/pending/asc-cli-evaluation.md | Plan: _system/pending/asc-cli-deep-dive-plan.md | Cron: e41b89445a12
+      (12:05 2026-08-26) | Skill: devops/app-store-connect-api | Keychain: toto-asc-*'
     gist: A community Go CLI covering the full App Store Connect API surface, compared against our narrow Python engine.
-    next_step: Install asc via brew, log in with the toto-asc keychain creds, and smoke-test apps list and builds list.
+    next_step: 'Run the 12:05 deep-dive: execute pending/asc-cli-deep-dive-plan.md (asc CLI vs API capabilities).'
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -3925,6 +3926,6 @@ archive:
 - *id094
 - *id095
 - *id096
-updated_at: 2026-08-26 11:13:20 SGT
+updated_at: 2026-08-26 11:18:50 SGT
 total_active: 64
 total_done: 96
