@@ -3029,6 +3029,33 @@ clusters:
   name: devtools
   kind: domain
   items:
+  - id: paperclip-explore
+    title: Explore Paperclip — agent org layer
+    type: discuss
+    domain: devtools
+    priority: p0
+    status: active
+    summary: 'RESURFACED Aug 27 2026 as P0 discuss (Chin: ''add to registry for P0 review and potential implementation'').
+      PASS 1 done (Aug 17): Paperclip = MIT OSS org layer above agent runtimes (~78k stars, v2026.722.0). KEY FINDING: Hermes
+      has an OFFICIAL native adapter (NousResearch/hermes-paperclip-adapter) — hermes_local spawns hermes chat -q on the Paperclip
+      host, hermes_gateway calls a running Hermes API server; generic http adapter also works (POST {runId,agentId,companyId,context}
+      + PAPERCLIP_API_URL callback). Budget/approval loop is real: 80% warn / 100% hard-stop auto-pause, board approves CEO
+      strategy + hires + budget overrides, immutable audit log with per-agent/per-task cost. Fits M1 locally (embedded Postgres,
+      npx paperclipai onboard --yes); Mac mini+Tailscale is the BennettOS home. CAVEATS: 3 critical vulns disclosed Aug 4
+      (CVE-2026-41679 CVSS 10.0 RCE) — fixed in 2026.416.0, current 2026.722.0 is past fix line but keep loopback/Tailscale-only
+      + no open signup; Hermes adapter wiring gaps on AGENTS.md injection (#3833), skill sync (#2316), env injection (#2915).
+      Full report: ~/wiki/_system/pending/paperclip-explore.md.'
+    captured: 2026-08-16
+    source: Instagram Paperclip post - https://www.instagram.com/p/Db7T7ekFUJd/
+    notes: _system/pending/paperclip-explore.md
+    gist: 'Paperclip is a legit org layer with an official Hermes adapter — Hermes plugs in natively (hermes_local/hermes_gateway),
+      not just via HTTP. Real budgets+approvals+audit. Security: keep it non-public (CVE-2026-41679 fixed, but config=executable
+      by design). M1 can host a small company.'
+    next_step: Review the PASS 1 findings and decide on the M1 spike (npx paperclipai onboard --yes, loopback-only).
+    researched: 2026-08-17
+    cluster: devtools
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: labs-project-flow-refinement
     title: Labs page refinement — standard project lifecycle flow + per-project PM
     type: build
@@ -3047,32 +3074,6 @@ clusters:
       Registry is the SSOT for all project state (flow stage, checklist items, tasks).'
     gist: A standard project lifecycle flow for the labs page with a project manager per project.
     next_step: Build Phase 2 of the project flow engine per the refined spec.
-    cluster: devtools
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: paperclip-explore
-    title: Explore Paperclip — agent org layer
-    type: research
-    domain: devtools
-    priority: p2
-    status: active
-    summary: 'PASS 1 done (Aug 17): Paperclip = MIT OSS org layer above agent runtimes (~78k stars, v2026.722.0). KEY FINDING:
-      Hermes has an OFFICIAL native adapter (NousResearch/hermes-paperclip-adapter) — hermes_local spawns hermes chat -q on
-      the Paperclip host, hermes_gateway calls a running Hermes API server; generic http adapter also works (POST {runId,agentId,companyId,context}
-      + PAPERCLIP_API_URL callback). Budget/approval loop is real: 80% warn / 100% hard-stop auto-pause, board approves CEO
-      strategy + hires + budget overrides, immutable audit log with per-agent/per-task cost. Fits M1 locally (embedded Postgres,
-      npx paperclipai onboard --yes); Mac mini+Tailscale is the BennettOS home. CAVEATS: 3 critical vulns disclosed Aug 4
-      (CVE-2026-41679 CVSS 10.0 RCE) — fixed in 2026.416.0, current 2026.722.0 is past fix line but keep loopback/Tailscale-only
-      + no open signup; Hermes adapter wiring gaps on AGENTS.md injection (#3833), skill sync (#2316), env injection (#2915).
-      Full report: ~/wiki/_system/pending/paperclip-explore.md.'
-    captured: 2026-08-16
-    notes: _system/pending/paperclip-explore.md
-    gist: 'Paperclip is a legit org layer with an official Hermes adapter — Hermes plugs in natively (hermes_local/hermes_gateway),
-      not just via HTTP. Real budgets+approvals+audit. Security: keep it non-public (CVE-2026-41679 fixed, but config=executable
-      by design). M1 can host a small company.'
-    next_step: Research complete and spike deferred by Chin's decision on 2026-08-20; revisit only if the org-layer question
-      resurfaces. PA request Aug 16 2026 - add P0 explore task - https://www.instagram.com/p/Db7T7ekFUJd/
-    researched: 2026-08-17
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
@@ -3144,9 +3145,9 @@ clusters:
   active_count: 2
   delegated_count: 0
   done_count: 3
-  p0_count: 1
+  p0_count: 2
   p1_count: 0
-  p2_count: 1
+  p2_count: 0
   p3_count: 0
 - emoji: ''
   name: infra
@@ -3935,6 +3936,6 @@ archive:
 - *id095
 - *id096
 - *id097
-updated_at: 2026-08-26 22:01:11 SGT
+updated_at: 2026-08-27 09:45:54 SGT
 total_active: 63
 total_done: 97
