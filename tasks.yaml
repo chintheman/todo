@@ -3177,6 +3177,28 @@ clusters:
   name: infra
   kind: domain
   items:
+  - id: box-company-brain
+    title: Box company brain — governed content layer for Hermes Agent
+    type: build
+    domain: infra
+    priority: p0
+    status: active
+    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
+      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
+      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
+      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
+      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
+      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
+      (Aug 29). User marked P0 to try the integration.'
+    captured: 2026-08-29
+    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
+    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
+      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
+    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
+    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: profile-bot-fleet
     title: Turn profile fleet into specialist bots — Bot Mode rollout
     type: build
@@ -3261,12 +3283,12 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  count: 1
-  total_count: 5
-  active_count: 1
+  count: 2
+  total_count: 6
+  active_count: 2
   delegated_count: 0
   done_count: 4
-  p0_count: 0
+  p0_count: 1
   p1_count: 1
   p2_count: 0
   p3_count: 0
@@ -3961,6 +3983,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-29 15:00:17 SGT
-total_active: 63
+updated_at: 2026-08-29 15:07:01 SGT
+total_active: 64
 total_done: 98
