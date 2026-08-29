@@ -57,6 +57,9 @@ cluster_order:
   name: infra
   kind: domain
 - emoji: ''
+  name: design
+  kind: domain
+- emoji: ''
   name: integrations
   kind: domain
 - emoji: ''
@@ -3293,6 +3296,47 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: design
+  kind: domain
+  items:
+  - id: read-dashboard-layout
+    title: 'Read: Dashboard Design Process — layout first, charts second (@dhanyindraswara)'
+    type: read
+    domain: design
+    priority: p1
+    status: active
+    summary: 'Core thesis: a dashboard is more than a collection of charts — structure first, visuals second. Five layout
+      ideas, each a wireframe → realized pair: (1) START WITH A WIREFRAME — define reading flow, KPI positions, and filter
+      space before choosing charts (filters top, main chart left, 4 KPI cards right, notes, table bottom); (2) LEAD WITH ONE
+      MAIN INSIGHT — the primary story must be obvious in 3 seconds; hero visual front and center (60% of space), secondary
+      details smaller, whitespace directs attention, key-insight panel with takeaway; (3) BALANCE MORE THAN CHARTS — combine
+      filters, KPI cards, visuals, labels, and a clean grid; bar + line + donut to reveal patterns; (4) ADD CONTEXT, NOT CLUTTER
+      — one note/benchmark/insight card beats another chart (headline metric, target with progress bar, insight takeaway);
+      (5) DESIGN FOR READING FLOW — 5 numbered zones: filters first → KPI snapshot → main insight → supporting details → takeaway/notes.
+      Recurring design system: white canvas, blue accent, KPI-card anatomy (label, big value, green ↑% vs period), numbers
+      reused across slides for continuity. 570 likes, 8 comments, Aug 24 2026.'
+    captured: 2026-08-29
+    source: '@dhanyindraswara IG carousel (Aug 24 2026) - https://www.instagram.com/p/DccsN6WmefV/'
+    notes: 'Raw capture: raw/2026-08/2026-08-28-ig-dhanyindraswara-dashboard-layout-dccsn6wmefv.md | Pending + how-to-apply:
+      _system/pending/read-dashboard-layout.md'
+    gist: A 6-slide Power BI study on dashboard design — build the structure first (wireframe, KPIs, reading flow), then choose
+      the visuals.
+    next_step: Read the 6-slide study, then run the 5-zone reading-flow check (filters → KPI snapshot → main insight → supporting
+      details → takeaway) on one live dashboard — labs page, M1 status, or market-intel brief — before the next visual pass.
+    cluster: design
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: integrations
   kind: domain
   items:
@@ -3983,6 +4027,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-29 15:07:01 SGT
-total_active: 64
+updated_at: 2026-08-29 15:16:58 SGT
+total_active: 65
 total_done: 98
