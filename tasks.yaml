@@ -587,6 +587,121 @@ clusters:
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
+  - id: amex-guide-open-items
+    title: 'Amex guide follow ups: party size tiers, missing outlets, overdue refresh'
+    type: build
+    domain: web
+    priority: p1
+    status: active
+    summary: 'Live at https://www.0xsteamboat.me/amex/. Follow up list for the Amex Platinum guide, split into what shipped,
+      what is open, and what is a known assumption.
+
+
+      SHIPPED SINCE 14 AUG (9 commits, all live and verified):
+
+      1. Editorial redesign from the Claude Design handoff AMEXSG-EDIT-20260815, frames 6a to 7b. Cream paper, engraved rules,
+      no cards or pills. Break even merged into Your year, so four views not five, and the enum locked ''payback'' string
+      moved across the validator, the schema generator, the generated schema and the data file in one commit.
+
+      2. Reviewed that redesign rather than rebuilding it, because a parallel session had already implemented it. Closed the
+      four gaps the handoff asked for: authored value phrases, the 6d desktop asymmetry extended to Results, Places and Your
+      year, section rules that draw in on scroll, and the map restyled to the palette.
+
+      3. Three bugs the review turned up. Every map pin was the old theme''s blue because updateMarkers read a token the new
+      palette deleted and getPropertyValue returns empty rather than throwing. Venue rows showed an annualised total where
+      the frames show a rate. Desktop could not reach 33 of the 42 benefits.
+
+      4. value_phrase, authored on all 29 access rows, so an unpriced entitlement reads ''S$800 a stay'' rather than a derived
+      ''always on''.
+
+      5. The no dash rule now covers entry details, which the redesign promotes to the row subtitle. Fifteen em dashes were
+      sitting in the most read copy on the page.
+
+      6. Type scale. Every size multiplies by one variable so a wide screen gets the same design rather than phone sized text,
+      and Home is capped rather than stretching to the window.
+
+      7. Data refresh, 15 Aug. Amex had added Frasers House as a Love Dining partner with LUCE, Man Fu Yuan and The Lobby
+      Lounge. 121 entries to 124, 76 dining venues to 79.
+
+      8. Repricing. Every figure the page shows as money re-derived from published prices. Two were errors rather than estimates,
+      both putting a paid benefit in the free bucket.
+
+      9. deploy.sh now deploys to whatever supervisor actually serves and verifies the live asset stamp against what it built,
+      because a deploy had reported success while changing nothing visible.
+
+
+      THE HEADLINE NOW: S$2,120 that costs nothing extra, S$376 clear of the S$1,744 fee, four benefits over ten uses. Every
+      figure in that sentence is derived, so re-cutting the path rewrites the copy.'
+    captured: '2026-08-29'
+    source: Claude Code session session_01PA3FuHpA8CMqLdEsqte79E, 14 to 29 Aug 2026. Repos chintheman/Amex-perks and chintheman/0xsteamboat-me.
+    notes: 'OPEN, in priority order.
+
+
+      1. PARTY SIZE TIERS ARE MISSING AND THE PAGE IS WRONG BECAUSE OF IT. Amex tiers Love Dining by how many people eat:
+      up to 50% for 2 to 4 diners, but 20% for 5 to 20, and 33% for 3 diners at Fairmont, Swissotel and Paradox Merchant Court.
+      The data models a flat rate per venue, so the page tells a group of six they get 50% when they get 20%. Found 29 Aug
+      from Chin asking about Harry''s with six friends. Source text is in data/sources/love_restaurants.txt, the line beginning
+      ''For Love Dining @ Restaurants, 20% savings apply to 5 to 20 persons dining''. Needs a tier structure in economics
+      plus a party size control or at least a stated assumption on the row.
+
+
+      2. MULTI OUTLET VENUES STORE ONE ADDRESS. Harry''s is valid at every outlet except Changi Airport and the file holds
+      only Boat Quay, so a proximity search near Holland Village returns nothing when Harry''s is there. Same shape: Les Bouchons
+      (3 outlets, Ann Siang, Robertson Quay, Rochester), Grand Hyatt Singapore, The Singapore EDITION.
+
+
+      3. DATA REFRESH IS OVERDUE. Generated 2026-08-15, due 2026-08-25, four days late as of 29 Aug. Run npm run sources in
+      Amex-perks, diff data/sources, then deploy. Known gap recorded in docs/REFRESH.md: Amex moved outlet terms behind accordions
+      the fetcher does not open, so a new outlet needs its terms read by hand. The partner index still renders, which is what
+      drift detection uses.
+
+
+      4. SUPERVISOR STILL POINTS AT THE DEV CHECKOUT. supervisord-user.conf has directory=/home/workspace/0xsteamboat-me where
+      it should read 0xsteamboat-me-prod, so the worktree isolation Chin set up after /amex went dark twice is switched off
+      and the live site runs whatever is uncommitted in dev. Claude Code cannot edit that file, the permission classifier
+      blocks it. deploy.sh warns on every run and prints the exact command. One line for Chin or for Zo.
+
+
+      5. ROUND TWO REVIEW from Chin, still pending on the redesign.
+
+
+      KNOWN ASSUMPTIONS, deliberate and recorded rather than bugs:
+
+      - FHR at two stays a year is a usage guess, not an Amex cap, and it carries S$450 of the S$2,120 headline. Someone who
+      travels once gets half.
+
+      - Table for Two at six is Amex''s own limit, one per two month cycle, so it is solid.
+
+      - The 82 venue bills are per tier constants and feed ranking only, nothing displayed. Spot checked: buffets close (CLOVE
+      S$90++, Crossroads S$92++ against S$88 assumed), fine dining slightly low (Lawry''s S$139++ against S$120).
+
+
+      REFERENCES:
+
+      - Live page https://www.0xsteamboat.me/amex/
+
+      - Source repo github.com/chintheman/Amex-perks, HEAD d9fb88f
+
+      - Host repo github.com/chintheman/0xsteamboat-me, serves /amex via scripts/sync-amex.sh
+
+      - docs/DESIGN-HANDOVER.md, the brief written for Claude Design
+
+      - docs/UI-CHANGES.md, Part 3 the redesign and Part 4 the gap closing pass
+
+      - docs/SCHEMA-v2.md, the schema and the value_phrase rules
+
+      - docs/REFRESH.md, the fortnightly checklist and the accordion gap
+
+      - data/pricing-research-2026-08-15.md, the full repricing working
+
+      - Claude Design project e72582ab-3a52-4f40-adbc-8d6d91cd5fb9, handoff AMEXSG-EDIT-20260815
+
+      - Gates: npm run validate, npm run test:parity, npm run test:page'
+    gist: The open list for the Amex Platinum guide after the editorial redesign and the repricing pass.
+    next_step: Fix the Love Dining party size tiers, which is the one open item that makes the page state something untrue.
+    cluster: Personal Page
+    cluster_emoji: 🏠
+    cluster_kind: project
   - id: bday-picker-page
     title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
     type: build
@@ -658,13 +773,13 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
   archive: []
-  count: 4
-  total_count: 4
-  active_count: 4
+  count: 5
+  total_count: 5
+  active_count: 5
   delegated_count: 0
   done_count: 0
   p0_count: 0
-  p1_count: 3
+  p1_count: 4
   p2_count: 1
   p3_count: 0
 - emoji: 🤖
@@ -4027,6 +4142,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-29 15:16:58 SGT
-total_active: 65
+updated_at: 2026-08-29 15:32:51 SGT
+total_active: 66
 total_done: 98
