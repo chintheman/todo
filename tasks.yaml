@@ -57,13 +57,13 @@ cluster_order:
   name: infra
   kind: domain
 - emoji: ''
+  name: meta
+  kind: domain
+- emoji: ''
   name: design
   kind: domain
 - emoji: ''
   name: integrations
-  kind: domain
-- emoji: ''
-  name: meta
   kind: domain
 - emoji: ''
   name: product
@@ -368,7 +368,10 @@ clusters:
       filed. UPDATE 2026-08-23 (lint cycle 7): all 6 targets from the Aug 16 intent verified landed (all medium). This cycle''s
       R9 sample: 2/5 fail traceability (sg-governance-learning-framework, visual-creative-pipeline — both high with sources:
       []) + 2 R8 re-audits (diy-luxury-watches, decision-razors-lesson-plan). Intent file 20260823T032400-brain-lint-r9-r8.yaml
-      filed.'
+      filed. UPDATE 2026-08-30 (lint cycle 8): all 6 Aug 23 targets verified landed (sg-governance-learning-framework now
+      medium with sources filled + 2 ^[inferred]; visual-creative-pipeline now medium with 2 ^[inferred]). This cycle''s R9
+      sample (5 high-conf pages): 1/5 fails traceability — decisions/2026-07-06-no-substack-automation (high with sources:
+      []). Downgrade intent filed 20260830T032400-brain-lint.yaml.'
     gist: A lint audit downgrading confidence scores on wiki pages that lack source citations.
     next_step: Downgrade confidence on the remaining uncited pages to medium.
     cluster: Luxury Watches
@@ -3411,6 +3414,203 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: meta
+  kind: domain
+  items:
+  - id: lint-e1-engine-vault-coupling
+    title: 'E1 boundary: engine lint helpers hardcode vault page paths'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'E1 privacy-boundary grep of ~/brain-engine: ZERO hits for personal names (0xsteamboat, steamboat, tim scheuer,
+      rhoades, wendy, karpathy, garry tan, chintheman) — good. But the lint helper scripts committed 2026-08-16 (commit c313705:
+      analyze_helper.py, check_orphans_proxy.py, check_r8r9.py, check_r10r11.py) contain hardcoded vault page paths (e.g.
+      entities/crypto-quant-system.md, entities/toto-strategy-system.md, concepts/crypto-quant-trading.md) and vault dir prefixes
+      (agentic-, interior-design/, toto/). This is structural coupling, not personal or client data, but it ties the engine
+      (a future product per HANDOVER) to this vault''s layout. Prior lint (2026-08-16) reported zero E1 hits before these
+      helpers were committed in the same cycle.'
+    captured: 2026-08-23
+    source: lint-cron-2026-08-23 @ E1
+    notes: 'Options: (a) move target lists to a vault-side config file the helpers read; (b) keep as-is and document in BRAIN.md
+      §12 as accepted tooling coupling; (c) make helpers generic (scan vault for candidates instead of hardcoding). Low urgency
+      — no data leak — but should be decided before the engine is shared/ productized. UPDATE 2026-08-30 (lint cycle 8): partial
+      progress — new engine script emit_intent.py (committed Aug 26, a21c34e) is fully parameterized (--vault, explicitly
+      "no vault path is hardcoded"), but the four Aug 16 lint helpers (analyze_helper.py, check_orphans_proxy.py, check_r8r9.py,
+      check_r10r11.py) still hardcode vault page paths. Recommend option (c) for the helpers when next touched; no urgency.'
+    gist: Engine repo lint helpers couple the engine to this vault's layout by hardcoding vault page paths; no personal data
+      found, but separability (E1) wants them moved or documented.
+    next_step: Decide — move hardcoded vault page paths out of ~/brain-engine/lint/check_*.py into a vault-side config (e.g.
+      _system/lint/), or document the coupling as acceptable tooling reference.
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r17-raw-ingest-backlog
+    title: 'R17 (new Aug 26): 13 uncited raw captures — one create_source stub per lint run'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'First R17 run: 13/18 raw files older than 24h are uncited. Breakdown: 3 Phase-3 test fixtures (2026-07-07-*,
+      permanently test-only — exclude from future runs), 5 July pa-link captures (2026-07-15/16, PA-intake IG reels), 1 restored
+      file (2026-07-17-pa-link-openwa-whatsapp-api, restored Aug 26 as R3 remediation, still uncited), 3 August IG captures
+      (2026-08-09, 2026-08-14, 2026-08-28). 5 raw files ARE cited (vyzual-loop-engineering, ai-bill-killer-repos, loop-graph-engineering,
+      growwithcolby-free-things, indialogue-quant-tierlist).'
+    captured: 2026-08-30
+    source: lint-cron-2026-08-30 @ R17
+    notes: Per R17, one create_source stub intent per lint run (drains slowly by design — backlog ~10 actionable files ≈ 10
+      weeks at 1/run; escalate if updater backfill happens). Test fixtures in the 2026-07-07 set should be permanently excluded
+      once confirmed.
+    gist: Rule 17 (capture→ingest coverage) added to lint/rules.md Aug 26 — every raw/**/*.md older than 24h must be cited
+      by a page sources field or have an intent queued. First run finds 13 uncited files.
+    next_step: 'Drain one file per weekly lint run via create_source stub intents; priority = newest first. This cycle: raw/2026-08/2026-08-28-ig-dhanyindraswara-dashboard-layout-dccsn6wmefv.md
+      (44h) — stub filed in 20260830T032400-brain-lint.yaml.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id031
+    id: tool-decision-framework
+    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
+    type: discuss
+    domain: meta
+    priority: p2
+    status: done
+    completed: 2026-07-27
+    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
+      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
+      for open-ended creative work. Routing rules documented in this entry.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id047
+    id: lint-rejected-cleanup
+    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
+      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
+      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
+      or archive.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R14
+    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
+      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
+      unchanged. UPDATE 2026-08-16 (lint cycle 6): status marked done — consistent with the 2026-08-12 sweep that resolved
+      the sibling Phase 3 test artifacts (injection source + contradiction flag) as "keep as permanent test". Rejected/ files
+      retained as permanent test fixtures, matching that resolution; no further lint escalation expected. UPDATE 2026-08-23
+      (lint cycle 7): verified again — files 47 days old, fixture status held, no escalation. UPDATE 2026-08-30 (lint cycle
+      8): files 54 days old, fixture status held, no escalation.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id019
+    id: lint-injection-resolution
+    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
+      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
+      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
+      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
+      archive it or formally resolve the flag so future lints stop surfacing it.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R15
+    completed: 2026-08-12
+    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
+      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
+      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id018
+    id: lint-contradiction-resolution
+    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
+      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
+      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
+      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R1
+    completed: 2026-08-12
+    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
+      (lint cycle 5): flag now 33 days old, still unresolved.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id022
+    id: lint-raw-capture-stall
+    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
+      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
+      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
+      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
+      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
+    captured: 2026-08-09
+    source: lint-cron-2026-08-09 @ metrics
+    resolution: blitz-archived via labs 2026-08-14
+    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
+      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
+      2 weeks, persistent miss).
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id010
+    id: lint-raw-immutability-violation-2026-08-16
+    title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
+    type: maintain
+    domain: meta
+    priority: p1
+    status: done
+    summary: 'Rule 3 (raw immutability) violation: git log --diff-filter=MD -- raw/ since 2026-08-09 shows 1 deletion — raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md
+      deleted in commit b09d604 (Aug 15 digest, "dead-code sweeper" work). The blob still exists in the parent commit (b09d604^)
+      so it is fully restorable. raw/ is append-only per BRAIN.md §0.3; deletions are only acceptable as an explicit, documented,
+      human-approved exception.'
+    captured: 2026-08-16
+    source: lint-cron-2026-08-16 @ R3
+    notes: 'ACTION: either (a) restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md`
+      then commit `restore(raw): 2026-07-17-pa-link-openwa-whatsapp-api`, or (b) if the deletion was intentional (dead-code
+      sweep of a stale capture), record an explicit exception in _system/log.md with the human''s approval so future lints
+      stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
+      PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
+      the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more. UPDATE 2026-08-23
+      (lint cycle 7): R3 clean this week (no raw/ M/D since Aug 16; 2 new captures: 2026-08-19-pa-link-ai-bill-killer-repos,
+      2026-08-19-pa-link-loop-graph-engineering). Prior violation file remains deleted and this task stays ACTIVE — decision
+      still owed: restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` or record a
+      human-approved exception in _system/log.md. 7 days old. CLOSED 2026-08-26: Chin authorized the restore. The exact blob
+      was recovered with `git show b09d604^:raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` (24 lines, frontmatter
+      intact, byte-identical) and committed as `capture: restore pa-link-openwa-whatsapp-api (R3 remediation)`. b09d604 was
+      NOT reverted — it carries 100+ unrelated _memory/ and _system/ changes. The incident is queued for _system/log.md as
+      a log_only intent in _system/pending-deposits/20260826T215912-brain-capture-backfill.yaml. Recurrence fix: ~/wiki/.git/hooks/pre-commit
+      now fails any commit whose staged diff deletes or renames a path under raw/, and it runs before the existing secrets
+      scan (which only looks at --diff-filter=ACM, so a deletion-only commit previously exited clean without inspection).'
+    gist: A lint finding flagging a raw capture file deleted from the vault.
+    next_step: None — closed.
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 2
+  total_count: 8
+  active_count: 2
+  delegated_count: 0
+  done_count: 6
+  p0_count: 0
+  p1_count: 0
+  p2_count: 0
+  p3_count: 2
+- emoji: ''
   name: design
   kind: domain
   items:
@@ -3511,176 +3711,6 @@ clusters:
   p1_count: 1
   p2_count: 0
   p3_count: 0
-- emoji: ''
-  name: meta
-  kind: domain
-  items:
-  - id: lint-e1-engine-vault-coupling
-    title: 'E1 boundary: engine lint helpers hardcode vault page paths'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'E1 privacy-boundary grep of ~/brain-engine: ZERO hits for personal names (0xsteamboat, steamboat, tim scheuer,
-      rhoades, wendy, karpathy, garry tan, chintheman) — good. But the lint helper scripts committed 2026-08-16 (commit c313705:
-      analyze_helper.py, check_orphans_proxy.py, check_r8r9.py, check_r10r11.py) contain hardcoded vault page paths (e.g.
-      entities/crypto-quant-system.md, entities/toto-strategy-system.md, concepts/crypto-quant-trading.md) and vault dir prefixes
-      (agentic-, interior-design/, toto/). This is structural coupling, not personal or client data, but it ties the engine
-      (a future product per HANDOVER) to this vault''s layout. Prior lint (2026-08-16) reported zero E1 hits before these
-      helpers were committed in the same cycle.'
-    captured: 2026-08-23
-    source: lint-cron-2026-08-23 @ E1
-    notes: 'Options: (a) move target lists to a vault-side config file the helpers read; (b) keep as-is and document in BRAIN.md
-      §12 as accepted tooling coupling; (c) make helpers generic (scan vault for candidates instead of hardcoding). Low urgency
-      — no data leak — but should be decided before the engine is shared/ productized.'
-    gist: Engine repo lint helpers couple the engine to this vault's layout by hardcoding vault page paths; no personal data
-      found, but separability (E1) wants them moved or documented.
-    next_step: Decide — move hardcoded vault page paths out of ~/brain-engine/lint/check_*.py into a vault-side config (e.g.
-      _system/lint/), or document the coupling as acceptable tooling reference.
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id031
-    id: tool-decision-framework
-    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
-    type: discuss
-    domain: meta
-    priority: p2
-    status: done
-    completed: 2026-07-27
-    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
-      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
-      for open-ended creative work. Routing rules documented in this entry.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id047
-    id: lint-rejected-cleanup
-    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
-      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
-      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
-      or archive.'
-    captured: 2026-07-19
-    source: lint-cron-2026-07-19 @ R14
-    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
-      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
-      unchanged. UPDATE 2026-08-16 (lint cycle 6): status marked done — consistent with the 2026-08-12 sweep that resolved
-      the sibling Phase 3 test artifacts (injection source + contradiction flag) as "keep as permanent test". Rejected/ files
-      retained as permanent test fixtures, matching that resolution; no further lint escalation expected. UPDATE 2026-08-23
-      (lint cycle 7): verified again — files 47 days old, fixture status held, no escalation.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id019
-    id: lint-injection-resolution
-    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
-      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
-      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
-      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
-      archive it or formally resolve the flag so future lints stop surfacing it.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R15
-    completed: 2026-08-12
-    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
-      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
-      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id018
-    id: lint-contradiction-resolution
-    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
-      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
-      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
-      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R1
-    completed: 2026-08-12
-    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
-      (lint cycle 5): flag now 33 days old, still unresolved.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id022
-    id: lint-raw-capture-stall
-    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
-      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
-      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
-      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
-      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
-    captured: 2026-08-09
-    source: lint-cron-2026-08-09 @ metrics
-    resolution: blitz-archived via labs 2026-08-14
-    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
-      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
-      2 weeks, persistent miss).
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id010
-    id: lint-raw-immutability-violation-2026-08-16
-    title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
-    type: maintain
-    domain: meta
-    priority: p1
-    status: done
-    summary: 'Rule 3 (raw immutability) violation: git log --diff-filter=MD -- raw/ since 2026-08-09 shows 1 deletion — raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md
-      deleted in commit b09d604 (Aug 15 digest, "dead-code sweeper" work). The blob still exists in the parent commit (b09d604^)
-      so it is fully restorable. raw/ is append-only per BRAIN.md §0.3; deletions are only acceptable as an explicit, documented,
-      human-approved exception.'
-    captured: 2026-08-16
-    source: lint-cron-2026-08-16 @ R3
-    notes: 'ACTION: either (a) restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md`
-      then commit `restore(raw): 2026-07-17-pa-link-openwa-whatsapp-api`, or (b) if the deletion was intentional (dead-code
-      sweep of a stale capture), record an explicit exception in _system/log.md with the human''s approval so future lints
-      stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
-      PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
-      the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more. UPDATE 2026-08-23
-      (lint cycle 7): R3 clean this week (no raw/ M/D since Aug 16; 2 new captures: 2026-08-19-pa-link-ai-bill-killer-repos,
-      2026-08-19-pa-link-loop-graph-engineering). Prior violation file remains deleted and this task stays ACTIVE — decision
-      still owed: restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` or record a
-      human-approved exception in _system/log.md. 7 days old. CLOSED 2026-08-26: Chin authorized the restore. The exact blob
-      was recovered with `git show b09d604^:raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` (24 lines, frontmatter
-      intact, byte-identical) and committed as `capture: restore pa-link-openwa-whatsapp-api (R3 remediation)`. b09d604 was
-      NOT reverted — it carries 100+ unrelated _memory/ and _system/ changes. The incident is queued for _system/log.md as
-      a log_only intent in _system/pending-deposits/20260826T215912-brain-capture-backfill.yaml. Recurrence fix: ~/wiki/.git/hooks/pre-commit
-      now fails any commit whose staged diff deletes or renames a path under raw/, and it runs before the existing secrets
-      scan (which only looks at --diff-filter=ACM, so a deletion-only commit previously exited clean without inspection).'
-    gist: A lint finding flagging a raw capture file deleted from the vault.
-    next_step: None — closed.
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 1
-  total_count: 7
-  active_count: 1
-  delegated_count: 0
-  done_count: 6
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 1
 - emoji: ''
   name: product
   kind: domain
@@ -4142,6 +4172,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-29 15:32:51 SGT
-total_active: 66
+updated_at: 2026-08-30 03:30:35 SGT
+total_active: 67
 total_done: 98
