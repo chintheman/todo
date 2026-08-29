@@ -2761,6 +2761,28 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
+  - id: reference-track-teardown
+    title: 'Reference Track Teardown: brief for building music from reference tracks'
+    type: read
+    domain: creative
+    priority: p1
+    status: active
+    summary: 'Practical brief on analysing reference tracks in order to compose original music in a similar style. Headline:
+      buy the track in FLAC rather than ripping, which removes the terms-of-service question and improves stem separation
+      quality. Covers the legal line (tempo, key, chord progressions, groove and mix character are free to use; the melody,
+      the lyrics and the actual recording are not), yt-dlp and ffmpeg mechanics, then the analysis stack that carries the
+      real value: Chordino for timestamped chords, Demucs for stems, ffmpeg ebur128 for LUFS and loudness range, and a fillable
+      teardown sheet that turns a track into a written spec.'
+    captured: 2026-08-29
+    source: Claude Code research session Aug 29 2026
+    notes: 'Artifact: https://claude.ai/code/artifact/e7821953-5eab-487d-856e-d2e4e55cb775 | Scripts verified and living in
+      ~/music-refs/ (refscan.py read 120.19 BPM off a synthetic 120 BPM click; bands.sh put a 110 Hz tone in the correct band)
+      | Not yet installed: yt-dlp, demucs, sonic-annotator, keyfinder-cli'
+    gist: Turn a track you like into tempo, key, chords, arrangement and mix numbers, then write your own against the spec.
+    next_step: Read the brief and decide whether to install the four missing tools (yt-dlp, demucs, sonic-annotator, keyfinder-cli).
+    cluster: creative
+    cluster_emoji: ''
+    cluster_kind: domain
   archive:
   - &id089
     id: stress-test-creative-agency
@@ -3018,13 +3040,13 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  count: 2
-  total_count: 15
-  active_count: 2
+  count: 3
+  total_count: 16
+  active_count: 3
   delegated_count: 0
   done_count: 13
   p0_count: 0
-  p1_count: 2
+  p1_count: 3
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -3939,6 +3961,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-27 19:48:19 SGT
-total_active: 62
+updated_at: 2026-08-29 15:00:17 SGT
+total_active: 63
 total_done: 98
