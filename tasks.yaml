@@ -1147,6 +1147,25 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: hermes4-report-reading
+    title: Read Hermes 4 Technical Report digest (Opus 5 study)
+    type: research
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: 'Digest of the Hermes 4 Technical Report (Nous Research, Aug 2025) — 5 parallel Opus 5 chunk agents (data, training,
+      eval, behavior, ecosystem) + consolidation pass. Core thesis: every quality problem was solved in code (schemas, token
+      caps, template tokens), not in prompts. 15 consolidated action items in the PDF.'
+    captured: 2026-08-31
+    source: https://cdn.jsdelivr.net/gh/chintheman/todo@main/hermes4-report-digest.pdf
+    notes: 'PDF opens in-browser via jsDelivr (application/pdf). Original report: https://nousresearch.com/wp-content/uploads/2025/08/Hermes_4_Technical_Report.pdf'
+    gist: 5 parallel Claude Code Opus 5 agents digested the Hermes 4 Technical Report into key learnings, build impact, and
+      action items — consolidated into a 3-page PDF.
+    next_step: Read the digest PDF (source link), then pick P0 actions to execute — token caps, generator != judge, schema
+      validation, anti-sycophancy blocks.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: graph-engineering-patterns
     title: Graph Engineering — nodes/edges, fake-edge test, diamond pattern, fresh-context checkers
     type: research
@@ -1887,13 +1906,13 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 11
-  total_count: 42
-  active_count: 11
+  count: 12
+  total_count: 43
+  active_count: 12
   delegated_count: 0
   done_count: 31
   p0_count: 3
-  p1_count: 3
+  p1_count: 4
   p2_count: 4
   p3_count: 1
 - emoji: ''
@@ -4172,6 +4191,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-08-30 03:30:35 SGT
-total_active: 67
+updated_at: 2026-08-31 19:50:38 SGT
+total_active: 68
 total_done: 98
