@@ -60,6 +60,9 @@ cluster_order:
   name: meta
   kind: domain
 - emoji: ''
+  name: business/build
+  kind: domain
+- emoji: ''
   name: design
   kind: domain
 - emoji: ''
@@ -70,9 +73,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: business
-  kind: domain
-- emoji: ''
-  name: business/build
   kind: domain
 - emoji: ''
   name: creative/3d
@@ -3674,6 +3674,74 @@ clusters:
   p2_count: 0
   p3_count: 2
 - emoji: ''
+  name: business/build
+  kind: domain
+  items:
+  - id: sg-fnb-lead-engine
+    title: SG F&B Lead Engine, autonomous weekly lead pipeline for Calvin (kitchen steel work)
+    type: build
+    domain: business/build
+    priority: p1
+    status: active
+    summary: 'Repo at ~/repos/sg-fnb-lead-engine, LOCAL ONLY with no remote pushed yet. Phase 1 shipped and verified: 1,508
+      real qualified leads (284 high, 1,217 medium) backfilled from 12 months of NEA hawker tender data, 357 tests passing.
+      Standalone Python 3.11+ package, deliberately NOT hermes-skill-template, because there is no LLM in the hot path and
+      the template bakes in ~/.hermes paths that would break handover to Calvin. Portability is enforced by a CI test: nothing
+      outside adapters/ may read an env var, hardcode a path, or name a host. Scheduling is one command plus an exit code.
+      SQLite is the store and the sheet is only a view. Machine columns A to V and human columns W to AD are disjoint, so
+      a rep editing the sheet can never be clobbered, and if a human edits a machine cell the human wins permanently.'
+    captured: 2026-09-03
+    source: Context brief from Chin, client Calvin, Sep 2026
+    notes: 'FOUR source facts in the original brief were wrong, all re-verified live on 2026-09-03. NEA is not scrapeable
+      HTML but an open JSON API (GetData/{Tab}/{Page}/{Year}/{Month}), and its named archive is only about 12 months deep
+      rather than 2007 to 2026, which nothing can buy around. HDB place2lease is an open JSON API too but is GEO-RESTRICTED
+      to Singapore IPs, so Zo in Paris gets 404 on every path, and its page param is silently ignored while pageSize=300 returns
+      all 224 records. ACRA lost primary_ssic_code entirely (8 columns now, not 52), so the SSIC-56 High-tier signal cannot
+      be built as sold, though ACRA is the only commercially licensed source in the system. SFA Track Records IS queryable
+      over free JSON, closing the best bridge spike. About 70 percent of NEA winners sell things needing no kitchen steel,
+      so real qualified volume is 20 to 25 a month rather than the 38 implied. STILL ON CHIN: reset Calvin volume expectation,
+      create the service account, get past-job history WITH stall and unit identifiers because name plus date alone collapses
+      the 7-year backtest, agree who fills the feedback columns, and decide whether to push the repo to GitHub.'
+    gist: Weekly qualified leads from Singapore public data for a commercial kitchen steel fabricator, into a Google Sheet
+      with a rep feedback loop.
+    next_step: Create a Google Cloud service account, share a sheet with it as Editor, then run `leadengine setup-sheet` and
+      switch the sink from csv to sheets.
+    cluster: business/build
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id039
+    id: looking-busy-website
+    title: LookingBusy — interactive "pretend to work" website
+    type: build
+    domain: business/build
+    priority: p3
+    status: done
+    summary: 'Buildable business idea: interactive fake-work dashboard. Type to escalate chaos, M for fake Zoom, 13 job modes,
+      5 boss skins, live market ticker. Freemium model — free basic, paid for custom modes/ boss skins/company branding. Proven
+      concept (LookingBusy exists and drives traffic).'
+    captured: 2026-07-23
+    source: https://www.lookingbusy.com
+    resolution: blitz-archived via labs 2026-08-14
+    notes: "URL: https://www.lookingbusy.com Title: LookingBusy — Apex / Executive Operations Modes: Executive, Founder, Consultant,\
+      \ Crypto Founder, VC Associate,\n  Breeder, PM, Designer, Lawyer, Doctor, HOA Board, Honors Student,\n  Group Chat Admin\n\
+      Boss skins: Excel (Forecast), VS Code (Code Review), Docs (Strategy\n  Memo), PowerPoint (Board Deck), Figma (Design\
+      \ Review)\nInteractions: typing escalates chaos, M for fake meeting, Escalate\n  button, Ambient mode, Fullscreen (F11)\n\
+      Inspiration for: building interactive, scenario-based single-purpose\n  websites. Sibling to nicest-place-website in\
+      \ the website ideas set."
+    cluster: business/build
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 2
+  active_count: 1
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: design
   kind: domain
   items:
@@ -3874,42 +3942,6 @@ clusters:
   active_count: 0
   delegated_count: 0
   done_count: 3
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: business/build
-  kind: domain
-  items: []
-  archive:
-  - &id039
-    id: looking-busy-website
-    title: LookingBusy — interactive "pretend to work" website
-    type: build
-    domain: business/build
-    priority: p3
-    status: done
-    summary: 'Buildable business idea: interactive fake-work dashboard. Type to escalate chaos, M for fake Zoom, 13 job modes,
-      5 boss skins, live market ticker. Freemium model — free basic, paid for custom modes/ boss skins/company branding. Proven
-      concept (LookingBusy exists and drives traffic).'
-    captured: 2026-07-23
-    source: https://www.lookingbusy.com
-    resolution: blitz-archived via labs 2026-08-14
-    notes: "URL: https://www.lookingbusy.com Title: LookingBusy — Apex / Executive Operations Modes: Executive, Founder, Consultant,\
-      \ Crypto Founder, VC Associate,\n  Breeder, PM, Designer, Lawyer, Doctor, HOA Board, Honors Student,\n  Group Chat Admin\n\
-      Boss skins: Excel (Forecast), VS Code (Code Review), Docs (Strategy\n  Memo), PowerPoint (Board Deck), Figma (Design\
-      \ Review)\nInteractions: typing escalates chaos, M for fake meeting, Escalate\n  button, Ambient mode, Fullscreen (F11)\n\
-      Inspiration for: building interactive, scenario-based single-purpose\n  websites. Sibling to nicest-place-website in\
-      \ the website ideas set."
-    cluster: business/build
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 1
-  active_count: 0
-  delegated_count: 0
-  done_count: 1
   p0_count: 0
   p1_count: 0
   p2_count: 0
@@ -4235,6 +4267,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-02 12:52:28 SGT
-total_active: 70
+updated_at: 2026-09-03 03:30:31 SGT
+total_active: 71
 total_done: 98
