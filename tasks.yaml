@@ -2569,6 +2569,29 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: seven-free-repos-sell-services
+    title: Explore 7 free OSS repos as sellable services (sebastianhardy_ carousel)
+    type: research
+    domain: devops
+    priority: p2
+    status: active
+    summary: 'IG carousel (Sep 1 2026) by sebastianhardy_: sell 7 free repos as services. Verified 2026-09-02 against GitHub
+      — trycompai/crm (9.2k★, MIT, agent-first CRM), every-app/open-seo (16.2k★, MIT, Semrush alt), dgtlmoon/changedetection.io
+      (33.4k★, Apache-2.0, page-change watch), JCodesMore/ai-website-cloner-template (33.6k★, MIT, flagged — IP gray area),
+      hugohe3/ppt-master (51.2k★, MIT, PPTX engine), D4Vinci/Scrapling (77.8k★, BSD-3, adaptive scraper), PaddlePaddle/PaddleOCR
+      (88.6k★, Apache-2.0). All commercial-safe licenses.'
+    captured: 2026-09-02
+    source: https://www.instagram.com/p/Dcv9HtHDLDZ/
+    notes: Full review delivered to PA thread 2026-09-02. Best Hermes-stack fits — changedetection.io (monitoring), Scrapling
+      (adaptive scraping), open-seo (content SEO). Relates to archived potential-biz-ideas-master (local lead-gen agency =
+      best Hermes-fit, 28/40). Carousel prices are marketing not market rates — real model is deploy + recurring retainer.
+    gist: Verified review of 7 OSS repos pitched as '$4k-$12k agency services' — explore and expand the model, pick stack-relevant
+      pilots.
+    next_step: Pick 1-2 stack-relevant candidates (changedetection.io, Scrapling, open-seo) and pilot — self-host + craft
+      a service pitch around one.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
   archive:
   - &id097
     id: ddgs-search-fallback
@@ -2841,14 +2864,14 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 4
-  total_count: 17
-  active_count: 4
+  count: 5
+  total_count: 18
+  active_count: 5
   delegated_count: 0
   done_count: 13
   p0_count: 0
   p1_count: 4
-  p2_count: 0
+  p2_count: 1
   p3_count: 0
 - emoji: ''
   name: creative
@@ -4212,6 +4235,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-02 09:44:45 SGT
-total_active: 69
+updated_at: 2026-09-02 12:52:28 SGT
+total_active: 70
 total_done: 98
