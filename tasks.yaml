@@ -1919,6 +1919,23 @@ clusters:
   name: career
   kind: domain
   items:
+  - id: linkedin-adhd-repo-post
+    title: Create LinkedIn post about the adhd-friendly-formatting repo
+    type: create
+    domain: career
+    priority: p1
+    status: active
+    summary: Draft written and delivered in-session; repo live at commit 78e0ea2.
+    captured: '2026-09-03'
+    source: 0xsteamboat request (Sep 3, 2026)
+    notes: 'Optional: design-bridge visual pair (before/after card).'
+    gist: Share the updated ADHD output-rules repo (github.com/chintheman/adhd-friendly-formatting) — always-on chat governance
+      + adhd-suffix overlay. Paste-ready draft with baked-in rule annotations already delivered in the Sep 3 2026 session.
+    next_step: Post the paste-ready LinkedIn draft from the Sep 3 2026 session (ADHD rules port thread), or ask Hermes to
+      re-send it.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: ai-adoption-specialist
     title: Explore AI Adoption Specialist as career path (salaried vs independent)
     type: discuss
@@ -2322,13 +2339,13 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  count: 8
-  total_count: 19
-  active_count: 8
+  count: 9
+  total_count: 20
+  active_count: 9
   delegated_count: 0
   done_count: 11
   p0_count: 0
-  p1_count: 2
+  p1_count: 3
   p2_count: 6
   p3_count: 0
 - emoji: ''
@@ -4267,6 +4284,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-03 03:30:31 SGT
-total_active: 71
+updated_at: 2026-09-03 11:53:40 SGT
+total_active: 72
 total_done: 98
