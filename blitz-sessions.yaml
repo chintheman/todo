@@ -53,3 +53,9 @@ sessions:
     started_at: "2026-08-17T04:31:45.595Z"
     pomodoros: 1
     outcome: "continue"
+  - date: "2026-09-04"
+    task_id: "obsidian-power-use-cases"
+    task_title: "Obsidian Power Use Cases — Opus 5 vault-tailored research"
+    started_at: "2026-09-04T12:19:53.469Z"
+    pomodoros: 1
+    outcome: "continue"
