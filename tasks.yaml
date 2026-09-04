@@ -3396,7 +3396,7 @@ clusters:
       learning, knowledge work, life admin, AI-powered, publishing. 3 P0 actions — Local REST API + MCP (highest leverage,
       Hermes writes Phase-2 concept notes directly), Bases over entities/, Dataview feedback queries.'
     captured: 2026-09-02
-    source: https://raw.githubusercontent.com/chintheman/todo@main/obsidian-power-use-cases.md
+    source: https://raw.githubusercontent.com/chintheman/todo/main/obsidian-power-use-cases.md
     notes: Full digest delivered to PA thread Aug 31 23:53 SGT. Replaces the old learn-obsidian entry (done, archived 2026-08-14)
       — this is the implementation-phase research. P1 candidates — Smart Connections, Spaced Repetition (#flashcards on concept
       notes), MOCs per active area. P2 — Tasks plugin, Quartz publishing.
@@ -4415,6 +4415,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-04 17:05:53 SGT
+updated_at: 2026-09-04 20:24:14 SGT
 total_active: 77
 total_done: 98
