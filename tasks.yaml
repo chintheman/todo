@@ -2476,6 +2476,33 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
+  - id: moby-trading-content-engine
+    title: Moby review — two-product whale brand (@moby.invest / moby.co / moby.win), filed as content-engine case study
+    type: research
+    domain: crypto
+    priority: p2
+    status: active
+    summary: 'Two products share the Moby name/whale brand. (1) Moby Research (moby.co): equity stock-picks subscription,
+      ~$179/yr (promos ~$99), 3 picks/week (~156/yr), morning email + AI portfolios + congressional STOCK-Act + hedge-fund
+      13F trackers. IG @moby.invest (447k followers, 5,252 posts, "30M monthly readers") funnels to moby.co/ig. Content quality
+      genuinely high (Avis Budget crash post: "stopped being a finance story and became a physics problem"). Red flags: homepage
+      shows only winner picks (+730% NVDA etc.), no auditable track record on site, ToS disclaims investment advice, all favorable
+      reviews are affiliate-driven. (2) Moby App (moby.win / assetdash.com): crypto trading + whale screener by AssetDash
+      (ex-MobyScreener, 2025), 0.75% flat swap fee + gas, 10-30% cashback in $MOBY, hourly top-10 leaderboard pots (volume-churn
+      incentive), self-custody via Privy, 75k+ traders, 1.8M+ trades, Solana/Robinhood Chain/BNB/Base. Copyable content engine:
+      free daily commentary → paid research tier, plain-English institutional positioning, tracker features as sticky differentiators.'
+    captured: '2026-09-04'
+    source: Telegram Sep 4 2026 (PA review request)
+    notes: 'Sources: TraderHQ review (Feb 2026, $179/yr, performance claims unverified, ToS no-advice), MoneyWise, HowTheMarketWorks
+      (claims independent blogger tracked 625 picks since 2020, beat S&P yearly, 132 doubled — affiliate-site caveat), WallStreetSurvivor
+      promo, moby.win FAQ, CoinMarketCap MOBY token page. IG largely login-walled — bio/links/posts verified via browser +
+      search index only. Ownership link moby.co ↔ AssetDash never publicly confirmed (same name/whale, different origin stories)
+      — flag before any deeper use.'
+    gist: Reviewed Moby trading-content ecosystem; filed as content-engine case study for Agentic Hotpot.
+    next_step: When Agentic Hotpot content-engine work resumes, mine Moby funnel mechanics from this dossier.
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
   archive:
   - &id044
     id: nicholascrown-macro-letter
@@ -2513,14 +2540,14 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
-  count: 5
-  total_count: 7
-  active_count: 5
+  count: 6
+  total_count: 8
+  active_count: 6
   delegated_count: 0
   done_count: 2
   p0_count: 1
   p1_count: 2
-  p2_count: 2
+  p2_count: 3
   p3_count: 0
 - emoji: ''
   name: devops
@@ -4313,6 +4340,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-04 08:12:36 SGT
-total_active: 73
+updated_at: 2026-09-04 08:45:22 SGT
+total_active: 74
 total_done: 98
