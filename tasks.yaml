@@ -1296,6 +1296,27 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: read-disco-repo-to-skill
+    title: 'Read: Repo-To-Skill — DisCo distills GitHub repos into agent skills'
+    type: read
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Preprint "Repo-To-Skill" (arXiv 2609.02749, Sep 2 2026) introduces DisCo, a skill-powered ML research agent
+      that distills GitHub repos into verified skills so operational know-how stops being rediscovered on every run. Two distillation
+      forms: task-agnostic (the AREX-Skill Library — 5,000+ verified skills from 1,000 widely used ML repos, 20 areas, 178
+      capability families) and task-oriented (skills a concrete task needs). Creator Mode distills, Researcher Mode consumes.
+      Controlled eval with GPT-5.5 backbone and harness fixed, only skills varied: +134.3% on MLE-bench, +34.4% PaperBench,
+      +9.2% FrontierCS, +14.0% PassNet. Validates the skill architecture Chin already runs on Hermes; preprint with self-reported
+      numbers, not yet peer reviewed. Full extraction: _system/pending/read-disco-repo-to-skill.md.'
+    captured: 2026-09-04
+    source: Hermes Pulse Fri 4 Sep 2026 — arXiv 2609.02749 (https://arxiv.org/pdf/2609.02749.pdf)
+    notes: _system/pending/read-disco-repo-to-skill.md
+    gist: A research paper where an agent distills GitHub repositories into verified reusable skills that boost ML-agent performance.
+    next_step: Read the arXiv paper and pull out what applies to Hermes skill curation.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: spine-retrieval-bm25-hybrid
     title: 'Spine retrieval: BM25 hybrid + reranker + contextual chunks'
     type: build
@@ -1967,14 +1988,14 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 13
-  total_count: 44
-  active_count: 13
+  count: 14
+  total_count: 45
+  active_count: 14
   delegated_count: 0
   done_count: 31
   p0_count: 4
   p1_count: 4
-  p2_count: 4
+  p2_count: 5
   p3_count: 1
 - emoji: ''
   name: career
@@ -4394,6 +4415,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-04 17:04:47 SGT
-total_active: 76
+updated_at: 2026-09-04 17:05:53 SGT
+total_active: 77
 total_done: 98
