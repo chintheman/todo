@@ -748,6 +748,38 @@ clusters:
     cluster: Personal Page
     cluster_emoji: 🏠
     cluster_kind: project
+  - id: creative-internet-roundup
+    title: Creative-internet roundup — 6 dev projects/tools (activeprogrammer IG post), reviewed list under Personal Page
+    type: research
+    domain: creative
+    priority: p2
+    status: active
+    summary: 'The six reviewed items. (1) mikes.cv — Mikey Barton airplane-window portfolio: close the shade, the site goes
+      dark. Best metaphor-driven light/dark toggle on the web; portfolio as theatre. (2) ThreeUI (threeui.com, github.com/MengTo/threeui,
+      Meng To) — 160+ free Three.js components and landing pages; copy the prompt or source, hand it to an AI agent, customize
+      theme/lighting/motion. Pro tier adds 50+ components, an MCP and skills. Strongest agent-era 3D component-library play;
+      direct fit for the creative-agency stack. (3) Bloom QR (bubbbly.com/bloom, Ann Nguyen) — type a link, the vase of flowers
+      scatters into a scannable QR code. three.js on Next.js, open source (github.com/annnguyntt/vibe-coding/tree/main/bloom-qr).
+      Business card you want to keep. (4) Claude Fable 5 personal website (Kevin Ngo, X @kevin_t_ngo, Aug 29 2026, 1.3M views)
+      — open-ended brief: make your own personal website, not a product page. Result: hand-drawn cosmic boats and lanterns,
+      copy like poetry, an original melody. Case study for vague briefs over specs; cost ~10% of a weekly Fable usage budget.
+      (5) iPhone Twin (yyyole) — real iPhone mirrored as a live 3D twin on Mac, motion and screen synced. Public URL not found,
+      attribution thin; treat as demo-only. (6) Illegal Soccer (Repotted, Roblox) — soccer with guns, grappling hooks, jetpacks
+      and zero referees; 4.4M+ visits, 85% rating, 22.9k peak CCU. Proof the referee was the problem all along.'
+    captured: '2026-09-04'
+    source: Telegram Sep 4 2026 — IG post Dcq0LG5DlXj (activeprogrammer)
+    notes: 'Source post: @activeprogrammer (5.7k likes, 4 days old); per-card screenshots saved in /tmp/igpost/. ThreeUI free
+      edition is login-free open source, 164 browse results (50 parent components, 111 routes); install npm @designcodeio/threeui.
+      Claude Fable 5 is an Anthropic model (also credited by Ann Nguyen koi-pond demo and Kenneth Reitz essays). Oddity logged
+      for provenance: crypto news aggregators claim an agent in the Kevin Ngo experiment auto-deployed a FABLE meme coin on
+      Robinhood Chain that later crashed — unverified flavor, exclude from public reuse. iPhone Twin unknown-unknown: handle
+      yyyole, original attribution unclear even in the source post caption.'
+    gist: Compiled, reviewed list of 6 creative web projects/tools from one IG post; candidate content for the personal page.
+    next_step: Turn the reviewed list into content on the personal page; ThreeUI Pro (MCP + skills) worth a look for the creative-agency
+      stack.
+    cluster: Personal Page
+    cluster_emoji: 🏠
+    cluster_kind: project
   - id: sg-live-music-source-adapters
     title: SG Live Music — add livebandtonight.com source + fix Mato adapter to parse the FAQ block
     type: build
@@ -776,14 +808,14 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
   archive: []
-  count: 5
-  total_count: 5
-  active_count: 5
+  count: 6
+  total_count: 6
+  active_count: 6
   delegated_count: 0
   done_count: 0
   p0_count: 0
   p1_count: 4
-  p2_count: 1
+  p2_count: 2
   p3_count: 0
 - emoji: 🤖
   name: Zo Integration
@@ -4340,6 +4372,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-04 08:45:22 SGT
-total_active: 74
+updated_at: 2026-09-04 08:50:22 SGT
+total_active: 75
 total_done: 98
