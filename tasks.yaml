@@ -1070,6 +1070,35 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: pstack-core-adoption
+    title: pstack adoption — Lauren Tan agent methodology (verify-first skills into my stack)
+    type: build
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'Dossier: ~/wiki/references/lauren-tan-pstack-2026-09-04.md (claims audited; no independent Opus review ran).
+      Repo cloned: ~/repos/pstack-study/pstack (235 files / MIT, sparse checkout from github.com/cursor/plugins). Real person/workflow
+      confirmed (~1k PRs/month self-reported); team headcounts + "1%" stat are content-farm fabrication. Copyable core: (1)
+      verification is skill #1 — "It compiles" is not evidence; done means the agent ran/inspected it; per-project verify-<app>
+      SKILL.md (Launch / Doctor / Drive / Evidence / Cleanup + features/ map), proven end-to-end once; (2) 21 principle-leaf
+      skills with Why / Pattern / "the tell you skipped this" closer — most transferable unit; (3) 22 playbooks copied VERBATIM
+      by the router — uniform ownership mandate + Reply: line; steps never silently dropped; (4) rules-as-CI: shortest path
+      is the best path; (5) auto-merge earned after ~600 supervised PRs, never default; (6) overnight contract with checkable
+      done-condition + decision log + escape hatch. Maps 1:1 onto Hermes/Claude Code skills today.'
+    captured: '2026-09-04'
+    source: Telegram Sep 4 2026 (dossier reply)
+    notes: 'Community ports: michael-denyer/pstack-claude (Claude Code/Codex), backnotprop/pstack (verbatim mirror). Adoption
+      order (dossier §5 gap table): (a) generate a verify-<app> SKILL.md per live project that interviews the repo, not the
+      user; (b) adopt principle-leaf + skip-tell format for high-value review/lint skills; (c) add a decisions trail + explicit
+      done-condition to long autonomous runs; (d) audit existing playbooks for uniform ownership-mandate + Reply: line. Claude
+      Code review of the dossier never ran — treat the cloned repo as primary source.'
+    gist: 'Adopt the open-source pstack methodology (Lauren Tan): verification-first agent skills, principle-leaf format,
+      verbatim playbook routing.'
+    next_step: Mine the real 235-file tree at ~/repos/pstack-study/pstack, then draft the adoption pack — verify-<app> SKILL.md
+      template + principle-leaf format applied to the 2 highest-value review/lint skills.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: bot-mode-squad-options-review
     title: Bot Mode squad options — review remaining candidates and decide what else to build
     type: discuss
@@ -1906,12 +1935,12 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 12
-  total_count: 43
-  active_count: 12
+  count: 13
+  total_count: 44
+  active_count: 13
   delegated_count: 0
   done_count: 31
-  p0_count: 3
+  p0_count: 4
   p1_count: 4
   p2_count: 4
   p3_count: 1
@@ -4284,6 +4313,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-03 11:53:40 SGT
-total_active: 72
+updated_at: 2026-09-04 08:12:36 SGT
+total_active: 73
 total_done: 98
