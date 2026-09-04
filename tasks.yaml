@@ -2585,6 +2585,28 @@ clusters:
   name: devops
   kind: domain
   items:
+  - id: hermes-desktop-local-models
+    title: Hermes Desktop — one-click local model setup (fallback for DeepSeek outages)
+    type: build
+    domain: devops
+    priority: p0
+    status: active
+    summary: 'NousResearch shipped one-click local model setup in Hermes Desktop (Sep 3 demo): the app reads the machine hardware,
+      picks the best fitting local model, downloads it and configures the runtime, offered on first launch or under Settings
+      → Providers. Removes the manual download and runtime-config legwork that has always been the local-model bottleneck.
+      Value: a local fallback model keeps Hermes working if the DeepSeek API or the Nous Portal is ever down. Caveat: the
+      M1 has 8GB RAM, so the hardware picker will land on a small model — verify the fallback is actually responsive enough
+      to be useful before trusting it. Related prior eval on the same question for a different app: unsloth-desktop-eval (p2,
+      done).'
+    captured: 2026-09-04
+    source: Hermes Pulse Fri 4 Sep 2026 — https://x.com/nousresearch/status/2095602995874410664
+    notes: 'Pending file: ~/wiki/_system/pending/hermes-desktop-local-models.md. Docs: https://hermes-agent.nousresearch.com/docs/user-guide/desktop.
+      Cross-ref: unsloth-desktop-eval (done, p2).'
+    gist: Hermes Desktop's one-click local model setup that reads the hardware and configures a local runtime.
+    next_step: Install Hermes Desktop, run the one-click local model setup, and test the fallback.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: hermes-session-pruning-update
     title: Evaluate & adopt Hermes session DB pruning/archiving
     type: build
@@ -2969,12 +2991,12 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 5
-  total_count: 18
-  active_count: 5
+  count: 6
+  total_count: 19
+  active_count: 6
   delegated_count: 0
   done_count: 13
-  p0_count: 0
+  p0_count: 1
   p1_count: 4
   p2_count: 1
   p3_count: 0
@@ -4372,6 +4394,6 @@ archive:
 - *id096
 - *id097
 - *id098
-updated_at: 2026-09-04 08:50:22 SGT
-total_active: 75
+updated_at: 2026-09-04 17:04:47 SGT
+total_active: 76
 total_done: 98
