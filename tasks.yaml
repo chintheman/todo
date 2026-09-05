@@ -51,10 +51,10 @@ cluster_order:
   name: creative
   kind: domain
 - emoji: ''
-  name: devtools
+  name: infra
   kind: domain
 - emoji: ''
-  name: infra
+  name: devtools
   kind: domain
 - emoji: ''
   name: meta
@@ -3361,6 +3361,173 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: infra
+  kind: domain
+  items:
+  - id: box-company-brain
+    title: Box company brain — governed content layer for Hermes Agent
+    type: build
+    domain: infra
+    priority: p0
+    status: active
+    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
+      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
+      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
+      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
+      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
+      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
+      (Aug 29). User marked P0 to try the integration.'
+    captured: 2026-08-29
+    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
+    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
+      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
+    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
+    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: profile-bot-fleet
+    title: Turn profile fleet into specialist bots — Bot Mode rollout
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
+      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
+      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
+      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
+      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
+    captured: 2026-08-16
+    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
+    notes: _system/pending/profile-bot-fleet.md
+    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
+    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: hotcore-retrieval-split
+    title: Hot core — retrieve situational rules instead of loading them every call
+    type: build
+    domain: infra
+    priority: p2
+    status: active
+    summary: 'Measured 2026-09-05: MEMORY.md gains ~4,200 bytes/day, the nightly demote removes ~2,450, net ~+1,800/day. It
+      has never been self-sustaining — it climbed to 39,672 bytes on 2026-08-25 and was manually cut by 15,212 the next day.
+      The content is not junk: [R] rules + [C] corrections are ~10,900 bytes, permanent and grow-only, so no fixed budget
+      survives them. Raising the warn threshold to 26,000 (done, commit 09eef8b789) stops the false alarms but does not reduce
+      token cost. The real saving is that a rule like "when the user shares a quiz screenshot, check selection state" does
+      not need to be in every prompt — it needs to arrive when a screenshot arrives.'
+    captured: 2026-09-05
+    source: measured from 44 nightly consolidation reports, 2026-09-05
+    notes: Do NOT start by editing MEMORY.md. This is a change to how memory loads, so it gets a written plan and approval
+      first per the standing decision rule. Related prior work — the 2026-08 pass that moved 15 facts to spine (-1,330 tokens/call)
+      proved the direction; this extends it from facts to situational rules. Watch the [R]-rule guard (heartbeat check hotcore_rules,
+      added 2026-09-05) — any design that rewrites blocks must not drop a tag, which is exactly what the consolidation pass
+      did.
+    gist: MEMORY.md is loaded whole on every Hermes call, but roughly half of it is situational corrections that only matter
+      in specific contexts. Move those behind retrieval so the always-loaded core holds only what applies to every turn.
+    next_step: Plan first (architecture-sized). Classify the 24 [C] corrections and 23 [W] notes as always-relevant vs situational,
+      then design how a situational rule gets retrieved at the moment it applies — spine already does the retrieval half.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id015
+    id: project-idea-capture-system
+    title: Project-level idea capture system — random projects/discussions storage
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
+      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
+      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
+    captured: 2026-08-14
+    source: User request Aug 14 2026 (during PAL session)
+    completed: 2026-08-14
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
+      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id095
+    id: hw-to-wiki-migration
+    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
+      store now.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id092
+    id: topic-role-audit
+    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
+    type: discuss
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
+      pass. No discrepancies found.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: Forum migration — HermesBoat69 12 topics
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id082
+    id: index-md-folder-optimization
+    title: Implement INDEX.md folder optimization for Hermes wiki
+    type: build
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
+    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id001
+    id: obsidian-power-use-cases
+    title: Obsidian Power Use Cases — Opus 5 vault-tailored research
+    type: research
+    domain: infra
+    priority: p0
+    status: done
+    summary: 'Digest of Opus 5 research (Aug 31 2026): Obsidian power use cases grouped into second brain, thinking/writing,
+      learning, knowledge work, life admin, AI-powered, publishing. 3 P0 actions — Local REST API + MCP (highest leverage,
+      Hermes writes Phase-2 concept notes directly), Bases over entities/, Dataview feedback queries.'
+    captured: 2026-09-02
+    source: https://raw.githubusercontent.com/chintheman/todo/main/obsidian-power-use-cases.md
+    notes: Full digest delivered to PA thread Aug 31 23:53 SGT. Replaces the old learn-obsidian entry (done, archived 2026-08-14)
+      — this is the implementation-phase research. P1 candidates — Smart Connections, Spaced Repetition (#flashcards on concept
+      notes), MOCs per active area. P2 — Tasks plugin, Quartz publishing.
+    gist: Claude Code Opus 5 read the actual ~/wiki vault (1,478 notes, PARA, Bases enabled-unused, zero community plugins)
+      and delivered the 12+ most powerful/life-changing Obsidian use cases + 8 quick-start actions.
+    next_step: Open Obsidian once to verify — Bases render (concepts 25 rows, entities 31), Dataview dashboard.md queries
+      resolve, then run obsidian-rest-serve.sh up + verify for the tailnet endpoint.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 3
+  total_count: 8
+  active_count: 3
+  delegated_count: 0
+  done_count: 5
+  p0_count: 1
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: devtools
   kind: domain
   items:
@@ -3482,147 +3649,6 @@ clusters:
   done_count: 3
   p0_count: 2
   p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: infra
-  kind: domain
-  items:
-  - id: box-company-brain
-    title: Box company brain — governed content layer for Hermes Agent
-    type: build
-    domain: infra
-    priority: p0
-    status: active
-    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
-      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
-      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
-      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
-      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
-      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
-      (Aug 29). User marked P0 to try the integration.'
-    captured: 2026-08-29
-    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
-    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
-      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
-    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
-    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: profile-bot-fleet
-    title: Turn profile fleet into specialist bots — Bot Mode rollout
-    type: build
-    domain: infra
-    priority: p1
-    status: active
-    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
-      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
-      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
-      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
-      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
-    captured: 2026-08-16
-    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
-    notes: _system/pending/profile-bot-fleet.md
-    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
-    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id015
-    id: project-idea-capture-system
-    title: Project-level idea capture system — random projects/discussions storage
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
-      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
-      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
-    captured: 2026-08-14
-    source: User request Aug 14 2026 (during PAL session)
-    completed: 2026-08-14
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
-      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id095
-    id: hw-to-wiki-migration
-    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
-      store now.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id092
-    id: topic-role-audit
-    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
-    type: discuss
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
-      pass. No discrepancies found.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: Forum migration — HermesBoat69 12 topics
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id082
-    id: index-md-folder-optimization
-    title: Implement INDEX.md folder optimization for Hermes wiki
-    type: build
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
-    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id001
-    id: obsidian-power-use-cases
-    title: Obsidian Power Use Cases — Opus 5 vault-tailored research
-    type: research
-    domain: infra
-    priority: p0
-    status: done
-    summary: 'Digest of Opus 5 research (Aug 31 2026): Obsidian power use cases grouped into second brain, thinking/writing,
-      learning, knowledge work, life admin, AI-powered, publishing. 3 P0 actions — Local REST API + MCP (highest leverage,
-      Hermes writes Phase-2 concept notes directly), Bases over entities/, Dataview feedback queries.'
-    captured: 2026-09-02
-    source: https://raw.githubusercontent.com/chintheman/todo/main/obsidian-power-use-cases.md
-    notes: Full digest delivered to PA thread Aug 31 23:53 SGT. Replaces the old learn-obsidian entry (done, archived 2026-08-14)
-      — this is the implementation-phase research. P1 candidates — Smart Connections, Spaced Repetition (#flashcards on concept
-      notes), MOCs per active area. P2 — Tasks plugin, Quartz publishing.
-    gist: Claude Code Opus 5 read the actual ~/wiki vault (1,478 notes, PARA, Bases enabled-unused, zero community plugins)
-      and delivered the 12+ most powerful/life-changing Obsidian use cases + 8 quick-start actions.
-    next_step: Open Obsidian once to verify — Bases render (concepts 25 rows, entities 31), Dataview dashboard.md queries
-      resolve, then run obsidian-rest-serve.sh up + verify for the tailnet endpoint.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 2
-  total_count: 7
-  active_count: 2
-  delegated_count: 0
-  done_count: 5
-  p0_count: 1
-  p1_count: 1
   p2_count: 0
   p3_count: 0
 - emoji: ''
@@ -4417,6 +4443,6 @@ archive:
 - *id097
 - *id098
 - *id099
-updated_at: 2026-09-04 22:00:37 SGT
-total_active: 76
+updated_at: 2026-09-05 09:30:21 SGT
+total_active: 77
 total_done: 99
