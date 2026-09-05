@@ -3788,13 +3788,18 @@ clusters:
       growwithcolby-free-things, indialogue-quant-tierlist).'
     captured: 2026-08-30
     source: lint-cron-2026-08-30 @ R17
-    notes: Per R17, one create_source stub intent per lint run (drains slowly by design — backlog ~10 actionable files ≈ 10
-      weeks at 1/run; escalate if updater backfill happens). Test fixtures in the 2026-07-07 set should be permanently excluded
-      once confirmed.
+    notes: 'Per R17, one create_source stub intent per lint run (drains slowly by design — backlog ~10 actionable files ≈
+      10 weeks at 1/run; escalate if updater backfill happens). Test fixtures in the 2026-07-07 set should be permanently
+      excluded once confirmed. UPDATE 2026-09-06 (lint cycle 9): raw total now 21 (3 new since Aug 30: 09-01 abbytheia, 09-02
+      architects-playbook OCR, 09-05 pa-link macro). Cited: 7 (08-28 stub LANDED — sources/2026-08-28-ig-dhanyindraswara-dashboard-layout.md;
+      09-02 OCR cited by sources/architects-playbook-cyberskill.md + concepts/enterprise-llm-architecture-playbook.md). Uncited:
+      14 = 3 permanent test fixtures + 10 actionable (July pa-link x7 incl restored openwa, 08-09, 08-14, 09-01) + 09-05 pa-link
+      macro (<24h, not yet due). Stub filed this cycle for 09-01 abbytheia.'
     gist: Rule 17 (capture→ingest coverage) added to lint/rules.md Aug 26 — every raw/**/*.md older than 24h must be cited
       by a page sources field or have an intent queued. First run finds 13 uncited files.
-    next_step: 'Drain one file per weekly lint run via create_source stub intents; priority = newest first. This cycle: raw/2026-08/2026-08-28-ig-dhanyindraswara-dashboard-layout-dccsn6wmefv.md
-      (44h) — stub filed in 20260830T032400-brain-lint.yaml.'
+    next_step: 'Drain one file per weekly lint run via create_source stub intents; priority = newest first. Drained 2026-08-28
+      capture (stub landed, sources/2026-08-28-ig-dhanyindraswara-dashboard-layout.md exists — verified 2026-09-06). This
+      cycle: raw/2026-09/2026-09-01-ig-abbytheia-top5-sensemaking-skills.md (5d, uncited) — stub filed in 20260906T032833-brain-lint.yaml.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -4519,6 +4524,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-05 14:24:39 SGT
+updated_at: 2026-09-06 03:30:30 SGT
 total_active: 78
 total_done: 100
