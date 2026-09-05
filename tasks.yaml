@@ -1,4 +1,7 @@
 cluster_order:
+- emoji: 🧠
+  name: Memory & Knowledge System
+  kind: project
 - emoji: 🛎️
   name: Agentic Marketing Concierge
   kind: project
@@ -93,6 +96,399 @@ cluster_order:
   name: strategy
   kind: domain
 clusters:
+- emoji: 🧠
+  name: Memory & Knowledge System
+  kind: project
+  items:
+  - id: context-engineering-research
+    title: Context engineering research and optimisation
+    type: research
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'Kickoff research PASS 1 done 2026-08-17 (Brave + Exa, Tavily down). Context engineering = smallest set of high-signal
+      tokens per inference (Anthropic). Four levers: write/select/compress/isolate (LangChain). Key evidence: contextual retrieval
+      cuts retrieval failures 49-67%; reranking 50->top-5 beats dumping 50; observation masking >50% cost cut on SWE-bench;
+      lost-in-the-middle + context rot are the core failure modes. Hermes already does progressive disclosure well (skills,
+      deferred tools, wiki, subagents). Full report: _system/pending/context-engineering-research.md.'
+    captured: 2026-08-14
+    source: User request — Hermes context/memory stack
+    notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
+      bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
+      in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
+    gist: Context engineering = curate the smallest set of high-signal tokens per step; the spine retrieval gap is the highest-leverage
+      Hermes fix and BM25-hybrid + reranking ship before the time-gated Voyage embedder swap.
+    next_step: 'Deep dive 1: spine retrieval A/B — BM25 hybrid + reranker + contextual chunk enrichment vs current embedder,
+      recall@20 over wiki + memory observations (ships before the Voyage gate). Deep dive 2: compaction prompt audit — what
+      survives Hermes consolidation vs Claude''s preserve-decisions/discard-tool-output guidance. Deep dive 3: context-utilization
+      instrumentation across cron sessions.'
+    researched: 2026-08-17
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - id: compaction-prompt-tuning
+    title: Compaction prompt audit and tuning
+    type: build
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: Built + verified. Audited the compaction/consolidation path — the prompts were already tuned (Aug 15 field-proven
+      upgrades) but the winning lean policy was shipped opt-in and the running gateway was on the weak legacy default. Flipped
+      compression.tail_mode to lean (68.3% vs 45.8% recall at 0.30x tokens per scorecard), added an explicit discard-tool-noise
+      rule to the batch + micro summarizer prompts (A/B-verified, no regression, 0 noise carried; digest prompt left untouched
+      — the rule measurably cost digest recall there), and exempted user-corrections from idle decay in spine consolidation.
+      Verification on a real 2-week session slice — anchor index preserves 96.3% of exact identifiers vs 24.4% for bare-LLM
+      summaries; 141 compressor tests + 545 agent tests pass.
+    captured: 2026-08-20
+    source: context-engineering-research (2026-08-17), gap 3 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
+    gist: Cause of resume-degradation was deployment, not prompt content — lean compaction (anchor index + digests + recovery
+      pointers) was shipped opt-in and off. Enabled it, added discard-tool-noise rules where A/B showed they help, exempted
+      corrections from decay. Verified on real data — identifier survival 24.4% to 96.3%.
+    next_step: Restart the gateway (hermes gateway restart) at a convenient moment to activate tail_mode lean — the config
+      flip is in but the running process predates it. Then watch the next few compactions for digest latency (~2min first
+      pass vs ~15s legacy) and resumed-session quality. Optional follow-up from the scorecard — iterate prmerge-class recall
+      (dense multi-PR campaigns, 43.3% ceiling) behind the lean flag.
+    researched: 2026-08-20
+    log:
+    - 2026-08-20 · hermes · Compaction tuning — enabled lean tail mode (was legacy default), added discard-tool-noise rules
+      to batch+micro prompts (A/B-verified), exempted corrections from decay. Anchor-index survival 96.3% vs 24.4% bare-LLM.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - id: obsidian-verify-learn-tune
+    title: Obsidian — verify the build, learn the tool, tune the settings
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: 'VERIFY (2 min, do first): (1) bases/concepts.base shows 25 rows, not 90 — if it shows 90 the type filter is
+      not working and the daily digests are leaking in; (2) bases/entities.base shows 31 rows; (3) dashboard.md renders three
+      Dataview blocks as TABLES, not raw code — raw code means Dataview did not load; (4) Graph view shows the curated cluster
+      with no floating orphans. LEARN: the four things worth actual practice are backlinks (open a concept, read every context
+      it appeared in), Bases (tables over frontmatter, no plugin needed), Dataview queries (edit the ones in dashboard.md
+      before writing new ones), and spaced repetition (40 CCAP cards already tagged #flashcards/ccap, 10 min a day). TUNE:
+      settings worth a pass are hotkeys, default new-note location (should be concepts/ not the vault root), Files and Links
+      (new link format, whether to update links on rename), Appearance, and turning off core plugins you will not use.'
+    captured: 2026-09-05
+    source: built 2026-09-04/05, cloned to the M4 2026-09-05
+    notes: 'The vault lives at ~/Library/CloudStorage/GoogleDrive-.../note-taking/obsidian/vault on the M4 — a subfolder,
+      because the parent is a Hermes skill directory with its own SKILL.md. Run `vault` to update; it is PULL ONLY, so edits
+      made on the M4 do not reach the M1 or Hermes. Say so if you want two-way. The M1 cannot verify any of this: its screen
+      is locked and Obsidian will not run without a window server session. Supersedes the verification half of obsidian-power-use-cases.'
+    gist: The vault is built and cloned to the M4 but nobody has ever looked at it. Confirm the four things that prove it
+      works, then actually learn to drive Obsidian and set it up the way you want.
+    next_step: Open the vault on the M4 and run the four checks below. They take about two minutes and they are the only thing
+      standing between built and verified.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - id: memory-system-map
+    title: Memory system map — act on what it found
+    type: discuss
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Five stores, measured live on the M1 on 2026-09-05: session transcripts 1.7GB, the wiki 570MB, spine 22MB with
+      1,475 observations, Claude Code memory 516KB across 106 files, and the Hermes hot core 24KB across 64 blocks. The architecture
+      is a distillation pipeline where size and read-frequency run in OPPOSITE directions — the biggest store is almost never
+      read, the smallest is read on every call. Where it genuinely compounds: forgetting became safe (spine can retrieve what
+      the hot core drops), a correction given to one agent reaches the other within 4h, provenance survives distillation,
+      and the wiki outlives the machines. FOUR WEAKNESSES it found: (1) three search indexes that do not know about each other
+      — spine embeddings, the wiki FAISS index, and an FTS keyword index inside spine; (2) 926 research files are 46 percent
+      of the vault and participate in nothing; (3) the hot core only ever grows, since rules and corrections are permanent
+      by definition, so no fixed budget survives it; (4) nothing watches the watchers — every silent failure found on 2026-09-05
+      was in a component whose whole job was to notice things.'
+    captured: 2026-09-05
+    source: https://claude.ai/code/artifact/a359d315-8532-45ee-a24a-e43a72bf5e16
+    notes: Artifact is private to Chin unless shared. Weakness (1) overlaps the open work in context-engineering-research
+      and spine-retrieval-bm25-hybrid, which are themselves duplicates of each other — worth resolving all three together.
+      Weakness (3) is the reason the hot-core budget was raised to 26,000 rather than defended; hotcore-retrieval-split addressed
+      the symptom.
+    gist: A measured visual map of the five stores behind Hermes and Claude Code memory. Built from live numbers, and it surfaced
+      four structural weaknesses worth deciding on.
+    next_step: Read the map, then decide which of the four weaknesses is worth work. My pick is the three overlapping search
+      indexes — it is the only one that is pure duplication with no upside.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - id: read-para-method
+    title: 'Read: P.A.R.A. Method (Tiago Forte)'
+    type: read
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Tiago Forte''s P.A.R.A. method for organizing ideas (slide 3 of the @entrepreneur.dose carousel): Projects (goal
+      + deadline) -> Areas (ongoing maintenance) -> Resources (reference material) -> Archives (inactive), driven by the loop
+      Capture -> Organize -> Distill -> Express. Suggested tools: Notion/Obsidian/Evernote for notes, Trello/Asana/Todoist
+      for tasks, Drive/Dropbox for files. Maps directly onto the Second Brain vault structure. Full extraction: _system/pending/read-para-method.md.'
+    captured: 2026-08-24
+    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
+    notes: 'Slide: _system/pending/ig-workflow-slides/slide-3-para.jpg'
+    gist: The P.A.R.A. method for organizing ideas into projects, areas, resources, and archives.
+    next_step: Read the method and sort your current active work into P.A.R.A. categories.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - id: spine-retrieval-bm25-hybrid
+    title: 'Spine retrieval: BM25 hybrid + reranker + contextual chunks'
+    type: build
+    domain: ai/ml
+    priority: p2
+    status: active
+    summary: 'Context engineering research (PASS 1, 2026-08-17) found the spine retrieval gap is the highest-leverage Hermes
+      fix. The embedder semantic bridge (Voyage upgrade) is time-gated; two additive legs ship BEFORE it: BM25/hybrid search
+      alongside vector (free, local) and a reranking step (cross-encoder or cheap model) — combined they are the -67% retrieval
+      failure lever (Anthropic). Contextual chunk enrichment (prepend chunk context before embedding) is the cheapest -35%
+      reduction and survives the embedder swap. Capture only for now; not dispatched.'
+    captured: 2026-08-20
+    source: context-engineering-research (2026-08-17), gaps 1+2 — https://www.anthropic.com/engineering/contextual-retrieval
+    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
+    gist: Add BM25 hybrid search, reranking and contextual chunk enrichment to spine retrieval.
+    next_step: Design the recall@20 A/B test over wiki pages and memory observations.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  archive:
+  - &id001
+    id: hotcore-retrieval-split
+    title: Hot core — retrieve situational rules instead of loading them every call
+    type: build
+    domain: infra
+    priority: p2
+    status: done
+    summary: 'Measured 2026-09-05: MEMORY.md gains ~4,200 bytes/day, the nightly demote removes ~2,450, net ~+1,800/day. It
+      has never been self-sustaining — it climbed to 39,672 bytes on 2026-08-25 and was manually cut by 15,212 the next day.
+      The content is not junk: [R] rules + [C] corrections are ~10,900 bytes, permanent and grow-only, so no fixed budget
+      survives them. Raising the warn threshold to 26,000 (done, commit 09eef8b789) stops the false alarms but does not reduce
+      token cost. The real saving is that a rule like "when the user shares a quiz screenshot, check selection state" does
+      not need to be in every prompt — it needs to arrive when a screenshot arrives.'
+    captured: 2026-09-05
+    source: measured from 44 nightly consolidation reports, 2026-09-05
+    notes: Do NOT start by editing MEMORY.md. This is a change to how memory loads, so it gets a written plan and approval
+      first per the standing decision rule. Related prior work — the 2026-08 pass that moved 15 facts to spine (-1,330 tokens/call)
+      proved the direction; this extends it from facts to situational rules. Watch the [R]-rule guard (heartbeat check hotcore_rules,
+      added 2026-09-05) — any design that rewrites blocks must not drop a tag, which is exactly what the consolidation pass
+      did.
+    gist: MEMORY.md is loaded whole on every Hermes call, but roughly half of it is situational corrections that only matter
+      in specific contexts. Move those behind retrieval so the always-loaded core holds only what applies to every turn.
+    next_step: 'Verified live on the 12:20 gateway. Deferred rules reach the model and an identical prompt went 37,597 to
+      34,549 input tokens; the flag now flips mid-process with no restart. Left open: @when:tool and @when:image blocks stay
+      always-loaded because nothing can deliver them back yet (needs a transform_tool_result hook and pre_llm_call). Separate
+      defect: compose_user_api_content drops the memory block on list-shaped image turns.'
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id017
+    id: memory-ablation-harness
+    title: Memory ablation harness — prove the Spine tiers work
+    type: discuss
+    domain: ai/ml
+    priority: p2
+    status: done
+    summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time,
+      verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass.
+      Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval
+      cron was due Aug 14 2026).'
+    captured: 2026-08-14
+    source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
+    completed: 2026-08-14
+    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped
+      + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries,
+      8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic;
+      (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 /
+      precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated).
+      Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL,
+      semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval
+      benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id056
+    id: memory-audit-review
+    title: Memory Audit — Honcho GO/NO-GO decision
+    type: discuss
+    domain: ai/ml
+    priority: p1
+    status: done
+    summary: Sign up at honcho.dev, get API key, evaluate on default profile for 1 week. RESOLVED Jul 15, 2026 — Honcho decommissioned,
+      migrated to builtin. Decision today - proceed or skip.
+    deadline: 2026-07-13
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
+    completed: 2026-07-13
+    outcome: 'GO 🟢 — Jul 13. Reliability solid (11 days, 0 failures), $0.20 spent of $10 credits (~18mo runway). Keep on cloud,
+      no self-hosting (prove-value-first principle met). wiki-aware-start patched with Honcho dialectic read-in (v1.4.0, Jul
+      8). WIRED: default (main config.yaml, memory_provider + provider) and health-wellness profile. NOT wired: market-intel
+      (originally listed as a target but never wired). Remaining follow-up: wire 2-3 more high-activity profiles (market-intel
+      is the top candidate) for broader coverage.'
+    notes: ~/wiki/_system/memory-audit-2026-07-02.md
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id075
+    id: review-memory-recommendations
+    title: Review memory recommendations against Hermes memory solution
+    type: research
+    domain: ai/ml
+    priority: p1
+    status: done
+    summary: Review complete. Memory stack reference doc built, INDEX.md updated, 2 skills patched. Actionable items executed
+      via subagent. Main gap (packaging) documented for future.
+    captured: '2026-07-03'
+    source: brodyautomates IG carousel - Hermes + Obsidian memory setup
+    delegated_to: The General (#1)
+    completed: 2026-07-04
+    notes: 'Source: ~/wiki/_system/pending/memory-optimization-review.md'
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id094
+    id: subagent-model-verify
+    title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
+    type: build
+    domain: ai/ml
+    priority: p1
+    status: done
+    summary: Config set to deepseek/deepseek-v4-pro, confirmed working after session restart. Subagent test ran successfully
+      on deepseek-v4-pro.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id097
+    id: context-engine-explore
+    title: Memory Audit — Explore context engine plugin
+    type: discuss
+    domain: ai/ml
+    priority: p2
+    status: done
+    summary: Dormant plugin slot exists at plugins/context_engine/. No existing plugin found for cross-channel session context
+      injection. Deferred pending Honcho evaluation.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id095
+    id: supermemory-dedup-cron
+    title: Memory Audit — Periodic Supermemory dedup + TTL cron
+    type: discuss
+    domain: devops
+    priority: p2
+    status: done
+    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
+      entries.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id096
+    id: hw-to-wiki-migration
+    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
+      store now.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id002
+    id: obsidian-power-use-cases
+    title: Obsidian Power Use Cases — Opus 5 vault-tailored research
+    type: research
+    domain: infra
+    priority: p0
+    status: done
+    summary: 'Digest of Opus 5 research (Aug 31 2026): Obsidian power use cases grouped into second brain, thinking/writing,
+      learning, knowledge work, life admin, AI-powered, publishing. 3 P0 actions — Local REST API + MCP (highest leverage,
+      Hermes writes Phase-2 concept notes directly), Bases over entities/, Dataview feedback queries.'
+    captured: 2026-09-02
+    source: https://raw.githubusercontent.com/chintheman/todo/main/obsidian-power-use-cases.md
+    notes: Full digest delivered to PA thread Aug 31 23:53 SGT. Replaces the old learn-obsidian entry (done, archived 2026-08-14)
+      — this is the implementation-phase research. P1 candidates — Smart Connections, Spaced Repetition (#flashcards on concept
+      notes), MOCs per active area. P2 — Tasks plugin, Quartz publishing.
+    gist: Claude Code Opus 5 read the actual ~/wiki vault (1,478 notes, PARA, Bases enabled-unused, zero community plugins)
+      and delivered the 12+ most powerful/life-changing Obsidian use cases + 8 quick-start actions.
+    next_step: Research delivered and implemented. Verification and learning moved to obsidian-verify-learn-tune.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id042
+    id: learn-obsidian
+    title: How to Use Obsidian — Personal Knowledge Management
+    type: research
+    domain: productivity
+    priority: p3
+    status: done
+    summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management.
+      Build a workflow that complements the existing Second Brain wiki.'
+    captured: 2026-07-20
+    source: Personal request — PA intake
+    resolution: blitz-archived via labs 2026-08-14
+    notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
+      plugins. Should integrate with ~/wiki/ workflow where possible.
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id080
+    id: qol-second-brain-apps
+    title: Brainstorm QoL applications around second brain
+    type: discuss
+    domain: creative
+    priority: p2
+    status: done
+    summary: Brainstorm quality-of-life applications and product ideas built around the second brain concept (shared knowledge
+      base that agents read/write to). Think consumer-facing tools, personal productivity apps, or novel use cases that leverage
+      the compounding-knowledge pattern beyond GTM.
+    captured: '2026-07-04'
+    source: 0xsteamboat brainstorm request
+    resolution: blitz-archived via labs 2026-08-14
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  - &id076
+    id: graphify-integration
+    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
+    type: build
+    domain: devops
+    priority: p2
+    status: done
+    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
+      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
+      until we have active coding projects with measurable token burn from re-orientation.
+    captured: '2026-07-04'
+    source: kayvon.ai IG reel — Graphify
+    completed: 2026-07-04
+    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
+      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
+      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
+      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
+      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
+    cluster: Memory & Knowledge System
+    cluster_emoji: 🧠
+    cluster_kind: project
+  count: 6
+  total_count: 18
+  active_count: 6
+  delegated_count: 0
+  done_count: 12
+  p0_count: 1
+  p1_count: 2
+  p2_count: 3
+  p3_count: 0
 - emoji: 🛎️
   name: Agentic Marketing Concierge
   kind: project
@@ -1053,32 +1449,6 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - id: context-engineering-research
-    title: Context engineering research and optimisation
-    type: research
-    domain: ai/ml
-    priority: p0
-    status: active
-    summary: 'Kickoff research PASS 1 done 2026-08-17 (Brave + Exa, Tavily down). Context engineering = smallest set of high-signal
-      tokens per inference (Anthropic). Four levers: write/select/compress/isolate (LangChain). Key evidence: contextual retrieval
-      cuts retrieval failures 49-67%; reranking 50->top-5 beats dumping 50; observation masking >50% cost cut on SWE-bench;
-      lost-in-the-middle + context rot are the core failure modes. Hermes already does progressive disclosure well (skills,
-      deferred tools, wiki, subagents). Full report: _system/pending/context-engineering-research.md.'
-    captured: 2026-08-14
-    source: User request — Hermes context/memory stack
-    notes: 'Directly related to the spine memory retrieval work (Aug 14 2026) — the remaining gap there is the embedder semantic
-      bridge (Voyage upgrade, time-gated). Context engineering research covers the broader question: what to put in context,
-      in what order, at what cost, and how to keep it lean. Folds into the Agent Orchestration workstream alongside memory-ablation-harness.'
-    gist: Context engineering = curate the smallest set of high-signal tokens per step; the spine retrieval gap is the highest-leverage
-      Hermes fix and BM25-hybrid + reranking ship before the time-gated Voyage embedder swap.
-    next_step: 'Deep dive 1: spine retrieval A/B — BM25 hybrid + reranker + contextual chunk enrichment vs current embedder,
-      recall@20 over wiki + memory observations (ships before the Voyage gate). Deep dive 2: compaction prompt audit — what
-      survives Hermes consolidation vs Claude''s preserve-decisions/discard-tool-output guidance. Deep dive 3: context-utilization
-      instrumentation across cron sessions.'
-    researched: 2026-08-17
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
   - id: deepseek-harness-test
     title: DeepSeek Harness v0.1 — test the agent runtime
     type: build
@@ -1149,36 +1519,6 @@ clusters:
     gist: Review the 4 remaining Bot Mode squad candidates after the content squad experiment and pick the next build.
     next_step: After the content squad experiment (bot-mode-team-experiment) proves out, review the remaining candidates —
       market intel, career, ops/triage, dev — and pick the next squad to build.
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: compaction-prompt-tuning
-    title: Compaction prompt audit and tuning
-    type: build
-    domain: ai/ml
-    priority: p1
-    status: active
-    summary: Built + verified. Audited the compaction/consolidation path — the prompts were already tuned (Aug 15 field-proven
-      upgrades) but the winning lean policy was shipped opt-in and the running gateway was on the weak legacy default. Flipped
-      compression.tail_mode to lean (68.3% vs 45.8% recall at 0.30x tokens per scorecard), added an explicit discard-tool-noise
-      rule to the batch + micro summarizer prompts (A/B-verified, no regression, 0 noise carried; digest prompt left untouched
-      — the rule measurably cost digest recall there), and exempted user-corrections from idle decay in spine consolidation.
-      Verification on a real 2-week session slice — anchor index preserves 96.3% of exact identifiers vs 24.4% for bare-LLM
-      summaries; 141 compressor tests + 545 agent tests pass.
-    captured: 2026-08-20
-    source: context-engineering-research (2026-08-17), gap 3 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
-    gist: Cause of resume-degradation was deployment, not prompt content — lean compaction (anchor index + digests + recovery
-      pointers) was shipped opt-in and off. Enabled it, added discard-tool-noise rules where A/B showed they help, exempted
-      corrections from decay. Verified on real data — identifier survival 24.4% to 96.3%.
-    next_step: Restart the gateway (hermes gateway restart) at a convenient moment to activate tail_mode lean — the config
-      flip is in but the running process predates it. Then watch the next few compactions for digest latency (~2min first
-      pass vs ~15s legacy) and resumed-session quality. Optional follow-up from the scorecard — iterate prmerge-class recall
-      (dense multi-PR campaigns, 43.3% ceiling) behind the lean flag.
-    researched: 2026-08-20
-    log:
-    - 2026-08-20 · hermes · Compaction tuning — enabled lean tail mode (was legacy default), added discard-tool-noise rules
-      to batch+micro prompts (A/B-verified), exempted corrections from decay. Anchor-index survival 96.3% vs 24.4% bare-LLM.
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1317,25 +1657,6 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - id: spine-retrieval-bm25-hybrid
-    title: 'Spine retrieval: BM25 hybrid + reranker + contextual chunks'
-    type: build
-    domain: ai/ml
-    priority: p2
-    status: active
-    summary: 'Context engineering research (PASS 1, 2026-08-17) found the spine retrieval gap is the highest-leverage Hermes
-      fix. The embedder semantic bridge (Voyage upgrade) is time-gated; two additive legs ship BEFORE it: BM25/hybrid search
-      alongside vector (free, local) and a reranking step (cross-encoder or cheap model) — combined they are the -67% retrieval
-      failure lever (Anthropic). Contextual chunk enrichment (prepend chunk context before embedding) is the cheapest -35%
-      reduction and survives the embedder swap. Capture only for now; not dispatched.'
-    captured: 2026-08-20
-    source: context-engineering-research (2026-08-17), gaps 1+2 — https://www.anthropic.com/engineering/contextual-retrieval
-    notes: 'Full findings: ~/wiki/_system/pending/context-engineering-research.md'
-    gist: Add BM25 hybrid search, reranking and contextual chunk enrichment to spine retrieval.
-    next_step: Design the recall@20 A/B test over wiki pages and memory observations.
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
   - id: altman-self-prompting-systems
     title: Sam Altman — You don't need to write prompts anymore (38-min talk + guide)
     type: research
@@ -1367,58 +1688,6 @@ clusters:
     captured: 2026-06-30
     source: Instagram — @datasciencebrain
     notes: ~/wiki/_system/pending/self-correcting-agent.md
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id056
-    id: memory-audit-review
-    title: Memory Audit — Honcho GO/NO-GO decision
-    type: discuss
-    domain: ai/ml
-    priority: p1
-    status: done
-    summary: Sign up at honcho.dev, get API key, evaluate on default profile for 1 week. RESOLVED Jul 15, 2026 — Honcho decommissioned,
-      migrated to builtin. Decision today - proceed or skip.
-    deadline: 2026-07-13
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
-    completed: 2026-07-13
-    outcome: 'GO 🟢 — Jul 13. Reliability solid (11 days, 0 failures), $0.20 spent of $10 credits (~18mo runway). Keep on cloud,
-      no self-hosting (prove-value-first principle met). wiki-aware-start patched with Honcho dialectic read-in (v1.4.0, Jul
-      8). WIRED: default (main config.yaml, memory_provider + provider) and health-wellness profile. NOT wired: market-intel
-      (originally listed as a target but never wired). Remaining follow-up: wire 2-3 more high-activity profiles (market-intel
-      is the top candidate) for broader coverage.'
-    notes: ~/wiki/_system/memory-audit-2026-07-02.md
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id094
-    id: subagent-model-verify
-    title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
-    type: build
-    domain: ai/ml
-    priority: p1
-    status: done
-    summary: Config set to deepseek/deepseek-v4-pro, confirmed working after session restart. Subagent test ran successfully
-      on deepseek-v4-pro.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Immediate section
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id097
-    id: context-engine-explore
-    title: Memory Audit — Explore context engine plugin
-    type: discuss
-    domain: ai/ml
-    priority: p2
-    status: done
-    summary: Dormant plugin slot exists at plugins/context_engine/. No existing plugin found for cross-channel session context
-      injection. Deferred pending Honcho evaluation.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1516,23 +1785,6 @@ clusters:
     captured: '2026-07-03'
     source: sdhilip X post + altic.dev/fluid
     notes: 'Source: ~/wiki/_system/pending/fluid-voice-review.md'
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id075
-    id: review-memory-recommendations
-    title: Review memory recommendations against Hermes memory solution
-    type: research
-    domain: ai/ml
-    priority: p1
-    status: done
-    summary: Review complete. Memory stack reference doc built, INDEX.md updated, 2 skills patched. Actionable items executed
-      via subagent. Main gap (packaging) documented for future.
-    captured: '2026-07-03'
-    source: brodyautomates IG carousel - Hermes + Obsidian memory setup
-    delegated_to: The General (#1)
-    completed: 2026-07-04
-    notes: 'Source: ~/wiki/_system/pending/memory-optimization-review.md'
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -1961,41 +2213,14 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id017
-    id: memory-ablation-harness
-    title: Memory ablation harness — prove the Spine tiers work
-    type: discuss
-    domain: ai/ml
-    priority: p2
-    status: done
-    summary: 'Ablation harness for the Hermes Spine memory system: same seeded store, switch one storage tier off at a time,
-      verify the clean diagonal (each tier''s removal breaks only its own test) plus a control question any config must pass.
-      Answers "how do you know your memory is doing anything?" with data. Folds into the spine evaluation framework (eval
-      cron was due Aug 14 2026).'
-    captured: 2026-08-14
-    source: '@datasciencebrain IG post Db9xNeMmJ5g — write policies + ablation harness'
-    completed: 2026-08-14
-    outcome: 'Reviewed by Opus 5 (Aug 14 2026): harness NO-GO for v1 — cheaper diagnostic replaced it. Five fixes shipped
-      + measured: (1) FTS obs-first truncation fixed (recall 0.122 → 0.488 old bench, 4x); (2) bench rewritten (28 queries,
-      8 obs-tier, must_hit/may_hit, snapshot mode, provenance, controls gate); (3) bench_goldrank.py standing diagnostic;
-      (4) _fts5_safe_query stopword removal; (5) search_hybrid candidate pool max(k*3,60). FINAL baseline: recall 0.641 /
-      precision 0.327 / F1 0.433 (5.3x recall vs Aug 8). Remaining gap = embedder semantic bridge (Voyage upgrade, time-gated).
-      Harness deferred to v2. Spec: ~/wiki/_system/pending/memory-ablation-harness-spec.md'
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'Post''s write-policy doctrine maps 1:1 onto the existing architecture: episodic append-only = observations JSONL,
-      semantic upsert = MEMORY.md / memory() replace, procedural versioned = skills changelogs + wiki. Existing retrieval
-      benchmark cron 1844a16e8bd3 covers recall quality but not tier ablation. Source IG: https://www.instagram.com/p/Db9xNeMmJ5g/'
-    cluster: ai/ml
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 14
-  total_count: 45
-  active_count: 14
+  count: 11
+  total_count: 37
+  active_count: 11
   delegated_count: 0
-  done_count: 31
-  p0_count: 4
-  p1_count: 4
-  p2_count: 5
+  done_count: 26
+  p0_count: 3
+  p1_count: 3
+  p2_count: 4
   p3_count: 1
 - emoji: ''
   name: career
@@ -2113,24 +2338,6 @@ clusters:
     notes: 'Slide: _system/pending/ig-workflow-slides/slide-4-flow.jpg'
     gist: A four-condition framework for reaching flow state through care, challenge, and skill.
     next_step: Read the framework and identify which flow condition you are currently missing.
-    cluster: career
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: read-para-method
-    title: 'Read: P.A.R.A. Method (Tiago Forte)'
-    type: read
-    domain: career
-    priority: p2
-    status: active
-    summary: 'Tiago Forte''s P.A.R.A. method for organizing ideas (slide 3 of the @entrepreneur.dose carousel): Projects (goal
-      + deadline) -> Areas (ongoing maintenance) -> Resources (reference material) -> Archives (inactive), driven by the loop
-      Capture -> Organize -> Distill -> Express. Suggested tools: Notion/Obsidian/Evernote for notes, Trello/Asana/Todoist
-      for tasks, Drive/Dropbox for files. Maps directly onto the Second Brain vault structure. Full extraction: _system/pending/read-para-method.md.'
-    captured: 2026-08-24
-    source: '@entrepreneur.dose IG carousel (Aug 23 2026) - https://www.instagram.com/p/DcQxFcTDo5m/'
-    notes: 'Slide: _system/pending/ig-workflow-slides/slide-3-para.jpg'
-    gist: The P.A.R.A. method for organizing ideas into projects, areas, resources, and archives.
-    next_step: Read the method and sort your current active work into P.A.R.A. categories.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -2421,14 +2628,14 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  count: 9
-  total_count: 20
-  active_count: 9
+  count: 8
+  total_count: 19
+  active_count: 8
   delegated_count: 0
   done_count: 11
   p0_count: 0
   p1_count: 3
-  p2_count: 6
+  p2_count: 5
   p3_count: 0
 - emoji: ''
   name: crypto
@@ -2756,42 +2963,6 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id095
-    id: supermemory-dedup-cron
-    title: Memory Audit — Periodic Supermemory dedup + TTL cron
-    type: discuss
-    domain: devops
-    priority: p2
-    status: done
-    summary: Cron 56b38d09a262 deployed. Runs Sundays 4:05am SGT, no-agent script, silently cleans stale/duplicate Supermemory
-      entries.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id076
-    id: graphify-integration
-    title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
-    type: build
-    domain: devops
-    priority: p2
-    status: done
-    summary: Install Graphify (open-source, MIT, YC S26) for codebase knowledge graphs — 10-50x token savings on repos >500
-      files. Deferred because we don't have Claude Code/Codex installed, and OpenCode coverage is unconfirmed. Premature optimization
-      until we have active coding projects with measurable token burn from re-orientation.
-    captured: '2026-07-04'
-    source: kayvon.ai IG reel — Graphify
-    completed: 2026-07-04
-    notes: 'DEFERRED 2026-07-04 — Critical assessment by dev-agent: Handoff assumes Claude Code + Codex as targets. We installed
-      OpenCode (not Claude Code/Codex). OpenCode not listed in Graphify''s supported tools. Mechanism is sound, but we''re
-      optimizing a pipeline that hasn''t been proven costly yet. Revisit after first real project: measure actual token burn
-      from codebase re-orientation, then decide. Original: github.com/safishamsi/graphify (77K stars, MIT, YC S26) Caveat:
-      70x is marketing upper bound. Honest range 10-50x. Skeptic review: blog.stackademic.com/does-graphify-cut-claude-code-costs'
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
   - &id079
     id: developer-agent-codex-claude
     title: Create a developer agent profile enabling both Codex and Claude Code
@@ -3013,10 +3184,10 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   count: 6
-  total_count: 19
+  total_count: 17
   active_count: 6
   delegated_count: 0
-  done_count: 13
+  done_count: 11
   p0_count: 1
   p1_count: 4
   p2_count: 1
@@ -3160,22 +3331,6 @@ clusters:
     source: Instagram carousel (DaK0XC8ilSU) — content inaccessible, flag for review
     resolution: blitz-archived via labs 2026-08-14
     notes: 'Post URL: instagram.com/p/DaK0XC8ilSU Could not extract content — Instagram requires login.'
-    cluster: creative
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id080
-    id: qol-second-brain-apps
-    title: Brainstorm QoL applications around second brain
-    type: discuss
-    domain: creative
-    priority: p2
-    status: done
-    summary: Brainstorm quality-of-life applications and product ideas built around the second brain concept (shared knowledge
-      base that agents read/write to). Think consumer-facing tools, personal productivity apps, or novel use cases that leverage
-      the compounding-knowledge pattern beyond GTM.
-    captured: '2026-07-04'
-    source: 0xsteamboat brainstorm request
-    resolution: blitz-archived via labs 2026-08-14
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
@@ -3352,10 +3507,10 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   count: 3
-  total_count: 16
+  total_count: 15
   active_count: 3
   delegated_count: 0
-  done_count: 13
+  done_count: 12
   p0_count: 0
   p1_count: 3
   p2_count: 0
@@ -3549,21 +3704,6 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id096
-    id: hw-to-wiki-migration
-    title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 9 hardware entries migrated from MEMORY.md to ~/wiki/hardware-reference.md. Stable reference data in the right
-      store now.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: ~/wiki/_system/memory-audit-2026-07-02.md — Tier 2
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
   - &id093
     id: topic-role-audit
     title: P0 — Audit all topic's mapped roles, skills, crons, profiles
@@ -3594,61 +3734,11 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id001
-    id: hotcore-retrieval-split
-    title: Hot core — retrieve situational rules instead of loading them every call
-    type: build
-    domain: infra
-    priority: p2
-    status: blocked
-    summary: 'Measured 2026-09-05: MEMORY.md gains ~4,200 bytes/day, the nightly demote removes ~2,450, net ~+1,800/day. It
-      has never been self-sustaining — it climbed to 39,672 bytes on 2026-08-25 and was manually cut by 15,212 the next day.
-      The content is not junk: [R] rules + [C] corrections are ~10,900 bytes, permanent and grow-only, so no fixed budget
-      survives them. Raising the warn threshold to 26,000 (done, commit 09eef8b789) stops the false alarms but does not reduce
-      token cost. The real saving is that a rule like "when the user shares a quiz screenshot, check selection state" does
-      not need to be in every prompt — it needs to arrive when a screenshot arrives.'
-    captured: 2026-09-05
-    source: measured from 44 nightly consolidation reports, 2026-09-05
-    notes: Do NOT start by editing MEMORY.md. This is a change to how memory loads, so it gets a written plan and approval
-      first per the standing decision rule. Related prior work — the 2026-08 pass that moved 15 facts to spine (-1,330 tokens/call)
-      proved the direction; this extends it from facts to situational rules. Watch the [R]-rule guard (heartbeat check hotcore_rules,
-      added 2026-09-05) — any design that rewrites blocks must not drop a tag, which is exactly what the consolidation pass
-      did.
-    gist: MEMORY.md is loaded whole on every Hermes call, but roughly half of it is situational corrections that only matter
-      in specific contexts. Move those behind retrieval so the always-loaded core holds only what applies to every turn.
-    next_step: Restart the Hermes gateway to load the new code, then confirm the live snapshot drops to ~13,500 bytes. Follow-up
-      — @when:tool and @when:image blocks are still always-loaded because prefetch() only sees the query; wiring transform_tool_result
-      and pre_llm_call would free the rest.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id002
-    id: obsidian-power-use-cases
-    title: Obsidian Power Use Cases — Opus 5 vault-tailored research
-    type: research
-    domain: infra
-    priority: p0
-    status: done
-    summary: 'Digest of Opus 5 research (Aug 31 2026): Obsidian power use cases grouped into second brain, thinking/writing,
-      learning, knowledge work, life admin, AI-powered, publishing. 3 P0 actions — Local REST API + MCP (highest leverage,
-      Hermes writes Phase-2 concept notes directly), Bases over entities/, Dataview feedback queries.'
-    captured: 2026-09-02
-    source: https://raw.githubusercontent.com/chintheman/todo/main/obsidian-power-use-cases.md
-    notes: Full digest delivered to PA thread Aug 31 23:53 SGT. Replaces the old learn-obsidian entry (done, archived 2026-08-14)
-      — this is the implementation-phase research. P1 candidates — Smart Connections, Spaced Repetition (#flashcards on concept
-      notes), MOCs per active area. P2 — Tasks plugin, Quartz publishing.
-    gist: Claude Code Opus 5 read the actual ~/wiki vault (1,478 notes, PARA, Bases enabled-unused, zero community plugins)
-      and delivered the 12+ most powerful/life-changing Obsidian use cases + 8 quick-start actions.
-    next_step: Open Obsidian once to verify — Bases render (concepts 25 rows, entities 31), Dataview dashboard.md queries
-      resolve, then run obsidian-rest-serve.sh up + verify for the tailnet endpoint.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
   count: 2
-  total_count: 8
+  total_count: 5
   active_count: 2
   delegated_count: 0
-  done_count: 6
+  done_count: 3
   p0_count: 1
   p1_count: 1
   p2_count: 0
@@ -4289,28 +4379,11 @@ clusters:
     cluster: productivity
     cluster_emoji: ''
     cluster_kind: domain
-  - &id042
-    id: learn-obsidian
-    title: How to Use Obsidian — Personal Knowledge Management
-    type: research
-    domain: productivity
-    priority: p3
-    status: done
-    summary: 'Learn how to effectively use Obsidian for PKM: note-taking, linking, graph view, plugins, and vault management.
-      Build a workflow that complements the existing Second Brain wiki.'
-    captured: 2026-07-20
-    source: Personal request — PA intake
-    resolution: blitz-archived via labs 2026-08-14
-    notes: Already running Obsidian. Goal is structured learning — core features, templates, daily notes, graph view, community
-      plugins. Should integrate with ~/wiki/ workflow where possible.
-    cluster: productivity
-    cluster_emoji: ''
-    cluster_kind: domain
   count: 0
-  total_count: 2
+  total_count: 1
   active_count: 0
   delegated_count: 0
-  done_count: 2
+  done_count: 1
   p0_count: 0
   p1_count: 0
   p2_count: 0
@@ -4446,6 +4519,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-05 10:30:35 SGT
-total_active: 76
+updated_at: 2026-09-05 14:24:39 SGT
+total_active: 78
 total_done: 100
