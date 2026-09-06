@@ -1427,6 +1427,40 @@ clusters:
   name: ai/ml
   kind: domain
   items:
+  - id: ai-native-sdlc-playbook
+    title: Anthropic AI-Native SDLC playbook — artifact-chain SDLC (intent.md to spec.md to plan.md to code, every stage commits),
+      primary source for agentic build standards
+    type: research
+    domain: ai/ml
+    priority: p0
+    status: active
+    summary: 'Anthropic published The AI-Native SDLC playbook (claude.com/blog/the-ai-native-sdlc-playbook, Aug 21 2026, Louis
+      Claxton, Applied AI team, ~40 min read, ~64K chars, Enterprise AI / Claude Code category). Core moves. (1) The bottleneck
+      moved: agents write code in hours; the approval gates, reviews, handoffs and policies around the code still run at human
+      speed (days), so the SDLC bottleneck left build for the stages on either side. (2) The committed artifact: every stage
+      commits a file the next stage reads — intent.md (the idea) to spec.md (what it must do) to plan.md (how it gets built)
+      to code; the chain doubles as the audit trail via git log, so handoffs carry structure, not transcripts. (3) Governance
+      ships as code: skills encode company policy the agent follows; hooks are scripts that block (pre-tool-use exit 2 = deny,
+      the action never ran). (4) AI reviews every pull request and can never approve its own code — a human keeps the merge
+      button. Reviewed via the vektor.fm reel (52s, Sep 1 2026), which shows a real sdlc-demo repo: intent: password reset
+      by email (be4579a), spec: single-use token 30 min TTL (2b216bc), plan: migration then two routes (98ee1a7), code: request
+      + confirm endpoints (2cf2813).'
+    captured: '2026-09-06'
+    source: Telegram Sep 6 2026 — IG reel Dcwdf8mxMIl (vektor.fm breakdown)
+    notes: 'Post verified live and cross-checked against independent reads (port.io, genai-playbook.com, thekb.eu) that confirm
+      the artifact-chain, hooks/skills/evals governance and human-in-the-loop framing. vektor.fm is a Claude and AI creator
+      brand (IG/TikTok/YouTube); its IN PRODUCTION agent slides (breach to rotate_keys) are the creators illustration, not
+      Anthropic content. Reel asset: /tmp/ig_reel_ai_code.mp4 (1.4MB); 26 frames at /tmp/ig_frames2/. Reel CTA runs the comment-gate
+      funnel (comment SDLC to DM) — third such specimen reviewed Sep 6 2026 (liyinchew-comment-dm-funnel, vibe-coding-ui-tools).
+      This playbook is the direct source material for the deterministic-vs-probabilistic, structural-trust and artifact-handoff
+      rules already in the CCA-F build standards.'
+    gist: 'Anthropic published how they build software with AI: the bottleneck moved off code, every stage ends by committing
+      an artifact, skills vs hooks guardrails, AI reviews PRs but never approves. Claude.com blog, Aug 21 2026, Louis Claxton.'
+    next_step: Read the full playbook (~40 min read) as CCAP-prep primary source and extract plays that map to the CCA-F build-standards
+      doc (~/wiki/_system/pending/cca-f/best-practices-playbook.md).
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: bot-mode-team-experiment
     title: Bot Mode experiment — small team of profiles working together
     type: discuss
@@ -2213,12 +2247,12 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 11
-  total_count: 37
-  active_count: 11
+  count: 12
+  total_count: 38
+  active_count: 12
   delegated_count: 0
   done_count: 26
-  p0_count: 3
+  p0_count: 4
   p1_count: 3
   p2_count: 4
   p3_count: 1
@@ -4636,6 +4670,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-06 14:18:48 SGT
-total_active: 82
+updated_at: 2026-09-06 14:51:29 SGT
+total_active: 83
 total_done: 100
