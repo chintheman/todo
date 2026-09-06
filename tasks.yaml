@@ -2284,6 +2284,32 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
+  - id: liyinchew-comment-dm-funnel
+    title: '@liyinchew.ai — comment-to-DM lead magnet (macroeconomics-from-zero guide), filed as content-funnel case study
+      for Agentic Hotpot'
+    type: research
+    domain: career
+    priority: p2
+    status: active
+    summary: 'Instagram post by @liyinchew.ai (finance educator, .ai-flavored personal brand), Sep 2026: 895 likes, 239 comments.
+      Mechanic: comment keyword MACRO -> automated DM delivers a complete macroeconomics learning map as one guide. Six free
+      resources: MRU (Marginal Revolution University) to build the map, IMF to explain unfamiliar terms, CORE (open-access
+      CORE Econ) to connect the system, MIT OCW to go deeper, FRED (St. Louis Fed) to examine the data, Trading Economics
+      to follow upcoming releases. Guide includes every link, where to start, and what to avoid for a weak foundation. Visual
+      is a teaser carousel cover — the real learning map lives behind the DM gate. Value to Chin: not the resources (beginner
+      level) but the funnel pattern — free guide gated behind a keyword comment (algorithm engagement) plus DM capture (audience
+      list) plus finance-education by AI personal-brand positioning. Same lane as the Agentic Hotpot content play.'
+    captured: '2026-09-05'
+    source: Telegram Sep 6 2026 — PA group (review of IG post Dc0023AmRtL)
+    notes: 'Raw capture committed: raw/2026-09/2026-09-05-pa-link-macro-learning-map.md. Commenters incl. SG handles (adam.yeap,
+      chunyu_khoo). Mechanic is classic comment-to-DM content productization — study the keyword-gate plus DM-capture loop
+      before Agentic Hotpot funnel work.'
+    gist: Reviewed the liyinchew.ai Instagram funnel; filed as a content-funnel and lead-magnet case study for Agentic Hotpot
+      growth.
+    next_step: When Agentic Hotpot growth work resumes, mine the comment-to-DM funnel mechanic from this dossier.
+    cluster: career
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: read-8-hours-work-4
     title: 'Read: 8 Hours of Work in 4 (time-blocking system)'
     type: read
@@ -2628,14 +2654,14 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  count: 8
-  total_count: 19
-  active_count: 8
+  count: 9
+  total_count: 20
+  active_count: 9
   delegated_count: 0
   done_count: 11
   p0_count: 0
   p1_count: 3
-  p2_count: 5
+  p2_count: 6
   p3_count: 0
 - emoji: ''
   name: crypto
@@ -4524,6 +4550,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-06 03:30:30 SGT
-total_active: 78
+updated_at: 2026-09-06 08:34:01 SGT
+total_active: 79
 total_done: 100
