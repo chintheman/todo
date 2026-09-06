@@ -3291,6 +3291,39 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
+  - id: vibe-coding-ui-tools
+    title: Vibe-coding UI tools — 5 websites every vibe coder should know (buildwaleesh IG reel), reviewed list
+    type: research
+    domain: creative
+    priority: p2
+    status: active
+    summary: 'Reel "5 Websites Every Vibe Coder Should Know" by buildwaleesh (IG @buildwaleesh, display aleeshh, Aug 28 2026,
+      1,709 likes, 439 comments, 38s, marked #ad + #manuspartner). CTA: comment AURA for links (comment-to-DM funnel). Five
+      tools. (1) Watermelon UI (ui.watermelon.sh) — open-source React UI platform, "Open Source - Free Forever", 500+ free
+      components, plus blocks, dashboards, templates and landing-page templates; built in the open by WatermelonCorp (github.com/WatermelonCorp/watermelon-platform,
+      bun install); ships llms.txt and openapi.json, so it is agent-discoverable by design. (2) Manus (manus.im) — AI agent
+      demonstrated building a full Ember & Wick candle-brand site including back end in a split-screen workspace (left editor,
+      right live preview); the reel sponsor slot. (3) Realtime Colors (realtimecolors.com) — visualize a color palette and
+      fonts on a real website mockup in real time; toolbar for text/background/primary/secondary/ accent plus fonts; export
+      CSS, SCSS, PNG, zip, QR; Figma plugin 19k+ users; open source (github.com/juxtopposed/realtimecolors). (4) React Spring
+      (react-spring.dev) — physics-based animation library for React; naturally fluid UI motion. (5) Recent Design (recent.design)
+      — curated gallery formerly Godly (godly.website rebranded 2026, abandoned project reignited, broader feed); browse websites,
+      OG images, app screenshots, app icons, Best-of-X roundups for design direction. Video kept at /tmp/ig_reel_vibe_ui.mp4
+      (4.4MB); 19 frames read at /tmp/ig_frames/.'
+    captured: '2026-09-06'
+    source: Telegram Sep 6 2026 — IG reel Dck7FxNT2wX (buildwaleesh)
+    notes: 'All five verified live via web (Sep 6 2026). Creator funnel itself worth studying — keyword comment gate (AURA)
+      into DM link delivery, same mechanic as liyinchew-comment-dm-funnel. Reel is paid/ad content: treat the Manus demo claims
+      as marketing. Godly-to-Recent rebrand confirmed (recent.design/info): legacy godly.website searches still route to the
+      same curated feed. Watermelon UI is the most agent-relevant pick: llms.txt + OpenAPI make it fetchable by Claude Code
+      for copy-paste blocks.'
+    gist: Compiled, reviewed list of 5 UI/dev tools from one IG reel (Watermelon UI, Manus, Realtime Colors, React Spring,
+      Recent Design); stack references for vibe-coding builds.
+    next_step: On the next vibe-coding build (personal page or product landing), pull Watermelon UI blocks and Recent Design
+      references; Realtime Colors for palette decisions.
+    cluster: creative
+    cluster_emoji: ''
+    cluster_kind: domain
   archive:
   - &id091
     id: stress-test-creative-agency
@@ -3532,14 +3565,14 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  count: 3
-  total_count: 15
-  active_count: 3
+  count: 4
+  total_count: 16
+  active_count: 4
   delegated_count: 0
   done_count: 12
   p0_count: 0
   p1_count: 3
-  p2_count: 0
+  p2_count: 1
   p3_count: 0
 - emoji: ''
   name: devtools
@@ -4550,6 +4583,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-06 08:34:01 SGT
-total_active: 79
+updated_at: 2026-09-06 08:50:11 SGT
+total_active: 80
 total_done: 100
