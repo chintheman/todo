@@ -54,6 +54,9 @@ cluster_order:
   name: creative
   kind: domain
 - emoji: ''
+  name: design
+  kind: domain
+- emoji: ''
   name: devtools
   kind: domain
 - emoji: ''
@@ -64,9 +67,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: business/build
-  kind: domain
-- emoji: ''
-  name: design
   kind: domain
 - emoji: ''
   name: integrations
@@ -3575,6 +3575,100 @@ clusters:
   p2_count: 1
   p3_count: 0
 - emoji: ''
+  name: design
+  kind: domain
+  items:
+  - id: read-dashboard-layout
+    title: 'Read: Dashboard Design Process — layout first, charts second (@dhanyindraswara)'
+    type: read
+    domain: design
+    priority: p1
+    status: active
+    summary: 'Core thesis: a dashboard is more than a collection of charts — structure first, visuals second. Five layout
+      ideas, each a wireframe → realized pair: (1) START WITH A WIREFRAME — define reading flow, KPI positions, and filter
+      space before choosing charts (filters top, main chart left, 4 KPI cards right, notes, table bottom); (2) LEAD WITH ONE
+      MAIN INSIGHT — the primary story must be obvious in 3 seconds; hero visual front and center (60% of space), secondary
+      details smaller, whitespace directs attention, key-insight panel with takeaway; (3) BALANCE MORE THAN CHARTS — combine
+      filters, KPI cards, visuals, labels, and a clean grid; bar + line + donut to reveal patterns; (4) ADD CONTEXT, NOT CLUTTER
+      — one note/benchmark/insight card beats another chart (headline metric, target with progress bar, insight takeaway);
+      (5) DESIGN FOR READING FLOW — 5 numbered zones: filters first → KPI snapshot → main insight → supporting details → takeaway/notes.
+      Recurring design system: white canvas, blue accent, KPI-card anatomy (label, big value, green ↑% vs period), numbers
+      reused across slides for continuity. 570 likes, 8 comments, Aug 24 2026.'
+    captured: 2026-08-29
+    source: '@dhanyindraswara IG carousel (Aug 24 2026) - https://www.instagram.com/p/DccsN6WmefV/'
+    notes: 'Raw capture: raw/2026-08/2026-08-28-ig-dhanyindraswara-dashboard-layout-dccsn6wmefv.md | Pending + how-to-apply:
+      _system/pending/read-dashboard-layout.md'
+    gist: A 6-slide Power BI study on dashboard design — build the structure first (wireframe, KPIs, reading flow), then choose
+      the visuals.
+    next_step: Read the 6-slide study, then run the 5-zone reading-flow check (filters → KPI snapshot → main insight → supporting
+      details → takeaway) on one live dashboard — labs page, M1 status, or market-intel brief — before the next visual pass.
+    cluster: design
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-taste-skill
+    title: 'Read: Taste Skill — the anti-slop frontend framework for AI agents (UI/UX training exploration)'
+    type: read
+    domain: design
+    priority: p2
+    status: active
+    summary: 'Open-source SKILL.md files that stop Cursor / Claude Code / Codex / Gemini CLI / v0 / Lovable from shipping
+      generic templated frontends. MIT, 83K★ on GitHub, by Leonxlnx. Framework-agnostic (React/Vue/Svelte), installs via npx
+      skills add, Vercel Agent Skills compatible. Carries 13 skills: 10 code + 3 image-gen (e.g. taste-skill v2 banning AI-slop
+      patterns: warm beige/brass defaults, section-number eyebrows, hero version labels). Deep-researched Sep 1 2026 (session
+      20260901_203931_72e3079f); parked here as UI/UX training exploration — install-vs-review decision stays open as next_step.'
+    captured: '2026-09-06'
+    source: Telegram Sep 6 2026 — reply to Sep 1 Taste Skill research; repo github.com/Leonxlnx/taste-skill
+    notes: Pending-decisions row (raised Sep 1) carries the full context. Pairs with the design-bridge flow for spec-bound
+      production. 83K★ star count from the Sep 1 research source — treat as indicative, not independently re-verified Sep
+      6.
+    gist: Park Leonxlnx's taste-skill (MIT, 83K★, 13 skills) as UI/UX training material; explore the 13 anti-slop skills,
+      then resolve the open install-vs-review fork.
+    next_step: 'Explore the 13 skills (install to a scratch dir via npx skills add https://github.com/Leonxlnx/taste-skill),
+      then resolve the Sep 1 fork: install v2 into Claude Code vs pull SKILL.md into Hermes for review first.'
+    cluster: design
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: read-uiux-design-references
+    title: 'Read: UI/UX design exploration batch — Codrops demos, Readymag, Lenny''s Product Pass, WebGPU page transitions
+      (8 links)'
+    type: read
+    domain: design
+    priority: p2
+    status: active
+    summary: 'UI/UX design-exploration batch, all 8 links verified live Sep 6 2026. (1) Codrops Creative Hub — All Demos index,
+      page 5 (tympanus.net/codrops/hub/all/page/5): ongoing demo well for interaction/layout inspiration. (2) Readymag (readymag.com)
+      — the design tool for outstanding websites (surfaced via Codrops partnership banner, design_powered_by_humans_rose);
+      no-code editorial-style site design. (3-5) ScanEffect effects 1/2/3 (tympanus.net/Development/ScanEffect/effect{1,2,3})
+      — ''Scanning effect with depth map'' demo by Codrops, three effect variants of a scan/glitch text effect. (6) Lenny''s
+      Product Pass (lennysproductpass.com) — Lenny Rachitsky''s product-growth education + premium tools membership ($200/yr
+      annual, $400/yr insider; 500+ post archive, 30k+ Slack, 22-35 premium AI/product tools) — product taste, not visual
+      UI. (7) Sticky Grid Scroll (tympanus.net/Tutorials/StickyGridScroll) — Codrops tutorial: sticky grid scrolling layout.
+      (8) Page Transitions with WebGPU and VanillaJS (crnacura.workers.dev/1) — demo of WebGPU-driven page transitions, vanilla
+      JS.'
+    captured: '2026-09-06'
+    source: Telegram Sep 6 2026 (0xsteamboat UI/UX training intake)
+    notes: Codrops family (1-5, 7, 8) is the interaction-demo core; Readymag is a design-tool eval; Lenny's Product Pass is
+      product/PM education adjacent to UX thinking. All titles fetched live Sep 6 2026. WebGPU transitions demo is a crnacura
+      (Codrops author) worker deployment — treat as demo, may be ephemeral. Readymag link carries a Codrops partnership utm
+      — the site itself is the target.
+    gist: 'UI/UX training exploration batch of 8 verified live links: Codrops demo hub + ScanEffect depth-map effects + Sticky
+      Grid Scroll + WebGPU page transitions, Readymag design tool, Lenny''s Product Pass.'
+    next_step: Work through the 8 links as UI/UX training exploration; extract 2-3 patterns each (interaction technique, layout
+      idea, typography/motion choice) worth reusing on the personal page or product builds.
+    cluster: design
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 3
+  total_count: 3
+  active_count: 3
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 1
+  p2_count: 2
+  p3_count: 0
+- emoji: ''
   name: devtools
   kind: domain
   items:
@@ -4073,47 +4167,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: design
-  kind: domain
-  items:
-  - id: read-dashboard-layout
-    title: 'Read: Dashboard Design Process — layout first, charts second (@dhanyindraswara)'
-    type: read
-    domain: design
-    priority: p1
-    status: active
-    summary: 'Core thesis: a dashboard is more than a collection of charts — structure first, visuals second. Five layout
-      ideas, each a wireframe → realized pair: (1) START WITH A WIREFRAME — define reading flow, KPI positions, and filter
-      space before choosing charts (filters top, main chart left, 4 KPI cards right, notes, table bottom); (2) LEAD WITH ONE
-      MAIN INSIGHT — the primary story must be obvious in 3 seconds; hero visual front and center (60% of space), secondary
-      details smaller, whitespace directs attention, key-insight panel with takeaway; (3) BALANCE MORE THAN CHARTS — combine
-      filters, KPI cards, visuals, labels, and a clean grid; bar + line + donut to reveal patterns; (4) ADD CONTEXT, NOT CLUTTER
-      — one note/benchmark/insight card beats another chart (headline metric, target with progress bar, insight takeaway);
-      (5) DESIGN FOR READING FLOW — 5 numbered zones: filters first → KPI snapshot → main insight → supporting details → takeaway/notes.
-      Recurring design system: white canvas, blue accent, KPI-card anatomy (label, big value, green ↑% vs period), numbers
-      reused across slides for continuity. 570 likes, 8 comments, Aug 24 2026.'
-    captured: 2026-08-29
-    source: '@dhanyindraswara IG carousel (Aug 24 2026) - https://www.instagram.com/p/DccsN6WmefV/'
-    notes: 'Raw capture: raw/2026-08/2026-08-28-ig-dhanyindraswara-dashboard-layout-dccsn6wmefv.md | Pending + how-to-apply:
-      _system/pending/read-dashboard-layout.md'
-    gist: A 6-slide Power BI study on dashboard design — build the structure first (wireframe, KPIs, reading flow), then choose
-      the visuals.
-    next_step: Read the 6-slide study, then run the 5-zone reading-flow check (filters → KPI snapshot → main insight → supporting
-      details → takeaway) on one live dashboard — labs page, M1 status, or market-intel brief — before the next visual pass.
-    cluster: design
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
-  delegated_count: 0
-  done_count: 0
-  p0_count: 0
-  p1_count: 1
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: integrations
   kind: domain
   items:
@@ -4583,6 +4636,6 @@ archive:
 - *id098
 - *id099
 - *id100
-updated_at: 2026-09-06 08:50:11 SGT
-total_active: 80
+updated_at: 2026-09-06 14:18:48 SGT
+total_active: 82
 total_done: 100
