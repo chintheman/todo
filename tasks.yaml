@@ -722,9 +722,15 @@ clusters:
     source: 0xsteamboat request Aug 13 (Lovable use-case brainstorm)
     notes: "Related: toto-strategy skill (EV models), pure-spread branch research (claude/pure-spread-strategy), toto-generator-refine\
       \ (done Jul 2026). Receipt-scan flow could prototype on Lovable first as a UX test. - have a math checker that takes\
-      \ people through the math to verify and\n  validate the strategies logically"
+      \ people through the math to verify and\n  validate the strategies logically\n\n  SCOPE DRAFT 1 (Sep 7 2026): ~/wiki/_system/pending/toto-slip-scan-scope-draft1.md\
+      \ —\n  user confirmed: printed ticket receipt (not marking slip), paid feature w/ 1 free scan/wk/user,\n  post-scan\
+      \ strategy+odds analysis for all numbers, aggregate scan data as future facts source.\n  Future-review notes parked\
+      \ in doc: (F-1) dedicated Strategy page as funnel hub — strategy → buy\n  → scan → track; (F-2) fun-facts overload —\
+      \ show curated ~10% of 980-fact compendium, rotate every\n  2 weeks. Open for Draft 2: Pro price point + free/Pro split,\
+      \ manual-entry scope, ledger retention,\n  Strategy page timing, iSYS/QP-only support."
     gist: A feature backlog for the Toto app covering receipt scanning and in-app strategies.
-    next_step: Prototype the receipt scan flow on Lovable as a UX test.
+    next_step: 'Review scope Draft 1 at ~/wiki/_system/pending/toto-slip-scan-scope-draft1.md (decisions locked: printed receipt
+      only, paid feature w/ 1 free scan/wk, post-scan strategy+odds analysis, facts mining from aggregate scan data).'
     cluster: Toto
     cluster_emoji: 🎱
     cluster_kind: project
@@ -4674,6 +4680,6 @@ archive:
 - *id100
 - *id101
 - *id102
-updated_at: 2026-09-06 16:30:25 SGT
+updated_at: 2026-09-07 13:53:47 SGT
 total_active: 81
 total_done: 102
