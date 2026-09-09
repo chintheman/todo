@@ -4218,24 +4218,33 @@ clusters:
     domain: integrations
     priority: p1
     status: active
-    summary: 'Research complete (Aug 17, Brave/Exa; Tavily down). Telegram: full takeover only via MTProto userbot (Telethon/Pyrogram)
-      — documented permanent bans (n8n case: private bot, appeals rejected, number blocked). Compliant Business bot path improved
-      since capture: Premium gate REMOVED (2025 changelog), webhook-driven (business_connection/business_message), scope =
-      authorized conversations only, 1 bot per account. WhatsApp: Cloud API closed to general-purpose AI since Jan 15 2026
-      (AI Providers prohibited; Meta AI only general bot; business-function bots fine); On-Prem API already DEAD (sunset Oct
-      23 2025, not ''phasing out''); unofficial Baileys/whatsapp-web.js = only full-takeover path, bans when-not-if (2-8wk
-      typical detection, 68% SMBs banned within 12mo, permanent number bans). New cost signal: service messages billable Oct
-      1 2026; AI Provider pricing policy effective Feb 16 2026. Full findings in pending file.'
+    summary: 'Research complete (Aug 17; refresh Sep 9, 2026). Telegram: full takeover only via MTProto userbot (Telethon/Pyrogram)
+      - permanent bans documented (n8n case). Compliant path renamed/upgraded: Business Mode is now Secretary Mode (May 2026,
+      Bot API 10.0): webhook-driven (business_connection/business_message), no Premium required, scope = authorized chats
+      only; open-source MCP bridge reference impl exists (github.com/AndyShaman/telegram-business-bridge). WhatsApp: Cloud
+      API closed to general-purpose AI since Jan 15 2026 EXCEPT EU/EEA - EC interim measures (Jun 9 2026) force Meta to keep
+      third-party AI access free there until the antitrust probe ends; Brazil still metered, ROW still prohibited; business-function
+      bots fine everywhere. Oct 1 2026 service-message rates PUBLISHED Sep 1: utility/auth rates by market + 1,000 free service
+      msgs per number per month; Singapore $0.0160/msg (marketing $0.0732); payment method on file by Sep 30 or service delivery
+      stops. On-Prem API dead (sunset Oct 23 2025). Baileys v7-rc alive (WhiskeySockets 6.7.x stable), bans when-not-if (2-8wk
+      detection, 68% SMBs banned in 12mo); new malware fork MAL-2026-10665 impersonating Baileys.'
     captured: 2026-08-17
     source: PA request Aug 17 2026 — research full-account agent takeover, add P1
     notes: _system/pending/agent-account-takeover-research.md
-    gist: 'Compliant = scoped: Telegram Business bot (free now, no ban risk) + WhatsApp Cloud API as a named business function.
-      Full takeover = MTProto/Baileys on burners — bans are a when-not-if. Never run full-takeover on primary numbers.'
-    next_step: 'Decide per platform: (a) Telegram Business bot on M1 via existing Cloudflare tunnel as the compliant default,
-      vs MTProto on burner accounts for full-takeover; (b) WhatsApp Cloud API framed as a specific business function (support/orders),
-      vs Baileys on a disposable number. Threads worth deep dive: Business-bot webhook integration on M1, Cloud API WABA/template
+    gist: 'Compliant = scoped: Telegram Secretary bot (free, no ban risk) + WhatsApp Cloud API as a named business function.
+      Full takeover = MTProto/Baileys on burners - bans are a when-not-if. Never run full-takeover on primary numbers.'
+    next_step: 'Decision still open per platform: (a) Telegram Secretary bot on M1 via existing Cloudflare tunnel as the compliant
+      default - buildable next week using the telegram-business-bridge MCP pattern (draft + approval, no Premium), vs MTProto
+      on burners for full-takeover; (b) WhatsApp Cloud API framed as a specific business function (support/orders) - needs
+      Meta Business verification (2-5d) + payment method (cliff Sep 30, 2026 for service delivery; rates SG $0.0160 past 1,000
+      free/mo), vs Baileys on a disposable number. Deep-dive threads: Secretary-bot webhook integration on M1, Cloud API WABA/template
       onboarding, burner-account MTProto+Baileys deployment.'
-    researched: 2026-08-17
+    researched: 2026-09-09
+    log:
+    - 2026-09-09 · hermes · Refresh Sep 9 - Oct 1 service rates PUBLISHED Sep 1 (utility/auth-equivalent by market; 1,000
+      free service msgs per number per mo; SG USD0.0160; payment-method cliff Sep 30). EC interim measures (Jun 9) force free
+      third-party AI access in EU/EEA - AI ban now jurisdiction-split. Telegram Business Mode renamed Secretary Mode (May
+      2026, no Premium); MCP bridge reference impl found. Baileys v7-rc alive; new malware fork MAL-2026-10665.
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
@@ -4680,6 +4689,6 @@ archive:
 - *id100
 - *id101
 - *id102
-updated_at: 2026-09-07 13:53:47 SGT
+updated_at: 2026-09-09 20:00:56 SGT
 total_active: 81
 total_done: 102
