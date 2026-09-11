@@ -4250,44 +4250,59 @@ clusters:
     domain: integrations
     priority: p1
     status: active
-    summary: Three compliant-vs-takeover paths per platform, re-verified Sep 11 2026. TELEGRAM. Full takeover only via MTProto
-      userbot (Telethon/Pyrogram) - permanent bans documented, incl. the n8n case where the number was blocked from re-registering.
-      Compliant = Secretary Mode business bot (renamed from Business Mode in May 2026, no Premium, webhook-driven via business_connection/business_message,
-      scope = authorized conversations only, one bot per account). It just got materially better. Bot API 10.3 (Aug 24 2026)
-      adds can_stop/keep_on_stop streaming drafts plus the MessageGenerationStopped update so the owner can interrupt a generated
-      reply, EphemeralMessageParameters for private approval prompts (a BREAKING refactor of receiver_user_id/callback_query_id),
-      rich-message buttons, DisabledButton, force_reply, and the can_send_welcome_messages admin right. WHATSAPP. There are
-      now three compliant-adjacent options, not two. (1) NEW on Sep 4 2026 - WhatsApp consumer third-party AI agents. Android
-      beta 2.26.35.3, Settings then Agents, up to 5 agents per account connected by an API key WhatsApp generates, own-thread-only
-      scope, NOT end-to-end encrypted, no fees, no WABA, no business verification. Cheapest official way to put an agent inside
-      WhatsApp, personal scope only. (2) Cloud API framed as a named business function such as support or orders. General-purpose
-      AI has been prohibited since Jan 15 2026 outside the EEA. A payment method is required by Sep 30 2026 or Meta stops
-      delivering service messages. Each number gets 1000 free service messages per month, then SG 0.0160 USD per message.
-      Meta Business Agent bills per token at 2.00 USD per 1M and is NOT covered by the free 1000; eligibility is checked per
-      number via an is_eligible endpoint with no published country list. (3) Full takeover means Baileys or whatsapp-web.js
-      on a burner only - bans are a when-not-if, 2-8 week typical detection, 68 percent of SMBs banned within 12 months, permanent
-      number bans. Baileys v7 still has NOT reached GA. rc14 (29 Jul 2026) is latest and roughly 6 weeks stale, so pin 6.7.24.
-      Repo is 11k stars with 294 open issues; the libsignal dependency is GPLv3 inside an MIT project; the maintainer bans
-      purely AI-generated contributions. REGULATORY. Meta appealed the EC interim measures to the General Court and the measures
-      stay in force. Turkey's Competition Board imposed interim measures with a 1-month remedy. Brazil's CADE preventive measure
-      was upheld with a R$250k per day fine. Meta pitched a third DMA structure giving rivals free access up to a usage cap
-      then fees. Singapore is unaffected, so the business-function framing still holds.
+    summary: Three compliant-vs-takeover paths per platform, re-verified Sep 11 2026 (daytime §0B + evening §0C). TELEGRAM.
+      Full takeover only via MTProto userbot (Telethon/Pyrogram) - permanent bans documented, incl. the n8n case where the
+      number was blocked from re-registering. Compliant = Secretary Mode business bot (renamed from Business Mode in May 2026,
+      no Premium, webhook-driven via business_connection/business_message, scope = authorized conversations only, one bot
+      per account). Bot API 10.3 (Aug 24 2026) is still the latest - no 10.4 - and adds can_stop/keep_on_stop streaming drafts
+      plus the MessageGenerationStopped update so the owner can interrupt a generated reply, EphemeralMessageParameters for
+      private approval prompts (a BREAKING refactor of receiver_user_id/callback_query_id), rich-message buttons, DisabledButton,
+      force_reply, and can_send_welcome_messages. NEW Sep 6-7 2026 - Telegram is beta-testing SERVERLESS bot hosting - BotFather
+      now has a Serverless section with Get access to Serverless. Telegram would host the bot (no VPS/Docker/HTTPS/webhooks),
+      but stack, limits, storage and pricing are undisclosed and one unverified report claims JavaScript only. It does NOT
+      remove the M1 bridge - the Secretary bot's value is reaching the M1 Hermes runtime, so an M1 webhook receiver is still
+      needed either way. WHATSAPP. Three compliant-adjacent options. (1) Consumer third-party AI agents (Sep 4 2026, Android
+      beta 2.26.35.3) - up to 5 agents per account connected by an API key WhatsApp generates, own-thread-only scope, NOT
+      end-to-end encrypted, no fees, no WABA, no business verification. (2) Cloud API framed as a named business function
+      such as support or orders; general-purpose AI prohibited outside the EEA since Jan 15 2026. Payment method required
+      by Sep 30 2026 or Meta stops delivering service messages. Per number - 1000 free SERVICE messages per month (corrected
+      - the allowance covers service messages only - utility templates inside the open window have NO free allowance and bill
+      from the first message), then SG 0.0160 USD per message. Meta Business Agent bills per token at 2.00 USD per 1M and
+      is NOT covered by the free 1000; eligibility checked per number via is_eligible with no published country list. (3)
+      Full takeover means Baileys or whatsapp-web.js on a burner only - bans are a when-not-if, 2-8 week typical detection,
+      68 percent of SMBs banned within 12 months, permanent number bans. NEW Sep 2026 - Meta now DETECTS unofficial Web clients
+      in the background and warns the account owner in the Linked devices screen (Android beta 2.26.35.1, dismissible but
+      recurring), and is building Restricted Chat (beta 2.26.36.5) which pins chats to the primary phone so they never sync
+      to linked devices - a structural hole in any Baileys takeover that the owner can open with one toggle. Baileys v7 still
+      has NOT reached GA - rc14 (29 Jul 2026) remains latest, repo 11k stars, 294 open issues, 49 open PRs, so pin 6.7.24;
+      the libsignal dependency is GPLv3 inside an MIT project; the maintainer bans purely AI-generated contributions. REGULATORY.
+      Meta appealed the EC interim measures to the General Court and the measures stay in force; Turkey's Competition Board
+      imposed interim measures with a 1-month remedy; Brazil's CADE preventive measure was upheld with a R$250k per day fine.
+      Singapore is unaffected, so the business-function framing still holds.
     captured: 2026-08-17
     source: PA request Aug 17 2026 — research full-account agent takeover, add P1
     notes: _system/pending/agent-account-takeover-research.md
-    gist: 'Compliant = scoped: Telegram Secretary bot (free, no ban risk, now with 10.3 interruptible streaming and private
+    gist: Compliant = scoped - Telegram Secretary bot (free, no ban risk, Bot API 10.3 interruptible streaming and private
       ephemeral approvals) plus WhatsApp either as a named business function via Cloud API or through the new consumer AI-agent
-      API-key path. Full takeover = MTProto/Baileys on burners - bans are a when-not-if, and Baileys v7 still has not shipped.
-      Never run full-takeover on primary numbers.'
+      API-key path. Full takeover = MTProto/Baileys on burners - bans are a when-not-if, Baileys v7 still has not shipped,
+      and Meta now shows the account owner a Linked-devices warning when an unofficial client connects. New this pass - a
+      Telegram Serverless bot-hosting beta in BotFather (undisclosed terms, does not replace the M1 bridge), and a pricing
+      correction - the 1000 free monthly messages cover service messages only, utility templates in-window bill from the first
+      message. Never run full-takeover on primary numbers.
     next_step: Decision still open per platform. Telegram - build the Secretary bot on M1 through the existing Cloudflare
       tunnel, targeting Bot API 10.3 for private ephemeral approval prompts and interruptible streaming, using the telegram-business-bridge
-      MCP pattern (draft plus approval, no Premium). Audit for the 10.3 ephemeral-parameter breaking change first. WhatsApp
-      - it is now a three-way call. (a) If the goal is simply my agent reachable in my WhatsApp, evaluate the consumer AI-agent
-      beta (API key, 5 agents, no fees) and research the agent-side handshake Meta expects before writing any code. (b) If
-      the goal is a business line, use Cloud API as a named business function, which needs Meta Business verification (2-5
-      days) plus a payment method before the Sep 30 2026 cliff. (c) Full takeover stays MTProto/Baileys on burners, pinning
-      @whiskeysockets/baileys 6.7.24. Deep-dive threads - Secretary-bot webhook integration on M1 at API 10.3, the WhatsApp
-      consumer AI-agent protocol, Cloud API WABA and template onboarding, and burner-account MTProto plus Baileys deployment.
+      MCP pattern (draft plus approval, no Premium). Audit for the 10.3 ephemeral-parameter breaking change first. Separately,
+      and at zero cost, apply for the BotFather Serverless beta on a THROWAWAY bot to read the real runtime/limits - do not
+      restructure the M1 plan around it while the stack is undisclosed. WhatsApp - it is a three-way call. (a) If the goal
+      is simply my agent reachable in my WhatsApp, evaluate the consumer AI-agent beta (API key, 5 agents, no fees) and research
+      the agent-side handshake Meta expects before writing any code - it is now the relatively more attractive route as Meta
+      hardens against unofficial clients. (b) If the goal is a business line, use Cloud API as a named business function,
+      which needs Meta Business verification (2-5 days) plus a payment method before the Sep 30 2026 cliff; model costs as
+      1000 free service messages per number per month then SG 0.0160 USD each, with utility templates billable from the first
+      in-window message. (c) Full takeover stays MTProto/Baileys on burners, pinning @whiskeysockets/baileys 6.7.24, and now
+      expect Meta's background unofficial-client detection to surface a Linked-devices warning. Deep-dive threads - Secretary-bot
+      webhook integration on M1 at API 10.3, the Telegram Serverless beta terms, the WhatsApp consumer AI-agent protocol,
+      Cloud API WABA and template onboarding, and burner-account MTProto plus Baileys deployment.
     researched: 2026-09-11
     log:
     - 2026-09-09 · hermes · Refresh Sep 9 - Oct 1 service rates PUBLISHED Sep 1 (utility/auth-equivalent by market; 1,000
@@ -4299,6 +4314,13 @@ clusters:
       Secretary bot interruptible streaming plus ephemeral approval params (breaking refactor). Baileys v7 still has not GA'd,
       rc14 (Jul 29) is latest, so pin 6.7.24; new GPLv3 libsignal flag. Meta appealed the EU measures and they remain in force;
       Turkey and Brazil added measures. Singapore unaffected, and the Sep 30 payment-method cliff is 19 days out.
+    - 2026-09-11 · hermes · Evening re-check Sep 11 - NEW - Telegram beta-testing Serverless bot hosting via BotFather (undisclosed
+      stack/limits/pricing; does not replace the M1 bridge since the Secretary bot must reach the M1 runtime); WhatsApp now
+      detects unofficial Web clients in the background and warns the owner in Linked devices (beta 2.26.35.1), plus Restricted
+      Chat (2.26.36.5) pins chats to the primary phone so linked devices never see them - a structural hole in any Baileys
+      takeover. Correction - the 1000 free monthly messages are SERVICE messages only; utility templates inside the open window
+      bill from the first message. Primary re-reads - Bot API still 10.3, Baileys still rc14 (29 Jul), 294 open issues. Payment-method
+      cliff Sep 30 is 19 days out.
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
@@ -4744,6 +4766,6 @@ archive:
 - *id101
 - *id102
 - *id103
-updated_at: 2026-09-11 16:00:36 SGT
+updated_at: 2026-09-11 18:30:08 SGT
 total_active: 81
 total_done: 103
