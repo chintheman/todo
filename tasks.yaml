@@ -3795,6 +3795,7 @@ clusters:
       is the standing convention (outputs route to the session source group), so a second live channel needs a routing rule,
       not just an adapter. The decision this item owes is path plus number, and whether unattended proactive outbound must
       work, which is the constraint that decides the path.'
+    deadline: '2026-09-18'
     captured: 2026-09-11
     source: 'Telegram Sep 11 2026 - HQ_HermesBoat69 thread Research agent takeover (Chin: explore connecting Hermes to WhatsApp)'
     notes: 'Pending file _system/pending/hermes-whatsapp-integration.md. Adapters in the live install: plugins/platforms/whatsapp/
@@ -4812,6 +4813,6 @@ archive:
 - *id102
 - *id103
 - *id104
-updated_at: 2026-09-11 23:01:30 SGT
+updated_at: 2026-09-11 23:08:44 SGT
 total_active: 81
 total_done: 104
