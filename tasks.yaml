@@ -754,7 +754,7 @@ clusters:
     domain: meta
     priority: p3
     status: active
-    summary: 'entities/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
+    summary: 'projects/diy-luxury-watches.md has confidence: high but sources: []. The page is a project-scope document with
       self-verifiable infra state, but should still cite decision trails. Recommend downgrade to medium until sources are
       added.'
     captured: 2026-07-19
@@ -1810,7 +1810,7 @@ clusters:
     deadline: '2026-07-04'
     captured: '2026-07-03'
     source: 0xsteamboat request + @ohneis652 IG carousel
-    notes: 'Source: ~/wiki/concepts/cq-na-consolidation.md'
+    notes: 'Source: ~/wiki/projects/cq-na-consolidation.md'
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
@@ -4766,6 +4766,6 @@ archive:
 - *id101
 - *id102
 - *id103
-updated_at: 2026-09-11 18:30:08 SGT
+updated_at: 2026-09-11 20:30:43 SGT
 total_active: 81
 total_done: 103
