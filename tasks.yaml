@@ -51,13 +51,13 @@ cluster_order:
   name: devops
   kind: domain
 - emoji: ''
+  name: infra
+  kind: domain
+- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
   name: design
-  kind: domain
-- emoji: ''
-  name: infra
   kind: domain
 - emoji: ''
   name: devtools
@@ -67,6 +67,9 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: business/build
+  kind: domain
+- emoji: ''
+  name: ops
   kind: domain
 - emoji: ''
   name: product
@@ -3293,6 +3296,185 @@ clusters:
   p2_count: 1
   p3_count: 0
 - emoji: ''
+  name: infra
+  kind: domain
+  items:
+  - id: box-company-brain
+    title: Box company brain — governed content layer for Hermes Agent
+    type: build
+    domain: infra
+    priority: p0
+    status: active
+    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
+      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
+      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
+      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
+      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
+      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
+      (Aug 29). User marked P0 to try the integration.'
+    captured: 2026-08-29
+    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
+    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
+      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
+    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
+    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: hermes-whatsapp-integration
+    title: Connect Hermes to WhatsApp — integration paths and use cases
+    type: research
+    domain: infra
+    priority: p1
+    status: active
+    summary: 'Two strands. CONNECT - both Hermes WhatsApp adapters already ship in the live install (verified Sep 11 2026
+      on the M1: hermes whatsapp and hermes whatsapp-cloud both present in the CLI, Node v22.22.3 and npm 10.9.8 installed,
+      gateway supervised by launchd). Nothing is configured yet: both WHATSAPP_* lines in ~/.hermes/.env are still commented
+      out, while config.yaml already registers the hermes-whatsapp toolset. BRIDGE PATH (hermes whatsapp) - Baileys WhatsApp
+      Web bridge, QR pair as a Linked Device, modes bot or self-chat, session persisted under ~/.hermes/platforms/whatsapp/session
+      so restarts do not need a re-scan. Semantics match Telegram: no 24h window, no templates, no per-message billing, so
+      cron and proactive pushes deliver as ordinary messages and voice notes work both ways. The cost is ToS: it is an unofficial
+      Web client and the ban risk lands on whatever number is linked, so a dedicated number is the documented default. Meta
+      now detects unofficial Web clients in the background and warns the account owner in Linked devices, and is building
+      Restricted Chat, which pins chats to the primary phone so linked devices never see them. CLOUD PATH (hermes whatsapp-cloud)
+      - official Meta Cloud API wizard asking for Phone Number ID, an EAA access token and the App Secret (needed for webhook
+      signature verification, else inbound is refused). Needs a Meta Business account, a business number not already on personal
+      WhatsApp, and a public HTTPS webhook to port 8090 via cloudflared. No ban risk, but free-form replies only inside the
+      24h service window with pre-approved templates beyond it, and general-purpose AI is prohibited outside the EEA since
+      Jan 15 2026 (Singapore included) while the EU is court-forced open by the interim measures. SG pricing: 1000 free service
+      messages per number per month, then USD 0.0160 each, with a payment method required by Sep 30 2026. USE CASES - alert
+      and cron delivery to the phone, voice-note conversations, client-facing reach where WhatsApp is the real channel (concierge
+      and Glenn), group participation, and a mobile command surface on the same runtime and memory. Tension to resolve: Telegram
+      is the standing convention (outputs route to the session source group), so a second live channel needs a routing rule,
+      not just an adapter. The decision this item owes is path plus number, and whether unattended proactive outbound must
+      work, which is the constraint that decides the path.'
+    deadline: '2026-09-18'
+    captured: 2026-09-11
+    source: 'Telegram Sep 11 2026 - HQ_HermesBoat69 thread Research agent takeover (Chin: explore connecting Hermes to WhatsApp)'
+    notes: 'Pending file _system/pending/hermes-whatsapp-integration.md. Adapters in the live install: plugins/platforms/whatsapp/
+      (Baileys bridge adapter, 966 lines) and hermes_cli/setup_whatsapp_cloud.py (Cloud wizard, 379 lines). Docs: website/docs/user-guide/messaging/whatsapp.md
+      and whatsapp-cloud.md. Continues the WhatsApp strand of the closed agent-account-takeover-research (three-way call:
+      consumer AI-agent beta by API key, Cloud API as a named business function, full takeover on burners). Related open items:
+      openwa-eval, concierge-reach-whatsapp, zo-heyy-integration.'
+    gist: 'Hermes can run on WhatsApp two ways: an unofficial QR-linked bridge, or the official Meta business API on a verified
+      business number.'
+    next_step: Decide between the QR bridge on a second number and the official Meta business API, then wire the winner.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-12-retention-script-for-system-951-files
+    title: Retention script for _system/ — 951 files governed by nothing
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: '657 files in _system/learnings/ plus context-digests/ and tmp/, growing 3x daily, indexed by no script and graded
+      by no lint rule. _system/README.md documents a retention column that nothing enforces. Same failure shape as the 69
+      lost digests, one directory over at nine times the scale: anything durable landing there is invisible forever.'
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: find ~/wiki/_system -name ''*.md'' | wc -l = 951; BRAIN.md section 1 names 2 of 19 subdirectories'
+    next_step: 'Write the retention script in DRY-RUN ONLY mode: print what it would delete from learnings/, context-digests/
+      and tmp/ with counts, byte totals and oldest/newest mtime. Run it read-only for two weeks before it deletes anything.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: profile-bot-fleet
+    title: Turn profile fleet into specialist bots — Bot Mode rollout
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
+      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
+      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
+      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
+      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
+    captured: 2026-08-16
+    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
+    notes: _system/pending/profile-bot-fleet.md
+    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
+    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-12-decide-whether-hermes-skills-gets-a
+    title: Decide whether ~/.hermes/skills gets a remote
+    type: decision
+    domain: infra
+    priority: p2
+    status: active
+    summary: The skills repo has no remote, so 1,466 skill files exist only on this Mac. Nightly bundles (bundle-repos.sh,
+      05:20) survive a bad rebase or rm -rf but not losing the machine. Publishing it means publishing 59 files dirty since
+      before 2026-09-11 plus a repo that leaked 5 credentials in August 2026.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: git -C ~/.hermes/skills remote -v returns empty; 59 dirty files'
+    next_step: 'Review the 59 dirty files in ~/.hermes/skills (git status) and decide: private remote, or accept the nightly
+      bundles as sufficient and close this.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id018
+    id: project-idea-capture-system
+    title: Project-level idea capture system — random projects/discussions storage
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
+      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
+      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
+    captured: 2026-08-14
+    source: User request Aug 14 2026 (during PAL session)
+    completed: 2026-08-14
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
+      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id097
+    id: topic-role-audit
+    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
+    type: discuss
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
+      pass. No discrepancies found.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: Forum migration — HermesBoat69 12 topics
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id087
+    id: index-md-folder-optimization
+    title: Implement INDEX.md folder optimization for Hermes wiki
+    type: build
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
+    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 5
+  total_count: 8
+  active_count: 5
+  delegated_count: 0
+  done_count: 3
+  p0_count: 1
+  p1_count: 3
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: creative
   kind: domain
   items:
@@ -3743,151 +3925,6 @@ clusters:
   p2_count: 2
   p3_count: 0
 - emoji: ''
-  name: infra
-  kind: domain
-  items:
-  - id: box-company-brain
-    title: Box company brain — governed content layer for Hermes Agent
-    type: build
-    domain: infra
-    priority: p0
-    status: active
-    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
-      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
-      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
-      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
-      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
-      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
-      (Aug 29). User marked P0 to try the integration.'
-    captured: 2026-08-29
-    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
-    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
-      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
-    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
-    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: hermes-whatsapp-integration
-    title: Connect Hermes to WhatsApp — integration paths and use cases
-    type: research
-    domain: infra
-    priority: p1
-    status: active
-    summary: 'Two strands. CONNECT - both Hermes WhatsApp adapters already ship in the live install (verified Sep 11 2026
-      on the M1: hermes whatsapp and hermes whatsapp-cloud both present in the CLI, Node v22.22.3 and npm 10.9.8 installed,
-      gateway supervised by launchd). Nothing is configured yet: both WHATSAPP_* lines in ~/.hermes/.env are still commented
-      out, while config.yaml already registers the hermes-whatsapp toolset. BRIDGE PATH (hermes whatsapp) - Baileys WhatsApp
-      Web bridge, QR pair as a Linked Device, modes bot or self-chat, session persisted under ~/.hermes/platforms/whatsapp/session
-      so restarts do not need a re-scan. Semantics match Telegram: no 24h window, no templates, no per-message billing, so
-      cron and proactive pushes deliver as ordinary messages and voice notes work both ways. The cost is ToS: it is an unofficial
-      Web client and the ban risk lands on whatever number is linked, so a dedicated number is the documented default. Meta
-      now detects unofficial Web clients in the background and warns the account owner in Linked devices, and is building
-      Restricted Chat, which pins chats to the primary phone so linked devices never see them. CLOUD PATH (hermes whatsapp-cloud)
-      - official Meta Cloud API wizard asking for Phone Number ID, an EAA access token and the App Secret (needed for webhook
-      signature verification, else inbound is refused). Needs a Meta Business account, a business number not already on personal
-      WhatsApp, and a public HTTPS webhook to port 8090 via cloudflared. No ban risk, but free-form replies only inside the
-      24h service window with pre-approved templates beyond it, and general-purpose AI is prohibited outside the EEA since
-      Jan 15 2026 (Singapore included) while the EU is court-forced open by the interim measures. SG pricing: 1000 free service
-      messages per number per month, then USD 0.0160 each, with a payment method required by Sep 30 2026. USE CASES - alert
-      and cron delivery to the phone, voice-note conversations, client-facing reach where WhatsApp is the real channel (concierge
-      and Glenn), group participation, and a mobile command surface on the same runtime and memory. Tension to resolve: Telegram
-      is the standing convention (outputs route to the session source group), so a second live channel needs a routing rule,
-      not just an adapter. The decision this item owes is path plus number, and whether unattended proactive outbound must
-      work, which is the constraint that decides the path.'
-    deadline: '2026-09-18'
-    captured: 2026-09-11
-    source: 'Telegram Sep 11 2026 - HQ_HermesBoat69 thread Research agent takeover (Chin: explore connecting Hermes to WhatsApp)'
-    notes: 'Pending file _system/pending/hermes-whatsapp-integration.md. Adapters in the live install: plugins/platforms/whatsapp/
-      (Baileys bridge adapter, 966 lines) and hermes_cli/setup_whatsapp_cloud.py (Cloud wizard, 379 lines). Docs: website/docs/user-guide/messaging/whatsapp.md
-      and whatsapp-cloud.md. Continues the WhatsApp strand of the closed agent-account-takeover-research (three-way call:
-      consumer AI-agent beta by API key, Cloud API as a named business function, full takeover on burners). Related open items:
-      openwa-eval, concierge-reach-whatsapp, zo-heyy-integration.'
-    gist: 'Hermes can run on WhatsApp two ways: an unofficial QR-linked bridge, or the official Meta business API on a verified
-      business number.'
-    next_step: Decide between the QR bridge on a second number and the official Meta business API, then wire the winner.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: profile-bot-fleet
-    title: Turn profile fleet into specialist bots — Bot Mode rollout
-    type: build
-    domain: infra
-    priority: p1
-    status: active
-    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
-      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
-      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
-      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
-      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
-    captured: 2026-08-16
-    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
-    notes: _system/pending/profile-bot-fleet.md
-    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
-    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id018
-    id: project-idea-capture-system
-    title: Project-level idea capture system — random projects/discussions storage
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
-      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
-      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
-    captured: 2026-08-14
-    source: User request Aug 14 2026 (during PAL session)
-    completed: 2026-08-14
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
-      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id097
-    id: topic-role-audit
-    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
-    type: discuss
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
-      pass. No discrepancies found.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: Forum migration — HermesBoat69 12 topics
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id087
-    id: index-md-folder-optimization
-    title: Implement INDEX.md folder optimization for Hermes wiki
-    type: build
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
-    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 3
-  total_count: 6
-  active_count: 3
-  delegated_count: 0
-  done_count: 3
-  p0_count: 1
-  p1_count: 2
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: devtools
   kind: domain
   items:
@@ -4277,6 +4314,37 @@ clusters:
   active_count: 1
   delegated_count: 0
   done_count: 1
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: ops
+  kind: domain
+  items:
+  - id: 2026-09-12-verify-the-vault-enforcement-stack-on
+    title: Verify the vault enforcement stack on its first unattended runs
+    type: fix
+    domain: ops
+    priority: p1
+    status: active
+    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
+      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
+    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
+      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
+      rules 18 and 19.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
   p0_count: 0
   p1_count: 1
   p2_count: 0
@@ -4813,6 +4881,6 @@ archive:
 - *id102
 - *id103
 - *id104
-updated_at: 2026-09-11 23:08:44 SGT
-total_active: 81
+updated_at: 2026-09-12 06:30:16 SGT
+total_active: 84
 total_done: 104
