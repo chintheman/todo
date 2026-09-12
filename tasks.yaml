@@ -484,7 +484,7 @@ clusters:
     type: discuss
     domain: gtm
     priority: p0
-    status: active
+    status: archived
     summary: 'The Marketing Concierge bot (@testingsteambot) is a standalone python-telegram-bot polling process on the M1. Hermes integration today is a single every-3m watchdog cron (635e409d4024) that restarts it. Discussion mapped how Hermes bot mode (gateway) could apply. Route A (recommended): keep standalone, bolt a Hermes ops ring around it — campaign end-date alerts, weekly portfolio digest, local data backup. Zero risk to a live tool Glenn depends on. Route B: rebuild the concierge as a Hermes profile (second gateway bot token + skills encoding the 12 formatting rules, KB, data layer) — gains native memory, cron, voice, delegation, multi-platform, but rewrites a live tool. Verdict on record: Route A delivers ~80% of the value at ~zero risk. Gaps the concierge lacks that bot mode provides: scheduler (no cron), cross-session memory (flat JSON per chat), multi-platform (Telegram-only), research depth (URL scraping only).'
     captured: 2026-08-18
     source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
