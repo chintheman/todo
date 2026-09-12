@@ -1,4 +1,14 @@
 cluster_order:
+- emoji: 🎙️
+  name: Perpetual Voice Notes
+  kind: project
+  prominent: true
+  accent: '#B4532A'
+- emoji: 🧬
+  name: ODEV — Claude Code personality type
+  kind: project
+  prominent: true
+  accent: '#5B4B8A'
 - emoji: 🧠
   name: Memory & Knowledge System
   kind: project
@@ -72,10 +82,10 @@ cluster_order:
   name: meta
   kind: domain
 - emoji: ''
-  name: product
+  name: business/build
   kind: domain
 - emoji: ''
-  name: business/build
+  name: product
   kind: domain
 - emoji: ''
   name: tooling
@@ -108,6 +118,105 @@ cluster_order:
   name: strategy
   kind: domain
 clusters:
+- emoji: 🎙️
+  name: Perpetual Voice Notes
+  kind: project
+  items:
+  - id: perpetual-voice-notes
+    title: Perpetual Voice Notes — always-on life recorder (iPhone → M1 → life.md)
+    type: build
+    domain: product
+    priority: p0
+    status: active
+    summary: 'Turn browser-use/life-recorder (MIT, commit 205617c) from a launch-day demo into a system that reliably captures
+      a life and hands it to his agents. Verified baseline: the pipeline genuinely works — 10/10 receiver tests pass, the
+      end-to-end path (certificate-pinned HTTPS upload → durable SHA-256 receipt → local Whisper → life.md → idempotent retry
+      → audio deleted only after a non-empty transcript) ran in 4.23s for an 11s clip, both iOS targets build on Xcode 26.6.
+      Five defects were reproduced, not theorised (D1-D5); the worst silently deletes audio on an empty transcript. Verdict
+      of the review: the architecture is better than the product — fix and extend, do not replace. Hardware topology is fixed
+      by consequence: iPhone 16 Plus is the sensor, the M1 (always-on, where Hermes and Claude Code live) is the primary ingest/transcription/agent-context
+      host, the M4 is an opportunistic second node. No cloud on the critical path; iCloud/Google Drive are export sinks, never
+      dependencies. Capture policy was the real design work: no content gate (a false negative loses speech permanently) —
+      capture is continuous and the user is the authority via a manual pause; VAD survives only to decide whether a minute
+      goes to Whisper, never whether it is kept; transit mode is advisory (fused motion + speed) with the latched user state
+      as authority; keyword omit/include was rejected as a capture control and parked as review/quarantine; a forget-window
+      plus `life purge` on the Mac is the mechanism that needs no detection. Power telemetry (battery, thermal, low-power
+      on every heartbeat) is a product requirement, not a one-off measurement.'
+    captured: '2026-09-13'
+    source: Claude Code session 2026-09-12/13 (M1 - Perpetual Voice Notes) · X post by Magnus Müller (browser-use), 2026-09-11
+      · full doc set at ~/wiki/_system/pending/life-recorder/ (7 files)
+    notes: 'Docs (all in ~/wiki/_system/pending/life-recorder/): 00-verified-state.md (measured baseline), 01-context-and-decisions.md
+      (the reasoning trail, corrections logged), A-market-teardown.md (competitors → copy/beat/avoid requirements C1-C9 /
+      B1-B10 / A1-A7), B-engineering-plan.md (fix detail), C-productization.md (install, legal, money), life-recorder-product-plan.md
+      (readable master), PLAN.md (executable task ledger for Claude Code). Working agreement from PLAN.md: one task per commit,
+      every acceptance test must run, never regress B §9, and stop-and-say-so if a task''s premise turns out false. Upstream:
+      github.com/browser-use/life-recorder; review clone at /Users/0xsteamboat/tmp/life-recorder (do not build in it).'
+    gist: 'An always-on voice recorder for his own life: the iPhone captures continuously, the M1 ingests and transcribes
+      locally, and everything lands in one searchable transcript his agents can read.'
+    next_step: 'Follow up the Claude Code session titled ''M1 - Perpetual Voice Notes'' — the plan is written and waiting
+      on his read: settle the open calls, then approve it before execution starts.'
+    session: b35a24e9-af1f-4fe7-b03f-a83fb658f0e2
+    cluster: Perpetual Voice Notes
+    cluster_emoji: 🎙️
+    cluster_kind: project
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 1
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+  prominent: true
+  accent: '#B4532A'
+- emoji: 🧬
+  name: ODEV — Claude Code personality type
+  kind: project
+  items:
+  - id: odev-claude-code-type
+    title: 'ODEV: Claude Code personality type'
+    type: build
+    domain: product
+    priority: p0
+    status: active
+    summary: 'Came out of running /insights during the harness upgrade. The report scored four measured axes from real session
+      data (Operate vs Author 89 percent, Delegate 78, Enforce 85, Verify 72) and produced the type ODEV, The Flight Director.
+      The idea is to turn that into a product other people can run on their own transcripts: a result page in the shape of
+      a personality test, backed by real usage data rather than self-report. Two-tier output. The user runs it and gets the
+      full insights, the whole diagnostic including friction, blind spots and growth edges, which is the private version for
+      them. On top of that they can generate a snapshot of just the profile and the trait descriptions, sized and styled to
+      be shareable on social. The full report is the value, the snapshot is the distribution. To brainstorm together, in this
+      order. First, what the traits actually are: derive them from how /insights already generates its information, since
+      that is the only part with real data behind it, and work out which of its signals are stable enough to be axes for a
+      general audience rather than for one heavy operator. Second, the naming: the raw signals are engineering terms and nobody
+      shares a card that says Operate vs Author 89 percent. Come up with marketing friendly names for the traits and the resulting
+      types, the way a personality test does, without letting the rename drift away from what was measured. Other open questions:
+      whether it runs locally or uploads transcripts, and the privacy story either way.'
+    captured: '2026-09-13'
+    source: Claude Code session, 2026-09-13, harness upgrade Phase 0
+    notes: 'Prototype output for one user: https://claude.ai/code/artifact/2b65a03e-032d-47b4-81ff-0ad058d8a96d'
+    gist: A fun public website that reads someone's Claude Code session history, returns a four-letter type, and gives them
+      a shareable card of it.
+    next_step: Sit down together and work out the trait set, starting from what /insights already measures, then rename them
+      for a general audience.
+    researched: 2026-09-13
+    cluster: ODEV — Claude Code personality type
+    cluster_emoji: 🧬
+    cluster_kind: project
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 1
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+  prominent: true
+  accent: '#5B4B8A'
 - emoji: 🧠
   name: Memory & Knowledge System
   kind: project
@@ -4409,71 +4518,6 @@ clusters:
   p2_count: 0
   p3_count: 2
 - emoji: ''
-  name: product
-  kind: domain
-  items:
-  - id: odev-claude-code-type
-    title: 'ODEV: Claude Code personality type'
-    type: build
-    domain: product
-    priority: p0
-    status: active
-    summary: 'Came out of running /insights during the harness upgrade. The report scored four measured axes from real session
-      data (Operate vs Author 89 percent, Delegate 78, Enforce 85, Verify 72) and produced the type ODEV, The Flight Director.
-      The idea is to turn that into a product other people can run on their own transcripts: a result page in the shape of
-      a personality test, backed by real usage data rather than self-report. Two-tier output. The user runs it and gets the
-      full insights, the whole diagnostic including friction, blind spots and growth edges, which is the private version for
-      them. On top of that they can generate a snapshot of just the profile and the trait descriptions, sized and styled to
-      be shareable on social. The full report is the value, the snapshot is the distribution. To brainstorm together, in this
-      order. First, what the traits actually are: derive them from how /insights already generates its information, since
-      that is the only part with real data behind it, and work out which of its signals are stable enough to be axes for a
-      general audience rather than for one heavy operator. Second, the naming: the raw signals are engineering terms and nobody
-      shares a card that says Operate vs Author 89 percent. Come up with marketing friendly names for the traits and the resulting
-      types, the way a personality test does, without letting the rename drift away from what was measured. Other open questions:
-      whether it runs locally or uploads transcripts, and the privacy story either way.'
-    captured: '2026-09-13'
-    source: Claude Code session, 2026-09-13, harness upgrade Phase 0
-    notes: 'Prototype output for one user: https://claude.ai/code/artifact/2b65a03e-032d-47b4-81ff-0ad058d8a96d'
-    gist: A fun public website that reads someone's Claude Code session history, returns a four-letter type, and gives them
-      a shareable card of it.
-    next_step: Sit down together and work out the trait set, starting from what /insights already measures, then rename them
-      for a general audience.
-    researched: 2026-09-13
-    cluster: product
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: little-b-browser-extension
-    title: Little Bitch browser extension — X profile badging product
-    type: build
-    domain: product
-    priority: p2
-    status: active
-    summary: 'Chrome extension (MV3) that badges Twitter/X profiles as Little Bitch (escalating shame tiers) or Not a Bitch
-      (sarcastic praise tiers). Weighted algorithm scores profiles 0-100 from public data (follower ratio, bio keyword density,
-      account age, post frequency, verified status, engagement). Viral loop: nominate +2 / immunity -2, badge-as-marketing.
-      MVP v1.0.0 built by Hermes Jun 19 2026, Zo pushed to github.com/chintheman/little-b (public) Jul 4 2026 with LOGIC-INTENT-RATIONALE.md.
-      Full context in _system/pending/little-b-browser-extension.md.'
-    captured: 2026-08-15
-    source: PA group Aug 15 2026 — historical project re-opened as product idea
-    notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
-      Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
-      Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
-    gist: A Chrome extension that badges Twitter profiles with escalating shame or praise tiers.
-    next_step: Fix the MutationObserver CPU throttle, the known open bug.
-    cluster: product
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 2
-  total_count: 2
-  active_count: 2
-  delegated_count: 0
-  done_count: 0
-  p0_count: 1
-  p1_count: 0
-  p2_count: 1
-  p3_count: 0
-- emoji: ''
   name: business/build
   kind: domain
   items:
@@ -4540,6 +4584,41 @@ clusters:
   p0_count: 0
   p1_count: 1
   p2_count: 0
+  p3_count: 0
+- emoji: ''
+  name: product
+  kind: domain
+  items:
+  - id: little-b-browser-extension
+    title: Little Bitch browser extension — X profile badging product
+    type: build
+    domain: product
+    priority: p2
+    status: active
+    summary: 'Chrome extension (MV3) that badges Twitter/X profiles as Little Bitch (escalating shame tiers) or Not a Bitch
+      (sarcastic praise tiers). Weighted algorithm scores profiles 0-100 from public data (follower ratio, bio keyword density,
+      account age, post frequency, verified status, engagement). Viral loop: nominate +2 / immunity -2, badge-as-marketing.
+      MVP v1.0.0 built by Hermes Jun 19 2026, Zo pushed to github.com/chintheman/little-b (public) Jul 4 2026 with LOGIC-INTENT-RATIONALE.md.
+      Full context in _system/pending/little-b-browser-extension.md.'
+    captured: 2026-08-15
+    source: PA group Aug 15 2026 — historical project re-opened as product idea
+    notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
+      Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
+      Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
+    gist: A Chrome extension that badges Twitter profiles with escalating shame or praise tiers.
+    next_step: Fix the MutationObserver CPU throttle, the known open bug.
+    cluster: product
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
   p3_count: 0
 - emoji: ''
   name: tooling
@@ -5118,6 +5197,6 @@ archive:
 - *id112
 - *id113
 - *id114
-updated_at: 2026-09-13 00:36:41 SGT
-total_active: 81
+updated_at: 2026-09-13 00:59:01 SGT
+total_active: 82
 total_done: 114
