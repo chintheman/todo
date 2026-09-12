@@ -1727,7 +1727,7 @@ clusters:
     type: research
     domain: career
     priority: p1
-    status: active
+    status: archived
     summary: 'Core insight: nobody buys "your Hermes setup" — enterprises buy de-risking and outcomes. Three proven capabilities to sell: (1) institutional memory that works (hermes-second-brain + spine-memory: governed writes, provenance, injection defense — enterprise KM that doesn''t rot), (2) AI ops that don''t break weekly (cron quality gates, watchdog patterns, 100+ battle-tested skills), (3) the trust/audit layer (agent-security-audit CLI — security is how consultants get in the door). Five ranked paths: (1) Agent-Ops Consulting $15-40K/engagement ~2wks, (2) Productised Open Source "Agentic Second Brain Enterprise Pack" $5-15K license ~1mo, (3) Vertical agent products $500-2K/mo per client ~1-2mo, (4) Team enablement workshops $3-8K ~1wk, (5) Anthropic partner track deal-based 3-6mo. Funnel: free/cheap audit → implementation retainer → playbook licensing. Career tie-in: every deployment is a case study = interview ammo for OpenAI/ElevenLabs PM/CS — productise to prove, not replace the career. Recommendation on record: audit-led consulting (#1). Deep dive deferred until after the CCA-F exam (Chin, Aug 17 2026).'
     captured: 2026-08-17
     source: Session Aug 16 2026 — "How can I productise my hermes setup and knowledge to help enterprises?"
