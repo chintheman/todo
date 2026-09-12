@@ -2432,7 +2432,7 @@ clusters:
     type: research
     domain: creative
     priority: p1
-    status: active
+    status: archived
     summary: 'World''s first open-source agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turns Claude Code / Cursor / Copilot / Codex into a full video production studio. YAML pipeline manifests, FFmpeg integration, Python orchestration + NodeJS rendering stack. Supports free/open-source workflows (stock footage, motion clips from archives) and cloud API workflows. Cost governance system built in. DIRECTLY RELEVANT: Maps to our arcads stop-motion pipeline (P2) and Creative Agency videography goals. Could replace or complement our planned arcads integration with a fully open-source stack.'
     captured: '2026-07-11'
     source: '@syntaix.ai Instagram carousel — calesthio/OpenMontage'
