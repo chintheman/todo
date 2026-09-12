@@ -72,10 +72,10 @@ cluster_order:
   name: meta
   kind: domain
 - emoji: ''
-  name: business/build
+  name: product
   kind: domain
 - emoji: ''
-  name: product
+  name: business/build
   kind: domain
 - emoji: ''
   name: tooling
@@ -4409,6 +4409,62 @@ clusters:
   p2_count: 0
   p3_count: 2
 - emoji: ''
+  name: product
+  kind: domain
+  items:
+  - id: odev-claude-code-type
+    title: 'ODEV: Claude Code personality type'
+    type: build
+    domain: product
+    priority: p0
+    status: active
+    summary: 'Came out of running /insights during the harness upgrade. The report scored four measured axes from real session
+      data (Operate vs Author 89 percent, Delegate 78, Enforce 85, Verify 72) and produced the type ODEV, The Flight Director.
+      The idea is to turn that into a product other people can run on their own transcripts: a shareable result page in the
+      shape of a personality test, backed by real usage data rather than self-report. Open questions for the brainstorm: whether
+      it runs locally or uploads transcripts, what the axes should be for a general audience, how a type is named, and what
+      makes the result worth sharing.'
+    captured: '2026-09-13'
+    source: Claude Code session, 2026-09-13, harness upgrade Phase 0
+    notes: 'Prototype output for one user: https://claude.ai/code/artifact/2b65a03e-032d-47b4-81ff-0ad058d8a96d'
+    gist: A fun public website that reads someone's Claude Code session history and returns a four-letter type with their
+      strengths, blind spots and growth edges.
+    next_step: Brainstorm the concept and write a build plan before any code.
+    cluster: product
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: little-b-browser-extension
+    title: Little Bitch browser extension — X profile badging product
+    type: build
+    domain: product
+    priority: p2
+    status: active
+    summary: 'Chrome extension (MV3) that badges Twitter/X profiles as Little Bitch (escalating shame tiers) or Not a Bitch
+      (sarcastic praise tiers). Weighted algorithm scores profiles 0-100 from public data (follower ratio, bio keyword density,
+      account age, post frequency, verified status, engagement). Viral loop: nominate +2 / immunity -2, badge-as-marketing.
+      MVP v1.0.0 built by Hermes Jun 19 2026, Zo pushed to github.com/chintheman/little-b (public) Jul 4 2026 with LOGIC-INTENT-RATIONALE.md.
+      Full context in _system/pending/little-b-browser-extension.md.'
+    captured: 2026-08-15
+    source: PA group Aug 15 2026 — historical project re-opened as product idea
+    notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
+      Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
+      Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
+    gist: A Chrome extension that badges Twitter profiles with escalating shame or praise tiers.
+    next_step: Fix the MutationObserver CPU throttle, the known open bug.
+    cluster: product
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 2
+  total_count: 2
+  active_count: 2
+  delegated_count: 0
+  done_count: 0
+  p0_count: 1
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: business/build
   kind: domain
   items:
@@ -4475,41 +4531,6 @@ clusters:
   p0_count: 0
   p1_count: 1
   p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: product
-  kind: domain
-  items:
-  - id: little-b-browser-extension
-    title: Little Bitch browser extension — X profile badging product
-    type: build
-    domain: product
-    priority: p2
-    status: active
-    summary: 'Chrome extension (MV3) that badges Twitter/X profiles as Little Bitch (escalating shame tiers) or Not a Bitch
-      (sarcastic praise tiers). Weighted algorithm scores profiles 0-100 from public data (follower ratio, bio keyword density,
-      account age, post frequency, verified status, engagement). Viral loop: nominate +2 / immunity -2, badge-as-marketing.
-      MVP v1.0.0 built by Hermes Jun 19 2026, Zo pushed to github.com/chintheman/little-b (public) Jul 4 2026 with LOGIC-INTENT-RATIONALE.md.
-      Full context in _system/pending/little-b-browser-extension.md.'
-    captured: 2026-08-15
-    source: PA group Aug 15 2026 — historical project re-opened as product idea
-    notes: 'Never done: Chrome Web Store listing ($5 fee), paid immunity $2.99/mo, leaderboard, multi-platform (IG/TikTok/LinkedIn).
-      Known issue: MutationObserver CPU usage on heavy profiles (200ms throttle todo). Code in 3 places: M1 ~/projects/little-b-extension/,
-      Zo /home/workspace/Projects/little-b-extension/, GitHub chintheman/little-b. Store-safe name "Little B...ch" for CWS.'
-    gist: A Chrome extension that badges Twitter profiles with escalating shame or praise tiers.
-    next_step: Fix the MutationObserver CPU throttle, the known open bug.
-    cluster: product
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
-  delegated_count: 0
-  done_count: 0
-  p0_count: 0
-  p1_count: 0
-  p2_count: 1
   p3_count: 0
 - emoji: ''
   name: tooling
@@ -5088,6 +5109,6 @@ archive:
 - *id112
 - *id113
 - *id114
-updated_at: 2026-09-12 22:00:27 SGT
-total_active: 80
+updated_at: 2026-09-13 00:32:09 SGT
+total_active: 81
 total_done: 114
