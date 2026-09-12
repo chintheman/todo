@@ -499,7 +499,7 @@ clusters:
     type: discuss
     domain: gtm
     priority: p0
-    status: active
+    status: archived
     summary: 'The concierge data layer already stores campaigns per client with end_date and status (data/clients/{slug}/campaigns/{id}.json). The concierge itself has no scheduler, so nothing fires on campaign deadlines today. Proposal: a no_agent Hermes cron that reads the data layer and nudges when a campaign is within T-14/T-7 of its end date or overdue. Delivered to the concierge working chat. Cost ~zero, no changes to bot.py. Part of Route A ops ring.'
     captured: 2026-08-18
     source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
