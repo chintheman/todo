@@ -514,7 +514,7 @@ clusters:
     type: discuss
     domain: gtm
     priority: p0
-    status: active
+    status: archived
     summary: 'Client data (data/ directory) is gitignored in concierge-bot-app for privacy — correct, since briefs, histories, strategies, and campaigns are private — but that means zero redundancy for a live tool. Proposal: a local backup cron archiving data/ + Knowledge Base/ to a timestamped archive and retaining the last N copies. Never push client data to GitHub. Part of Route A ops ring.'
     captured: 2026-08-18
     source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
