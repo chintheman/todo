@@ -57,10 +57,16 @@ cluster_order:
   name: infra
   kind: domain
 - emoji: ''
+  name: infrastructure
+  kind: domain
+- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
   name: devtools
+  kind: domain
+- emoji: ''
+  name: marketing
   kind: domain
 - emoji: ''
   name: meta
@@ -69,10 +75,10 @@ cluster_order:
   name: business/build
   kind: domain
 - emoji: ''
-  name: infrastructure
+  name: product
   kind: domain
 - emoji: ''
-  name: product
+  name: tooling
   kind: domain
 - emoji: ''
   name: business
@@ -958,6 +964,10 @@ clusters:
       split mechanics.'
     gist: A skill that serves contextual ads inside AI agent responses for a revenue share.
     next_step: Research the AI ad network landscape and revenue split mechanics.
+    log:
+    - 2026-09-12 · claude-code · The landscape research this task's next_step asks for was already done and has been sitting
+      unlinked in _system/pending/agent-ad-network-research.md since 2026-07-03. Found during the pending/ triage; the file
+      stays in pending as live input, now linked from here.
     cluster: Agentic Ad Network
     cluster_emoji: 🪧
     cluster_kind: project
@@ -3357,16 +3367,34 @@ clusters:
     cluster: design
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-09-12-amex-open-design-questions
+    title: Resolve the open Amex page design questions — navy palette, dark mode, colour scales, front door
+    type: decision
+    domain: design
+    priority: p3
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. The active amex-guide-open-items task covers party-size tiers, multi-outlet,
+      refresh and supervisor bugs only. The four design questions — navy/cream convergence, dark mode, three parallel colour
+      scales, scenario front door — were recorded nowhere.
+    captured: '2026-09-12'
+    source: _system/pending/amex-design-handover-2026-08-15.md
+    notes: _system/pending/amex-design-handover-2026-08-15.md
+    gist: Design questions from the 2026-08-15 handover that the existing amex-guide-open-items task does not cover.
+    next_step: Decide navy-versus-cream convergence and whether the page supports dark mode, before the next Amex redesign
+      pass.
+    cluster: design
+    cluster_emoji: ''
+    cluster_kind: domain
   archive: []
-  count: 3
-  total_count: 3
-  active_count: 3
+  count: 4
+  total_count: 4
+  active_count: 4
   delegated_count: 0
   done_count: 0
   p0_count: 0
   p1_count: 1
   p2_count: 2
-  p3_count: 0
+  p3_count: 1
 - emoji: ''
   name: infra
   kind: domain
@@ -3569,6 +3597,81 @@ clusters:
   p1_count: 2
   p2_count: 0
   p3_count: 0
+- emoji: ''
+  name: infrastructure
+  kind: domain
+  items:
+  - id: 2026-09-12-time-machine-destination-for-m1
+    title: Set up TIME MACHINE on the M1 (kobo) — it has no offsite backup at all
+    type: ops
+    domain: infrastructure
+    priority: p0
+    status: active
+    summary: 'Verified 2026-09-12 on kobo: `tmutil destinationinfo` returns ''No destinations configured'', there is no ~/Library/Mobile
+      Documents/com~apple~CloudDocs, and nothing rsyncs or uploads ~/.hermes/_backups anywhere. About 4.9 GB has no copy off
+      the machine - 4.4 GB of daily Hermes state and config tarballs, 392 MB of profiles, 50 MB of data, 30 MB of cron config,
+      3.5 MB of plugins - plus the three nightly git bundles for skills, scripts and hooks, which are the ONLY copy of those
+      repos'' history because none of the three has a remote. The bundles verified restorable at 05:20 that morning, which
+      is worth nothing if the disk dies. Only ~/wiki and ~/brain-engine are safe, via their GitHub remotes. This is why the
+      skills-repo remote decision came back as ''not yet'': a remote would protect 3.5 MB of the 4.9 GB and needs a name-scrub
+      first, while TIME MACHINE protects all of it and needs nothing.'
+    captured: '2026-09-12'
+    source: Found 2026-09-12 while deciding whether ~/.hermes/skills needs a git remote
+    gist: The M1 has zero backups leaving the machine. Attach an external drive and configure TIME MACHINE next time Chin
+      is physically at it.
+    next_step: 'Next time you are sitting at the M1: plug in an external drive, open System Settings > General > TIME MACHINE
+      > Add Backup Disk, pick the drive, turn it on. Verify afterwards with `tmutil destinationinfo`, which must stop saying
+      ''No destinations configured''.'
+    cluster: infrastructure
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-12-voltron-write-path
+    title: Build the Hermes-to-Claude-Code memory write path (control is still one-way)
+    type: build
+    domain: infrastructure
+    priority: p1
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. The manifest's item 1 is explicitly NOT YET SCOPED and had no registry
+      entry a month later, so it was invisible to every board and every review. Grep of the registry for 'write path' returned
+      nothing.
+    captured: '2026-09-12'
+    source: _system/pending/voltron-session-manifest-2026-08-22.md
+    notes: _system/pending/voltron-session-manifest-2026-08-22.md
+    gist: A fact Hermes learns cannot reach Claude Code's always-loaded memory files. Item 1 of the Voltron manifest, never
+      scoped.
+    next_step: Scope how a fact Hermes learns reaches Claude Code's always-loaded memory files — Chin ranked this above the
+      article pipeline on 2026-08-22 and it is still marked NOT YET SCOPED.
+    cluster: infrastructure
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-12-hermes-on-zo-decision
+    title: Close or execute the Hermes-on-Zo shared-memory question from 2026-07-15
+    type: decision
+    domain: infrastructure
+    priority: p3
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. Registry grep for vps, hostinger, syncthing and 'hermes on zo' returned
+      nothing. The architecture moved on — Zo is reached over MCP and Hermes stayed on the M1 — but no entry records that
+      as the answer, so the question stays technically open.
+    captured: '2026-09-12'
+    source: _system/pending/vps-shared-memory.md
+    notes: _system/pending/vps-shared-memory.md
+    gist: The decision whether to run Hermes on Zo was never made or recorded; the SQLite-sync gap it raised was never solved.
+    next_step: Confirm the now-live Zo-over-MCP architecture already answers this (Zo as a separate tool, Hermes on the M1)
+      and close it, or test Hermes on Zo Basic if the shared-memory pain resurfaces.
+    cluster: infrastructure
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 3
+  total_count: 3
+  active_count: 3
+  delegated_count: 0
+  done_count: 0
+  p0_count: 1
+  p1_count: 1
+  p2_count: 0
+  p3_count: 1
 - emoji: ''
   name: creative
   kind: domain
@@ -4054,6 +4157,56 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: marketing
+  kind: domain
+  items:
+  - id: 2026-09-12-second-brain-launch-content
+    title: Publish the Second Brain launch content — the repo shipped unannounced
+    type: content
+    domain: marketing
+    priority: p2
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. The repo exists and is public; the brief's three deliverables (summary,
+      LinkedIn post, Substack article) were never produced and had no registry entry. The brief's target Substack domain 404s
+      — the live publication is agentichotpot.substack.com.
+    captured: '2026-09-12'
+    source: _system/pending/creative-brief-second-brain-launch.md
+    notes: _system/pending/creative-brief-second-brain-launch.md
+    gist: github.com/chintheman/hermes-second-brain is public and matches the creative brief, but none of the three launch
+      deliverables were produced.
+    next_step: Write and post the LinkedIn announcement plus the summary markdown, using agentichotpot.substack.com — the
+      brief's target cryptonian.substack.com is dead.
+    cluster: marketing
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-12-gemini-enterprise-legal-post
+    title: Turn the Gemini-Enterprise-for-Legal finding into a LinkedIn post
+    type: content
+    domain: marketing
+    priority: p3
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. The note carried its own content angle and had no registry entry,
+      so the idea was invisible.
+    captured: '2026-09-12'
+    source: _system/pending/gemini-enterprise-legal.md
+    notes: _system/pending/gemini-enterprise-legal.md
+    gist: 'Vendor intel with a stated content angle: Google''s enterprise legal agent is MCP connectors plus prompts — the
+      same recipe as a local setup.'
+    next_step: Draft the post around the MCP-connectors-as-the-recipe angle.
+    cluster: marketing
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 2
+  total_count: 2
+  active_count: 2
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 1
+- emoji: ''
   name: meta
   kind: domain
   items:
@@ -4324,44 +4477,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: infrastructure
-  kind: domain
-  items:
-  - id: 2026-09-12-time-machine-destination-for-m1
-    title: Set up TIME MACHINE on the M1 (kobo) — it has no offsite backup at all
-    type: ops
-    domain: infrastructure
-    priority: p0
-    status: active
-    summary: 'Verified 2026-09-12 on kobo: `tmutil destinationinfo` returns ''No destinations configured'', there is no ~/Library/Mobile
-      Documents/com~apple~CloudDocs, and nothing rsyncs or uploads ~/.hermes/_backups anywhere. About 4.9 GB has no copy off
-      the machine - 4.4 GB of daily Hermes state and config tarballs, 392 MB of profiles, 50 MB of data, 30 MB of cron config,
-      3.5 MB of plugins - plus the three nightly git bundles for skills, scripts and hooks, which are the ONLY copy of those
-      repos'' history because none of the three has a remote. The bundles verified restorable at 05:20 that morning, which
-      is worth nothing if the disk dies. Only ~/wiki and ~/brain-engine are safe, via their GitHub remotes. This is why the
-      skills-repo remote decision came back as ''not yet'': a remote would protect 3.5 MB of the 4.9 GB and needs a name-scrub
-      first, while TIME MACHINE protects all of it and needs nothing.'
-    captured: '2026-09-12'
-    source: Found 2026-09-12 while deciding whether ~/.hermes/skills needs a git remote
-    gist: The M1 has zero backups leaving the machine. Attach an external drive and configure TIME MACHINE next time Chin
-      is physically at it.
-    next_step: 'Next time you are sitting at the M1: plug in an external drive, open System Settings > General > TIME MACHINE
-      > Add Backup Disk, pick the drive, turn it on. Verify afterwards with `tmutil destinationinfo`, which must stop saying
-      ''No destinations configured''.'
-    cluster: infrastructure
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
-  delegated_count: 0
-  done_count: 0
-  p0_count: 1
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: product
   kind: domain
   items:
@@ -4384,6 +4499,38 @@ clusters:
     gist: A Chrome extension that badges Twitter profiles with escalating shame or praise tiers.
     next_step: Fix the MutationObserver CPU throttle, the known open bug.
     cluster: product
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
+  name: tooling
+  kind: domain
+  items:
+  - id: 2026-09-12-labs-cluster-and-summary-view
+    title: Add task-summary line, cluster grouping and rich indicators to the Labs page
+    type: build
+    domain: tooling
+    priority: p2
+    status: active
+    summary: Filed 2026-09-12 during the pending/ triage. The labs-blitz-pomodoro-build task shipped quadrants, pomodoro and
+      buttons; its six-phase scope never included these three. Registry grep for 'cluster group' and 'task summar' returned
+      zero hits.
+    captured: '2026-09-12'
+    source: _system/pending/zo-labs-improvements.md
+    notes: _system/pending/zo-labs-improvements.md
+    gist: Three Zo Labs display requests from 2026-07-19 that the later August rebuild did not cover.
+    next_step: Confirm with Zo whether the summary line, cluster grouping view and rich indicators were ever built; if not,
+      implement them to the spec in the source file.
+    cluster: tooling
     cluster_emoji: ''
     cluster_kind: domain
   archive: []
@@ -4941,6 +5088,6 @@ archive:
 - *id112
 - *id113
 - *id114
-updated_at: 2026-09-12 15:13:25 SGT
-total_active: 74
+updated_at: 2026-09-12 22:00:27 SGT
+total_active: 80
 total_done: 114
