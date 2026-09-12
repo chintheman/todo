@@ -612,11 +612,10 @@ clusters:
     type: build
     domain: gtm
     priority: p1
-    status: active
+    status: done
     summary: Two gaps vs Oxygen's 5-layer architecture — (1) immutable raw capture layer for meeting notes, call transcripts, competitor snapshots, (2) canonical index file every agent reads first on startup.
     captured: 2026-06-30
     source: Tim Scheuer / Oxygen LinkedIn post - https://www.linkedin.com/posts/tim-scheuer-91b005237_we-built-a-company-wide-second-brain-for-share-7474587239059568384-VvsF/
-    delegated_to: The General (#1)
     notes: 'Handoff file: ~/wiki/_system/pending/gtm-second-brain.md Also includes Tim Scheuer video breakdown tips (6 tips, gap analysis table). Full context delivered to The General. Moved to 💔 Grief Management project cluster Aug 14 2026 (render-todo-yaml.py + GitHub push 667bfc7).'
     gist: A raw capture layer and canonical agent index for the GTM second brain.
     next_step: Ask Chin for the go-ahead to build the /raw capture layer and agent index.
