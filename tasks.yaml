@@ -111,7 +111,7 @@ clusters:
     type: research
     domain: ai/ml
     priority: p0
-    status: active
+    status: done
     summary: 'Kickoff research PASS 1 done 2026-08-17 (Brave + Exa, Tavily down). Context engineering = smallest set of high-signal tokens per inference (Anthropic). Four levers: write/select/compress/isolate (LangChain). Key evidence: contextual retrieval cuts retrieval failures 49-67%; reranking 50->top-5 beats dumping 50; observation masking >50% cost cut on SWE-bench; lost-in-the-middle + context rot are the core failure modes. Hermes already does progressive disclosure well (skills, deferred tools, wiki, subagents). Full report: _system/pending/context-engineering-research.md.'
     captured: 2026-08-14
     source: User request — Hermes context/memory stack
