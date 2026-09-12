@@ -4420,16 +4420,25 @@ clusters:
     status: active
     summary: 'Came out of running /insights during the harness upgrade. The report scored four measured axes from real session
       data (Operate vs Author 89 percent, Delegate 78, Enforce 85, Verify 72) and produced the type ODEV, The Flight Director.
-      The idea is to turn that into a product other people can run on their own transcripts: a shareable result page in the
-      shape of a personality test, backed by real usage data rather than self-report. Open questions for the brainstorm: whether
-      it runs locally or uploads transcripts, what the axes should be for a general audience, how a type is named, and what
-      makes the result worth sharing.'
+      The idea is to turn that into a product other people can run on their own transcripts: a result page in the shape of
+      a personality test, backed by real usage data rather than self-report. Two-tier output. The user runs it and gets the
+      full insights, the whole diagnostic including friction, blind spots and growth edges, which is the private version for
+      them. On top of that they can generate a snapshot of just the profile and the trait descriptions, sized and styled to
+      be shareable on social. The full report is the value, the snapshot is the distribution. To brainstorm together, in this
+      order. First, what the traits actually are: derive them from how /insights already generates its information, since
+      that is the only part with real data behind it, and work out which of its signals are stable enough to be axes for a
+      general audience rather than for one heavy operator. Second, the naming: the raw signals are engineering terms and nobody
+      shares a card that says Operate vs Author 89 percent. Come up with marketing friendly names for the traits and the resulting
+      types, the way a personality test does, without letting the rename drift away from what was measured. Other open questions:
+      whether it runs locally or uploads transcripts, and the privacy story either way.'
     captured: '2026-09-13'
     source: Claude Code session, 2026-09-13, harness upgrade Phase 0
     notes: 'Prototype output for one user: https://claude.ai/code/artifact/2b65a03e-032d-47b4-81ff-0ad058d8a96d'
-    gist: A fun public website that reads someone's Claude Code session history and returns a four-letter type with their
-      strengths, blind spots and growth edges.
-    next_step: Brainstorm the concept and write a build plan before any code.
+    gist: A fun public website that reads someone's Claude Code session history, returns a four-letter type, and gives them
+      a shareable card of it.
+    next_step: Sit down together and work out the trait set, starting from what /insights already measures, then rename them
+      for a general audience.
+    researched: 2026-09-13
     cluster: product
     cluster_emoji: ''
     cluster_kind: domain
@@ -5109,6 +5118,6 @@ archive:
 - *id112
 - *id113
 - *id114
-updated_at: 2026-09-13 00:32:09 SGT
+updated_at: 2026-09-13 00:36:41 SGT
 total_active: 81
 total_done: 114
