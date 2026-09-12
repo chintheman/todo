@@ -1802,7 +1802,7 @@ clusters:
     type: discuss
     domain: career
     priority: p1
-    status: active
+    status: archived
     summary: 'Market validates 82% of SG AI postings are for user/adoption roles, not developers. Two paths: (A) salaried PM/CS at AI company, (B) independent fractional consultant. User already has key assets — Hermes stack as living portfolio, Agentic Hotpot as content channel, Paradex ecosystem management experience. Gap: packaged case studies with measurable outcomes. Full assessment at ~/wiki/_system/pending/ai-adoption-specialist.md'
     captured: 2026-07-15
     gist: Decide whether to pursue AI adoption work as a salaried role or as an independent consultant.
