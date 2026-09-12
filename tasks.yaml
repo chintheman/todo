@@ -127,7 +127,7 @@ clusters:
     type: build
     domain: ai/ml
     priority: p1
-    status: active
+    status: done
     summary: Built + verified. Audited the compaction/consolidation path — the prompts were already tuned (Aug 15 field-proven upgrades) but the winning lean policy was shipped opt-in and the running gateway was on the weak legacy default. Flipped compression.tail_mode to lean (68.3% vs 45.8% recall at 0.30x tokens per scorecard), added an explicit discard-tool-noise rule to the batch + micro summarizer prompts (A/B-verified, no regression, 0 noise carried; digest prompt left untouched — the rule measurably cost digest recall there), and exempted user-corrections from idle decay in spine consolidation. Verification on a real 2-week session slice — anchor index preserves 96.3% of exact identifiers vs 24.4% for bare-LLM summaries; 141 compressor tests + 545 agent tests pass.
     captured: 2026-08-20
     source: context-engineering-research (2026-08-17), gap 3 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
