@@ -51,13 +51,13 @@ cluster_order:
   name: devops
   kind: domain
 - emoji: ''
-  name: infra
-  kind: domain
-- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
   name: design
+  kind: domain
+- emoji: ''
+  name: infra
   kind: domain
 - emoji: ''
   name: devtools
@@ -67,9 +67,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: business/build
-  kind: domain
-- emoji: ''
-  name: ops
   kind: domain
 - emoji: ''
   name: product
@@ -91,6 +88,9 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: integrations
+  kind: domain
+- emoji: ''
+  name: ops
   kind: domain
 - emoji: ''
   name: productivity
@@ -253,7 +253,7 @@ clusters:
     cluster_emoji: 🧠
     cluster_kind: project
   archive:
-  - &id003
+  - &id005
     id: hotcore-retrieval-split
     title: Hot core — retrieve situational rules instead of loading them every call
     type: build
@@ -282,7 +282,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id019
+  - &id021
     id: memory-ablation-harness
     title: Memory ablation harness — prove the Spine tiers work
     type: discuss
@@ -309,7 +309,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id060
+  - &id062
     id: memory-audit-review
     title: Memory Audit — Honcho GO/NO-GO decision
     type: discuss
@@ -331,7 +331,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id079
+  - &id081
     id: review-memory-recommendations
     title: Review memory recommendations against Hermes memory solution
     type: research
@@ -348,7 +348,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id098
+  - &id100
     id: subagent-model-verify
     title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
     type: build
@@ -363,7 +363,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id101
+  - &id103
     id: context-engine-explore
     title: Memory Audit — Explore context engine plugin
     type: discuss
@@ -378,7 +378,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id099
+  - &id101
     id: supermemory-dedup-cron
     title: Memory Audit — Periodic Supermemory dedup + TTL cron
     type: discuss
@@ -393,7 +393,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id100
+  - &id102
     id: hw-to-wiki-migration
     title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
     type: discuss
@@ -408,7 +408,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id004
+  - &id006
     id: obsidian-power-use-cases
     title: Obsidian Power Use Cases — Opus 5 vault-tailored research
     type: research
@@ -429,7 +429,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id046
+  - &id048
     id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -446,7 +446,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id084
+  - &id086
     id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -462,7 +462,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id080
+  - &id082
     id: graphify-integration
     title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
     type: build
@@ -592,7 +592,7 @@ clusters:
     cluster_emoji: 🛎️
     cluster_kind: project
   archive:
-  - &id056
+  - &id058
     id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
     type: build
@@ -1192,7 +1192,7 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
   archive:
-  - &id020
+  - &id022
     id: bday-picker-page
     title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
     type: build
@@ -1405,7 +1405,7 @@ clusters:
     cluster_emoji: 🖥️
     cluster_kind: project
   archive:
-  - &id006
+  - &id008
     id: m1-status-system
     title: M1 Status — cloud-watched status system for the M1 Mac
     type: build
@@ -1720,7 +1720,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id104
+  - &id106
     id: self-correcting-agent
     title: Self-Correcting Agent — Reflexion Pattern
     type: discuss
@@ -1735,7 +1735,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id096
+  - &id098
     id: hard-step-budgets
     title: Step Budgets — Turn limits + forced handoffs for multi-phase work
     type: discuss
@@ -1750,7 +1750,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id094
+  - &id096
     id: sync-barriers
     title: Sync Barriers — Wait-for-all → synthesize → deliver once
     type: discuss
@@ -1765,7 +1765,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id102
+  - &id104
     id: tools-skills-consistency
     title: Investigate why tools and skills are not consistently used — and fix it
     type: research
@@ -1780,7 +1780,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id091
+  - &id093
     id: crewai-hermes-integration
     title: Explore CrewAI integration with Hermes for agent role optimisation
     type: research
@@ -1800,7 +1800,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id089
+  - &id091
     id: explore-free-agentic-tools
     title: Explore free agentic tools — review carousel + fresh research
     type: research
@@ -1817,7 +1817,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id090
+  - &id092
     id: explore-fluid-voice
     title: Explore FluidVoice as alternative to agentic TTS/STT solutions
     type: research
@@ -1832,7 +1832,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id017
+  - &id019
     id: ai-stack-platforms-review
     title: Review all AI stack platforms for potential integration
     type: research
@@ -1850,7 +1850,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id074
+  - &id076
     id: agentic-loop-engineering
     title: Master Looping — implement Boris Cherny / Pravda loop engineering
     type: build
@@ -1879,7 +1879,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id036
+  - &id038
     id: claude-command-cheatsheet
     title: Evaluate Claude command cheat sheet for Hermes gaps
     type: discuss
@@ -1902,7 +1902,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id076
+  - &id078
     id: auto-goal-orchestration-plugin
     title: Auto-goal orchestration plugin — review proposed flow
     type: discuss
@@ -1921,7 +1921,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id072
+  - &id074
     id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 238 specialist personas
     type: discuss
@@ -1957,7 +1957,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id071
+  - &id073
     id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -1977,7 +1977,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id041
+  - &id043
     id: claude-code-loops-google-meta-ads
     title: Absorb Claude Code loop patterns from Ryze AI — ad management loops with verification gates
     type: research
@@ -2012,7 +2012,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id066
+  - &id068
     id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -2031,7 +2031,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id064
+  - &id066
     id: orca-ade
     title: Orca — Agent Development Environment for parallel agents
     type: research
@@ -2050,7 +2050,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id062
+  - &id064
     id: kyutai-pocket-tts-evaluate
     title: Evaluate Kyutai Pocket TTS — local CPU TTS with voice cloning
     type: research
@@ -2069,7 +2069,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id039
+  - &id041
     id: anthropic-ust-claude
     title: Anthropic × UST — Claude for Physical AI
     type: discuss
@@ -2088,7 +2088,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id058
+  - &id060
     id: glm-5-eval
     title: GLM-5.2 (Z.ai) — MCP Atlas
     type: build
@@ -2110,7 +2110,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id059
+  - &id061
     id: chinese-ai-enterprise-adoption-ft
     title: FT — Global companies (DD, Siemens, Airbnb) adopting Chinese AI
     type: discuss
@@ -2130,7 +2130,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id040
+  - &id042
     id: anthropic-finance-agents
     title: Anthropic 10 Finance Agents — repo + workflow reference
     type: discuss
@@ -2150,7 +2150,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id047
+  - &id049
     id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -2167,7 +2167,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id034
+  - &id036
     id: i-have-adhd-claude-skill
     title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
     type: research
@@ -2193,7 +2193,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id042
+  - &id044
     id: systems-thinking-video-review
     title: The Revolution of Systems Thinking — video review and study notes
     type: research
@@ -2217,7 +2217,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id033
+  - &id035
     id: agentic-stack-review
     title: Agentic Stack — portable .agent/ folder (memory + skills + protocols)
     type: research
@@ -2236,7 +2236,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id030
+  - &id032
     id: mcp-host-60-minutes
     title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
     type: research
@@ -2448,7 +2448,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id092
+  - &id094
     id: openai-profiles-engage
     title: Engage with OpenAI profiles on LinkedIn
     type: create
@@ -2462,7 +2462,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id093
+  - &id095
     id: openai-application-prep
     title: Continue OpenAI application prep
     type: create
@@ -2476,7 +2476,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id013
+  - &id015
     id: claude-certification-review
     title: Review Claude certification pipeline and plan it out
     type: discuss
@@ -2502,7 +2502,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id009
+  - &id011
     id: cca-f-sign-agreement
     title: 'CCA-F: Sign Freelance Developer Agreement'
     type: read
@@ -2528,7 +2528,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id010
+  - &id012
     id: cca-f-register-book
     title: 'CCA-F: Register + book exam seat (Pearson VUE)'
     type: read
@@ -2553,7 +2553,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id012
+  - &id014
     id: cca-f-study-d3
     title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
     type: read
@@ -2577,7 +2577,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id011
+  - &id013
     id: cca-f-study-d4
     title: 'CCA-F study: D4 Prompt Engineering & Structured Output'
     type: read
@@ -2603,7 +2603,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id008
+  - &id010
     id: cca-f-study-d2
     title: 'CCA-F study: D2 Tool Design & MCP Integration'
     type: read
@@ -2630,7 +2630,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id007
+  - &id009
     id: cca-f-study-d5
     title: 'CCA-F study: D5 Context Management & Reliability'
     type: read
@@ -2656,7 +2656,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id005
+  - &id007
     id: cca-f-exam-week-sweep
     title: CCA-F exam-week sweep + full mock
     type: read
@@ -2677,7 +2677,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id015
+  - &id017
     id: cca-f-study-d1
     title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
     type: read
@@ -2834,7 +2834,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id050
+  - &id052
     id: nicholascrown-macro-letter
     title: Nicholas Crown — macro trading profile + The Crown Macro Letter
     type: research
@@ -2854,7 +2854,7 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
-  - &id026
+  - &id028
     id: market-intel-refinement-review
     title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
     type: discuss
@@ -2995,7 +2995,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id103
+  - &id105
     id: ddgs-search-fallback
     title: DDGS — DuckDuckGo web search fallback
     type: build
@@ -3010,7 +3010,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id083
+  - &id085
     id: developer-agent-codex-claude
     title: Create a developer agent profile enabling both Codex and Claude Code
     type: build
@@ -3030,7 +3030,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id070
+  - &id072
     id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -3056,7 +3056,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id043
+  - &id045
     id: safari-mcp-server
     title: Safari MCP Server — evaluate for web dev/QA pipeline
     type: research
@@ -3078,7 +3078,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id038
+  - &id040
     id: claude-code-v2-1-203
     title: Claude Code v2.1.203 — review and update our install
     type: build
@@ -3102,7 +3102,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id068
+  - &id070
     id: agent-reach
     title: Agent-Reach — multi-platform web & social access for AI agents
     type: research
@@ -3123,7 +3123,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id065
+  - &id067
     id: omniroute-local-gateway
     title: OmniRoute — local AI routing gateway for 231+ providers
     type: research
@@ -3144,7 +3144,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id061
+  - &id063
     id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -3165,7 +3165,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id049
+  - &id051
     id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
     type: build
@@ -3191,7 +3191,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id032
+  - &id034
     id: buzz-block-review
     title: Buzz — Block's self-hostable workspace for humans + agents
     type: research
@@ -3212,7 +3212,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id031
+  - &id033
     id: oh-my-hermes-review
     title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
     type: research
@@ -3230,7 +3230,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id027
+  - &id029
     id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
     type: build
@@ -3254,222 +3254,11 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id001
-    id: tool-eval-granola-gumloop-relay
-    title: Tool eval — Granola / Gumloop / Relay.app vs existing stack
-    type: research
-    domain: devops
-    priority: p3
-    status: done
-    summary: Granola = AI notepad, no bot joins the call, enhances your own rough notes. $125M Series C Mar 2026 at $1.5B
-      valuation (Index Ventures led; Lightspeed, Spark, NFDG participating), ~$192M raised, revenue +250% in the quarter.
-      Free tier = unlimited meetings but 30-day history; Business $14/user/mo adds unlimited history + MCP server (mcp.granola.ai/mcp)
-      + personal API + Notion/Slack/Zapier integrations. Gumloop = YC W24 AI-native node-canvas automation, $50M Series B
-      led by Benchmark Mar 2026, 100K+ users, 130+ integrations. Credit-based pricing (1 credit = $0.005) plus an 8% orchestration
-      fee; Pro $37/mo = 20k credits; free-tier allowance has churned across sources (2k to 5k credits to possibly retired)
-      so verify on site. Relay.app = workflow automation with human-in-the-loop approvals as a first-class primitive; 100-200+
-      connectors vs Zapier 8000+; SOC 2; free 200 steps/mo; Pro from $19/mo billed annually.
-    captured: 2026-09-11
-    source: PA topic 15, Sep 11 2026 — follow-up to @unfoldedai carousel (Aug 17 2026)
-    outcome: NO-GO Gumloop — metered GUI clone of what the Hermes loop + crons already do at zero marginal cost. DEFER Granola
-      — adopt only after Plaud lands, and only for the MCP/personal-API queryable layer ($14/mo Business). DEFER Relay.app
-      — HITL approvals already covered by Telegram + coded gates; single narrow fit is a client-owned approval workflow. No
-      installs.
-    notes: 'Overlap analysis vs the user stack. Granola competes with Plaud (device capture, still in transit) plus Telegram
-      and the wiki — its only real differentiator is the queryable layer (MCP + personal API on the Business tier) that feeds
-      meeting context into Claude and Hermes. Gumloop competes with the Hermes agent loop + ~100 crons + scripts: same capability,
-      but metered, GUI-bound, no determinism or cost advantage. Relay.app competes with Telegram approval gates and coded
-      trust boundaries, which are already stronger than a paid approval step. Retail value kept: recommend Gumloop or Relay
-      to concierge/client work where the client wants to own their own automation rather than hand it to Hermes.'
-    gist: Signal check on the notetaker + AI-automation tools surfaced in the @unfoldedai 20-apps carousel (Granola, Gumloop,
-      Relay.app).
-    cluster: devops
-    cluster_emoji: ''
-    cluster_kind: domain
   count: 5
-  total_count: 18
+  total_count: 17
   active_count: 5
   delegated_count: 0
-  done_count: 13
-  p0_count: 1
-  p1_count: 3
-  p2_count: 1
-  p3_count: 0
-- emoji: ''
-  name: infra
-  kind: domain
-  items:
-  - id: box-company-brain
-    title: Box company brain — governed content layer for Hermes Agent
-    type: build
-    domain: infra
-    priority: p0
-    status: active
-    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
-      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
-      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
-      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
-      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
-      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
-      (Aug 29). User marked P0 to try the integration.'
-    captured: 2026-08-29
-    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
-    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
-      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
-    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
-    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: hermes-whatsapp-integration
-    title: Connect Hermes to WhatsApp — integration paths and use cases
-    type: research
-    domain: infra
-    priority: p1
-    status: active
-    summary: 'Two strands. CONNECT - both Hermes WhatsApp adapters already ship in the live install (verified Sep 11 2026
-      on the M1: hermes whatsapp and hermes whatsapp-cloud both present in the CLI, Node v22.22.3 and npm 10.9.8 installed,
-      gateway supervised by launchd). Nothing is configured yet: both WHATSAPP_* lines in ~/.hermes/.env are still commented
-      out, while config.yaml already registers the hermes-whatsapp toolset. BRIDGE PATH (hermes whatsapp) - Baileys WhatsApp
-      Web bridge, QR pair as a Linked Device, modes bot or self-chat, session persisted under ~/.hermes/platforms/whatsapp/session
-      so restarts do not need a re-scan. Semantics match Telegram: no 24h window, no templates, no per-message billing, so
-      cron and proactive pushes deliver as ordinary messages and voice notes work both ways. The cost is ToS: it is an unofficial
-      Web client and the ban risk lands on whatever number is linked, so a dedicated number is the documented default. Meta
-      now detects unofficial Web clients in the background and warns the account owner in Linked devices, and is building
-      Restricted Chat, which pins chats to the primary phone so linked devices never see them. CLOUD PATH (hermes whatsapp-cloud)
-      - official Meta Cloud API wizard asking for Phone Number ID, an EAA access token and the App Secret (needed for webhook
-      signature verification, else inbound is refused). Needs a Meta Business account, a business number not already on personal
-      WhatsApp, and a public HTTPS webhook to port 8090 via cloudflared. No ban risk, but free-form replies only inside the
-      24h service window with pre-approved templates beyond it, and general-purpose AI is prohibited outside the EEA since
-      Jan 15 2026 (Singapore included) while the EU is court-forced open by the interim measures. SG pricing: 1000 free service
-      messages per number per month, then USD 0.0160 each, with a payment method required by Sep 30 2026. USE CASES - alert
-      and cron delivery to the phone, voice-note conversations, client-facing reach where WhatsApp is the real channel (concierge
-      and Glenn), group participation, and a mobile command surface on the same runtime and memory. Tension to resolve: Telegram
-      is the standing convention (outputs route to the session source group), so a second live channel needs a routing rule,
-      not just an adapter. The decision this item owes is path plus number, and whether unattended proactive outbound must
-      work, which is the constraint that decides the path.'
-    deadline: '2026-09-18'
-    captured: 2026-09-11
-    source: 'Telegram Sep 11 2026 - HQ_HermesBoat69 thread Research agent takeover (Chin: explore connecting Hermes to WhatsApp)'
-    notes: 'Pending file _system/pending/hermes-whatsapp-integration.md. Adapters in the live install: plugins/platforms/whatsapp/
-      (Baileys bridge adapter, 966 lines) and hermes_cli/setup_whatsapp_cloud.py (Cloud wizard, 379 lines). Docs: website/docs/user-guide/messaging/whatsapp.md
-      and whatsapp-cloud.md. Continues the WhatsApp strand of the closed agent-account-takeover-research (three-way call:
-      consumer AI-agent beta by API key, Cloud API as a named business function, full takeover on burners). Related open items:
-      openwa-eval, concierge-reach-whatsapp, zo-heyy-integration.'
-    gist: 'Hermes can run on WhatsApp two ways: an unofficial QR-linked bridge, or the official Meta business API on a verified
-      business number.'
-    next_step: Decide between the QR bridge on a second number and the official Meta business API, then wire the winner.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-12-retention-script-for-system-951-files
-    title: Retention script for _system/ — 951 files governed by nothing
-    type: build
-    domain: infra
-    priority: p1
-    status: active
-    summary: '657 files in _system/learnings/ plus context-digests/ and tmp/, growing 3x daily, indexed by no script and graded
-      by no lint rule. _system/README.md documents a retention column that nothing enforces. Same failure shape as the 69
-      lost digests, one directory over at nine times the scale: anything durable landing there is invisible forever.'
-    captured: '2026-09-12'
-    source: claude-code session
-    notes: 'Evidence: find ~/wiki/_system -name ''*.md'' | wc -l = 951; BRAIN.md section 1 names 2 of 19 subdirectories'
-    next_step: 'Write the retention script in DRY-RUN ONLY mode: print what it would delete from learnings/, context-digests/
-      and tmp/ with counts, byte totals and oldest/newest mtime. Run it read-only for two weeks before it deletes anything.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: profile-bot-fleet
-    title: Turn profile fleet into specialist bots — Bot Mode rollout
-    type: build
-    domain: infra
-    priority: p1
-    status: active
-    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
-      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
-      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
-      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
-      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
-    captured: 2026-08-16
-    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
-    notes: _system/pending/profile-bot-fleet.md
-    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
-    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-12-decide-whether-hermes-skills-gets-a
-    title: Decide whether ~/.hermes/skills gets a remote
-    type: decision
-    domain: infra
-    priority: p2
-    status: active
-    summary: The skills repo has no remote, so 1,466 skill files exist only on this Mac. Nightly bundles (bundle-repos.sh,
-      05:20) survive a bad rebase or rm -rf but not losing the machine. Publishing it means publishing 59 files dirty since
-      before 2026-09-11 plus a repo that leaked 5 credentials in August 2026.
-    captured: '2026-09-12'
-    source: claude-code session
-    notes: 'Evidence: git -C ~/.hermes/skills remote -v returns empty; 59 dirty files'
-    next_step: 'Review the 59 dirty files in ~/.hermes/skills (git status) and decide: private remote, or accept the nightly
-      bundles as sufficient and close this.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id018
-    id: project-idea-capture-system
-    title: Project-level idea capture system — random projects/discussions storage
-    type: discuss
-    domain: infra
-    priority: p2
-    status: done
-    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
-      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
-      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
-    captured: 2026-08-14
-    source: User request Aug 14 2026 (during PAL session)
-    completed: 2026-08-14
-    resolution: blitz-archived via labs 2026-08-14
-    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
-      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id097
-    id: topic-role-audit
-    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
-    type: discuss
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
-      pass. No discrepancies found.
-    deadline: 2026-07-02
-    captured: 2026-07-02
-    source: Forum migration — HermesBoat69 12 topics
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id087
-    id: index-md-folder-optimization
-    title: Implement INDEX.md folder optimization for Hermes wiki
-    type: build
-    domain: infra
-    priority: p0
-    status: done
-    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
-    deadline: '2026-07-03'
-    captured: '2026-07-03'
-    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
-    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
-    cluster: infra
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 5
-  total_count: 8
-  active_count: 5
-  delegated_count: 0
-  done_count: 3
+  done_count: 12
   p0_count: 1
   p1_count: 3
   p2_count: 1
@@ -3581,7 +3370,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id095
+  - &id097
     id: stress-test-creative-agency
     title: Stress Test Agentic Creative Agency
     type: build
@@ -3595,7 +3384,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id044
+  - &id046
     id: toto-generator-refine
     title: Refine Toto generator — easier, explainable, profile-based, fun, productize as app
     type: build
@@ -3615,7 +3404,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id082
+  - &id084
     id: carousel-mcp-integration
     title: Explore carousels-mcp + Paper MCP for Creative Agency pipeline
     type: build
@@ -3633,7 +3422,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id081
+  - &id083
     id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -3649,7 +3438,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id075
+  - &id077
     id: learn-animated-websites
     title: Learn how to make animated websites
     type: research
@@ -3674,7 +3463,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id073
+  - &id075
     id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
     type: research
@@ -3696,7 +3485,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id067
+  - &id069
     id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -3715,7 +3504,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id035
+  - &id037
     id: showreel
     title: Showreel — Claude Code visual documentation plugin
     type: build
@@ -3741,7 +3530,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id057
+  - &id059
     id: telegram-games-exploration
     title: Explore creating Telegram games — landscape, tech stack, build options
     type: research
@@ -3763,7 +3552,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id052
+  - &id054
     id: genrecon-3d-reconstruction
     title: GenRecon — 8 photos to full 3D room (open-source)
     type: build
@@ -3781,7 +3570,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id051
+  - &id053
     id: interior-design-agent-tools
     title: Interior Design Agent — AI tool stack for friend's project
     type: discuss
@@ -3801,7 +3590,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id029
+  - &id031
     id: claude-code-ai-content-team
     title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
     type: discuss
@@ -3925,6 +3714,208 @@ clusters:
   p2_count: 2
   p3_count: 0
 - emoji: ''
+  name: infra
+  kind: domain
+  items:
+  - id: box-company-brain
+    title: Box company brain — governed content layer for Hermes Agent
+    type: build
+    domain: infra
+    priority: p0
+    status: active
+    summary: 'Teknium (Hermes Agent lead engineer) quote-retweeted Box''s tutorial on building a company brain: Box becomes
+      the governed content layer Hermes reads and writes from, via the Box CLI on the same host, authenticated as a CCG service
+      account (not a personal login) so the agent sees exactly the folders you share with it. Single source of truth for humans
+      and agents: files, permissions, versions, metadata, Box AI and Box Hubs for grounded, cited Q&A. Pattern: shared project
+      folder = workspace; optional domain structure with _staging/approved, operating rules, and outputs. Tutorial by Chris
+      Kim (Box Sr DevRel). State: box skill already installed, Box CLI not yet on PATH, explainer written by Claude Code sonnet
+      (Aug 29). User marked P0 to try the integration.'
+    captured: 2026-08-29
+    source: Teknium tweet Aug 29 2026 - https://x.com/teknium/status/2093537700561461374
+    notes: 'Blog: https://blog.box.com/give-hermes-company-brain-build-agentic-workflows-your-whole-team-can-share | Dev tutorial:
+      https://developer.box.com/tutorials/company-brain | Explainer: /tmp/box_explain.md | Skill: productivity/box'
+    gist: Connect Hermes Agent to Box as a governed shared file system for team workflows.
+    next_step: Set up the Box CLI and a CCG service account, then share a test folder with Hermes.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: hermes-whatsapp-integration
+    title: Connect Hermes to WhatsApp — integration paths and use cases
+    type: research
+    domain: infra
+    priority: p1
+    status: active
+    summary: 'Two strands. CONNECT - both Hermes WhatsApp adapters already ship in the live install (verified Sep 11 2026
+      on the M1: hermes whatsapp and hermes whatsapp-cloud both present in the CLI, Node v22.22.3 and npm 10.9.8 installed,
+      gateway supervised by launchd). Nothing is configured yet: both WHATSAPP_* lines in ~/.hermes/.env are still commented
+      out, while config.yaml already registers the hermes-whatsapp toolset. BRIDGE PATH (hermes whatsapp) - Baileys WhatsApp
+      Web bridge, QR pair as a Linked Device, modes bot or self-chat, session persisted under ~/.hermes/platforms/whatsapp/session
+      so restarts do not need a re-scan. Semantics match Telegram: no 24h window, no templates, no per-message billing, so
+      cron and proactive pushes deliver as ordinary messages and voice notes work both ways. The cost is ToS: it is an unofficial
+      Web client and the ban risk lands on whatever number is linked, so a dedicated number is the documented default. Meta
+      now detects unofficial Web clients in the background and warns the account owner in Linked devices, and is building
+      Restricted Chat, which pins chats to the primary phone so linked devices never see them. CLOUD PATH (hermes whatsapp-cloud)
+      - official Meta Cloud API wizard asking for Phone Number ID, an EAA access token and the App Secret (needed for webhook
+      signature verification, else inbound is refused). Needs a Meta Business account, a business number not already on personal
+      WhatsApp, and a public HTTPS webhook to port 8090 via cloudflared. No ban risk, but free-form replies only inside the
+      24h service window with pre-approved templates beyond it, and general-purpose AI is prohibited outside the EEA since
+      Jan 15 2026 (Singapore included) while the EU is court-forced open by the interim measures. SG pricing: 1000 free service
+      messages per number per month, then USD 0.0160 each, with a payment method required by Sep 30 2026. USE CASES - alert
+      and cron delivery to the phone, voice-note conversations, client-facing reach where WhatsApp is the real channel (concierge
+      and Glenn), group participation, and a mobile command surface on the same runtime and memory. Tension to resolve: Telegram
+      is the standing convention (outputs route to the session source group), so a second live channel needs a routing rule,
+      not just an adapter. The decision this item owes is path plus number, and whether unattended proactive outbound must
+      work, which is the constraint that decides the path.'
+    deadline: '2026-09-18'
+    captured: 2026-09-11
+    source: 'Telegram Sep 11 2026 - HQ_HermesBoat69 thread Research agent takeover (Chin: explore connecting Hermes to WhatsApp)'
+    notes: 'Pending file _system/pending/hermes-whatsapp-integration.md. Adapters in the live install: plugins/platforms/whatsapp/
+      (Baileys bridge adapter, 966 lines) and hermes_cli/setup_whatsapp_cloud.py (Cloud wizard, 379 lines). Docs: website/docs/user-guide/messaging/whatsapp.md
+      and whatsapp-cloud.md. Continues the WhatsApp strand of the closed agent-account-takeover-research (three-way call:
+      consumer AI-agent beta by API key, Cloud API as a named business function, full takeover on burners). Related open items:
+      openwa-eval, concierge-reach-whatsapp, zo-heyy-integration.'
+    gist: 'Hermes can run on WhatsApp two ways: an unofficial QR-linked bridge, or the official Meta business API on a verified
+      business number.'
+    next_step: Decide between the QR bridge on a second number and the official Meta business API, then wire the winner.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: profile-bot-fleet
+    title: Turn profile fleet into specialist bots — Bot Mode rollout
+    type: build
+    domain: infra
+    priority: p1
+    status: active
+    summary: Bring up specialist Hermes profiles as dedicated gateway bots (market-intel, researcher, backend-engineer, etc.)
+      so Telegram becomes a command center of specialists instead of one generalist. Each profile bot needs its own TELEGRAM_BOT_TOKEN
+      (BotFather) — separate gateway instances cannot share default's token (update polling conflict). market-intel gateway
+      already started Aug 16 (PID 78593, launchd-supervised) but is cron-only until a token is wired. Hermes Desktop Bot Mode
+      ships Mon Aug 17 (persistent chat per profile, bots talk to each other) — makes the fleet visual.
+    captured: 2026-08-16
+    source: Telegram session Aug 16 2026 — bot mode / profile fleet discussion
+    notes: _system/pending/profile-bot-fleet.md
+    gist: A rollout turning Hermes profiles into dedicated Telegram bots for each specialist.
+    next_step: Create the BotFather token for the market-intel profile and wire it into its gateway.
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id020
+    id: project-idea-capture-system
+    title: Project-level idea capture system — random projects/discussions storage
+    type: discuss
+    domain: infra
+    priority: p2
+    status: done
+    summary: 'New system: every random project idea/discussion stored at project level, accessible to Hermes AND Claude anytime,
+      surfaced in task list as a special category with auto-updated progress stages. Needs scoping: registry schema, storage
+      layout, cross-agent access paths, progress automation. Scope with user after PAL plan dispatch.'
+    captured: 2026-08-14
+    source: User request Aug 14 2026 (during PAL session)
+    completed: 2026-08-14
+    resolution: blitz-archived via labs 2026-08-14
+    notes: 'KILLED Aug 14 2026 — user deemed redundant during scoping interview (Q1: entry unit). Existing capture paths (idea-form
+      /random, brain-capture raw/, tracking board) already cover random idea storage. No system built.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id099
+    id: topic-role-audit
+    title: P0 — Audit all topic's mapped roles, skills, crons, profiles
+    type: discuss
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed — all 12 topic-profile-cron bindings verified, 12 crons rehomed to correct threads in the Jul 2 optimization
+      pass. No discrepancies found.
+    deadline: 2026-07-02
+    captured: 2026-07-02
+    source: Forum migration — HermesBoat69 12 topics
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id089
+    id: index-md-folder-optimization
+    title: Implement INDEX.md folder optimization for Hermes wiki
+    type: build
+    domain: infra
+    priority: p0
+    status: done
+    summary: Completed - INDEX.md folder optimization applied to Hermes wiki by another agent. Navigation indexing in place.
+    deadline: '2026-07-03'
+    captured: '2026-07-03'
+    source: wandermist - "I Made My Hermes Agent 10x Faster Without Changing the Model"
+    notes: ~/wiki/_system/recommendations/index-md-folder-optimization.md
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id002
+    id: 2026-09-12-retention-script-for-system-951-files
+    title: Retention script for _system/ — 951 files governed by nothing
+    type: build
+    domain: infra
+    priority: p1
+    status: done
+    summary: '657 files in _system/learnings/ plus context-digests/ and tmp/, growing 3x daily, indexed by no script and graded
+      by no lint rule. _system/README.md documents a retention column that nothing enforces. Same failure shape as the 69
+      lost digests, one directory over at nine times the scale: anything durable landing there is invisible forever.'
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: find ~/wiki/_system -name ''*.md'' | wc -l = 951; BRAIN.md section 1 names 2 of 19 subdirectories'
+    next_step: 'Write the retention script in DRY-RUN ONLY mode: print what it would delete from learnings/, context-digests/
+      and tmp/ with counts, byte totals and oldest/newest mtime. Run it read-only for two weeks before it deletes anything.'
+    log:
+    - '2026-09-12 · claude-code · status active → done: Built and shipped 2026-09-12. brain-engine/scripts/retention.py (public,
+      commit 9353b85) plus _system/retention.yaml as the vault-specific policy; every rule is mode report, --apply alone changes
+      nothing, and deletion asserts HEAD == upstream so git rm stays recoverable - proven both ways in a throwaway repo. Three
+      delegated dry runs all rejected an age rule for the same reason: the tree is ~14 weeks old, a 90-day cutoff frees ~3%
+      and lands on the founding week. 35 files are dead by TYPE instead (17 commit scripts in context-digests, all 9 in tmp,
+      5 verifier stubs in learnings, 4 tracked task-registry.yaml.bak-* duplicates). Three findings are deliberately NOT retention
+      rules and are recorded in the policy header: pending/ is an undrained queue (40 of 98 files have zero registry linkage),
+      pending/cca-f/ is live exam material the global standing instructions cite by path and is simply in the wrong folder,
+      and ~20 root files are live governance that any age rule would destroy - they need promoting into the indexed part of
+      the vault, which is the same blind spot that hid the 69 pages.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id003
+    id: 2026-09-12-decide-whether-hermes-skills-gets-a
+    title: Decide whether ~/.hermes/skills gets a remote
+    type: decision
+    domain: infra
+    priority: p2
+    status: done
+    summary: The skills repo has no remote, so 1,466 skill files exist only on this Mac. Nightly bundles (bundle-repos.sh,
+      05:20) survive a bad rebase or rm -rf but not losing the machine. Publishing it means publishing 59 files dirty since
+      before 2026-09-11 plus a repo that leaked 5 credentials in August 2026.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: git -C ~/.hermes/skills remote -v returns empty; 59 dirty files'
+    next_step: 'Review the 59 dirty files in ~/.hermes/skills (git status) and decide: private remote, or accept the nightly
+      bundles as sufficient and close this.'
+    log:
+    - '2026-09-12 · claude-code · status active → done: Reviewed 2026-09-12 by two independent Sonnet lenses over all 61 dirty
+      paths (72 files opened each). Safety: 2 real blockers, both in UNTRACKED files so neither ever entered history - a live
+      Supabase publishable key and the real device hostname, both redacted in place. Content: 34/34 modified and 24/27 untracked
+      paths are durable and stale-free; asa-output/ gitignored as scanner exhaust; 3 duplicate pairs found, one of them a
+      full second copy of the tmux-TUI recipe. DECISION - no remote yet, and the reason is not the drift. 29 TRACKED files
+      already carry his real surname, macOS username or email, and the M1 has no Time Machine destination and no iCloud Drive,
+      so the nightly bundles in _backups also live on the one disk they are protecting. Those are two separate problems and
+      a git remote only addresses the second one, while making the first one worse. Offsite backup first, remote after a name-scrub
+      pass.'
+    cluster: infra
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 3
+  total_count: 8
+  active_count: 3
+  delegated_count: 0
+  done_count: 5
+  p0_count: 1
+  p1_count: 2
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: devtools
   kind: domain
   items:
@@ -3977,7 +3968,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id025
+  - &id027
     id: mojo-1-0-milestone
     title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
     type: research
@@ -3998,7 +3989,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id022
+  - &id024
     id: unsloth-desktop-eval
     title: Unsloth Desktop — local LLM run/train app (Beta)
     type: build
@@ -4020,7 +4011,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id021
+  - &id023
     id: lovable-explore
     title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
     type: research
@@ -4109,7 +4100,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id037
+  - &id039
     id: tool-decision-framework
     title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
     type: discuss
@@ -4123,7 +4114,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id053
+  - &id055
     id: lint-rejected-cleanup
     title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
     type: maintain
@@ -4146,7 +4137,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id024
+  - &id026
     id: lint-injection-resolution
     title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
     type: maintain
@@ -4167,7 +4158,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id023
+  - &id025
     id: lint-contradiction-resolution
     title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
     type: maintain
@@ -4186,7 +4177,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id028
+  - &id030
     id: lint-raw-capture-stall
     title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
     type: maintain
@@ -4207,7 +4198,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id014
+  - &id016
     id: lint-raw-immutability-violation-2026-08-16
     title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
     type: maintain
@@ -4287,7 +4278,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id045
+  - &id047
     id: looking-busy-website
     title: LookingBusy — interactive "pretend to work" website
     type: build
@@ -4314,37 +4305,6 @@ clusters:
   active_count: 1
   delegated_count: 0
   done_count: 1
-  p0_count: 0
-  p1_count: 1
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
-  name: ops
-  kind: domain
-  items:
-  - id: 2026-09-12-verify-the-vault-enforcement-stack-on
-    title: Verify the vault enforcement stack on its first unattended runs
-    type: fix
-    domain: ops
-    priority: p1
-    status: active
-    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
-      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
-    captured: '2026-09-12'
-    source: claude-code session
-    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
-    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
-      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
-      rules 18 and 19.'
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
-  delegated_count: 0
-  done_count: 0
   p0_count: 0
   p1_count: 1
   p2_count: 0
@@ -4389,7 +4349,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id086
+  - &id088
     id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -4406,7 +4366,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id063
+  - &id065
     id: jonathan-lok-workshop
     title: Talk to Jonathan Lok about agentic AI workshop for his kids
     type: discuss
@@ -4422,7 +4382,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id055
+  - &id057
     id: ai-influencer-monetization
     title: AI Influencer Empire — monetization strategy (profit from lust)
     type: research
@@ -4458,7 +4418,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id048
+  - &id050
     id: unreal-engine-mcp-hermes
     title: Unreal Engine MCP for Hermes Agent — official companion skill
     type: build
@@ -4479,7 +4439,7 @@ clusters:
     cluster: creative/3d
     cluster_emoji: ''
     cluster_kind: domain
-  - &id054
+  - &id056
     id: blender-mcp-hermes
     title: Blender MCP for Hermes Agent — official + community stack
     type: build
@@ -4515,7 +4475,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id069
+  - &id071
     id: review-billings
     title: P0 — Review all recurring bills and subscriptions
     type: discuss
@@ -4543,7 +4503,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id088
+  - &id090
     id: explore-smart-internet-sites
     title: Explore fun & useful websites — AevyTV smarter internet carousel
     type: research
@@ -4573,7 +4533,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id077
+  - &id079
     id: exercises-dataset-integration
     title: Wire exercises-dataset into Health & Wellness profile
     type: build
@@ -4602,7 +4562,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id016
+  - &id018
     id: zo-attio-crm-integration
     title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
     type: build
@@ -4621,7 +4581,7 @@ clusters:
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
-  - &id002
+  - &id004
     id: agent-account-takeover-research
     title: Research agent takeover — Telegram account + WhatsApp Business account
     type: research
@@ -4716,11 +4676,49 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: ops
+  kind: domain
+  items: []
+  archive:
+  - &id001
+    id: 2026-09-12-verify-the-vault-enforcement-stack-on
+    title: Verify the vault enforcement stack on its first unattended runs
+    type: fix
+    domain: ops
+    priority: p1
+    status: done
+    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
+      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
+    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
+      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
+      rules 18 and 19.'
+    log:
+    - '2026-09-12 · claude-code · status active → done: Verified 11:00 SGT on kobo. 06:05 cron ran ok (jobs.json 590c891d042d);
+      manual re-run exits 0 - types clean, writers clean, gate canary 6/6, 23 declared commits since the cutover SHA; the
+      05:05 digest committed f87f4a8a with a correct section-8 prefix. Sunday lint had not fired yet, so instead of leaving
+      a human check pending, the failure path was made self-reporting - failure_deliver on the watchdog now routes a non-zero
+      exit straight to topic 11, proven end to end by a negative control that delivered at message_id 28143.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 0
+  total_count: 1
+  active_count: 0
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: productivity
   kind: domain
   items: []
   archive:
-  - &id078
+  - &id080
     id: sg-governance-practice-system
     title: SG Governance Thinking Practice System
     type: build
@@ -4751,7 +4749,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id085
+  - &id087
     id: sg-minister-thinking-process
     title: Study Singapore Minister Thinking Process
     type: research
@@ -4881,6 +4879,8 @@ archive:
 - *id102
 - *id103
 - *id104
-updated_at: 2026-09-12 06:30:16 SGT
-total_active: 84
-total_done: 104
+- *id105
+- *id106
+updated_at: 2026-09-12 11:30:44 SGT
+total_active: 81
+total_done: 106
