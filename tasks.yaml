@@ -627,7 +627,7 @@ clusters:
     type: build
     domain: business/build
     priority: p3
-    status: active
+    status: done
     summary: 'Build a grief management tool: private voice journal where users speak thoughts on-device. Inspired by Slate (iOS voice journal, no server, on-device reflection + weekly recaps). Key differentiator: purpose-built for grief processing, not general journaling. Voice-first, private by default, on-device AI that notices patterns in what the user repeats or shifts over time.'
     captured: 2026-07-23
     source: User idea + Slate private journal app reference - https://apps.apple.com/us/app/slate-private-journal/id6787531627
