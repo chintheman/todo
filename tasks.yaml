@@ -1226,7 +1226,7 @@ clusters:
     type: build
     domain: ai/ml
     priority: p0
-    status: active
+    status: archived
     summary: 'DeepSeek open-sourced Harness v0.1 (MIT, developer preview) — "everything is a plugin" agent runtime built on the Cordis meta-framework: model adapter, tool registry, session log, and the agent loop itself are all swappable plugins. Node.js, provider-agnostic (Anthropic/OpenAI/AWS/GCP/ DeepSeek), built-in MCP client. Test path: npx @deepseek-ai/dsh web, 4 presets (Standard/PTC/Minimal/Creation). Repo github.com/deepseek-ai/ deepseek-harness. Lead: Cui Tianyi (ex-Jane Street 9 yrs).'
     captured: 2026-08-15
     source: PA group Aug 15 2026 — P0 to test; details from AI Intel topic
