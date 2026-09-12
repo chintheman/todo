@@ -3056,7 +3056,7 @@ clusters:
     type: build
     domain: devtools
     priority: p0
-    status: active
+    status: archived
     summary: Refine the labs page / todo system so every project follows a standard lifecycle flow (research → build → publish → marketing, extendable) that keeps tasks structured. Creating a product bucket prompts a setup checklist (create Telegram topic, basic management set-ups, more TBD). Each project gets its own project manager / product manager to coordinate, keep things on track, and propose what to build next. Task itself must include research + refinement so full context is available when worked on.
     captured: 2026-08-15
     source: PA group Aug 15 2026 — P0; interview done + Phase 1 engine built
