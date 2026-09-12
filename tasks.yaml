@@ -69,6 +69,9 @@ cluster_order:
   name: business/build
   kind: domain
 - emoji: ''
+  name: infrastructure
+  kind: domain
+- emoji: ''
   name: product
   kind: domain
 - emoji: ''
@@ -4310,6 +4313,44 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: infrastructure
+  kind: domain
+  items:
+  - id: 2026-09-12-time-machine-destination-for-m1
+    title: Set up TIME MACHINE on the M1 (kobo) — it has no offsite backup at all
+    type: ops
+    domain: infrastructure
+    priority: p0
+    status: active
+    summary: 'Verified 2026-09-12 on kobo: `tmutil destinationinfo` returns ''No destinations configured'', there is no ~/Library/Mobile
+      Documents/com~apple~CloudDocs, and nothing rsyncs or uploads ~/.hermes/_backups anywhere. About 4.9 GB has no copy off
+      the machine - 4.4 GB of daily Hermes state and config tarballs, 392 MB of profiles, 50 MB of data, 30 MB of cron config,
+      3.5 MB of plugins - plus the three nightly git bundles for skills, scripts and hooks, which are the ONLY copy of those
+      repos'' history because none of the three has a remote. The bundles verified restorable at 05:20 that morning, which
+      is worth nothing if the disk dies. Only ~/wiki and ~/brain-engine are safe, via their GitHub remotes. This is why the
+      skills-repo remote decision came back as ''not yet'': a remote would protect 3.5 MB of the 4.9 GB and needs a name-scrub
+      first, while TIME MACHINE protects all of it and needs nothing.'
+    captured: '2026-09-12'
+    source: Found 2026-09-12 while deciding whether ~/.hermes/skills needs a git remote
+    gist: The M1 has zero backups leaving the machine. Attach an external drive and configure TIME MACHINE next time Chin
+      is physically at it.
+    next_step: 'Next time you are sitting at the M1: plug in an external drive, open System Settings > General > TIME MACHINE
+      > Add Backup Disk, pick the drive, turn it on. Verify afterwards with `tmutil destinationinfo`, which must stop saying
+      ''No destinations configured''.'
+    cluster: infrastructure
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 1
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+- emoji: ''
   name: product
   kind: domain
   items:
@@ -4881,6 +4922,6 @@ archive:
 - *id104
 - *id105
 - *id106
-updated_at: 2026-09-12 11:30:44 SGT
-total_active: 81
+updated_at: 2026-09-12 12:30:12 SGT
+total_active: 82
 total_done: 106
