@@ -2499,12 +2499,13 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (1 open, oldest 1d)
+    title: System issues awaiting your decision (2 open, oldest 1d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '1 unresolved system issue(s), oldest 1 day(s). Recurring failures: 📊 Spine Retrieval Benchmark (Weekly).'
+    summary: '2 unresolved system issue(s), oldest 1 day(s). Recurring failures: 📊 Spine Retrieval Benchmark (Weekly); 🔒 Model
+      Policy Audit — Weekly.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -5501,6 +5502,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 16:01:16 SGT
+updated_at: 2026-09-14 16:30:15 SGT
 total_active: 84
 total_done: 121
