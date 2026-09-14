@@ -9,6 +9,9 @@ cluster_order:
   kind: project
   prominent: true
   accent: '#5B4B8A'
+- emoji: 📐
+  name: Signal Library — tested signals
+  kind: project
 - emoji: 🧠
   name: Memory & Knowledge System
   kind: project
@@ -220,6 +223,60 @@ clusters:
   p3_count: 0
   prominent: true
   accent: '#5B4B8A'
+- emoji: 📐
+  name: Signal Library — tested signals
+  kind: project
+  items:
+  - id: signal-library-quant
+    title: Signal Library — test peer-reviewed signals on our own data (trend & carry first)
+    type: build
+    domain: crypto
+    priority: p1
+    status: active
+    summary: 'Three signal families, three survival profiles. (1) RISK PREMIA — trend/time-series momentum, carry, vol risk
+      premium. Paid because you bear risk or sell insurance, not because you predict. TSMOM (Moskowitz-Ooi-Pedersen, JFE 2012)
+      positive in ALL 58 liquid futures markets; trend-following profitable in every decade 1903-2012 across 59 markets (AQR
+      Century of Evidence); Sharpe ~0.7-0.9 gross, ~0.4-0.6 net, >1.0 in crises. Most durable public signal that exists. (2)
+      BEHAVIOURAL ANOMALIES — momentum, PEAD, reversal, value. Real and replicated (PEAD ~4.2% over 60 days post-announcement,
+      won 41 of 48 quarters 1974-85; modern post-cost lower bound ~8.76%/yr) but decaying: 10 of 12 anomalies show a significant
+      declining trend 1976-2011, now attributed mostly to falling earnings-surprise persistence rather than arbitrage alone.
+      Not a live retail edge in 2026. (3) CHART PATTERNS / TECHNICAL RULES — effectively dead. BLL 1992 found +12%/yr on the
+      Dow 1897-1986, but Bajgrowicz-Scaillet (JFE 2012) ran 7,846 rules over 1897-2011 with FDR + persistence tests: no ex-ante
+      selectable winners, no hot hands, and even in-sample performance is fully offset by low transaction costs.'
+    captured: '2026-09-14'
+    source: 'PA #15 research pass, 2026-09-14 — Chin: ''not alphas, what about repeatable tried and tested patterns and signals''.
+      Evidence base: ~/wiki/_system/pending/signal-library-quant.md'
+    notes: 'THE TAX TO BUDGET FOR: McLean-Pontiff (JF 2016), 97 published predictors — returns 26% lower out-of-sample, 58%
+      lower post-publication; declines largest for the highest in-sample performers; survivors concentrate in low-liquidity,
+      high-idiosyncratic-risk names (where costs bite hardest). CRYPTO SPECIFICALLY: Liu-Tsyvinski-Wu (JF 77(2) 2022) three-factor
+      model (market/size/momentum) captures cross-sectional crypto returns across 1,707 coins; BUT Grobys (IJFE 31(2) 2026)
+      shows crypto momentum realised variances follow power laws and the population mean/variance are statistically not defined
+      — ''in real life, we might not be able to realise these risk premiums''. Premium documented; distribution fat enough
+      that it may not be collectable. HONEST REPO: microsoft/qlib ships Alpha158/Alpha360 plus a model zoo with published
+      IC and backtest results (regenerable via run_all_model.py) — reproducible benchmarks, not promises. Cautionary live
+      result: Alpha158 + LGBModel on 15 crypto assets gave MIN10 IC +0.070 / MIN5 +0.065 (short-term reversal from intraday
+      lows) but the cross-sectional model went NEGATIVE — IC -0.052, ICIR -0.197. Equity-calibrated cross-sectional mining
+      does not transfer to a small crypto universe; go time-series and widen the universe. FILTER: before testing any signal,
+      name who pays you and why. Trend = hedgers buying risk transfer. Carry = leveraged borrowers. PEAD = slow processors
+      of earnings news (shrinking pool). Nobody pays for a triangle.'
+    gist: Build a library of documented, replicated trading signals — starting with time-series momentum (trend) and funding/basis
+      carry — where each one is validated on our own data, with costs, before any capital is involved.
+    next_step: 'Pick signal #1 — 12-1 time-series momentum on a diversified crypto basket — and build the IC + cost-aware
+      backtest against our own data. Haircut the published numbers by 26-58% (McLean-Pontiff) and require the signal to survive
+      that before anything else is added.'
+    cluster: Signal Library — tested signals
+    cluster_emoji: 📐
+    cluster_kind: project
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
 - emoji: 🧠
   name: Memory & Knowledge System
   kind: project
@@ -5502,6 +5559,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 16:30:15 SGT
-total_active: 84
+updated_at: 2026-09-14 16:55:10 SGT
+total_active: 85
 total_done: 121
