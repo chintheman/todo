@@ -88,6 +88,9 @@ cluster_order:
   name: devtools
   kind: domain
 - emoji: ''
+  name: ops
+  kind: domain
+- emoji: ''
   name: product
   kind: domain
 - emoji: ''
@@ -115,9 +118,6 @@ cluster_order:
   name: integrations
   kind: domain
 - emoji: ''
-  name: ops
-  kind: domain
-- emoji: ''
   name: productivity
   kind: domain
 - emoji: ''
@@ -134,20 +134,27 @@ clusters:
     domain: product
     priority: p0
     status: active
-    summary: 'Turn browser-use/life-recorder (MIT, commit 205617c) from a launch-day demo into a system that reliably captures
-      a life and hands it to his agents. Verified baseline: the pipeline genuinely works — 10/10 receiver tests pass, the
-      end-to-end path (certificate-pinned HTTPS upload → durable SHA-256 receipt → local Whisper → life.md → idempotent retry
-      → audio deleted only after a non-empty transcript) ran in 4.23s for an 11s clip, both iOS targets build on Xcode 26.6.
-      Five defects were reproduced, not theorised (D1-D5); the worst silently deletes audio on an empty transcript. Verdict
-      of the review: the architecture is better than the product — fix and extend, do not replace. Hardware topology is fixed
-      by consequence: iPhone 16 Plus is the sensor, the M1 (always-on, where Hermes and Claude Code live) is the primary ingest/transcription/agent-context
-      host, the M4 is an opportunistic second node. No cloud on the critical path; iCloud/Google Drive are export sinks, never
-      dependencies. Capture policy was the real design work: no content gate (a false negative loses speech permanently) —
-      capture is continuous and the user is the authority via a manual pause; VAD survives only to decide whether a minute
-      goes to Whisper, never whether it is kept; transit mode is advisory (fused motion + speed) with the latched user state
-      as authority; keyword omit/include was rejected as a capture control and parked as review/quarantine; a forget-window
-      plus `life purge` on the Mac is the mechanism that needs no detection. Power telemetry (battery, thermal, low-power
-      on every heartbeat) is a product requirement, not a one-off measurement.'
+    summary: 'EXECUTION STARTED AND IS PART DONE, 2026-09-14. Session ''M1 - Perpetual Voice Notes''; resume on the M1 with
+      `claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798`, browser https://claude.ai/code/session_01457bGVAkGHRhFuiHbVz2pf
+      (the two are NOT interchangeable; the planning session was b35a24e9-af1f-4fe7-b03f-a83fb658f0e2). Chin approved a REVISION
+      of PLAN.md, not PLAN.md: fix the Mac, make the archive findable and purgeable, wire it to the agents, then do iOS. Scope
+      was Stages 1-4; the iOS control build (widget, Control Center, Live Activities, transit) is deferred and needs an Apple
+      Development identity, a paired device and an App Group entitlement first. WHERE: fork chintheman/life-recorder at ~/repos/life-recorder
+      on the M1, branch stage1-stop-data-loss, pushed, 11 commits, 109 tests, make check green. The review clone at ~/tmp/life-recorder
+      is untouched. DONE: audio is no longer destroyed by a silent minute (empty transcripts quarantine plus a visible gap
+      marker); /health tells the truth and startup refuses a broken toolchain; setup.py no longer writes an install that cannot
+      work; append-only store with FTS5 search; retention sweeper and `life purge` as the forget-window; a liveness watchdog
+      that is silent unless something is wrong; and an iOS fix so a phone call no longer kills recording for the rest of the
+      day. NOT DONE: search CLI, read-only MCP server, iOS heartbeat, VAD transcription filter. MEASURED: per-chunk text cost
+      at 20k rows 3,495ms -> ~4ms; growth across 20x the archive 23.65x -> ~1.9x; startup at one year of chunks ~400ms ->
+      2.5ms and flat; tests 10 -> 109, with the original 10 upstream tests byte-identical. THE USEFUL LESSON: three independent
+      reviews found seven defects the original document set missed, two blocking, including receiver restarts silently erasing
+      every redaction record and `life purge` shifting its window eight hours on a +08:00 timestamp. A green suite was not
+      sufficient signal for this repo''s core guarantee. BLOCKED: the iOS simulator on the M1 is wedged (CoreSimulatorService
+      accepts writes, reports success, never executes them; reads work). Everything short of a machine restart was tried and
+      Chin ruled that out. So the iOS interruption fix compiles with two tests committed but never executed, and its real
+      question - whether iOS permits reclaiming the audio session from background after a call - is device-level and needs
+      a real iPhone regardless.'
     captured: '2026-09-13'
     source: Claude Code session 2026-09-12/13 (M1 - Perpetual Voice Notes) · X post by Magnus Müller (browser-use), 2026-09-11
       · full doc set at ~/wiki/_system/pending/life-recorder/ (7 files)
@@ -158,10 +165,21 @@ clusters:
       every acceptance test must run, never regress B §9, and stop-and-say-so if a task''s premise turns out false. Upstream:
       github.com/browser-use/life-recorder; review clone at /Users/0xsteamboat/tmp/life-recorder (do not build in it).'
     gist: 'An always-on voice recorder for his own life: the iPhone captures continuously, the M1 ingests and transcribes
-      locally, and everything lands in one searchable transcript his agents can read.'
-    next_step: 'Follow up the Claude Code session titled ''M1 - Perpetual Voice Notes'' — the plan is written and waiting
-      on his read: settle the open calls, then approve it before execution starts.'
-    session: b35a24e9-af1f-4fe7-b03f-a83fb658f0e2
+      locally, and everything lands in one searchable archive his agents can read.'
+    next_step: 'Build the search CLI (life search / day / gaps / hours) in ~/repos/life-recorder on the M1, branch stage1-stop-data-loss.
+      FTS5, days_index and the store are already built and tested, so it is the cheapest remaining item and the first that
+      makes the archive useful day to day. Then the read-only MCP server, which depends only on that query layer. RESUME THIS
+      WORK: cd ~ && claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798 (session name ''M1 - Perpetual Voice Notes''; browser
+      link https://claude.ai/code/session_01457bGVAkGHRhFuiHbVz2pf - the uuid resumes locally, the session_ form only opens
+      a tab, they are not interchangeable; the earlier PLANNING session was b35a24e9-af1f-4fe7-b03f-a83fb658f0e2). FULL HANDOVER:
+      ~/wiki/_system/pending/life-recorder/HANDOVER-2026-09-14.md'
+    session: d0f60def-2389-4de6-a014-5c3e8e06f798
+    researched: 2026-09-14
+    log:
+    - '2026-09-14 · claude-code · 2026-09-14 Claude Code (session d0f60def): executed Stages 1-2 plus S7/S9 of the approved
+      plan revision. 11 commits, 109 tests, make check green, pushed to chintheman/life-recorder branch stage1-stop-data-loss.
+      Three independent reviews; seven defects found beyond the original D1-D5. Next: search CLI, then MCP server. Handover
+      at ~/wiki/_system/pending/life-recorder/HANDOVER-2026-09-14.md'
     cluster: Perpetual Voice Notes
     cluster_emoji: 🎙️
     cluster_kind: project
@@ -4904,6 +4922,61 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: ops
+  kind: domain
+  items:
+  - id: 2026-09-14-incorporate-a-pte-ltd-before-touching
+    title: Incorporate a Pte Ltd before touching client production systems
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Chin will operate as a sole proprietor, where business debts and client claims reach his personal assets. Once
+      builds run inside a client's live systems (orders, payments, customer records), a single outage or data incident is
+      personally uncapped. Professional indemnity covers claims but not the liability structure. Cost to fix is SGD 315 to
+      incorporate, SGD 60/yr filing, SGD 300-600/yr company secretary.
+    captured: '2026-09-14'
+    source: claude-code session
+    next_step: 'Decide the trigger point: incorporate at the first T2/T3 build that touches a client''s live production system,
+      or at SGD 5,000/mo recurring, whichever comes first.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id001
+    id: 2026-09-12-verify-the-vault-enforcement-stack-on
+    title: Verify the vault enforcement stack on its first unattended runs
+    type: fix
+    domain: ops
+    priority: p1
+    status: done
+    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
+      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
+    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
+      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
+      rules 18 and 19.'
+    log:
+    - '2026-09-12 · claude-code · status active → done: Verified 11:00 SGT on kobo. 06:05 cron ran ok (jobs.json 590c891d042d);
+      manual re-run exits 0 - types clean, writers clean, gate canary 6/6, 23 declared commits since the cutover SHA; the
+      05:05 digest committed f87f4a8a with a correct section-8 prefix. Sunday lint had not fired yet, so instead of leaving
+      a human check pending, the failure path was made self-reporting - failure_deliver on the watchdog now routes a non-zero
+      exit straight to topic 11, proven end to end by a negative control that delivered at message_id 28143.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 2
+  active_count: 1
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: product
   kind: domain
   items:
@@ -5339,44 +5412,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: ops
-  kind: domain
-  items: []
-  archive:
-  - &id001
-    id: 2026-09-12-verify-the-vault-enforcement-stack-on
-    title: Verify the vault enforcement stack on its first unattended runs
-    type: fix
-    domain: ops
-    priority: p1
-    status: done
-    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
-      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
-    captured: '2026-09-12'
-    source: claude-code session
-    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
-    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
-      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
-      rules 18 and 19.'
-    log:
-    - '2026-09-12 · claude-code · status active → done: Verified 11:00 SGT on kobo. 06:05 cron ran ok (jobs.json 590c891d042d);
-      manual re-run exits 0 - types clean, writers clean, gate canary 6/6, 23 declared commits since the cutover SHA; the
-      05:05 digest committed f87f4a8a with a correct section-8 prefix. Sunday lint had not fired yet, so instead of leaving
-      a human check pending, the failure path was made self-reporting - failure_deliver on the watchdog now routes a non-zero
-      exit straight to topic 11, proven end to end by a negative control that delivered at message_id 28143.'
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 1
-  active_count: 0
-  delegated_count: 0
-  done_count: 1
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: productivity
   kind: domain
   items: []
@@ -5559,6 +5594,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 16:55:10 SGT
-total_active: 85
+updated_at: 2026-09-14 17:50:40 SGT
+total_active: 86
 total_done: 121
