@@ -2605,6 +2605,31 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-09-14-migrate-pending-decisions-into-registry
+    title: Migrate pending-decisions.md into the registry before sync-task-registry.py is repaired
+    type: build
+    domain: devops
+    priority: p2
+    status: active
+    summary: 'sync-task-registry.py has crashed on every run since task-registry.yaml gained its `tasks:` wrapper - load_registry()
+      returns the mapping, callers iterate it, and get the string ''tasks'' instead of a task. That is why projects.md has
+      been stale since June. The one-line fix is correct and destructive: verified 2026-09-14 that applying it rewrites pending-decisions.md
+      from 142 lines to 11, because build_decisions() selects source == ''Decision'' and no current registry task carries
+      that source. Roughly 25 open decisions, some P0, dating to June, exist only in that markdown file. The script runs under
+      context-digest every 2h, so a naive fix ships the deletion on the next tick. The fix was applied, verified destructive,
+      and reverted; a warning now sits in the script''s own docstring. Order matters: migrate the content first, repair the
+      script second.'
+    captured: '2026-09-14'
+    source: Claude Code session 2026-09-14 (M1 - Perpetual Voice Notes), found while chasing why the task board had not refreshed
+    notes: 'Sequence, not a preference: repairing the script before migrating deletes the data it is meant to publish.'
+    gist: About 25 still-open decisions live only in pending-decisions.md, and the script that regenerates that file would
+      delete them the moment it is fixed.
+    next_step: Read ~/wiki/_system/pending-decisions.md and decide, per row, whether it is still live. Move the live ones
+      into task-registry.yaml as tasks (the renderer selects source == 'Decision'), then repair load_registry() in ~/.hermes/scripts/sync-task-registry.py,
+      which currently returns the whole document instead of doc['tasks'] and so crashes on every run.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-14-nine-uncommitted-files-sit-in-two
     title: Nine uncommitted files sit in two hermes-agent checkouts
     type: decision
@@ -2943,14 +2968,14 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 9
-  total_count: 21
-  active_count: 9
+  count: 10
+  total_count: 22
+  active_count: 10
   delegated_count: 0
   done_count: 12
   p0_count: 1
   p1_count: 4
-  p2_count: 3
+  p2_count: 4
   p3_count: 1
 - emoji: ''
   name: career
@@ -5587,6 +5612,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 17:54:42 SGT
-total_active: 86
+updated_at: 2026-09-14 18:10:19 SGT
+total_active: 87
 total_done: 121
