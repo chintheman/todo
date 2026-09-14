@@ -2498,6 +2498,21 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: system-issues-open
+    title: System issues awaiting your decision (1 open, oldest 1d)
+    type: discuss
+    domain: devops
+    priority: p1
+    status: active
+    summary: '1 unresolved system issue(s), oldest 1 day(s). Recurring failures: 📊 Spine Retrieval Benchmark (Weekly).'
+    captured: 2026-09-14
+    source: system-topic-triage cron
+    notes: Written by issue_escalate.py. Closes itself when the queue empties.
+    gist: The queue of unresolved watchdog findings and unanswered asks, with ages.
+    next_step: Decide the oldest item below.
+    cluster: devops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: seven-free-repos-sell-services
     title: Explore 7 free OSS repos as sellable services (sebastianhardy_ carousel)
     type: research
@@ -2859,13 +2874,13 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 8
-  total_count: 20
-  active_count: 8
+  count: 9
+  total_count: 21
+  active_count: 9
   delegated_count: 0
   done_count: 12
   p0_count: 1
-  p1_count: 3
+  p1_count: 4
   p2_count: 3
   p3_count: 1
 - emoji: ''
@@ -5486,6 +5501,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 14:30:33 SGT
-total_active: 83
+updated_at: 2026-09-14 16:01:16 SGT
+total_active: 84
 total_done: 121
