@@ -2527,27 +2527,27 @@ clusters:
     domain: devops
     priority: p2
     status: active
-    summary: 'Reviewed file by file on 2026-09-14 so this is a decision rather than archaeology. SEVEN LOOK FINISHED, tests
-      pass where tests exist, no TODOs, debug prints or half-applied edits anywhere in the nine. In ~/.hermes/hermes-agent:
-      context_compressor.py and test_proactive_tool_result_pruning.py are today''s failure-guard work, independently reviewed
-      and verified (11/11); usage_pricing.py is a one-line model-alias addition with its test passing (50/50). In ~/repos/hermes-agent:
-      install-e2e.yml is a one-line change matching the existing pattern; dev-sandbox.sh is clean but has no test; tools/memory_tool.py
-      and test_memory_tool.py pass 45/45. ONE IS A REPO BUG, NOT A DECISION. contributors/emails/agent@agents-Mac-mini.local:
-      origin/main tracks BOTH agent@Agents-Mac-mini.local and agent@agents-Mac-mini.local. On a case-insensitive macOS filesystem
-      only one can exist on disk, and only the lowercase one does. A first review claimed main had deleted this file twice;
-      that is wrong, main still tracks both. Editing either side does not fix the collision. TWO ARE ON THE WRONG BRANCH.
-      tools/memory_tool.py and its test concern near-duplicate detection, unrelated to anything else here. Note the branch
-      fix/contributor-map-ctchuang87-gmail carries 5 commits and every one is ADHD output-rules work, so the branch name matches
-      only the uncommitted contributors edit. That edit looks like the branch''s original purpose, abandoned mid-way when
-      the ADHD work took over the same branch. Why this cannot sit forever: hermes update autostashes local changes. Four
-      such stashes from June and July already exist, exported to ~/.hermes/backups/hermes-agent-secure/.'
+    summary: 'Closed 2026-09-14. All nine files accounted for. FOUR COMMITTED AND PUSHED in ~/.hermes/hermes-agent, as two
+      separate commits: the failure-preservation guard with its two regression tests (proven to fail without the fix), and
+      the deepseek-v4-flash-vision-exp pricing alias. Both had passed an independent review. TWO MOVED to their own branch
+      feat/memory-tool-near-dup-detection and pushed: tools/memory_tool.py and its test, 45/45 passing. They were parked on
+      a branch whose five commits are all ADHD output-rules work, unrelated to memory tooling. ONE WAS A REPO BUG, not a file
+      edit. Both cased variants of contributors/emails/agent@[Aa]gents-Mac-mini.local were tracked, which cannot coexist on
+      a case-insensitive filesystem. Fixed on branch fix/contributor-case-collision-match-upstream by dropping the uppercase
+      index entry with git rm --cached, matching what upstream already decided. The local one-line edit was discarded (preserved
+      as a patch in ~/.hermes/backups/hermes-agent-secure/) because it rewrote a real contributor identity while leaving both
+      paths tracked. TWO WERE NEVER UNCOMMITTED WORK. .github/workflows/install-e2e.yml and scripts/dev-sandbox.sh are byte-identical
+      to origin/main. The 429 retry and max-parallel fix they contain was committed on 2026-09-09 as d50d86ad29. They read
+      as modified only because the current branch predates that commit. Also done: upstream was added as a remote to ~/repos/hermes-agent,
+      which had none. The fork is 10,888 commits behind and every upstream fix was previously unreachable from that checkout.
+      Known future conflict: upstream commit ea4cd375f8 retired the bubblewrap sandbox and rewrote install-e2e.yml''s job
+      structure, so the 429 work will need re-solving against the new shape whenever the fork catches up.'
     captured: '2026-09-14'
     source: Claude Code session 2026-09-13, harness upgrade
-    gist: Nine uncommitted files across two hermes-agent checkouts; seven look finished, one is a repo bug, two are parked
-      on the wrong branch.
-    next_step: Commit the four in ~/.hermes/hermes-agent; they are verified and reviewed. For ~/repos/hermes-agent, move the
-      memory_tool pair to their own branch, and treat the case-collision as its own small fix rather than a file edit, since
-      both cased paths are tracked upstream.
+    gist: 'Resolved. All nine accounted for: four committed, two rebranched, one repo bug fixed, two were never uncommitted
+      work.'
+    next_step: Nothing required. When the fork eventually syncs with upstream, expect the 429 retry work to conflict and need
+      re-implementing against upstream's rewritten workflow and sandbox script.
     researched: 2026-09-14
     cluster: devops
     cluster_emoji: ''
@@ -5486,6 +5486,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 11:30:28 SGT
+updated_at: 2026-09-14 14:30:33 SGT
 total_active: 83
 total_done: 121
