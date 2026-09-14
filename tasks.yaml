@@ -134,27 +134,24 @@ clusters:
     domain: product
     priority: p0
     status: active
-    summary: 'EXECUTION STARTED AND IS PART DONE, 2026-09-14. Session ''M1 - Perpetual Voice Notes''; resume on the M1 with
-      `claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798`, browser https://claude.ai/code/session_01457bGVAkGHRhFuiHbVz2pf
-      (the two are NOT interchangeable; the planning session was b35a24e9-af1f-4fe7-b03f-a83fb658f0e2). Chin approved a REVISION
-      of PLAN.md, not PLAN.md: fix the Mac, make the archive findable and purgeable, wire it to the agents, then do iOS. Scope
-      was Stages 1-4; the iOS control build (widget, Control Center, Live Activities, transit) is deferred and needs an Apple
-      Development identity, a paired device and an App Group entitlement first. WHERE: fork chintheman/life-recorder at ~/repos/life-recorder
-      on the M1, branch stage1-stop-data-loss, pushed, 11 commits, 109 tests, make check green. The review clone at ~/tmp/life-recorder
-      is untouched. DONE: audio is no longer destroyed by a silent minute (empty transcripts quarantine plus a visible gap
-      marker); /health tells the truth and startup refuses a broken toolchain; setup.py no longer writes an install that cannot
-      work; append-only store with FTS5 search; retention sweeper and `life purge` as the forget-window; a liveness watchdog
-      that is silent unless something is wrong; and an iOS fix so a phone call no longer kills recording for the rest of the
-      day. NOT DONE: search CLI, read-only MCP server, iOS heartbeat, VAD transcription filter. MEASURED: per-chunk text cost
-      at 20k rows 3,495ms -> ~4ms; growth across 20x the archive 23.65x -> ~1.9x; startup at one year of chunks ~400ms ->
-      2.5ms and flat; tests 10 -> 109, with the original 10 upstream tests byte-identical. THE USEFUL LESSON: three independent
-      reviews found seven defects the original document set missed, two blocking, including receiver restarts silently erasing
-      every redaction record and `life purge` shifting its window eight hours on a +08:00 timestamp. A green suite was not
-      sufficient signal for this repo''s core guarantee. BLOCKED: the iOS simulator on the M1 is wedged (CoreSimulatorService
-      accepts writes, reports success, never executes them; reads work). Everything short of a machine restart was tried and
-      Chin ruled that out. So the iOS interruption fix compiles with two tests committed but never executed, and its real
-      question - whether iOS permits reclaiming the audio session from background after a call - is device-level and needs
-      a real iPhone regardless.'
+    summary: 'RESUME: cd ~ && claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798 (session ''M1 - Perpetual Voice Notes'').
+      HANDOVER: ~/wiki/_system/pending/life-recorder/HANDOVER-2026-09-14.md. CODE: ~/repos/life-recorder on the M1, branch
+      stage1-stop-data-loss, pushed to chintheman/life-recorder. Browser link https://claude.ai/code/session_01457bGVAkGHRhFuiHbVz2pf
+      opens a tab only; the uuid above is the one that resumes. Planning session was b35a24e9-af1f-4fe7-b03f-a83fb658f0e2.
+      STATE, 2026-09-14: Stages 1-2 of the approved plan revision are built, reviewed and pushed, plus the iOS interruption
+      fix and the liveness watchdog. 11 commits, 109 tests, make check green. DONE: audio is no longer destroyed by a silent
+      minute (empty transcripts quarantine plus a visible gap marker); /health tells the truth and startup refuses a broken
+      toolchain; setup.py no longer writes an install that cannot work; append-only store with FTS5 search; retention sweeper
+      and `life purge` as the forget-window; a watchdog that is silent unless something is wrong; and a fix so a phone call
+      no longer kills recording for the rest of the day. NOT DONE: search CLI, MCP server, iOS heartbeat, VAD transcription
+      filter. MEASURED: per-chunk text cost at 20k rows 3,495ms to ~4ms; growth across 20x the archive 23.65x to ~1.9x; startup
+      at one year of chunks ~400ms to 2.5ms and flat; tests 10 to 109, the original 10 upstream tests byte-identical. WHAT
+      THIS RUN TAUGHT: three independent reviews found seven defects the original document set missed, two blocking, including
+      receiver restarts silently erasing every redaction record and `life purge` shifting its window eight hours on a +08:00
+      timestamp. A green suite was not sufficient signal for this repo''s core guarantee. BLOCKED: the iOS simulator on the
+      M1 is wedged - CoreSimulatorService accepts writes, reports success, never executes them. Everything short of a machine
+      restart was tried. So the interruption fix compiles with two tests committed but never executed, and its real question
+      - whether iOS permits reclaiming the audio session from background after a call - needs a real iPhone regardless.'
     captured: '2026-09-13'
     source: Claude Code session 2026-09-12/13 (M1 - Perpetual Voice Notes) · X post by Magnus Müller (browser-use), 2026-09-11
       · full doc set at ~/wiki/_system/pending/life-recorder/ (7 files)
@@ -166,13 +163,9 @@ clusters:
       github.com/browser-use/life-recorder; review clone at /Users/0xsteamboat/tmp/life-recorder (do not build in it).'
     gist: 'An always-on voice recorder for his own life: the iPhone captures continuously, the M1 ingests and transcribes
       locally, and everything lands in one searchable archive his agents can read.'
-    next_step: 'Build the search CLI (life search / day / gaps / hours) in ~/repos/life-recorder on the M1, branch stage1-stop-data-loss.
-      FTS5, days_index and the store are already built and tested, so it is the cheapest remaining item and the first that
-      makes the archive useful day to day. Then the read-only MCP server, which depends only on that query layer. RESUME THIS
-      WORK: cd ~ && claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798 (session name ''M1 - Perpetual Voice Notes''; browser
-      link https://claude.ai/code/session_01457bGVAkGHRhFuiHbVz2pf - the uuid resumes locally, the session_ form only opens
-      a tab, they are not interchangeable; the earlier PLANNING session was b35a24e9-af1f-4fe7-b03f-a83fb658f0e2). FULL HANDOVER:
-      ~/wiki/_system/pending/life-recorder/HANDOVER-2026-09-14.md'
+    next_step: 'Build the search CLI (life search / day / gaps / hours), then the read-only MCP server. The FTS5 index and
+      the store are already built and tested, so it is the cheapest remaining item and the first that makes the archive useful
+      day to day. Resume with: cd ~ && claude --resume d0f60def-2389-4de6-a014-5c3e8e06f798'
     session: d0f60def-2389-4de6-a014-5c3e8e06f798
     researched: 2026-09-14
     log:
@@ -5594,6 +5587,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 17:50:40 SGT
+updated_at: 2026-09-14 17:54:42 SGT
 total_active: 86
 total_done: 121
