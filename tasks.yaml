@@ -2527,13 +2527,28 @@ clusters:
     domain: devops
     priority: p2
     status: active
-    summary: Four modified files in ~/.hermes/hermes-agent and five in ~/repos/hermes-agent, uncommitted. hermes update autostashes
-      local changes (four such stashes already exist dating to June), so this work can vanish silently on the next update.
-      Secured as patches in ~/.hermes/backups/hermes-agent-secure/ but not resolved.
+    summary: 'Reviewed file by file on 2026-09-14 so this is a decision rather than archaeology. SEVEN LOOK FINISHED, tests
+      pass where tests exist, no TODOs, debug prints or half-applied edits anywhere in the nine. In ~/.hermes/hermes-agent:
+      context_compressor.py and test_proactive_tool_result_pruning.py are today''s failure-guard work, independently reviewed
+      and verified (11/11); usage_pricing.py is a one-line model-alias addition with its test passing (50/50). In ~/repos/hermes-agent:
+      install-e2e.yml is a one-line change matching the existing pattern; dev-sandbox.sh is clean but has no test; tools/memory_tool.py
+      and test_memory_tool.py pass 45/45. ONE IS A REPO BUG, NOT A DECISION. contributors/emails/agent@agents-Mac-mini.local:
+      origin/main tracks BOTH agent@Agents-Mac-mini.local and agent@agents-Mac-mini.local. On a case-insensitive macOS filesystem
+      only one can exist on disk, and only the lowercase one does. A first review claimed main had deleted this file twice;
+      that is wrong, main still tracks both. Editing either side does not fix the collision. TWO ARE ON THE WRONG BRANCH.
+      tools/memory_tool.py and its test concern near-duplicate detection, unrelated to anything else here. Note the branch
+      fix/contributor-map-ctchuang87-gmail carries 5 commits and every one is ADHD output-rules work, so the branch name matches
+      only the uncommitted contributors edit. That edit looks like the branch''s original purpose, abandoned mid-way when
+      the ADHD work took over the same branch. Why this cannot sit forever: hermes update autostashes local changes. Four
+      such stashes from June and July already exist, exported to ~/.hermes/backups/hermes-agent-secure/.'
     captured: '2026-09-14'
     source: Claude Code session 2026-09-13, harness upgrade
-    next_step: Decide per file whether it is work-in-progress or finished. The compressor and usage_pricing changes passed
-      an independent code review on 2026-09-13 and look landable; the rest need your call.
+    gist: Nine uncommitted files across two hermes-agent checkouts; seven look finished, one is a repo bug, two are parked
+      on the wrong branch.
+    next_step: Commit the four in ~/.hermes/hermes-agent; they are verified and reviewed. For ~/repos/hermes-agent, move the
+      memory_tool pair to their own branch, and treat the case-collision as its own small fix rather than a file edit, since
+      both cased paths are tracked upstream.
+    researched: 2026-09-14
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -2560,15 +2575,27 @@ clusters:
     domain: devops
     priority: p3
     status: active
-    summary: hermes-skill-template prescribes extracting deterministic rules into a tested engine module rather than leaving
-      them as prose in SKILL.md. 78 of 237 skills are over 250 lines, led by devops/gateway-health at 1737 and finance/dcf-model
-      at 1273. Prose rules have a non-zero failure rate where an engine module does not, and an oversized SKILL.md costs its
-      full body on every invocation.
+    summary: 'Corrected 2026-09-14 after a first attempt picked the wrong target. The count holds: 77 ROUTABLE skills exceed
+      250 lines. A further 13 large SKILL.md files live inside references/, templates/, assets/ or scripts/ and are NOT skills
+      at all: prompt_builder prunes those directory names once inside a folder that has its own SKILL.md, so they never enter
+      the routable manifest and never auto-load. Any census using a bare rglob for SKILL.md conflates the two. devops/gateway-health
+      was the original target and is one of the 13. It was absorbed into gateway-troubleshooting on 2026-08-23 and now sits
+      at references/gateway-health/SKILL.md, read only on demand when the parent skill points at it. The template''s extraction
+      rationale (a prose rule that can drift, or a sequence the model must follow across many steps, silently producing a
+      wrong answer) does not apply to a file that is never in context by default. It also already has the split for its one
+      live piece: scripts/dashboard-nightly-restart.sh backs cron 76db45928794, enabled, 75 runs. Better first target: finance/dcf-model
+      at 1273 lines. A discounted cash flow model is deterministic arithmetic, which is the clearest possible case for a tested
+      engine module rather than prose the model re-derives each time. Largest routable overall is elfa-ai at 1745, but it
+      is live trading code edited recently and a poor choice for a first proof. Incidental find: scripts/gateway-investigator.py
+      claims in its own docstring to be invoked by cron c8bb37b9ecd3, which does not exist in jobs.json. Dead code with a
+      stale claim.'
     captured: '2026-09-14'
     source: Claude Code session 2026-09-13, harness upgrade
-    next_step: 'Start with devops/gateway-health (1737 lines): identify which parts are deterministic sequence versus judgment,
-      and extract only the deterministic half into an engine module with tests. One skill is a real proof of value before
-      committing to 78.'
+    gist: 77 routable skills are over 250 lines and hold deterministic rules as prose rather than tested code.
+    next_step: Start with finance/dcf-model (1273 lines). Identify the arithmetic that must be exact, extract only that into
+      an engine module with tests, and leave the judgment about assumptions as prose. One skill proves or disproves the value
+      before committing to 77.
+    researched: 2026-09-14
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
@@ -4860,14 +4887,20 @@ clusters:
     domain: web
     priority: p3
     status: active
-    summary: ~/projects/personal-website and ~/projects/personal-site share one GitHub repo history but are different codebases,
-      Next.js and Astro, diverged by 22 commits. Two live scripts hardcode the Astro path. The 22 commits (Astro scaffold,
-      103 Ghost theme design references, CSS design systems from seven template suites) were pushed to branch astro-site on
-      2026-09-13 so nothing is at risk, but the ambiguity means an agent can open the wrong one.
+    summary: 'Premise corrected 2026-09-14. The live site at 0xsteamboat.me is served from ~/repos/0xsteamboat-me (committed
+      2026-09-13, index.html title matches what Cloudflare serves). Neither ~/projects/personal-website (Next.js, 2 commits,
+      last touched 2026-06-19) nor ~/projects/personal-site (Astro, 22 commits, 2026-06-12) is canonical for anything. They
+      are abandoned experiments that happen to share a GitHub repo history, which is why a duplicate-checkout scan surfaced
+      them as a pair. Nothing is at risk: the Astro side''s 22 commits, including a 103-item Ghost theme design reference
+      library and CSS design systems extracted from seven template suites, were pushed to branch astro-site on 2026-09-13.
+      Two scripts, write-site-feeds.py and .sh, still hardcode ~/projects/personal-site, but no cron currently invokes them.
+      Separate and more current: ~/repos/0xsteamboat-me has 3 uncommitted files in the repo that serves the live site.'
     captured: '2026-09-14'
     source: Claude Code session 2026-09-13, harness upgrade
-    next_step: Say which is canonical. If Next.js wins, repoint write-site-feeds.py and .sh off ~/projects/personal-site;
-      if Astro wins, the Next.js copy is the stale one.
+    gist: Two abandoned June site experiments, neither of which is the live site.
+    next_step: Decide whether the two June experiments are worth keeping on disk at all, given the design library is already
+      safe on a branch. Then look at the 3 uncommitted files in ~/repos/0xsteamboat-me, which is the repo that actually matters.
+    researched: 2026-09-14
     cluster: web
     cluster_emoji: ''
     cluster_kind: domain
@@ -5433,6 +5466,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 00:30:49 SGT
+updated_at: 2026-09-14 10:31:03 SGT
 total_active: 83
 total_done: 121
