@@ -3383,16 +3383,36 @@ clusters:
     domain: crypto
     priority: p2
     status: active
-    summary: 'AI investment system built in Claude Code: research markets/earnings/news/ macro (200+ data sources), analyze
-      + rank opportunities, build diversified portfolio, manage position size/exposure/drawdown, real-time monitoring, rebalance,
-      performance tracking. Loop: Research → Analyze → Allocate → Manage → Rebalance → Compound.'
+    summary: 'EVALUATED 2026-09-14 (requested by Chin). What it actually is: the post claims ''I BUILT AN AI HEDGE FUND ...
+      it manages every position'' and gates the setup behind commenting HEDGE, while the same account''s other posts credit
+      ''a new GitHub repo'' / ''someone built an open source AI hedge fund'' — i.e. virattt/ai-hedge-fund (MIT, 63.4k stars,
+      11.1k forks, last commit 2026-09-03) and forks, most runnable being NamanVinayak/claude-code-hedge-fund (MIT, pushed
+      2026-09-14; free data via yfinance + SEC EDGAR + Finnhub free tier, run as Claude Code commands). Claim audit: ''12-person
+      team'' = actually 6 LLM persona signals (Buffett, Munger, Graham, Lynch, Druckenmiller, PEAD) + 4 mandates — inflated.
+      ''200+ data sources'' appears nowhere in the caption and upstream depends on ONE paid provider (financialdatasets.ai)
+      + an LLM key — unverified, likely conflated with unrelated marketing copy. ''Manages every position'' = FALSE: the only
+      broker implemented is brokers/sim.py (simulated); the README states educational purposes only, not for real trading.
+      Risk sizing and the mandate/backtest-with-benchmark harness ARE real and verified in source. Performance: the one independent
+      blind test of a comparable persona build returned -2.89% vs S&P -3.90% for a quarter (beat the index by ~1.1pt, trailed
+      hedge-fund indices by ~2.46pt) — no evidence of edge. Cost: DM''d setup unknown/funnel-gated; upstream needs a paid
+      data key + LLM key; the fork runs on an existing Claude Code subscription with free data. VERDICT: NO-GO on the offer
+      (@seb.ai), GO narrow on the engineering reference — lift the mandate/backtest harness and the risk gate; skip the persona
+      layer (independently criticised as ''LLM cosplay — cost without signal''). Full report: _system/pending/claude-code-ai-hedge-fund-evaluation.md'
     captured: 2026-08-07
     source: Instagram — @seb.ai — https://www.instagram.com/p/Dbjq4LVmDGi/
     notes: Maps to crypto quant + market-intel pipeline + prediction ledger. 2.4K likes / 1.9K comments. Setup gated behind
       commenting "HEDGE". Creator includes risk disclaimer (backtest/paper-trade first). The research-queue + ranking + position-management
       decomposition is the pattern worth extracting for the quant stack.
-    gist: A research and risk system for investing, built in Claude Code, to mine for quant patterns.
-    next_step: Extract the research-queue and ranking pattern into the quant stack design.
+    gist: 'Evaluation of the @seb.ai ''AI Hedge Fund OS'' claim set: it repackages the open-source virattt/ai-hedge-fund (MIT).
+      No live execution, no track record; the offer itself is funnel-gated.'
+    next_step: Decide whether to lift the mandate + backtest harness (and the pre-sizing risk gate) from the MIT repos into
+      the quant stack — that is the only part worth taking; nothing else from this source.
+    researched: 2026-09-14
+    log:
+    - '2026-09-14 · hermes · Evaluated (PA #15, requested by Chin): traced to virattt/ai-hedge-fund + NamanVinayak fork, audited
+      8 claims against source, no install performed. Verdict: NO-GO on the funnel offer, GO narrow on the mandate/backtest
+      harness. Report filed at _system/pending/claude-code-ai-hedge-fund-evaluation.md. Corrected the entry''s ''200+ data
+      sources'' claim, which is not in the source post.'
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
@@ -5466,6 +5486,6 @@ archive:
 - *id119
 - *id120
 - *id121
-updated_at: 2026-09-14 10:31:03 SGT
+updated_at: 2026-09-14 11:30:28 SGT
 total_active: 83
 total_done: 121
