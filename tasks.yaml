@@ -522,7 +522,7 @@ clusters:
     type: discuss
     domain: gtm
     priority: p0
-    status: active
+    status: archived
     summary: 'Weekly portfolio digest cron: reads the concierge data layer across all clients — brief presence, strategy counts, campaign statuses (active/completed/planned) — and delivers a scannable summary to the working chat. The concierge has no scheduler of its own; Hermes cron supplies the cadence. Part of Route A ops ring.'
     captured: 2026-08-18
     source: Telegram Aug 18 2026 — Hermes bot-mode application discussion
