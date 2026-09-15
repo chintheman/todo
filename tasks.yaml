@@ -88,6 +88,9 @@ cluster_order:
   name: devtools
   kind: domain
 - emoji: ''
+  name: health
+  kind: domain
+- emoji: ''
   name: ops
   kind: domain
 - emoji: ''
@@ -110,9 +113,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: general
-  kind: domain
-- emoji: ''
-  name: health
   kind: domain
 - emoji: ''
   name: integrations
@@ -1729,6 +1729,41 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
+  - id: build-scoping-hygiene
+    title: 'Build scoping hygiene: AI-boundary decisions table, effort stamping, demo-build standard'
+    type: build
+    domain: ai/ml
+    priority: p1
+    status: active
+    summary: 'Four findings that survived review of 5 community decks (46 ideas extracted, 34 rejected as already in the stack).
+      (1) F4.1 [H, 1h] AI-placement decisions table argued before code — deck 4 p.4: ''The first hour of the HRM was a decisions
+      table, argued in a chat before a single file existed.'' This is the stack''s own build standard 1 (deterministic beats
+      probabilistic — choose the enforcement layer deliberately) applied at scoping time instead of code time. Add as a section
+      in master-project-brief + the spec template. (2) F3.1 [M, 1h] Stamp every build with hours / prompt count / model —
+      deck 3 p.4 (''4h total time / 14 total prompts / Opus 5 model''). The registry tracks priority and status but no effort,
+      so micro-app scope is guesswork. (3) F4.4 [M, 1h] Seed-and-swap demo builds — deck 4 p.2: ''the client builds as demo
+      environments with mock data, never a customer''s live system.'' Add a demo-build section with the three-file data-layer
+      rule to the client project brief. (4) F1.2 [M, 2h] Record your own manual run and hand the recording to the agent as
+      the build spec — deck 1 p.4: ''A screen recording of the real process gave the AI far more to work with than a written
+      description alone.'' Cheap to test on one recurring process.'
+    captured: '2026-09-15'
+    source: Claude SG showcase decks, 2026-09-15 — consolidated review at ~/wiki/_system/pending/sg-decks-2026-09-15/CONSOLIDATED.md
+      (deck 4 = Freddy Lim, deck 3 = Serene Gan, deck 1 = Zheng Peng)
+    notes: 'Why bundled: all four are process upgrades to the same surface (how a build is scoped, stamped and demonstrated),
+      each 1-2h, none requiring new infrastructure. Total about 5h for all four. Unfiled from the same review, still in the
+      ranked table of CONSOLIDATED.md awaiting a go: F4.3 generate-once-then-freeze (2h), F4.2 solver-computes-model-narrates
+      decision cards (3h), F5.1 ack-gated escalation reminders (2h), F5.2 derived agent status (4h), F1.1 cross-artefact contradiction
+      flag (6h), F1.3 operator-built delivery model (8h), F4.5 capped free-build offer (3h). Evidence discipline: every finding
+      carries a verbatim quote and page reference in deck-4-findings.md and deck-1-findings.md. Rejected on conflict, not
+      merit: deck 2''s ''invert the model selection'' contradicts the standing model policy (DeepSeek v4 Flash everywhere).'
+    gist: Four cheap process upgrades taken from the Claude SG showcase decks — argue where AI goes before writing code, stamp
+      every build with hours/prompts/model, build client demos on seeded mock data, and use a screen recording of your own
+      manual run as the build spec.
+    next_step: Add an AI-boundary decisions-table section to master-project-brief and the spec template (about 1h), then stamp
+      the next build with hours / prompt count / model in the closing note.
+    cluster: ai/ml
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: profile-isolation-deep-dive
     title: 'Discuss: Hermes profile isolation — config-level vs dedicated bot token'
     type: discuss
@@ -2469,13 +2504,13 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  count: 10
-  total_count: 38
-  active_count: 10
+  count: 11
+  total_count: 39
+  active_count: 11
   delegated_count: 0
   done_count: 28
   p0_count: 2
-  p1_count: 3
+  p1_count: 4
   p2_count: 4
   p3_count: 1
 - emoji: ''
@@ -5007,6 +5042,61 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
+  name: health
+  kind: domain
+  items:
+  - id: coach-intervention-ledger
+    title: 'Coaching: tried-and-dropped intervention ledger in the client charter'
+    type: build
+    domain: health
+    priority: p2
+    status: active
+    summary: 'Deck 2 p.3: ''What you are trying to improve, why it matters to you, and what you have already tried and dropped.''
+      The client charter (coach-relationship skill) currently holds goals, constraints, working agreement, injury and cadence
+      — but no record of interventions tried and dropped. commitments.json tracks commitment outcomes (met / missed / renegotiated),
+      not intervention identity plus observed effect, which is what the protocol recommender in sleep-coach needs to avoid
+      re-suggesting a failed intervention. Upgrade, value M, effort about 2h. Note this is the only finding from deck 2 that
+      survived; the deck was slideware (no code, no repo, no metric) and 12 of its 13 ideas were rejected against existing
+      stack items.'
+    captured: '2026-09-15'
+    source: Claude SG showcase decks, 2026-09-15 — deck 2 (Sourabh Sharma) p.3, filed in ~/wiki/_system/pending/sg-decks-2026-09-15/deck-2-findings.md
+    notes: 'Evidence discipline: the quote is author-claims only, with no artefact behind it — the value rests on the audit
+      of the live stack (charter vs commitments.json vs the recommender), not on anything the deck demonstrates. Related but
+      distinct: F4.3 generate-once-then-freeze, which is the same principle (state computed, not re-derived) applied to cron
+      artefacts.'
+    gist: Record every intervention already tried with its outcome somewhere the protocol recommender can read it, so the
+      coach stops suggesting what has already failed for that client.
+    next_step: Add interventions_tried[] to client-charter.json plus its schema validator and a test, then have sleep-coach's
+      protocol recommender read it before suggesting anything.
+    cluster: health
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id095
+    id: exercises-dataset-integration
+    title: Wire exercises-dataset into Health & Wellness profile
+    type: build
+    domain: health
+    priority: p3
+    status: done
+    summary: Fully integrated into H&W profile — CrewAI-compatible exercise_tools.py (search, alternatives, random, list),
+      CLI via exercise-query, skill updated with dedicated Exercise Reference Library section + CrewAI @tool examples.
+    captured: '2026-07-03'
+    source: hasaneyldrm/exercises-dataset GitHub
+    completed: 2026-07-04
+    cluster: health
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 1
+  total_count: 2
+  active_count: 1
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
+- emoji: ''
   name: ops
   kind: domain
   items:
@@ -5350,35 +5440,6 @@ clusters:
   p2_count: 0
   p3_count: 0
 - emoji: ''
-  name: health
-  kind: domain
-  items: []
-  archive:
-  - &id095
-    id: exercises-dataset-integration
-    title: Wire exercises-dataset into Health & Wellness profile
-    type: build
-    domain: health
-    priority: p3
-    status: done
-    summary: Fully integrated into H&W profile — CrewAI-compatible exercise_tools.py (search, alternatives, random, list),
-      CLI via exercise-query, skill updated with dedicated Exercise Reference Library section + CrewAI @tool examples.
-    captured: '2026-07-03'
-    source: hasaneyldrm/exercises-dataset GitHub
-    completed: 2026-07-04
-    cluster: health
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 0
-  total_count: 1
-  active_count: 0
-  delegated_count: 0
-  done_count: 1
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 0
-- emoji: ''
   name: integrations
   kind: domain
   items: []
@@ -5681,6 +5742,6 @@ archive:
 - *id121
 - *id122
 - *id123
-updated_at: 2026-09-15 12:01:34 SGT
-total_active: 87
+updated_at: 2026-09-15 18:01:51 SGT
+total_active: 89
 total_done: 123
