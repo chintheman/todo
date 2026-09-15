@@ -3007,9 +3007,9 @@ clusters:
       If Prep Course 3 or 4 contradicts an INFERRED key, the course wins and the item is patched.'
     gist: First task in the CCAP chain. Two items per domain, confidence-labelled; the output is a heatmap and a study order,
       not a score.
-    next_step: Sit baseline-diagnostic-v2.md (14 items, answer as '1B sure, 2C guess'), then grade into the four buckets and
-      rank the study order by weakness x domain weight (D3 19, D1 17, D4 16, D5 14, D6 14, D2 13, D7 7). On close, spawn the
-      successor with the handoff written into its next_step.
+    next_step: Sit baseline-diagnostic-v2.1.md (14 items, answer as '1B sure, 2C guess'), then grade into the four buckets
+      and rank the study order by weakness x domain weight (D3 19, D1 17, D4 16, D5 14, D6 14, D2 13, D7 7). On close, spawn
+      the successor with the handoff written into its next_step.
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
@@ -5646,6 +5646,6 @@ archive:
 - *id121
 - *id122
 - *id123
-updated_at: 2026-09-15 11:21:15 SGT
+updated_at: 2026-09-15 11:30:00 SGT
 total_active: 86
 total_done: 123
