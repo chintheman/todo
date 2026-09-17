@@ -76,6 +76,9 @@ cluster_order:
   name: infrastructure
   kind: domain
 - emoji: ''
+  name: web
+  kind: domain
+- emoji: ''
   name: creative
   kind: domain
 - emoji: ''
@@ -98,9 +101,6 @@ cluster_order:
   kind: domain
 - emoji: ''
   name: tooling
-  kind: domain
-- emoji: ''
-  name: web
   kind: domain
 - emoji: ''
   name: business
@@ -4488,6 +4488,79 @@ clusters:
   p2_count: 0
   p3_count: 1
 - emoji: ''
+  name: web
+  kind: domain
+  items:
+  - id: 2026-09-17-three-work-links-drop-a-reader
+    title: Three WORK links drop a reader out of the dark sector onto cream pages
+    type: decision
+    domain: web
+    priority: p1
+    status: active
+    summary: The v5 sector cannot become the front door while its own content links break the design. WORK's cards link to
+      /toto, /watches and /amex/, all still cream, so a visitor reading a dark district taps a card and lands on a visually
+      different site. This is the largest remaining inconsistency before any swap to /.
+    captured: '2026-09-17'
+    source: v5 port review, 2026-09-17
+    notes: 'Evidence: src/lib/work.ts: hrefs /toto, /watches, /amex/ ; all 3 of 3 internal WORK links leave the dark half'
+    next_step: 'Decide scope with Chin: leave the three links as they are for now, or make rebranding /toto, /watches, /articles,
+      /news and /labs the next block of work.'
+    cluster: web
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-17-feat-v2-phase1-shell-deletes-trading
+    title: feat/v2-phase1-shell deletes /trading, which is live and answering 200
+    type: decision
+    domain: web
+    priority: p1
+    status: active
+    summary: The branch removes src/pages/trading.tsx. Merging it to main takes a live page off www.0xsteamboat.me. Deleting
+      it may well be intended, since work.ts already records Trading as deliberately cut, but it must be a decision made before
+      the merge rather than something discovered after it. The same branch also rewrites the shared nav component, the labs
+      page, the 404 and the homepage, so this is the one to settle first.
+    captured: '2026-09-17'
+    source: v5 port review, 2026-09-17
+    notes: 'Evidence: git diff origin/main..feat/v2-phase1-shell deletes src/pages/trading.tsx (600 lines); curl https://www.0xsteamboat.me/trading
+      returns 200'
+    next_step: Ask Chin to confirm /trading should go, then note the answer in docs/v5-state.md so the merge does not stall
+      on it again.
+    cluster: web
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-14-personal-site-decide-whether-astro-or
+    title: 'personal-site: decide whether Astro or Next.js is canonical'
+    type: decision
+    domain: web
+    priority: p3
+    status: active
+    summary: 'Premise corrected 2026-09-14. The live site at 0xsteamboat.me is served from ~/repos/0xsteamboat-me (committed
+      2026-09-13, index.html title matches what Cloudflare serves). Neither ~/projects/personal-website (Next.js, 2 commits,
+      last touched 2026-06-19) nor ~/projects/personal-site (Astro, 22 commits, 2026-06-12) is canonical for anything. They
+      are abandoned experiments that happen to share a GitHub repo history, which is why a duplicate-checkout scan surfaced
+      them as a pair. Nothing is at risk: the Astro side''s 22 commits, including a 103-item Ghost theme design reference
+      library and CSS design systems extracted from seven template suites, were pushed to branch astro-site on 2026-09-13.
+      Two scripts, write-site-feeds.py and .sh, still hardcode ~/projects/personal-site, but no cron currently invokes them.
+      Separate and more current: ~/repos/0xsteamboat-me has 3 uncommitted files in the repo that serves the live site.'
+    captured: '2026-09-14'
+    source: Claude Code session 2026-09-13, harness upgrade
+    gist: Two abandoned June site experiments, neither of which is the live site.
+    next_step: Decide whether the two June experiments are worth keeping on disk at all, given the design library is already
+      safe on a branch. Then look at the 3 uncommitted files in ~/repos/0xsteamboat-me, which is the repo that actually matters.
+    researched: 2026-09-14
+    cluster: web
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive: []
+  count: 3
+  total_count: 3
+  active_count: 3
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 2
+  p2_count: 0
+  p3_count: 1
+- emoji: ''
   name: creative
   kind: domain
   items:
@@ -5269,43 +5342,6 @@ clusters:
   p2_count: 1
   p3_count: 0
 - emoji: ''
-  name: web
-  kind: domain
-  items:
-  - id: 2026-09-14-personal-site-decide-whether-astro-or
-    title: 'personal-site: decide whether Astro or Next.js is canonical'
-    type: decision
-    domain: web
-    priority: p3
-    status: active
-    summary: 'Premise corrected 2026-09-14. The live site at 0xsteamboat.me is served from ~/repos/0xsteamboat-me (committed
-      2026-09-13, index.html title matches what Cloudflare serves). Neither ~/projects/personal-website (Next.js, 2 commits,
-      last touched 2026-06-19) nor ~/projects/personal-site (Astro, 22 commits, 2026-06-12) is canonical for anything. They
-      are abandoned experiments that happen to share a GitHub repo history, which is why a duplicate-checkout scan surfaced
-      them as a pair. Nothing is at risk: the Astro side''s 22 commits, including a 103-item Ghost theme design reference
-      library and CSS design systems extracted from seven template suites, were pushed to branch astro-site on 2026-09-13.
-      Two scripts, write-site-feeds.py and .sh, still hardcode ~/projects/personal-site, but no cron currently invokes them.
-      Separate and more current: ~/repos/0xsteamboat-me has 3 uncommitted files in the repo that serves the live site.'
-    captured: '2026-09-14'
-    source: Claude Code session 2026-09-13, harness upgrade
-    gist: Two abandoned June site experiments, neither of which is the live site.
-    next_step: Decide whether the two June experiments are worth keeping on disk at all, given the design library is already
-      safe on a branch. Then look at the 3 uncommitted files in ~/repos/0xsteamboat-me, which is the repo that actually matters.
-    researched: 2026-09-14
-    cluster: web
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive: []
-  count: 1
-  total_count: 1
-  active_count: 1
-  delegated_count: 0
-  done_count: 0
-  p0_count: 0
-  p1_count: 0
-  p2_count: 0
-  p3_count: 1
-- emoji: ''
   name: business
   kind: domain
   items: []
@@ -5794,6 +5830,6 @@ archive:
 - *id123
 - *id124
 - *id125
-updated_at: 2026-09-16 21:30:24 SGT
-total_active: 88
+updated_at: 2026-09-17 18:30:30 SGT
+total_active: 90
 total_done: 125
