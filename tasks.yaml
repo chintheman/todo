@@ -2611,8 +2611,8 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: '9 unresolved system issue(s), oldest 2 day(s). Recurring failures: GH-TS — GitHub Issue Watcher; Second Brain
-      — Index Rebuild (6h belt-and-braces); Second Brain — Updater Drain; ⚡ Miner-DC Close Reaction; 🇺🇸 US Close + Prediction.'
+    summary: '9 unresolved system issue(s), oldest 2 day(s). Recurring failures: GH-TS — GitHub Issue Watcher; IBKR Email
+      Watcher; Second Brain — Index Rebuild (6h belt-and-braces); Second Brain — Updater Drain; ⚡ Miner-DC Close Reaction.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -5830,6 +5830,6 @@ archive:
 - *id123
 - *id124
 - *id125
-updated_at: 2026-09-17 18:30:30 SGT
+updated_at: 2026-09-17 21:30:44 SGT
 total_active: 90
 total_done: 125
