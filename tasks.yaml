@@ -2606,13 +2606,12 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (9 open, oldest 2d)
+    title: System issues awaiting your decision (1 open, oldest 0d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '9 unresolved system issue(s), oldest 2 day(s). Recurring failures: GH-TS — GitHub Issue Watcher; IBKR Email
-      Watcher; Second Brain — Index Rebuild (6h belt-and-braces); Second Brain — Updater Drain; ⚡ Miner-DC Close Reaction.'
+    summary: '1 unresolved system issue(s), oldest 0 day(s). Recurring failures: IBKR Email Watcher.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -5830,6 +5829,6 @@ archive:
 - *id123
 - *id124
 - *id125
-updated_at: 2026-09-17 21:30:44 SGT
+updated_at: 2026-09-18 09:30:39 SGT
 total_active: 90
 total_done: 125
