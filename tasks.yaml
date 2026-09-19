@@ -30,6 +30,9 @@ cluster_order:
 - emoji: 🐶
   name: Up Dog
   kind: project
+- emoji: 📡
+  name: Internet-less Chat
+  kind: project
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
   kind: project
@@ -1095,6 +1098,53 @@ clusters:
   p1_count: 0
   p2_count: 0
   p3_count: 1
+- emoji: 📡
+  name: Internet-less Chat
+  kind: project
+  items:
+  - id: internet-less-chat
+    title: Internet-less Chat — offline iPhone-to-iPhone messaging app
+    type: build
+    domain: product
+    priority: p2
+    status: active
+    summary: 'Product concept for an iPhone messaging app that works with no internet at all. Three transports ship in iOS
+      and need no server. MultipeerConnectivity is the default answer: Bluetooth plus peer-to-peer Wi-Fi, roughly 10 metres
+      over Bluetooth to 100 metres line of sight over Wi-Fi, zero configuration, no entitlement, a few hundred lines to a
+      working two-device chat, but the built-in encryption is trust-on-first-use with no identity verification and both apps
+      must be open. Wi-Fi Aware (iOS 26 and later, iPhone 12 or later) is the modern upgrade: tens of Mbps, 50 to 100 metres,
+      pairing through Apple DeviceDiscoveryUI, authenticated and encrypted at the Wi-Fi layer, and it needs the com.apple.developer.wifi-aware
+      entitlement which Apple has been gating behind an approval request. Bluetooth LE via CoreBluetooth is the low-power
+      fallback at 10 to 30 metres and about 200 kbps, better for discovery than for payloads. Store-and-forward mesh covers
+      the not-in-range case by relaying through other devices (Bridgefy SDK paid, bitchat open source and iOS plus Android),
+      and LoRa hardware reaches kilometres but needs a radio. The hard constraint shaping the product: iOS suspends backgrounded
+      apps and kills their radios, and Apple describes Wi-Fi Aware background as resumable rather than always-on, so the design
+      is open the app, see who is nearby, reconnect and sync, never always connected. No decision yet on audience, range target,
+      or whether it ships at all.'
+    captured: '2026-09-19'
+    source: Ideation session 2026-09-19, concept captured while working out how two iPhones can chat with no internet connection
+    notes: 'Frameworks: MultipeerConnectivity (MCSession, MCNearbyServiceAdvertiser, MCNearbyServiceBrowser), Wi-Fi Aware
+      (iOS 26+, WAPairedDevice, DeviceDiscoveryUI, AccessorySetupKit), CoreBluetooth, Network.framework with Bonjour for a
+      LAN whose WAN is down. Sources: Apple Wi-Fi Aware docs at developer.apple.com/documentation/wifiaware, WWDC25 session
+      228 Supercharge device connectivity with Wi-Fi Aware, TN3179 Understanding local network privacy (NSLocalNetworkUsageDescription
+      is required for MultipeerConnectivity discovery). Prior art: bitchat (BLE mesh, iOS plus Android), Bridgefy, Meshtastic.
+      Recommended path: MultipeerConnectivity prototype first, add Wi-Fi Aware only if throughput becomes the complaint.'
+    gist: An iPhone app that lets two people message each other over Bluetooth and peer-to-peer Wi-Fi with no internet, server
+      or router.
+    next_step: Decide the range the app must cover, then scaffold the MultipeerConnectivity two-device chat prototype.
+    cluster: Internet-less Chat
+    cluster_emoji: 📡
+    cluster_kind: project
+  archive: []
+  count: 1
+  total_count: 1
+  active_count: 1
+  delegated_count: 0
+  done_count: 0
+  p0_count: 0
+  p1_count: 0
+  p2_count: 1
+  p3_count: 0
 - emoji: 🎯
   name: PAL — Delta-Neutral Polymarket
   kind: project
@@ -5882,6 +5932,6 @@ archive:
 - *id123
 - *id124
 - *id125
-updated_at: 2026-09-19 17:00:20 SGT
-total_active: 93
+updated_at: 2026-09-19 17:09:05 SGT
+total_active: 94
 total_done: 125
