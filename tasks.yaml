@@ -3228,12 +3228,12 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (6 open, oldest 1d)
+    title: System issues awaiting your decision (7 open, oldest 2d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '6 unresolved system issue(s), oldest 1 day(s). Recurring failures: DeepSeek Balance Watchdog; GH-TS — GitHub
+    summary: '7 unresolved system issue(s), oldest 2 day(s). Recurring failures: DeepSeek Balance Watchdog; GH-TS — GitHub
       Issue Watcher; Gateway Keepalive Ping; Second Brain — Index Rebuild (6h belt-and-braces); Second Brain — Updater Drain.'
     captured: 2026-09-14
     source: system-topic-triage cron
@@ -6232,6 +6232,6 @@ archive:
 - *id123
 - *id124
 - *id125
-updated_at: 2026-09-21 09:30:18 SGT
+updated_at: 2026-09-22 09:30:06 SGT
 total_active: 104
 total_done: 125
