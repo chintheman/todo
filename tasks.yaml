@@ -3236,8 +3236,8 @@ clusters:
     summary: '5 unresolved system issue(s), oldest 6 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: the token
       re-grant above. (open 6d, asked 1x); say when to restart the assistant so the new rules go live — it has to be run on
       kobo in a terminal outside it, and it cuts off (open 6d, asked 1x); tell me to delete the leftover working copy of the
-      Hermes program — it holds nothing the live one doesn''t. (open 3d, asked 1x); approve publishing the updated public
-      copy of the rules. (open 3d, asked 1x).'
+      Hermes program — it holds nothing the live one doesn''t. (open 4d, asked 1x); approve publishing the updated public
+      copy of the rules. (open 4d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6259,6 +6259,6 @@ archive:
 - *id125
 - *id126
 - *id127
-updated_at: 2026-09-26 09:30:34 SGT
+updated_at: 2026-09-26 21:30:33 SGT
 total_active: 103
 total_done: 127
