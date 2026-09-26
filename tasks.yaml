@@ -61,10 +61,10 @@ cluster_order:
   name: ai/ml
   kind: domain
 - emoji: ''
-  name: meta
+  name: devops
   kind: domain
 - emoji: ''
-  name: devops
+  name: meta
   kind: domain
 - emoji: ''
   name: career
@@ -365,7 +365,7 @@ clusters:
     cluster_emoji: 🧠
     cluster_kind: project
   archive:
-  - &id037
+  - &id039
     id: context-engineering-research
     title: Context engineering research and optimisation
     type: research
@@ -392,7 +392,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id013
+  - &id015
     id: compaction-prompt-tuning
     title: Compaction prompt audit and tuning
     type: build
@@ -423,7 +423,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id010
+  - &id012
     id: hotcore-retrieval-split
     title: Hot core — retrieve situational rules instead of loading them every call
     type: build
@@ -452,7 +452,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id036
+  - &id038
     id: memory-ablation-harness
     title: Memory ablation harness — prove the Spine tiers work
     type: discuss
@@ -479,7 +479,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id080
+  - &id082
     id: memory-audit-review
     title: Memory Audit — Honcho GO/NO-GO decision
     type: discuss
@@ -501,7 +501,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id101
+  - &id103
     id: review-memory-recommendations
     title: Review memory recommendations against Hermes memory solution
     type: research
@@ -518,7 +518,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id120
+  - &id122
     id: subagent-model-verify
     title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
     type: build
@@ -533,7 +533,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id123
+  - &id125
     id: context-engine-explore
     title: Memory Audit — Explore context engine plugin
     type: discuss
@@ -548,7 +548,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id121
+  - &id123
     id: supermemory-dedup-cron
     title: Memory Audit — Periodic Supermemory dedup + TTL cron
     type: discuss
@@ -563,7 +563,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id122
+  - &id124
     id: hw-to-wiki-migration
     title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
     type: discuss
@@ -578,7 +578,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id009
+  - &id011
     id: obsidian-verify-learn-tune
     title: Obsidian — verify the build, learn the tool, tune the settings
     type: build
@@ -606,7 +606,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id011
+  - &id013
     id: obsidian-power-use-cases
     title: Obsidian Power Use Cases — Opus 5 vault-tailored research
     type: research
@@ -627,7 +627,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id065
+  - &id067
     id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -644,7 +644,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id106
+  - &id108
     id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -660,7 +660,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id102
+  - &id104
     id: graphify-integration
     title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
     type: build
@@ -695,7 +695,7 @@ clusters:
   kind: project
   items: []
   archive:
-  - &id075
+  - &id077
     id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
     type: build
@@ -717,7 +717,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id022
+  - &id024
     id: agentic-concierge-architecture
     title: 'Agentic Marketing Concierge — architecture decision: Hermes ops ring vs Hermes-profile rebuild'
     type: discuss
@@ -742,7 +742,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id018
+  - &id020
     id: agentic-concierge-campaign-alerts
     title: Concierge ops ring — campaign end-date alert cron
     type: discuss
@@ -762,7 +762,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id016
+  - &id018
     id: agentic-concierge-portfolio-digest
     title: Concierge ops ring — weekly client portfolio digest
     type: discuss
@@ -781,7 +781,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id017
+  - &id019
     id: agentic-concierge-backup
     title: Concierge ops ring — local data backup (client data is gitignored)
     type: discuss
@@ -801,7 +801,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id015
+  - &id017
     id: agentic-concierge-multiplatform
     title: Concierge reach — WhatsApp or multi-platform for Glenn
     type: discuss
@@ -1005,7 +1005,7 @@ clusters:
   kind: project
   items: []
   archive:
-  - &id064
+  - &id066
     id: grief-management-voice-journal
     title: Grief Management — private voice journal website/app
     type: build
@@ -1038,7 +1038,7 @@ clusters:
     cluster: Grief 'Management'
     cluster_emoji: 💔
     cluster_kind: project
-  - &id127
+  - &id129
     id: gtm-second-brain
     title: GTM Second Brain — /raw capture + canonical agent index
     type: build
@@ -1515,7 +1515,7 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
   archive:
-  - &id038
+  - &id040
     id: bday-picker-page
     title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
     type: build
@@ -1728,7 +1728,7 @@ clusters:
     cluster_emoji: 🖥️
     cluster_kind: project
   archive:
-  - &id014
+  - &id016
     id: m1-status-system
     title: M1 Status — cloud-watched status system for the M1 Mac
     type: build
@@ -2033,7 +2033,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id126
+  - &id128
     id: self-correcting-agent
     title: Self-Correcting Agent — Reflexion Pattern
     type: discuss
@@ -2048,7 +2048,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id118
+  - &id120
     id: hard-step-budgets
     title: Step Budgets — Turn limits + forced handoffs for multi-phase work
     type: discuss
@@ -2063,7 +2063,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id116
+  - &id118
     id: sync-barriers
     title: Sync Barriers — Wait-for-all → synthesize → deliver once
     type: discuss
@@ -2078,7 +2078,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id124
+  - &id126
     id: tools-skills-consistency
     title: Investigate why tools and skills are not consistently used — and fix it
     type: research
@@ -2093,7 +2093,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id113
+  - &id115
     id: crewai-hermes-integration
     title: Explore CrewAI integration with Hermes for agent role optimisation
     type: research
@@ -2113,7 +2113,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id111
+  - &id113
     id: explore-free-agentic-tools
     title: Explore free agentic tools — review carousel + fresh research
     type: research
@@ -2130,7 +2130,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id112
+  - &id114
     id: explore-fluid-voice
     title: Explore FluidVoice as alternative to agentic TTS/STT solutions
     type: research
@@ -2145,7 +2145,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id034
+  - &id036
     id: ai-stack-platforms-review
     title: Review all AI stack platforms for potential integration
     type: research
@@ -2163,7 +2163,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id096
+  - &id098
     id: agentic-loop-engineering
     title: Master Looping — implement Boris Cherny / Pravda loop engineering
     type: build
@@ -2192,7 +2192,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id054
+  - &id056
     id: claude-command-cheatsheet
     title: Evaluate Claude command cheat sheet for Hermes gaps
     type: discuss
@@ -2215,7 +2215,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id098
+  - &id100
     id: auto-goal-orchestration-plugin
     title: Auto-goal orchestration plugin — review proposed flow
     type: discuss
@@ -2234,7 +2234,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id094
+  - &id096
     id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 238 specialist personas
     type: discuss
@@ -2270,7 +2270,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id093
+  - &id095
     id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -2290,7 +2290,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id059
+  - &id061
     id: claude-code-loops-google-meta-ads
     title: Absorb Claude Code loop patterns from Ryze AI — ad management loops with verification gates
     type: research
@@ -2325,7 +2325,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id087
+  - &id089
     id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -2344,7 +2344,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id084
+  - &id086
     id: orca-ade
     title: Orca — Agent Development Environment for parallel agents
     type: research
@@ -2363,7 +2363,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id082
+  - &id084
     id: kyutai-pocket-tts-evaluate
     title: Evaluate Kyutai Pocket TTS — local CPU TTS with voice cloning
     type: research
@@ -2382,7 +2382,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id057
+  - &id059
     id: anthropic-ust-claude
     title: Anthropic × UST — Claude for Physical AI
     type: discuss
@@ -2401,7 +2401,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id078
+  - &id080
     id: glm-5-eval
     title: GLM-5.2 (Z.ai) — MCP Atlas
     type: build
@@ -2423,7 +2423,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id079
+  - &id081
     id: chinese-ai-enterprise-adoption-ft
     title: FT — Global companies (DD, Siemens, Airbnb) adopting Chinese AI
     type: discuss
@@ -2443,7 +2443,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id058
+  - &id060
     id: anthropic-finance-agents
     title: Anthropic 10 Finance Agents — repo + workflow reference
     type: discuss
@@ -2463,7 +2463,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id066
+  - &id068
     id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -2480,7 +2480,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id052
+  - &id054
     id: i-have-adhd-claude-skill
     title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
     type: research
@@ -2506,7 +2506,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id060
+  - &id062
     id: systems-thinking-video-review
     title: The Revolution of Systems Thinking — video review and study notes
     type: research
@@ -2530,7 +2530,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id051
+  - &id053
     id: agentic-stack-review
     title: Agentic Stack — portable .agent/ folder (memory + skills + protocols)
     type: research
@@ -2549,7 +2549,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id048
+  - &id050
     id: mcp-host-60-minutes
     title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
     type: research
@@ -2570,7 +2570,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id032
+  - &id034
     id: deepseek-harness-test
     title: DeepSeek Harness v0.1 — test the agent runtime
     type: build
@@ -2595,7 +2595,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id021
+  - &id023
     id: bot-mode-team-experiment
     title: Bot Mode experiment — small team of profiles working together
     type: discuss
@@ -2628,513 +2628,6 @@ clusters:
   p1_count: 4
   p2_count: 4
   p3_count: 1
-- emoji: ''
-  name: meta
-  kind: domain
-  items:
-  - id: lint-r10-entity-staleness
-    title: 'R10: `entity` type at 48.4% stale vs <25% target — corrects a bad figure in the 2026-09-13 report'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: active
-    summary: 'Graded per type from parseable `updated:`, as the rule requires. entity: 15 of 31 over 30 days = 48.4% against
-      <25% — OVER. The stale set: ai-native-company-framework 107d, steamquant-brand 96d, brand-dna 94d, agent-sprawl-fix-proposal
-      93d, tim-scheuer 63d, andrej-karpathy 63d, bazi-master-system 49d, graphics-designer-profile 49d, social-media-manager-profile
-      49d, critic-sleuth-profile 49d, social-media-designer-profile 49d, the-librarian-system 42d, web-designer-system 42d,
-      content-stylist-profile 35d, agentic-ai-curriculum 35d. Denominator 44 graded dated pages across the three graded types;
-      0 graded pages lacked a parseable updated:, so the undated set is empty and reported separately as the rule demands.'
-    captured: '2026-09-20'
-    source: lint-cron-2026-09-20 @ R10
-    notes: 'This entry corrects a reporting error, not just a measurement. The 2026-09-13 report gave entity as ''4 of 29
-      = 13.8% ok'' and then listed four more entity pages under a heading calling them ''over 30d inside the ungraded types''
-      — but entity is a graded type, and rule 10 also forbids folding part of a graded type into a separate bucket. Adding
-      those four back gives 8 of 33 = 24.2%, which was inside target but only just; the honest figure had the type ~1 percentage
-      point from a breach. It is now well over. The lesson is the one the rules file keeps rediscovering: a percentage that
-      is computed in prose rather than printed by the check will drift toward whatever reads best. The 2026-09-06 cycle reported
-      a vault-wide 41.5% instead of per-type, which is the same failure from the other direction.'
-    gist: 15 of 31 entity pages date from more than 30 days ago (48.4%) against a <25% target. The 2026-09-13 report reported
-      entity at 13.8% by reporting only 4 of the stale pages and describing the other 4 as 'ungraded', which a graded type
-      is not. Recomputed on the rule as written, entity has been over target for at least two cycles.
-    next_step: 'Refresh or retire the oldest entity pages, which are also the thinnest: entities/ai-native-company-framework.md
-      (107d), entities/steamquant-brand.md (96d), entities/brand-dna.md (94d), entities/agent-sprawl-fix-proposal.md (86d
-      start, 63d updated). Then the 2026-08-02 cluster of five profile pages (bazi-master-system, critic-sleuth-profile, graphics-designer-profile,
-      social-media-designer-profile, social-media-manager-profile). A dreamer refresh pass is the natural owner; several of
-      these are stub-class pages that may be better retired than refreshed.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-r20-system-governance
-    title: 'R20 governance: 5 undeclared files at the root of _system/ (lint HIGH)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: active
-    summary: 'RULE 20 (added to lint/rules.md after the 2026-09-13 cycle) runs check_governance.py and exits 1. UNDECLARED
-      (5): _system/open-decisions.md, _system/stack-refinement-plan.md, _system/zo-labs-automations-deleted-2026-09-19.md,
-      _system/zo-toto-automation-deleted-2026-09-19.md, _system/zo-trading-agent-automations-deleted-2026-09-19.md. Against
-      70 root prose files; governance.yaml currently declares 20 governs, 29 reference and 16 dead. All five are legible and
-      none is junk: open-decisions.md is the numbered decision ledger (''one line per decision Chin owes an answer on'');
-      stack-refinement-plan.md is the 2026-09-19 work plan for the Hermes/Claude Code/Zo audit findings; the three zo-* files
-      are deletion records carrying automation ids, rrules and the exact create_automation call needed to restore each one.
-      This is the only rule that looks at _system/ — rules 1-17 cannot see it, because it is outside the page schema by design
-      — so nothing else would have flagged them.'
-    captured: '2026-09-20'
-    source: lint-cron-2026-09-20 @ R20
-    notes: 'Two of the five are the class the rule was written for: a governing document that nothing declares still looks
-      authoritative, and until now nothing in the system would notice. The three deletion records are quieter — they will
-      get read exactly once, at restore time, by someone who does not know they exist. rules.md''s Output column suggests
-      a deposit intent per finding, but _system/governance.yaml is not a page and §6''s action enum (update_entity ... update_moc,
-      log_only) has no action that could amend it, so the remedy here is a registry entry rather than an intent. That gap
-      between rule 20''s stated remedy and the intent schema is itself worth a line in the engine backlog. Note that open-decisions.md
-      and stack-refinement-plan.md were both created 2026-09-19, i.e. after the last check_governance.py run — this is the
-      first cycle they could have been seen.'
-    gist: check_governance.py exits 1 — five prose files sit at the root of _system/ and are declared in neither the `governs`,
-      `reference` nor `dead` section of _system/governance.yaml. Two are governing documents (the open-decisions ledger and
-      a stack-refinement work plan); three are 2026-09-19 Zo automation deletion records with restore instructions.
-    next_step: 'Declare all five in ~/wiki/_system/governance.yaml: open-decisions.md and stack-refinement-plan.md as `governs`
-      (each with a `reader` path that mentions the filename, since that is the check with teeth), and the three zo-*-deleted-2026-09-19.md
-      files as `reference` — or re-home those three into _system/archive/, where the sibling deleted-archived-profiles-2026-08-22.md
-      already lives, which also clears them. Then re-run check_governance.py for a clean exit.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-writers-docs-prefix
-    title: 'Writer gate FAIL: 2 commits carry an undeclared `docs:` prefix (lint §0.2)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: active
-    summary: 'check_writers.py --vault ~/wiki exits 1: ''FAIL: 2 of 269 commits since 2026-09-11 23:30:00+08:00 carry no declared
-      prefix.'' Both are from 2026-09-19 and both are a vault-wide rename of hermes-second-brain to brain-engine: a5d16f0d
-      ''docs: update remaining hermes-second-brain mentions to brain-engine'' (5 files: _system/context-digests/2026-08-16.md,
-      _system/lint-reports/2026-09-13.md, concepts/2026-07-07-daily-digest.md, concepts/2026-08-17-daily-digest.md, entities/creative-director-profile.md)
-      and 7ddd6ae0 ''docs: rename hermes-second-brain references to brain-engine'' (4 files: three _system/pending/ docs plus
-      _system/task-registry.yaml). The work itself is legitimate and touches no page content semantically — it is a path rename.
-      The failure is vocabulary, not intent: `docs` is not in writers.yaml, and none of it reached the page-writing seam that
-      §5 reserves for the updater and dreamer.'
-    captured: '2026-09-20'
-    source: lint-cron-2026-09-20 @ §0.2 declared writers
-    notes: 'New failure this cycle — 2026-09-13 was the first clean writers run (60/60 declared) after the cutover. The negative
-      control still proves the check can fail: 45 undeclared of 686 commits since 2026-07-13 in the pre-cutover window, so
-      the gate is not silently passing everything. writers.yaml''s own header lists six precedents where a hand-typed prefix
-      was declared, scoped to what it touched, rather than the work being reverted — that is the documented clearing path.
-      This cron is deliberately NOT editing writers.yaml itself: widening the writer registry from an unattended lint run
-      is the same self-authorising move the gate exists to catch, so the declaration is a human call. Related to lint-engine-tooling-drift
-      only in the sense that both are vocabulary drift rather than content drift.'
-    gist: check_writers.py exits 1 — 2 of 269 commits since the 2026-09-11 cutover use `docs:` for a vault-wide rename that
-      touched a lint report, digests, an entity page and the task registry. The gate has no `docs` entry, so the commits are
-      undeclared writers. Fixed either by declaring the prefix in writers.yaml with the paths it actually touched, or by using
-      the already-declared `fix` prefix for doc-only vault edits.
-    next_step: 'Decide the remedy: add a `docs` entry to ~/wiki/_system/writers.yaml scoped to the paths these commits touched
-      (5 pages + 4 _system files), with a note recording what the gate caught; or leave the registry alone and route future
-      doc-only vault edits through the declared `fix` prefix. Either clears the gate on its next run. Do not rewrite the two
-      commits.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-e1-engine-vault-coupling
-    title: 'E1 boundary: engine lint helpers hardcode vault page paths'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'E1 privacy-boundary grep of ~/brain-engine: ZERO hits for personal names (0xsteamboat, steamboat, tim scheuer,
-      rhoades, wendy, karpathy, garry tan, chintheman) — good. But the lint helper scripts committed 2026-08-16 (commit c313705:
-      analyze_helper.py, check_orphans_proxy.py, check_r8r9.py, check_r10r11.py) contain hardcoded vault page paths (e.g.
-      entities/crypto-quant-system.md, entities/toto-strategy-system.md, concepts/crypto-quant-trading.md) and vault dir prefixes
-      (agentic-, interior-design/, toto/). This is structural coupling, not personal or client data, but it ties the engine
-      (a future product per HANDOVER) to this vault''s layout. Prior lint (2026-08-16) reported zero E1 hits before these
-      helpers were committed in the same cycle.'
-    captured: 2026-08-23
-    source: lint-cron-2026-08-23 @ E1
-    notes: 'Options: (a) move target lists to a vault-side config file the helpers read; (b) keep as-is and document in BRAIN.md
-      §12 as accepted tooling coupling; (c) make helpers generic (scan vault for candidates instead of hardcoding). Low urgency
-      — no data leak — but should be decided before the engine is shared/ productized. UPDATE 2026-08-30 (lint cycle 8): partial
-      progress — new engine script emit_intent.py (committed Aug 26, a21c34e) is fully parameterized (--vault, explicitly
-      "no vault path is hardcoded"), but the four Aug 16 lint helpers (analyze_helper.py, check_orphans_proxy.py, check_r8r9.py,
-      check_r10r11.py) still hardcode vault page paths. Recommend option (c) for the helpers when next touched; no urgency.'
-    gist: Engine repo lint helpers couple the engine to this vault's layout by hardcoding vault page paths; no personal data
-      found, but separability (E1) wants them moved or documented.
-    next_step: Decide — move hardcoded vault page paths out of ~/brain-engine/lint/check_*.py into a vault-side config (e.g.
-      _system/lint/), or document the coupling as acceptable tooling reference.
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-e1-brainmd-employer-example
-    title: 'E1 privacy: BRAIN.md schema example names a real past employer (public repo)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'UPDATE 2026-09-20 (lint cycle 11): still present, second consecutive cycle, and now the only E1 hit of either
-      kind. Both E1 greps were re-run against ~/brain-engine: the name grep (0xsteamboat, steamboat, tim scheuer, rhoades,
-      wendy, karpathy, garry tan, chintheman, ctchuang, paradex) returns exactly one line — BRAIN.md:226 — and the vault-path
-      grep for page paths returns the same single line. Requirement is zero hits. Nothing widened: the 2026-09-11 fix that
-      moved vault-specific scoping into the vault''s own lint-config.yaml is holding, and the four helpers that previously
-      hardcoded 13 real page paths remain clean.'
-    captured: '2026-09-13'
-    source: lint-cron-2026-09-13 @ E1
-    notes: 'This is the class of leak the E1 path clause was added for on 2026-09-11: a name-only grep could never see it,
-      because the string is a page path, not a person. Severity is real but narrow — one line of a public schema doc, no vault
-      content, no client data — which is why it is a one-line fix rather than a history rewrite. Related: lint-e1-engine-vault-coupling
-      (the older, separate concern about hardcoded paths inside the helper scripts). A rule that greps for a pattern must
-      also be able to explain why an example-shaped hit is acceptable; until then the rule is zero-tolerance by design.'
-    gist: 'E1 privacy: ~/brain-engine/BRAIN.md line 226 carries the §6 deposit-intent example `page: entities/paradex.md`.
-      Paradex is a real past employer on his CV, and the engine repo is public. One line, one edit, but the edit is his to
-      push.'
-    next_step: Genericize the example to a placeholder slug (one line, BRAIN.md §6) on the next engine commit, then re-run
-      the E1 path grep to confirm a clean zero. The engine is a public remote, so the edit is his to push — a lint cron must
-      not commit to it unattended.
-    researched: 2026-09-20
-    log:
-    - '2026-09-20 · hermes · lint 2026-09-20: still 1 hit, BRAIN.md:226 `entities/paradex.md`, second consecutive cycle; both
-      E1 greps return it and nothing else. Fix unchanged and still his to push.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-engine-tooling-drift
-    title: 'Lint tooling: code-span wikilinks, a phantom update_source action, and a stale rule count'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'UPDATE 2026-09-20 (lint cycle 11): a FOURTH instance, same shape as the R16 one — a check that is stricter than
-      the rule it implements. check_r8r9.py line 63 counts marks with text.count("^[inferred]"), an exact literal match, while
-      BRAIN.md §0 directive 5''s real usage is ^[inferred — explanation]. Three of the 19 synthesis-heavy candidates are under-counted:
-      entities/elfa.md 0 -> 2, entities/agent-security-audit.md 1 -> 2, projects/perpetual-voice-notes.md 1 -> 2. The practical
-      effect is that elfa.md was reported as the cycle''s only R8 finding when it is fully marked and needs nothing — a false
-      positive generated by the checker, in a report whose R8 section has already had to explain a six-cycle false positive
-      from R16. All four instances share one cause: the check encodes a stricter shape than the schema permits (backtick-wrapped
-      example vs rendered link; exact mark vs mark-with-comment; prose count vs computed count; enum vs live data).'
-    captured: '2026-09-13'
-    source: lint-cron-2026-09-13 @ R16, E2, plus the intake validator check
-    notes: 'Not filed against the vault: these are engine and skill repos, so the edits are his to make and push. The pattern
-      across all three is the one the rules file keeps rediscovering — a fact held in prose or in a duplicated list drifts
-      silently, while a fact computed from its source does not. The R16 case is the clearest: the report has been right for
-      six cycles and the tool has been wrong, which is worse for trust than a real defect, because it trains the reader to
-      skip the section. The validator mismatch is a fourth instance (the enum in tracking_board_engine.py predates the registry
-      vocabulary); per the tracking-board guidance on stale enums, live data outranks the enum — extend _VALID_TYPES, _VALID_DOMAINS
-      and _VALID_PRIORITIES to cover maintain / meta / p3, with tests.'
-    gist: 'Engine-side drifts found by lint, all in the tooling rather than the vault: the wikilink resolver counts inline-code
-      spans as links; the R8 provenance counter misses bracketed provenance marks; a role skill names an intent action the
-      write seam rejects; BRAIN.md hardcodes a vault-rule count that has since grown.'
-    next_step: 'Four one-line-class fixes on the next engine touch: (1) make the R16 resolver skip inline-code spans so entities/hermes-agent-system.md
-      stops being reported; (2) change check_r8r9.py:63 to a regex — len(re.findall(r"\^\[inferred", body)) — so mark-with-comment
-      counts; (3) correct brain-capture/SKILL.md:154, which tells the agent to emit update_source — a string in neither the
-      BRAIN.md §6 enum nor the emit_intent.py ACTIONS set, so the utility exits 2 on it (the supported route is a create_source
-      naming the existing path, which §11a converts); (4) drop the hardcoded "19 vault rules" from BRAIN.md §7 and let lint/rules.md
-      be the only place the number lives.'
-    researched: 2026-09-20
-    log:
-    - '2026-09-20 · hermes · lint 2026-09-20: fourth instance of the same drift — check_r8r9.py:63 counts ^[inferred] by exact
-      match while real marks are ^[inferred — comment], so elfa.md was reported as an R8 finding it does not have. R16 code-span
-      false positive and the 19-vs-21 rule count both still present.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-raw-capture-metric-2026-09-20
-    title: 'Metric: raw/ captures 0 files/week for the 2nd consecutive cycle (target >=10)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: git log --since=2026-09-13 --diff-filter=A over raw/ returns nothing — 0 new raw .md captures this cycle, against
-      a >=10/week target. The prior cycle added 5 (raw total went 21 -> 26). Raw total is unchanged at 26 files. Every one
-      of the 26 is older than 24h, and 14 of them are uncited by any page and named by no queued intent (R17) — the ingest
-      side of the same pipeline is already carrying a backlog entry (lint-r17-raw-ingest-backlog). This entry is the capture
-      side.
-    captured: '2026-09-20'
-    source: lint-cron-2026-09-20 @ metrics
-    notes: 'Recorded as a metric rather than a rule finding: no lint rule grades capture volume, and the identical finding
-      from 2026-08-09 (lint-raw-capture-stall) already exists in the registry with status done, resolution ''blitz-archived
-      via labs 2026-08-14''. It is re-raised rather than re-opened because two consecutive under-target cycles is what the
-      escalation clause is for, and because the archived entry''s own notes record that its sibling metric — skills emitting
-      deposit intents — was a persistent miss at the time. Note that this cycle 3 skills did emit deposit intents (9 intent
-      files in 14 days), so that sibling metric has since moved; the capture metric has not. Absence-of-data is treated as
-      evidence here rather than as blindness, which is the one case where that inversion is correct: the target is >=10 per
-      week and the pipeline is instrumented, so zero is a reading, not a gap.'
-    gist: HANDOVER success metric 'Raw files/week' is >=10. The vault added 0 new raw captures in the week to 2026-09-20,
-      after 5 in the week to 2026-09-13. Two consecutive cycles under target. Rule 3 (raw immutability) passes trivially when
-      nothing is captured, so the metric is the only thing that notices.
-    next_step: 'Verify which capture producers are wired and firing — capture_to_raw.py via PA intake, web_extract, and the
-      competitor monitors. The 2026-08-14 entry of the same name (lint-raw-capture-stall, archived via labs) named this same
-      set; re-check before re-investigating rather than starting cold. Distinguish ''the pipelines are down'' from ''nothing
-      was captured this week'': one is a fix, the other is a quiet week.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-r10-moc-staleness
-    title: 'R10: `moc` type at 28.6% stale vs <25% target (new this cycle)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'Graded per type from parseable `updated:`. moc: 2 of 7 over 30 days = 28.6% against <25% — OVER. The stale pair:
-      mocs/sg-governance-moc.md (updated 2026-08-02, 49 days) and mocs/creative-style-moc.md (updated 2026-08-16, 35 days).
-      The other five MOCs all carry updated: 2026-09-20 — the dreamer''s 2026-09-20 run fixed 5 blank index summaries and
-      wove 5 MOCs (commit 4df3dd71), which is why the type is only just over rather than well over. Denominator 44 graded
-      dated pages; 0 undated.'
-    captured: '2026-09-20'
-    source: lint-cron-2026-09-20 @ R10
-    notes: 'First cycle this type has been over — it was 0 of 7 on 2026-09-13. The cause is not neglect but a targeted pass:
-      the dreamer update touched five MOCs and missed two, so a single-page gap now reads as a type-level breach on a denominator
-      of seven. That is a property of grading a small type by share, not a new content problem, and it is worth noting because
-      a 7-page type can breach or clear on one page. Same pass that produced the 0% last cycle.'
-    gist: 2 of 7 MOC pages have not been touched in over 30 days (28.6%) against a <25% target. Last cycle the type was 0%.
-      Five MOCs were rewritten by the dreamer on 2026-09-20 and are current; these two were not included in that pass.
-    next_step: Weave or refresh mocs/sg-governance-moc.md (updated 2026-08-02, 49d) and mocs/creative-style-moc.md (updated
-      2026-08-16, 35d) on the next dreamer pass. Both are small — 1,868 B and 1,841 B — and both have member pages that have
-      moved on since, so a re-weave is probably enough to clear the type.
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-r10-project-staleness
-    title: 'R10: `project` type over its staleness target (20% vs <10%)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'UPDATE 2026-09-20 (lint cycle 11): project 1 of 6 over 30 days = 16.7% vs <10% — OVER, second consecutive cycle.
-      The single page is unchanged: projects/cq-na-consolidation.md, updated 2026-08-09, now 42 days. The denominator moved
-      5 -> 6 because projects/perpetual-voice-notes.md (2026-09-13) and projects/ai-studio-needs-analysis.md (2026-09-19)
-      were added, so the share improved while the absolute count of stale pages did not. Per the MED-over-target clause in
-      lint/rules.md the type is carried at escalated priority: an over-target share persisting two cycles with no page touched
-      means the entry has been read and not actioned.'
-    captured: '2026-09-13'
-    source: lint-cron-2026-09-13 @ R10
-    notes: 'The measurement this replaces was the reason "stale pages worse every cycle" kept appearing in lint output while
-      nothing changed: a blended share mixes a graded type with exempt folders and cron digests, so it drifts with capture
-      volume rather than content health. If the project type is still over next cycle, escalate per the MED-over-target clause.
-      A dreamer refresh pass is the natural owner.'
-    gist: Rule 10 grades staleness per type from parseable `updated:`. The project type is at 1/6 = 16.7% against a <10% target
-      — over for a second consecutive cycle, which is the escalation trigger. entity (48.4%) and moc (28.6%) are now also
-      over and have their own entries.
-    next_step: Refresh or close projects/cq-na-consolidation.md (updated 2026-08-09, 42 days) — it is still the only page
-      failing this type, and it was the only page failing it last cycle too. One page, one action, two cycles of no movement.
-    researched: 2026-09-20
-    log:
-    - '2026-09-20 · hermes · lint 2026-09-20: project 16.7% (1/6) vs <10% — second consecutive over-target cycle, escalated.
-      Same single page as last cycle (cq-na-consolidation, 42d).'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-r17-raw-ingest-backlog
-    title: 'R17 (new Aug 26): 13 uncited raw captures — one create_source stub per lint run'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'UPDATE 2026-09-20 (lint cycle 11): raw total unchanged at 26 (0 new captures this cycle — see lint-raw-capture-metric-2026-09-20).
-      Uncited today: 14 of 26. Breakdown: 3 permanent Phase-3 test fixtures (raw/2026-07/2026-07-07-*), 3 permanently-pageless
-      Sep 11 verification memos filed from subagents (spy-volatility-persistence-replication, vol-persistence-verification-memo-subagent,
-      vol-sizing-verification-memo-subagent), and 8 actionable — five July pa-link captures (2026-07-15 x4, 2026-07-16), 2026-07-17-pa-link-openwa-whatsapp-api
-      (restored under R3, still uncited), 2026-09-05-pa-link-macro-learning-map and 2026-09-12-pa-link-x-iiiichigo-chan-claude-code-harness-course.
-      Cited since last cycle: raw/2026-08/2026-08-14-ig-datasciencebrain-db9xnemmj5g.md — the stub filed in 20260913T033115-brain-lint.yaml
-      landed (sources/2026-08-14-ig-datasciencebrain-db9xnemmj5g.md exists).'
-    captured: 2026-08-30
-    source: lint-cron-2026-08-30 @ R17
-    notes: 'Per R17, one create_source stub intent per lint run (drains slowly by design — backlog ~10 actionable files ≈
-      10 weeks at 1/run; escalate if updater backfill happens). Test fixtures in the 2026-07-07 set should be permanently
-      excluded once confirmed. UPDATE 2026-09-06 (lint cycle 9): raw total now 21 (3 new since Aug 30: 09-01 abbytheia, 09-02
-      architects-playbook OCR, 09-05 pa-link macro). Cited: 7 (08-28 stub LANDED — sources/2026-08-28-ig-dhanyindraswara-dashboard-layout.md;
-      09-02 OCR cited by sources/architects-playbook-cyberskill.md + concepts/enterprise-llm-architecture-playbook.md). Uncited:
-      14 = 3 permanent test fixtures + 10 actionable (July pa-link x7 incl restored openwa, 08-09, 08-14, 09-01) + 09-05 pa-link
-      macro (<24h, not yet due). Stub filed this cycle for 09-01 abbytheia. UPDATE 2026-09-13 (lint cycle 10): raw total now
-      26 (5 new .md since Sep 6: the 09-11 quantscience carousel, three 09-11 volatility memoranda, and the 09-12 pa-link
-      harness course; plus 8 slide images under raw/assets). Referenced outside raw/: 14. Uncited: 12 = 3 permanent Phase-3
-      fixtures (2026-07-07-*, now confirmed permanently test-only), 3 volatility memoranda from 2026-09-11 whose vault package
-      the owner deleted by instruction on 2026-09-11 (raw is immutable so the files remain, pageless by decision — permanently
-      pageless, do NOT re-flag in future runs), and 6 actionable. Stub filed this cycle for 2026-08-14-ig-datasciencebrain-db9xnemmj5g
-      (30d, newest actionable). Remaining actionable: 5 July pa-link captures (07-15 x4, 07-16 x1). Backlog now 6 files, about
-      6 weeks at 1/run, down from 10. Correction for future runs: the 09-01 abbytheia stub LANDED (sources/2026-09-01-ig-abbytheia-top5-sensemaking-skills.md
-      exists and cites it) and 2026-08-09-ig-higher-dimension-14-techniques is cited by concepts/2026-08-08-daily-digest.md
-      — cycle 9 counted both as uncited; the cycle-9 figure of 14 was an overcount by 2.'
-    gist: 'Rule 17 (capture→ingest coverage): every raw/**/*.md older than 24h must be cited by a page sources field or have
-      an intent queued. Drain policy is one create_source stub per weekly lint run, newest actionable first.'
-    next_step: 'Drained this cycle: create_source stub filed in 20260920T033000-brain-lint.yaml for raw/2026-09/2026-09-12-pa-link-x-iiiichigo-chan-claude-code-harness-course.md
-      (66,745 B, newest actionable uncited). Next run''s drain target, newest-first, is raw/2026-09/2026-09-05-pa-link-macro-learning-map.md.
-      Backlog is now 8 actionable files ≈ 8 weeks at one per run; if the updater ever backfills in bulk, this entry closes.'
-    researched: 2026-09-20
-    log:
-    - '2026-09-20 · hermes · lint 2026-09-20: 14/26 uncited. Drained 09-12 iiiichigo harness course (stub in 20260920T033000-brain-lint.yaml);
-      08-14 datasciencebrain stub LANDED since last cycle. Next drain: 09-05 macro-learning-map. 8 actionable remain.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: lint-r19-unresolved-root
-    title: 'R19: `bases/`, `brands/` and 4 root system files unclassified in RESOLVER.md'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: active
-    summary: 'UPDATE 2026-09-20 (lint cycle 11): unchanged second consecutive cycle. Still unclassified: bases/, brands/ (directories)
-      and AGENTS.md, dashboard.md, .hermes.md, log.md, index.md (root .md files). RESOLVER names SCHEMA.md and itself, and
-      covers the project-specific root .md files collectively, so the 0xsteamboat-*, elfa-*, hermes-complete-reference and
-      interior-designer-* files remain non-findings. Declared low-stakes, and still nothing misfiled — nothing has been filed
-      into bases/ or brands/ in the week since, so the finding has not grown, but it also has not been ruled on.'
-    captured: '2026-09-13'
-    source: lint-cron-2026-09-13 @ R19
-    notes: Low stakes — nothing is misfiled, the tree simply has two folders and four system files with no written ruling.
-      They matter because RESOLVER is the only place a filing decision is recorded, so an unnamed folder is a folder the next
-      agent has to improvise about. The brands/README.md case — it carries a reference label while living outside references/
-      — is the specific question worth answering.
-    gist: Rule 19 catches top-level directories and root .md files with no filing ruling in RESOLVER.md. Two directories and
-      five root system files have none. Each needs a one-line RESOLVER classification, not a new folder.
-    next_step: 'Add rulings to ~/wiki/RESOLVER.md: (a) `bases/` (2 Obsidian .base query files) and `brands/` (README.md, carrying
-      schema-style frontmatter that labels it a reference while it sits outside references/) each need a positive test and
-      a named neighbour; (b) the root system files AGENTS.md, dashboard.md, .hermes.md, log.md and index.md need naming, since
-      RESOLVER currently names only SCHEMA.md and covers the rest with a blanket clause about project-specific .md files at
-      the vault root.'
-    researched: 2026-09-20
-    log:
-    - '2026-09-20 · hermes · lint 2026-09-20: unchanged, second cycle. bases/, brands/, AGENTS.md, dashboard.md, .hermes.md,
-      log.md, index.md still unclassified in RESOLVER.md; nothing newly misfiled.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id055
-    id: tool-decision-framework
-    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
-    type: discuss
-    domain: meta
-    priority: p2
-    status: done
-    completed: 2026-07-27
-    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
-      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
-      for open-ended creative work. Routing rules documented in this entry.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id072
-    id: lint-rejected-cleanup
-    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
-      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
-      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
-      or archive.'
-    captured: 2026-07-19
-    source: lint-cron-2026-07-19 @ R14
-    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
-      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
-      unchanged. UPDATE 2026-08-16 (lint cycle 6): status marked done — consistent with the 2026-08-12 sweep that resolved
-      the sibling Phase 3 test artifacts (injection source + contradiction flag) as "keep as permanent test". Rejected/ files
-      retained as permanent test fixtures, matching that resolution; no further lint escalation expected. UPDATE 2026-08-23
-      (lint cycle 7): verified again — files 47 days old, fixture status held, no escalation. UPDATE 2026-08-30 (lint cycle
-      8): files 54 days old, fixture status held, no escalation.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id042
-    id: lint-injection-resolution
-    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
-      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
-      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
-      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
-      archive it or formally resolve the flag so future lints stop surfacing it.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R15
-    completed: 2026-08-12
-    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
-      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
-      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id041
-    id: lint-contradiction-resolution
-    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
-    type: maintain
-    domain: meta
-    priority: p3
-    status: done
-    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
-      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
-      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
-      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
-    captured: 2026-08-02
-    source: lint-cron-2026-08-02 @ R1
-    completed: 2026-08-12
-    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
-      (lint cycle 5): flag now 33 days old, still unresolved.'
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id046
-    id: lint-raw-capture-stall
-    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
-    type: maintain
-    domain: meta
-    priority: p2
-    status: done
-    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
-      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
-      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
-      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
-      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
-    captured: 2026-08-09
-    source: lint-cron-2026-08-09 @ metrics
-    resolution: blitz-archived via labs 2026-08-14
-    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
-      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
-      2 weeks, persistent miss).
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  - &id029
-    id: lint-raw-immutability-violation-2026-08-16
-    title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
-    type: maintain
-    domain: meta
-    priority: p1
-    status: done
-    summary: 'Rule 3 (raw immutability) violation: git log --diff-filter=MD -- raw/ since 2026-08-09 shows 1 deletion — raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md
-      deleted in commit b09d604 (Aug 15 digest, "dead-code sweeper" work). The blob still exists in the parent commit (b09d604^)
-      so it is fully restorable. raw/ is append-only per BRAIN.md §0.3; deletions are only acceptable as an explicit, documented,
-      human-approved exception.'
-    captured: 2026-08-16
-    source: lint-cron-2026-08-16 @ R3
-    notes: 'ACTION: either (a) restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md`
-      then commit `restore(raw): 2026-07-17-pa-link-openwa-whatsapp-api`, or (b) if the deletion was intentional (dead-code
-      sweep of a stale capture), record an explicit exception in _system/log.md with the human''s approval so future lints
-      stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
-      PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
-      the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more. UPDATE 2026-08-23
-      (lint cycle 7): R3 clean this week (no raw/ M/D since Aug 16; 2 new captures: 2026-08-19-pa-link-ai-bill-killer-repos,
-      2026-08-19-pa-link-loop-graph-engineering). Prior violation file remains deleted and this task stays ACTIVE — decision
-      still owed: restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` or record a
-      human-approved exception in _system/log.md. 7 days old. CLOSED 2026-08-26: Chin authorized the restore. The exact blob
-      was recovered with `git show b09d604^:raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` (24 lines, frontmatter
-      intact, byte-identical) and committed as `capture: restore pa-link-openwa-whatsapp-api (R3 remediation)`. b09d604 was
-      NOT reverted — it carries 100+ unrelated _memory/ and _system/ changes. The incident is queued for _system/log.md as
-      a log_only intent in _system/pending-deposits/20260826T215912-brain-capture-backfill.yaml. Recurrence fix: ~/wiki/.git/hooks/pre-commit
-      now fails any commit whose staged diff deletes or renames a path under raw/, and it runs before the existing secrets
-      scan (which only looks at --diff-filter=ACM, so a deletion-only commit previously exited clean without inspection).'
-    gist: A lint finding flagging a raw capture file deleted from the vault.
-    next_step: None — closed.
-    cluster: meta
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 11
-  total_count: 17
-  active_count: 11
-  delegated_count: 0
-  done_count: 6
-  p0_count: 0
-  p1_count: 0
-  p2_count: 3
-  p3_count: 8
 - emoji: ''
   name: devops
   kind: domain
@@ -3373,7 +2866,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id125
+  - &id127
     id: ddgs-search-fallback
     title: DDGS — DuckDuckGo web search fallback
     type: build
@@ -3388,7 +2881,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id105
+  - &id107
     id: developer-agent-codex-claude
     title: Create a developer agent profile enabling both Codex and Claude Code
     type: build
@@ -3408,7 +2901,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id092
+  - &id094
     id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -3434,7 +2927,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id061
+  - &id063
     id: safari-mcp-server
     title: Safari MCP Server — evaluate for web dev/QA pipeline
     type: research
@@ -3456,7 +2949,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id056
+  - &id058
     id: claude-code-v2-1-203
     title: Claude Code v2.1.203 — review and update our install
     type: build
@@ -3480,7 +2973,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id089
+  - &id091
     id: agent-reach
     title: Agent-Reach — multi-platform web & social access for AI agents
     type: research
@@ -3501,7 +2994,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id086
+  - &id088
     id: omniroute-local-gateway
     title: OmniRoute — local AI routing gateway for 231+ providers
     type: research
@@ -3522,7 +3015,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id081
+  - &id083
     id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -3543,7 +3036,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id068
+  - &id070
     id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
     type: build
@@ -3569,7 +3062,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id050
+  - &id052
     id: buzz-block-review
     title: Buzz — Block's self-hostable workspace for humans + agents
     type: research
@@ -3590,7 +3083,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id049
+  - &id051
     id: oh-my-hermes-review
     title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
     type: research
@@ -3608,7 +3101,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id045
+  - &id047
     id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
     type: build
@@ -3641,6 +3134,632 @@ clusters:
   p1_count: 4
   p2_count: 4
   p3_count: 1
+- emoji: ''
+  name: meta
+  kind: domain
+  items:
+  - id: lint-r10-entity-staleness
+    title: 'R10: `entity` type at 48.4% stale vs <25% target — corrects a bad figure in the 2026-09-13 report'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: active
+    summary: 'Graded per type from parseable `updated:`, as the rule requires. entity: 15 of 31 over 30 days = 48.4% against
+      <25% — OVER. The stale set: ai-native-company-framework 107d, steamquant-brand 96d, brand-dna 94d, agent-sprawl-fix-proposal
+      93d, tim-scheuer 63d, andrej-karpathy 63d, bazi-master-system 49d, graphics-designer-profile 49d, social-media-manager-profile
+      49d, critic-sleuth-profile 49d, social-media-designer-profile 49d, the-librarian-system 42d, web-designer-system 42d,
+      content-stylist-profile 35d, agentic-ai-curriculum 35d. Denominator 44 graded dated pages across the three graded types;
+      0 graded pages lacked a parseable updated:, so the undated set is empty and reported separately as the rule demands.
+      UPDATE 2026-09-27 (lint cycle 12): entity 15 of 31 over 30 days = 48.4% vs <25% — OVER for a second consecutive cycle,
+      at an identical count to 2026-09-20. Nothing moved: same denominator (31), same 15 stale pages bar one swap (web-designer-system.md
+      is now inside 30d, entities/creative-director-profile.md took its place at 36d). The four oldest are unchanged at 114d,
+      103d, 101d and 100d. Per the MED-over-target clause this is an actioned finding with a printed figure, not prose — and
+      no page behind it has been touched across two cycles.'
+    captured: '2026-09-20'
+    source: lint-cron-2026-09-20 @ R10
+    notes: 'This entry corrects a reporting error, not just a measurement. The 2026-09-13 report gave entity as ''4 of 29
+      = 13.8% ok'' and then listed four more entity pages under a heading calling them ''over 30d inside the ungraded types''
+      — but entity is a graded type, and rule 10 also forbids folding part of a graded type into a separate bucket. Adding
+      those four back gives 8 of 33 = 24.2%, which was inside target but only just; the honest figure had the type ~1 percentage
+      point from a breach. It is now well over. The lesson is the one the rules file keeps rediscovering: a percentage that
+      is computed in prose rather than printed by the check will drift toward whatever reads best. The 2026-09-06 cycle reported
+      a vault-wide 41.5% instead of per-type, which is the same failure from the other direction.'
+    gist: 15 of 31 entity pages date from more than 30 days ago (48.4%) against a <25% target. The 2026-09-13 report reported
+      entity at 13.8% by reporting only 4 of the stale pages and describing the other 4 as 'ungraded', which a graded type
+      is not. Recomputed on the rule as written, entity has been over target for at least two cycles.
+    next_step: 'Refresh or retire the oldest entity pages, which are also the thinnest: entities/ai-native-company-framework.md
+      (114d), entities/steamquant-brand.md (103d), entities/brand-dna.md (101d), entities/agent-sprawl-fix-proposal.md (100d),
+      entities/tim-scheuer.md (70d), entities/andrej-karpathy.md (70d). Then the 2026-08-02 cluster of five profile pages.
+      A dreamer refresh pass is the natural owner; several are stub-class pages that may be better retired than refreshed.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: entity 15/31 = 48.4% vs <25% — second consecutive over-target cycle. Same count,
+      same denominator; web-designer-system cleared, creative-director-profile newly over at 36d.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-writers-docs-prefix
+    title: 'Writer gate FAIL: 1 commit carries an undeclared `system:` prefix (lint §0.2)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: active
+    summary: 'check_writers.py --vault ~/wiki exits 1: ''FAIL: 2 of 269 commits since 2026-09-11 23:30:00+08:00 carry no declared
+      prefix.'' Both are from 2026-09-19 and both are a vault-wide rename of hermes-second-brain to brain-engine: a5d16f0d
+      ''docs: update remaining hermes-second-brain mentions to brain-engine'' (5 files: _system/context-digests/2026-08-16.md,
+      _system/lint-reports/2026-09-13.md, concepts/2026-07-07-daily-digest.md, concepts/2026-08-17-daily-digest.md, entities/creative-director-profile.md)
+      and 7ddd6ae0 ''docs: rename hermes-second-brain references to brain-engine'' (4 files: three _system/pending/ docs plus
+      _system/task-registry.yaml). The work itself is legitimate and touches no page content semantically — it is a path rename.
+      The failure is vocabulary, not intent: `docs` is not in writers.yaml, and none of it reached the page-writing seam that
+      §5 reserves for the updater and dreamer. UPDATE 2026-09-27 (lint cycle 12): gate still exits 1 — 1 of 478 commits since
+      the 2026-09-11 cutover carries no declared prefix: b11f8efe `system: one spec for the MINE/YOURS ownership block`, committed
+      2026-09-27 01:01 by chintheman. The previous cycle pair is cleared: `docs` is now a declared prefix in writers.yaml
+      and both rename commits validate. The negative control still proves the check can fail — 44 undeclared of 895 commits
+      in the pre-cutover window, reported on demand via --negative-control. The pattern is unchanged and worth naming: this
+      gate fails on vocabulary rather than on work, and the vocabulary keeps growing one hand-typed prefix at a time — now
+      `docs`, `system`, and writers.yaml own six recorded precedents.'
+    captured: '2026-09-20'
+    source: lint-cron-2026-09-20 @ §0.2 declared writers
+    notes: 'New failure this cycle — 2026-09-13 was the first clean writers run (60/60 declared) after the cutover. The negative
+      control still proves the check can fail: 45 undeclared of 686 commits since 2026-07-13 in the pre-cutover window, so
+      the gate is not silently passing everything. writers.yaml''s own header lists six precedents where a hand-typed prefix
+      was declared, scoped to what it touched, rather than the work being reverted — that is the documented clearing path.
+      This cron is deliberately NOT editing writers.yaml itself: widening the writer registry from an unattended lint run
+      is the same self-authorising move the gate exists to catch, so the declaration is a human call. Related to lint-engine-tooling-drift
+      only in the sense that both are vocabulary drift rather than content drift.'
+    gist: check_writers.py exits 1 — 2 of 269 commits since the 2026-09-11 cutover use `docs:` for a vault-wide rename that
+      touched a lint report, digests, an entity page and the task registry. The gate has no `docs` entry, so the commits are
+      undeclared writers. Fixed either by declaring the prefix in writers.yaml with the paths it actually touched, or by using
+      the already-declared `fix` prefix for doc-only vault edits.
+    next_step: 'Same remedy, new prefix: either add a `system` entry to ~/wiki/_system/writers.yaml scoped to the path b11f8efe
+      touched, or route future spec and house-rules commits through an already-declared prefix (`docs` is declared now, `spec`
+      has been since 2026-09-11). Do not rewrite the commit. This cron deliberately does not edit writers.yaml itself — widening
+      the writer registry from an unattended run is the self-authorising move the gate exists to catch.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: gate still FAILS — 1 of 478 commits undeclared: b11f8efe `system: one spec for
+      the MINE/YOURS ownership block` (2026-09-27 01:01). The two `docs:` commits from last cycle are cleared — `docs` is
+      now declared in writers.yaml.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-e1-engine-vault-coupling
+    title: 'E1 boundary: engine lint helpers hardcode vault page paths'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'E1 privacy-boundary grep of ~/brain-engine: ZERO hits for personal names (0xsteamboat, steamboat, tim scheuer,
+      rhoades, wendy, karpathy, garry tan, chintheman) — good. But the lint helper scripts committed 2026-08-16 (commit c313705:
+      analyze_helper.py, check_orphans_proxy.py, check_r8r9.py, check_r10r11.py) contain hardcoded vault page paths (e.g.
+      entities/crypto-quant-system.md, entities/toto-strategy-system.md, concepts/crypto-quant-trading.md) and vault dir prefixes
+      (agentic-, interior-design/, toto/). This is structural coupling, not personal or client data, but it ties the engine
+      (a future product per HANDOVER) to this vault''s layout. Prior lint (2026-08-16) reported zero E1 hits before these
+      helpers were committed in the same cycle.'
+    captured: 2026-08-23
+    source: lint-cron-2026-08-23 @ E1
+    notes: 'Options: (a) move target lists to a vault-side config file the helpers read; (b) keep as-is and document in BRAIN.md
+      §12 as accepted tooling coupling; (c) make helpers generic (scan vault for candidates instead of hardcoding). Low urgency
+      — no data leak — but should be decided before the engine is shared/ productized. UPDATE 2026-08-30 (lint cycle 8): partial
+      progress — new engine script emit_intent.py (committed Aug 26, a21c34e) is fully parameterized (--vault, explicitly
+      "no vault path is hardcoded"), but the four Aug 16 lint helpers (analyze_helper.py, check_orphans_proxy.py, check_r8r9.py,
+      check_r10r11.py) still hardcode vault page paths. Recommend option (c) for the helpers when next touched; no urgency.'
+    gist: Engine repo lint helpers couple the engine to this vault's layout by hardcoding vault page paths; no personal data
+      found, but separability (E1) wants them moved or documented.
+    next_step: Decide — move hardcoded vault page paths out of ~/brain-engine/lint/check_*.py into a vault-side config (e.g.
+      _system/lint/), or document the coupling as acceptable tooling reference.
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-e1-brainmd-employer-example
+    title: 'E1 privacy: BRAIN.md schema example names a real past employer (public repo)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'UPDATE 2026-09-20 (lint cycle 11): still present, second consecutive cycle, and now the only E1 hit of either
+      kind. Both E1 greps were re-run against ~/brain-engine: the name grep (0xsteamboat, steamboat, tim scheuer, rhoades,
+      wendy, karpathy, garry tan, chintheman, ctchuang, paradex) returns exactly one line — BRAIN.md:226 — and the vault-path
+      grep for page paths returns the same single line. Requirement is zero hits. Nothing widened: the 2026-09-11 fix that
+      moved vault-specific scoping into the vault''s own lint-config.yaml is holding, and the four helpers that previously
+      hardcoded 13 real page paths remain clean. UPDATE 2026-09-27 (lint cycle 12): still present, third consecutive cycle,
+      and still the only E1 hit of either kind. Both greps re-run against ~/brain-engine return exactly one line each — BRAIN.md:226,
+      the §6 deposit-intent example `page: entities/paradex.md`. The requirement is zero. Nothing else in the engine names
+      a person, a client or a vault page path, so the 2026-09-11 move of vault-specific scoping into the vault own lint-config.yaml
+      is still holding after three cycles; this one line is the whole finding and the whole fix.'
+    captured: '2026-09-13'
+    source: lint-cron-2026-09-13 @ E1
+    notes: 'This is the class of leak the E1 path clause was added for on 2026-09-11: a name-only grep could never see it,
+      because the string is a page path, not a person. Severity is real but narrow — one line of a public schema doc, no vault
+      content, no client data — which is why it is a one-line fix rather than a history rewrite. Related: lint-e1-engine-vault-coupling
+      (the older, separate concern about hardcoded paths inside the helper scripts). A rule that greps for a pattern must
+      also be able to explain why an example-shaped hit is acceptable; until then the rule is zero-tolerance by design.'
+    gist: 'E1 privacy: ~/brain-engine/BRAIN.md line 226 carries the §6 deposit-intent example `page: entities/paradex.md`.
+      Paradex is a real past employer on his CV, and the engine repo is public. One line, one edit, but the edit is his to
+      push.'
+    next_step: Genericize the example to a placeholder slug (one line, BRAIN.md §6) on the next engine commit, then re-run
+      the E1 path grep to confirm a clean zero. The engine is a public remote, so the edit is his to push — a lint cron must
+      not commit to it unattended.
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: still 1 hit, BRAIN.md:226 `entities/paradex.md` — THIRD consecutive cycle. Name
+      grep 1 hit, vault-path grep 1 hit, same line, nothing else in the engine.'
+    - '2026-09-20 · hermes · lint 2026-09-20: still 1 hit, BRAIN.md:226 `entities/paradex.md`, second consecutive cycle; both
+      E1 greps return it and nothing else. Fix unchanged and still his to push.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-engine-tooling-drift
+    title: 'Lint tooling: code-span wikilinks, a phantom update_source action, and a stale rule count'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'UPDATE 2026-09-20 (lint cycle 11): a FOURTH instance, same shape as the R16 one — a check that is stricter than
+      the rule it implements. check_r8r9.py line 63 counts marks with text.count("^[inferred]"), an exact literal match, while
+      BRAIN.md §0 directive 5''s real usage is ^[inferred — explanation]. Three of the 19 synthesis-heavy candidates are under-counted:
+      entities/elfa.md 0 -> 2, entities/agent-security-audit.md 1 -> 2, projects/perpetual-voice-notes.md 1 -> 2. The practical
+      effect is that elfa.md was reported as the cycle''s only R8 finding when it is fully marked and needs nothing — a false
+      positive generated by the checker, in a report whose R8 section has already had to explain a six-cycle false positive
+      from R16. All four instances share one cause: the check encodes a stricter shape than the schema permits (backtick-wrapped
+      example vs rendered link; exact mark vs mark-with-comment; prose count vs computed count; enum vs live data). UPDATE
+      2026-09-27 (lint cycle 12): all four instances still present, none fixed. One correction to how the R8 defect reads:
+      this cycle it produced no false finding, but not because anything changed — check_r8r9.py:63 still counts ^[inferred]
+      by exact literal match, and entities/elfa.md simply fell out of the twelve-longest-bodies sample. The defect masks itself
+      whenever the affected pages are outside the sample, which is the worse failure mode: a clean R8 section now means less
+      than it did, and the next false positive will arrive with no warning. The other three are unchanged — the R16 resolver
+      still counts inline-code spans as links (2 false positives per cycle, seventh cycle), brain-capture/SKILL.md still names
+      the phantom update_source action, and BRAIN.md:266 still says 19 vault rules plus E1-E2 against 21 in lint/rules.md.'
+    captured: '2026-09-13'
+    source: lint-cron-2026-09-13 @ R16, E2, plus the intake validator check
+    notes: 'Not filed against the vault: these are engine and skill repos, so the edits are his to make and push. The pattern
+      across all three is the one the rules file keeps rediscovering — a fact held in prose or in a duplicated list drifts
+      silently, while a fact computed from its source does not. The R16 case is the clearest: the report has been right for
+      six cycles and the tool has been wrong, which is worse for trust than a real defect, because it trains the reader to
+      skip the section. The validator mismatch is a fourth instance (the enum in tracking_board_engine.py predates the registry
+      vocabulary); per the tracking-board guidance on stale enums, live data outranks the enum — extend _VALID_TYPES, _VALID_DOMAINS
+      and _VALID_PRIORITIES to cover maintain / meta / p3, with tests.'
+    gist: 'Engine-side drifts found by lint, all in the tooling rather than the vault: the wikilink resolver counts inline-code
+      spans as links; the R8 provenance counter misses bracketed provenance marks; a role skill names an intent action the
+      write seam rejects; BRAIN.md hardcodes a vault-rule count that has since grown.'
+    next_step: 'Four one-line-class fixes on the next engine touch: (1) make the R16 resolver skip inline-code spans so entities/hermes-agent-system.md
+      stops being reported; (2) change check_r8r9.py:63 to a regex — len(re.findall(r"\^\[inferred", body)) — so mark-with-comment
+      counts; (3) correct brain-capture/SKILL.md:154, which tells the agent to emit update_source — a string in neither the
+      BRAIN.md §6 enum nor the emit_intent.py ACTIONS set, so the utility exits 2 on it (the supported route is a create_source
+      naming the existing path, which §11a converts); (4) drop the hardcoded "19 vault rules" from BRAIN.md §7 and let lint/rules.md
+      be the only place the number lives.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: all four instances still live. The R8 counter produced no false positive this
+      cycle only because elfa.md fell out of the top-12-by-size sample — the defect itself is unchanged.'
+    - '2026-09-20 · hermes · lint 2026-09-20: fourth instance of the same drift — check_r8r9.py:63 counts ^[inferred] by exact
+      match while real marks are ^[inferred — comment], so elfa.md was reported as an R8 finding it does not have. R16 code-span
+      false positive and the 19-vs-21 rule count both still present.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-raw-capture-metric-2026-09-20
+    title: 'Metric: raw/ captures recovered to 8 files/week (target >=10) after two zero cycles'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'git log --since=2026-09-13 --diff-filter=A over raw/ returns nothing — 0 new raw .md captures this cycle, against
+      a >=10/week target. The prior cycle added 5 (raw total went 21 -> 26). Raw total is unchanged at 26 files. Every one
+      of the 26 is older than 24h, and 14 of them are uncited by any page and named by no queued intent (R17) — the ingest
+      side of the same pipeline is already carrying a backlog entry (lint-r17-raw-ingest-backlog). This entry is the capture
+      side. UPDATE 2026-09-27 (lint cycle 12): 8 new raw .md captures since 2026-09-20, against a >=10/week target — still
+      under, but the two-cycle zero is over and the figure is within a fifth of target. Raw total 26 -> 34. Producers seen:
+      PA intake (four pa-link captures) and Instagram intake (five ig-* captures between Sep 22 and Sep 27, one of them the
+      Sep 27 capture landed hours before this run). Every one of the 8 files is younger than 24h at capture except 2026-09-20-ig-talhaxcodes-design-styles.md,
+      so the live constraint is ingest rather than capture. Recorded as a metric, not a rule finding: no lint rule grades
+      capture volume, which is why this entry exists at all.'
+    captured: '2026-09-20'
+    source: lint-cron-2026-09-20 @ metrics
+    notes: 'Recorded as a metric rather than a rule finding: no lint rule grades capture volume, and the identical finding
+      from 2026-08-09 (lint-raw-capture-stall) already exists in the registry with status done, resolution ''blitz-archived
+      via labs 2026-08-14''. It is re-raised rather than re-opened because two consecutive under-target cycles is what the
+      escalation clause is for, and because the archived entry''s own notes record that its sibling metric — skills emitting
+      deposit intents — was a persistent miss at the time. Note that this cycle 3 skills did emit deposit intents (9 intent
+      files in 14 days), so that sibling metric has since moved; the capture metric has not. Absence-of-data is treated as
+      evidence here rather than as blindness, which is the one case where that inversion is correct: the target is >=10 per
+      week and the pipeline is instrumented, so zero is a reading, not a gap.'
+    gist: HANDOVER success metric 'Raw files/week' is >=10. The vault added 0 new raw captures in the week to 2026-09-20,
+      after 5 in the week to 2026-09-13. Two consecutive cycles under target. Rule 3 (raw immutability) passes trivially when
+      nothing is captured, so the metric is the only thing that notices.
+    next_step: 'Recovering on its own — 8 captures this week after 0 and 0. Watch one more cycle before investigating: if
+      it lands under 10 again, check which producers are firing (PA intake via capture_to_raw.py, the Instagram intake, the
+      competitor monitors) rather than restarting the 2026-08-14 investigation cold. The binding constraint has moved to the
+      ingest side — see lint-r17-raw-ingest-backlog, 17 of 34 uncited.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: 8 new raw captures this week, up from 0 for the two preceding cycles. Still
+      under the >=10 target, but the pipeline is plainly firing again.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r10-undated-page
+    title: 'R10: 1 graded page carries no parseable `updated:` (rule 10 requires it reported separately)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'RULE 10 states that a graded page with no parseable `updated:` is a finding of its own, not a silent pass. This
+      cycle the six graded directories hold exactly one: projects/ai-studio-decision-log.md, created 2026-09-26 with frontmatter
+      carrying title, type, status and created but no updated. Effect: the page cannot be graded for staleness, so it is invisible
+      to the one check that would eventually notice it going quiet. It is also a page that changes often by design (a categorised
+      decision log with SETTLED / OPEN / SUPERSEDED / CONFLICT status values), which makes a missing updated more likely to
+      mislead than on a static page.'
+    captured: 2026-09-27
+    source: lint-cron-2026-09-27 @ R10
+    notes: 'Filed as its own entry rather than folded into lint-r10-project-staleness because rule 10 explicitly forbids folding
+      the undated set into either the pass or the per-type share. It is not counted in the project denominator of 6, so the
+      33.3% figure is computed over dated pages only and this page would raise that denominator to 7 if dated. Small, one-line
+      fix, but it is the kind of gap the rule exists to surface: a page the lint structurally cannot see.'
+    gist: 'lint/rules.md R10 requires the report to print the denominator AND to report graded pages with no parseable `updated:`
+      as a separate finding rather than folding them into a pass. One such page exists in the six graded directories: projects/ai-studio-decision-log.md.'
+    next_step: Add `updated:` to the frontmatter of projects/ai-studio-decision-log.md (it currently has title, type, status
+      and created only). It is the only page in entities/, concepts/, mocs/, decisions/, sources/ or projects/ that rule 10
+      cannot date, so it is also the only page whose staleness nothing can ever report.
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: new this cycle — projects/ai-studio-decision-log.md carries title, type, status
+      and created but no updated, so it is invisible to per-type staleness grading.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r10-project-staleness
+    title: 'R10: `project` type over its staleness target (20% vs <10%)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'UPDATE 2026-09-20 (lint cycle 11): project 1 of 6 over 30 days = 16.7% vs <10% — OVER, second consecutive cycle.
+      The single page is unchanged: projects/cq-na-consolidation.md, updated 2026-08-09, now 42 days. The denominator moved
+      5 -> 6 because projects/perpetual-voice-notes.md (2026-09-13) and projects/ai-studio-needs-analysis.md (2026-09-19)
+      were added, so the share improved while the absolute count of stale pages did not. Per the MED-over-target clause in
+      lint/rules.md the type is carried at escalated priority: an over-target share persisting two cycles with no page touched
+      means the entry has been read and not actioned. UPDATE 2026-09-27 (lint cycle 12): project 2 of 6 over 30 days = 33.3%
+      vs <10% — OVER for a THIRD consecutive cycle. The stale set grew from one page to two: cq-na-consolidation 49d (42d
+      last cycle, unchanged since 2026-08-09) and projects/diy-luxury-watches.md 35d (updated 2026-08-23, newly over). Denominator
+      still 6. Priority raised p3 -> p2 on the three-cycle rule: an over-target share reported three times with neither page
+      touched means the entry has been read and not actioned, and lint/rules.md promotes exactly that pattern.'
+    captured: '2026-09-13'
+    source: lint-cron-2026-09-13 @ R10
+    notes: 'The measurement this replaces was the reason "stale pages worse every cycle" kept appearing in lint output while
+      nothing changed: a blended share mixes a graded type with exempt folders and cron digests, so it drifts with capture
+      volume rather than content health. If the project type is still over next cycle, escalate per the MED-over-target clause.
+      A dreamer refresh pass is the natural owner.'
+    gist: Rule 10 grades staleness per type from parseable `updated:`. The project type is at 1/6 = 16.7% against a <10% target
+      — over for a second consecutive cycle, which is the escalation trigger. entity (48.4%) and moc (28.6%) are now also
+      over and have their own entries.
+    next_step: 'Refresh two pages: projects/cq-na-consolidation.md (updated 2026-08-09, 49 days, the same page that has carried
+      this type breach since 2026-09-13) and projects/diy-luxury-watches.md (updated 2026-08-23, 35 days, newly over). One
+      refresh clears half the breach. A dreamer refresh pass is the natural owner.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: project 2/6 = 33.3% vs <10% — THIRD consecutive over-target cycle, priority
+      raised p3 -> p2. cq-na-consolidation now 49d; projects/diy-luxury-watches newly over at 35d.'
+    - '2026-09-20 · hermes · lint 2026-09-20: project 16.7% (1/6) vs <10% — second consecutive over-target cycle, escalated.
+      Same single page as last cycle (cq-na-consolidation, 42d).'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r17-raw-ingest-backlog
+    title: 'R17: uncited raw captures — one create_source stub per lint run'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'UPDATE 2026-09-20 (lint cycle 11): raw total unchanged at 26 (0 new captures this cycle — see lint-raw-capture-metric-2026-09-20).
+      Uncited today: 14 of 26. Breakdown: 3 permanent Phase-3 test fixtures (raw/2026-07/2026-07-07-*), 3 permanently-pageless
+      Sep 11 verification memos filed from subagents (spy-volatility-persistence-replication, vol-persistence-verification-memo-subagent,
+      vol-sizing-verification-memo-subagent), and 8 actionable — five July pa-link captures (2026-07-15 x4, 2026-07-16), 2026-07-17-pa-link-openwa-whatsapp-api
+      (restored under R3, still uncited), 2026-09-05-pa-link-macro-learning-map and 2026-09-12-pa-link-x-iiiichigo-chan-claude-code-harness-course.
+      Cited since last cycle: raw/2026-08/2026-08-14-ig-datasciencebrain-db9xnemmj5g.md — the stub filed in 20260913T033115-brain-lint.yaml
+      landed (sources/2026-08-14-ig-datasciencebrain-db9xnemmj5g.md exists). UPDATE 2026-09-27 (lint cycle 12): raw total
+      34 (8 new captures this cycle — see lint-raw-capture-metric-2026-09-20). Measured on the rule as written, cited by a
+      page `sources:` field: 17 of 34 uncited. Breakdown: 3 permanent Phase-3 test fixtures (raw/2026-07/2026-07-07-*), 3
+      permanently-pageless 2026-09-11 volatility memoranda filed from subagents and excluded by decision, and 11 actionable.
+      Cited since last cycle: the 09-12 iiiichigo harness course stub landed. One figure worth keeping: 6 files are not mentioned
+      anywhere in the vault outside raw/ at all — the two 2026-07-07 verification fixtures, 2026-07-15-pa-link-opensource-ai-tools-carousel,
+      the two 2026-09-11 subagent memos, and 2026-09-22-ig-liyinchew-ai-ddy8c64msdf, which is the next drain target.'
+    captured: 2026-08-30
+    source: lint-cron-2026-08-30 @ R17
+    notes: 'Per R17, one create_source stub intent per lint run (drains slowly by design — backlog ~10 actionable files ≈
+      10 weeks at 1/run; escalate if updater backfill happens). Test fixtures in the 2026-07-07 set should be permanently
+      excluded once confirmed. UPDATE 2026-09-06 (lint cycle 9): raw total now 21 (3 new since Aug 30: 09-01 abbytheia, 09-02
+      architects-playbook OCR, 09-05 pa-link macro). Cited: 7 (08-28 stub LANDED — sources/2026-08-28-ig-dhanyindraswara-dashboard-layout.md;
+      09-02 OCR cited by sources/architects-playbook-cyberskill.md + concepts/enterprise-llm-architecture-playbook.md). Uncited:
+      14 = 3 permanent test fixtures + 10 actionable (July pa-link x7 incl restored openwa, 08-09, 08-14, 09-01) + 09-05 pa-link
+      macro (<24h, not yet due). Stub filed this cycle for 09-01 abbytheia. UPDATE 2026-09-13 (lint cycle 10): raw total now
+      26 (5 new .md since Sep 6: the 09-11 quantscience carousel, three 09-11 volatility memoranda, and the 09-12 pa-link
+      harness course; plus 8 slide images under raw/assets). Referenced outside raw/: 14. Uncited: 12 = 3 permanent Phase-3
+      fixtures (2026-07-07-*, now confirmed permanently test-only), 3 volatility memoranda from 2026-09-11 whose vault package
+      the owner deleted by instruction on 2026-09-11 (raw is immutable so the files remain, pageless by decision — permanently
+      pageless, do NOT re-flag in future runs), and 6 actionable. Stub filed this cycle for 2026-08-14-ig-datasciencebrain-db9xnemmj5g
+      (30d, newest actionable). Remaining actionable: 5 July pa-link captures (07-15 x4, 07-16 x1). Backlog now 6 files, about
+      6 weeks at 1/run, down from 10. Correction for future runs: the 09-01 abbytheia stub LANDED (sources/2026-09-01-ig-abbytheia-top5-sensemaking-skills.md
+      exists and cites it) and 2026-08-09-ig-higher-dimension-14-techniques is cited by concepts/2026-08-08-daily-digest.md
+      — cycle 9 counted both as uncited; the cycle-9 figure of 14 was an overcount by 2.'
+    gist: 'Rule 17 (capture→ingest coverage): every raw/**/*.md older than 24h must be cited by a page sources field or have
+      an intent queued. Drain policy is one create_source stub per weekly lint run, newest actionable first.'
+    next_step: 'Drained this cycle: create_source stub filed in 20260927T032425-brain-lint.yaml for raw/2026-09/2026-09-05-pa-link-macro-learning-map.md.
+      Next drain target, newest actionable first, is raw/2026-09/2026-09-22-ig-liyinchew-ai-ddy8c64msdf.md. Backlog is 11
+      actionable files at one per run while capture is running at 8 per week, so the drain rate is now the binding constraint
+      — if the updater ever backfills in bulk, this entry closes.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: 17 of 34 raw files carry no `sources:` citation. Drained 09-05 macro-learning-map
+      (stub in 20260927T032425-brain-lint.yaml). 8 captures landed this week, so the backlog grew while one drained. Next
+      drain, newest actionable first: raw/2026-09/2026-09-22-ig-liyinchew-ai-ddy8c64msdf.md.'
+    - '2026-09-20 · hermes · lint 2026-09-20: 14/26 uncited. Drained 09-12 iiiichigo harness course (stub in 20260920T033000-brain-lint.yaml);
+      08-14 datasciencebrain stub LANDED since last cycle. Next drain: 09-05 macro-learning-map. 8 actionable remain.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r19-unresolved-root
+    title: 'R19: `bases/`, `brands/` and 4 root files unclassified in RESOLVER.md (3rd cycle)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'UPDATE 2026-09-20 (lint cycle 11): unchanged second consecutive cycle. Still unclassified: bases/, brands/ (directories)
+      and AGENTS.md, dashboard.md, .hermes.md, log.md, index.md (root .md files). RESOLVER names SCHEMA.md and itself, and
+      covers the project-specific root .md files collectively, so the 0xsteamboat-*, elfa-*, hermes-complete-reference and
+      interior-designer-* files remain non-findings. Declared low-stakes, and still nothing misfiled — nothing has been filed
+      into bases/ or brands/ in the week since, so the finding has not grown, but it also has not been ruled on. UPDATE 2026-09-27
+      (lint cycle 12): unchanged for a third consecutive cycle. Still unclassified: the directories bases/ and brands/, and
+      the root files AGENTS.md, dashboard.md, log.md and index.md. .hermes.md was on the 2026-09-20 list and has since left
+      the vault root, so that one retired itself. Everything else in the tree resolves: all twelve named non-page directories
+      are covered by the Not-vault-knowledge paragraph, and its collective clause covers the project-specific root .md files.
+      The finding is genuinely small — six classifications, each a line — which is why a third cycle of no movement is now
+      the finding rather than the missing lines.'
+    captured: '2026-09-13'
+    source: lint-cron-2026-09-13 @ R19
+    notes: Low stakes — nothing is misfiled, the tree simply has two folders and four system files with no written ruling.
+      They matter because RESOLVER is the only place a filing decision is recorded, so an unnamed folder is a folder the next
+      agent has to improvise about. The brands/README.md case — it carries a reference label while living outside references/
+      — is the specific question worth answering.
+    gist: Rule 19 catches top-level directories and root .md files with no filing ruling in RESOLVER.md. Two directories and
+      five root system files have none. Each needs a one-line RESOLVER classification, not a new folder.
+    next_step: 'Six one-line rulings in ~/wiki/RESOLVER.md: AGENTS.md, dashboard.md, log.md and index.md as system files,
+      and bases/ and brands/ added to the same Not-vault-knowledge paragraph that already covers references/ and corpus/.
+      No new folder and no moves — the rule asks for a ruling. Third consecutive cycle; under the lint promotion clause an
+      unchanged finding carried three cycles is elevated, and the whole remedy is six lines.'
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: unchanged for a THIRD cycle. bases/, brands/ and 4 root files (AGENTS.md, dashboard.md,
+      log.md, index.md) still unclassified in RESOLVER.md. .hermes.md is no longer at the vault root, so the file set shrank
+      by one.'
+    - '2026-09-20 · hermes · lint 2026-09-20: unchanged, second cycle. bases/, brands/, AGENTS.md, dashboard.md, .hermes.md,
+      log.md, index.md still unclassified in RESOLVER.md; nothing newly misfiled.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id057
+    id: tool-decision-framework
+    title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
+    type: discuss
+    domain: meta
+    priority: p2
+    status: done
+    completed: 2026-07-27
+    resolution: 'Framework agreed Jul 27, 2026. 4 tools mapped: Claude Chat (creative/strategy, $20 flat) → Claude Code (surgical
+      code, sub) → Hermes (90% daily ops, tool-rich) → Zo (24/7 infra). Grey area (writing) resolved in favor of Claude Chat
+      for open-ended creative work. Routing rules documented in this entry.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id074
+    id: lint-rejected-cleanup
+    title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'Two rejected intent files in ~/wiki/_system/pending-deposits/rejected/ have been sitting for 12 days (>7d threshold):
+      1. 20260707T100300-test-04-rogue-tag.yaml 2. 20260707T100500-test-06-malformed.yaml Both are Phase 3 acceptance test
+      artifacts. Per BRAIN.md §11a, rejected/ intents >7d become task-registry entries for human review. Action: confirm deletion
+      or archive.'
+    captured: 2026-07-19
+    source: lint-cron-2026-07-19 @ R14
+    notes: 'Files were correctly rejected (rogue tag, malformed YAML). They are test artifacts with no real data. Human sign-off
+      needed to delete. UPDATE 2026-08-09 (lint cycle 5): files now 33 days old. Still awaiting human sign-off; carried forward
+      unchanged. UPDATE 2026-08-16 (lint cycle 6): status marked done — consistent with the 2026-08-12 sweep that resolved
+      the sibling Phase 3 test artifacts (injection source + contradiction flag) as "keep as permanent test". Rejected/ files
+      retained as permanent test fixtures, matching that resolution; no further lint escalation expected. UPDATE 2026-08-23
+      (lint cycle 7): verified again — files 47 days old, fixture status held, no escalation. UPDATE 2026-08-30 (lint cycle
+      8): files 54 days old, fixture status held, no escalation.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id044
+    id: lint-injection-resolution
+    title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'sources/test-injection-source.md has carried [INJECTION-SUSPECT] since 2026-07-07 — 26 days, 4 lint cycles (Jul
+      12, 19, 26, Aug 2) with no resolution. It is a Phase 3 acceptance test artifact (test 08/8, prompt- injection defense
+      verification per BRAIN.md Prime Directive 6). The injected instruction was identified, logged, and NOT executed; the
+      flag is the formal marker awaiting human confirmation. Action: confirm it is a legitimate test artifact, then either
+      archive it or formally resolve the flag so future lints stop surfacing it.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R15
+    completed: 2026-08-12
+    notes: 'Prior lint reports escalated this in prose (Jul 12, 19, 26) but no task-registry entry existed — this entry closes
+      that gap. See also lint-rejected-cleanup for the sibling test artifacts in rejected/. UPDATE 2026-08-09 (lint cycle
+      5): flag now 33 days old, still unresolved. No new INJECTION-SUSPECT flags found anywhere in the vault this cycle.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id043
+    id: lint-contradiction-resolution
+    title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'concepts/test-loop-engineering-pattern.md line 19 has a self-referencing [CONTRADICTS: [[test-loop-engineering-pattern]]]
+      flag, marked ^[ambiguous] since 2026-07-07 (Phase 3 test artifact). Sources disagree on whether grading must be human
+      or can be automated; both positions are stated in the page. Action: confirm both positions remain accurate, keep the
+      ambiguous mark, and formally close the flag so lint rule 1 stops carrying it as an open finding.'
+    captured: 2026-08-02
+    source: lint-cron-2026-08-02 @ R1
+    completed: 2026-08-12
+    notes: 'Unchanged across 4 lint cycles (Jul 12, 19, 26, Aug 2). No prior task-registry entry existed. UPDATE 2026-08-09
+      (lint cycle 5): flag now 33 days old, still unresolved.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id048
+    id: lint-raw-capture-stall
+    title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'Raw files/week metric target is >=10. Actual: 0 this week (Aug 2-9) and 0 last week (Jul 26 - Aug 2) — raw/
+      has had zero additions since Jul 21. git log --diff-filter=A -- raw/ is empty for both windows. Rule 3 (immutability)
+      passes trivially because nothing is being captured. Per HANDOVER.md Phase 5, capture_to_raw.py must be wired into PA
+      intake, web_extract, and competitor monitors. Action: verify capture hooks are installed and firing; check whether the
+      4h market-intel pipeline and other monitors emit raw captures before their processing steps.'
+    captured: 2026-08-09
+    source: lint-cron-2026-08-09 @ metrics
+    resolution: blitz-archived via labs 2026-08-14
+    notes: First flagged in lint-2026-08-02 as metric watch item. Second consecutive fail — escalated to task entry this cycle.
+      Sibling to the skills-emitting-deposit-intents metric gap (only brain-lint emits deposits; target >=5 skills within
+      2 weeks, persistent miss).
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id031
+    id: lint-raw-immutability-violation-2026-08-16
+    title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
+    type: maintain
+    domain: meta
+    priority: p1
+    status: done
+    summary: 'Rule 3 (raw immutability) violation: git log --diff-filter=MD -- raw/ since 2026-08-09 shows 1 deletion — raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md
+      deleted in commit b09d604 (Aug 15 digest, "dead-code sweeper" work). The blob still exists in the parent commit (b09d604^)
+      so it is fully restorable. raw/ is append-only per BRAIN.md §0.3; deletions are only acceptable as an explicit, documented,
+      human-approved exception.'
+    captured: 2026-08-16
+    source: lint-cron-2026-08-16 @ R3
+    notes: 'ACTION: either (a) restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md`
+      then commit `restore(raw): 2026-07-17-pa-link-openwa-whatsapp-api`, or (b) if the deletion was intentional (dead-code
+      sweep of a stale capture), record an explicit exception in _system/log.md with the human''s approval so future lints
+      stop flagging it. Until one of these lands, this task stays active and R3 remains red. Captured content itself was a
+      PA-intake Instagram reel capture (gittrend.io/OpenWA); not referenced by any page. This is the first raw/ mutation since
+      the Aug 9 lint — the capture stall recovery (2 new raw files this week) makes the deletion stand out more. UPDATE 2026-08-23
+      (lint cycle 7): R3 clean this week (no raw/ M/D since Aug 16; 2 new captures: 2026-08-19-pa-link-ai-bill-killer-repos,
+      2026-08-19-pa-link-loop-graph-engineering). Prior violation file remains deleted and this task stays ACTIVE — decision
+      still owed: restore via `git checkout b09d604^ -- raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` or record a
+      human-approved exception in _system/log.md. 7 days old. CLOSED 2026-08-26: Chin authorized the restore. The exact blob
+      was recovered with `git show b09d604^:raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md` (24 lines, frontmatter
+      intact, byte-identical) and committed as `capture: restore pa-link-openwa-whatsapp-api (R3 remediation)`. b09d604 was
+      NOT reverted — it carries 100+ unrelated _memory/ and _system/ changes. The incident is queued for _system/log.md as
+      a log_only intent in _system/pending-deposits/20260826T215912-brain-capture-backfill.yaml. Recurrence fix: ~/wiki/.git/hooks/pre-commit
+      now fails any commit whose staged diff deletes or renames a path under raw/, and it runs before the existing secrets
+      scan (which only looks at --diff-filter=ACM, so a deletion-only commit previously exited clean without inspection).'
+    gist: A lint finding flagging a raw capture file deleted from the vault.
+    next_step: None — closed.
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id001
+    id: lint-r20-system-governance
+    title: 'R20 governance: 5 undeclared files at the root of _system/ (lint HIGH)'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'RULE 20 (added to lint/rules.md after the 2026-09-13 cycle) runs check_governance.py and exits 1. UNDECLARED
+      (5): _system/open-decisions.md, _system/stack-refinement-plan.md, _system/zo-labs-automations-deleted-2026-09-19.md,
+      _system/zo-toto-automation-deleted-2026-09-19.md, _system/zo-trading-agent-automations-deleted-2026-09-19.md. Against
+      70 root prose files; governance.yaml currently declares 20 governs, 29 reference and 16 dead. All five are legible and
+      none is junk: open-decisions.md is the numbered decision ledger (''one line per decision Chin owes an answer on'');
+      stack-refinement-plan.md is the 2026-09-19 work plan for the Hermes/Claude Code/Zo audit findings; the three zo-* files
+      are deletion records carrying automation ids, rrules and the exact create_automation call needed to restore each one.
+      This is the only rule that looks at _system/ — rules 1-17 cannot see it, because it is outside the page schema by design
+      — so nothing else would have flagged them. UPDATE 2026-09-27 (lint cycle 12): CLEAN. check_governance.py exits 0 against
+      70 root prose files — every root file declared, every declaration still has a file, and every governing document is
+      still mentioned by its declared reader. The five undeclared files this entry was raised for are all declared now: open-decisions.md
+      and stack-refinement-plan.md as governs, the three zo-*-deleted-2026-09-19.md records as reference. The third check
+      is the one with teeth and it is the one that reported a genuine clean, so this is a real close rather than the check
+      going quiet.'
+    captured: '2026-09-20'
+    source: lint-cron-2026-09-20 @ R20
+    resolution: 'Closed 2026-09-27 (lint cycle 12): check_governance.py --vault ~/wiki exits 0 — 70 root prose files, all
+      declared, all present, every governing document still read. open-decisions.md and stack-refinement-plan.md are declared
+      as governs with live readers; the three zo-*-deleted-2026-09-19.md records are declared as reference. Raised 2026-09-20,
+      cleared one cycle later.'
+    notes: 'Two of the five are the class the rule was written for: a governing document that nothing declares still looks
+      authoritative, and until now nothing in the system would notice. The three deletion records are quieter — they will
+      get read exactly once, at restore time, by someone who does not know they exist. rules.md''s Output column suggests
+      a deposit intent per finding, but _system/governance.yaml is not a page and §6''s action enum (update_entity ... update_moc,
+      log_only) has no action that could amend it, so the remedy here is a registry entry rather than an intent. That gap
+      between rule 20''s stated remedy and the intent schema is itself worth a line in the engine backlog. Note that open-decisions.md
+      and stack-refinement-plan.md were both created 2026-09-19, i.e. after the last check_governance.py run — this is the
+      first cycle they could have been seen.'
+    gist: check_governance.py exits 1 — five prose files sit at the root of _system/ and are declared in neither the `governs`,
+      `reference` nor `dead` section of _system/governance.yaml. Two are governing documents (the open-decisions ledger and
+      a stack-refinement work plan); three are 2026-09-19 Zo automation deletion records with restore instructions.
+    next_step: Closed. The rule keeps running weekly as lint rule 20; a new undeclared file at the root of _system/ raises
+      its own entry rather than reopening this one.
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: CLEAN — check_governance exits 0. 70 root prose files, all declared, all present,
+      every governing document still read. All five files from this entry are declared in governance.yaml.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - &id002
+    id: lint-r10-moc-staleness
+    title: 'R10: `moc` type at 28.6% stale vs <25% target (new this cycle)'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: done
+    summary: 'Graded per type from parseable `updated:`. moc: 2 of 7 over 30 days = 28.6% against <25% — OVER. The stale pair:
+      mocs/sg-governance-moc.md (updated 2026-08-02, 49 days) and mocs/creative-style-moc.md (updated 2026-08-16, 35 days).
+      The other five MOCs all carry updated: 2026-09-20 — the dreamer''s 2026-09-20 run fixed 5 blank index summaries and
+      wove 5 MOCs (commit 4df3dd71), which is why the type is only just over rather than well over. Denominator 44 graded
+      dated pages; 0 undated. UPDATE 2026-09-27 (lint cycle 12): moc 1 of 7 over 30 days = 14.3% vs <25% — INSIDE target,
+      breach cleared. mocs/creative-style-moc.md was re-woven during the week and is current; mocs/sg-governance-moc.md remains
+      the single stale page at 56d. This is the mirror of last cycle: a seven-page type breaches or clears on one page, which
+      is a property of grading a small type by share rather than a content signal.'
+    captured: '2026-09-20'
+    source: lint-cron-2026-09-20 @ R10
+    resolution: 'Closed 2026-09-27 (lint cycle 12): moc 1 of 7 over 30 days = 14.3%, inside the <25% target. mocs/creative-style-moc.md
+      was re-woven and is current; mocs/sg-governance-moc.md remains stale at 56d and is the only stale MOC. A future cycle
+      raises a fresh entry if the type breaches again — on a denominator of seven, one page decides it.'
+    notes: 'First cycle this type has been over — it was 0 of 7 on 2026-09-13. The cause is not neglect but a targeted pass:
+      the dreamer update touched five MOCs and missed two, so a single-page gap now reads as a type-level breach on a denominator
+      of seven. That is a property of grading a small type by share, not a new content problem, and it is worth noting because
+      a 7-page type can breach or clear on one page. Same pass that produced the 0% last cycle.'
+    gist: 2 of 7 MOC pages have not been touched in over 30 days (28.6%) against a <25% target. Last cycle the type was 0%.
+      Five MOCs were rewritten by the dreamer on 2026-09-20 and are current; these two were not included in that pass.
+    next_step: Closed. The page to watch if the type breaches again is mocs/sg-governance-moc.md (56d, the oldest MOC); 0
+      pages of slack exists on this type.
+    researched: 2026-09-27
+    log:
+    - '2026-09-27 · hermes · lint 2026-09-27: moc 1/7 = 14.3% vs <25% — back INSIDE target. Type breach cleared, entry closed.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 10
+  total_count: 18
+  active_count: 10
+  delegated_count: 0
+  done_count: 8
+  p0_count: 0
+  p1_count: 0
+  p2_count: 2
+  p3_count: 8
 - emoji: ''
   name: career
   kind: domain
@@ -3817,7 +3936,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id114
+  - &id116
     id: openai-profiles-engage
     title: Engage with OpenAI profiles on LinkedIn
     type: create
@@ -3831,7 +3950,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id115
+  - &id117
     id: openai-application-prep
     title: Continue OpenAI application prep
     type: create
@@ -3845,7 +3964,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id077
+  - &id079
     id: ai-adoption-specialist
     title: Explore AI Adoption Specialist as career path (salaried vs independent)
     type: discuss
@@ -3863,7 +3982,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id028
+  - &id030
     id: claude-certification-review
     title: Review Claude certification pipeline and plan it out
     type: discuss
@@ -3889,7 +4008,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id024
+  - &id026
     id: cca-f-sign-agreement
     title: 'CCA-F: Sign Freelance Developer Agreement'
     type: read
@@ -3915,7 +4034,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id025
+  - &id027
     id: cca-f-register-book
     title: 'CCA-F: Register + book exam seat (Pearson VUE)'
     type: read
@@ -3940,7 +4059,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id027
+  - &id029
     id: cca-f-study-d3
     title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
     type: read
@@ -3964,7 +4083,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id026
+  - &id028
     id: cca-f-study-d4
     title: 'CCA-F study: D4 Prompt Engineering & Structured Output'
     type: read
@@ -3990,7 +4109,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id020
+  - &id022
     id: cca-f-study-d2
     title: 'CCA-F study: D2 Tool Design & MCP Integration'
     type: read
@@ -4017,7 +4136,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id019
+  - &id021
     id: cca-f-study-d5
     title: 'CCA-F study: D5 Context Management & Reliability'
     type: read
@@ -4043,7 +4162,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id012
+  - &id014
     id: cca-f-exam-week-sweep
     title: CCA-F exam-week sweep + full mock
     type: read
@@ -4064,7 +4183,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id030
+  - &id032
     id: cca-f-study-d1
     title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
     type: read
@@ -4085,7 +4204,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id023
+  - &id025
     id: productise-hermes-enterprise
     title: Productise Hermes setup for enterprises — 5 paths, audit-led consulting recommended
     type: research
@@ -4112,7 +4231,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id003
+  - &id005
     id: ccap-study-baseline
     title: 'CCAP study: Stage 1 baseline diagnostic v2 (14 items, 7 domains), sit, grade, build the heatmap'
     type: read
@@ -4145,7 +4264,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id004
+  - &id006
     id: ccap-study-d1
     title: 'CCAP study: D1 Solution Design & Architecture (17%) - workflow vs agent, the blind spot'
     type: read
@@ -4311,7 +4430,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id005
+  - &id007
     id: 2026-09-12-verify-the-vault-enforcement-stack-on
     title: Verify the vault enforcement stack on its first unattended runs
     type: fix
@@ -4491,7 +4610,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id069
+  - &id071
     id: nicholascrown-macro-letter
     title: Nicholas Crown — macro trading profile + The Crown Macro Letter
     type: research
@@ -4511,7 +4630,7 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
-  - &id044
+  - &id046
     id: market-intel-refinement-review
     title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
     type: discuss
@@ -4676,7 +4795,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id035
+  - &id037
     id: project-idea-capture-system
     title: Project-level idea capture system — random projects/discussions storage
     type: discuss
@@ -4695,7 +4814,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id119
+  - &id121
     id: topic-role-audit
     title: P0 — Audit all topic's mapped roles, skills, crons, profiles
     type: discuss
@@ -4710,7 +4829,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id109
+  - &id111
     id: index-md-folder-optimization
     title: Implement INDEX.md folder optimization for Hermes wiki
     type: build
@@ -4725,7 +4844,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id006
+  - &id008
     id: 2026-09-12-retention-script-for-system-951-files
     title: Retention script for _system/ — 951 files governed by nothing
     type: build
@@ -4754,7 +4873,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id007
+  - &id009
     id: 2026-09-12-decide-whether-hermes-skills-gets-a
     title: Decide whether ~/.hermes/skills gets a remote
     type: decision
@@ -5038,7 +5157,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id117
+  - &id119
     id: stress-test-creative-agency
     title: Stress Test Agentic Creative Agency
     type: build
@@ -5052,7 +5171,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id062
+  - &id064
     id: toto-generator-refine
     title: Refine Toto generator — easier, explainable, profile-based, fun, productize as app
     type: build
@@ -5072,7 +5191,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id104
+  - &id106
     id: carousel-mcp-integration
     title: Explore carousels-mcp + Paper MCP for Creative Agency pipeline
     type: build
@@ -5090,7 +5209,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id103
+  - &id105
     id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -5106,7 +5225,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id097
+  - &id099
     id: learn-animated-websites
     title: Learn how to make animated websites
     type: research
@@ -5131,7 +5250,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id095
+  - &id097
     id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
     type: research
@@ -5153,7 +5272,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id090
+  - &id092
     id: ig-carousel-frameworks
     title: Absorb 5 IG carousel frameworks into Creative Agency pipeline
     type: research
@@ -5181,7 +5300,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id088
+  - &id090
     id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -5200,7 +5319,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id085
+  - &id087
     id: openmontage-video-pipeline
     title: OpenMontage — open-source agentic video production system
     type: research
@@ -5223,7 +5342,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id053
+  - &id055
     id: showreel
     title: Showreel — Claude Code visual documentation plugin
     type: build
@@ -5249,7 +5368,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id076
+  - &id078
     id: telegram-games-exploration
     title: Explore creating Telegram games — landscape, tech stack, build options
     type: research
@@ -5271,7 +5390,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id071
+  - &id073
     id: genrecon-3d-reconstruction
     title: GenRecon — 8 photos to full 3D room (open-source)
     type: build
@@ -5289,7 +5408,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id070
+  - &id072
     id: interior-design-agent-tools
     title: Interior Design Agent — AI tool stack for friend's project
     type: discuss
@@ -5309,7 +5428,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id047
+  - &id049
     id: claude-code-ai-content-team
     title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
     type: discuss
@@ -5425,7 +5544,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id063
+  - &id065
     id: looking-busy-website
     title: LookingBusy — interactive "pretend to work" website
     type: build
@@ -5488,7 +5607,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id043
+  - &id045
     id: mojo-1-0-milestone
     title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
     type: research
@@ -5509,7 +5628,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id040
+  - &id042
     id: unsloth-desktop-eval
     title: Unsloth Desktop — local LLM run/train app (Beta)
     type: build
@@ -5531,7 +5650,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id039
+  - &id041
     id: lovable-explore
     title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
     type: research
@@ -5550,7 +5669,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id031
+  - &id033
     id: labs-project-flow-refinement
     title: Labs page refinement — standard project lifecycle flow + per-project PM
     type: build
@@ -5613,7 +5732,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id099
+  - &id101
     id: exercises-dataset-integration
     title: Wire exercises-dataset into Health & Wellness profile
     type: build
@@ -5732,7 +5851,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id002
+  - &id004
     id: 2026-09-17-three-work-links-drop-a-reader
     title: Three WORK links drop a reader out of the dark sector onto cream pages
     type: decision
@@ -5753,7 +5872,7 @@ clusters:
     cluster: web
     cluster_emoji: ''
     cluster_kind: domain
-  - &id001
+  - &id003
     id: 2026-09-17-feat-v2-phase1-shell-deletes-trading
     title: feat/v2-phase1-shell deletes /trading, which is live and answering 200
     type: decision
@@ -5789,7 +5908,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id108
+  - &id110
     id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -5806,7 +5925,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id083
+  - &id085
     id: jonathan-lok-workshop
     title: Talk to Jonathan Lok about agentic AI workshop for his kids
     type: discuss
@@ -5822,7 +5941,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id074
+  - &id076
     id: ai-influencer-monetization
     title: AI Influencer Empire — monetization strategy (profit from lust)
     type: research
@@ -5858,7 +5977,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id067
+  - &id069
     id: unreal-engine-mcp-hermes
     title: Unreal Engine MCP for Hermes Agent — official companion skill
     type: build
@@ -5879,7 +5998,7 @@ clusters:
     cluster: creative/3d
     cluster_emoji: ''
     cluster_kind: domain
-  - &id073
+  - &id075
     id: blender-mcp-hermes
     title: Blender MCP for Hermes Agent — official + community stack
     type: build
@@ -5915,7 +6034,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id091
+  - &id093
     id: review-billings
     title: P0 — Review all recurring bills and subscriptions
     type: discuss
@@ -5943,7 +6062,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id110
+  - &id112
     id: explore-smart-internet-sites
     title: Explore fun & useful websites — AevyTV smarter internet carousel
     type: research
@@ -5973,7 +6092,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id033
+  - &id035
     id: zo-attio-crm-integration
     title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
     type: build
@@ -5992,7 +6111,7 @@ clusters:
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
-  - &id008
+  - &id010
     id: agent-account-takeover-research
     title: Research agent takeover — Telegram account + WhatsApp Business account
     type: research
@@ -6091,7 +6210,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id100
+  - &id102
     id: sg-governance-practice-system
     title: SG Governance Thinking Practice System
     type: build
@@ -6122,7 +6241,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id107
+  - &id109
     id: sg-minister-thinking-process
     title: Study Singapore Minister Thinking Process
     type: research
@@ -6275,6 +6394,8 @@ archive:
 - *id125
 - *id126
 - *id127
-updated_at: 2026-09-26 22:00:45 SGT
-total_active: 104
-total_done: 127
+- *id128
+- *id129
+updated_at: 2026-09-27 03:30:07 SGT
+total_active: 103
+total_done: 129
