@@ -3228,14 +3228,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (5 open, oldest 5d)
+    title: System issues awaiting your decision (5 open, oldest 6d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '5 unresolved system issue(s), oldest 5 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: the token
-      re-grant above. (open 5d, asked 1x); say when to restart the assistant so the new rules go live — it has to be run on
-      kobo in a terminal outside it, and it cuts off (open 5d, asked 1x); tell me to delete the leftover working copy of the
+    summary: '5 unresolved system issue(s), oldest 6 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: the token
+      re-grant above. (open 6d, asked 1x); say when to restart the assistant so the new rules go live — it has to be run on
+      kobo in a terminal outside it, and it cuts off (open 6d, asked 1x); tell me to delete the leftover working copy of the
       Hermes program — it holds nothing the live one doesn''t. (open 3d, asked 1x); approve publishing the updated public
       copy of the rules. (open 3d, asked 1x).'
     captured: 2026-09-14
@@ -6259,6 +6259,6 @@ archive:
 - *id125
 - *id126
 - *id127
-updated_at: 2026-09-25 21:30:35 SGT
+updated_at: 2026-09-26 09:30:34 SGT
 total_active: 103
 total_done: 127
