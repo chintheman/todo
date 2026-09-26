@@ -70,13 +70,13 @@ cluster_order:
   name: career
   kind: domain
 - emoji: ''
+  name: ops
+  kind: domain
+- emoji: ''
   name: crypto
   kind: domain
 - emoji: ''
   name: infra
-  kind: domain
-- emoji: ''
-  name: ops
   kind: domain
 - emoji: ''
   name: design
@@ -4200,6 +4200,151 @@ clusters:
   p2_count: 6
   p3_count: 0
 - emoji: ''
+  name: ops
+  kind: domain
+  items:
+  - id: 2026-09-22-0xsteamboat-me-still-shows-the-old
+    title: 0xsteamboat.me still shows the old site's favicon
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: The live city site carries public/favicon.svg from the retired cream design; a brief for a replacement is written
+      and waiting in the Claude Design project V5 at design_brief_favicon/README.md
+    captured: '2026-09-22'
+    source: claude-code session
+    next_step: Chin runs the brief in Claude Design, sends the SVG plus 16/32/180/512 PNGs, then swap public/favicon.svg,
+      add the link tags, deploy
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-26-agents-keep-killing-live-zo-services
+    title: Agents keep killing live Zo services with pkill -f server.ts
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Twice (2026-09-21 and 2026-09-26) a verification agent ran pkill -f server.ts on Zo, which matches the live 0xsteamboat-me
+      site and the floorplan client service; both restarted, and the second agent reported no impact. Prompt instructions
+      did not stop it
+    captured: '2026-09-26'
+    source: claude-code session
+    next_step: Add a PreToolUse hook on mcp__zo__bash that refuses pkill/killall with a -f pattern (kill by exact PID only);
+      Chin registers it, since self-registering hooks is blocked for Claude
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-19-concierge-bot-is-dormant-revival-needs
+    title: 'Concierge bot is dormant: revival needs 3 gaps closed first'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Chin will revive this later. Right now a rebuild from requirements.txt crashes because it lists 3 of 8 runtime
+      dependencies, there is no live log at all because launchd writes to /tmp, and the scoped data backup was never built.
+      The bot has also been running unused since 18 July, restarted every 3 minutes by a Hermes cron.
+    captured: '2026-09-19'
+    source: claude-code session
+    next_step: Read /Users/0xsteamboat/projects/concierge-bot/CONCIERGE-HANDOVER.md, then regenerate requirements.txt from
+      the actual imports
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-14-incorporate-a-pte-ltd-before-touching
+    title: Incorporate a Pte Ltd before touching client production systems
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Chin will operate as a sole proprietor, where business debts and client claims reach his personal assets. Once
+      builds run inside a client's live systems (orders, payments, customer records), a single outage or data incident is
+      personally uncapped. Professional indemnity covers claims but not the liability structure. Cost to fix is SGD 315 to
+      incorporate, SGD 60/yr filing, SGD 300-600/yr company secretary.
+    captured: '2026-09-14'
+    source: claude-code session
+    next_step: 'Decide the trigger point: incorporate at the first T2/T3 build that touches a client''s live production system,
+      or at SGD 5,000/mo recurring, whichever comes first.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-19-no-remote-access-to-the-m1
+    title: No remote access to the M1 if Hermes goes down
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: The break-glass Telegram shell has been dead since 11 Sep and Hermes's own terminal needs Hermes running. If
+      the gateway dies while Chin is away from the M1, there is no way in and every cron stops silently.
+    captured: '2026-09-19'
+    source: claude-code session
+    next_step: Decide whether to revive the break-glass bot with its own token, or pick a different always-available path
+      into the M1
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-19-v5-a-brief-webgl-hiccup-is
+    title: 'v5: a brief WebGL hiccup is treated as permanent failure'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: sceneHost/steamboat-scene conflate a transient context loss with no-WebGL, so the city can stay dark after a
+      recoverable GPU reset (Panel finding A2, 2026-09-19)
+    captured: '2026-09-19'
+    source: claude-code session
+    next_step: add one retry on webglcontextrestored before falling back, in src/city/sceneHost.ts
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-09-19-v5-audio-file-has-no-port
+    title: 'v5: audio file has no port script like the scene has'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: steamboat-audio-v5.js diverges from the design by hand; the scene is regenerated by scripts/port-scene.py, audio
+      is not, so a new design export could silently drop the iOS fixes (Panel finding B10)
+    captured: '2026-09-19'
+    source: claude-code session
+    next_step: write scripts/port-audio.py mirroring port-scene.py when the next design export arrives
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  archive:
+  - &id005
+    id: 2026-09-12-verify-the-vault-enforcement-stack-on
+    title: Verify the vault enforcement stack on its first unattended runs
+    type: fix
+    domain: ops
+    priority: p1
+    status: done
+    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
+      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
+    captured: '2026-09-12'
+    source: claude-code session
+    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
+    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
+      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
+      rules 18 and 19.'
+    log:
+    - '2026-09-12 · claude-code · status active → done: Verified 11:00 SGT on kobo. 06:05 cron ran ok (jobs.json 590c891d042d);
+      manual re-run exits 0 - types clean, writers clean, gate canary 6/6, 23 declared commits since the cutover SHA; the
+      05:05 digest committed f87f4a8a with a correct section-8 prefix. Sunday lint had not fired yet, so instead of leaving
+      a human check pending, the failure path was made self-reporting - failure_deliver on the watchdog now routes a non-zero
+      exit straight to topic 11, proven end to end by a negative control that delivered at message_id 28143.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  count: 7
+  total_count: 8
+  active_count: 7
+  delegated_count: 0
+  done_count: 1
+  p0_count: 0
+  p1_count: 0
+  p2_count: 7
+  p3_count: 0
+- emoji: ''
   name: crypto
   kind: domain
   items:
@@ -4645,135 +4790,6 @@ clusters:
   p0_count: 1
   p1_count: 3
   p2_count: 2
-  p3_count: 0
-- emoji: ''
-  name: ops
-  kind: domain
-  items:
-  - id: 2026-09-22-0xsteamboat-me-still-shows-the-old
-    title: 0xsteamboat.me still shows the old site's favicon
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: The live city site carries public/favicon.svg from the retired cream design; a brief for a replacement is written
-      and waiting in the Claude Design project V5 at design_brief_favicon/README.md
-    captured: '2026-09-22'
-    source: claude-code session
-    next_step: Chin runs the brief in Claude Design, sends the SVG plus 16/32/180/512 PNGs, then swap public/favicon.svg,
-      add the link tags, deploy
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-19-concierge-bot-is-dormant-revival-needs
-    title: 'Concierge bot is dormant: revival needs 3 gaps closed first'
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: Chin will revive this later. Right now a rebuild from requirements.txt crashes because it lists 3 of 8 runtime
-      dependencies, there is no live log at all because launchd writes to /tmp, and the scoped data backup was never built.
-      The bot has also been running unused since 18 July, restarted every 3 minutes by a Hermes cron.
-    captured: '2026-09-19'
-    source: claude-code session
-    next_step: Read /Users/0xsteamboat/projects/concierge-bot/CONCIERGE-HANDOVER.md, then regenerate requirements.txt from
-      the actual imports
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-14-incorporate-a-pte-ltd-before-touching
-    title: Incorporate a Pte Ltd before touching client production systems
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: Chin will operate as a sole proprietor, where business debts and client claims reach his personal assets. Once
-      builds run inside a client's live systems (orders, payments, customer records), a single outage or data incident is
-      personally uncapped. Professional indemnity covers claims but not the liability structure. Cost to fix is SGD 315 to
-      incorporate, SGD 60/yr filing, SGD 300-600/yr company secretary.
-    captured: '2026-09-14'
-    source: claude-code session
-    next_step: 'Decide the trigger point: incorporate at the first T2/T3 build that touches a client''s live production system,
-      or at SGD 5,000/mo recurring, whichever comes first.'
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-19-no-remote-access-to-the-m1
-    title: No remote access to the M1 if Hermes goes down
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: The break-glass Telegram shell has been dead since 11 Sep and Hermes's own terminal needs Hermes running. If
-      the gateway dies while Chin is away from the M1, there is no way in and every cron stops silently.
-    captured: '2026-09-19'
-    source: claude-code session
-    next_step: Decide whether to revive the break-glass bot with its own token, or pick a different always-available path
-      into the M1
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-19-v5-a-brief-webgl-hiccup-is
-    title: 'v5: a brief WebGL hiccup is treated as permanent failure'
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: sceneHost/steamboat-scene conflate a transient context loss with no-WebGL, so the city can stay dark after a
-      recoverable GPU reset (Panel finding A2, 2026-09-19)
-    captured: '2026-09-19'
-    source: claude-code session
-    next_step: add one retry on webglcontextrestored before falling back, in src/city/sceneHost.ts
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  - id: 2026-09-19-v5-audio-file-has-no-port
-    title: 'v5: audio file has no port script like the scene has'
-    type: fix
-    domain: ops
-    priority: p2
-    status: active
-    summary: steamboat-audio-v5.js diverges from the design by hand; the scene is regenerated by scripts/port-scene.py, audio
-      is not, so a new design export could silently drop the iOS fixes (Panel finding B10)
-    captured: '2026-09-19'
-    source: claude-code session
-    next_step: write scripts/port-audio.py mirroring port-scene.py when the next design export arrives
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  archive:
-  - &id005
-    id: 2026-09-12-verify-the-vault-enforcement-stack-on
-    title: Verify the vault enforcement stack on its first unattended runs
-    type: fix
-    domain: ops
-    priority: p1
-    status: done
-    summary: Nothing built on 2026-09-11 has ever run without a human present. If the gates pass silently when they should
-      fail, or the digest swallows a failure, the vault is back where it started with more machinery and false confidence.
-    captured: '2026-09-12'
-    source: claude-code session
-    notes: 'Evidence: index-watchdog.py exit codes 3/4/5/6; triage policy 590c891d042d set to digest'
-    next_step: 'Check Telegram topic 11 for the 06:05 index-watchdog line: expect ''rebuilt, types clean, writers clean, gates
-      proven live''. Then the 05:05 digest cron commit subject (must start ''digest: ''), then Sunday 03:20 weekly lint for
-      rules 18 and 19.'
-    log:
-    - '2026-09-12 · claude-code · status active → done: Verified 11:00 SGT on kobo. 06:05 cron ran ok (jobs.json 590c891d042d);
-      manual re-run exits 0 - types clean, writers clean, gate canary 6/6, 23 declared commits since the cutover SHA; the
-      05:05 digest committed f87f4a8a with a correct section-8 prefix. Sunday lint had not fired yet, so instead of leaving
-      a human check pending, the failure path was made self-reporting - failure_deliver on the watchdog now routes a non-zero
-      exit straight to topic 11, proven end to end by a negative control that delivered at message_id 28143.'
-    cluster: ops
-    cluster_emoji: ''
-    cluster_kind: domain
-  count: 6
-  total_count: 7
-  active_count: 6
-  delegated_count: 0
-  done_count: 1
-  p0_count: 0
-  p1_count: 0
-  p2_count: 6
   p3_count: 0
 - emoji: ''
   name: design
@@ -6259,6 +6275,6 @@ archive:
 - *id125
 - *id126
 - *id127
-updated_at: 2026-09-26 21:30:33 SGT
-total_active: 103
+updated_at: 2026-09-26 22:00:45 SGT
+total_active: 104
 total_done: 127
