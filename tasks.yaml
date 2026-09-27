@@ -4401,6 +4401,23 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-09-27-switch-d7-from-watch-only-to
+    title: Switch D7 from watch-only to enforcing
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: 'D7 has run in watch-only mode since 2026-09-27: it records every action it would have blocked and blocks nothing.
+      89 of the 102 job entries were judged to need no guarded action from each job''s text alone. Until the record is reviewed,
+      a wrong entry is invisible, and until D7 enforces, a job can push code or send data it never declared.'
+    captured: '2026-09-27'
+    source: claude-code session
+    next_step: 'On or after 2026-10-04, read ~/.hermes/logs/d7-shadow.jsonl. For each job it names, decide whether that action
+      is legitimate: if yes, add the class to that job''s policy entry out-of-band (the file is guard-protected); if no, investigate
+      the job. When clean, set D7_SHADOW = False in ~/.hermes/hooks/pre-tool-guard.py.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-19-v5-a-brief-webgl-hiccup-is
     title: 'v5: a brief WebGL hiccup is treated as permanent failure'
     type: fix
@@ -4454,14 +4471,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 7
-  total_count: 8
-  active_count: 7
+  count: 8
+  total_count: 9
+  active_count: 8
   delegated_count: 0
   done_count: 1
   p0_count: 0
   p1_count: 0
-  p2_count: 7
+  p2_count: 8
   p3_count: 0
 - emoji: ''
   name: crypto
@@ -6396,6 +6413,6 @@ archive:
 - *id127
 - *id128
 - *id129
-updated_at: 2026-09-27 09:30:06 SGT
-total_active: 103
+updated_at: 2026-09-27 13:30:07 SGT
+total_active: 104
 total_done: 129
