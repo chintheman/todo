@@ -3812,6 +3812,22 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-09-29-d7-test-harness-writes-into-the
+    title: D7 test harness writes into the real watch-only log
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: tests/policy_matrix.py runs against the live guard, which is in watch-only mode and records every would-be block.
+      On 2026-09-29 a run left 36 fake entries (job id ffffffffffff plus fixture ids for the IBKR and GitHub watchers) that
+      would have read as real jobs at the 4 Oct review. Moved aside to d7-shadow.test-noise-20260929.jsonl.
+    captured: '2026-09-29'
+    source: claude-code session
+    next_step: At the 4 Oct D7 review, ignore anything with job ffffffffffff or clustered in a single minute. Longer term,
+      have the test harness run against a scratch copy with D7_SHADOW False instead of the live file.
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-14-incorporate-a-pte-ltd-before-touching
     title: Incorporate a Pte Ltd before touching client production systems
     type: fix
@@ -3932,14 +3948,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 9
-  total_count: 10
-  active_count: 9
+  count: 10
+  total_count: 11
+  active_count: 10
   delegated_count: 0
   done_count: 1
   p0_count: 0
   p1_count: 0
-  p2_count: 9
+  p2_count: 10
   p3_count: 0
 - emoji: ''
   name: career
@@ -6432,6 +6448,6 @@ archive:
 - *id127
 - *id128
 - *id129
-updated_at: 2026-09-29 09:31:02 SGT
-total_active: 105
+updated_at: 2026-09-29 21:00:11 SGT
+total_active: 106
 total_done: 129
