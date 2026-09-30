@@ -2726,10 +2726,10 @@ clusters:
     domain: devops
     priority: p1
     status: active
-    summary: '4 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      🫀 Spine Heartbeat. Unanswered asks: paste in the corrected closing-block checker — the exact line is in Thursday''s
-      message in this topic. (open 3d, asked 2x); publish the waiting updates to the public rules repo, or leave it local.
-      (open 6d, asked 1x).'
+    summary: '4 unresolved system issue(s), oldest 6 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: add `chintheman/spine-memory`
+      to the sweeper fine-grained token''s repo list, or tell me to drop it from the sweep. (open 3d, asked 1x); paste in
+      the corrected closing-block checker — the exact line is in Thursday''s message in this topic. (open 4d, asked 2x); publish
+      the waiting updates to the public rules repo, or leave it local. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6446,6 +6446,6 @@ archive:
 - *id127
 - *id128
 - *id129
-updated_at: 2026-09-30 09:30:09 SGT
+updated_at: 2026-09-30 21:30:09 SGT
 total_active: 106
 total_done: 129
