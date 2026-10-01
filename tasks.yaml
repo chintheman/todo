@@ -2721,14 +2721,16 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (3 open, oldest 4d)
+    title: System issues awaiting your decision (4 open, oldest 5d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '3 unresolved system issue(s), oldest 4 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: add `chintheman/spine-memory`
-      to the sweeper fine-grained token''s repo list, or tell me to drop it from the sweep. (open 3d, asked 1x); paste in
-      the corrected closing-block checker — the exact line is in Thursday''s message in this topic. (open 4d, asked 2x).'
+    summary: '4 unresolved system issue(s), oldest 5 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: add `chintheman/spine-memory`
+      to the sweeper fine-grained token''s repo list, or tell me to drop it from the sweep. (open 4d, asked 1x); whether to
+      point the test that checks your Claude rules file at the newest model and run it (about 60 cents), or hold (open 3d,
+      asked 2x); paste in the corrected closing-block checker — the exact line is in Thursday''s message in this topic. (open
+      5d, asked 2x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6445,6 +6447,6 @@ archive:
 - *id127
 - *id128
 - *id129
-updated_at: 2026-10-01 09:30:07 SGT
+updated_at: 2026-10-01 21:30:07 SGT
 total_active: 106
 total_done: 129
