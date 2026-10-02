@@ -2721,16 +2721,17 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (5 open, oldest 5d)
+    title: System issues awaiting your decision (6 open, oldest 6d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '5 unresolved system issue(s), oldest 5 day(s). Recurring failures: ⚡ Miner-DC Close Reaction; 🇺🇸 US Close +
+    summary: '6 unresolved system issue(s), oldest 6 day(s). Recurring failures: ⚡ Miner-DC Close Reaction; 🇺🇸 US Close +
       Prediction. Unanswered asks: add `chintheman/spine-memory` to the sweeper fine-grained token''s repo list, or tell me
-      to drop it from the sweep. (open 4d, asked 1x); whether to point the test that checks your Claude rules file at the
-      newest model and run it (about 60 cents), or hold (open 3d, asked 2x); paste in the corrected closing-block checker
-      — the exact line is in Thursday''s message in this topic. (open 5d, asked 2x).'
+      to drop it from the sweep. (open 5d, asked 1x); whether to point the test that checks your Claude rules file at the
+      newest model and run it (about 60 cents), or hold (open 4d, asked 2x); paste in the corrected closing-block checker
+      — the exact line is in Thursday''s message in this topic. (open 6d, asked 2x); approve publishing the updated public
+      rules copy — I''d finish the last three small edits and publish the lot (about 2 minutes (open 3d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6447,6 +6448,6 @@ archive:
 - *id127
 - *id128
 - *id129
-updated_at: 2026-10-02 09:30:06 SGT
+updated_at: 2026-10-02 21:30:05 SGT
 total_active: 106
 total_done: 129
