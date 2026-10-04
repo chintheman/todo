@@ -2721,19 +2721,18 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (9 open, oldest 7d)
+    title: System issues awaiting your decision (8 open, oldest 7d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '9 unresolved system issue(s), oldest 7 day(s). Recurring failures: Maintenance Sweeper — weekly dead-code run;
+    summary: '8 unresolved system issue(s), oldest 7 day(s). Recurring failures: Maintenance Sweeper — weekly dead-code run;
       ⚡ Miner-DC Close Reaction; 🇺🇸 US Close + Prediction; 📊 Health Snapshot — Daily. Unanswered asks: add `chintheman/spine-memory`
-      to the sweeper fine-grained token''s repo list, or tell me to drop it from the sweep. (open 6d, asked 1x); whether to
-      point the test that checks your Claude rules file at the newest model and run it (about 60 cents), or hold (open 5d,
-      asked 2x); paste in the corrected closing-block checker — the exact line is in Thursday''s message in this topic. (open
-      7d, asked 2x); approve publishing the updated public rules copy — I''d finish the last three small edits and publish
-      the lot (about 2 minutes (open 4d, asked 1x); say go and I''ll merge the GitHub checks into your working copy, keep
-      both sets, and push once — or tell me to leave the old (open 4d, asked 2x).'
+      to the sweeper fine-grained token''s repo list, or tell me to drop it from the sweep. (open 7d, asked 1x); whether to
+      point the test that checks your Claude rules file at the newest model and run it (about 60 cents), or hold (open 6d,
+      asked 2x); approve publishing the updated public rules copy — I''d finish the last three small edits and publish the
+      lot (about 2 minutes (open 5d, asked 1x); say go and I''ll merge the GitHub checks into your working copy, keep both
+      sets, and push once — or tell me to leave the old (open 5d, asked 2x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6524,6 +6523,6 @@ archive:
 - *id129
 - *id130
 - *id131
-updated_at: 2026-10-04 09:31:02 SGT
+updated_at: 2026-10-04 21:31:02 SGT
 total_active: 105
 total_done: 131
