@@ -2721,13 +2721,15 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (1 open, oldest 11d)
+    title: System issues awaiting your decision (2 open, oldest 11d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '1 unresolved system issue(s), oldest 11 day(s). Unanswered asks: add `chintheman/spine-memory` to the sweeper
-      fine-grained token''s repo list, or tell me to drop it from the sweep. (open 11d, asked 1x).'
+    summary: '2 unresolved system issue(s), oldest 11 day(s). Unanswered asks: add `chintheman/spine-memory` to the sweeper
+      fine-grained token''s repo list, or tell me to drop it from the sweep. (open 11d, asked 1x); decide whether to have
+      the monitor ignore this specific shutdown line so deliberate restarts stop waking the watchdog — if yes, I''ll make
+      th (open 3d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6518,6 +6520,6 @@ archive:
 - *id129
 - *id130
 - *id131
-updated_at: 2026-10-08 09:30:29 SGT
+updated_at: 2026-10-08 21:30:29 SGT
 total_active: 105
 total_done: 131
