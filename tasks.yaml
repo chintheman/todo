@@ -2729,7 +2729,7 @@ clusters:
     summary: '3 unresolved system issue(s), oldest 12 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces).
       Unanswered asks: add `chintheman/spine-memory` to the sweeper fine-grained token''s repo list, or tell me to drop it
       from the sweep. (open 12d, asked 1x); decide whether to have the monitor ignore this specific shutdown line so deliberate
-      restarts stop waking the watchdog — if yes, I''ll make th (open 3d, asked 1x).'
+      restarts stop waking the watchdog — if yes, I''ll make th (open 4d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6520,6 +6520,6 @@ archive:
 - *id129
 - *id130
 - *id131
-updated_at: 2026-10-09 09:30:28 SGT
+updated_at: 2026-10-09 21:30:27 SGT
 total_active: 105
 total_done: 131
