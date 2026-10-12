@@ -3574,12 +3574,12 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (3 open, oldest 2d)
+    title: System issues awaiting your decision (3 open, oldest 1d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '3 unresolved system issue(s), oldest 2 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+    summary: '3 unresolved system issue(s), oldest 1 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
       📊 Spine Retrieval Benchmark (Weekly); 🫀 Spine Heartbeat.'
     captured: 2026-09-14
     source: system-topic-triage cron
@@ -6674,6 +6674,6 @@ archive:
 - *id130
 - *id131
 - *id132
-updated_at: 2026-10-12 09:30:47 SGT
+updated_at: 2026-10-12 21:30:11 SGT
 total_active: 108
 total_done: 132
