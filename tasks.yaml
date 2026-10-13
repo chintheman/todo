@@ -3574,13 +3574,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (3 open, oldest 1d)
+    title: System issues awaiting your decision (4 open, oldest 15d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '3 unresolved system issue(s), oldest 1 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      📊 Spine Retrieval Benchmark (Weekly); 🫀 Spine Heartbeat.'
+    summary: '4 unresolved system issue(s), oldest 15 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      📊 Spine Retrieval Benchmark (Weekly); 🫀 Spine Heartbeat. Unanswered asks: say whether to repair that test against the
+      current rules file and run it on Fable 5.1, or leave it parked. (open 15d, asked 3x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6674,6 +6675,6 @@ archive:
 - *id130
 - *id131
 - *id132
-updated_at: 2026-10-12 21:30:11 SGT
+updated_at: 2026-10-13 09:30:15 SGT
 total_active: 108
 total_done: 132
