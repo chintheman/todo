@@ -1804,6 +1804,42 @@ clusters:
       moved inside the window (brand-dna, refreshed 2026-10-04) and four joined the denominator, so the count held at 17 while
       the share eased 54.8% -> 48.6%. Oldest four unchanged at 128d/117d/114d (ai-native-company-framework, steamquant-brand,
       agent-sprawl-fix-proposal).'
+    - '2026-10-18 · hermes · lint 2026-10-18: entity 19/35 = 54.3% vs <25% target - OVER for a FIFTH consecutive cycle, and
+      worse than last cycle''s 48.6%. Nothing was refreshed; two pages crossed the 30d line (entities/gbrain.md 36d, entities/elfa.md
+      32d), which is what moved it. Oldest three unchanged at 135d/124d/121d (ai-native-company-framework, steamquant-brand,
+      agent-sprawl-fix-proposal). Graded denominator 128 (project 86, entity 35, moc 7), 121 dated; 7 graded pages still carry
+      no parseable updated: (all ai-studio research notes A1/A2/A5/A6/B1/B2/E15). Project reads 3.8% but only by dilution.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r18-wallet-namecard-unindexed
+    title: 'R18 FAIL: two header-less files in projects/wallet-namecard/ never reach the index'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: active
+    summary: 'Rule 18''s mechanical gate fails this cycle: ''no-frontmatter: projects/wallet-namecard/SESSION-FACTS.md is
+      in a scanned folder and will never reach the index'' and the same for STATE.md, then ''2 page(s) are silently absent
+      from the index'', exit 3. This is the first genuine R18 defect since engine commit 7ce98be (2026-10-07) added the projects/ai-studio
+      workspace exemption. The folder was created 2026-10-17 by a product-scoping session that wrote its context-discipline
+      files (STATE.md 695B, SESSION-FACTS.md 41B, facts.yaml, write_facts.py) straight into a page folder. WORKSPACE_DIRS
+      contains projects/ai-studio only, so the gate sees them. Consequence: the pair is invisible to the Tier-0 retrieval
+      path and would stay invisible after any real page lands beside them. Not the same root cause as lint-r18-workspace-exemption-unrecorded
+      (that one is about a written ruling for an existing exemption); this is an exemption that does not exist yet.'
+    captured: '2026-10-18'
+    source: lint-cron-2026-10-18 @ R18
+    notes: 'The two files are machine-written by design, which is why an intent is the wrong instrument: the §6 action enum
+      has no action for a workspace file, and any frontmatter added by the updater is deleted the next time write_facts.py
+      runs. The context-discipline pattern (~/wiki/_system/context-discipline, and the CLAUDE.md storage map) already says
+      session scratch state belongs in a facts file written by a script, not in a page tree; the question this entry asks
+      is where a project''s own facts file should live.'
+    gist: 'rebuild_index.py --check-types exits 3 on projects/wallet-namecard/STATE.md and SESSION-FACTS.md: no frontmatter,
+      in a scanned page folder, so both are silently absent from the index. The ai-studio workspace exemption does not reach
+      this new folder.'
+    next_step: 'Decide the ruling and write it where filing rulings live: either add projects/wallet-namecard to WORKSPACE_DIRS
+      in rebuild_index.py (engine edit, his to push to a public remote), or move STATE.md and SESSION-FACTS.md out of projects/
+      into a context-discipline directory, or record that a project root may hold unindexed working files. Do NOT stamp frontmatter
+      on them as a fix: STATE.md says ''run write_facts.py, never hand-edit'', so the next session overwrites the stamp.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -1834,6 +1870,39 @@ clusters:
     next_step: 'Write the ruling down where filing rulings live: one paragraph in ~/wiki/RESOLVER.md naming projects/ai-studio/
       as a workspace folder whose header-less files are not pages, and one line in ~/brain-engine/lint/rules.md R18 recording
       the exemption so the rule text and the tool agree. The engine edit itself is his to push (public remote).'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r1-echo-bike-closure-onesided
+    title: 'R1: scopes/engine-test-v02max-proxy.md still says the echo-bike duration question is unresolved — the vault closed
+      it 2026-09-15'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: active
+    summary: 'R1 found one open [CONTRADICTS:] flag and no others. The pair is scopes/engine-test-v02max-proxy.md §5 (lines
+      89-96: ''recorded, not decided ... is unresolved'', ^[ambiguous], [CONTRADICTS: [[entities/health-wellness-system]]])
+      against entities/health-wellness-system.md. The health page closed its side: line 837 opens the ''Sep 15, 2026 — The
+      Echo-Bike Duration Conflict Was Closed'' section, line 852 carries the reciprocal flag annotated ''**superseded 2026-09-15:**
+      the conflict was closed; see the Sep 15 entry above'', and concepts/2026-09-15-daily-digest.md:110 records the same
+      closure and that decision entry 09140518-echo-bike-test-5-minute- was resolved with his note. The scope document, which
+      is status: locked and last_reviewed 2026-09-07, was never touched. So the vault''s record and its protocol-of-record
+      disagree. This cannot travel as a deposit intent: emit_intent.py''s ACTION_DIR enum covers entities/concepts/decisions/projects/sources/mocs
+      only, and there is no action that names scopes/.'
+    captured: '2026-10-18'
+    source: lint-cron-2026-10-18 @ R1
+    notes: Read the closure itself before editing rather than paraphrasing this entry - the durable output recorded on 2026-09-15
+      was the hand-off rule (a decision owned by another topic's agent is handed to that domain, never armed against the main
+      chat, alert-and-reminder-hygiene §2b, commit 3180e18), and that may deserve a line on the scope page too.
+    gist: 'The locked engine-test scope document carries ''Whether the scorecard intends a second, deliberately different
+      test or a restatement of this one is unresolved. ^[ambiguous] [CONTRADICTS: [[entities/health-wellness-system]]]''.
+      Two later records close that conflict, so the locked protocol document now tells a reader the opposite of what the vault
+      decided.'
+    next_step: 'Edit scopes/engine-test-v02max-proxy.md §5 Open Items: replace the ''unresolved'' paragraph with the closure
+      dated 2026-09-15, cite concepts/2026-09-15-daily-digest.md:110 and decision entry 09140518-echo-bike-test-5-minute-,
+      keep the 5-minute protocol as the engine test, and note that the 10-minute echo effort is a separate week-6 baseline
+      (entities/health-wellness-system.md lines 448 and 459), not a restatement. Drop the [CONTRADICTS:] flag in the same
+      edit.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -1868,6 +1937,12 @@ clusters:
       three failures (both 2026-10-09, both by chintheman) are auto-sync commits whose subject was amended by hand. Do not
       rewrite the commits. This cron deliberately does not edit writers.yaml itself: widening the writer registry from an
       unattended run is the self-authorising move the gate exists to catch.'
+    log:
+    - '2026-10-18 · hermes · lint 2026-10-18: 1 of 1118 commits undeclared, down from 3 of 908. The survivor is 50491653 ''CRM
+      Phase A built and Panel-reviewed (7b8ea45); D20 opened''. The other two are now formally EXEMPT with reasons: 01acae28
+      ''D13 row into the closed table'' (decided 2026-10-15) and 171a35a9 ''Add context discipline gap-fix tracker (handover
+      to M1 - Claude Improvement)'' (decided 2026-10-14), both hand-typed subjects in an auto-syncing DAG where amending would
+      rewrite history. Negative control still proves the gate can fail: 46 undeclared of 1535 since 2026-07-13.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -1967,6 +2042,12 @@ clusters:
       E1 greps return it and nothing else. Fix unchanged and still his to push.'
     - '2026-10-11 · hermes · lint 2026-10-11: still 1 hit each grep, BRAIN.md:226 `page: entities/paradex.md` — FIFTH consecutive
       cycle. Name grep 1, vault-path grep 1, same single line, nothing else in the engine.'
+    - '2026-10-18 · hermes · lint 2026-10-18: still 1 hit each grep, BRAIN.md:226 ''page: entities/paradex.md'' - SIXTH consecutive
+      cycle. Name grep 1, vault-path grep 1 (the same line), personal-directory grep 0. NEW observation, outside the rule''s
+      literal regex: widening it to include references/ and scopes/ surfaces a second vault path, HANDOVER.md:62 ''keep the
+      old file as references/human-index.md'', and that page DOES exist in the vault - so by the rule''s stated intent (''a
+      page path is personal data'') it is a hit. It is a generic planning example, not a hardcoded helper path, so it is reported
+      at MED and belongs in the same one-line pass as the paradex example.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2024,6 +2105,14 @@ clusters:
       — wrong for a FIFTH cycle. R8 counter and R16 code-span resolver unchanged. NEW FIFTH INSTANCE: analyze_helper.py''s
       R7 taxonomy set adds every bare word from non-heading prose lines to the vocabulary, so the check cannot fail for a
       single-word tag — it printed ''none'' this cycle while 14 rogue tag values sit on five October digests.'
+    - '2026-10-18 · hermes · lint 2026-10-18: two deviations added, one promoted. NEW: check_r10r11.py measures file MTIME,
+      not the parseable `updated:` that rules.md R10 specifies - a git checkout or a restore rewrites mtime and silently resets
+      every page''s staleness. NEW: `superseded_by: [[path]]` parses in YAML as a nested list ([[''projects/x'']]), so a quote-blind
+      resolver reports two working supersession chains as broken (nothing in the vault is wrong). PROMOTED: BRAIN.md:266 still
+      reads ''19 vault rules plus E1-E2'' against 21 in lint/rules.md - wrong for a SIXTH consecutive cycle, and rules.md''s
+      own preamble makes a finding carried as prose for three cycles HIGH. Still live: check_r8r9.py:63 exact-literal ^[inferred]
+      count; R16 resolver counting code-span spans (2 false positives, 10th cycle); analyze_helper.py''s R7 taxonomy harvest
+      absorbing every bare word from prose (this cycle it printed ''none'' beside 19 strict rogue values).'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2206,6 +2295,14 @@ clusters:
       it as cited, but it is mentioned only in prose (digest bodies and one entity page); no page''s `sources:` field names
       it, which is the test the rule applies. Standing exclusions unchanged: 3 Phase-3 fixtures (raw/2026-07/2026-07-07-*)
       and the three 2026-09-11 volatility memoranda, permanently pageless by decision.'
+    - '2026-10-18 · hermes · lint 2026-10-18: raw total 37 -> 38 (1 new capture, 2026-10-14 ig-awaken-healers), 15 uncited
+      of 38 by strict sources:-field test. Drained this cycle: create_source stub for raw/2026-08/2026-08-09-ig-higher-dimension-14-techniques.md,
+      queued as 20261018T032303-brain-lint.yaml. THE 2026-10-11 DRAIN WAS REJECTED, not applied: the updater refused the quantscience
+      carousel intent on policy grounds (rejected/20261011T032342-brain-lint.yaml) because the owner ordered that whole package
+      deleted on 2026-09-11 (''remove it... a lot of redundant work and low quality'', commit 82f6a89d). The exclusion set
+      is therefore FOUR captures, not three: raw/2026-09/2026-09-11-ig-quantscience-volatility-carousel.md plus the three
+      volatility memoranda. Do not re-flag any of the four. Next drain target, newest actionable first: raw/2026-07/2026-07-15-pa-link-ai-projects-portfolio-carousel.md
+      (7 pa-link captures remain queued behind it).'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2254,6 +2351,47 @@ clusters:
       .md: AGENTS.md, dashboard.md, log.md, .hermes.md (.hermes.md is back at the vault root after leaving it before cycle
       12). 01 - Projects and 02 - Areas stay covered by RESOLVER''s collective clause; RESOLVER.md itself is a substring false
       positive — it names itself only as ''this file''.'
+    - '2026-10-18 · hermes · lint 2026-10-18: unchanged for a FIFTH cycle, plus one newly surfaced directory. Unclassified
+      dirs: bases/, brands/, certs/, and now _templates/ (mentioned only as a path inside step 6, never classified as tooling).
+      Unclassified root .md: AGENTS.md, dashboard.md, log.md, .hermes.md. 01 - Projects and 02 - Areas stay covered by RESOLVER''s
+      collective 00-Inbox-through-03-Archives clause; RESOLVER.md itself is a substring false positive. Seven one-line rulings,
+      still no restructuring needed.'
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: lint-r7-digest-tags
+    title: 'R7: 19 rogue tag values / 31 instances on digest pages, second cycle over target — and the shipped checker cannot
+      see them'
+    type: maintain
+    domain: meta
+    priority: p3
+    status: active
+    summary: 'Strict R7 this cycle: taxonomy vocabulary taken from explicit declarations only (109 backticked tokens + 3 list
+      entries = 112 tags) against 149 distinct tags in use across pages that carry frontmatter. Result: 43 rogue values /
+      90 instances vault-wide. Narrowed to core schema pages, 19 values / 31 instances, all on type: digest pages. All 14
+      values flagged on 2026-10-11 are still present and still rogue; five more have appeared on the newer digests (m1 4x,
+      verification 4x, backup 3x, markets 3x, studio 2x on 2026-10-12 through 2026-10-15), so the count grew 17 -> 31 in a
+      week. The 2026-10-11 report already recorded the reasoning behind the exemption (dream run bca8c6fe, _system/log.md:974:
+      digest tags act as a per-day topic index, most values appear on fewer than three pages, the durable fix belongs at the
+      digest emitter) and that reasoning is sound. What is missing is that rules.md R7 exempts nothing, so by the rule as
+      written every one of these is a violation on its second consecutive cycle. Separately, the shipped checker is blind
+      to all of it: analyze_helper.py lines 53-61 add every bare word from non-heading prose lines to the taxonomy, so a single-word
+      tag can never be rogue to it. That is the fifth consecutive cycle this defect has been carried — a check that cannot
+      fail is worse than a rule that fails.'
+    captured: '2026-10-18'
+    source: lint-cron-2026-10-18 @ R7
+    notes: 'Do not ''fix'' this by rewriting generated digest output in a weekly pass; the emitter is the write seam and the
+      dream run''s refusal to rewrite history was correct. The open question is only where the exemption lives: in the taxonomy,
+      in the rule, or in the code. Related: lint-engine-tooling-drift (the checker defect).'
+    gist: 'Strict parsing of _system/taxonomy.md finds 19 tag values used on type: digest pages that the taxonomy does not
+      define: m1, verification, backup, markets, studio, ai-studio, incidents, maintenance, alpaca, deep-dive-protocol, engine,
+      geopolitics, gmail, med-clearance, personal-site, self-improvement, spine, workout-log. analyze_helper.py prints ''none''
+      because its taxonomy set absorbs every bare word from prose.'
+    next_step: 'Pick one of three and write it down: (a) extend _system/taxonomy.md with the digest topic vocabulary (m1,
+      backup, verification, markets, studio are 4-3 uses each and will recur), (b) add an explicit digest-tag exemption clause
+      to lint/rules.md R7 so the rule and the recorded practice agree, or (c) fix the digest emitter to draw tags from the
+      taxonomy at write time. Also fix lint/analyze_helper.py''s taxonomy harvest (restrict it to backticked declarations)
+      so the rule can fail at all.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2600,15 +2738,15 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  count: 12
-  total_count: 23
-  active_count: 12
+  count: 15
+  total_count: 26
+  active_count: 15
   delegated_count: 0
   done_count: 11
   p0_count: 0
   p1_count: 0
-  p2_count: 3
-  p3_count: 9
+  p2_count: 5
+  p3_count: 10
 - emoji: ''
   name: ai/ml
   kind: domain
@@ -6716,6 +6854,6 @@ archive:
 - *id131
 - *id132
 - *id133
-updated_at: 2026-10-17 09:30:07 SGT
-total_active: 109
+updated_at: 2026-10-18 03:25:24 SGT
+total_active: 112
 total_done: 133
