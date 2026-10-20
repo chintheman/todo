@@ -3951,7 +3951,7 @@ clusters:
     status: active
     summary: '5 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
       📊 Spine Retrieval Benchmark (Weekly); 🫀 Spine Heartbeat. Unanswered asks: approve adding the name rule to the Claude
-      Code rules file. (open 5d, asked 1x); reply 1 or 2. (open 6d, asked 1x).'
+      Code rules file. (open 6d, asked 1x); reply 1 or 2. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6850,6 +6850,6 @@ archive:
 - *id131
 - *id132
 - *id133
-updated_at: 2026-10-20 09:30:32 SGT
+updated_at: 2026-10-20 21:30:15 SGT
 total_active: 112
 total_done: 133
