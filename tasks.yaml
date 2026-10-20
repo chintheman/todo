@@ -3944,16 +3944,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (8 open, oldest 21d)
+    title: System issues awaiting your decision (5 open, oldest 6d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '8 unresolved system issue(s), oldest 21 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      📊 Health Snapshot — Daily; 📊 Spine Retrieval Benchmark (Weekly); 🧠 Hot-core to Spine Import; 🫀 Spine Heartbeat. Unanswered
-      asks: approve adding the name rule to the Claude Code rules file. (open 5d, asked 1x); say whether to repair that test
-      against the current rules file and run it on Fable 5.1, or leave it parked. (open 21d, asked 3x); reply 1 or 2. (open
-      5d, asked 1x).'
+    summary: '5 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      📊 Spine Retrieval Benchmark (Weekly); 🫀 Spine Heartbeat. Unanswered asks: approve adding the name rule to the Claude
+      Code rules file. (open 5d, asked 1x); reply 1 or 2. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6852,6 +6850,6 @@ archive:
 - *id131
 - *id132
 - *id133
-updated_at: 2026-10-19 21:30:25 SGT
+updated_at: 2026-10-20 09:30:32 SGT
 total_active: 112
 total_done: 133
