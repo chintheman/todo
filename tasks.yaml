@@ -3951,9 +3951,9 @@ clusters:
     status: active
     summary: '11 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces).
       Unanswered asks: reply `1` or `2`. (open 6d, asked 1x); approve adding the same closing-up rule to the Claude Code rules
-      file. (open 5d, asked 1x); answer that one question, or reply "go" and I''ll remove the copied token line. (open 4d,
+      file. (open 6d, asked 1x); answer that one question, or reply "go" and I''ll remove the copied token line. (open 5d,
       asked 1x); reply with `1`, `2` or `3`. (open 4d, asked 1x); reply "disable" or "keys" and I will action it in a foreground
-      session. (open 5d, asked 1x).'
+      session. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6852,6 +6852,6 @@ archive:
 - *id131
 - *id132
 - *id133
-updated_at: 2026-10-24 09:30:52 SGT
+updated_at: 2026-10-24 21:30:50 SGT
 total_active: 112
 total_done: 133
