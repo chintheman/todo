@@ -2020,8 +2020,10 @@ clusters:
       (comment naming "Culinex:") and scripts/test_check_writers.py:91 and :99 (the same label used as a test fixture). Culinex
       is a client name, the engine repo is public (github.com/chintheman/brain-engine), and these landed in commit 59907d1
       on 2026-10-24 by chintheman - so the leak is committed and pushed. BRAIN.md:226 (paradex) is the fourth hit and the
-      seventh consecutive cycle. Priority raised p3 -> p2 because the new instance is a client name in code and tests rather
-      than a schema example in a doc.'
+      seventh consecutive cycle. This deserves p2, not p3, because the new instance is a client name in code and tests rather
+      than a schema example in a doc. The bump does NOT hold: progress-sync.py treats the labs board as authoritative for
+      priority and reverted p2 -> p3 twice in one run (03:25 and 03:26 on 2026-10-25), so the entry reads p3 until the priority
+      is changed on the board itself. Change it there, not here.'
     - '2026-10-04 · hermes · lint 2026-10-04: still 1 hit each grep, BRAIN.md:226 `page: entities/paradex.md` — FOURTH consecutive
       cycle. Name grep 1, vault-path grep 1, same single line, nothing else in the engine.'
     - '2026-09-27 · hermes · lint 2026-09-27: still 1 hit, BRAIN.md:226 `entities/paradex.md` — THIRD consecutive cycle. Name
@@ -6913,6 +6915,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-10-25 03:26:02 SGT
+updated_at: 2026-10-25 03:30:05 SGT
 total_active: 111
 total_done: 134
