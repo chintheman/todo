@@ -4006,15 +4006,15 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (4 open, oldest 5d)
+    title: System issues awaiting your decision (3 open, oldest 6d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '4 unresolved system issue(s), oldest 5 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      Security Audit. Unanswered asks: merge `toto #32`, `hwc #1`, `concierge #1`, `concierge #2`; close `hwc #2`, `hwc #3`,
-      `concierge #3`. Reply "do it" and I take it from there (open 3d, asked 1x); restart the running program now so the white-space
-      rule applies to your messages? (open 5d, asked 1x).'
+    summary: '3 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces).
+      Unanswered asks: merge `toto #32`, `hwc #1`, `concierge #1`, `concierge #2`; close `hwc #2`, `hwc #3`, `concierge #3`.
+      Reply "do it" and I take it from there (open 3d, asked 1x); restart the running program now so the white-space rule
+      applies to your messages? (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -6914,6 +6914,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-10-28 09:30:19 SGT
+updated_at: 2026-10-28 21:30:19 SGT
 total_active: 111
 total_done: 134
