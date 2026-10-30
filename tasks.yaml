@@ -2875,6 +2875,20 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-10-30-confirm-calvin-registered-his-imda-dnc
+    title: Confirm Calvin registered his IMDA DNC Registry account
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: The PDPA DNC filter for his call sheet stays blocked until his account exists; if nobody checks back, it silently
+      stalls forever since he has no reason to report back on his own.
+    captured: '2026-10-30'
+    source: claude-code session
+    next_step: Ask Calvin directly whether he has registered at dnc.gov.sg yet (sent him the checklist PDF 6 Oct).
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-29-d7-test-harness-writes-into-the
     title: D7 test harness writes into the real watch-only log
     type: fix
@@ -3060,14 +3074,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 13
-  total_count: 15
-  active_count: 13
+  count: 14
+  total_count: 16
+  active_count: 14
   delegated_count: 0
   done_count: 2
   p0_count: 0
   p1_count: 0
-  p2_count: 13
+  p2_count: 14
   p3_count: 0
 - emoji: ''
   name: ai/ml
@@ -6941,6 +6955,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-10-30 09:31:02 SGT
-total_active: 113
+updated_at: 2026-10-30 17:31:01 SGT
+total_active: 114
 total_done: 134
