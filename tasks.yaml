@@ -1795,6 +1795,10 @@ clusters:
       better retired than refreshed.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: entity 21/36 = 58.3% vs <25% — OVER for the seventh cycle, marginally better
+      than 61.1% on the same denominator. Oldest: ai-native-company-framework 149d, steamquant-brand 138d, agent-sprawl-fix-proposal
+      135d. No page was refreshed this week; the two points came from pages crossing back under or being recounted, not from
+      work.'
     - '2026-10-25 · hermes · lint 2026-10-25: entity 22/36 = 61.1% vs <25% target - OVER for a SIXTH consecutive cycle and
       the worst figure yet (48.6, 54.3, now 61.1). Three pages crossed the 30d line this week (web-designer-system 34d, the-hopper-system
       34d, agent-security-audit 34d) and nothing was refreshed. Graded denominator 132 (project 97, entity 36, moc 7), 132
@@ -1847,6 +1851,13 @@ clusters:
       into a context-discipline directory, or record that a project root may hold unindexed working files. Do NOT stamp frontmatter
       on them as a fix: STATE.md says ''run write_facts.py, never hand-edit'', so the next session overwrites the stamp.'
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: THIRD consecutive cycle, third distinct pair of folders. --check-types exits
+      3 on projects/agent-command-centre/SESSION-FACTS.md and STATE.md, plus projects/sg-startup-100/BRIEF.md and STATE.md.
+      The research-protocol instance from last cycle is gone and two new folders took its place in the same week, which settles
+      the reading this entry already carried: these are machine-written session files, so stamping frontmatter is not a fix
+      because the writing script overwrites it. Four folders and nine files in three cycles is a pattern in the writers, not
+      a run of one-off escapes. The open question is now the whole finding: where a project facts file lives, or whether the
+      engine scan set learns to skip STATE.md / SESSION-FACTS.md / BRIEF.md by name.'
     - '2026-10-25 · hermes · lint 2026-10-25: RECURRED in a different folder, and wallet-namecard is clean. --check-types
       exits 3 on THREE files: projects/research-protocol/STATE.md, FILL-BRIEF.md, LANE-BRIEF.md - no frontmatter at all, in
       a scanned page folder, so all three are silently absent from the index. The folder was created 2026-10-24 by the research-protocol
@@ -1918,6 +1929,12 @@ clusters:
       (entities/health-wellness-system.md lines 448 and 459), not a restatement. Drop the [CONTRADICTS:] flag in the same
       edit.'
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: third cycle, unchanged, and now visibly self-contradicting on one page. scopes/engine-test-v02max-proxy.md:96
+      still reads is unresolved with ^[ambiguous] and [CONTRADICTS: [[entities/health-wellness-system]]]. On the health page,
+      line 1046 (the bullet naming the 10-minute benchmark against the locked 5-minute protocol) still carries ^[ambiguous]
+      with no closure note, while the bullet immediately below it already reads superseded 2026-09-15: the conflict was closed.
+      The page holds the decision in one line and denies it in the next. A one-line fix either way: add the same closure note
+      to line 1046, or restore the ambiguity on the scopes page.'
     - '2026-10-25 · hermes · lint 2026-10-25: unchanged, second cycle. scopes/engine-test-v02max-proxy.md lines 89-96 still
       read "Whether the scorecard intends a second, deliberately different test or a restatement of this one is unresolved"
       with ^[ambiguous] and [CONTRADICTS: [[entities/health-wellness-system]]], while the health page now carries two closure
@@ -2016,6 +2033,13 @@ clusters:
       must not commit to a public remote unattended, which is why neither edit is made here.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: eighth cycle, and the count grew from 4 names + 1 path to 5 names + 1 path.
+      Names: scripts/check_writers.py:257 (comment naming Culinex as an example label), scripts/test_check_writers.py:91 and
+      :99 (same label as a test fixture), check_writers.py:255 and test_check_writers.py:89 quoting Chin, 2026-10-24 as the
+      authority for the warn-dont-fail rule. Path: BRAIN.md:226 page: entities/paradex.md. All on github.com/chintheman/brain-engine,
+      which is public, so committed and pushed rather than local. A client name in engine code and tests is exactly the case
+      this rule exists for. A lint cron must not push to a public remote unattended, so the edit stays with him; the exact
+      lines are named here so it is a five-minute change.'
     - '2026-10-25 · hermes · lint 2026-10-25: no longer one line. Four hits, and three are NEW since 2026-10-18: scripts/check_writers.py:238
       (comment naming "Culinex:") and scripts/test_check_writers.py:91 and :99 (the same label used as a test fixture). Culinex
       is a client name, the engine repo is public (github.com/chintheman/brain-engine), and these landed in commit 59907d1
@@ -2080,6 +2104,16 @@ clusters:
       (the actual tag vocabulary) so R7 can fail.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: two tooling facts. (1) E2 is now an EIGHTH cycle: BRAIN.md:266 still reads 19
+      vault rules plus E1-E2 as of v1.3 against 21 numbered rules in lint/rules.md. The section half of E2 is clean — 5 brain-*
+      role skills (capture, dreamer, retriever, reviewer, updater, not the four older briefs name), 8 distinct section references
+      (§0, §3, §4, §5, §6, §7, §8, §11a), every one resolving to a current heading. (2) The R7 checker pair (check_orphans_proxy.py
+      and analyze_helper.py) again reported zero rogue values while a direct taxonomy harvest found 47 values over 77 instances
+      — seventh cycle of that blind spot. Both fixes are one-line edits in a PUBLIC repo, so neither is a cron edit. (3) New
+      this cycle, a warning for whoever re-derives R16: `tgt.rstrip(".md")` strips a character class, not a suffix, and turned
+      every target ending in m or d into a phantom (hermes-agent-system -> hermes-agent-syste). It reported 1,616 broken links
+      across 223 files; with removesuffix the real figure is 9 across 4 files. Any tooling that parses wikilinks must use
+      removesuffix.'
     - '2026-10-25 · hermes · lint 2026-10-25: BRAIN.md:266 still reads "19 vault rules plus E1-E2 as of v1.3" against 21 in
       lint/rules.md - wrong for a SEVENTH consecutive cycle, HIGH by the three-cycle clause. analyze_helper.py printed "none"
       for R7 beside 25 strict rogue values (sixth cycle). check_r8r9.py:63 exact-literal count unchanged, though it produced
@@ -2216,6 +2250,13 @@ clusters:
       type entirely — if that happens the denominator falls back toward 8 and one stale page breaches it again.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: project 80/95 dated = 84.2% vs <10% — OVER, and the largest single-week move
+      this entry has recorded. It is a date cliff, not rot: 77 pages crossed the 30-day line this week and 76 of them sit
+      under projects/ai-studio, with 53 stamped `updated: 2026-09-30` in one batch (plus 10 at 09-27, 10 at 09-28, 4 at 09-29).
+      At the 2026-10-25 cutoff only 3 of these were stale, which reproduces last cycle 3/81 = 3.7%. So the vault did not degrade
+      this week; a September writing sprint aged out. Denominator printed: 95 dated + 8 undated = 103. The question this forces
+      is the one lint-r18-workspace-exemption-unrecorded already asks: whether ai-studio working notes should grade as `project`
+      at all. If they are excluded the type falls back to 18 dated and 4 stale = 22.2%, still over <10%.'
     - '2026-10-04 · hermes · lint 2026-10-04: project 4/5 = 80.0% vs <10% — FOURTH consecutive over-target cycle, priority
       stays p2. Stale: cq-na-consolidation (2026-08-09), diy-luxury-watches (2026-08-23), entities/agent-adoption-for-elderly.md
       (2026-09-03, the superseded redirect) and projects/agent-adoption-for-elderly.md (2026-09-03). Only perpetual-voice-notes
@@ -2277,6 +2318,12 @@ clusters:
       pa-link captures — seven files, about seven weeks at one per run.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: 42 raw files, 5 uncited — the best figure this entry has recorded (was 14 with
+      7 actionable). Two are Phase 3 test fixtures (raw/2026-07/2026-07-07-qa-verification-test-1783357484.md, raw/2026-07/2026-07-07-test-capture-verification.md)
+      which are exempt. Three are real and still need a source page: raw/2026-07/2026-07-15-pa-link-opensource-ai-tools-carousel.md,
+      raw/2026-09/2026-09-11-vol-persistence-verification-memo-subagent.md, raw/2026-09/2026-09-11-vol-sizing-verification-memo-subagent.md.
+      Last cycle one deposit, the OpenWA capture, was applied — sources/2026-07-17-pa-link-openwa-whatsapp-api.md exists —
+      which is why the backlog fell by two. At one stub per run this closes in three cycles.'
     - '2026-10-25 · hermes · lint 2026-10-25: raw total unchanged at 38 (0 new captures this week), 14 uncited by the strict
       sources:-field test. Drained this cycle: create_source stub for raw/2026-07/2026-07-17-pa-link-openwa-whatsapp-api.md,
       queued as 20261025T032326-brain-lint.yaml. The 2026-10-18 drain LANDED (sources/2026-08-09-ig-higher-dimension-14-techniques.md
@@ -2340,6 +2387,12 @@ clusters:
       folder and no moves — the rule asks for a ruling.'
     researched: 2026-10-11
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: seventh cycle, and the set GREW to 2 directories plus 9 root files. Directories
+      now unclassified: bases/ and certs/ (brands/ is resolved). Root files with no mention in RESOLVER.md: 0xsteamboat-agent-macro-role.md,
+      0xsteamboat-build-summary.md, 0xsteamboat-career-master-reference.md, elfa-trading-agent-scope-v2.md, elfa-trading-strategies.md,
+      hermes-complete-reference.md, how-to-use-interior-designer.md, interior-designer-agent-reference.md, pokemon-card-arbitrage-research.md.
+      System basenames (index, log, AGENTS, RESOLVER, SCHEMA, dashboard) are excluded by convention and not counted. One RESOLVER
+      edit clears all eleven rows.'
     - '2026-10-25 · hermes · lint 2026-10-25: unchanged for a SIXTH cycle. Still unclassified: dirs bases/, brands/, certs/
       (and _templates/, mentioned only as a path in step 6); root .md: .hermes.md, AGENTS.md, dashboard.md, log.md. Two more
       root files were checked against the collective clause and remain covered by it rather than named: pokemon-card-arbitrage-research.md
@@ -2401,6 +2454,13 @@ clusters:
       taxonomy at write time. Also fix lint/analyze_helper.py''s taxonomy harvest (restrict it to backticked declarations)
       so the rule can fail at all.'
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: 47 rogue values / 77 instances across 244 tagged pages, and ALL 77 instances
+      are on concepts/YYYY-MM-DD-daily-digest.md pages — zero on entities, concepts, mocs, decisions, sources or projects.
+      First cycle the finding has had a single emitter, which narrows the fix to one of two acts: admit the recurring values
+      to taxonomy.md, or stop the digest emitter writing free tags. Rewriting thirty digest pages is the wrong fix. Recurring
+      values: deepseek, market-intel, session-fleet, m1, backup, markets, wiki, verification, studio, food-logging, gebiz,
+      ssh, coach-change, spine, ai-studio, maintenance, lactose, incidents. Log-only intent filed 2026-11-01T032436. The shipped
+      checker pair still reports none — seventh cycle of that blind spot.'
     - '2026-10-25 · hermes · lint 2026-10-25: 25 rogue values / 43 instances on schema pages (up from 19 / 31), THIRD consecutive
       over-target cycle. All 19 prior values still present; six new ones appeared on the 2026-10-17 to 2026-10-23 digests:
       deepseek 3x, wiki 3x, market-intel, nutrition, lactose, reverse-engineering, models. The shipped checker printed "none"
@@ -2670,6 +2730,9 @@ clusters:
       pages of slack exists on this type.
     researched: 2026-09-27
     log:
+    - '2026-11-01 · hermes · lint 2026-11-01: moc 2/7 = 28.6% vs <25% — still over, third cycle. The two stale members are
+      sg-governance-moc (91d) and crypto-quant-moc (35d, newly over). Seven pages is a small enough set that one refresh clears
+      the target, so this stays the cheapest of the three stale findings to close.'
     - '2026-09-27 · hermes · lint 2026-09-27: moc 1/7 = 14.3% vs <25% — back INSIDE target. Type breach cleared, entry closed.'
     cluster: meta
     cluster_emoji: ''
@@ -6955,6 +7018,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-10-31 21:31:00 SGT
+updated_at: 2026-11-01 03:30:59 SGT
 total_active: 114
 total_done: 134
