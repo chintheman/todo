@@ -4111,14 +4111,13 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (3 open, oldest 6d)
+    title: System issues awaiting your decision (3 open, oldest 0d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '3 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      🫀 Spine Heartbeat. Unanswered asks: merge `toto #32`, `hwc #1`, `concierge #1`, `concierge #2`; close `hwc #2`, `hwc
-      #3`, `concierge #3`. Reply "do it" and I take it from there (open 6d, asked 1x).'
+    summary: '3 unresolved system issue(s), oldest 0 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      📊 Health Snapshot — Daily; 🫀 Spine Heartbeat.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7018,6 +7017,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-11-01 03:30:59 SGT
+updated_at: 2026-11-01 09:30:58 SGT
 total_active: 114
 total_done: 134
