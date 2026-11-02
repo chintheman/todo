@@ -4117,7 +4117,7 @@ clusters:
     priority: p1
     status: active
     summary: '3 unresolved system issue(s), oldest 1 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      📊 Health Snapshot — Daily; 🫀 Spine Heartbeat.'
+      🔒 Model Policy Audit — Weekly; 🫀 Spine Heartbeat.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7017,6 +7017,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-11-01 21:30:59 SGT
+updated_at: 2026-11-02 09:30:57 SGT
 total_active: 114
 total_done: 134
