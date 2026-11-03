@@ -5144,6 +5144,28 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-03-miner-dc-open-brief-dst-gate
+    title: Miner-DC open brief fires 45 min before the US open since the DST flip
+    type: fix
+    domain: crypto
+    priority: p1
+    status: active
+    summary: 'The 3 Nov run pulled 08:45 ET: every one of the 7 names read price equal to prev_close with change_pct 0.0 because
+      the newest daily bar was still the 2 Nov close. The brief exists to catch the first 30 min of the US session, so for
+      four months it can only ever answer SILENT. A fixed SGT clock cannot track the US DST change, so the real fix is a market-open
+      gate in code rather than a new cron time.'
+    captured: '2026-11-03'
+    source: cron miner_dc_open 2026-11-03 run
+    notes: 'Tracker output 3 Nov: HUT 55.01, WULF 10.94, CORZ 12.51, RIOT 11.84, CLSK 7.15, MARA 6.43, IOND 63.18, all change_pct
+      0.0, prev_basis last closed bar 2026-11-02. 10Y 4.912% +1.8bp. Confirmed with TZ=America/New_York date at 08:45 EST
+      and with the job created_at 2026-07-28 (EDT).'
+    gist: c7ac85ce4318 runs at 21:45 SGT, which was 09:45 ET under EDT but is 08:45 ET under EST, so from 1 Nov to 8 Mar the
+      scan reads a closed market
+    next_step: 'Decide the fix shape then build it: a DST-aware gate that holds the run until 09:45 ET, or move the expr to
+      45 22 * * 1-5 so it lands 15 min after the open in winter and 75 min after in summer'
+    cluster: crypto
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: claude-code-ai-hedge-fund
     title: Claude Code AI Hedge Fund OS — research/risk system (@seb.ai)
     type: discuss
@@ -5263,13 +5285,13 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
-  count: 6
-  total_count: 8
-  active_count: 6
+  count: 7
+  total_count: 9
+  active_count: 7
   delegated_count: 0
   done_count: 2
   p0_count: 1
-  p1_count: 2
+  p1_count: 3
   p2_count: 3
   p3_count: 0
 - emoji: ''
@@ -7018,6 +7040,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-11-03 21:30:05 SGT
-total_active: 114
+updated_at: 2026-11-03 21:48:10 SGT
+total_active: 115
 total_done: 134
