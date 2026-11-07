@@ -4118,8 +4118,8 @@ clusters:
     status: active
     summary: '6 unresolved system issue(s), oldest 7 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
       🫀 Spine Heartbeat. Unanswered asks: add `spine-memory` to the SWEEPER_GH_TOKEN repository list (GitHub → Settings →
-      Developer settings → fine-grained tokens). Reply "spine adde (open 5d, asked 1x); say go and I will paste the single
-      command that switches the release guard on in Claude Code. (open 4d, asked 1x); approve adding the internal-work line
+      Developer settings → fine-grained tokens). Reply "spine adde (open 6d, asked 1x); say go and I will paste the single
+      command that switches the release guard on in Claude Code. (open 5d, asked 1x); approve adding the internal-work line
       (lists and plans only you read go in a plain Claude Doc) to the Claude Code rul (open 7d, asked 4x); approve adding
       the design rule to the Claude Code rules file. (open 5d, asked 2x).'
     captured: 2026-09-14
@@ -7043,6 +7043,6 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-11-07 09:30:59 SGT
+updated_at: 2026-11-07 21:31:00 SGT
 total_active: 115
 total_done: 134
