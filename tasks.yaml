@@ -365,7 +365,7 @@ clusters:
     cluster_emoji: 🧠
     cluster_kind: project
   archive:
-  - &id044
+  - &id045
     id: context-engineering-research
     title: Context engineering research and optimisation
     type: research
@@ -392,7 +392,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id020
+  - &id021
     id: compaction-prompt-tuning
     title: Compaction prompt audit and tuning
     type: build
@@ -423,7 +423,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id017
+  - &id018
     id: hotcore-retrieval-split
     title: Hot core — retrieve situational rules instead of loading them every call
     type: build
@@ -452,7 +452,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id043
+  - &id044
     id: memory-ablation-harness
     title: Memory ablation harness — prove the Spine tiers work
     type: discuss
@@ -479,7 +479,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id087
+  - &id088
     id: memory-audit-review
     title: Memory Audit — Honcho GO/NO-GO decision
     type: discuss
@@ -501,7 +501,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id108
+  - &id109
     id: review-memory-recommendations
     title: Review memory recommendations against Hermes memory solution
     type: research
@@ -518,7 +518,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id127
+  - &id128
     id: subagent-model-verify
     title: Memory Audit — Verify subagent routing (DeepSeek V4 Pro)
     type: build
@@ -533,7 +533,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id130
+  - &id131
     id: context-engine-explore
     title: Memory Audit — Explore context engine plugin
     type: discuss
@@ -548,7 +548,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id128
+  - &id129
     id: supermemory-dedup-cron
     title: Memory Audit — Periodic Supermemory dedup + TTL cron
     type: discuss
@@ -563,7 +563,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id129
+  - &id130
     id: hw-to-wiki-migration
     title: Memory Audit — Migrate [HW] entries from MEMORY.md to Wiki
     type: discuss
@@ -578,7 +578,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id016
+  - &id017
     id: obsidian-verify-learn-tune
     title: Obsidian — verify the build, learn the tool, tune the settings
     type: build
@@ -606,7 +606,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id018
+  - &id019
     id: obsidian-power-use-cases
     title: Obsidian Power Use Cases — Opus 5 vault-tailored research
     type: research
@@ -627,7 +627,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id072
+  - &id073
     id: learn-obsidian
     title: How to Use Obsidian — Personal Knowledge Management
     type: research
@@ -644,7 +644,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id113
+  - &id114
     id: qol-second-brain-apps
     title: Brainstorm QoL applications around second brain
     type: discuss
@@ -660,7 +660,7 @@ clusters:
     cluster: Memory & Knowledge System
     cluster_emoji: 🧠
     cluster_kind: project
-  - &id109
+  - &id110
     id: graphify-integration
     title: Integrate Graphify — knowledge graph for Claude Code/Codex/Hermes
     type: build
@@ -695,7 +695,7 @@ clusters:
   kind: project
   items: []
   archive:
-  - &id082
+  - &id083
     id: openwa-eval
     title: Evaluate OpenWA — self-hosted WhatsApp API gateway (free Twilio alternative)
     type: build
@@ -717,7 +717,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id029
+  - &id030
     id: agentic-concierge-architecture
     title: 'Agentic Marketing Concierge — architecture decision: Hermes ops ring vs Hermes-profile rebuild'
     type: discuss
@@ -742,7 +742,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id025
+  - &id026
     id: agentic-concierge-campaign-alerts
     title: Concierge ops ring — campaign end-date alert cron
     type: discuss
@@ -762,7 +762,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id023
+  - &id024
     id: agentic-concierge-portfolio-digest
     title: Concierge ops ring — weekly client portfolio digest
     type: discuss
@@ -781,7 +781,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id024
+  - &id025
     id: agentic-concierge-backup
     title: Concierge ops ring — local data backup (client data is gitignored)
     type: discuss
@@ -801,7 +801,7 @@ clusters:
     cluster: Agentic Marketing Concierge
     cluster_emoji: 🛎️
     cluster_kind: project
-  - &id022
+  - &id023
     id: agentic-concierge-multiplatform
     title: Concierge reach — WhatsApp or multi-platform for Glenn
     type: discuss
@@ -1005,7 +1005,7 @@ clusters:
   kind: project
   items: []
   archive:
-  - &id071
+  - &id072
     id: grief-management-voice-journal
     title: Grief Management — private voice journal website/app
     type: build
@@ -1038,7 +1038,7 @@ clusters:
     cluster: Grief 'Management'
     cluster_emoji: 💔
     cluster_kind: project
-  - &id134
+  - &id135
     id: gtm-second-brain
     title: GTM Second Brain — /raw capture + canonical agent index
     type: build
@@ -1515,7 +1515,7 @@ clusters:
     cluster_emoji: 🏠
     cluster_kind: project
   archive:
-  - &id045
+  - &id046
     id: bday-picker-page
     title: Birthday picker page at /bday (wife picks dinner + staycation from Amex Platinum perks)
     type: build
@@ -1728,7 +1728,7 @@ clusters:
     cluster_emoji: 🖥️
     cluster_kind: project
   archive:
-  - &id021
+  - &id022
     id: m1-status-system
     title: M1 Status — cloud-watched status system for the M1 Mac
     type: build
@@ -1941,6 +1941,15 @@ clusters:
       annotations dated 2026-09-15 (lines 944 and 962) and one reciprocal flag with no closure note (line 961, unchanged since
       2026-09-16). The asymmetry has widened rather than closed: the vault holds the decision, the protocol-of-record still
       denies it, and one health-page bullet still stands unflagged as open.'
+    - '2026-11-08 · hermes · lint 2026-11-08: fourth cycle, unchanged, and the promotion clause is now satisfied twice over.
+      scopes/engine-test-v02max-proxy.md still reads "Whether the scorecard intends a second, deliberately different test
+      or a restatement of this one is unresolved" with ^[ambiguous] and [CONTRADICTS: [[entities/health-wellness-system]]]
+      at lines 95-96. On entities/health-wellness-system.md the marker has moved to line 1136 and still carries no closure
+      note, while the bullet immediately below it reads "superseded 2026-09-15: the conflict was closed; see the Sep 15 entry
+      above". Two adjacent lines on one page assert opposite things about the same fact. This is the last cycle that can be
+      a log line: the next one either lands the scope-page closure paragraph or restores the ambiguity on the health page.
+      Recommend the closure paragraph, because 2026-09-15-concepts:110 and decision 09140518-echo-bike-test-5-minute- both
+      record it.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2470,7 +2479,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id062
+  - &id063
     id: tool-decision-framework
     title: Define when to use Claude Chat vs Claude Code vs Hermes vs Zo
     type: discuss
@@ -2484,7 +2493,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id079
+  - &id080
     id: lint-rejected-cleanup
     title: 'Clear: rejected/ test artifacts from Phase 3 (lint R14)'
     type: maintain
@@ -2507,7 +2516,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id049
+  - &id050
     id: lint-injection-resolution
     title: 'Resolve: [INJECTION-SUSPECT] flag on sources/test-injection-source.md (lint R15)'
     type: maintain
@@ -2528,7 +2537,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id048
+  - &id049
     id: lint-contradiction-resolution
     title: 'Resolve: self-referencing [CONTRADICTS:] flag on test-loop-engineering-pattern (lint R1)'
     type: maintain
@@ -2547,7 +2556,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id053
+  - &id054
     id: lint-raw-capture-stall
     title: 'Investigate: raw/ capture pipeline produced 0 files for 2nd consecutive week (lint metric)'
     type: maintain
@@ -2568,7 +2577,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id036
+  - &id037
     id: lint-raw-immutability-violation-2026-08-16
     title: 'R3 HIGH: raw/ file deleted — restore or document (lint 2026-08-16)'
     type: maintain
@@ -2602,7 +2611,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id005
+  - &id006
     id: lint-writers-docs-prefix
     title: 'Writer gate FAIL: 1 commit carries an undeclared `system:` prefix (lint §0.2)'
     type: maintain
@@ -2653,7 +2662,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id006
+  - &id007
     id: lint-r20-system-governance
     title: 'R20 governance: 5 undeclared files at the root of _system/ (lint HIGH)'
     type: maintain
@@ -2700,7 +2709,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id007
+  - &id008
     id: lint-r10-moc-staleness
     title: 'R10: `moc` type at 28.6% stale vs <25% target (new this cycle)'
     type: maintain
@@ -2737,7 +2746,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id003
+  - &id004
     id: lint-r18-ai-studio-unindexed
     title: 'R18 HIGH FAIL: 50 files under projects/ai-studio/ carry no frontmatter and never reach the index'
     type: maintain
@@ -2779,7 +2788,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id004
+  - &id005
     id: lint-r10-undated-page
     title: 'R10: 1 graded page carries no parseable `updated:` (rule 10 requires it reported separately)'
     type: maintain
@@ -2815,7 +2824,7 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
-  - &id001
+  - &id002
     id: lint-writers-undeclared-2026-10-11
     title: 'Writer gate FAIL: 3 of 908 commits carry no declared prefix (`handoff:`, and two amended `auto-sync` subjects)'
     type: maintain
@@ -2863,11 +2872,47 @@ clusters:
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
+  - &id001
+    id: lint-r20-undeclared-2026-11-08
+    title: 'R20 governance: 2 undeclared files at the root of _system/ (lint HIGH) — founders-playbook-exercise-gap-check.md,
+      week-away-test-2026-11-04.md'
+    type: maintain
+    domain: meta
+    priority: p2
+    status: done
+    summary: 'RULE 20 exit 1, UNDECLARED (2): _system/founders-playbook-exercise-gap-check.md and _system/week-away-test-2026-11-04.md,
+      against 73 root prose files. Both are new to the vault this cycle: the week-away test is dated 2026-11-04, and the exercise-gap
+      check arrived with the Founder''s Playbook audit work deposited into the entity pages on 2026-11-04 and 2026-11-05.
+      Neither is junk — both are readable working records — but neither is classified, so the governance check cannot tell
+      a reader whether they still govern anything. This is a fresh finding, not a reopening of lint-r20-system-governance
+      (closed 2026-09-27, and that entry''s own next_step says a new undeclared file raises its own entry). The check itself
+      is healthy: the gate canary reports 6/6 planted defects caught on the same run.'
+    captured: '2026-11-08'
+    source: lint-cron-2026-11-08 @ R20
+    notes: 'Evidence: `python3 ~/brain-engine/scripts/check_governance.py --vault ~/wiki` -> exit 1, "UNDECLARED (2)" then
+      "check_governance: 2 finding(s) across 73 root prose files". Both files are live, not junk: entities/steamboat-applied-ai-studio.md
+      lists both in its own `sources:` array (checked 2026-11-08), which is the reader that makes `reference` the safe class
+      for either of them. Rule 20''s Output column asks for one deposit intent per finding, but _system/governance.yaml is
+      not a page and BRAIN.md §6''s action enum has no action that could amend it, so the remedy is a registry entry. This
+      is the second cycle in a row to hit that gap in the rule''s stated remedy (see lint-r20-system-governance notes, 2026-09-20).
+      A better fix, if it ever gets built: give emit_intent.py a governance action, so the updater can declare a root file
+      instead of parking the decision here.'
+    gist: 'check_governance.py --vault ~/wiki exits 1. Two prose files at the root of _system/ appear in neither the governs,
+      reference nor dead section of _system/governance.yaml, across 73 root prose files. Both are recent: week-away-test-2026-11-04.md
+      is dated 2026-11-04 and founders-playbook-exercise-gap-check.md records the Founder''s Playbook exercise audit. A governing
+      document can sit here and nothing else in the system would notice — rule 20 is the only rule that looks at _system/.'
+    next_step: Closed 2026-11-08 (lint cycle 13). Both files are declared under `reference:` in _system/governance.yaml with
+      the reason inline, and `python3 ~/brain-engine/scripts/check_governance.py --vault ~/wiki` now prints "73 root prose
+      files, all declared, all present, every governing document still read" with EXIT=0. A new undeclared file at the root
+      of _system/ raises its own entry, not this one.
+    cluster: meta
+    cluster_emoji: ''
+    cluster_kind: domain
   count: 14
-  total_count: 26
+  total_count: 27
   active_count: 14
   delegated_count: 0
-  done_count: 12
+  done_count: 13
   p0_count: 0
   p1_count: 0
   p2_count: 4
@@ -3092,7 +3137,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id012
+  - &id013
     id: 2026-09-12-verify-the-vault-enforcement-stack-on
     title: Verify the vault enforcement stack on its first unattended runs
     type: fix
@@ -3116,7 +3161,7 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id002
+  - &id003
     id: 2026-10-15-spine-memory-search-finds-only-19
     title: Spine memory search finds only 19% of memory notes
     type: fix
@@ -3423,7 +3468,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id133
+  - &id134
     id: self-correcting-agent
     title: Self-Correcting Agent — Reflexion Pattern
     type: discuss
@@ -3438,7 +3483,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id125
+  - &id126
     id: hard-step-budgets
     title: Step Budgets — Turn limits + forced handoffs for multi-phase work
     type: discuss
@@ -3453,7 +3498,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id123
+  - &id124
     id: sync-barriers
     title: Sync Barriers — Wait-for-all → synthesize → deliver once
     type: discuss
@@ -3468,7 +3513,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id131
+  - &id132
     id: tools-skills-consistency
     title: Investigate why tools and skills are not consistently used — and fix it
     type: research
@@ -3483,7 +3528,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id120
+  - &id121
     id: crewai-hermes-integration
     title: Explore CrewAI integration with Hermes for agent role optimisation
     type: research
@@ -3503,7 +3548,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id118
+  - &id119
     id: explore-free-agentic-tools
     title: Explore free agentic tools — review carousel + fresh research
     type: research
@@ -3520,7 +3565,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id119
+  - &id120
     id: explore-fluid-voice
     title: Explore FluidVoice as alternative to agentic TTS/STT solutions
     type: research
@@ -3535,7 +3580,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id041
+  - &id042
     id: ai-stack-platforms-review
     title: Review all AI stack platforms for potential integration
     type: research
@@ -3553,7 +3598,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id103
+  - &id104
     id: agentic-loop-engineering
     title: Master Looping — implement Boris Cherny / Pravda loop engineering
     type: build
@@ -3582,7 +3627,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id061
+  - &id062
     id: claude-command-cheatsheet
     title: Evaluate Claude command cheat sheet for Hermes gaps
     type: discuss
@@ -3605,7 +3650,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id105
+  - &id106
     id: auto-goal-orchestration-plugin
     title: Auto-goal orchestration plugin — review proposed flow
     type: discuss
@@ -3624,7 +3669,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id101
+  - &id102
     id: agency-agents-deep-dive
     title: Deep dive on Agency Agents — install, route, and integrate 238 specialist personas
     type: discuss
@@ -3660,7 +3705,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id100
+  - &id101
     id: rokos-basilisk-deep-dive
     title: Roko's Basilisk — deep dive research topic
     type: research
@@ -3680,7 +3725,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id066
+  - &id067
     id: claude-code-loops-google-meta-ads
     title: Absorb Claude Code loop patterns from Ryze AI — ad management loops with verification gates
     type: research
@@ -3715,7 +3760,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id094
+  - &id095
     id: deepseek-v4-open-source
     title: DeepSeek-V4 Preview open-sourced — tech report + weights
     type: research
@@ -3734,7 +3779,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id091
+  - &id092
     id: orca-ade
     title: Orca — Agent Development Environment for parallel agents
     type: research
@@ -3753,7 +3798,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id089
+  - &id090
     id: kyutai-pocket-tts-evaluate
     title: Evaluate Kyutai Pocket TTS — local CPU TTS with voice cloning
     type: research
@@ -3772,7 +3817,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id064
+  - &id065
     id: anthropic-ust-claude
     title: Anthropic × UST — Claude for Physical AI
     type: discuss
@@ -3791,7 +3836,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id085
+  - &id086
     id: glm-5-eval
     title: GLM-5.2 (Z.ai) — MCP Atlas
     type: build
@@ -3813,7 +3858,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id086
+  - &id087
     id: chinese-ai-enterprise-adoption-ft
     title: FT — Global companies (DD, Siemens, Airbnb) adopting Chinese AI
     type: discuss
@@ -3833,7 +3878,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id065
+  - &id066
     id: anthropic-finance-agents
     title: Anthropic 10 Finance Agents — repo + workflow reference
     type: discuss
@@ -3853,7 +3898,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id073
+  - &id074
     id: multi-agent-orchestration-guide
     title: How to Make Agents Work Together — Multi-Agent Orchestration
     type: research
@@ -3870,7 +3915,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id059
+  - &id060
     id: i-have-adhd-claude-skill
     title: i-have-adhd — ADHD-Friendly Claude Code Skill & CLAUDE.md Workflow
     type: research
@@ -3896,7 +3941,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id067
+  - &id068
     id: systems-thinking-video-review
     title: The Revolution of Systems Thinking — video review and study notes
     type: research
@@ -3920,7 +3965,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id058
+  - &id059
     id: agentic-stack-review
     title: Agentic Stack — portable .agent/ folder (memory + skills + protocols)
     type: research
@@ -3939,7 +3984,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id055
+  - &id056
     id: mcp-host-60-minutes
     title: Build an MCP Host (5 servers, 60 min) — @datasciencebrain guide
     type: research
@@ -3960,7 +4005,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id039
+  - &id040
     id: deepseek-harness-test
     title: DeepSeek Harness v0.1 — test the agent runtime
     type: build
@@ -3985,7 +4030,7 @@ clusters:
     cluster: ai/ml
     cluster_emoji: ''
     cluster_kind: domain
-  - &id028
+  - &id029
     id: bot-mode-team-experiment
     title: Bot Mode experiment — small team of profiles working together
     type: discuss
@@ -4257,7 +4302,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id132
+  - &id133
     id: ddgs-search-fallback
     title: DDGS — DuckDuckGo web search fallback
     type: build
@@ -4272,7 +4317,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id112
+  - &id113
     id: developer-agent-codex-claude
     title: Create a developer agent profile enabling both Codex and Claude Code
     type: build
@@ -4292,7 +4337,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id099
+  - &id100
     id: kimi-code-evaluate
     title: Kimi Code — evaluate as coding agent alternative
     type: research
@@ -4318,7 +4363,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id068
+  - &id069
     id: safari-mcp-server
     title: Safari MCP Server — evaluate for web dev/QA pipeline
     type: research
@@ -4340,7 +4385,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id063
+  - &id064
     id: claude-code-v2-1-203
     title: Claude Code v2.1.203 — review and update our install
     type: build
@@ -4364,7 +4409,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id096
+  - &id097
     id: agent-reach
     title: Agent-Reach — multi-platform web & social access for AI agents
     type: research
@@ -4385,7 +4430,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id093
+  - &id094
     id: omniroute-local-gateway
     title: OmniRoute — local AI routing gateway for 231+ providers
     type: research
@@ -4406,7 +4451,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id088
+  - &id089
     id: hyperbrowser-eval
     title: Hyperbrowser — Cloud browser infra with CAPTCHA bypass for Hermes
     type: build
@@ -4427,7 +4472,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id075
+  - &id076
     id: repowise-eval
     title: Repowise — codebase intelligence MCP tool for agents
     type: build
@@ -4453,7 +4498,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id057
+  - &id058
     id: buzz-block-review
     title: Buzz — Block's self-hostable workspace for humans + agents
     type: research
@@ -4474,7 +4519,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id056
+  - &id057
     id: oh-my-hermes-review
     title: Oh My Hermes (OMH) — Hermes Agent enhancement plugin
     type: research
@@ -4492,7 +4537,7 @@ clusters:
     cluster: devops
     cluster_emoji: ''
     cluster_kind: domain
-  - &id052
+  - &id053
     id: labs-blitz-pomodoro-build
     title: Labs Blitz + Pomodoro build — awaiting Zo
     type: build
@@ -4701,7 +4746,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id121
+  - &id122
     id: openai-profiles-engage
     title: Engage with OpenAI profiles on LinkedIn
     type: create
@@ -4715,7 +4760,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id122
+  - &id123
     id: openai-application-prep
     title: Continue OpenAI application prep
     type: create
@@ -4729,7 +4774,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id084
+  - &id085
     id: ai-adoption-specialist
     title: Explore AI Adoption Specialist as career path (salaried vs independent)
     type: discuss
@@ -4747,7 +4792,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id035
+  - &id036
     id: claude-certification-review
     title: Review Claude certification pipeline and plan it out
     type: discuss
@@ -4773,7 +4818,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id031
+  - &id032
     id: cca-f-sign-agreement
     title: 'CCA-F: Sign Freelance Developer Agreement'
     type: read
@@ -4799,7 +4844,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id032
+  - &id033
     id: cca-f-register-book
     title: 'CCA-F: Register + book exam seat (Pearson VUE)'
     type: read
@@ -4824,7 +4869,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id034
+  - &id035
     id: cca-f-study-d3
     title: 'CCA-F study: D3 Claude Code Configuration & Workflows'
     type: read
@@ -4848,7 +4893,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id033
+  - &id034
     id: cca-f-study-d4
     title: 'CCA-F study: D4 Prompt Engineering & Structured Output'
     type: read
@@ -4874,7 +4919,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id027
+  - &id028
     id: cca-f-study-d2
     title: 'CCA-F study: D2 Tool Design & MCP Integration'
     type: read
@@ -4901,7 +4946,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id026
+  - &id027
     id: cca-f-study-d5
     title: 'CCA-F study: D5 Context Management & Reliability'
     type: read
@@ -4927,7 +4972,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id019
+  - &id020
     id: cca-f-exam-week-sweep
     title: CCA-F exam-week sweep + full mock
     type: read
@@ -4948,7 +4993,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id037
+  - &id038
     id: cca-f-study-d1
     title: 'CCA-F study: D1 Agentic Architecture & Orchestration'
     type: read
@@ -4969,7 +5014,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id030
+  - &id031
     id: productise-hermes-enterprise
     title: Productise Hermes setup for enterprises — 5 paths, audit-led consulting recommended
     type: research
@@ -4996,7 +5041,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id010
+  - &id011
     id: ccap-study-baseline
     title: 'CCAP study: Stage 1 baseline diagnostic v2 (14 items, 7 domains), sit, grade, build the heatmap'
     type: read
@@ -5029,7 +5074,7 @@ clusters:
     cluster: career
     cluster_emoji: ''
     cluster_kind: domain
-  - &id011
+  - &id012
     id: ccap-study-d1
     title: 'CCAP study: D1 Solution Design & Architecture (17%) - workflow vs agent, the blind spot'
     type: read
@@ -5252,7 +5297,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id076
+  - &id077
     id: nicholascrown-macro-letter
     title: Nicholas Crown — macro trading profile + The Crown Macro Letter
     type: research
@@ -5272,7 +5317,7 @@ clusters:
     cluster: crypto
     cluster_emoji: ''
     cluster_kind: domain
-  - &id051
+  - &id052
     id: market-intel-refinement-review
     title: Market Intel — refinement check-in (self-critique loop, cross-brief memory, Yahoo fallback)
     type: discuss
@@ -5437,7 +5482,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id042
+  - &id043
     id: project-idea-capture-system
     title: Project-level idea capture system — random projects/discussions storage
     type: discuss
@@ -5456,7 +5501,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id126
+  - &id127
     id: topic-role-audit
     title: P0 — Audit all topic's mapped roles, skills, crons, profiles
     type: discuss
@@ -5471,7 +5516,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id116
+  - &id117
     id: index-md-folder-optimization
     title: Implement INDEX.md folder optimization for Hermes wiki
     type: build
@@ -5486,7 +5531,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id013
+  - &id014
     id: 2026-09-12-retention-script-for-system-951-files
     title: Retention script for _system/ — 951 files governed by nothing
     type: build
@@ -5515,7 +5560,7 @@ clusters:
     cluster: infra
     cluster_emoji: ''
     cluster_kind: domain
-  - &id014
+  - &id015
     id: 2026-09-12-decide-whether-hermes-skills-gets-a
     title: Decide whether ~/.hermes/skills gets a remote
     type: decision
@@ -5799,7 +5844,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id124
+  - &id125
     id: stress-test-creative-agency
     title: Stress Test Agentic Creative Agency
     type: build
@@ -5813,7 +5858,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id069
+  - &id070
     id: toto-generator-refine
     title: Refine Toto generator — easier, explainable, profile-based, fun, productize as app
     type: build
@@ -5833,7 +5878,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id111
+  - &id112
     id: carousel-mcp-integration
     title: Explore carousels-mcp + Paper MCP for Creative Agency pipeline
     type: build
@@ -5851,7 +5896,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id110
+  - &id111
     id: improve-graphic-design
     title: Improve graphic design capabilities
     type: discuss
@@ -5867,7 +5912,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id104
+  - &id105
     id: learn-animated-websites
     title: Learn how to make animated websites
     type: research
@@ -5892,7 +5937,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id102
+  - &id103
     id: arcads-stop-motion-pipeline
     title: Arcads-style stop-motion video pipeline for Creative Agency
     type: research
@@ -5914,7 +5959,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id097
+  - &id098
     id: ig-carousel-frameworks
     title: Absorb 5 IG carousel frameworks into Creative Agency pipeline
     type: research
@@ -5942,7 +5987,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id095
+  - &id096
     id: cinematic-camera-angles
     title: Cinematic camera angles carousel — @explainingnews reference
     type: research
@@ -5961,7 +6006,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id092
+  - &id093
     id: openmontage-video-pipeline
     title: OpenMontage — open-source agentic video production system
     type: research
@@ -5984,7 +6029,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id060
+  - &id061
     id: showreel
     title: Showreel — Claude Code visual documentation plugin
     type: build
@@ -6010,7 +6055,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id083
+  - &id084
     id: telegram-games-exploration
     title: Explore creating Telegram games — landscape, tech stack, build options
     type: research
@@ -6032,7 +6077,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id078
+  - &id079
     id: genrecon-3d-reconstruction
     title: GenRecon — 8 photos to full 3D room (open-source)
     type: build
@@ -6050,7 +6095,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id077
+  - &id078
     id: interior-design-agent-tools
     title: Interior Design Agent — AI tool stack for friend's project
     type: discuss
@@ -6070,7 +6115,7 @@ clusters:
     cluster: creative
     cluster_emoji: ''
     cluster_kind: domain
-  - &id054
+  - &id055
     id: claude-code-ai-content-team
     title: Claude Code AI Company OS — 7-agent content team (@seb.ai)
     type: discuss
@@ -6186,7 +6231,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id070
+  - &id071
     id: looking-busy-website
     title: LookingBusy — interactive "pretend to work" website
     type: build
@@ -6249,7 +6294,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id050
+  - &id051
     id: mojo-1-0-milestone
     title: 'Modular 26.5: Mojo 1.0 — stable foundation, open-source compiler in 2026'
     type: research
@@ -6270,7 +6315,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id047
+  - &id048
     id: unsloth-desktop-eval
     title: Unsloth Desktop — local LLM run/train app (Beta)
     type: build
@@ -6292,7 +6337,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id046
+  - &id047
     id: lovable-explore
     title: Explore Lovable — AI app-builder (post-$400M Series C, $13.3B)
     type: research
@@ -6311,7 +6356,7 @@ clusters:
     cluster: devtools
     cluster_emoji: ''
     cluster_kind: domain
-  - &id038
+  - &id039
     id: labs-project-flow-refinement
     title: Labs page refinement — standard project lifecycle flow + per-project PM
     type: build
@@ -6374,7 +6419,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id106
+  - &id107
     id: exercises-dataset-integration
     title: Wire exercises-dataset into Health & Wellness profile
     type: build
@@ -6493,7 +6538,7 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   archive:
-  - &id009
+  - &id010
     id: 2026-09-17-three-work-links-drop-a-reader
     title: Three WORK links drop a reader out of the dark sector onto cream pages
     type: decision
@@ -6514,7 +6559,7 @@ clusters:
     cluster: web
     cluster_emoji: ''
     cluster_kind: domain
-  - &id008
+  - &id009
     id: 2026-09-17-feat-v2-phase1-shell-deletes-trading
     title: feat/v2-phase1-shell deletes /trading, which is live and answering 200
     type: decision
@@ -6550,7 +6595,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id115
+  - &id116
     id: potential-biz-ideas-master
     title: Potential Biz Ideas — 10 agent-run, low-cost business models
     type: research
@@ -6567,7 +6612,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id090
+  - &id091
     id: jonathan-lok-workshop
     title: Talk to Jonathan Lok about agentic AI workshop for his kids
     type: discuss
@@ -6583,7 +6628,7 @@ clusters:
     cluster: business
     cluster_emoji: ''
     cluster_kind: domain
-  - &id081
+  - &id082
     id: ai-influencer-monetization
     title: AI Influencer Empire — monetization strategy (profit from lust)
     type: research
@@ -6619,7 +6664,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id074
+  - &id075
     id: unreal-engine-mcp-hermes
     title: Unreal Engine MCP for Hermes Agent — official companion skill
     type: build
@@ -6640,7 +6685,7 @@ clusters:
     cluster: creative/3d
     cluster_emoji: ''
     cluster_kind: domain
-  - &id080
+  - &id081
     id: blender-mcp-hermes
     title: Blender MCP for Hermes Agent — official + community stack
     type: build
@@ -6676,7 +6721,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id098
+  - &id099
     id: review-billings
     title: P0 — Review all recurring bills and subscriptions
     type: discuss
@@ -6704,7 +6749,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id117
+  - &id118
     id: explore-smart-internet-sites
     title: Explore fun & useful websites — AevyTV smarter internet carousel
     type: research
@@ -6734,7 +6779,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id040
+  - &id041
     id: zo-attio-crm-integration
     title: 'Zo integration: Attio CRM — inbound capture + webhook triggers'
     type: build
@@ -6753,7 +6798,7 @@ clusters:
     cluster: integrations
     cluster_emoji: ''
     cluster_kind: domain
-  - &id015
+  - &id016
     id: agent-account-takeover-research
     title: Research agent takeover — Telegram account + WhatsApp Business account
     type: research
@@ -6852,7 +6897,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id107
+  - &id108
     id: sg-governance-practice-system
     title: SG Governance Thinking Practice System
     type: build
@@ -6883,7 +6928,7 @@ clusters:
   kind: domain
   items: []
   archive:
-  - &id114
+  - &id115
     id: sg-minister-thinking-process
     title: Study Singapore Minister Thinking Process
     type: research
@@ -7043,6 +7088,7 @@ archive:
 - *id132
 - *id133
 - *id134
-updated_at: 2026-11-07 21:31:00 SGT
+- *id135
+updated_at: 2026-11-08 03:30:57 SGT
 total_active: 115
-total_done: 134
+total_done: 135
