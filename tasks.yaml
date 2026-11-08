@@ -4156,17 +4156,15 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (5 open, oldest 8d)
+    title: System issues awaiting your decision (4 open, oldest 8d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '5 unresolved system issue(s), oldest 8 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: add `spine-memory`
-      to the SWEEPER_GH_TOKEN repository list (GitHub → Settings → Developer settings → fine-grained tokens). Reply "spine
-      adde (open 6d, asked 1x); say go and I will paste the single command that switches the release guard on in Claude Code.
-      (open 5d, asked 1x); approve adding the internal-work line (lists and plans only you read go in a plain Claude Doc)
-      to the Claude Code rul (open 8d, asked 4x); approve adding the design rule to the Claude Code rules file. (open 5d,
-      asked 2x).'
+    summary: '4 unresolved system issue(s), oldest 8 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: say go
+      and I will paste the single command that switches the release guard on in Claude Code. (open 6d, asked 1x); approve
+      adding the internal-work line (lists and plans only you read go in a plain Claude Doc) to the Claude Code rul (open
+      8d, asked 4x); approve adding the design rule to the Claude Code rules file. (open 6d, asked 2x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7089,6 +7087,6 @@ archive:
 - *id133
 - *id134
 - *id135
-updated_at: 2026-11-08 09:30:57 SGT
+updated_at: 2026-11-08 21:30:57 SGT
 total_active: 115
 total_done: 135
