@@ -1806,6 +1806,21 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-11-bryant-receiver-404-check-webhook-secret
+    title: 'Bryant receiver 404: check WEBHOOK_SECRET_BRYANT in Bryant''s Supabase'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Block 6 test fails with 404 until the saved secret matches the 'Bryant receiver' password; Dualhook connect (Block
+      9) uses the same address
+    captured: '2026-11-11'
+    source: claude-code session
+    next_step: If Chin's clipboard length is 40+ and symbol count 0, Chin opens Bryant's Supabase Edge Functions > Secrets,
+      confirms the name WEBHOOK_SECRET_BRYANT exactly, and re-saves the value from Apple Passwords
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-19-concierge-bot-is-dormant-revival-needs
     title: 'Concierge bot is dormant: revival needs 3 gaps closed first'
     type: fix
@@ -2036,14 +2051,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 15
-  total_count: 17
-  active_count: 15
+  count: 16
+  total_count: 18
+  active_count: 16
   delegated_count: 0
   done_count: 2
   p0_count: 0
   p1_count: 0
-  p2_count: 15
+  p2_count: 16
   p3_count: 0
 - emoji: ''
   name: meta
@@ -7101,6 +7116,6 @@ archive:
 - *id133
 - *id134
 - *id135
-updated_at: 2026-11-11 15:30:22 SGT
-total_active: 116
+updated_at: 2026-11-11 20:30:23 SGT
+total_active: 117
 total_done: 135
