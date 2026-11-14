@@ -4209,14 +4209,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (2 open, oldest 5d)
+    title: System issues awaiting your decision (3 open, oldest 6d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '2 unresolved system issue(s), oldest 5 day(s). Recurring failures: 🫀 Spine Heartbeat. Unanswered asks: reply
-      `merge both` if you want #4 and #8 merged now; the spine token edit is GitHub settings only and cannot be done from
-      here. (open 5d, asked 1x).'
+    summary: '3 unresolved system issue(s), oldest 6 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      🫀 Spine Heartbeat. Unanswered asks: reply `merge both` if you want #4 and #8 merged now; the spine token edit is GitHub
+      settings only and cannot be done from here. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7141,6 +7141,6 @@ archive:
 - *id135
 - *id136
 - *id137
-updated_at: 2026-11-13 21:30:16 SGT
+updated_at: 2026-11-14 21:30:24 SGT
 total_active: 116
 total_done: 137
