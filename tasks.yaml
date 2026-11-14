@@ -2122,6 +2122,9 @@ clusters:
       better retired than refreshed.'
     researched: 2026-10-11
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: entity 22/38 = 57.9% vs <25% — OVER, eighth cycle. Oldest: entities/steamquant-brand.md
+      (152d), entities/agent-sprawl-fix-proposal.md (149d), entities/andrej-karpathy.md and entities/tim-scheuer.md (119d
+      each). No undated entity pages.'
     - '2026-11-01 · hermes · lint 2026-11-01: entity 21/36 = 58.3% vs <25% — OVER for the seventh cycle, marginally better
       than 61.1% on the same denominator. Oldest: ai-native-company-framework 149d, steamquant-brand 138d, agent-sprawl-fix-proposal
       135d. No page was refreshed this week; the two points came from pages crossing back under or being recounted, not from
@@ -2256,6 +2259,13 @@ clusters:
       (entities/health-wellness-system.md lines 448 and 459), not a restatement. Drop the [CONTRADICTS:] flag in the same
       edit.'
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: sixth cycle, unchanged, and the entry''s own commitment is now spent. scopes/engine-test-v02max-proxy.md
+      lines 95-96 still read ''Whether the scorecard intends a second, deliberately different test or a restatement of this
+      one is unresolved'' with ^[ambiguous] and [CONTRADICTS: [[entities/health-wellness-system]]]. entities/health-wellness-system.md
+      line 1208 still carries the reciprocal flag with no closure note while the bullet above it reads ''superseded 2026-09-15:
+      the conflict was closed''. ACTION TAKEN rather than logged again: deposit intent 20261115T033000-brain-lint.yaml filed
+      with two update intents (scope page closure paragraph citing concepts/2026-09-15-daily-digest.md:110 and decision 09140518-echo-bike-test-5-minute-;
+      reciprocal flag dropped on the health page). This entry closes when the updater drains that intent.'
     - '2026-11-01 · hermes · lint 2026-11-01: third cycle, unchanged, and now visibly self-contradicting on one page. scopes/engine-test-v02max-proxy.md:96
       still reads is unresolved with ^[ambiguous] and [CONTRADICTS: [[entities/health-wellness-system]]]. On the health page,
       line 1046 (the bullet naming the 10-minute benchmark against the locked 5-minute protocol) still carries ^[ambiguous]
@@ -2553,6 +2563,11 @@ clusters:
       that should not carry a page type at all — the same ruling rule 18''s exemption asks for. The set: A1-services-and-rates,
       A2-diagnostic, A3-scoping-rubric, A5-retainer, A6-training, B1-first-contact-bot, B2-revenue-model (all 2026-09-27)
       and E15-price-comparison (2026-09-30).'
+    log:
+    - '2026-11-15 · hermes · lint 2026-11-15: 9 graded pages carry no parseable updated: (was 8), all type: project and all
+      under projects/ai-studio — chief-of-staff/BRIEF.md, four A-series research notes, three B-series notes and 2026-09-30-E15-price-comparison.md.
+      That is one more than the 8 this entry was opened for, so the set is growing rather than being repaired by the workspace
+      ruling alone.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -2586,6 +2601,10 @@ clusters:
       type entirely — if that happens the denominator falls back toward 8 and one stale page breaches it again.'
     researched: 2026-10-11
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: project 81/102 dated = 79.4% vs <10% — OVER, tenth cycle. Denominator is 102
+      dated project pages of the 365 schema pages; 9 more project pages carry no parseable updated: and are reported separately
+      under lint-r10-undated-graded-set. projects/ai-studio working notes remain the bulk of the denominator, which is why
+      lint-r18-workspace-exemption-unrecorded is the ruling this entry needs.'
     - '2026-11-01 · hermes · lint 2026-11-01: project 80/95 dated = 84.2% vs <10% — OVER, and the largest single-week move
       this entry has recorded. It is a date cliff, not rot: 77 pages crossed the 30-day line this week and 76 of them sit
       under projects/ai-studio, with 53 stamped `updated: 2026-09-30` in one batch (plus 10 at 09-27, 10 at 09-28, 4 at 09-29).
@@ -2654,6 +2673,11 @@ clusters:
       pa-link captures — seven files, about seven weeks at one per run.'
     researched: 2026-10-11
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: 42 raw files, 13 uncited, 0 intents queued in pending-deposits. Four of the
+      13 are the standing exclusions (3 Phase-3 test captures; the Sep-11 captures the owner ordered removed). The other 9
+      are six July pa-link captures plus Instagram captures from Sep 11 and Sep 22 never ingested. Unchanged from 2026-11-08.
+      Rule 17 wants one create_source stub per run; this entry still asks for the permanent exclusion list first, otherwise
+      the same 4 files are re-reported every week forever.'
     - '2026-11-01 · hermes · lint 2026-11-01: 42 raw files, 5 uncited — the best figure this entry has recorded (was 14 with
       7 actionable). Two are Phase 3 test fixtures (raw/2026-07/2026-07-07-qa-verification-test-1783357484.md, raw/2026-07/2026-07-07-test-capture-verification.md)
       which are exempt. Three are real and still need a source page: raw/2026-07/2026-07-15-pa-link-opensource-ai-tools-carousel.md,
@@ -2723,6 +2747,12 @@ clusters:
       folder and no moves — the rule asks for a ruling.'
     researched: 2026-10-11
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: ninth cycle, and the set GREW again — 6 directories plus 14 root .md files.
+      Directories: 01 - Projects, 02 - Areas, bases, brands, certs, research (research is NEW this cycle). Root files newly
+      unclassified: .hermes.md. Still unclassified from before: 0xsteamboat-agent-macro-role.md, 0xsteamboat-build-summary.md,
+      0xsteamboat-career-master-reference.md, AGENTS.md, RESOLVER.md, dashboard.md, elfa-trading-agent-scope-v2.md, elfa-trading-strategies.md,
+      hermes-complete-reference.md, how-to-use-interior-designer.md, interior-designer-agent-reference.md, log.md, pokemon-card-arbitrage-research.md.
+      Needs one RESOLVER edit, not a code change.'
     - '2026-11-01 · hermes · lint 2026-11-01: seventh cycle, and the set GREW to 2 directories plus 9 root files. Directories
       now unclassified: bases/ and certs/ (brands/ is resolved). Root files with no mention in RESOLVER.md: 0xsteamboat-agent-macro-role.md,
       0xsteamboat-build-summary.md, 0xsteamboat-career-master-reference.md, elfa-trading-agent-scope-v2.md, elfa-trading-strategies.md,
@@ -2790,6 +2820,13 @@ clusters:
       taxonomy at write time. Also fix lint/analyze_helper.py''s taxonomy harvest (restrict it to backticked declarations)
       so the rule can fail at all.'
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: 45 distinct rogue values / 54 instances, every one on a digest page, sixth cycle
+      over target. No rogue tag in the last week (latest is the 2026-11-08 digest). Top values 2 instances each: coach-change,
+      food-logging, gebiz, incidents, lactose, linkedin, maintenance, spine, ssh; 36 values on one page each. Separately 16
+      documented merge-target variants remain in live use across ~103 instances (verification 25, quant 24, curriculum 23,
+      markets 5, librarian 4, studio 4, wiki/session-fleet/backup 3 each) — applied opportunistically per BRAIN.md §13, never
+      bulk. Checker note carried from 2026-11-08 is unchanged: these counts come from a direct taxonomy parse, not from the
+      shipped checker. Emitter owner still wiki-daily-digest.'
     - '2026-11-01 · hermes · lint 2026-11-01: 47 rogue values / 77 instances across 244 tagged pages, and ALL 77 instances
       are on concepts/YYYY-MM-DD-daily-digest.md pages — zero on entities, concepts, mocs, decisions, sources or projects.
       First cycle the finding has had a single emitter, which narrows the fix to one of two acts: admit the recurring values
@@ -2840,6 +2877,10 @@ clusters:
       retained as permanent test fixtures, matching that resolution; no further lint escalation expected. UPDATE 2026-08-23
       (lint cycle 7): verified again — files 47 days old, fixture status held, no escalation. UPDATE 2026-08-30 (lint cycle
       8): files 54 days old, fixture status held, no escalation.'
+    log:
+    - '2026-11-15 · hermes · lint 2026-11-15: 4 files in rejected/, one real intent at 34 days (20261011T032342-brain-lint.yaml,
+      the refused quantscience carousel create_source). The other three are the July test fixtures. Rule 14 escalates anything
+      past 7 days; this is the fourth report in a row naming it.'
     cluster: meta
     cluster_emoji: ''
     cluster_kind: domain
@@ -3066,6 +3107,9 @@ clusters:
       pages of slack exists on this type.
     researched: 2026-09-27
     log:
+    - '2026-11-15 · hermes · lint 2026-11-15: moc 4/7 = 57.1% vs <25% — OVER, fourth cycle. Stale: sg-governance-moc (105d),
+      crypto-quant-moc (49d), creative-style-moc (41d), personal-systems-moc (35d). A dreamer weave pass touches these anyway
+      and is the cheapest fix.'
     - '2026-11-01 · hermes · lint 2026-11-01: moc 2/7 = 28.6% vs <25% — still over, third cycle. The two stale members are
       sg-governance-moc (91d) and crypto-quant-moc (35d, newly over). Seven pages is a small enough set that one refresh clears
       the target, so this stays the cheapest of the three stale findings to close.'
@@ -7141,6 +7185,6 @@ archive:
 - *id135
 - *id136
 - *id137
-updated_at: 2026-11-14 21:30:24 SGT
+updated_at: 2026-11-15 03:30:24 SGT
 total_active: 116
 total_done: 137
