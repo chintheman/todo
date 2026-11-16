@@ -4261,12 +4261,13 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (1 open, oldest 0d)
+    title: System issues awaiting your decision (2 open, oldest 1d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '1 unresolved system issue(s), oldest 0 day(s). Recurring failures: 🖴 Time Machine — weekly trigger.'
+    summary: '2 unresolved system issue(s), oldest 1 day(s). Recurring failures: 🖴 Time Machine — weekly trigger; 🫀 Spine
+      Heartbeat.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7192,6 +7193,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-15 21:30:26 SGT
+updated_at: 2026-11-16 09:30:25 SGT
 total_active: 115
 total_done: 138
