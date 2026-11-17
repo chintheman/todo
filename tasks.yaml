@@ -4290,13 +4290,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (4 open, oldest 2d)
+    title: System issues awaiting your decision (5 open, oldest 3d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '4 unresolved system issue(s), oldest 2 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
-      ⚡ Miner-DC Open Reaction; 🖴 Time Machine — weekly trigger; 🫀 Spine Heartbeat.'
+    summary: '5 unresolved system issue(s), oldest 3 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      ⚡ Miner-DC Open Reaction; 🖴 Time Machine — weekly trigger; 🫀 Spine Heartbeat. Unanswered asks: approve lifting that
+      cut so long requests reach the builder whole. (open 3d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7222,6 +7223,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-17 12:00:44 SGT
+updated_at: 2026-11-17 21:30:42 SGT
 total_active: 117
 total_done: 138
