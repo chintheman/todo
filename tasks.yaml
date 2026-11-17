@@ -1913,6 +1913,21 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-17-release-hook-refuse-reads-of-message
+    title: 'Release hook: refuse reads of message text on Bryant''s Supabase from the full connection'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: 'Practices review AD-23: the project manager session keeps the full database connection for releases, so nothing
+      in code stops it selecting client message text'
+    captured: '2026-11-17'
+    source: practices-review-20261117-114835.json
+    next_step: Draft the change to release_gate_hook.py so execute_sql on a client project is allowed only for count queries
+      unless a release is approved; raise it in the Phase 1 release ask
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-27-switch-d7-from-watch-only-to
     title: Switch D7 from watch-only to enforcing
     type: fix
@@ -1987,6 +2002,20 @@ clusters:
     captured: '2026-09-19'
     source: claude-code session
     next_step: write scripts/port-audio.py mirroring port-scene.py when the next design export arrives
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-11-17-hermes-status-view-of-the-build
+    title: Hermes status view of the build card for Bryant's build
+    type: build
+    domain: ops
+    priority: p3
+    status: active
+    summary: CLAUDE.md says every improvement applies to both harnesses; without it Hermes cannot answer a status ask about
+      the build
+    captured: '2026-11-17'
+    source: claude-code session f09a9094, Bryant build plan 2026-11-17
+    next_step: Add a read-only Hermes skill that prints build_card.py line and show for a named card
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
@@ -2074,15 +2103,15 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 15
-  total_count: 19
-  active_count: 15
+  count: 17
+  total_count: 21
+  active_count: 17
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 15
-  p3_count: 0
+  p2_count: 16
+  p3_count: 1
 - emoji: ''
   name: meta
   kind: domain
@@ -7193,6 +7222,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-17 09:30:43 SGT
-total_active: 115
+updated_at: 2026-11-17 12:00:44 SGT
+total_active: 117
 total_done: 138
