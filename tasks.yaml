@@ -4297,7 +4297,7 @@ clusters:
     status: active
     summary: '4 unresolved system issue(s), oldest 6 day(s). Recurring failures: 📊 Health Snapshot — Daily; 🫀 Spine Heartbeat.
       Unanswered asks: tell me whether to merge both October drafts (#4 concierge, #8 health coach), merge only one, or leave
-      them, and I do it and read the merge (open 5d, asked 1x); approve lifting that cut so long requests reach the builder
+      them, and I do it and read the merge (open 6d, asked 1x); approve lifting that cut so long requests reach the builder
       whole. (open 6d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
@@ -7224,6 +7224,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-20 21:30:39 SGT
+updated_at: 2026-11-21 09:30:37 SGT
 total_active: 117
 total_done: 138
