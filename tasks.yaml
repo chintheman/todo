@@ -4290,15 +4290,13 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (9 open, oldest 6d)
+    title: System issues awaiting your decision (17 open, oldest 0d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '9 unresolved system issue(s), oldest 6 day(s). Recurring failures: context-digest; ☀️ Midday AI Brief; 🌙 Evening
-      AI Brief; 👀 IOND Midland Lease Watchdog; 📊 Health Snapshot — Daily. Unanswered asks: tell me whether to merge both October
-      drafts (#4 concierge, #8 health coach), merge only one, or leave them, and I do it and read the merge (open 6d, asked
-      1x).'
+    summary: '17 unresolved system issue(s), oldest 0 day(s). Recurring failures: Second Brain — Dreamer (Weekly Consolidation);
+      Second Brain — Weekly Lint; context-digest; web-search-health; wiki-daily-digest.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7224,6 +7222,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-21 21:30:30 SGT
+updated_at: 2026-11-22 09:30:29 SGT
 total_active: 117
 total_done: 138
