@@ -4290,13 +4290,13 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (17 open, oldest 0d)
+    title: System issues awaiting your decision (8 open, oldest 1d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '17 unresolved system issue(s), oldest 0 day(s). Recurring failures: Second Brain — Dreamer (Weekly Consolidation);
-      Second Brain — Weekly Lint; context-digest; web-search-health; wiki-daily-digest.'
+    summary: '8 unresolved system issue(s), oldest 1 day(s). Recurring failures: Second Brain — Dreamer (Weekly Consolidation);
+      Second Brain — Weekly Lint; web-search-health; ☀️ Midday AI Brief; 📋 Skim Master Rules — Weekly Compliance Audit.'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7222,6 +7222,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-22 09:30:29 SGT
+updated_at: 2026-11-23 12:29:33 SGT
 total_active: 117
 total_done: 138
