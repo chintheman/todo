@@ -1806,6 +1806,20 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-23-bryant-pm-keep-alive-gives-up
+    title: Bryant PM keep-alive gives up silently
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: after 3 starts in an hour or a failed start it only writes a log line; nobody is told the build is dead
+    captured: '2026-11-23'
+    source: claude-code session
+    next_step: add one alert to Chin on the first STOPPED or FAILED line; an alert sends information out, so it needs Chin's
+      yes
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-19-concierge-bot-is-dormant-revival-needs
     title: 'Concierge bot is dormant: revival needs 3 gaps closed first'
     type: fix
@@ -2118,14 +2132,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 18
-  total_count: 22
-  active_count: 18
+  count: 19
+  total_count: 23
+  active_count: 19
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 17
+  p2_count: 18
   p3_count: 1
 - emoji: ''
   name: meta
@@ -7237,6 +7251,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-23 14:00:16 SGT
-total_active: 118
+updated_at: 2026-11-23 14:30:14 SGT
+total_active: 119
 total_done: 138
