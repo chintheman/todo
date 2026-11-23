@@ -1977,6 +1977,21 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-23-kobo-8-gb-ran-out-of
+    title: kobo (8 GB) ran out of memory on 22 Nov with 29 sessions plus the Bryant test gate
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: status history shows 18 GB swap used and load up to 193 for an hour before the 22 Nov hang; second restart 23
+      Nov 13:20 had normal readings and no known cause
+    captured: '2026-11-23'
+    source: claude-code session
+    next_step: owner of kobo health (M1 - General Fixes) decides a cap on live sessions or heavy jobs; find the cause of the
+      23 Nov 13:20 restart
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-19-v5-a-brief-webgl-hiccup-is
     title: 'v5: a brief WebGL hiccup is treated as permanent failure'
     type: fix
@@ -2103,14 +2118,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 17
-  total_count: 21
-  active_count: 17
+  count: 18
+  total_count: 22
+  active_count: 18
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 16
+  p2_count: 17
   p3_count: 1
 - emoji: ''
   name: meta
@@ -7222,6 +7237,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-23 12:29:33 SGT
-total_active: 117
+updated_at: 2026-11-23 14:00:16 SGT
+total_active: 118
 total_done: 138
