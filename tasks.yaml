@@ -1850,6 +1850,24 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-24-culinex-questionnaire-claim-screen-accessibility
+    title: 'Culinex questionnaire: claim screen accessibility fixes (visual-reviewer trial)'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: 'Input borders fail WCAG 1.4.11 contrast (~1.4:1 vs 3:1, r2.css --line #D6D3CA); wrong-code error appears far
+      below the field with no aria-invalid; the PIN screen never names the picked person, so a wrong tap goes unnoticed; CSP
+      blocks the Google Fonts preconnect; 320px header wrap. qa-tester trial adds: both PIN rows share the accessible name
+      "PIN, 4 digits" (app.js line 162); any error clears both PIN rows and the stale error stays while editing; wrong-code
+      message gives no warning before a lock. Name lock counting only after a code is issued is as designed.'
+    captured: '2026-11-24'
+    source: claude-code session
+    next_step: Write failing tests for border contrast, aria-invalid and the person's name on the PIN screen, fix on a test
+      copy, then ask Chin for release approval
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-11-11-culinex-reinhard-names-no-culinex-hand
     title: 'Culinex: Reinhard names no Culinex hand-offs; 4 follow-up questions for him'
     type: fix
@@ -2048,6 +2066,22 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-24-release-gate-gcloud-timing-test-may
+    title: 'release-gate-gcloud: timing test may fail on a busy machine'
+    type: fix
+    domain: ops
+    priority: p3
+    status: active
+    summary: test_long_inputs_are_linear in ~/wiki/_system/pending/release-gate-gcloud/test_release_gate_gcloud.py (about
+      line 290) requires each 200k-char input to finish under 2.0s wall clock; a loaded kobo can fail it with no code fault.
+      The full suite did not finish in 120s during review, so it is unverified
+    captured: '2026-11-24'
+    source: claude-code session
+    next_step: 'Owner session of release-gate-gcloud: raise the limit to about 5s or compare n vs 2n run time, then run the
+      suite to completion'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   archive:
   - &id016
     id: 2026-09-12-verify-the-vault-enforcement-stack-on
@@ -2132,15 +2166,15 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 19
-  total_count: 23
-  active_count: 19
+  count: 21
+  total_count: 25
+  active_count: 21
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 18
-  p3_count: 1
+  p2_count: 19
+  p3_count: 2
 - emoji: ''
   name: meta
   kind: domain
@@ -7252,6 +7286,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-24 09:30:34 SGT
-total_active: 119
+updated_at: 2026-11-24 12:30:21 SGT
+total_active: 121
 total_done: 138
