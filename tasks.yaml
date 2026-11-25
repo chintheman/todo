@@ -4353,14 +4353,14 @@ clusters:
     cluster_emoji: ''
     cluster_kind: domain
   - id: system-issues-open
-    title: System issues awaiting your decision (6 open, oldest 2d)
+    title: System issues awaiting your decision (3 open, oldest 3d)
     type: discuss
     domain: devops
     priority: p1
     status: active
-    summary: '6 unresolved system issue(s), oldest 2 day(s). Recurring failures: Second Brain — Dreamer (Weekly Consolidation);
-      Second Brain — Index Rebuild (6h belt-and-braces); Second Brain — Weekly Lint; 📋 Skim Master Rules — Weekly Compliance
-      Audit; 🖴 Time Machine — weekly trigger.'
+    summary: '3 unresolved system issue(s), oldest 3 day(s). Recurring failures: Second Brain — Index Rebuild (6h belt-and-braces);
+      🫀 Spine Heartbeat. Unanswered asks: 1. Review spine-memory #2 (`5` dead locals, +0/-12): https://github.com/chintheman/spine-memory/pull/2.
+      Reply `merge 2`, or `close 2` plus a (open 3d, asked 1x).'
     captured: 2026-09-14
     source: system-topic-triage cron
     notes: Written by issue_escalate.py. Closes itself when the queue empties.
@@ -7286,6 +7286,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-24 12:30:21 SGT
+updated_at: 2026-11-25 09:30:53 SGT
 total_active: 121
 total_done: 138
