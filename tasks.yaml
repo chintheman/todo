@@ -1930,6 +1930,21 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-25-merge-0xsteamboat-me-pr-2-birthday
+    title: 'Merge 0xsteamboat-me PR 2: birthday-page key out of server.ts'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: The /api/bday key stays hard-coded in a repo file and its value was exposed once in a session log; until the
+      fix is merged and deployed the key cannot be rotated
+    captured: '2026-11-25'
+    source: claude-code session
+    next_step: Chin reviews and merges PR 2 in chintheman/0xsteamboat-me when ready (parked by Chin 2026-11-25), then deploy
+      and set the new key
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-19-no-remote-access-to-the-m1
     title: No remote access to the M1 if Hermes goes down
     type: fix
@@ -2166,14 +2181,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 21
-  total_count: 25
-  active_count: 21
+  count: 22
+  total_count: 26
+  active_count: 22
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 19
+  p2_count: 20
   p3_count: 2
 - emoji: ''
   name: meta
@@ -7286,6 +7301,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-25 21:30:27 SGT
-total_active: 121
+updated_at: 2026-11-26 00:00:27 SGT
+total_active: 122
 total_done: 138
