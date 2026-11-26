@@ -1899,6 +1899,21 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-26-fleet-tmux-server-started-before-keychain
+    title: 'Fleet tmux server started before Keychain unlock: every Claude pane lacks Zo, GitHub and CRM after a kobo restart'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: kobo booted 2026-11-25 15:03; tmux fleet server started 15:13 before unlock; unlock-and-run.sh leaves running
+      panes alone, so Culinex session (and likely all panes) cannot read zo-mcp-token even after Chin unlocked on 26 Nov
+    captured: '2026-11-26'
+    source: claude-code session
+    next_step: unlock-and-run.sh should restart the tmux server (or start the fleet only after unlock) so panes inherit the
+      Keychain; needs Chin's ok since it restarts every session
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-10-29-gebiz-alerts-chin-saves-gmail-app
     title: 'GeBIZ Alerts: Chin saves Gmail app password on Zo'
     type: fix
@@ -2181,14 +2196,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 22
-  total_count: 26
-  active_count: 22
+  count: 23
+  total_count: 27
+  active_count: 23
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 20
+  p2_count: 21
   p3_count: 2
 - emoji: ''
   name: meta
@@ -7300,6 +7315,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-26 09:30:26 SGT
-total_active: 122
+updated_at: 2026-11-26 18:30:25 SGT
+total_active: 123
 total_done: 138
