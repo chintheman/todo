@@ -1990,6 +1990,22 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
+  - id: 2026-11-28-revert-pause-cloud-routines-triage-cloud
+    title: 'Revert: pause cloud routines, triage cloud PRs, restore M1 rules'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Six cloud routines (board checks incl. 3 duplicate Content Studio triggers, decision auditor, ig-check shadow,
+      stuck notes) keep writing to repos during the M1 revert; ~15 open cloud PRs left dangling; trimmed CLAUDE.md rules keep
+      M1 sessions forgetting process
+    captured: '2026-11-28'
+    source: claude-code session
+    next_step: 'Write plan doc for Chin''s yes: pause routines first, list PRs keep/close, restore always-loaded rules from
+      restore-2026-11-25-pre-migration, close idle tmux sessions'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
   - id: 2026-09-27-switch-d7-from-watch-only-to
     title: Switch D7 from watch-only to enforcing
     type: fix
@@ -2004,6 +2020,19 @@ clusters:
     next_step: 'On or after 2026-10-04, read ~/.hermes/logs/d7-shadow.jsonl. For each job it names, decide whether that action
       is legitimate: if yes, add the class to that job''s policy entry out-of-band (the file is guard-protected); if no, investigate
       the job. When clean, set D7_SHADOW = False in ~/.hermes/hooks/pre-tool-guard.py.'
+    cluster: ops
+    cluster_emoji: ''
+    cluster_kind: domain
+  - id: 2026-11-28-zo-mcp-m1-keychain-locked-token
+    title: 'Zo MCP: M1 Keychain locked, token unreadable'
+    type: fix
+    domain: ops
+    priority: p2
+    status: active
+    summary: Every M1 session gets Zo 401 until the login keychain is unlocked or zo-mcp-token re-added
+    captured: '2026-11-28'
+    source: claude-code session
+    next_step: Chin does one screen login on the M1, then claude mcp get zo
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
@@ -2196,14 +2225,14 @@ clusters:
     cluster: ops
     cluster_emoji: ''
     cluster_kind: domain
-  count: 23
-  total_count: 27
-  active_count: 23
+  count: 25
+  total_count: 29
+  active_count: 25
   delegated_count: 0
   done_count: 4
   p0_count: 0
   p1_count: 0
-  p2_count: 21
+  p2_count: 23
   p3_count: 2
 - emoji: ''
   name: meta
@@ -7318,6 +7347,6 @@ archive:
 - *id136
 - *id137
 - *id138
-updated_at: 2026-11-28 09:30:24 SGT
-total_active: 123
+updated_at: 2026-11-28 13:00:24 SGT
+total_active: 125
 total_done: 138
